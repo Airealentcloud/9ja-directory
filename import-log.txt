@@ -1,0 +1,48 @@
+🚀 9ja-Directory - Import to Supabase
+
+This will ADD businesses WITHOUT deleting existing data
+
+============================================================
+
+
+📊 Checking existing data...
+
+✅ Current listings: 1317
+✅ Categories: 32
+✅ States: 40
+
+🔍 Ensuring database tables exist...
+
+✅ Database tables are ready!
+
+📖 Reading CSV file...
+✅ Found 1235 businesses in CSV
+
+
+📥 Starting import of 1235 businesses...
+
+✅ Imported batch 1 (50 listings)
+✅ Imported batch 2 (50 listings)
+✅ Imported batch 3 (50 listings)
+✅ Imported batch 4 (50 listings)
+✅ Imported batch 5 (50 listings)
+✅ Imported batch 6 (50 listings)
+✅ Imported batch 7 (50 listings)
+✅ Imported batch 8 (33 listings)
+
+📊 Import Complete!
+   ✅ Imported: 383
+   ⏭️  Skipped: 852
+   ❌ Errors: 0
+
+📊 Final database stats:
+
+
+📊 Checking existing data...
+
+✅ Current listings: 1700
+✅ Categories: 32
+✅ States: 40
+
+✨ Done! Your website now has all the data!
+

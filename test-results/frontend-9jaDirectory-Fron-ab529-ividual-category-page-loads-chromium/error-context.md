@@ -1,0 +1,469 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - heading "9jaDirectory" [level=1] [ref=e6]
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "Categories" [ref=e9] [cursor=pointer]:
+          - /url: /categories
+        - link "States" [ref=e10] [cursor=pointer]:
+          - /url: /states
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e12]:
+        - button "Sign In" [ref=e13]
+        - button "List Business" [ref=e14]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - link "Home" [ref=e20] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e21]: /
+          - link "Categories" [ref=e22] [cursor=pointer]:
+            - /url: /categories
+          - generic [ref=e23]: /
+          - generic [ref=e24]: Accommodation
+        - generic [ref=e25]:
+          - generic [ref=e26]: 🏨
+          - generic [ref=e27]:
+            - heading "Accommodation" [level=1] [ref=e28]
+            - paragraph [ref=e29]: Hotels, lodges, guest houses, and accommodation services
+            - generic [ref=e30]: 26 businesses found
+      - generic [ref=e32]:
+        - complementary [ref=e33]:
+          - generic [ref=e34]:
+            - heading "Filter Results" [level=3] [ref=e35]
+            - generic [ref=e36]:
+              - generic [ref=e37]: State
+              - combobox [ref=e38]:
+                - option "All States" [selected]
+                - option "Lagos"
+                - option "Abuja"
+                - option "Rivers"
+            - generic [ref=e40]:
+              - checkbox "Verified Only" [ref=e41]
+              - generic [ref=e42]: Verified Only
+            - link "← All Categories" [ref=e43] [cursor=pointer]:
+              - /url: /categories
+        - generic [ref=e45]:
+          - link "🏨 Nevada Hotels and Suites We offer a complete experience of standard and state-of-the art guest facilities and cuisine to inspire and please demanding food cravings. Nevada adds a perfect hospitality solution to business and leisure visitors. Lagos 0904 473 6776" [ref=e46] [cursor=pointer]:
+            - /url: /listings/nevada-hotels-and-suites
+            - generic [ref=e47]:
+              - generic [ref=e49]: 🏨
+              - generic [ref=e50]:
+                - heading "Nevada Hotels and Suites" [level=3] [ref=e53]
+                - paragraph [ref=e54]: We offer a complete experience of standard and state-of-the art guest facilities and cuisine to inspire and please demanding food cravings. Nevada adds a perfect hospitality solution to business and leisure visitors.
+                - generic [ref=e55]:
+                  - generic [ref=e56]:
+                    - img [ref=e57]
+                    - text: Lagos
+                  - generic [ref=e60]:
+                    - img [ref=e61]
+                    - text: 0904 473 6776
+          - link "🏨 Chesney Hotel Chesney Hotel is an oasis of luxury hotel strategically located in the heart of Lagos for great lodging accommodation with state-of-the-arts facilities to suit all clients. Lagos 0909 685 1899" [ref=e63] [cursor=pointer]:
+            - /url: /listings/chesney-hotel
+            - generic [ref=e64]:
+              - generic [ref=e66]: 🏨
+              - generic [ref=e67]:
+                - heading "Chesney Hotel" [level=3] [ref=e70]
+                - paragraph [ref=e71]: Chesney Hotel is an oasis of luxury hotel strategically located in the heart of Lagos for great lodging accommodation with state-of-the-arts facilities to suit all clients.
+                - generic [ref=e72]:
+                  - generic [ref=e73]:
+                    - img [ref=e74]
+                    - text: Lagos
+                  - generic [ref=e77]:
+                    - img [ref=e78]
+                    - text: 0909 685 1899
+          - link "🏨 DeRitz Hotel DeRitz Hotel is located in Ikeja, Lagos and they provides affordable room service with delicious food in our restaurants and at banquets. Lagos 0802 135 2167" [ref=e80] [cursor=pointer]:
+            - /url: /listings/deritz-hotel
+            - generic [ref=e81]:
+              - generic [ref=e83]: 🏨
+              - generic [ref=e84]:
+                - heading "DeRitz Hotel" [level=3] [ref=e87]
+                - paragraph [ref=e88]: DeRitz Hotel is located in Ikeja, Lagos and they provides affordable room service with delicious food in our restaurants and at banquets.
+                - generic [ref=e89]:
+                  - generic [ref=e90]:
+                    - img [ref=e91]
+                    - text: Lagos
+                  - generic [ref=e94]:
+                    - img [ref=e95]
+                    - text: 0802 135 2167
+          - link "🏨 Protea Hotels Protea Hotels is a luxurious 4-star hotel located in Ikeja known to be an embodiment of class for kind of services they provide such as executive room services with Wi-Fi access and gym, swimming pool, restaurant etc. Lagos 0 1 631 0250" [ref=e97] [cursor=pointer]:
+            - /url: /listings/protea-hotels
+            - generic [ref=e98]:
+              - generic [ref=e100]: 🏨
+              - generic [ref=e101]:
+                - heading "Protea Hotels" [level=3] [ref=e104]
+                - paragraph [ref=e105]: Protea Hotels is a luxurious 4-star hotel located in Ikeja known to be an embodiment of class for kind of services they provide such as executive room services with Wi-Fi access and gym, swimming pool, restaurant etc.
+                - generic [ref=e106]:
+                  - generic [ref=e107]:
+                    - img [ref=e108]
+                    - text: Lagos
+                  - generic [ref=e111]:
+                    - img [ref=e112]
+                    - text: 0 1 631 0250
+          - link "🏨 Sofitel Moorhouse Hotel Sofitel Moorhouse Hotel is a luxury hotel in Ikoyi, Lagos that is committed to providing home away luxury room services, restaurant services and related others. Lagos 0708 427 7309" [ref=e114] [cursor=pointer]:
+            - /url: /listings/sofitel-moorhouse-hotel
+            - generic [ref=e115]:
+              - generic [ref=e117]: 🏨
+              - generic [ref=e118]:
+                - heading "Sofitel Moorhouse Hotel" [level=3] [ref=e121]
+                - paragraph [ref=e122]: Sofitel Moorhouse Hotel is a luxury hotel in Ikoyi, Lagos that is committed to providing home away luxury room services, restaurant services and related others.
+                - generic [ref=e123]:
+                  - generic [ref=e124]:
+                    - img [ref=e125]
+                    - text: Lagos
+                  - generic [ref=e128]:
+                    - img [ref=e129]
+                    - text: 0708 427 7309
+          - link "🏨 Welcome Centre Hotels Welcome Centre Hotels is a cosy hotel located in a tranquil area in Ikeja offering lodging accommodation with lots of other facilities such as conference hall, wedding hall, leisure facilities and others. Lagos 0805 476 3801" [ref=e131] [cursor=pointer]:
+            - /url: /listings/welcome-centre-hotels
+            - generic [ref=e132]:
+              - generic [ref=e134]: 🏨
+              - generic [ref=e135]:
+                - heading "Welcome Centre Hotels" [level=3] [ref=e138]
+                - paragraph [ref=e139]: Welcome Centre Hotels is a cosy hotel located in a tranquil area in Ikeja offering lodging accommodation with lots of other facilities such as conference hall, wedding hall, leisure facilities and others.
+                - generic [ref=e140]:
+                  - generic [ref=e141]:
+                    - img [ref=e142]
+                    - text: Lagos
+                  - generic [ref=e145]:
+                    - img [ref=e146]
+                    - text: 0805 476 3801
+          - link "🏨 Morning Side Suites Morning Side Suites is a four star hotel that offers full accomodation services with modern facilities like events hall, equipped gym, bar, restaurant and serviced rooms. Lagos 0704 643 6379" [ref=e148] [cursor=pointer]:
+            - /url: /listings/morning-side-suites
+            - generic [ref=e149]:
+              - generic [ref=e151]: 🏨
+              - generic [ref=e152]:
+                - heading "Morning Side Suites" [level=3] [ref=e155]
+                - paragraph [ref=e156]: Morning Side Suites is a four star hotel that offers full accomodation services with modern facilities like events hall, equipped gym, bar, restaurant and serviced rooms.
+                - generic [ref=e157]:
+                  - generic [ref=e158]:
+                    - img [ref=e159]
+                    - text: Lagos
+                  - generic [ref=e162]:
+                    - img [ref=e163]
+                    - text: 0704 643 6379
+          - link "🏨 The Art Hotel The Art Hotel provides well decorated rooms annd suites, dining, meetings and events halls, gym and art gallery. Lagos 0916 610 5381" [ref=e165] [cursor=pointer]:
+            - /url: /listings/the-art-hotel
+            - generic [ref=e166]:
+              - generic [ref=e168]: 🏨
+              - generic [ref=e169]:
+                - heading "The Art Hotel" [level=3] [ref=e172]
+                - paragraph [ref=e173]: The Art Hotel provides well decorated rooms annd suites, dining, meetings and events halls, gym and art gallery.
+                - generic [ref=e174]:
+                  - generic [ref=e175]:
+                    - img [ref=e176]
+                    - text: Lagos
+                  - generic [ref=e179]:
+                    - img [ref=e180]
+                    - text: 0916 610 5381
+          - link "🏨 Tudor House Hotel Tudor House Hotel offers luxurious rooms, incredible dining experience at a pocket friendly rate. Lagos 0818 004 8923" [ref=e182] [cursor=pointer]:
+            - /url: /listings/tudor-house-hotel
+            - generic [ref=e183]:
+              - generic [ref=e185]: 🏨
+              - generic [ref=e186]:
+                - heading "Tudor House Hotel" [level=3] [ref=e189]
+                - paragraph [ref=e190]: Tudor House Hotel offers luxurious rooms, incredible dining experience at a pocket friendly rate.
+                - generic [ref=e191]:
+                  - generic [ref=e192]:
+                    - img [ref=e193]
+                    - text: Lagos
+                  - generic [ref=e196]:
+                    - img [ref=e197]
+                    - text: 0818 004 8923
+          - link "🏨 Villa Angelia Hotels Villa Angelia Hotels provides hospitality needs at afforable rate, featuring standard room and double executive suite. Lagos 0909 080 2422" [ref=e199] [cursor=pointer]:
+            - /url: /listings/villa-angelia-hotels
+            - generic [ref=e200]:
+              - generic [ref=e202]: 🏨
+              - generic [ref=e203]:
+                - heading "Villa Angelia Hotels" [level=3] [ref=e206]
+                - paragraph [ref=e207]: Villa Angelia Hotels provides hospitality needs at afforable rate, featuring standard room and double executive suite.
+                - generic [ref=e208]:
+                  - generic [ref=e209]:
+                    - img [ref=e210]
+                    - text: Lagos
+                  - generic [ref=e213]:
+                    - img [ref=e214]
+                    - text: 0909 080 2422
+          - link "🏨 White Orchid Hotel White Orchid Hotel is a serene hotel with a luxury accomdation services such as turaka rooftop restaurant, Jinja garden, luxury cinema and modern facilities. Lagos 0901 200 2206" [ref=e216] [cursor=pointer]:
+            - /url: /listings/white-orchid-hotel
+            - generic [ref=e217]:
+              - generic [ref=e219]: 🏨
+              - generic [ref=e220]:
+                - heading "White Orchid Hotel" [level=3] [ref=e223]
+                - paragraph [ref=e224]: White Orchid Hotel is a serene hotel with a luxury accomdation services such as turaka rooftop restaurant, Jinja garden, luxury cinema and modern facilities.
+                - generic [ref=e225]:
+                  - generic [ref=e226]:
+                    - img [ref=e227]
+                    - text: Lagos
+                  - generic [ref=e230]:
+                    - img [ref=e231]
+                    - text: 0901 200 2206
+          - link "🏨 Berry and Bricks Apartment Berry and bricks apartment is a 5 bedroom fully furnished luxury shortlet located in a serene and fully secured gated estate. Lagos 0816 480 4088" [ref=e233] [cursor=pointer]:
+            - /url: /listings/berry-and-bricks-apartment
+            - generic [ref=e234]:
+              - generic [ref=e236]: 🏨
+              - generic [ref=e237]:
+                - heading "Berry and Bricks Apartment" [level=3] [ref=e240]
+                - paragraph [ref=e241]: Berry and bricks apartment is a 5 bedroom fully furnished luxury shortlet located in a serene and fully secured gated estate.
+                - generic [ref=e242]:
+                  - generic [ref=e243]:
+                    - img [ref=e244]
+                    - text: Lagos
+                  - generic [ref=e247]:
+                    - img [ref=e248]
+                    - text: 0816 480 4088
+          - link "🏨 Cadebridge Homes Cadebridgehomes is an expertise property development and management company with activities in Nigeria and Africa. Experience our premium luxury accommodations, homes and realestate. Lagos 0807 404 9468" [ref=e250] [cursor=pointer]:
+            - /url: /listings/cadebridge-homes
+            - generic [ref=e251]:
+              - generic [ref=e253]: 🏨
+              - generic [ref=e254]:
+                - heading "Cadebridge Homes" [level=3] [ref=e257]
+                - paragraph [ref=e258]: Cadebridgehomes is an expertise property development and management company with activities in Nigeria and Africa. Experience our premium luxury accommodations, homes and realestate.
+                - generic [ref=e259]:
+                  - generic [ref=e260]:
+                    - img [ref=e261]
+                    - text: Lagos
+                  - generic [ref=e264]:
+                    - img [ref=e265]
+                    - text: 0807 404 9468
+          - link "🏨 Autocera Homes Autocera homes are real estate developers providing different real estate properties, with shortlets, apartments, vacation rentals and Airbnb real estate. Lagos 0707 025 3975" [ref=e267] [cursor=pointer]:
+            - /url: /listings/autocera-homes
+            - generic [ref=e268]:
+              - generic [ref=e270]: 🏨
+              - generic [ref=e271]:
+                - heading "Autocera Homes" [level=3] [ref=e274]
+                - paragraph [ref=e275]: Autocera homes are real estate developers providing different real estate properties, with shortlets, apartments, vacation rentals and Airbnb real estate.
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - img [ref=e278]
+                    - text: Lagos
+                  - generic [ref=e281]:
+                    - img [ref=e282]
+                    - text: 0707 025 3975
+          - link "🏨 Alafia Honestay Alafia Homestay is an oasis of calm in the midst of this bustling city, providing unique and affordable short and long-term bookings at our staycation destination located in Ogudu, Lagos. Lagos 0703 109 0165" [ref=e284] [cursor=pointer]:
+            - /url: /listings/alafia-honestay
+            - generic [ref=e285]:
+              - generic [ref=e287]: 🏨
+              - generic [ref=e288]:
+                - heading "Alafia Honestay" [level=3] [ref=e291]
+                - paragraph [ref=e292]: Alafia Homestay is an oasis of calm in the midst of this bustling city, providing unique and affordable short and long-term bookings at our staycation destination located in Ogudu, Lagos.
+                - generic [ref=e293]:
+                  - generic [ref=e294]:
+                    - img [ref=e295]
+                    - text: Lagos
+                  - generic [ref=e298]:
+                    - img [ref=e299]
+                    - text: 0703 109 0165
+          - link "🏨 Bec Suites Bec Suites is located in Ikeja, Lagos. Lagos 08034035514" [ref=e301] [cursor=pointer]:
+            - /url: /listings/bec-suites
+            - generic [ref=e302]:
+              - generic [ref=e304]: 🏨
+              - generic [ref=e305]:
+                - heading "Bec Suites" [level=3] [ref=e308]
+                - paragraph [ref=e309]: Bec Suites is located in Ikeja, Lagos.
+                - generic [ref=e310]:
+                  - generic [ref=e311]:
+                    - img [ref=e312]
+                    - text: Lagos
+                  - generic [ref=e315]:
+                    - img [ref=e316]
+                    - text: "08034035514"
+          - link "🏨 Chez Moi Apartment Chez Moi Apartment contemporary living rooms with sofa beds, dining tables and 32 inch LCD flat screen televisions multi channels and DSTV. Lagos 0815 423 7201" [ref=e318] [cursor=pointer]:
+            - /url: /listings/chez-moi-apartment
+            - generic [ref=e319]:
+              - generic [ref=e321]: 🏨
+              - generic [ref=e322]:
+                - heading "Chez Moi Apartment" [level=3] [ref=e325]
+                - paragraph [ref=e326]: Chez Moi Apartment contemporary living rooms with sofa beds, dining tables and 32 inch LCD flat screen televisions multi channels and DSTV.
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - img [ref=e329]
+                    - text: Lagos
+                  - generic [ref=e332]:
+                    - img [ref=e333]
+                    - text: 0815 423 7201
+          - link "🏨 Embassy Court Hotel Embassy Court Hotel is located in Victoria Island, Lagos. Lagos 08033700063" [ref=e335] [cursor=pointer]:
+            - /url: /listings/embassy-court-hotel
+            - generic [ref=e336]:
+              - generic [ref=e338]: 🏨
+              - generic [ref=e339]:
+                - heading "Embassy Court Hotel" [level=3] [ref=e342]
+                - paragraph [ref=e343]: Embassy Court Hotel is located in Victoria Island, Lagos.
+                - generic [ref=e344]:
+                  - generic [ref=e345]:
+                    - img [ref=e346]
+                    - text: Lagos
+                  - generic [ref=e349]:
+                    - img [ref=e350]
+                    - text: "08033700063"
+          - link "🏨 Find Nigeria Property Find Nigeria Property is an internet portal where you can find properties anywhere in Nigeria or make a request or we will find it for you. Lagos 0805 790 9314" [ref=e352] [cursor=pointer]:
+            - /url: /listings/find-nigeria-property
+            - generic [ref=e353]:
+              - generic [ref=e355]: 🏨
+              - generic [ref=e356]:
+                - heading "Find Nigeria Property" [level=3] [ref=e359]
+                - paragraph [ref=e360]: Find Nigeria Property is an internet portal where you can find properties anywhere in Nigeria or make a request or we will find it for you.
+                - generic [ref=e361]:
+                  - generic [ref=e362]:
+                    - img [ref=e363]
+                    - text: Lagos
+                  - generic [ref=e366]:
+                    - img [ref=e367]
+                    - text: 0805 790 9314
+          - link "🏨 GrandBee Suites GrandBee Suites is located in Ikeja, Lagos. Lagos 08032761206" [ref=e369] [cursor=pointer]:
+            - /url: /listings/grandbee-suites
+            - generic [ref=e370]:
+              - generic [ref=e372]: 🏨
+              - generic [ref=e373]:
+                - heading "GrandBee Suites" [level=3] [ref=e376]
+                - paragraph [ref=e377]: GrandBee Suites is located in Ikeja, Lagos.
+                - generic [ref=e378]:
+                  - generic [ref=e379]:
+                    - img [ref=e380]
+                    - text: Lagos
+                  - generic [ref=e383]:
+                    - img [ref=e384]
+                    - text: "08032761206"
+          - link "🏨 Hillcrest Hotel Hillcrest Hotel are a hospitality center in Lagos for luxurious lodging, banqueting, bar and conferencing services. Lagos 07098111180" [ref=e386] [cursor=pointer]:
+            - /url: /listings/hillcrest-hotel
+            - generic [ref=e387]:
+              - generic [ref=e389]: 🏨
+              - generic [ref=e390]:
+                - heading "Hillcrest Hotel" [level=3] [ref=e393]
+                - paragraph [ref=e394]: Hillcrest Hotel are a hospitality center in Lagos for luxurious lodging, banqueting, bar and conferencing services.
+                - generic [ref=e395]:
+                  - generic [ref=e396]:
+                    - img [ref=e397]
+                    - text: Lagos
+                  - generic [ref=e400]:
+                    - img [ref=e401]
+                    - text: "07098111180"
+          - link "🏨 Hotel 1960 Eagles Park hotel 1960 eagles park is located in Ikeja and strives to meet with customers expectations in the areas of luxury guest rooms, restaurant, cocktail bar, room service and 24 hour front desk staff. Lagos 0808 374 5991" [ref=e403] [cursor=pointer]:
+            - /url: /listings/hotel-1960-eagles-park
+            - generic [ref=e404]:
+              - generic [ref=e406]: 🏨
+              - generic [ref=e407]:
+                - heading "Hotel 1960 Eagles Park" [level=3] [ref=e410]
+                - paragraph [ref=e411]: hotel 1960 eagles park is located in Ikeja and strives to meet with customers expectations in the areas of luxury guest rooms, restaurant, cocktail bar, room service and 24 hour front desk staff.
+                - generic [ref=e412]:
+                  - generic [ref=e413]:
+                    - img [ref=e414]
+                    - text: Lagos
+                  - generic [ref=e417]:
+                    - img [ref=e418]
+                    - text: 0808 374 5991
+          - link "🏨 Oakwood Park Hotels Oakwood Park Hotels is located in Lekki Peninsula, Lagos. Lagos 08074497177" [ref=e420] [cursor=pointer]:
+            - /url: /listings/oakwood-park-hotels
+            - generic [ref=e421]:
+              - generic [ref=e423]: 🏨
+              - generic [ref=e424]:
+                - heading "Oakwood Park Hotels" [level=3] [ref=e427]
+                - paragraph [ref=e428]: Oakwood Park Hotels is located in Lekki Peninsula, Lagos.
+                - generic [ref=e429]:
+                  - generic [ref=e430]:
+                    - img [ref=e431]
+                    - text: Lagos
+                  - generic [ref=e434]:
+                    - img [ref=e435]
+                    - text: "08074497177"
+          - link "🏨 Olatunde Kehinde & Co Olatunde Kehinde & Co operations is sourcing for reliable tenants and accommodations for companies, individual and property management and valuations of all purposes. Lagos 0703 421 5599" [ref=e437] [cursor=pointer]:
+            - /url: /listings/olatunde-kehinde-co
+            - generic [ref=e438]:
+              - generic [ref=e440]: 🏨
+              - generic [ref=e441]:
+                - heading "Olatunde Kehinde & Co" [level=3] [ref=e444]
+                - paragraph [ref=e445]: Olatunde Kehinde & Co operations is sourcing for reliable tenants and accommodations for companies, individual and property management and valuations of all purposes.
+                - generic [ref=e446]:
+                  - generic [ref=e447]:
+                    - img [ref=e448]
+                    - text: Lagos
+                  - generic [ref=e451]:
+                    - img [ref=e452]
+                    - text: 0703 421 5599
+          - link "🏨 The PalmView Manor Limited A Lagos based hotel for luxurious lodging accommodation and banquetting facilities. Lagos 08034020116" [ref=e454] [cursor=pointer]:
+            - /url: /listings/the-palmview-manor-limited
+            - generic [ref=e455]:
+              - generic [ref=e457]: 🏨
+              - generic [ref=e458]:
+                - heading "The PalmView Manor Limited" [level=3] [ref=e461]
+                - paragraph [ref=e462]: A Lagos based hotel for luxurious lodging accommodation and banquetting facilities.
+                - generic [ref=e463]:
+                  - generic [ref=e464]:
+                    - img [ref=e465]
+                    - text: Lagos
+                  - generic [ref=e468]:
+                    - img [ref=e469]
+                    - text: "08034020116"
+          - link "🏨 Westown Hotel Westown Hotel is a 4-star hotel located in Ikeja that provides room services for clients, bar services and range of their hotel services for the comfort of their clients. Lagos 0809 810 2983" [ref=e471] [cursor=pointer]:
+            - /url: /listings/westown-hotel
+            - generic [ref=e472]:
+              - generic [ref=e474]: 🏨
+              - generic [ref=e475]:
+                - heading "Westown Hotel" [level=3] [ref=e478]
+                - paragraph [ref=e479]: Westown Hotel is a 4-star hotel located in Ikeja that provides room services for clients, bar services and range of their hotel services for the comfort of their clients.
+                - generic [ref=e480]:
+                  - generic [ref=e481]:
+                    - img [ref=e482]
+                    - text: Lagos
+                  - generic [ref=e485]:
+                    - img [ref=e486]
+                    - text: 0809 810 2983
+  - contentinfo [ref=e488]:
+    - generic [ref=e489]:
+      - generic [ref=e490]:
+        - generic [ref=e491]:
+          - heading "9jaDirectory" [level=3] [ref=e492]
+          - paragraph [ref=e493]: Your trusted Nigerian business directory connecting local businesses with customers nationwide
+        - generic [ref=e494]:
+          - heading "Company" [level=4] [ref=e495]
+          - list [ref=e496]:
+            - listitem [ref=e497]:
+              - link "About Us" [ref=e498] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e499]:
+              - link "Blog" [ref=e500] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e501]:
+              - link "Contact" [ref=e502] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e503]:
+              - link "List Your Business" [ref=e504] [cursor=pointer]:
+                - /url: /add-business
+        - generic [ref=e505]:
+          - heading "Browse" [level=4] [ref=e506]
+          - list [ref=e507]:
+            - listitem [ref=e508]:
+              - link "All Categories" [ref=e509] [cursor=pointer]:
+                - /url: /categories
+            - listitem [ref=e510]:
+              - link "Browse States" [ref=e511] [cursor=pointer]:
+                - /url: /states
+            - listitem [ref=e512]:
+              - link "Featured Businesses" [ref=e513] [cursor=pointer]:
+                - /url: /featured
+        - generic [ref=e514]:
+          - heading "Legal" [level=4] [ref=e515]
+          - list [ref=e516]:
+            - listitem [ref=e517]:
+              - link "Terms of Service" [ref=e518] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=e519]:
+              - link "Privacy Policy" [ref=e520] [cursor=pointer]:
+                - /url: /privacy
+          - heading "Follow Us" [level=4] [ref=e521]
+          - generic [ref=e522]:
+            - link "Twitter" [ref=e523] [cursor=pointer]:
+              - /url: "#"
+            - link "Instagram" [ref=e524] [cursor=pointer]:
+              - /url: "#"
+            - link "Facebook" [ref=e525] [cursor=pointer]:
+              - /url: "#"
+      - paragraph [ref=e527]: © 2025 9jaDirectory. All rights reserved.
+```

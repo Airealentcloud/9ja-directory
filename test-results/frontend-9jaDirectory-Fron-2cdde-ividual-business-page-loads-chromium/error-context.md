@@ -1,0 +1,78 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8]
+  - navigation [ref=e11]:
+    - generic [ref=e13]:
+      - heading "9jaDirectory" [level=1] [ref=e15]
+      - generic [ref=e16]:
+        - link "Home" [ref=e17] [cursor=pointer]:
+          - /url: /
+        - link "Categories" [ref=e18] [cursor=pointer]:
+          - /url: /categories
+        - link "States" [ref=e19] [cursor=pointer]:
+          - /url: /states
+        - link "About" [ref=e20] [cursor=pointer]:
+          - /url: /about
+      - generic [ref=e21]:
+        - button "Sign In" [ref=e22]
+        - button "List Business" [ref=e23]
+  - main [ref=e24]:
+    - generic [ref=e26]:
+      - heading "404" [level=1] [ref=e27]
+      - heading "This page could not be found." [level=2] [ref=e29]
+  - contentinfo [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - heading "9jaDirectory" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Your trusted Nigerian business directory connecting local businesses with customers nationwide
+        - generic [ref=e36]:
+          - heading "Company" [level=4] [ref=e37]
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "About Us" [ref=e40] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e41]:
+              - link "Blog" [ref=e42] [cursor=pointer]:
+                - /url: /blog
+            - listitem [ref=e43]:
+              - link "Contact" [ref=e44] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e45]:
+              - link "List Your Business" [ref=e46] [cursor=pointer]:
+                - /url: /add-business
+        - generic [ref=e47]:
+          - heading "Browse" [level=4] [ref=e48]
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - link "All Categories" [ref=e51] [cursor=pointer]:
+                - /url: /categories
+            - listitem [ref=e52]:
+              - link "Browse States" [ref=e53] [cursor=pointer]:
+                - /url: /states
+            - listitem [ref=e54]:
+              - link "Featured Businesses" [ref=e55] [cursor=pointer]:
+                - /url: /featured
+        - generic [ref=e56]:
+          - heading "Legal" [level=4] [ref=e57]
+          - list [ref=e58]:
+            - listitem [ref=e59]:
+              - link "Terms of Service" [ref=e60] [cursor=pointer]:
+                - /url: /terms
+            - listitem [ref=e61]:
+              - link "Privacy Policy" [ref=e62] [cursor=pointer]:
+                - /url: /privacy
+          - heading "Follow Us" [level=4] [ref=e63]
+          - generic [ref=e64]:
+            - link "Twitter" [ref=e65] [cursor=pointer]:
+              - /url: "#"
+            - link "Instagram" [ref=e66] [cursor=pointer]:
+              - /url: "#"
+            - link "Facebook" [ref=e67] [cursor=pointer]:
+              - /url: "#"
+      - paragraph [ref=e69]: © 2025 9jaDirectory. All rights reserved.
+  - alert [ref=e70]
+```
