@@ -106,6 +106,7 @@ export default function AddBusinessPage() {
                     website: formData.website,
                     address: formData.address,
                     state_id: formData.state_id,
+                    city: formData.city,
                     status: 'pending' // Default status
                 })
 
