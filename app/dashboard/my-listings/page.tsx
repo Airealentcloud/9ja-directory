@@ -37,8 +37,8 @@ export default async function MyListingsPage() {
                                                 <p className="text-sm font-medium text-green-600 truncate">{listing.business_name}</p>
                                                 <div className="ml-2 flex-shrink-0 flex">
                                                     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${listing.status === 'approved' ? 'bg-green-100 text-green-800' :
-                                                            listing.status === 'rejected' ? 'bg-red-100 text-red-800' :
-                                                                'bg-yellow-100 text-yellow-800'
+                                                        listing.status === 'rejected' ? 'bg-red-100 text-red-800' :
+                                                            'bg-yellow-100 text-yellow-800'
                                                         }`}>
                                                         {listing.status.charAt(0).toUpperCase() + listing.status.slice(1)}
                                                     </span>
@@ -68,12 +68,11 @@ export default async function MyListingsPage() {
                                         </div>
                                         <div className="ml-5 flex-shrink-0 flex space-x-2">
                                             <Link
-                                                href={`/dashboard/edit/${listing.id}`}
+                                                href={`/dashboard/my-listings/${listing.id}/edit`}
                                                 className="text-indigo-600 hover:text-indigo-900 text-sm font-medium"
                                             >
                                                 Edit
                                             </Link>
-                                            {/* Delete button would go here (requires client component or server action) */}
                                         </div>
                                     </div>
                                 </div>

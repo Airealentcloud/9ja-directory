@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Browse Businesses by State | All 37 Nigerian States',
     description: 'Find trusted businesses across every Nigerian state - from Lagos to Sokoto',
-    url: 'https://9jadirectory.com/states',
+    url: 'https://9jadirectory.org/states',
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Find businesses in all 36 states + FCT',
   },
   alternates: {
-    canonical: 'https://9jadirectory.com/states',
+    canonical: 'https://9jadirectory.org/states',
   },
 }
 
@@ -87,13 +87,13 @@ export default async function StatesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://9jadirectory.com',
+        item: 'https://9jadirectory.org',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'States',
-        item: 'https://9jadirectory.com/states',
+        item: 'https://9jadirectory.org/states',
       },
     ],
   }

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About 9jaDirectory - Nigeria Leading Business Directory',
     description: 'Connecting Nigerians with trusted businesses across all 36 states since 2025',
-    url: 'https://9jadirectory.com/about',
+    url: 'https://9jadirectory.org/about',
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Nigeria most comprehensive business directory',
   },
   alternates: {
-    canonical: 'https://9jadirectory.com/about',
+    canonical: 'https://9jadirectory.org/about',
   },
 }
 
@@ -46,8 +46,8 @@ export default async function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: '9jaDirectory',
-    url: 'https://9jadirectory.com',
-    logo: 'https://9jadirectory.com/logo.png',
+    url: 'https://9jadirectory.org',
+    logo: 'https://9jadirectory.org/logo.png',
     description: 'Nigeria most comprehensive business directory platform',
     areaServed: {
       '@type': 'Country',
@@ -67,7 +67,7 @@ export default async function AboutPage() {
     '@type': 'AboutPage',
     name: 'About 9jaDirectory',
     description: 'Learn about Nigeria premier business directory platform',
-    url: 'https://9jadirectory.com/about',
+    url: 'https://9jadirectory.org/about',
     mainEntity: {
       '@type': 'Organization',
       name: '9jaDirectory',
@@ -178,7 +178,7 @@ export default async function AboutPage() {
             </p>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               Unlike traditional business directories that focus only on major cities like Lagos and Abuja, <strong>9jaDirectory provides
-              comprehensive nationwide coverage</strong>, ensuring businesses in Port Harcourt, Kano, Ibadan, Enugu, Kaduna, Jos,
+                comprehensive nationwide coverage</strong>, ensuring businesses in Port Harcourt, Kano, Ibadan, Enugu, Kaduna, Jos,
               Calabar, Benin City, and every corner of Nigeria can reach their target audience.
             </p>
           </div>

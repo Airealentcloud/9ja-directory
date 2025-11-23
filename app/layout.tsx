@@ -73,9 +73,9 @@ export default function RootLayout({
                 </ul>
                 <h4 className="font-semibold mt-6 mb-4">Follow Us</h4>
                 <div className="flex space-x-4 text-gray-400">
-                  <a href="#" className="hover:text-white transition-colors" aria-label="Twitter">Twitter</a>
-                  <a href="#" className="hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
-                  <a href="#" className="hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
+                  <a href="https://twitter.com/9jaDirectory" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Twitter">Twitter</a>
+                  <a href="https://instagram.com/9jaDirectory" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+                  <a href="https://facebook.com/9jaDirectory" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
                 </div>
               </div>
             </div>

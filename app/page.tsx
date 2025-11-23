@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
+import SearchHero from '@/components/search-hero'
 
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nigeria Business Directory - Find Services in Lagos, Abuja & All States',
     description: 'Find and connect with verified businesses across all 36 Nigerian states',
-    url: 'https://9jadirectory.com',
+    url: 'https://9jadirectory.org',
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Discover trusted businesses across Nigeria',
   },
   alternates: {
-    canonical: 'https://9jadirectory.com',
+    canonical: 'https://9jadirectory.org',
   },
 }
 
@@ -63,10 +64,10 @@ export default async function Home() {
     '@type': 'WebSite',
     name: '9jaDirectory',
     description: 'Nigeria Premier Business Directory',
-    url: 'https://9jadirectory.com',
+    url: 'https://9jadirectory.org',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://9jadirectory.com/search?q={search_term_string}',
+      target: 'https://9jadirectory.org/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
     areaServed: {
@@ -83,47 +84,8 @@ export default async function Home() {
       />
 
       <div>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Discover Local Businesses Across Nigeria
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 text-green-100">
-              Connect with trusted services in your area
-            </p>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-xl p-4 flex flex-col md:flex-row gap-3">
-                <input
-                  type="text"
-                  name="search"
-                  placeholder="What business/service are you looking for?"
-                  aria-label="Search for businesses or services"
-                  className="flex-1 px-4 py-3 text-gray-900 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
-                />
-                <select
-                  name="state"
-                  aria-label="Select state"
-                  className="px-4 py-3 text-gray-900 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[200px]"
-                >
-                  <option value="">Nigeria (All States)</option>
-                  {(states || []).map((state) => (
-                    <option key={state.slug} value={state.slug}>
-                      {state.name}
-                    </option>
-                  ))}
-                </select>
-                <button
-                  className="px-8 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 font-semibold transition-colors"
-                  aria-label="Search businesses"
-                >
-                  Search
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Hero Section with Search */}
+        <SearchHero states={states || []} />
 
         {/* Featured Categories */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

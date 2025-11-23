@@ -32,13 +32,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${state.name} State Business Directory | 9jaDirectory`,
       description: `Find trusted businesses and services in ${state.name} State`,
-      url: `https://9jadirectory.com/states/${slug}`,
+      url: `https://9jadirectory.org/states/${slug}`,
       siteName: '9jaDirectory',
       locale: 'en_NG',
       type: 'website',
     },
     alternates: {
-      canonical: `https://9jadirectory.com/states/${slug}`,
+      canonical: `https://9jadirectory.org/states/${slug}`,
     },
   }
 }
@@ -110,19 +110,19 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://9jadirectory.com',
+        item: 'https://9jadirectory.org',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'States',
-        item: 'https://9jadirectory.com/states',
+        item: 'https://9jadirectory.org/states',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: state.name,
-        item: `https://9jadirectory.com/states/${slug}`,
+        item: `https://9jadirectory.org/states/${slug}`,
       },
     ],
   }
@@ -131,7 +131,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
     '@context': 'https://schema.org',
     '@type': 'Place',
     name: `${state.name} State`,
-    '@id': `https://9jadirectory.com/states/${slug}`,
+    '@id': `https://9jadirectory.org/states/${slug}`,
     containedInPlace: {
       '@type': 'Country',
       name: 'Nigeria',

@@ -1,0 +1,182 @@
+'use server'
+
+import { createClient } from '@/lib/supabase/server'
+import { revalidatePath } from 'next/cache'
+
+// Helper to check if user is admin
+// Helper to check if user is admin
+async function checkAdmin() {
+    const supabase = await createClient()
+
+    // Use the secure RPC function to check admin status
+    // This avoids RLS recursion issues
+    const { data: isAdmin, error } = await supabase.rpc('is_admin')
+
+    if (error) {
+        console.error('Error checking admin status:', error)
+        throw new Error('Error checking admin status')
+    }
+
+    if (!isAdmin) {
+        throw new Error('Unauthorized: Admin access required')
+    }
+
+    return supabase
+}
+
+// --- Review Actions ---
+
+export async function approveReview(reviewId: string) {
+    const supabase = await checkAdmin()
+
+    const { error } = await supabase
+        .from('reviews')
+        .update({
+            status: 'approved',
+            moderated_at: new Date().toISOString(),
+            moderated_by: (await supabase.auth.getUser()).data.user?.id
+        })
+        .eq('id', reviewId)
+
+    if (error) throw error
+    revalidatePath('/admin/reviews')
+    revalidatePath('/listings') // Ideally revalidate specific listing but we might not have ID here easily
+}
+
+export async function rejectReview(reviewId: string) {
+    const supabase = await checkAdmin()
+
+    const { error } = await supabase
+        .from('reviews')
+        .update({
+            status: 'rejected',
+            moderated_at: new Date().toISOString(),
+            moderated_by: (await supabase.auth.getUser()).data.user?.id
+        })
+        .eq('id', reviewId)
+
+    if (error) throw error
+    revalidatePath('/admin/reviews')
+}
+
+// --- Claim Actions ---
+
+export async function approveClaim(claimId: string) {
+    const supabase = await checkAdmin()
+
+    // 1. Get the claim details
+    const { data: claim, error: fetchError } = await supabase
+        .from('claim_requests')
+        .select('*')
+        .eq('id', claimId)
+        .single()
+
+    if (fetchError || !claim) throw new Error('Claim not found')
+
+    // 2. Update the listing to be claimed by this user
+    const { error: listingError } = await supabase
+        .from('listings')
+        .update({
+            claimed: true,
+            claimed_by: claim.user_id,
+            claimed_at: new Date().toISOString()
+        })
+        .eq('id', claim.listing_id)
+
+    if (listingError) throw listingError
+
+    // 3. Update claim status
+    const { error: claimError } = await supabase
+        .from('claim_requests')
+        .update({
+            status: 'approved',
+            reviewed_at: new Date().toISOString(),
+            reviewed_by: (await supabase.auth.getUser()).data.user?.id
+        })
+        .eq('id', claimId)
+
+    if (claimError) throw claimError
+
+    revalidatePath('/admin/claims')
+    revalidatePath('/listings')
+}
+
+export async function rejectClaim(claimId: string, reason?: string) {
+    const supabase = await checkAdmin()
+
+    const { error } = await supabase
+        .from('claim_requests')
+        .update({
+            status: 'rejected',
+            rejection_reason: reason,
+            reviewed_at: new Date().toISOString(),
+            reviewed_by: (await supabase.auth.getUser()).data.user?.id
+        })
+        .eq('id', claimId)
+
+    if (error) throw error
+    revalidatePath('/admin/claims')
+}
+
+// --- Listing Actions ---
+
+export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 'rejected' = 'all') {
+    const supabase = await checkAdmin()
+
+    let query = supabase
+        .from('listings')
+        .select(`
+            *,
+            categories (name),
+            profiles (full_name, email)
+        `)
+        .order('created_at', { ascending: false })
+
+    if (status !== 'all') {
+        query = query.eq('status', status)
+    }
+
+    const { data, error } = await query
+
+    if (error) {
+        console.error('Error fetching admin listings:', error)
+        throw error
+    }
+
+    console.log(`Admin listings fetch result: Found ${data?.length || 0} listings`)
+    return data
+}
+
+export async function approveListingServer(id: string) {
+    const supabase = await checkAdmin()
+
+    const { data, error } = await supabase
+        .from('listings')
+        .update({
+            status: 'approved',
+            rejection_reason: null
+        })
+        .eq('id', id)
+        .select()
+
+    if (error) return { error }
+    revalidatePath('/admin/listings')
+    return { data }
+}
+
+export async function rejectListingServer(id: string, reason: string) {
+    const supabase = await checkAdmin()
+
+    const { data, error } = await supabase
+        .from('listings')
+        .update({
+            status: 'rejected',
+            rejection_reason: reason
+        })
+        .eq('id', id)
+        .select()
+
+    if (error) return { error }
+    revalidatePath('/admin/listings')
+    return { data }
+}

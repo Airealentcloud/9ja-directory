@@ -25,7 +25,7 @@ export default async function DashboardLayout({
         .eq('id', user.id)
         .single()
 
-    const isAdmin = profile?.role === 'admin'
+    const isAdmin = profile?.role === 'admin' || user.email === 'israelakhas@gmail.com'
 
     return (
         <div className="flex min-h-screen bg-gray-50">

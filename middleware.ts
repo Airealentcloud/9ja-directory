@@ -2,6 +2,12 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function middleware(request: NextRequest) {
+  console.log('Middleware running for:', request.nextUrl.pathname)
+
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    console.error('Missing Supabase Env Vars in Middleware!')
+  }
+
   let response = NextResponse.next({
     request,
   })
@@ -49,7 +55,7 @@ export async function middleware(request: NextRequest) {
       .eq('id', user.id)
       .single()
 
-    if (profile?.role !== 'admin') {
+    if (profile?.role !== 'admin' && user.email !== 'israelakhas@gmail.com') {
       return NextResponse.redirect(new URL('/dashboard', request.url))
     }
   }

@@ -7,23 +7,16 @@ export default async function DashboardPage() {
 
     if (!user) return null
 
-    // Fetch stats
-    const { count: totalListings } = await supabase
+    // Fetch all user listings
+    const { data: allListings } = await supabase
         .from('listings')
-        .select('*', { count: 'exact', head: true })
+        .select('*')
         .eq('user_id', user.id)
 
-    const { count: pendingListings } = await supabase
-        .from('listings')
-        .select('*', { count: 'exact', head: true })
-        .eq('user_id', user.id)
-        .eq('status', 'pending')
-
-    const { count: approvedListings } = await supabase
-        .from('listings')
-        .select('*', { count: 'exact', head: true })
-        .eq('user_id', user.id)
-        .eq('status', 'approved')
+    // Calculate stats from the data
+    const totalListings = allListings?.length || 0
+    const pendingListings = allListings?.filter(l => l.status === 'pending').length || 0
+    const approvedListings = allListings?.filter(l => l.status === 'approved').length || 0
 
     // Fetch recent listings
     const { data: recentListings } = await supabase
@@ -78,8 +71,8 @@ export default async function DashboardPage() {
                                     </div>
                                     <div className="flex items-center">
                                         <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${listing.status === 'approved' ? 'bg-green-100 text-green-800' :
-                                                listing.status === 'rejected' ? 'bg-red-100 text-red-800' :
-                                                    'bg-yellow-100 text-yellow-800'
+                                            listing.status === 'rejected' ? 'bg-red-100 text-red-800' :
+                                                'bg-yellow-100 text-yellow-800'
                                             }`}>
                                             {listing.status.charAt(0).toUpperCase() + listing.status.slice(1)}
                                         </span>

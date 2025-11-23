@@ -34,8 +34,8 @@ export default function Sidebar({ isAdmin }: { isAdmin: boolean }) {
                     <Link
                         href="/dashboard"
                         className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/dashboard')
-                                ? 'bg-green-50 text-green-700'
-                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                            ? 'bg-green-50 text-green-700'
+                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                             }`}
                     >
                         Overview
@@ -43,8 +43,8 @@ export default function Sidebar({ isAdmin }: { isAdmin: boolean }) {
                     <Link
                         href="/dashboard/my-listings"
                         className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/dashboard/my-listings')
-                                ? 'bg-green-50 text-green-700'
-                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                            ? 'bg-green-50 text-green-700'
+                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                             }`}
                     >
                         My Listings
@@ -54,6 +54,15 @@ export default function Sidebar({ isAdmin }: { isAdmin: boolean }) {
                         className="flex items-center px-4 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                     >
                         Add New Business
+                    </Link>
+                    <Link
+                        href="/dashboard/profile"
+                        className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/dashboard/profile')
+                            ? 'bg-green-50 text-green-700'
+                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                            }`}
+                    >
+                        Profile
                     </Link>
                 </div>
 
@@ -65,8 +74,8 @@ export default function Sidebar({ isAdmin }: { isAdmin: boolean }) {
                         <Link
                             href="/admin/dashboard"
                             className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/dashboard')
-                                    ? 'bg-purple-50 text-purple-700'
-                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-purple-50 text-purple-700'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
                         >
                             Admin Overview
@@ -74,11 +83,29 @@ export default function Sidebar({ isAdmin }: { isAdmin: boolean }) {
                         <Link
                             href="/admin/listings"
                             className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/listings')
-                                    ? 'bg-purple-50 text-purple-700'
-                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                ? 'bg-purple-50 text-purple-700'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
                         >
                             Manage Listings
+                        </Link>
+                        <Link
+                            href="/admin/reviews"
+                            className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/reviews')
+                                ? 'bg-purple-50 text-purple-700'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                }`}
+                        >
+                            Manage Reviews
+                        </Link>
+                        <Link
+                            href="/admin/claims"
+                            className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/claims')
+                                ? 'bg-purple-50 text-purple-700'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                }`}
+                        >
+                            Manage Claims
                         </Link>
                     </div>
                 )}

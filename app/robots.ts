@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://9jadirectory.com/sitemap.xml',
+    sitemap: 'https://9jadirectory.org/sitemap.xml',
   }
 }
