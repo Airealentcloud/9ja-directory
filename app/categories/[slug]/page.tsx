@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { getCategoryContent } from '@/lib/content/category-content'
+import { getCategorySEOContent } from '@/lib/content/category-seo-content'
+import Breadcrumbs from '@/components/ui/breadcrumbs'
 import {
   generateCategoryItemListSchema,
   generateCategoryBreadcrumbSchema,
@@ -114,17 +116,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
-            <div className="flex items-center text-sm mb-4 text-green-100">
-              <Link href="/" className="hover:text-white">
-                Home
-              </Link>
-              <span className="mx-2">/</span>
-              <Link href="/categories" className="hover:text-white">
-                Categories
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">{category.name}</span>
-            </div>
+            <Breadcrumbs
+              items={[
+                { label: 'Categories', href: '/categories' },
+                { label: category.name, href: `/categories/${category.slug}` },
+              ]}
+              className="text-green-100 mb-4"
+            />
 
             {/* Category Header */}
             <div className="flex items-start gap-4">
@@ -192,7 +190,67 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
             {/* Listings Grid */}
             <div className="flex-1">
-              {/* SEO Intro Content */}
+              {/* SEO Intro Content (New) */}
+              {(() => {
+                const seoContent = getCategorySEOContent(slug)
+                if (seoContent) {
+                  return (
+                    <div className="bg-white rounded-lg shadow-md p-8 mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        About {category.name} in Nigeria
+                      </h2>
+                      <div className="prose prose-green max-w-none text-gray-700 leading-relaxed">
+                        <p>{seoContent.introText}</p>
+                      </div>
+
+                      {/* Quick Tips */}
+                      {seoContent.tips && seoContent.tips.length > 0 && (
+                        <div className="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r">
+                          <h3 className="font-bold text-gray-900 mb-2">Quick Tips:</h3>
+                          <ul className="space-y-1 text-sm text-gray-700">
+                            {seoContent.tips.map((tip, index) => (
+                              <li key={index} className="flex items-start">
+                                <span className="text-green-600 mr-2">✓</span>
+                                <span>{tip}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* FAQs */}
+                      {seoContent.faqs && seoContent.faqs.length > 0 && (
+                        <div className="mt-8">
+                          <h3 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                          <div className="space-y-4">
+                            {seoContent.faqs.map((faq, index) => (
+                              <details key={index} className="group">
+                                <summary className="cursor-pointer font-semibold text-gray-900 hover:text-green-600 transition-colors list-none flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                  <span>{faq.question}</span>
+                                  <svg
+                                    className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </summary>
+                                <div className="mt-2 p-4 text-gray-700 leading-relaxed">
+                                  {faq.answer}
+                                </div>
+                              </details>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                }
+                return null
+              })()}
+
+              {/* Original Category Content (if exists) */}
               {categoryContent && (
                 <div className="bg-white rounded-lg shadow-md p-8 mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
