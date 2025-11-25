@@ -59,7 +59,37 @@ export default async function Home() {
     .from('categories')
     .select('*', { count: 'exact', head: true })
 
-  const jsonLd = {
+  // Organization Schema - Identifies 9jaDirectory as an organization
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: '9jaDirectory',
+    alternateName: '9ja Directory',
+    url: 'https://9jadirectory.org',
+    logo: 'https://9jadirectory.org/logo.png',
+    description: 'Nigeria\'s premier online business directory connecting customers with trusted local businesses across all 36 states.',
+    foundingDate: '2024',
+    areaServed: {
+      '@type': 'Country',
+      name: 'Nigeria',
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'support@9jadirectory.org',
+      areaServed: 'NG',
+      availableLanguage: ['English']
+    },
+    sameAs: [
+      // Add your actual social media profiles here
+      'https://twitter.com/9jadirectory',
+      'https://facebook.com/9jadirectory',
+      'https://instagram.com/9jadirectory',
+    ]
+  }
+
+  // WebSite Schema with Sitelinks Searchbox
+  const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: '9jaDirectory',
@@ -78,9 +108,14 @@ export default async function Home() {
 
   return (
     <>
+      {/* Multiple Schema Markup for Rich Results */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       <div>
