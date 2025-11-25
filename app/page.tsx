@@ -6,7 +6,7 @@ import SearchHero from '@/components/search-hero'
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',
   description: 'Discover trusted businesses and services across Nigeria. Search 10,000+ verified listings in Lagos, Abuja, and all 36 states. Find restaurants, hotels, healthcare, shops and more.',
-  keywords: 'Nigeria business directory, Nigerian businesses, find businesses in Nigeria, Lagos directory, Abuja businesses, Nigerian services, 9ja directory, business listings Nigeria',
+  keywords: ['Nigeria business directory', 'Nigerian businesses', 'find businesses in Nigeria', 'Lagos directory', 'Abuja businesses', 'Nigerian services', '9ja directory', 'business listings Nigeria'],
   openGraph: {
     title: 'Nigeria Business Directory - Find Services in Lagos, Abuja & All States',
     description: 'Find and connect with verified businesses across all 36 Nigerian states',

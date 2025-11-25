@@ -76,7 +76,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
 
   // Generate map URL (Google Maps embed)
   const mapUrl = listing.address
-    ? `https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${encodeURIComponent(listing.address)}`
+    ? `https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&q=${encodeURIComponent(listing.address)}`
     : null
 
   return (

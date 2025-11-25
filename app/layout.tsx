@@ -7,9 +7,46 @@ import AuthButton from '@/components/auth-button'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '9jaDirectory - Find Businesses & Services in Nigeria',
-  description: 'Discover and connect with businesses, services, and professionals across Nigeria. Your complete Nigerian business directory.',
-  keywords: ['Nigeria business directory', 'Nigerian businesses', 'find services in Nigeria', '9ja directory', 'Lagos businesses', 'Abuja businesses'],
+  title: {
+    default: '9jaDirectory - Find Businesses & Services in Nigeria',
+    template: '%s | 9jaDirectory',
+  },
+  description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria. Your complete Nigerian business directory for Lagos, Abuja, and all 36 states.',
+  keywords: ['Nigeria business directory', 'Nigerian businesses', 'find services in Nigeria', '9ja directory', 'Lagos businesses', 'Abuja businesses', 'local services Nigeria', 'Nigerian companies'],
+  openGraph: {
+    type: 'website',
+    locale: 'en_NG',
+    url: 'https://9jadirectory.org',
+    siteName: '9jaDirectory',
+    title: '9jaDirectory - Find Businesses & Services in Nigeria',
+    description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
+    images: [
+      {
+        url: 'https://9jadirectory.org/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: '9jaDirectory',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '9jaDirectory - Find Businesses & Services in Nigeria',
+    description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
+    images: ['https://9jadirectory.org/og-image.jpg'],
+    creator: '@9jaDirectory',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
