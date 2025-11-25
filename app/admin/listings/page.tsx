@@ -42,7 +42,7 @@ export default function AdminListingsPage() {
 
         // 1. Try server-side fetch first (bypasses RLS if service key exists)
         try {
-            const { data: serverData, error: serverError } = await getAdminListings(statusFilter)
+            const serverData = await getAdminListings(statusFilter)
 
             if (serverData) {
                 console.log(`Found ${serverData.length} listings via server action`)

@@ -378,27 +378,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     </div>
                   </div>
 
-                  {/* Industry Insights (if available) */}
-                  {categoryContent.insights && (
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow-md p-8 mt-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                        {categoryContent.insights.title}
-                      </h2>
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        {categoryContent.insights.stats.map((stat, idx) => (
-                          <div key={idx} className="bg-white rounded-lg p-4 text-center shadow">
-                            <div className="text-3xl font-bold text-green-600">{stat.value}</div>
-                            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
-                          </div>
-                        ))}
-                      </div>
-                      <ul className="space-y-2">
-                        {categoryContent.insights.highlights.map((highlight, idx) => (
-                          <li key={idx} className="text-gray-700" dangerouslySetInnerHTML={{ __html: highlight }} />
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+
                 </>
               )}
             </div>

@@ -13,8 +13,20 @@ export default function ProfileForm({ user, profile }: ProfileFormProps) {
     const [avatarUrl, setAvatarUrl] = useState(profile?.avatar_url || '')
     const [isSaving, setIsSaving] = useState(false)
 
+    async function handleUpdateProfile(formData: FormData) {
+        setIsSaving(true)
+        try {
+            await updateProfile(formData)
+            alert('Profile updated successfully!')
+        } catch (error) {
+            alert('Failed to update profile')
+        } finally {
+            setIsSaving(false)
+        }
+    }
+
     return (
-        <form action={updateProfile} className="space-y-8 divide-y divide-gray-200">
+        <form action={handleUpdateProfile} className="space-y-8 divide-y divide-gray-200">
             <div className="space-y-8 divide-y divide-gray-200">
                 <div>
                     <div className="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">

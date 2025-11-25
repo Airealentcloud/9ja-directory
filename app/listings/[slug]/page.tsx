@@ -642,14 +642,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
+  // Helper to safely get relation data
+  const category = Array.isArray(listing.categories) ? listing.categories[0] : listing.categories
+  const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
+
   // Check if this is a real estate listing
-  const isRealEstate = listing.categories?.name?.toLowerCase().includes('real estate')
+  const isRealEstate = category?.name?.toLowerCase().includes('real estate')
 
   // Enhanced title for real estate
-  const title = isRealEstate && listing.city && listing.states?.name
-    ? `${listing.business_name} - Premium Real Estate in ${listing.city}, ${listing.states.name} | Verified Properties`
-    : listing.categories?.name && listing.city
-      ? `${listing.business_name} - ${listing.categories.name} in ${listing.city} | 9jaDirectory`
+  const title = isRealEstate && listing.city && state?.name
+    ? `${listing.business_name} - Premium Real Estate in ${listing.city}, ${state.name} | Verified Properties`
+    : category?.name && listing.city
+      ? `${listing.business_name} - ${category.name} in ${listing.city} | 9jaDirectory`
       : `${listing.business_name} - 9jaDirectory`
 
   // Enhanced description for real estate
@@ -658,8 +662,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : listing.description?.substring(0, 155) || `Find ${listing.business_name} on 9jaDirectory`
 
   // Keywords for real estate
-  const keywords = isRealEstate && listing.city && listing.states?.name
-    ? `real estate ${listing.city}, property ${listing.states.name}, ${listing.business_name}, houses for sale ${listing.city}, land for sale ${listing.city}, apartments ${listing.city}`
+  const keywords = isRealEstate && listing.city && state?.name
+    ? `real estate ${listing.city}, property ${state.name}, ${listing.business_name}, houses for sale ${listing.city}, land for sale ${listing.city}, apartments ${listing.city}`
     : undefined
 
   return {

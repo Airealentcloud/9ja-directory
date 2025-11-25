@@ -13,6 +13,184 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "top-business-listing-sites-in-nigeria-2025",
+    title: "Top Business Listing Sites in Nigeria to Grow Your Visibility (2025 Guide)",
+    excerpt: "Discover the top 10 business listing sites in Nigeria for 2025. Boost your online visibility, improve local SEO, and reach more customers with these essential directories.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
+
+      <p>In the digital age, visibility is the currency of business growth. For Nigerian entrepreneurs, the question isn't just "Is your business online?" but "Can customers find you when they search?" With millions of Nigerians searching for services daily, listing your business on reputable directories is one of the most effective—and often free—ways to boost your <strong>local SEO in Nigeria</strong>.</p>
+
+      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/fashion" class="text-green-600 hover:underline">fashion brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, we’ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Why Business Listings Matter for Nigerian SMEs</h2>
+      <p>Before we dive into the list, let's understand why this matters. Business directories act as digital phonebooks. When you list your business, you create a "citation"—a mention of your business name, address, and phone number (NAP) online. Google uses these citations to verify your business's legitimacy, which directly impacts your ranking in local search results.</p>
+      <ul>
+        <li><strong>Improved Local SEO:</strong> More quality backlinks mean better Google rankings.</li>
+        <li><strong>Increased Trust:</strong> Customers trust businesses that appear on reputable platforms.</li>
+        <li><strong>Direct Traffic:</strong> Many users search directly on these platforms for services.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Business Listing Sites in Nigeria (2025)</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. 9jaDirectory.org</h3>
+      <p><strong>Best For:</strong> Comprehensive visibility, SEO boost, and modern user experience.</p>
+      <p>As Nigeria's fastest-growing business directory, <a href="/" class="text-green-600 hover:underline">9jaDirectory</a> offers a sleek, mobile-first platform designed for the modern Nigerian consumer. Unlike older directories, it focuses on speed, accuracy, and rich media content.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free & Premium options.</li>
+        <li><strong>Key Features:</strong> Verified badges, photo galleries, direct WhatsApp integration, and SEO-optimized profile pages.</li>
+        <li><strong>How to Join:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business for free</a> in under 2 minutes.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. MyNigeriaBusiness.ng</h3>
+      <p><strong>Best For:</strong> Established businesses and corporate listings.</p>
+      <p>MyNigeriaBusiness.ng is a staple in the Nigerian business ecosystem. It provides a robust platform for businesses to showcase their services and connects them with other B2B opportunities.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free basic listing.</li>
+        <li><strong>Key Features:</strong> Business networking, detailed company profiles.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Google Business Profile (formerly Google My Business)</h3>
+      <p><strong>Best For:</strong> Local map visibility and search dominance.</p>
+      <p>Technically not just a directory, but the most critical tool for <strong>local SEO</strong>. It puts your business on Google Maps and Search.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free.</li>
+        <li><strong>Key Features:</strong> Google Maps integration, customer reviews, posts/updates.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. VConnect</h3>
+      <p><strong>Best For:</strong> Service-based businesses.</p>
+      <p>One of the pioneers of business listing in Nigeria. VConnect has evolved into a service marketplace but remains a powerful database for finding local professionals.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Finelib</h3>
+      <p><strong>Best For:</strong> Niche industries and specific sectors.</p>
+      <p>Finelib is known for its detailed categorization. It’s an excellent place for specialized businesses like <a href="/categories/manufacturing" class="text-green-600 hover:underline">manufacturing</a> or <a href="/categories/agriculture" class="text-green-600 hover:underline">agriculture</a> to get listed.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. ConnectNigeria</h3>
+      <p><strong>Best For:</strong> Information and business articles.</p>
+      <p>ConnectNigeria combines a business portal with an information hub, organizing Nigeria's information to make it easily accessible.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. BusinessList Nigeria</h3>
+      <p><strong>Best For:</strong> Quick and simple listings.</p>
+      <p>A straightforward platform that allows for free business listings. It’s part of a global network of business directories.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. NGContacts</h3>
+      <p><strong>Best For:</strong> B2B marketing and company data.</p>
+      <p>NGContacts focuses on providing accurate contact details for Nigerian companies, making it a valuable resource for sales and marketing teams.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. NigerianYellowPages</h3>
+      <p><strong>Best For:</strong> Traditional directory users.</p>
+      <p>The digital evolution of the classic yellow pages. It retains a loyal user base accustomed to the traditional directory format.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. BusinessFinder Nigeria</h3>
+      <p><strong>Best For:</strong> Verified service providers.</p>
+      <p>Focuses on verifying businesses to reduce fraud and increase consumer confidence.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Optimize Your Business Listing</h2>
+      <p>Simply adding your name isn't enough. To get the most out of these <strong>business listing sites in Nigeria</strong>, follow these tips:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>NAP Consistency:</strong> Ensure your Name, Address, and Phone number are <em>exactly</em> the same across all platforms.</li>
+        <li><strong>Add Photos:</strong> Profiles with photos get 35% more clicks. Show off your products or office.</li>
+        <li><strong>Write a Compelling Description:</strong> Use keywords naturally. Mention your city (e.g., "Best bakery in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>").</li>
+        <li><strong>Collect Reviews:</strong> Encourage happy customers to leave positive reviews.</li>
+      </ol>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>Listing your business on these top sites is a low-effort, high-reward strategy for 2025. It builds your digital footprint and makes it easier for customers to choose you.</p>
+      <p>Start with the most effective option: <a href="/add-business" class="text-green-600 hover:underline"><strong>Add your business to 9jaDirectory now</strong></a> and watch your visibility grow.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    date: "Nov 25, 2025",
+    author: "9jaDirectory Editorial Team",
+    category: "Marketing",
+    readTime: "8 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top Business Listing Sites in Nigeria to Grow Your Visibility (2025 Guide)",
+        "image": "https://9jadirectory.org/images/blog/top-business-listing-sites.jpg",
+        "author": {
+          "@type": "Organization",
+          "name": "9jaDirectory Editorial Team",
+          "url": "https://9jadirectory.org"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://9jadirectory.org/logo.png"
+          }
+        },
+        "datePublished": "2025-11-25",
+        "description": "Discover the top 10 business listing sites in Nigeria for 2025. Boost your online visibility, improve local SEO, and reach more customers with these essential directories.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://9jadirectory.org/blog/top-business-listing-sites-in-nigeria-2025"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "9jaDirectory.org",
+            "url": "https://9jadirectory.org"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MyNigeriaBusiness.ng",
+            "url": "https://mynigeriabusiness.ng"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Google Business Profile",
+            "url": "https://www.google.com/business/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "VConnect",
+            "url": "https://vconnect.com"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://9jadirectory.org"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://9jadirectory.org/blog"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Top Business Listing Sites in Nigeria",
+          "item": "https://9jadirectory.org/blog/top-business-listing-sites-in-nigeria-2025"
+        }]
+      }
+    ])
+  },
+  {
     slug: "business-registration-nigeria-guide",
     title: "The Ultimate Guide to Business Registration in Nigeria (2025 Update)",
     excerpt: "The ultimate guide to business registration in Nigeria (2025). Learn the step-by-step CAC process, updated costs, requirements for Business Name vs. Limited Company, and how to get your TIN.",

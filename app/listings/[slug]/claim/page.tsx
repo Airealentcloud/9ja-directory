@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, use } from 'react'
 import { submitClaim } from '@/app/actions/claims'
 import { useRouter } from 'next/navigation'
 import FileUploader from '@/components/common/file-uploader'
 
-export default function ClaimPage({ params }: { params: { slug: string } }) {
+export default function ClaimPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params)
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [proofUrl, setProofUrl] = useState('')
@@ -24,7 +25,7 @@ export default function ClaimPage({ params }: { params: { slug: string } }) {
             const result = await submitClaim(formData)
             if (result.success) {
                 alert('Claim submitted successfully! An admin will review your request.')
-                router.push(`/listings/${params.slug}`)
+                router.push(`/listings/${slug}`)
             }
         } catch (err: any) {
             setError(err.message)
@@ -52,7 +53,7 @@ export default function ClaimPage({ params }: { params: { slug: string } }) {
                     </div>
 
                     <form action={handleSubmit} className="space-y-6">
-                        <input type="hidden" name="slug" value={params.slug} />
+                        <input type="hidden" name="slug" value={slug} />
 
                         <div>
                             <label htmlFor="notes" className="block text-sm font-medium text-gray-700">

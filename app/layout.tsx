@@ -30,6 +30,7 @@ export default function RootLayout({
                 <Link href="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
                 <Link href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</Link>
                 <Link href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</Link>
+                <Link href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
                 <Link href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
                   List Your Business
                 </Link>

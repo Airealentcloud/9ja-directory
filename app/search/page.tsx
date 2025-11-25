@@ -5,10 +5,11 @@ import { redirect } from 'next/navigation'
 export default async function SearchPage({
     searchParams,
 }: {
-    searchParams: { q?: string; state?: string }
+    searchParams: Promise<{ q?: string; state?: string }>
 }) {
-    const query = searchParams.q || ''
-    const stateSlug = searchParams.state || ''
+    const { q, state } = await searchParams
+    const query = q || ''
+    const stateSlug = state || ''
 
     if (!query && !stateSlug) {
         redirect('/')
