@@ -285,6 +285,104 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 <div className="space-y-6 mb-12">
                   <h2 className="text-2xl font-bold text-gray-900">Browse {category.name} Listings</h2>
                   {listings.map((listing) => (
+                    <Link
+                      key={listing.id}
+                      href={`/listings/${listing.slug}`}
+                      className="block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden group"
+                    >
+                      <div className="flex flex-col sm:flex-row">
+                        {/* Logo */}
+                        <div className="w-full sm:w-48 h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center flex-shrink-0 group-hover:from-green-200 group-hover:to-green-300 transition-colors">
+                          {category.icon ? (
+                            <div className="text-5xl">{category.icon}</div>
+                          ) : (
+                            <div className="text-2xl font-bold text-green-600">
+                              {listing.business_name.charAt(0)}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Details */}
+                        <div className="flex-1 p-6 flex flex-col justify-between">
+                          <div>
+                            <div className="flex items-start justify-between mb-2">
+                              <div>
+                                <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                                  {listing.business_name}
+                                </h3>
+                              </div>
+                              {listing.verified && (
+                                <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1 flex-shrink-0">
+                                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                      fillRule="evenodd"
+                                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                      clipRule="evenodd"
+                                    />
+                                  </svg>
+                                  ✓ Verified
+                                </span>
+                              )}
+                            </div>
+
+                            {listing.description && (
+                              <p className="text-gray-600 mt-3 line-clamp-2">
+                                {listing.description}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
+                            {listing.states && (
+                              <div className="flex items-center">
+                                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                {(listing.cities as any)?.name ? `${(listing.cities as any).name}, ` : ''}{(listing.states as any)?.name}
+                              </div>
+                            )}
+                            {listing.phone && (
+                              <div className="flex items-center hover:text-green-600 transition-colors">
+                                <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <a href={`tel:${listing.phone}`}>{listing.phone}</a>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* CTA Button */}
+                          <div className="mt-4 flex items-center justify-between">
+                            <span className="text-sm font-semibold text-green-600">View Details →</span>
+                            <button className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors hidden sm:inline-block">
+                              Contact
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {/* Pagination placeholder */}
+              {listings && listings.length >= 50 && (
+                <div className="mt-8 text-center">
+                  <button className="px-6 py-3 bg-white border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+                    Load More
+                  </button>
+                </div>
+              )}
+
+              {/* SEO Content Section - MOVED TO BOTTOM */}
+              {(() => {
+                const seoContent = getCategorySEOContent(slug)
+                if (seoContent) {
+                  return (
+                    <div className="bg-white rounded-lg shadow-md p-8 mt-12 mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        About {category.name} in Nigeria
                       </h2>
                       <div className="prose prose-green max-w-none text-gray-700 leading-relaxed">
                         <p>{seoContent.introText}</p>
