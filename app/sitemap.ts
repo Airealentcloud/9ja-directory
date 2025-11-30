@@ -56,7 +56,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }))
 
-    // 5. Cities (New - for better local SEO)
+    // 5. Category + State Pages (New - HIGH PRIORITY for local SEO)
+    // These 540+ dynamic pages target searches like "restaurants in Lagos", "salons in Abuja", etc.
+    const categoryStateUrls = (categories || []).flatMap((category: any) =>
+        (states || []).map((state: any) => ({
+            url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.8, // High priority - these pages target high-volume keywords
+        }))
+    )
+
+    // 6. Cities (for better local SEO)
     const { data: cities } = await supabase
         .from('cities')
         .select('slug, state_id, states(slug)')
@@ -69,7 +80,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
     }))
 
-    // 6. Listings (Approved only)
+    // 7. Listings (Approved only)
     // Fetching only necessary fields to minimize payload
     const { data: listings } = await supabase
         .from('listings')
@@ -84,5 +95,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
     }))
 
-    return [...routes, ...blogUrls, ...categoryUrls, ...stateUrls, ...cityUrls, ...listingUrls]
+    return [...routes, ...blogUrls, ...categoryUrls, ...stateUrls, ...categoryStateUrls, ...cityUrls, ...listingUrls]
 }

@@ -48,6 +48,7 @@ type Review = {
 /**
  * Generates LocalBusiness JSON-LD schema for a listing
  * Supports multiple business types including Real Estate
+ * ENHANCED: Includes GeoCoordinates, ServiceArea, ContactPoint, and Organization hierarchy
  */
 export function generateLocalBusinessSchema(
     listing: Listing,
@@ -60,7 +61,7 @@ export function generateLocalBusinessSchema(
 
     const schema: any = {
         '@context': 'https://schema.org',
-        '@type': businessType,
+        '@type': [businessType, 'LocalBusiness'], // Multiple types for better SERP features
         '@id': `https://9jadirectory.org/listings/${listing.slug}`,
         name: listing.business_name,
         description: listing.description,
@@ -71,7 +72,19 @@ export function generateLocalBusinessSchema(
         schema.url = listing.website_url
     }
 
-    // Contact Information
+    // ✅ ENHANCED: Contact Information with ContactPoint
+    if (listing.phone || listing.email) {
+        schema.contactPoint = {
+            '@type': 'ContactPoint',
+            'contactType': 'Customer Service',
+            ...(listing.phone && { 'telephone': listing.phone }),
+            ...(listing.email && { 'email': listing.email }),
+            'areaServed': listing.city ? [listing.city, listing.states?.name, 'Nigeria'].filter(Boolean) : ['Nigeria'],
+            'availableLanguage': ['en', 'en-NG'],
+        }
+    }
+
+    // Fallback individual phone/email
     if (listing.phone) {
         schema.telephone = listing.phone
     }
@@ -79,7 +92,7 @@ export function generateLocalBusinessSchema(
         schema.email = listing.email
     }
 
-    // Address
+    // ✅ ENHANCED: Address with structured data
     if (listing.address) {
         schema.address = {
             '@type': 'PostalAddress',
@@ -87,6 +100,7 @@ export function generateLocalBusinessSchema(
             addressLocality: listing.city,
             addressRegion: listing.states?.name || listing.city,
             addressCountry: 'NG',
+            'postalCode': listing.neighborhood || undefined, // Use neighborhood as additional location detail
         }
 
         if (listing.neighborhood) {
@@ -94,16 +108,45 @@ export function generateLocalBusinessSchema(
         }
     }
 
-    // Geographic Coordinates
+    // ✅ CRITICAL FOR LOCAL PACK: Geographic Coordinates
     if (listing.latitude && listing.longitude) {
         schema.geo = {
             '@type': 'GeoCoordinates',
-            latitude: listing.latitude.toString(),
-            longitude: listing.longitude.toString(),
+            latitude: listing.latitude,
+            longitude: listing.longitude,
+            elevation: undefined, // Optional: add elevation if available
         }
 
-        // Add map URL
+        // Add map URL for click-through
         schema.hasMap = `https://www.google.com/maps/search/?api=1&query=${listing.latitude},${listing.longitude}`
+    }
+
+    // ✅ ENHANCED: Service Area - CRITICAL FOR MULTI-LOCATION BUSINESSES
+    if (listing.city && listing.states?.name) {
+        schema.areaServed = [
+            {
+                '@type': 'City',
+                name: listing.city,
+                containedInPlace: {
+                    '@type': 'State',
+                    name: listing.states.name,
+                    containedInPlace: {
+                        '@type': 'Country',
+                        name: 'NG',
+                    },
+                },
+            },
+            // Also include state-level service area
+            {
+                '@type': 'State',
+                name: listing.states.name,
+            },
+            // And country-level
+            {
+                '@type': 'Country',
+                name: 'Nigeria',
+            },
+        ]
     }
 
     // Images
@@ -122,10 +165,12 @@ export function generateLocalBusinessSchema(
         schema.logo = {
             '@type': 'ImageObject',
             url: listing.logo_url,
+            width: 600,
+            height: 600,
         }
     }
 
-    // Opening Hours
+    // ✅ ENHANCED: Opening Hours with standardized format
     if (listing.opening_hours) {
         const openingHoursSpec = generateOpeningHoursSpecification(
             listing.opening_hours as OpeningHours
@@ -135,21 +180,22 @@ export function generateLocalBusinessSchema(
         }
     }
 
-    // Aggregate Rating
+    // Aggregate Rating - CRITICAL FOR RICH SNIPPETS
     if (averageRating && reviewCount && reviewCount > 0) {
         schema.aggregateRating = {
             '@type': 'AggregateRating',
-            ratingValue: averageRating.toFixed(1),
-            reviewCount: reviewCount.toString(),
-            bestRating: '5',
-            worstRating: '1',
+            ratingValue: parseFloat(averageRating.toFixed(1)),
+            reviewCount: reviewCount,
+            bestRating: 5,
+            worstRating: 1,
         }
     }
 
-    // Reviews
+    // Reviews - LIMITED TO TOP 5 FOR PERFORMANCE
     if (reviews && reviews.length > 0) {
         schema.review = reviews.slice(0, 5).map((review) => ({
             '@type': 'Review',
+            '@id': `https://9jadirectory.org/listings/${listing.slug}#review-${review.id}`,
             author: {
                 '@type': 'Person',
                 name: review.reviewer_name || 'Anonymous',
@@ -157,9 +203,9 @@ export function generateLocalBusinessSchema(
             datePublished: new Date(review.created_at).toISOString().split('T')[0],
             reviewRating: {
                 '@type': 'Rating',
-                ratingValue: review.rating.toString(),
-                bestRating: '5',
-                worstRating: '1',
+                ratingValue: review.rating,
+                bestRating: 5,
+                worstRating: 1,
             },
             reviewBody: review.comment,
             ...(review.title && { name: review.title }),
@@ -172,10 +218,10 @@ export function generateLocalBusinessSchema(
         schema.currenciesAccepted = 'NGN'
     }
 
-    // Price Range (estimate based on category or default)
+    // Price Range
     schema.priceRange = '$$'
 
-    // Social Media
+    // ✅ ENHANCED: Social Media & Online Presence
     const socialProfiles = [
         listing.facebook_url,
         listing.instagram_url,
@@ -191,6 +237,19 @@ export function generateLocalBusinessSchema(
         schema.foundingDate = listing.year_established.toString()
     }
 
+    // ✅ ENHANCED: Organization hierarchy - for knowledge graph
+    schema.parentOrganization = {
+        '@type': 'Organization',
+        '@id': 'https://9jadirectory.org#organization',
+        name: '9jaDirectory',
+        url: 'https://9jadirectory.org',
+        logo: 'https://9jadirectory.org/logo.png',
+        sameAs: [
+            'https://www.facebook.com/9jadirectory',
+            'https://twitter.com/9jaDirectory',
+        ],
+    }
+
     // Real Estate specific fields
     if (businessType === 'RealEstateAgent') {
         schema.knowsAbout = [
@@ -201,22 +260,8 @@ export function generateLocalBusinessSchema(
             'Land Sales',
         ]
 
-        if (listing.city && listing.states?.name) {
-            schema.areaServed = [
-                {
-                    '@type': 'City',
-                    name: listing.city,
-                    containedInPlace: {
-                        '@type': 'State',
-                        name: listing.states.name,
-                    },
-                },
-            ]
-        }
-
         schema.priceRange = '₦₦₦'
         schema.paymentAccepted = ['Cash', 'Bank Transfer', 'Mortgage', 'Installment']
-        schema.currenciesAccepted = 'NGN'
 
         if (listing.services_offered && Array.isArray(listing.services_offered)) {
             schema.hasOfferCatalog = {
@@ -380,6 +425,7 @@ export function generateBreadcrumbSchema(listing: Listing) {
 
 /**
  * Generates RealEstateListing schema for real estate businesses
+ * ENHANCED: Includes better geo data, serviceArea, and contactPoint
  */
 export function generateRealEstateListingSchema(listing: Listing) {
     const schema: any = {
@@ -392,12 +438,22 @@ export function generateRealEstateListingSchema(listing: Listing) {
         datePosted: listing.created_at,
     }
 
-    // Offer details
+    // ✅ ENHANCED: Offer details with currency
     schema.offers = {
         '@type': 'Offer',
         priceCurrency: 'NGN',
         availability: 'https://schema.org/InStock',
         businessFunction: 'http://purl.org/goodrelations/v1#Sell',
+    }
+
+    // ✅ ENHANCED: Contact Point
+    if (listing.phone || listing.email) {
+        schema.contactPoint = {
+            '@type': 'ContactPoint',
+            'contactType': 'Real Estate Agent',
+            ...(listing.phone && { 'telephone': listing.phone }),
+            ...(listing.email && { 'email': listing.email }),
+        }
     }
 
     // Location
@@ -411,24 +467,43 @@ export function generateRealEstateListingSchema(listing: Listing) {
         }
     }
 
-    // Geo coordinates (CRITICAL for local SEO)
+    // ✅ CRITICAL FOR LOCAL PACK: Geo coordinates
     if (listing.latitude && listing.longitude) {
         schema.geo = {
             '@type': 'GeoCoordinates',
-            latitude: listing.latitude.toString(),
-            longitude: listing.longitude.toString(),
+            latitude: listing.latitude,
+            longitude: listing.longitude,
         }
     }
 
-    // Area served
+    // ✅ ENHANCED: Area served with hierarchy
     if (listing.city && listing.states?.name) {
-        schema.areaServed = {
-            '@type': 'City',
-            name: listing.city,
-            containedInPlace: {
+        schema.areaServed = [
+            {
+                '@type': 'City',
+                name: listing.city,
+                containedInPlace: {
+                    '@type': 'State',
+                    name: listing.states.name,
+                },
+            },
+            {
                 '@type': 'State',
                 name: listing.states.name,
             },
+        ]
+    }
+
+    // Image gallery
+    if (listing.images || listing.image_url) {
+        const images = []
+        if (listing.images && Array.isArray(listing.images)) {
+            images.push(...listing.images)
+        } else if (listing.image_url) {
+            images.push(listing.image_url)
+        }
+        if (images.length > 0) {
+            schema.image = images
         }
     }
 

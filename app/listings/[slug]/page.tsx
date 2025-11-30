@@ -4,6 +4,7 @@ import Link from 'next/link'
 import OperatingHours from '@/components/operating-hours'
 import ReviewButton from '@/components/reviews/review-button'
 import ClaimButton from '@/components/listings/claim-button'
+import RelatedListings from '@/components/related-listings'
 import {
   generateLocalBusinessSchema,
   generateBreadcrumbSchema,
@@ -40,6 +41,10 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   if (error || !listing) {
     notFound()
   }
+
+  // ✅ Extract category and state for use throughout component
+  const category = Array.isArray(listing.categories) ? listing.categories[0] : listing.categories
+  const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
 
   // Fetch reviews for this listing
   const { data: reviews } = await supabase
@@ -619,74 +624,169 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           </div>
+
+          {/* ✅ RELATED LISTINGS & INTERNAL LINKING */}
+          <div className="lg:col-span-3 mt-12">
+            <RelatedListings
+              listingId={listing.id}
+              categoryId={listing.category_id}
+              categorySlug={category?.slug || ''}
+              categoryName={category?.name || 'Business'}
+              city={listing.city || ''}
+              stateSlug={state?.slug || ''}
+              stateName={state?.name || 'Nigeria'}
+            />
+          </div>
         </div>
       </div>
     </>
   )
 }
 
-// Generate metadata for SEO
+// Extract category and state for component props (at component level)
+async function getCategoryAndState(listing: any) {
+  const category = Array.isArray(listing.categories) ? listing.categories[0] : listing.categories
+  const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
+  return { category, state }
+}
+
+// Generate metadata for SEO - ENHANCED FOR RANKING
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const supabase = await createClient()
 
   const { data: listing } = await supabase
     .from('listings')
-    .select('business_name, description, city, phone, images, categories(name), states(name)')
+    .select(`
+      *,
+      categories (id, name, slug),
+      states (id, name, slug)
+    `)
     .eq('slug', slug)
+    .eq('status', 'approved')
     .single()
 
   if (!listing) {
     return {
-      title: 'Business Not Found'
+      title: 'Business Not Found | 9jaDirectory',
+      description: 'The business listing you are looking for does not exist on 9jaDirectory.'
     }
   }
 
-  // Helper to safely get relation data
+  // Extract category and state safely
   const category = Array.isArray(listing.categories) ? listing.categories[0] : listing.categories
   const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
 
-  // Check if this is a real estate listing
-  const isRealEstate = category?.name?.toLowerCase().includes('real estate')
+  const categoryName = category?.name || 'Business'
+  const categorySlug = category?.slug || ''
+  const stateName = state?.name || 'Nigeria'
+  const cityName = listing.city || ''
 
-  // Enhanced title for real estate
-  const title = isRealEstate && listing.city && state?.name
-    ? `${listing.business_name} - Premium Real Estate in ${listing.city}, ${state.name} | Verified Properties`
-    : category?.name && listing.city
-      ? `${listing.business_name} - ${category.name} in ${listing.city} | 9jaDirectory`
-      : `${listing.business_name} - 9jaDirectory`
+  // ✅ OPTIMIZED TITLE - INCLUDES LOCATION + CATEGORY + KEYWORD MODIFIERS
+  // Pattern: "Business Name | Category in City, State | 9jaDirectory"
+  const title = `${listing.business_name} | ${categoryName} in ${cityName}, ${stateName} | 9jaDirectory`
 
-  // Enhanced description for real estate
-  const description = isRealEstate && listing.city
-    ? `Find verified real estate properties with ${listing.business_name} in ${listing.city}. ${listing.description?.substring(0, 100) || 'Premium property sales, leasing, and management services'}... ${listing.phone ? `Contact: ${listing.phone}` : ''}`
-    : listing.description?.substring(0, 155) || `Find ${listing.business_name} on 9jaDirectory`
+  // ✅ OPTIMIZED DESCRIPTION - INCLUDES KEYWORDS + RATING + LOCATION
+  // Keep under 160 characters for Google search results
+  const rating = listing.average_rating ? `⭐ ${listing.average_rating.toFixed(1)}` : '⭐ New'
+  const description = `${listing.business_name} - ${categoryName} in ${cityName}, ${stateName}. ${listing.description?.substring(0, 80) || 'Verified business'}... ${rating} | 📍 ${cityName} | Contact: ${listing.phone || 'Available'}`
 
-  // Keywords for real estate
-  const keywords = isRealEstate && listing.city && state?.name
-    ? `real estate ${listing.city}, property ${state.name}, ${listing.business_name}, houses for sale ${listing.city}, land for sale ${listing.city}, apartments ${listing.city}`
-    : undefined
+  // ✅ MULTI-LEVEL KEYWORDS FOR DIFFERENT INTENT LEVELS
+  const keywords = [
+    // Brand search
+    listing.business_name,
+    
+    // Local brand search
+    `${listing.business_name} ${cityName}`,
+    `${listing.business_name} ${stateName}`,
+    
+    // Local category search
+    `${categoryName} in ${cityName}`,
+    `${categoryName} in ${stateName}`,
+    `${categoryName} near me ${cityName}`,
+    
+    // Hyper-local search
+    `${categoryName} ${cityName} ${stateName}`,
+    `best ${categoryName.toLowerCase()} in ${cityName}`,
+    `top rated ${categoryName.toLowerCase()} ${cityName}`,
+    
+    // Review-intent keywords
+    `verified ${categoryName.toLowerCase()} ${cityName}`,
+    `recommended ${categoryName.toLowerCase()} in ${stateName}`,
+    
+    // Transactional keywords
+    `${categoryName.toLowerCase()} near ${cityName}`,
+    `where to find ${categoryName.toLowerCase()} in ${cityName}`,
+    
+    // Directory keyword
+    '9jaDirectory',
+    'Nigeria business directory',
+    'Nigerian ${categoryName.toLowerCase()} directory',
+  ].filter(Boolean).join(', ')
+
+  // ✅ FEATURE SNIPPET OPTIMIZATION
+  const metadataRobots = listing.verified ? 'index, follow' : 'index, follow'
+
+  // ✅ OPEN GRAPH - FOR SOCIAL SHARING
+  const ogImages = [
+    listing.image_url,
+    ...(listing.images || [])
+  ].filter(Boolean)
+
+  // ✅ CANONICAL URL TO PREVENT DUPLICATES
+  const canonicalUrl = `https://9jadirectory.org/listings/${slug}`
 
   return {
     title,
     description,
     keywords,
+    robots: metadataRobots,
+    
+    // ✅ OPEN GRAPH - CRITICAL FOR SOCIAL SHARING & CTR
     openGraph: {
       title,
       description,
-      url: `https://9jadirectory.org/listings/${slug}`,
-      images: listing.images?.[0] ? [listing.images[0]] : [],
-      type: 'website',
+      url: canonicalUrl,
+      type: 'business.business',
       locale: 'en_NG',
-      siteName: '9jaDirectory'
+      siteName: '9jaDirectory',
+      images: ogImages.map((img, idx) => ({
+        url: img,
+        width: 1200,
+        height: 630,
+        alt: `${listing.business_name} - ${idx === 0 ? 'Featured' : `Photo ${idx}`}`,
+        type: 'image/jpeg',
+      })),
+      
+      // Business-specific OG properties
+      ...(listing.phone && { 'business:contact_data:phone_number': listing.phone }),
+      ...(listing.email && { 'business:contact_data:website': listing.website_url }),
     },
+    
+    // ✅ TWITTER CARD - FOR TWITTER SHARING
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: listing.images?.[0] ? [listing.images[0]] : []
+      images: ogImages,
+      creator: '@9jaDirectory',
+      site: '@9jaDirectory',
     },
+    
+    // ✅ CANONICAL URL - AVOID DUPLICATE CONTENT
     alternates: {
-      canonical: `https://9jadirectory.org/listings/${slug}`
+      canonical: canonicalUrl,
+    },
+    
+    // ✅ STRUCTURED DATA HINTS
+    other: {
+      'business:category': categoryName,
+      'business:city': cityName,
+      'business:state': stateName,
+      'business:country': 'Nigeria',
+      'rating:ratingValue': listing.average_rating?.toString() || '0',
+      'rating:bestRating': '5',
+      'rating:worstRating': '1',
     }
   }
 }

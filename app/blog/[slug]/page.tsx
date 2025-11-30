@@ -20,9 +20,30 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
         };
     }
 
+    const canonical = `https://9jadirectory.org/blog/${post.slug}`;
+    const images = post.image ? [post.image] : [];
+
     return {
         title: `${post.title} - 9ja Directory`,
         description: post.excerpt,
+        alternates: {
+            canonical,
+        },
+        keywords: post.keywords,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            url: canonical,
+            type: 'article',
+            siteName: '9jaDirectory',
+            images,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt,
+            images,
+        },
     };
 }
 
