@@ -153,6 +153,115 @@ export const categorySEOContent: CategorySEOContent[] = [
             'Consider intellectual property ownership in your contract',
         ],
     },
+    {
+        slug: 'accommodation',
+        introText: `Find your perfect accommodation across Nigeria with 9jaDirectory's comprehensive lodging database. From luxury 5-star hotels and boutique guesthouses to affordable budget lodges and furnished short-let apartments, we connect travelers, business professionals, and long-term residents with verified accommodation providers in every major city. Whether you're booking a hotel in Lagos, finding a cozy guesthouse in Abuja, securing conference facilities, or arranging extended stay apartments in Port Harcourt, our platform makes it easy to compare options, read verified guest reviews, check real-time availability, and contact providers directly. Filter by location, star rating, price range, amenities (WiFi, pool, restaurant, gym, conference rooms), and guest ratings to find exactly what you need.`,
+        faqs: [
+            {
+                question: 'How do I book accommodation through 9jaDirectory?',
+                answer: 'Browse listings, read reviews and see photos, compare prices and amenities, then contact the provider directly via phone or email provided in their listing. Many also have booking links to their websites. We recommend calling ahead to confirm availability and negotiate rates, as many providers offer discounts for bulk bookings or long stays.',
+            },
+            {
+                question: 'What\'s included in hotel rates?',
+                answer: 'This varies by establishment. Check each listing\'s details for what\'s included - breakfast, Wi-Fi, taxes, parking, and service charges may or may not be included in the quoted price. Always confirm this when booking to avoid surprises.',
+            },
+            {
+                question: 'Which accommodations are best for business travelers?',
+                answer: 'Look for hotels with facilities like business centers, conference rooms, meeting spaces, reliable WiFi, 24-hour reception, and proximity to business districts. Lagos (Victoria Island, Ikoyi), Abuja (Wuse, Garki), and Port Harcourt (GRA) all have excellent business-friendly options.',
+            },
+            {
+                question: 'Can I find good deals and discounts?',
+                answer: 'Yes! Call providers directly and ask about package deals, long-stay discounts, group rates, or promotional rates. Many accommodations offer better prices off-platform. Read recent reviews to see if current guests mention any ongoing promotions or loyalty discounts.',
+            },
+            {
+                question: 'Are cancellation policies flexible?',
+                answer: 'Cancellation policies vary. Check each listing for their policy - some offer free cancellation up to 7 days before arrival, others are non-refundable. Always clarify this before booking, especially for events or during peak seasons.',
+            },
+        ],
+        tips: [
+            '💡 Book well in advance for major events (conferences, festivals, holidays)',
+            '💡 Read recent guest reviews - they reveal current experience quality',
+            '💡 Negotiate rates when booking for extended stays (1+ months)',
+            '💡 Verify proximity to your venue/activity before booking',
+            '💡 Ask about airport transfers and local transportation',
+            '💡 Check for hidden charges (service fees, WiFi, parking, amenities)',
+            '💡 Request photos of actual rooms, not just promotional images',
+        ],
+    },
+    {
+        slug: 'arts',
+        introText: `Explore Nigeria's vibrant arts and culture scene with our comprehensive directory of art galleries, artist studios, craft centers, art schools, and creative services. Discover talented Nigerian artists, craftspeople, and cultural organizations showcasing traditional and contemporary art across all 36 states and the FCT. Whether you're looking to commission custom artwork, purchase authentic Nigerian crafts, attend art exhibitions, learn creative skills at art schools, or explore cultural institutions, 9jaDirectory connects you with verified creative professionals. From Lagos's thriving contemporary art scene to Abuja's cultural centers, Oshogbo's renowned traditional arts, and artisan communities nationwide - find everything from oil paintings, sculptures, and textiles to jewelry, pottery, digital art, and performance art. Perfect for collectors, art enthusiasts, event decorators, and anyone passionate about Nigerian culture.`,
+        faqs: [
+            {
+                question: 'How do I find and purchase authentic Nigerian art?',
+                answer: 'Browse our directory for galleries, artist studios, and craft markets. Check artist credentials, request certificates of authenticity, and view their previous work. Reputable galleries should provide documentation about artists and artworks. Prices range from affordable craft pieces to investment-grade fine art.',
+            },
+            {
+                question: 'Can I commission custom artwork or crafts?',
+                answer: 'Yes! Many artists and craft studios listed accept commissions for paintings, sculptures, textiles, jewelry, interior design pieces, and more. Contact providers directly with your vision, budget, and timeline. Expect 2-12 weeks depending on complexity.',
+            },
+            {
+                question: 'What\'s the difference between a gallery, studio, and market?',
+                answer: 'Galleries are curated spaces representing selected artists. Studios are where artists create (some sell directly). Markets are open-air or indoor spaces with many independent vendors and craftspeople. Each offers different experiences and price points.',
+            },
+            {
+                question: 'Are there art training or workshop opportunities?',
+                answer: 'Absolutely! Our directory includes art schools and training centers offering courses in painting, sculpture, textile design, jewelry making, traditional crafts, digital art, and photography. Most offer beginner to advanced levels.',
+            },
+            {
+                question: 'How do I know if art is fairly priced?',
+                answer: 'Research the artist\'s background and previous sales, compare prices across galleries, consider the artwork\'s size and complexity, and ask about artist reputation. Unknown emerging artists are typically affordable; established artists command higher prices.',
+            },
+        ],
+        tips: [
+            '🎨 Support emerging artists - discover the next generation of Nigerian talent',
+            '🎨 Attend gallery exhibitions and art events for inspiration and networking',
+            '🎨 Visit artist studios directly for better prices and direct artist interaction',
+            '🎨 Commission pieces for unique, personalized artwork for homes or offices',
+            '🎨 Join art communities and groups to stay updated on new exhibitions',
+            '🎨 Consider art as an investment - authenticated pieces appreciate over time',
+            '🎨 Explore traditional crafts (textiles, beadwork, pottery) from artisan communities',
+        ],
+    },
+    {
+        slug: 'auto-services',
+        introText: `Find reliable and professional automotive services across Nigeria with our trusted auto repair, maintenance, and vehicle care directory. Discover certified mechanics, full-service auto workshops, spare parts dealers, car dealerships, and specialized auto services for all vehicle types and makes. Whether you need routine maintenance (oil changes, tire services), major repairs (engine work, transmission repairs), diagnostic services, paint & body work, detailing, or buying/selling a vehicle, our verified listings connect you with qualified professionals and businesses. From budget-friendly repair shops to premium auto centers, find trusted service providers in your area. Filter by location, vehicle type, services offered, and customer ratings to find the perfect auto service provider for your needs.`,
+        faqs: [
+            {
+                question: 'How do I find an honest and reliable mechanic?',
+                answer: 'Look for established shops with good reviews, ASE certifications or manufacturer training, transparent pricing, and warranty on repairs. Ask for referrals from friends, check their experience with your vehicle brand, and never leave your car without a written estimate and itemized bill.',
+            },
+            {
+                question: 'What\'s a reasonable price for auto repairs in Nigeria?',
+                answer: 'Prices vary by repair type and vehicle model. Get quotes from 2-3 providers, compare labor rates (typically ₦5K-₦25K/hour) and parts costs. Establish a budget-friendly trusted mechanic for routine maintenance, and specialized shops for complex repairs.',
+            },
+            {
+                question: 'How often should I service my vehicle?',
+                answer: 'Follow your vehicle manufacturer\'s schedule (usually every 5,000-10,000km or 3-6 months). Regular maintenance prevents breakdowns, extends vehicle life, and maintains resale value. Our directory includes many service centers offering scheduled maintenance packages.',
+            },
+            {
+                question: 'Should I buy original or aftermarket spare parts?',
+                answer: 'Original parts ensure quality and warranty but cost more. Reputable aftermarket parts offer good value if sourced from trusted dealers. Avoid counterfeit parts. Ask mechanics for recommendations based on your budget and the part\'s importance to vehicle safety.',
+            },
+            {
+                question: 'How do I buy or sell a used car safely?',
+                answer: 'Use our directory to find reputable car dealerships and private sellers. Have the vehicle inspected by a mechanic before buying, verify ownership documents (registration), check for outstanding loans via NVIS database, test drive thoroughly, and only pay after proper documentation transfer.',
+            },
+            {
+                question: 'What services does a full-service auto center provide?',
+                answer: 'Most offer oil changes, tire services, battery replacement, brakes, suspension, engine diagnostics, air conditioning repairs, detailing, body work, and general maintenance. Contact providers to confirm they service your specific vehicle type.',
+            },
+        ],
+        tips: [
+            '🚗 Keep maintenance records for warranty and resale value',
+            '🚗 Don\'t ignore warning lights - diagnose early to avoid expensive repairs',
+            '🚗 Maintain tire pressure and alignment for safety and fuel efficiency',
+            '🚗 Use genuine fuel and quality oil recommended for your vehicle',
+            '🚗 Have battery, brakes, and suspension checked regularly',
+            '🚗 Keep tires rotated and balanced for even wear and performance',
+            '🚗 Build a relationship with a trusted mechanic for better service and loyalty discounts',
+        ],
+    },
 ]
 
 // Helper function to get SEO content by category slug
