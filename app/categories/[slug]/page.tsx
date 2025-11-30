@@ -470,8 +470,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 </div>
               )}
 
-              )}
-
               {/* Trust Signals Box */}
               {listings && listings.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
