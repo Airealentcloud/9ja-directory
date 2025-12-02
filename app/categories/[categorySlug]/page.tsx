@@ -81,7 +81,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const totalCount = listings?.length || 0
 
   // Generate schema markup
-  const itemListSchema = generateCategoryItemListSchema(category, listings || [])
+  const itemListSchema = generateCategoryItemListSchema(category, listings || [], totalCount)
   const breadcrumbSchema = generateCategoryBreadcrumbSchema(category)
   const collectionSchema = generateCategoryCollectionSchema(category, totalCount)
 
