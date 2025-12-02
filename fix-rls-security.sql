@@ -55,6 +55,20 @@ CREATE POLICY "Users can insert own notifications" ON email_notifications
 -- Step 3: Fix function search_path (add security wrapper)
 -- ============================================================================
 
+-- Drop existing functions first (if they exist)
+DROP FUNCTION IF EXISTS update_listings_timestamp() CASCADE;
+DROP FUNCTION IF EXISTS calculate_distance(float, float, float, float) CASCADE;
+DROP FUNCTION IF EXISTS update_review_helpful_counts() CASCADE;
+DROP FUNCTION IF EXISTS notify_listing_status_changed() CASCADE;
+DROP FUNCTION IF EXISTS increment_listing_views() CASCADE;
+DROP FUNCTION IF EXISTS is_admin(uuid) CASCADE;
+DROP FUNCTION IF EXISTS notify_listing_submitted() CASCADE;
+DROP FUNCTION IF EXISTS update_updated_at_column() CASCADE;
+DROP FUNCTION IF EXISTS get_nearby_listings(float, float, int) CASCADE;
+DROP FUNCTION IF EXISTS calculate_listing_rating(uuid) CASCADE;
+DROP FUNCTION IF EXISTS increment_listing_clicks() CASCADE;
+DROP FUNCTION IF EXISTS handle_new_user() CASCADE;
+
 -- Update functions to have immutable search path
 CREATE OR REPLACE FUNCTION update_listings_timestamp()
 RETURNS TRIGGER
