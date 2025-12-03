@@ -66,9 +66,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       description,
       phone,
       verified,
-      categories(id, name, slug),
-      states(id, name),
-      cities(id, name)
+      categories(id, name, slug)
     `
     )
     .eq('categories.slug', slug)
