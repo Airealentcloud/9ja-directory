@@ -108,14 +108,13 @@ export default async function CategoryStateListingPage({
     .eq('state_id', state.id)
     .eq('status', 'approved')
     .order('featured', { ascending: false })
-    .order('average_rating', { ascending: false })
     .order('created_at', { ascending: false })
     .limit(30) // Show top 30, with load more option
 
   // Get stats
   const avgRating = listings && listings.length > 0
-    ? (listings.reduce((sum, l) => sum + (l.average_rating || 0), 0) / listings.length).toFixed(1)
-    : 0
+    ? (listings.reduce((sum, l) => sum + (Number((l as any).average_rating) || 0), 0) / listings.length).toFixed(1)
+    : 'N/A'
 
   const verified = listings?.filter(l => l.verified).length || 0
 
@@ -214,7 +213,7 @@ export default async function CategoryStateListingPage({
               <div className="text-sm text-gray-600 mt-1">Verified {category.name}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-500">{avgRating}⭐</div>
+              <div className="text-3xl md:text-4xl font-bold text-yellow-500">{avgRating}</div>
               <div className="text-sm text-gray-600 mt-1">Average Rating</div>
             </div>
             <div className="text-center">
@@ -297,6 +296,7 @@ export default async function CategoryStateListingPage({
                 <Link
                   key={listing.id}
                   href={`/listings/${listing.slug}`}
+                  prefetch={false}
                   className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all overflow-hidden group"
                 >
                   {/* Image */}

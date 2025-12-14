@@ -34,9 +34,11 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
     }
   }
 
+  const seoContent = getCategorySEOContent(slug)
+
   return {
     title: `${category.name} in Nigeria | 9ja Directory`,
-    description: category.description || `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`,
+    description: seoContent?.introText || category.description || `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`,
   }
 }
 
@@ -61,27 +63,49 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     .select(
       `
       id,
+      category_id,
       business_name,
       slug,
       description,
       phone,
       verified,
-      categories(id, name, slug)
+      categories(id, name, slug),
+      states(id, name, slug)
     `
     )
-    .eq('categories.slug', slug)
+    .eq('category_id', category.id)
+    .eq('status', 'approved')
     .order('created_at', { ascending: false })
+
+  // Defensive filter to prevent accidental cross-category bleed
+  const filteredListings =
+    (listings || []).filter((listing) => listing.category_id === category.id)
 
   // Get category content
   const categoryContent = getCategoryContent(slug)
+  const seoContent = getCategorySEOContent(slug)
 
   // Count total listings
-  const totalCount = listings?.length || 0
+  const totalCount = filteredListings.length
 
   // Generate schema markup
-  const itemListSchema = generateCategoryItemListSchema(category, listings || [], totalCount)
+  const itemListSchema = generateCategoryItemListSchema(category, filteredListings, totalCount)
   const breadcrumbSchema = generateCategoryBreadcrumbSchema(category)
   const collectionSchema = generateCategoryCollectionSchema(category, totalCount)
+  const faqSchema = seoContent?.faqs
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: seoContent.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      }
+    : null
 
   return (
     <>
@@ -98,6 +122,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <div className="min-h-screen bg-gray-50">
         {/* Header Section */}
@@ -136,6 +166,24 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
         {/* Main Content */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+            <p className="text-gray-800 leading-relaxed">
+              {seoContent?.introText ||
+                category.description ||
+                `Explore verified ${category.name.toLowerCase()} providers across Nigeria. Compare services, read details, and reach out directly to find the right partner.`}
+            </p>
+            {seoContent?.tips && seoContent.tips.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">Quick tips</h3>
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                  {seoContent.tips.map((tip, idx) => (
+                    <li key={idx}>{tip}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar - Filters */}
             <aside className="lg:w-64 flex-shrink-0">
@@ -244,7 +292,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                       </svg>
                       <h3 className="font-semibold text-gray-800">Quality</h3>
                     </div>
-                    <p className="text-3xl font-bold text-purple-600">4.8★</p>
+                    <p className="text-3xl font-bold text-purple-600">4.8ƒ~.</p>
                     <p className="text-sm text-gray-600 mt-1">Avg. Rating</p>
                   </div>
                 </div>
@@ -261,7 +309,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-amber-800">
-                        💡 <strong>Pro Tip:</strong> Filter by verified listings to ensure reliability, or search by state to find businesses near you.
+                        dY'­ <strong>Pro Tip:</strong> Filter by verified listings to ensure reliability, or search by state to find businesses near you.
                       </p>
                     </div>
                   </div>
@@ -272,10 +320,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               {listings && listings.length > 0 && (
                 <div className="space-y-6 mb-12">
                   <h2 className="text-2xl font-bold text-gray-900">Browse {category.name} Listings</h2>
-                  {listings.map((listing) => (
+              {filteredListings.map((listing) => (
                     <Link
                       key={listing.id}
                       href={`/listings/${listing.slug}`}
+                      prefetch={false}
                       className="block bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden group"
                     >
                       <div className="flex flex-col sm:flex-row">
@@ -308,7 +357,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                                       clipRule="evenodd"
                                     />
                                   </svg>
-                                  ✓ Verified
+                                  ƒo" Verified
                                 </span>
                               )}
                             </div>
@@ -327,7 +376,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                {(listing.cities as any)?.name ? `${(listing.cities as any).name}, ` : ''}{(listing.states as any)?.name}
+                                {(listing as any).cities?.name ? `${(listing as any).cities.name}, ` : ''}{(listing.states as any)?.name}
                               </div>
                             )}
                             {listing.phone && (
@@ -342,7 +391,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
                           {/* CTA Button */}
                           <div className="mt-4 flex items-center justify-between">
-                            <span className="text-sm font-semibold text-green-600">View Details →</span>
+                            <span className="text-sm font-semibold text-green-600">View Details ƒ+'</span>
                             <button className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors hidden sm:inline-block">
                               Contact
                             </button>
@@ -363,65 +412,33 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 </div>
               )}
 
-              {/* SEO Content Section - MOVED TO BOTTOM */}
-              {(() => {
-                const seoContent = getCategorySEOContent(slug)
-                if (seoContent) {
-                  return (
-                    <div className="bg-white rounded-lg shadow-md p-8 mt-12 mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                        About {category.name} in Nigeria
-                      </h2>
-                      <div className="prose prose-green max-w-none text-gray-700 leading-relaxed">
-                        <p>{seoContent.introText}</p>
-                      </div>
-
-                      {/* Quick Tips */}
-                      {seoContent.tips && seoContent.tips.length > 0 && (
-                        <div className="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r">
-                          <h3 className="font-bold text-gray-900 mb-2">Quick Tips:</h3>
-                          <ul className="space-y-1 text-sm text-gray-700">
-                            {seoContent.tips.map((tip, index) => (
-                              <li key={index} className="flex items-start">
-                                <span className="text-green-600 mr-2">✓</span>
-                                <span>{tip}</span>
-                              </li>
-                            ))}
-                          </ul>
+              {seoContent?.faqs && seoContent.faqs.length > 0 && (
+                <div className="bg-white rounded-lg shadow-md p-8 mt-12 mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                    Frequently Asked Questions about {category.name}
+                  </h3>
+                  <div className="space-y-4">
+                    {seoContent.faqs.map((faq, index) => (
+                      <details key={index} className="group">
+                        <summary className="cursor-pointer font-semibold text-gray-900 hover:text-green-600 transition-colors list-none flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                          <span>{faq.question}</span>
+                          <svg
+                            className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </summary>
+                        <div className="mt-2 p-4 text-gray-700 leading-relaxed">
+                          {faq.answer}
                         </div>
-                      )}
-
-                      {/* FAQs */}
-                      {seoContent.faqs && seoContent.faqs.length > 0 && (
-                        <div className="mt-8">
-                          <h3 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
-                          <div className="space-y-4">
-                            {seoContent.faqs.map((faq, index) => (
-                              <details key={index} className="group">
-                                <summary className="cursor-pointer font-semibold text-gray-900 hover:text-green-600 transition-colors list-none flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                                  <span>{faq.question}</span>
-                                  <svg
-                                    className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                  </svg>
-                                </summary>
-                                <div className="mt-2 p-4 text-gray-700 leading-relaxed">
-                                  {faq.answer}
-                                </div>
-                              </details>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )
-                }
-                return null
-              })()}
+                      </details>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>

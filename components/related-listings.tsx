@@ -19,8 +19,9 @@ interface Listing {
   slug: string
   business_name: string
   city: string
-  average_rating: number | null
-  image_url: string | null
+  logo_url?: string | null
+  images?: string[] | null
+  categories?: { name?: string } | { name?: string }[]
 }
 
 export default function RelatedListings({
@@ -40,27 +41,27 @@ export default function RelatedListings({
   useEffect(() => {
     const fetchRelated = async () => {
       try {
-        // ✅ FETCH LISTINGS IN SAME CATEGORY (exclude current listing)
+        // Fetch listings in the same category (exclude current listing)
         const { data: sameCategoryData } = await supabase
           .from('listings')
-          .select('id, slug, business_name, city, average_rating, image_url')
+          .select('id, slug, business_name, city, logo_url, images')
           .eq('category_id', categoryId)
           .neq('id', listingId)
           .eq('status', 'approved')
-          .order('average_rating', { ascending: false })
+          .order('created_at', { ascending: false })
           .limit(3)
 
         setSameCategory(sameCategoryData || [])
 
-        // ✅ FETCH LISTINGS IN SAME CITY, DIFFERENT CATEGORY (for cross-selling)
+        // Fetch listings in the same city, different category
         const { data: sameCityData } = await supabase
           .from('listings')
-          .select('id, slug, business_name, city, average_rating, image_url, categories(name)')
+          .select('id, slug, business_name, city, logo_url, images, categories(name)')
           .eq('city', city)
           .neq('category_id', categoryId)
           .neq('id', listingId)
           .eq('status', 'approved')
-          .order('average_rating', { ascending: false })
+          .order('created_at', { ascending: false })
           .limit(3)
 
         setSameCity(sameCityData || [])
@@ -91,7 +92,7 @@ export default function RelatedListings({
 
   return (
     <div className="mt-12 space-y-8">
-      {/* ✅ RELATED IN SAME CATEGORY */}
+      {/* Related in same category */}
       {sameCategory && sameCategory.length > 0 && (
         <section>
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -102,39 +103,30 @@ export default function RelatedListings({
               <Link
                 key={listing.id}
                 href={`/listings/${listing.slug}`}
+                prefetch={false}
                 className="group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border-l-4 border-green-600"
               >
-                {/* Featured Image */}
                 <div className="h-40 bg-gray-200 overflow-hidden">
-                  {listing.image_url ? (
+                  {listing.logo_url || listing.images?.[0] ? (
                     <img
-                      src={listing.image_url}
+                      src={listing.logo_url || listing.images?.[0] || ''}
                       alt={listing.business_name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-100 to-green-200 text-4xl">
-                      🏪
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-100 to-green-200 text-2xl font-semibold text-gray-700">
+                      {listing.business_name?.[0] || '#'}
                     </div>
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2">
                     {listing.business_name}
                   </h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    📍 {listing.city}
+                    Location: {listing.city || 'Nigeria'}
                   </p>
-                  {listing.average_rating && (
-                    <p className="text-sm text-yellow-500 mt-2 font-medium">
-                      {'⭐'.repeat(Math.round(listing.average_rating))}
-                      <span className="text-gray-600 ml-1">
-                        {listing.average_rating.toFixed(1)}
-                      </span>
-                    </p>
-                  )}
                 </div>
               </Link>
             ))}
@@ -142,50 +134,43 @@ export default function RelatedListings({
         </section>
       )}
 
-      {/* ✅ RELATED IN SAME CITY, DIFFERENT CATEGORY (CROSS-SELL) */}
+      {/* Related in same city, different category */}
       {sameCity && sameCity.length > 0 && (
         <section>
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Other Services in {city}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {sameCity.map((listing: any) => (
+            {sameCity.map((listing) => (
               <Link
                 key={listing.id}
                 href={`/listings/${listing.slug}`}
+                prefetch={false}
                 className="group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden border-l-4 border-blue-600"
               >
-                {/* Featured Image */}
                 <div className="h-40 bg-gray-200 overflow-hidden">
-                  {listing.image_url ? (
+                  {listing.logo_url || listing.images?.[0] ? (
                     <img
-                      src={listing.image_url}
+                      src={listing.logo_url || listing.images?.[0] || ''}
                       alt={listing.business_name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200 text-4xl">
-                      🏢
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200 text-2xl font-semibold text-gray-700">
+                      {listing.business_name?.[0] || '#'}
                     </div>
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
                     {listing.business_name}
                   </h4>
                   <p className="text-sm text-gray-600 mt-2">
-                    {listing.categories?.name}
+                    {Array.isArray(listing.categories)
+                      ? listing.categories[0]?.name
+                      : listing.categories?.name || 'Related service'}
                   </p>
-                  {listing.average_rating && (
-                    <p className="text-sm text-yellow-500 mt-2 font-medium">
-                      {'⭐'.repeat(Math.round(listing.average_rating))}
-                      <span className="text-gray-600 ml-1">
-                        {listing.average_rating.toFixed(1)}
-                      </span>
-                    </p>
-                  )}
                 </div>
               </Link>
             ))}
@@ -193,40 +178,33 @@ export default function RelatedListings({
         </section>
       )}
 
-      {/* ✅ BREADCRUMB NAVIGATION LINKS - FOR HIERARCHICAL CRAWL */}
+      {/* Browse more */}
       <section className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-        <h3 className="font-bold text-gray-900 mb-4">📍 Browse More</h3>
+        <h3 className="font-bold text-gray-900 mb-4">Browse More</h3>
         <div className="space-y-3 text-sm">
-          {/* Link to all in this category */}
           <Link
             href={`/categories/${categorySlug}`}
-            className="text-green-600 hover:text-green-700 hover:underline block flex items-center gap-2"
+            className="text-green-600 hover:text-green-700 hover:underline block"
           >
-            <span>→</span> All {categoryName} in Nigeria
+            All {categoryName} in Nigeria
           </Link>
-
-          {/* Link to state level */}
           <Link
             href={`/states/${stateSlug}`}
-            className="text-green-600 hover:text-green-700 hover:underline block flex items-center gap-2"
+            className="text-green-600 hover:text-green-700 hover:underline block"
           >
-            <span>→</span> All Businesses in {stateName}
+            All Businesses in {stateName}
           </Link>
-
-          {/* Link to state + category combination (MONEY PAGE!) */}
           <Link
             href={`/categories/${categorySlug}/${stateSlug}`}
-            className="text-green-600 hover:text-green-700 hover:underline block flex items-center gap-2 font-semibold bg-green-50 p-2 rounded"
+            className="text-green-600 hover:text-green-700 hover:underline block font-semibold bg-green-50 p-2 rounded"
           >
-            <span>→</span> Best {categoryName} in {stateName}
+            Best {categoryName} in {stateName}
           </Link>
-
-          {/* Link to browse all categories */}
           <Link
             href="/categories"
-            className="text-blue-600 hover:text-blue-700 hover:underline block flex items-center gap-2"
+            className="text-blue-600 hover:text-blue-700 hover:underline block"
           >
-            <span>→</span> Browse All Categories
+            Browse All Categories
           </Link>
         </div>
       </section>

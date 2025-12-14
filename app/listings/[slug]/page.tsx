@@ -12,33 +12,86 @@ import {
   generateFAQSchema
 } from '@/lib/schema/local-business'
 
+// Define listing type for proper typing
+interface ListingData {
+  id: string
+  business_name: string
+  slug: string
+  description?: string
+  address?: string
+  phone?: string
+  email?: string
+  website_url?: string
+  whatsapp_number?: string
+  facebook_url?: string
+  instagram_url?: string
+  twitter_url?: string
+  image_url?: string
+  images?: string[]
+  opening_hours?: Record<string, unknown>
+  verified?: boolean
+  claimed?: boolean
+  city?: string
+  category_id?: string
+  services_offered?: string[]
+  amenities?: string
+  payment_methods?: string[]
+  languages_spoken?: string[]
+  average_rating?: number
+  categories?: { id: string; name: string; slug: string; icon?: string } | null
+  states?: { id: string; name: string; slug: string } | null
+  [key: string]: unknown
+}
+
+// Helper to avoid long waits if Supabase is slow
+async function withTimeout<T>(thenable: PromiseLike<T>, ms = 5000): Promise<T> {
+  return Promise.race([
+    Promise.resolve(thenable),
+    new Promise<T>((_resolve, reject) =>
+      setTimeout(() => reject(new Error('Request timed out')), ms)
+    ),
+  ])
+}
+
 // FIXED VERSION - Recreated to resolve persistent syntax error
 export default async function ListingPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const supabase = await createClient()
 
   // Fetch the listing with its category and state
-  const { data: listing, error } = await supabase
-    .from('listings')
-    .select(`
-      *,
-      categories (
-        id,
-        name,
-        slug,
-        icon
-      ),
-      states (
-        id,
-        name,
-        slug
-      )
-    `)
-    .eq('slug', slug)
-    .eq('status', 'approved')
-    .single()
+  let listing: ListingData | null = null
+  let fetchError: unknown = null
 
-  if (error || !listing) {
+  try {
+    const result = await withTimeout<{ data: ListingData | null; error: unknown }>(
+      supabase
+        .from('listings')
+        .select(`
+          *,
+          categories (
+            id,
+            name,
+            slug,
+            icon
+          ),
+          states (
+            id,
+            name,
+            slug
+          )
+        `)
+        .eq('slug', slug)
+        .eq('status', 'approved')
+        .single(),
+      6000
+    )
+    listing = result.data
+    fetchError = result.error
+  } catch (err) {
+    fetchError = err
+  }
+
+  if (fetchError || !listing) {
     notFound()
   }
 
@@ -47,13 +100,22 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
 
   // Fetch reviews for this listing
-  const { data: reviews } = await supabase
-    .from('reviews')
-    .select('*')
-    .eq('listing_id', listing.id)
-    .eq('status', 'approved')
-    .order('created_at', { ascending: false })
-    .limit(10)
+  let reviews: Array<{ rating: number; id?: string; comment?: string; created_at?: string }> = []
+  try {
+    const reviewResult = await withTimeout<{ data: Array<{ rating: number }> | null; error: unknown }>(
+      supabase
+        .from('reviews')
+        .select('*')
+        .eq('listing_id', listing.id)
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false })
+        .limit(10),
+      6000
+    )
+    reviews = (reviewResult.data || []) as typeof reviews
+  } catch {
+    reviews = []
+  }
 
   // Calculate average rating
   const averageRating = reviews && reviews.length > 0
@@ -65,8 +127,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
 
   // Generate schemas
   const localBusinessSchema = generateLocalBusinessSchema(
-    listing,
-    reviews || undefined,
+    listing as Parameters<typeof generateLocalBusinessSchema>[0],
+    reviews as Parameters<typeof generateLocalBusinessSchema>[1],
     averageRating,
     reviews?.length
   )
@@ -561,7 +623,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                   )}
 
                   {/* Business Hours */}
-                  <OperatingHours hours={listing.opening_hours} />
+                  <OperatingHours hours={listing.opening_hours as Parameters<typeof OperatingHours>[0]['hours']} />
                 </div>
 
                 {/* Action Buttons */}
@@ -620,7 +682,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 {/* Claim Business */}
-                <ClaimButton slug={listing.slug} isClaimed={listing.claimed} />
+                <ClaimButton slug={listing.slug} isClaimed={listing.claimed ?? false} />
               </div>
             </div>
           </div>
@@ -629,7 +691,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
           <div className="lg:col-span-3 mt-12">
             <RelatedListings
               listingId={listing.id}
-              categoryId={listing.category_id}
+              categoryId={listing.category_id || ''}
               categorySlug={category?.slug || ''}
               categoryName={category?.name || 'Business'}
               city={listing.city || ''}
@@ -655,16 +717,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const supabase = await createClient()
 
-  const { data: listing } = await supabase
-    .from('listings')
-    .select(`
-      *,
-      categories (id, name, slug),
-      states (id, name, slug)
-    `)
-    .eq('slug', slug)
-    .eq('status', 'approved')
-    .single()
+  let listing: ListingData | null = null
+  try {
+    const result = await withTimeout<{ data: ListingData | null; error: unknown }>(
+      supabase
+        .from('listings')
+        .select(`
+          *,
+          categories (id, name, slug),
+          states (id, name, slug)
+        `)
+        .eq('slug', slug)
+        .eq('status', 'approved')
+        .single(),
+      6000
+    )
+    listing = result.data
+  } catch {
+    listing = null
+  }
 
   if (!listing) {
     return {
@@ -730,6 +801,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // ✅ OPEN GRAPH - FOR SOCIAL SHARING
   const ogImages = [
     listing.image_url,
+    listing.logo_url,
     ...(listing.images || [])
   ].filter(Boolean)
 
@@ -747,7 +819,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       url: canonicalUrl,
-      type: 'business.business',
+      type: 'website',
       locale: 'en_NG',
       siteName: '9jaDirectory',
       images: ogImages.map((img, idx) => ({
