@@ -56,7 +56,7 @@ test.describe('9jaDirectory Frontend Tests', () => {
     const nav = page.getByRole('navigation')
     await expect(nav.getByRole('link', { name: 'Home', exact: true })).toBeVisible()
     await expect(nav.getByRole('link', { name: 'Categories', exact: true })).toBeVisible()
-    await expect(nav.getByRole('link', { name: 'States', exact: true })).toBeVisible()
+    await expect(nav.getByRole('link', { name: 'Locations', exact: true })).toBeVisible()
   })
 
   test('Categories page loads', async ({ page }) => {
@@ -74,7 +74,7 @@ test.describe('9jaDirectory Frontend Tests', () => {
     await page.goto(`${baseURL}/categories/accommodation`)
 
     // Check page loaded - use more specific selector
-    await expect(page.getByRole('heading', { name: 'Accommodation' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Accommodation', level: 1, exact: true })).toBeVisible()
 
     // Check business listings are shown
     const listings = page.locator('a[href^="/listings/"]')

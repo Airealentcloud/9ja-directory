@@ -1,0 +1,17 @@
+# Dependencies / builds
+node_modules
+.next
+out
+
+# Local env
+.env
+.env.*
+.env*.local
+
+# Tests / reports
+playwright-report
+test-results
+coverage
+
+# Misc
+*.log

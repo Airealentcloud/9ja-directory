@@ -37,7 +37,13 @@ test.describe('Homepage', () => {
     const failedRequests: string[] = [];
 
     page.on('requestfailed', request => {
-      failedRequests.push(`${request.method()} ${request.url()} - ${request.failure()?.errorText}`);
+      const failure = request.failure();
+      const errorText = failure?.errorText || '';
+
+      // Next.js may abort prefetch/RSC requests during navigation; don't treat these as failures.
+      if (errorText.includes('net::ERR_ABORTED')) return;
+
+      failedRequests.push(`${request.method()} ${request.url()} - ${errorText}`);
     });
 
     await page.goto('/');
