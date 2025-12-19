@@ -30,15 +30,56 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
 
   if (!category) {
     return {
-      title: 'Category Not Found | 9ja Directory'
+      title: 'Category Not Found | 9jaDirectory'
     }
   }
 
   const seoContent = getCategorySEOContent(slug)
 
+  const title = `${category.name} in Nigeria | 9jaDirectory`
+  const description =
+    seoContent?.introText ||
+    category.description ||
+    `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`
+
+  const canonical = `https://9jadirectory.org/categories/${slug}`
+
   return {
-    title: `${category.name} in Nigeria | 9ja Directory`,
-    description: seoContent?.introText || category.description || `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`,
+    title,
+    description,
+    keywords: [
+      `${category.name} in Nigeria`,
+      `best ${category.name} in Nigeria`,
+      `${category.name} directory Nigeria`,
+      `verified ${category.name} Nigeria`,
+      'Nigeria business directory',
+      '9jaDirectory',
+    ],
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: '9jaDirectory',
+      locale: 'en_NG',
+      type: 'website',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: '9jaDirectory',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/opengraph-image'],
+    },
   }
 }
 

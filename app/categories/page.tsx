@@ -3,8 +3,40 @@ import { createClient } from '@/lib/supabase/server'
 import { CategoryCard } from '@/components/category-card'
 
 export const metadata: Metadata = {
-  title: 'Browse Categories | 9ja Directory',
-  description: 'Explore all business categories in Nigeria.',
+  title: 'Browse Business Categories in Nigeria | 9jaDirectory',
+  description: 'Explore business categories across Nigeria. Browse verified listings by category and discover top services in all 36 states + FCT.',
+  keywords: [
+    'business categories Nigeria',
+    'Nigeria business directory categories',
+    'find services by category Nigeria',
+    'browse business listings Nigeria',
+    '9jaDirectory categories',
+  ],
+  alternates: {
+    canonical: 'https://9jadirectory.org/categories',
+  },
+  openGraph: {
+    title: 'Browse Business Categories in Nigeria | 9jaDirectory',
+    description: 'Explore business categories across Nigeria and discover verified listings by category.',
+    url: 'https://9jadirectory.org/categories',
+    siteName: '9jaDirectory',
+    locale: 'en_NG',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: '9jaDirectory',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Browse Categories | 9jaDirectory',
+    description: 'Explore business categories across Nigeria and discover verified listings by category.',
+    images: ['/opengraph-image'],
+  },
 }
 
 export default async function CategoriesPage() {
@@ -34,8 +66,50 @@ export default async function CategoriesPage() {
     })
   )
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+      { '@type': 'ListItem', position: 2, name: 'Categories', item: 'https://9jadirectory.org/categories' },
+    ],
+  }
+
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://9jadirectory.org/categories#page',
+    name: 'Business Categories in Nigeria',
+    description:
+      'Explore business categories across Nigeria. Browse verified listings by category and discover top services in all 36 states + FCT.',
+    url: 'https://9jadirectory.org/categories',
+    inLanguage: 'en-NG',
+    isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+    numberOfItems: categoriesWithCounts.length,
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Business Categories',
+    itemListElement: categoriesWithCounts.slice(0, 50).map((category, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Thing',
+        name: category.name,
+        url: `https://9jadirectory.org/categories/${category.slug}`,
+      },
+    })),
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
+      <div className="min-h-screen bg-gray-50">
       <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -127,6 +201,7 @@ export default async function CategoriesPage() {
           </button>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

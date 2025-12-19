@@ -2,12 +2,62 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Terms of Service | 9jaDirectory',
-    description: 'Terms and conditions for using 9jaDirectory services.',
+    description: 'Read the 9jaDirectory terms of service and conditions for using our business directory platform.',
+    alternates: {
+        canonical: 'https://9jadirectory.org/terms',
+    },
+    openGraph: {
+        title: 'Terms of Service | 9jaDirectory',
+        description: 'Terms and conditions for using 9jaDirectory services.',
+        url: 'https://9jadirectory.org/terms',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Terms of Service | 9jaDirectory',
+        description: 'Terms and conditions for using 9jaDirectory services.',
+        images: ['/opengraph-image'],
+    },
 }
 
 export default function TermsPage() {
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: 'https://9jadirectory.org/terms' },
+        ],
+    }
+
+    const pageSchema = {
+        '@context': 'https://schema.org',
+        '@type': ['WebPage', 'TermsOfService'],
+        '@id': 'https://9jadirectory.org/terms#page',
+        name: 'Terms of Service',
+        url: 'https://9jadirectory.org/terms',
+        description: 'Terms and conditions for using 9jaDirectory services.',
+        inLanguage: 'en-NG',
+        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+        publisher: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        dateModified: new Date().toISOString(),
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 py-12">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white rounded-lg shadow-md p-8 md:p-12">
                     <h1 className="text-3xl font-bold text-gray-900 mb-8">Terms of Service</h1>

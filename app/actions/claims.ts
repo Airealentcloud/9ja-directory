@@ -2,7 +2,6 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
-import { redirect } from 'next/navigation'
 
 export async function submitClaim(formData: FormData) {
     const supabase = await createClient()
@@ -13,12 +12,29 @@ export async function submitClaim(formData: FormData) {
         throw new Error('You must be logged in to claim a business')
     }
 
-    const listingId = formData.get('listing_id') as string
+    const slug = formData.get('slug') as string | null
+    let listingId = formData.get('listing_id') as string | null
     const notes = formData.get('notes') as string
     const proofDocument = formData.get('proof_document') as string // In a real app, this would be a file upload handling
 
     if (!listingId) {
-        throw new Error('Listing ID is required')
+        if (!slug) {
+            throw new Error('Listing is required')
+        }
+
+        const { data: listing, error: listingError } = await supabase
+            .from('listings')
+            .select('id')
+            .eq('slug', slug)
+            .eq('status', 'approved')
+            .single()
+
+        if (listingError || !listing?.id) {
+            console.error('Error finding listing for claim:', listingError)
+            throw new Error('Listing not found')
+        }
+
+        listingId = listing.id
     }
 
     // Check if already claimed or pending

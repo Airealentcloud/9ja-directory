@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     const images = post.image ? [post.image] : [];
 
     return {
-        title: `${post.title} - 9ja Directory`,
+        title: `${post.title} | 9jaDirectory`,
         description: post.excerpt,
         alternates: {
             canonical,
@@ -60,8 +60,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         .filter((p) => p.slug !== slug)
         .slice(0, 3);
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://9jadirectory.org/blog' },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `https://9jadirectory.org/blog/${post.slug}` },
+        ],
+    };
+
     return (
         <div className="min-h-screen bg-white pb-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             {post.schema && (
                 <script
                     type="application/ld+json"

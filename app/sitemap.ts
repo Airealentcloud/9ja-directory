@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { blogPosts } from '@/lib/blog-data'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://9jadirectory.org'
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
     const supabase = await createClient()
 
     // 1. Static Routes
@@ -11,17 +11,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '',
         '/about',
         '/contact',
+        '/faq',
+        '/featured',
         '/blog',
         '/categories',
         '/states',
-        '/add-business',
-        '/login',
-        '/signup',
+        '/terms',
+        '/privacy',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
-        changeFrequency: 'daily' as const,
-        priority: 1,
+        changeFrequency: 'weekly' as const,
+        priority: route === '' ? 1 : 0.7,
     }))
 
     // 2. Blog Posts
@@ -67,20 +68,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }))
     )
 
-    // 6. Cities (for better local SEO)
-    const { data: cities } = await supabase
-        .from('cities')
-        .select('slug, state_id, states(slug)')
-        .limit(1000) // Limit to top 1000 cities to avoid huge sitemap
-
-    const cityUrls = (cities || []).map((city: any) => ({
-        url: `${baseUrl}/states/${city.states?.slug}/${city.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly' as const,
-        priority: 0.6,
-    }))
-
-    // 7. Listings (Approved only)
+    // 6. Listings (Approved only)
     // Fetching only necessary fields to minimize payload
     const { data: listings } = await supabase
         .from('listings')
@@ -95,5 +83,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
     }))
 
-    return [...routes, ...blogUrls, ...categoryUrls, ...stateUrls, ...categoryStateUrls, ...cityUrls, ...listingUrls]
+    return [...routes, ...blogUrls, ...categoryUrls, ...stateUrls, ...categoryStateUrls, ...listingUrls]
 }

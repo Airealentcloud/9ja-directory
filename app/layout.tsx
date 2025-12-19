@@ -6,23 +6,26 @@ import AuthButton from '@/components/auth-button'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
-  title: {
-    default: '9jaDirectory - Find Businesses & Services in Nigeria',
-    template: '%s | 9jaDirectory',
-  },
+  metadataBase: new URL(siteUrl),
+  title: '9jaDirectory - Find Businesses & Services in Nigeria',
   description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria. Your complete Nigerian business directory for Lagos, Abuja, and all 36 states.',
   keywords: ['Nigeria business directory', 'Nigerian businesses', 'find services in Nigeria', '9ja directory', 'Lagos businesses', 'Abuja businesses', 'local services Nigeria', 'Nigerian companies'],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_NG',
-    url: 'https://9jadirectory.org',
+    url: siteUrl,
     siteName: '9jaDirectory',
     title: '9jaDirectory - Find Businesses & Services in Nigeria',
     description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
     images: [
       {
-        url: 'https://9jadirectory.org/og-image.jpg',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: '9jaDirectory',
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '9jaDirectory - Find Businesses & Services in Nigeria',
     description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
-    images: ['https://9jadirectory.org/og-image.jpg'],
+    images: ['/opengraph-image'],
     creator: '@9jaDirectory',
   },
   robots: {

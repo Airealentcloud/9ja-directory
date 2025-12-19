@@ -14,11 +14,20 @@ export const metadata: Metadata = {
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: '9jaDirectory',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: '9jaDirectory - Find Businesses in Nigeria',
     description: 'Discover trusted businesses across Nigeria',
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: 'https://9jadirectory.org',
@@ -66,7 +75,7 @@ export default async function Home() {
     name: '9jaDirectory',
     alternateName: '9ja Directory',
     url: 'https://9jadirectory.org',
-    logo: 'https://9jadirectory.org/logo.png',
+    logo: 'https://9jadirectory.org/logo.svg',
     description: 'Nigeria\'s premier online business directory connecting customers with trusted local businesses across all 36 states.',
     foundingDate: '2024',
     areaServed: {

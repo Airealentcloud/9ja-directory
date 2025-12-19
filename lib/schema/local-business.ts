@@ -239,15 +239,15 @@ export function generateLocalBusinessSchema(
 
     // ✅ ENHANCED: Organization hierarchy - for knowledge graph
     schema.parentOrganization = {
-        '@type': 'Organization',
-        '@id': 'https://9jadirectory.org#organization',
-        name: '9jaDirectory',
-        url: 'https://9jadirectory.org',
-        logo: 'https://9jadirectory.org/logo.png',
-        sameAs: [
-            'https://www.facebook.com/9jadirectory',
-            'https://twitter.com/9jaDirectory',
-        ],
+      '@type': 'Organization',
+      '@id': 'https://9jadirectory.org#organization',
+      name: '9jaDirectory',
+      url: 'https://9jadirectory.org',
+      logo: 'https://9jadirectory.org/logo.svg',
+      sameAs: [
+        'https://www.facebook.com/9jadirectory',
+        'https://twitter.com/9jaDirectory',
+      ],
     }
 
     // Real Estate specific fields

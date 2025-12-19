@@ -1,4 +1,10 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
+
+export const metadata: Metadata = {
+  title: 'Debug (Internal) | 9jaDirectory',
+  robots: { index: false, follow: false },
+}
 
 export default async function DebugPage() {
   const supabase = await createClient()

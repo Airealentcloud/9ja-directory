@@ -752,6 +752,49 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const categorySlug = category?.slug || ''
   const stateName = state?.name || 'Nigeria'
   const cityName = listing.city || ''
+  const locationName = [cityName, stateName].filter(Boolean).join(', ')
+
+  const metaTitleRaw = (listing as any)?.meta_title
+  const metaDescriptionRaw = (listing as any)?.meta_description
+
+  const seoTitle =
+    typeof metaTitleRaw === 'string' && metaTitleRaw.trim().length > 0
+      ? metaTitleRaw.trim()
+      : `${listing.business_name} | ${categoryName} in ${locationName} | 9jaDirectory`
+
+  const seoDescription =
+    typeof metaDescriptionRaw === 'string' && metaDescriptionRaw.trim().length > 0
+      ? metaDescriptionRaw.trim()
+      : (() => {
+          const baseBlurb =
+            typeof listing.description === 'string' && listing.description.trim().length > 0
+              ? listing.description.trim()
+              : `View contact details, reviews, and directions for ${listing.business_name}.`
+          const ratingText =
+            typeof listing.average_rating === 'number' && Number.isFinite(listing.average_rating)
+              ? `Rated ${listing.average_rating.toFixed(1)}/5.`
+              : 'No ratings yet.'
+
+          const full = `${listing.business_name} is a ${categoryName.toLowerCase()} in ${locationName}. ${baseBlurb} ${ratingText}`
+            .replace(/\s+/g, ' ')
+            .trim()
+
+          return full.length > 155 ? `${full.slice(0, 152).trimEnd()}...` : full
+        })()
+
+  const seoKeywords = [
+    listing.business_name,
+    cityName ? `${listing.business_name} ${cityName}` : null,
+    stateName ? `${listing.business_name} ${stateName}` : null,
+    cityName ? `${categoryName} in ${cityName}` : null,
+    `${categoryName} in ${stateName}`,
+    cityName ? `best ${categoryName.toLowerCase()} in ${cityName}` : null,
+    cityName ? `top rated ${categoryName.toLowerCase()} ${cityName}` : null,
+    cityName ? `verified ${categoryName.toLowerCase()} ${cityName}` : null,
+    `Nigeria ${categoryName.toLowerCase()} directory`,
+    'Nigeria business directory',
+    '9jaDirectory',
+  ].filter(Boolean) as string[]
 
   // ✅ OPTIMIZED TITLE - INCLUDES LOCATION + CATEGORY + KEYWORD MODIFIERS
   // Pattern: "Business Name | Category in City, State | 9jaDirectory"
@@ -792,7 +835,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // Directory keyword
     '9jaDirectory',
     'Nigeria business directory',
-    'Nigerian ${categoryName.toLowerCase()} directory',
+    `Nigerian ${categoryName.toLowerCase()} directory`,
   ].filter(Boolean).join(', ')
 
   // ✅ FEATURE SNIPPET OPTIMIZATION
@@ -805,19 +848,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     ...(listing.images || [])
   ].filter(Boolean)
 
+  if (ogImages.length === 0) {
+    ogImages.push('/opengraph-image')
+  }
+
   // ✅ CANONICAL URL TO PREVENT DUPLICATES
   const canonicalUrl = `https://9jadirectory.org/listings/${slug}`
 
   return {
-    title,
-    description,
-    keywords,
+    title: seoTitle,
+    description: seoDescription,
+    keywords: seoKeywords,
     robots: metadataRobots,
     
     // ✅ OPEN GRAPH - CRITICAL FOR SOCIAL SHARING & CTR
     openGraph: {
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       url: canonicalUrl,
       type: 'website',
       locale: 'en_NG',
@@ -832,14 +879,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       
       // Business-specific OG properties
       ...(listing.phone && { 'business:contact_data:phone_number': listing.phone }),
-      ...(listing.email && { 'business:contact_data:website': listing.website_url }),
+      ...(listing.website_url && { 'business:contact_data:website': listing.website_url }),
+      ...(listing.email && { 'business:contact_data:email': listing.email }),
     },
     
     // ✅ TWITTER CARD - FOR TWITTER SHARING
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: seoTitle,
+      description: seoDescription,
       images: ogImages,
       creator: '@9jaDirectory',
       site: '@9jaDirectory',

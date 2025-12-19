@@ -79,7 +79,8 @@ export async function approveClaim(claimId: string) {
         .update({
             claimed: true,
             claimed_by: claim.user_id,
-            claimed_at: new Date().toISOString()
+            claimed_at: new Date().toISOString(),
+            user_id: claim.user_id,
         })
         .eq('id', claim.listing_id)
 

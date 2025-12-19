@@ -13,11 +13,20 @@ export const metadata: Metadata = {
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: '9jaDirectory',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About 9jaDirectory',
     description: 'Nigeria most comprehensive business directory',
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: 'https://9jadirectory.org/about',
@@ -42,12 +51,21 @@ export default async function AboutPage() {
     .eq('status', 'approved')
     .eq('verified', true)
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+      { '@type': 'ListItem', position: 2, name: 'About', item: 'https://9jadirectory.org/about' },
+    ],
+  }
+
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: '9jaDirectory',
     url: 'https://9jadirectory.org',
-    logo: 'https://9jadirectory.org/logo.png',
+    logo: 'https://9jadirectory.org/logo.svg',
     description: 'Nigeria most comprehensive business directory platform',
     areaServed: {
       '@type': 'Country',
@@ -115,6 +133,10 @@ export default async function AboutPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

@@ -52,6 +52,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     title,
     description,
     keywords,
+    robots: { index: false, follow: true },
     
     openGraph: {
       title,
@@ -60,6 +61,14 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       type: 'website',
       locale: 'en_NG',
       siteName: '9jaDirectory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: '9jaDirectory',
+        },
+      ],
     },
     
     twitter: {
@@ -68,6 +77,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       description,
       creator: '@9jaDirectory',
       site: '@9jaDirectory',
+      images: ['/opengraph-image'],
     },
     
     alternates: {

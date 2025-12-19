@@ -2,12 +2,62 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: 'Privacy Policy | 9jaDirectory',
-    description: 'Privacy policy and data protection information for 9jaDirectory users.',
+    description: 'Read the 9jaDirectory privacy policy to learn how we collect, use, and protect your data when you use our platform.',
+    alternates: {
+        canonical: 'https://9jadirectory.org/privacy',
+    },
+    openGraph: {
+        title: 'Privacy Policy | 9jaDirectory',
+        description: 'Learn how 9jaDirectory collects, uses, and protects your data.',
+        url: 'https://9jadirectory.org/privacy',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Privacy Policy | 9jaDirectory',
+        description: 'Learn how 9jaDirectory collects, uses, and protects your data.',
+        images: ['/opengraph-image'],
+    },
 }
 
 export default function PrivacyPage() {
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://9jadirectory.org/privacy' },
+        ],
+    }
+
+    const pageSchema = {
+        '@context': 'https://schema.org',
+        '@type': ['WebPage', 'PrivacyPolicy'],
+        '@id': 'https://9jadirectory.org/privacy#page',
+        name: 'Privacy Policy',
+        url: 'https://9jadirectory.org/privacy',
+        description: 'Privacy policy and data protection information for 9jaDirectory users.',
+        inLanguage: 'en-NG',
+        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+        publisher: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        dateModified: new Date().toISOString(),
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 py-12">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white rounded-lg shadow-md p-8 md:p-12">
                     <h1 className="text-3xl font-bold text-gray-900 mb-8">Privacy Policy</h1>

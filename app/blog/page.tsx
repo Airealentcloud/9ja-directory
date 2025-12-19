@@ -1,18 +1,89 @@
 import { blogPosts } from '@/lib/blog-data';
 import BlogCard from '@/components/blog/blog-card';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
-    title: 'Blog - 9ja Directory',
-    description: 'Latest insights, guides, and news about business in Nigeria.',
+export const metadata: Metadata = {
+    title: 'Business Blog & Guides | 9jaDirectory',
+    description: 'Latest insights, guides, and news about business in Nigeria. Learn how to grow, find services, and make smarter decisions with 9jaDirectory.',
+    keywords: [
+        'Nigeria business blog',
+        'business guides Nigeria',
+        'Nigeria market insights',
+        'small business tips Nigeria',
+        '9jaDirectory blog',
+    ],
+    alternates: {
+        canonical: 'https://9jadirectory.org/blog',
+    },
+    openGraph: {
+        title: 'Business Blog & Guides | 9jaDirectory',
+        description: 'Insights, guides, and news about business in Nigeria.',
+        url: 'https://9jadirectory.org/blog',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Blog | 9jaDirectory',
+        description: 'Insights, guides, and news about business in Nigeria.',
+        images: ['/opengraph-image'],
+    },
 };
 
 export default function BlogIndexPage() {
     const featuredPost = blogPosts[0];
     const recentPosts = blogPosts.slice(1);
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://9jadirectory.org/blog' },
+        ],
+    };
+
+    const blogSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Blog',
+        '@id': 'https://9jadirectory.org/blog#blog',
+        name: '9jaDirectory Blog',
+        description: 'Insights, guides, and news about business in Nigeria.',
+        url: 'https://9jadirectory.org/blog',
+        inLanguage: 'en-NG',
+        publisher: {
+            '@type': 'Organization',
+            name: '9jaDirectory',
+            url: 'https://9jadirectory.org',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://9jadirectory.org/logo.png',
+            },
+        },
+        blogPost: blogPosts.slice(0, 20).map((post) => ({
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.excerpt,
+            url: `https://9jadirectory.org/blog/${post.slug}`,
+            datePublished: post.date,
+            author: { '@type': 'Person', name: post.author },
+        })),
+    };
+
     return (
         <div className="min-h-screen bg-gray-50 pb-20">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
             {/* Hero Section */}
             <div className="bg-green-900 py-20 text-white">
                 <div className="container mx-auto px-4">

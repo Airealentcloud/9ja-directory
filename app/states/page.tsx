@@ -13,11 +13,20 @@ export const metadata: Metadata = {
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: '9jaDirectory',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Nigerian States Business Directory',
     description: 'Find businesses in all 36 states + FCT',
+    images: ['/opengraph-image'],
   },
   alternates: {
     canonical: 'https://9jadirectory.org/states',
@@ -98,11 +107,48 @@ export default async function StatesPage() {
     ],
   }
 
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://9jadirectory.org/states#page',
+    name: 'Businesses by Location in Nigeria',
+    description: 'Browse businesses and services in all 36 Nigerian states + FCT Abuja.',
+    url: 'https://9jadirectory.org/states',
+    inLanguage: 'en-NG',
+    isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+    numberOfItems: statesWithCounts.length,
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Nigerian States and Territories',
+    url: 'https://9jadirectory.org/states',
+    numberOfItems: statesWithCounts.length,
+    itemListElement: statesWithCounts.map((state, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Place',
+        name: state.name,
+        url: `https://9jadirectory.org/states/${state.slug}`,
+      },
+    })),
+  }
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
       <div className="min-h-screen bg-gray-50">

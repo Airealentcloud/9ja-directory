@@ -1,13 +1,83 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Contact Us | 9jaDirectory',
-    description: 'Get in touch with the 9jaDirectory team. We are here to help you with your business listing inquiries and support needs.',
+    title: 'Contact 9jaDirectory | Support & Business Listing Help',
+    description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries. We respond within 24 hours.',
+    keywords: [
+        'contact 9jaDirectory',
+        '9jaDirectory support',
+        'business listing help Nigeria',
+        'Nigeria business directory contact',
+    ],
+    alternates: {
+        canonical: 'https://9jadirectory.org/contact',
+    },
+    openGraph: {
+        title: 'Contact 9jaDirectory | Support & Business Listing Help',
+        description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries.',
+        url: 'https://9jadirectory.org/contact',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Contact 9jaDirectory',
+        description: 'Get support and help with business listings on 9jaDirectory.',
+        images: ['/opengraph-image'],
+    },
 }
 
 export default function ContactPage() {
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://9jadirectory.org/contact' },
+        ],
+    }
+
+    const contactPageSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        '@id': 'https://9jadirectory.org/contact#page',
+        name: 'Contact 9jaDirectory',
+        url: 'https://9jadirectory.org/contact',
+        description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries.',
+        inLanguage: 'en-NG',
+        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+        about: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        mainEntity: {
+            '@type': 'Organization',
+            name: '9jaDirectory',
+            url: 'https://9jadirectory.org',
+            logo: { '@type': 'ImageObject', url: 'https://9jadirectory.org/logo.png' },
+            contactPoint: [
+                {
+                    '@type': 'ContactPoint',
+                    contactType: 'Customer Support',
+                    email: 'support@9jadirectory.org',
+                    areaServed: 'NG',
+                    availableLanguage: ['en', 'en-NG'],
+                },
+            ],
+        },
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 py-12">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Contact Us</h1>

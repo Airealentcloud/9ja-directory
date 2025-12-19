@@ -36,6 +36,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: '9jaDirectory',
       locale: 'en_NG',
       type: 'website',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: '9jaDirectory',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${state.name} State Business Directory | 9jaDirectory`,
+      description: `Find trusted businesses and services in ${state.name} State`,
+      images: ['/opengraph-image'],
     },
     alternates: {
       canonical: `https://9jadirectory.org/states/${slug}`,
@@ -139,6 +153,24 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
     description: `Find verified businesses and services in ${state.name} State, Nigeria`,
   }
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Businesses in ${state.name} State`,
+    url: `https://9jadirectory.org/states/${slug}`,
+    numberOfItems: totalCount || 0,
+    itemListElement: (listings || []).slice(0, 10).map((listing: any, index: number) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'LocalBusiness',
+        name: listing.business_name,
+        url: `https://9jadirectory.org/listings/${listing.slug}`,
+        description: listing.description,
+      },
+    })),
+  }
+
   return (
     <>
       <script
@@ -148,6 +180,10 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
 
       <div className="min-h-screen bg-gray-50">

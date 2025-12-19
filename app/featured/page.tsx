@@ -3,8 +3,40 @@ import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-    title: 'Featured Businesses | 9jaDirectory',
-    description: 'Discover top-rated and featured businesses across Nigeria. Handpicked selections of the best services in your area.',
+    title: 'Featured Businesses in Nigeria | 9jaDirectory',
+    description: 'Discover top-rated and featured businesses across Nigeria. Handpicked selections of trusted services and providers in your area.',
+    keywords: [
+        'featured businesses Nigeria',
+        'top rated businesses Nigeria',
+        'best services Nigeria',
+        'verified businesses Nigeria',
+        '9jaDirectory featured',
+    ],
+    alternates: {
+        canonical: 'https://9jadirectory.org/featured',
+    },
+    openGraph: {
+        title: 'Featured Businesses in Nigeria | 9jaDirectory',
+        description: 'Discover top-rated and featured businesses across Nigeria.',
+        url: 'https://9jadirectory.org/featured',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Featured Businesses | 9jaDirectory',
+        description: 'Discover top-rated and featured businesses across Nigeria.',
+        images: ['/opengraph-image'],
+    },
 }
 
 export default async function FeaturedPage() {
@@ -34,8 +66,39 @@ export default async function FeaturedPage() {
         .order('created_at', { ascending: false })
         .limit(20)
 
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'Featured', item: 'https://9jadirectory.org/featured' },
+        ],
+    }
+
+    const itemListSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: 'Featured Businesses in Nigeria',
+        url: 'https://9jadirectory.org/featured',
+        numberOfItems: listings?.length || 0,
+        itemListElement: (listings || []).slice(0, 20).map((listing: any, index: number) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+                '@type': 'LocalBusiness',
+                name: listing.business_name,
+                url: `https://9jadirectory.org/listings/${listing.slug}`,
+                description: listing.description,
+            },
+        })),
+    }
+
     return (
-        <div className="min-h-screen bg-gray-50">
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+
+            <div className="min-h-screen bg-gray-50">
             <section className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-bold mb-4">Featured Businesses</h1>
@@ -109,6 +172,7 @@ export default async function FeaturedPage() {
                     </div>
                 )}
             </section>
-        </div>
+            </div>
+        </>
     )
 }

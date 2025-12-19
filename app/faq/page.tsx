@@ -4,8 +4,36 @@ import Link from 'next/link'
 export const metadata: Metadata = {
     title: 'Frequently Asked Questions | 9jaDirectory',
     description: 'Get answers to common questions about listing your business, searching for services, and using 9jaDirectory - Nigeria\'s premier business directory.',
+    keywords: [
+        '9jaDirectory FAQ',
+        'how to list business on 9jaDirectory',
+        'claim business listing Nigeria',
+        'Nigeria business directory help',
+    ],
     alternates: {
         canonical: 'https://9jadirectory.org/faq',
+    },
+    openGraph: {
+        title: 'Frequently Asked Questions | 9jaDirectory',
+        description: 'Answers to common questions about listing, searching, and using 9jaDirectory.',
+        url: 'https://9jadirectory.org/faq',
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FAQ | 9jaDirectory',
+        description: 'Answers to common questions about listing, searching, and using 9jaDirectory.',
+        images: ['/opengraph-image'],
     },
 }
 
@@ -73,6 +101,15 @@ const faqs = [
 ]
 
 export default function FAQPage() {
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
+            { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://9jadirectory.org/faq' },
+        ],
+    }
+
     // FAQPage Schema for Rich Results
     const faqSchema = {
         '@context': 'https://schema.org',
@@ -89,6 +126,10 @@ export default function FAQPage() {
 
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

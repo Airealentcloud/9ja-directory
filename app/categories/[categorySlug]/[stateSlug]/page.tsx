@@ -59,6 +59,14 @@ export async function generateMetadata({
       type: 'website',
       locale: 'en_NG',
       siteName: '9jaDirectory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: '9jaDirectory',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -66,6 +74,7 @@ export async function generateMetadata({
       description,
       creator: '@9jaDirectory',
       site: '@9jaDirectory',
+      images: ['/opengraph-image'],
     },
     alternates: {
       canonical: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
@@ -126,7 +135,7 @@ export default async function CategoryStateListingPage({
     name: `Best ${category.name} in ${state.name}`,
     description: `Directory of verified ${category.name} in ${state.name}`,
     url: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
-    image: 'https://9jadirectory.org/og-image.jpg',
+    image: 'https://9jadirectory.org/opengraph-image',
     dateModified: new Date().toISOString(),
     publisher: {
       '@type': 'Organization',
