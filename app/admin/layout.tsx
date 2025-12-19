@@ -30,7 +30,7 @@ export default async function AdminLayout({
         .eq('id', user.id)
         .single()
 
-    const isAdmin = profile?.role === 'admin' || user.email === 'israelakhas@gmail.com'
+    const isAdmin = profile?.role === 'admin'
 
     // Redirect non-admin users
     if (!isAdmin) {

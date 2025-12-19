@@ -5,10 +5,10 @@ SELECT
     email,
     raw_user_meta_data->>'full_name' as full_name
 FROM auth.users
-WHERE email = 'israelakhas@gmail.com';
+WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
 
 -- STEP 2: Check if you have a profile
 -- Run this to see if you have a profile record
 SELECT * FROM profiles WHERE id IN (
-    SELECT id FROM auth.users WHERE email = 'israelakhas@gmail.com'
+    SELECT id FROM auth.users WHERE email = 'YOUR_ADMIN_EMAIL_HERE'
 );

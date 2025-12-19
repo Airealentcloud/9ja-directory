@@ -1,5 +1,5 @@
 -- UNIVERSAL FIX FOR ADMIN DASHBOARD
--- This script will work for ANY user with email israelakhas@gmail.com
+-- Replace YOUR_ADMIN_EMAIL_HERE with your admin email before running.
 -- Run this in Supabase SQL Editor
 
 -- 1. Create or update profile to admin role for the specific email
@@ -11,7 +11,7 @@ BEGIN
     -- Get the user ID from auth.users
     SELECT id INTO user_uuid
     FROM auth.users
-    WHERE email = 'israelakhas@gmail.com';
+    WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
     
     IF user_uuid IS NOT NULL THEN
         -- Insert or update the profile
@@ -32,7 +32,7 @@ BEGIN
         
         RAISE NOTICE 'User % updated to admin role', user_uuid;
     ELSE
-        RAISE NOTICE 'User with email israelakhas@gmail.com not found';
+        RAISE NOTICE 'User with email YOUR_ADMIN_EMAIL_HERE not found';
     END IF;
 END $$;
 
@@ -109,4 +109,4 @@ SELECT
     u.email as auth_email
 FROM profiles p
 JOIN auth.users u ON u.id = p.id
-WHERE u.email = 'israelakhas@gmail.com';
+WHERE u.email = 'YOUR_ADMIN_EMAIL_HERE';

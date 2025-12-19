@@ -5,7 +5,7 @@
 ### 1. Sign Up
 1. Go to `http://localhost:3000/signup`
 2. Create account with:
-   - **Email**: `israelakhas@gmail.com`
+   - **Email**: `YOUR_ADMIN_EMAIL_HERE`
    - **Password**: `@Y0unGs123`
    - **Full Name**: (your choice)
 

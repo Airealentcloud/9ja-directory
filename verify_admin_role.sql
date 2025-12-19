@@ -6,7 +6,7 @@ SELECT id, email, role, full_name FROM profiles;
 
 -- 2. Force ALL users to be admins (TEMPORARY for debugging, or specific user)
 -- Uncomment the line below and replace 'your-email@example.com' to make a specific user admin
--- UPDATE profiles SET role = 'admin' WHERE email = 'israelakhas@gmail.com';
+-- UPDATE profiles SET role = 'admin' WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
 
 -- Or just make everyone admin for now to test:
 UPDATE profiles SET role = 'admin';

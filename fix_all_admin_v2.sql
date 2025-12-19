@@ -110,8 +110,8 @@ BEGIN
     END IF;
 END $$;
 
--- 6. Ensure YOU are Admin (Replace email if needed, but this covers the one you mentioned)
-UPDATE profiles SET role = 'admin' WHERE email = 'israelakhas@gmail.com';
+-- 6. Ensure YOU are Admin (Replace email first)
+UPDATE profiles SET role = 'admin' WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
 
 -- 7. Verify
 SELECT public.is_admin() as am_i_admin_now;

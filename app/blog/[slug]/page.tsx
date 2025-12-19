@@ -4,6 +4,104 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org';
+
+const stopwords = new Set([
+    'a',
+    'an',
+    'and',
+    'are',
+    'at',
+    'for',
+    'from',
+    'how',
+    'in',
+    'into',
+    'is',
+    'of',
+    'on',
+    'or',
+    'the',
+    'to',
+    'vs',
+    'with',
+    'your',
+    'you',
+    '2024',
+    '2025',
+    '2026',
+    'guide',
+    'top',
+    'best',
+]);
+
+function deriveKeywords(post: { title: string; category: string }): string[] {
+    const base: string[] = ['Nigeria', '9jaDirectory', 'Nigeria business directory', 'Nigerian SMEs'];
+    const byCategory: Record<string, string[]> = {
+        Marketing: ['local SEO Nigeria', 'business listings Nigeria', 'Google Maps marketing'],
+        'Business Guide': ['small business Nigeria', 'entrepreneurship Nigeria', 'start a business Nigeria'],
+        Business: ['start a business Nigeria', 'business ideas Nigeria'],
+        Finance: ['SME finance Nigeria', 'business loans Nigeria', 'SME banking Nigeria'],
+        Funding: ['grants Nigeria', 'SME funding Nigeria'],
+        Legal: ['business compliance Nigeria', 'CAC registration Nigeria', 'regulatory requirements Nigeria'],
+        Technology: ['SME tools Nigeria', 'business technology Nigeria'],
+        Investment: ['investment Nigeria', 'business opportunities Nigeria'],
+    };
+
+    const tokens = post.title
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/)
+        .filter((t) => t.length > 2 && !stopwords.has(t))
+        .slice(0, 10);
+
+    const combined = [...tokens, ...(byCategory[post.category] || []), ...base];
+    return Array.from(new Set(combined)).slice(0, 20);
+}
+
+function safeJsonParse(value: string): unknown | null {
+    try {
+        return JSON.parse(value);
+    } catch {
+        return null;
+    }
+}
+
+function fixJsonLdImages(node: unknown, fallbackImageUrl: string): unknown {
+    const isBadBlogImage = (url: string) => url.startsWith('https://9jadirectory.org/images/blog/');
+
+    const fixImageValue = (value: unknown): unknown => {
+        if (typeof value === 'string') return isBadBlogImage(value) ? fallbackImageUrl : value;
+        if (Array.isArray(value)) return value.map((v) => fixImageValue(v));
+        if (value && typeof value === 'object') {
+            const anyValue = value as Record<string, unknown>;
+            if (typeof anyValue.url === 'string') {
+                return { ...anyValue, url: isBadBlogImage(anyValue.url) ? fallbackImageUrl : anyValue.url };
+            }
+        }
+        return value;
+    };
+
+    if (Array.isArray(node)) return node.map((item) => fixJsonLdImages(item, fallbackImageUrl));
+    if (!node || typeof node !== 'object') return node;
+
+    const current = node as Record<string, unknown>;
+    const next: Record<string, unknown> = { ...current };
+
+    if (current.image) {
+        next.image = fixImageValue(current.image);
+    }
+
+    for (const [key, value] of Object.entries(current)) {
+        if (key === 'image') continue;
+        if (Array.isArray(value) || (value && typeof value === 'object')) {
+            next[key] = fixJsonLdImages(value, fallbackImageUrl);
+        }
+    }
+
+    return next;
+}
+
 interface BlogPostPageProps {
     params: Promise<{
         slug: string;
@@ -20,8 +118,9 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
         };
     }
 
-    const canonical = `https://9jadirectory.org/blog/${post.slug}`;
-    const images = post.image ? [post.image] : [];
+    const canonical = `${siteUrl}/blog/${post.slug}`;
+    const images = post.image ? [post.image] : [`${siteUrl}/opengraph-image`];
+    const keywords = post.keywords?.length ? post.keywords : deriveKeywords({ title: post.title, category: post.category });
 
     return {
         title: `${post.title} | 9jaDirectory`,
@@ -29,7 +128,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
         alternates: {
             canonical,
         },
-        keywords: post.keywords,
+        keywords,
         openGraph: {
             title: post.title,
             description: post.excerpt,
@@ -64,11 +163,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://9jadirectory.org/blog' },
-            { '@type': 'ListItem', position: 3, name: post.title, item: `https://9jadirectory.org/blog/${post.slug}` },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `${siteUrl}/blog/${post.slug}` },
         ],
     };
+
+    const parsedSchema = post.schema ? safeJsonParse(post.schema) : null;
+    const fixedSchema = parsedSchema ? fixJsonLdImages(parsedSchema, post.image) : null;
+    const schemaJson = fixedSchema ? JSON.stringify(fixedSchema) : post.schema;
 
     return (
         <div className="min-h-screen bg-white pb-20">
@@ -76,10 +179,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
-            {post.schema && (
+            {schemaJson && (
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: post.schema }}
+                    dangerouslySetInnerHTML={{ __html: schemaJson }}
                 />
             )}
             {/* Header/Image */}

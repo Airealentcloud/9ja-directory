@@ -1,5 +1,5 @@
 -- Admin Setup Script
--- Run this in Supabase SQL Editor AFTER signing up with israelakhas@gmail.com
+-- Run this in Supabase SQL Editor AFTER signing up with YOUR_ADMIN_EMAIL_HERE
 
 -- Step 1: Add RLS policies to allow admins to manage all listings
 -- Drop existing policies that might conflict
@@ -43,13 +43,13 @@ CREATE POLICY "Admins can delete all listings"
     )
   );
 
--- Step 2: Make israelakhas@gmail.com an admin
+-- Step 2: Make YOUR_ADMIN_EMAIL_HERE an admin
 -- This will work AFTER you sign up with that email
 UPDATE profiles 
 SET role = 'admin' 
 WHERE id = (
   SELECT id FROM auth.users 
-  WHERE email = 'israelakhas@gmail.com'
+  WHERE email = 'YOUR_ADMIN_EMAIL_HERE'
 );
 
 -- Verify the admin was created
@@ -59,4 +59,4 @@ SELECT
   profiles.created_at
 FROM profiles
 JOIN auth.users ON profiles.id = auth.users.id
-WHERE auth.users.email = 'israelakhas@gmail.com';
+WHERE auth.users.email = 'YOUR_ADMIN_EMAIL_HERE';

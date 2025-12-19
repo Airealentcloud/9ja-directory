@@ -19,7 +19,7 @@ SELECT
   profiles.role
 FROM profiles
 JOIN auth.users ON profiles.id = auth.users.id
-WHERE auth.users.email = 'israelakhas@gmail.com';
+WHERE auth.users.email = 'YOUR_ADMIN_EMAIL_HERE';
 
 -- 3. Check current RLS policies on listings table
 SELECT 

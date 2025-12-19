@@ -46,11 +46,11 @@ SELECT
   profiles.role
 FROM profiles
 JOIN auth.users ON profiles.id = auth.users.id
-WHERE auth.users.email = 'israelakhas@gmail.com';
+WHERE auth.users.email = 'YOUR_ADMIN_EMAIL_HERE';
 ```
 
 You should see:
-- email: `israelakhas@gmail.com`
+- email: `YOUR_ADMIN_EMAIL_HERE`
 - role: `admin`
 
 If role is NOT `admin`, run:
@@ -59,7 +59,7 @@ UPDATE profiles
 SET role = 'admin' 
 WHERE id = (
   SELECT id FROM auth.users 
-  WHERE email = 'israelakhas@gmail.com'
+  WHERE email = 'YOUR_ADMIN_EMAIL_HERE'
 );
 ```
 
@@ -67,7 +67,7 @@ WHERE id = (
 
 ### Issue: "I ran the SQL but still don't see listings"
 **Solution**: 
-1. Make sure you're logged in as `israelakhas@gmail.com`
+1. Make sure you're logged in as your admin account (e.g., `YOUR_ADMIN_EMAIL_HERE`)
 2. Hard refresh the browser (Ctrl+Shift+R)
 3. Check browser console for errors
 4. Verify there are actually pending listings in the database

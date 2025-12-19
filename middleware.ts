@@ -55,7 +55,7 @@ export async function middleware(request: NextRequest) {
       .eq('id', user.id)
       .single()
 
-    if (profile?.role !== 'admin' && user.email !== 'israelakhas@gmail.com') {
+    if (profile?.role !== 'admin') {
       return NextResponse.redirect(new URL('/dashboard', request.url))
     }
   }

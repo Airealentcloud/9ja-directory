@@ -20,7 +20,7 @@ This guide will help you:
    - Go to `/add-business` and submit a business
    
 2. **Check admin panel**:
-   - Sign back in as `israelakhas@gmail.com`
+   - Sign back in as your admin account (e.g., `YOUR_ADMIN_EMAIL_HERE`)
    - Go to `/admin/listings`
    - You should now see the pending listing!
 

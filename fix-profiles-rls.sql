@@ -40,9 +40,9 @@ CREATE POLICY "Admins can update any profile"
   );
 
 -- Verify the admin user exists and has role 'admin'
-SELECT * FROM profiles WHERE email = 'israelakhas@gmail.com';
+SELECT * FROM profiles WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
 
 -- If not admin, make them admin
 UPDATE profiles 
 SET role = 'admin' 
-WHERE email = 'israelakhas@gmail.com';
+WHERE email = 'YOUR_ADMIN_EMAIL_HERE';

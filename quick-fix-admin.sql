@@ -60,4 +60,4 @@ SELECT
   role
 FROM profiles
 JOIN auth.users ON profiles.id = auth.users.id
-WHERE email = 'israelakhas@gmail.com';
+WHERE email = 'YOUR_ADMIN_EMAIL_HERE';
