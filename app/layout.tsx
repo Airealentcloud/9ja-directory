@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import AuthButton from '@/components/auth-button'
+import NavLink from '@/components/nav-link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -60,21 +61,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="bg-white shadow-sm border-b">
+        <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
               <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-green-600">9jaDirectory</Link>
+                <NavLink href="/" className="text-2xl font-bold text-green-600">9jaDirectory</NavLink>
               </div>
               <div className="hidden md:flex space-x-8 items-center">
-                <Link href="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                <Link href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</Link>
-                <Link href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</Link>
-                <Link href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
-                <Link href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</Link>
-                <Link href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
+                <NavLink href="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
+                <NavLink href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</NavLink>
+                <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
+                <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
+                <NavLink href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</NavLink>
+                <NavLink href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
                   List Your Business
-                </Link>
+                </NavLink>
                 <div className="ml-4 flex items-center">
                   <AuthButton />
                 </div>
