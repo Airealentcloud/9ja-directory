@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>In the digital age, visibility is the currency of business growth. For Nigerian entrepreneurs, the question isn't just "Is your business online?" but "Can customers find you when they search?" With millions of Nigerians searching for services daily, listing your business on reputable directories is one of the most effective—and often free—ways to boost your <strong>local SEO in Nigeria</strong>.</p>
 
-      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/fashion" class="text-green-600 hover:underline">fashion brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, we’ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
+      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/shopping" class="text-green-600 hover:underline">retail brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, we’ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
 
       <br />
 
@@ -108,12 +108,70 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Listing your business on these top sites is a low-effort, high-reward strategy for 2025. It builds your digital footprint and makes it easier for customers to choose you.</p>
       <p>Start with the most effective option: <a href="/add-business" class="text-green-600 hover:underline"><strong>Add your business to 9jaDirectory now</strong></a> and watch your visibility grow.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Don’t Skip Google Maps (GBP)</h2>
+      <p>Directories help, but Google Business Profile is the local SEO engine. After listing on directories:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li>Create/claim your Google Business Profile (Maps listing).</li>
+        <li>Add your services, photos, opening hours, and WhatsApp/phone.</li>
+        <li>Collect reviews consistently and respond to them.</li>
+        <li>Keep your business name, address, and phone consistent everywhere (NAP consistency).</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">If Your Business Is Already Listed, Claim It</h2>
+      <p>Sometimes your business is added by someone else. That’s normal. Find your listing, open it, and click “Claim this Business” to manage details, upload proof, and get full access.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Listing Optimization Checklist (Do This Once)</h2>
+      <p>Most businesses get poor results from directories because their profiles are incomplete or inconsistent. Use this checklist to make your listings work like a real marketing channel:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Keep NAP consistent:</strong> the same business name, phone number, and address everywhere (Google uses this to verify legitimacy).</li>
+        <li><strong>Choose the right category:</strong> pick the closest category and add a clear service list (avoid listing in unrelated categories).</li>
+        <li><strong>Add photos:</strong> storefront, team, products, menu, price list, and before/after (profiles with photos get more clicks).</li>
+        <li><strong>Write a strong description:</strong> what you do, who you serve, your location, your differentiator, and your best contact method.</li>
+        <li><strong>Add hours and service area:</strong> especially if you do home visits or serve multiple cities.</li>
+        <li><strong>Collect reviews:</strong> ask satisfied customers to leave a short review and respond professionally to every review.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Track Results (So You Know What Works)</h2>
+      <p>Directories work best when you treat them like measurable channels. Use simple tracking so you can double down on what brings real customers:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Use UTM links:</strong> create a unique website link for each platform (example: <code>?utm_source=directory&utm_medium=listing</code>).</li>
+        <li><strong>Track WhatsApp inquiries:</strong> save quick replies and ask “Where did you find us?” during the first message.</li>
+        <li><strong>Monitor calls:</strong> if you get many calls, keep a simple note on new leads (date, service, source).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes to Avoid</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Duplicate listings:</strong> duplicates confuse customers and can hurt rankings.</li>
+        <li><strong>Wrong address or phone:</strong> even one wrong digit kills conversions.</li>
+        <li><strong>Keyword stuffing:</strong> write for humans; keep your description clear and natural.</li>
+        <li><strong>No proof:</strong> add photos, reviews, and a verified badge (where available) to build trust fast.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How many business directories should I list on?</h3>
+      <p>Start with 3–5 strong platforms (Google Business Profile + 2–4 reputable directories). Then expand gradually. The goal is quality + consistency, not being everywhere with incomplete profiles.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">How long does it take to see results?</h3>
+      <p>Most businesses see improved calls and inquiries within 4–12 weeks if listings are complete and consistent. Faster results usually come from Google Maps + directories that rank well for your category.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do paid listings help?</h3>
+      <p>Paid placements can help if the directory has real traffic in your niche. But first optimize your free listings: correct details, strong photos, and reviews. Then test paid upgrades on one platform and measure results.</p>
     `,
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
     date: "Nov 25, 2025",
     author: "9jaDirectory Editorial Team",
     category: "Marketing",
-    readTime: "8 min read",
+    readTime: "10 min read",
+    keywords: [
+      "business listing sites in Nigeria",
+      "Nigeria business directory",
+      "local SEO Nigeria",
+      "Google Business Profile Nigeria",
+      "business citations Nigeria",
+      "list your business Nigeria",
+      "promote business Nigeria",
+      "directories in Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify([
       {
         "@context": "https://schema.org",
@@ -352,7 +410,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
-        <strong>Need Help?</strong> If this sounds overwhelming, you can hire a <a href="/categories/legal" class="text-green-600 hover:underline">corporate lawyer</a> or a <a href="/categories/consulting" class="text-green-600 hover:underline">business consultant</a> from our directory to handle it for you.
+        <strong>Need Help?</strong> If this sounds overwhelming, you can hire a <a href="/categories/legal" class="text-green-600 hover:underline">corporate lawyer</a> or a <a href="/categories/professional-services" class="text-green-600 hover:underline">business consultant</a> from our directory to handle it for you.
       </blockquote>
 
       <br />
@@ -510,6 +568,17 @@ export const blogPosts: BlogPost[] = [
     slug: "top-10-investment-opportunities-lagos",
     title: "Top 10 Investment Opportunities in Lagos for 2025: Where Smart Money is Heading",
     excerpt: "Discover the top 10 profitable investment opportunities in Lagos, Nigeria for 2025. From real estate (20-35% ROI) to fintech and agriculture. Complete guide with ROI data, locations, and entry points.",
+    keywords: [
+      "investment opportunities in Lagos",
+      "best investments in Lagos 2025",
+      "Lagos real estate investment",
+      "Lagos fintech investment",
+      "REITs Nigeria",
+      "agribusiness investment Nigeria",
+      "how to invest in Lagos",
+      "Lagos investment guide",
+      "9jaDirectory",
+    ],
     content: `
       <p><strong>By Sarah Adebayo</strong> | <em>Updated: November 2025</em></p>
 
@@ -800,7 +869,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>If you own a small business in Nigeria and you're not leveraging digital marketing, you're leaving money on the table. The harsh reality? Your competitors are online, your customers are online, and if you're not showing up where they are, you're invisible.</p>
 
-      <p><strong>Digital marketing</strong> isn't just for big brands with massive budgets anymore. Whether you run a <a href="/categories/fashion" class="text-green-600 hover:underline">fashion boutique in Lekki</a>, a <a href="/categories/food" class="text-green-600 hover:underline">restaurant in Abuja</a>, or a <a href="/categories/technology" class="text-green-600 hover:underline">tech service in Port Harcourt</a>, strategic online marketing can multiply your revenue without requiring millions in ad spend.</p>
+      <p><strong>Digital marketing</strong> isn't just for big brands with massive budgets anymore. Whether you run a <a href="/categories/shopping" class="text-green-600 hover:underline">fashion boutique in Lekki</a>, a <a href="/categories/restaurants" class="text-green-600 hover:underline">restaurant in Abuja</a>, or a <a href="/categories/technology" class="text-green-600 hover:underline">tech service in Port Harcourt</a>, strategic online marketing can multiply your revenue without requiring millions in ad spend.</p>
 
       <p>In this guide, I'll walk you through 6 proven <strong>digital marketing strategies for small businesses</strong> that actually work in the Nigerian market—no fluff, no theory. Just actionable tactics you can start implementing today.</p>
 
@@ -1404,6 +1473,19 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <p>Your team deserves systems that work as hard as they do. Start building yours today.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Need Help Setting This Up?</h2>
+      <p>If you don’t have an in-house IT team, you can still run a strong remote operation. The key is finding reliable vendors for setup, integrations, and support.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Developers & IT support:</strong> workspace setup, integrations, automations</li>
+        <li><strong>Cybersecurity:</strong> access control, device policies, staff training</li>
+        <li><strong>Project managers:</strong> process and SOP documentation</li>
+      </ul>
+      <p>Explore providers in <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> and <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Make Your Business Easy to Find</h2>
+      <p>Remote work is powerful, but customers still need to find you. Create a shareable business profile and collect reviews:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> (free). If your business is already listed, use the “Claim this Business” button to manage it.</p>
     `,
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 12, 2025",
@@ -2536,6 +2618,42 @@ export const blogPosts: BlogPost[] = [
 
       <br />
 
+      <h2 class="text-2xl font-bold mt-8 mb-4">Grant Readiness Checklist (Most Applicants Skip This)</h2>
+      <p>Winning a grant is rarely about luck. It is about looking credible and reducing risk for the sponsor. Before you apply, get these basics right:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Formalization:</strong> CAC registration + business bank account (many grants ask for proof).</li>
+        <li><strong>Clear offer:</strong> what you sell, to whom, and why you are different (1 sentence).</li>
+        <li><strong>Traction:</strong> even small evidence helps (sales receipts, customers, waitlist, partnerships).</li>
+        <li><strong>Simple financials:</strong> monthly revenue, costs, profit, and how the grant will be spent.</li>
+        <li><strong>Impact story:</strong> jobs created, women/youth served, local sourcing, or measurable community benefit.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Documents to Prepare</h2>
+      <p>Exact requirements vary by program, but these frequently appear in grant portals and review stages:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>CAC documents (BN/LTD certificate + forms/status report)</li>
+        <li>Valid ID + BVN/NIN (as requested)</li>
+        <li>Business bank account details</li>
+        <li>Pitch deck or 1-page business summary</li>
+        <li>6–12 months bank statements (for bigger grants or later stages)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Avoid Grant Scams (Protect Your Money)</h2>
+      <p>Unfortunately, scammers copy real grant names. Use these rules to stay safe:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Do not pay</strong> to “get shortlisted” or to “unlock” a form.</li>
+        <li><strong>Verify the source:</strong> confirm from the official website and official social accounts.</li>
+        <li><strong>Be careful with agents:</strong> consultants can help, but your login and submission should remain under your control.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC registration to win a grant?</h3>
+      <p>Not always, but CAC registration dramatically increases your eligibility and credibility. Many programs require it at some stage (especially for larger amounts).</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Are grants taxed in Nigeria?</h3>
+      <p>Tax treatment can depend on the grant type and business structure. Keep records and speak with a professional if the amount is significant.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">What if I don’t win any grant?</h3>
+      <p>Keep applying, but also build a plan around sales and cashflow. Many businesses scale faster using customers + reinvestment, then add grants/loans later.</p>
+
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Don't sleep on these opportunities. Set a reminder for the application dates. One grant can change the trajectory of your business forever.</p>
       <p>Stay updated on new opportunities by checking our <a href="/blog" class="text-green-600 hover:underline">Blog</a> regularly. And if you need to formalize your business to qualify, read our <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">Business Registration Guide</a>.</p>
@@ -2545,6 +2663,17 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Editorial Team",
     category: "Funding",
     readTime: "10 min read",
+    keywords: [
+      "small business grants in Nigeria",
+      "grants for entrepreneurs Nigeria 2025",
+      "Tony Elumelu Foundation grant",
+      "SMEDAN conditional grant",
+      "LSETF grant Nigeria",
+      "business funding Nigeria",
+      "startup grants Nigeria",
+      "how to apply for grants Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3173,12 +3302,71 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <p>Ready to start? You might need to register a Business Name to get the higher-tier POS terminals. See our <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">Business Registration Guide</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Handling Failed Transactions & Reversals (Stay Professional)</h2>
+      <p>Reversals are common. How you handle them determines whether customers trust you or avoid you forever:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Keep proof:</strong> print receipts where possible and screenshot transaction references.</li>
+        <li><strong>Verify properly:</strong> do not rely on customer screenshots; check your POS/app history and your balance.</li>
+        <li><strong>Set expectations:</strong> some reversals are instant; others can take hours or days depending on bank/network.</li>
+        <li><strong>Escalate fast:</strong> save your provider’s support contacts and report issues with the transaction reference.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Daily Operating Checklist</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Start day with enough cash + bank balance (float) for your area’s demand.</li>
+        <li>Record cash-in/cash-out and reversals (a notebook is enough).</li>
+        <li>Close day by reconciling totals and setting aside profit separately from float.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How much profit can a POS agent make per day?</h3>
+      <p>It depends on volume and location. A quiet spot may earn a few thousand daily; busy markets and transport hubs can earn significantly more. Track volume for 2 weeks before upgrading your setup.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC registration to run POS?</h3>
+      <p>Some providers and higher tiers may request business registration or additional KYC. If you plan to scale or request bigger limits, registration helps.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Daily Operations (What Makes Agents Win)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Float management:</strong> keep enough cash and bank balance to avoid turning customers away.</li>
+        <li><strong>Reconciliation:</strong> balance your transactions daily to spot errors early.</li>
+        <li><strong>Customer service:</strong> be calm during failed transactions and reversals.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Fraud & Security Tips</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Never accept suspicious transfers or “overpayments”.</li>
+        <li>Confirm credited alerts properly—don’t rely on screenshots.</li>
+        <li>Close earlier in high-risk areas and avoid keeping large cash overnight.</li>
+        <li>Use a secure kiosk setup and stay visible (busy spots reduce risk).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Increase Profit (Beyond Withdrawals)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Airtime/data sales and bill payments</li>
+        <li>Agency banking services (account opening where available)</li>
+        <li>Business partnerships (nearby shops that send you customers)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">List Your POS Location</h2>
+      <p>Many people search “POS near me” when there are no ATMs. You can get discovered by listing your location:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your POS business on 9jaDirectory</a> and select the most relevant category such as <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>. If your POS spot is already listed, use “Claim this Business” to manage it.</p>
     `,
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 25, 2025",
     author: "Musa Ibrahim",
     category: "Business Guide",
     readTime: "10 min read",
+    keywords: [
+      "POS business Nigeria",
+      "how to start POS business in Nigeria",
+      "Moniepoint POS Nigeria",
+      "OPay POS Nigeria",
+      "PalmPay POS Nigeria",
+      "POS profit per day",
+      "agency banking Nigeria",
+      "POS kiosk setup",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3270,13 +3458,81 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Mini importation is one of the few businesses you can start with ₦50,000 and flip to ₦200,000 in two months. The key is research. Don't rush to buy.</p>
-      <p>For more business ideas, check out our <a href="/categories/business-services" class="text-green-600 hover:underline">Business Services</a> section.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Calculate Your Landed Cost (So You Don’t Lose Money)</h2>
+      <p>“Cheap on 1688” is not the real cost. Always calculate landed cost:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Product cost</strong> + local shipping (China) + international shipping + clearing/fees + inland delivery = <strong>landed cost</strong></li>
+        <li>Selling price = landed cost + profit margin</li>
+      </ul>
+      <p>If you skip this, you’ll underprice and end up working for free.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 6: Avoid Scams (Supplier Vetting)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Start with a small test order before bulk.</li>
+        <li>Request real photos/videos of the exact item (not catalog pictures).</li>
+        <li>Use a procurement agent or platform support for payments if you’re using 1688.</li>
+        <li>Be careful with “too good to be true” deals and rushed payment pressure.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 7: Sell Faster (Distribution Strategy)</h2>
+      <p>Importing is easy; selling is the work. Use multiple channels:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>WhatsApp:</strong> status + broadcast lists + catalogs.</li>
+        <li><strong>Instagram/TikTok:</strong> short videos showing the product in use.</li>
+        <li><strong>Resellers:</strong> sell cartons to smaller retailers for quick cashflow.</li>
+        <li><strong>Offline:</strong> small kiosks and campus markets (depending on product).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Landed Cost Calculator (Profit Starts Here)</h2>
+      <p>Mini importation is profitable when you calculate <strong>landed cost</strong> correctly. Your landed cost is:</p>
+      <p><strong>Product cost + China local delivery + international shipping + clearing/handling + inland delivery in Nigeria = landed cost.</strong></p>
+      <p><strong>Example:</strong> If you buy goods worth &#8358;100,000 and total shipping/handling is &#8358;40,000, your landed cost is &#8358;140,000. If you sell for &#8358;200,000 total, gross profit is &#8358;60,000 (before ads and local delivery).</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Shipping Options: Air vs Sea (What Beginners Should Know)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Air cargo:</strong> faster delivery, best for small/light items and quick turnaround.</li>
+        <li><strong>Sea freight (groupage):</strong> cheaper for bulky goods, but slower and needs better cashflow planning.</li>
+        <li><strong>Risk tip:</strong> start with air for your first 1–2 shipments until you understand timelines and demand.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Supplier Vetting & Scam Prevention</h2>
+      <p>Most losses happen before shipping: wrong supplier, wrong product, or wrong quality. Reduce risk with a simple checklist:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Order samples first for anything you plan to scale.</li>
+        <li>Ask for real photos/videos of the exact product (not catalog images).</li>
+        <li>Use suppliers with transaction history and verified ratings.</li>
+        <li>Do not rush large payments because of “last stock” pressure.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How much should I start with?</h3>
+      <p>Start with a test budget you can afford to learn with (many beginners start from &#8358;50,000 to &#8358;200,000). Validate demand and your sales channel before scaling.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Is customs clearing included with shipping companies?</h3>
+      <p>Some freight forwarders include clearing/handling in their pricing, others bill separately. Confirm this upfront and ask for the full landed cost estimate.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">List Your Business (Build Trust)</h2>
+      <p>Trust is the biggest barrier in Nigeria. Create a profile customers can verify and share:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the “Claim this Business” button.</p>
+
+      <p>Explore categories like <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for suppliers and logistics partners.</p>
     `,
     image: "https://images.unsplash.com/photo-1566576912906-600afa9dd747?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 24, 2025",
     author: "Chinyere Okeke",
     category: "Business Guide",
     readTime: "12 min read",
+    keywords: [
+      "mini importation Nigeria",
+      "import from China to Nigeria",
+      "1688 Nigeria guide",
+      "Alibaba Nigeria",
+      "how to start mini importation",
+      "shipping from China to Nigeria",
+      "freight forwarder Nigeria",
+      "sell imported goods Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3348,13 +3604,108 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Tax Efficient:</strong> In Nigeria, REITs are tax-exempt at the corporate level if they distribute 90% of profits.</li>
       </ul>
 
-      <p>Ready to explore more investment options? Visit our <a href="/categories/investment" class="text-green-600 hover:underline">Investment Category</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Risks & Things to Understand</h2>
+      <p>REITs are investments, not savings. Know the risks:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Price volatility:</strong> the unit price can go up or down.</li>
+        <li><strong>Dividend uncertainty:</strong> payouts depend on rental income and management decisions.</li>
+        <li><strong>Liquidity:</strong> you can usually sell on the exchange, but liquidity depends on market activity.</li>
+        <li><strong>Management quality:</strong> a REIT is only as good as the people managing its assets.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Evaluate a REIT (Simple Checklist)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Assets:</strong> what properties does it own (offices, malls, residential)?</li>
+        <li><strong>Occupancy:</strong> are properties rented consistently?</li>
+        <li><strong>Dividend history:</strong> does it pay regularly?</li>
+        <li><strong>Fees:</strong> what management fees reduce your return?</li>
+        <li><strong>Strategy:</strong> how does it grow (acquisitions, development, rent increases)?</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">REITs vs Buying Land in Nigeria</h2>
+      <p><strong>REITs:</strong> easier to start, smaller capital, more liquidity. <strong>Land/property:</strong> more control but higher capital and slower sales when you need cash.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How REIT Returns Work (Dividends vs Price Growth)</h2>
+      <p>REITs can reward investors in two ways:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Dividends:</strong> periodic payouts funded by rental income (and sometimes asset sales).</li>
+        <li><strong>Price growth:</strong> if the REIT improves assets, raises occupancy, or the market re-rates the unit price.</li>
+      </ul>
+      <p>Some REITs pay steady dividends with slow price changes. Others are more volatile. Always check the history and don’t rely on one month’s performance.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Beginner Mistakes to Avoid</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Buying without a plan:</strong> decide if you want dividend income, price growth, or both.</li>
+        <li><strong>Ignoring liquidity:</strong> some units trade less frequently, which can affect how fast you can sell.</li>
+        <li><strong>Putting all savings in one REIT:</strong> diversify and keep emergency funds separate.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Portfolio Tip (Simple Allocation)</h2>
+      <p>If you’re new, consider starting small and spreading risk. Many investors keep REITs as a portion of their overall portfolio alongside cash, fixed income, and (optionally) stocks. The right mix depends on your risk tolerance and timeline.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I buy Nigerian REITs as a beginner?</h3>
+      <p>Yes. You typically need a stockbroker/CSCS setup, then you can buy units like other NGX securities. Start with an amount you can hold long-term.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Are REITs safer than buying land?</h3>
+      <p>They are different. REITs are more liquid and require less capital, but market prices move. Land can appreciate strongly but can be harder to sell quickly and may have title risks.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Research REITs (Quick Due Diligence)</h2>
+      <p>Before you buy, spend 30 minutes researching:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Dividend history and payout consistency</li>
+        <li>What assets the REIT owns and occupancy levels</li>
+        <li>Management fees and audited reports (where available)</li>
+        <li>How actively the units trade (liquidity)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How often do REITs pay dividends?</h3>
+      <p>It depends on the REIT’s policy and performance. Some pay periodically, others may pay less consistently. Always check dividend history and don’t assume future payouts will match the past.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I lose money with REITs?</h3>
+      <p>Yes. Unit prices can drop and dividends can reduce. REITs are investments, not guaranteed savings. Diversify and invest money you can hold long-term.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">What should I check before buying?</h3>
+      <p>Assets owned, occupancy, dividend history, fees, and liquidity. If a REIT is hard to sell quickly, plan to hold it longer.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Quick Start (Beginner-Friendly)</h2>
+      <p>If you’re new, don’t overthink it. Start with a small amount, learn how the buy/sell process works with your broker, and focus on consistency over “timing the market”.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Buy a small position and track dividends and price movement.</li>
+        <li>Read the REIT’s reports when available (assets, occupancy, fees).</li>
+        <li>Hold long-term if your goal is income and stability.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+      <p>If you want to explore property-related opportunities, browse <a href="/categories/real-estate" class="text-green-600 hover:underline">Real Estate</a> and <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>. If you run a real estate business, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your company on 9jaDirectory</a> to attract clients.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Taxes & Payouts (Nigeria Basics)</h2>
+      <p>REIT dividends are investment income, and your broker may deduct fees or withholding where applicable. Check your broker statement so you understand what you received net and what was deducted.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Risk Management</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Don’t buy only because the dividend looks high—check history and asset quality.</li>
+        <li>Diversify: don’t put all your money in one REIT or one asset class.</li>
+        <li>Plan liquidity: if you may need cash soon, avoid positions that trade slowly.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>REITs can be a practical way to get real estate exposure with less capital, but results depend on asset quality, fees, and market liquidity. Start small, research, and hold long-term if your goal is income.</p>
     `,
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 22, 2025",
     author: "Chinedu Okonkwo",
     category: "Investment",
-    readTime: "6 min read",
+    readTime: "11 min read",
+    keywords: [
+      "REITs in Nigeria",
+      "how to invest in REITs Nigeria",
+      "real estate investment Nigeria",
+      "NGX REIT Nigeria",
+      "UPDC REIT",
+      "SFS REIT",
+      "property investment Nigeria",
+      "dividend investing Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3424,12 +3775,118 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Quality is king. If you send sandy Egusi or moldy fish, your reputation is dead. Start with high standards.</p>
       <p>Need packaging materials? Check our <a href="/categories/manufacturing" class="text-green-600 hover:underline">Manufacturing Directory</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Packaging, Labeling & Quality Control</h2>
+      <p>Export is stricter than local sales. Most buyers care about consistency and food safety:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Dry products properly (moisture causes mold and rejection).</li>
+        <li>Use food-grade packaging and clear labels.</li>
+        <li>Keep batch records and supplier traceability where possible.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Documentation (Don’t Skip This)</h2>
+      <p>Exact documents vary by destination and product type, but common requirements include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Proforma/commercial invoice</li>
+        <li>Packing list</li>
+        <li>Export documentation and inspections where required</li>
+        <li>NAFDAC approvals for processed goods (see: <a href="/blog/nafdac-registration-requirements-nigeria-2025" class="text-green-600 hover:underline">NAFDAC guide</a>)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Paid Safely</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Start with <strong>small orders</strong> and build trust.</li>
+        <li>Use deposits and clear payment terms (don’t ship on promises).</li>
+        <li>Work with buyers who have references or established stores.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Landed Cost (Don’t Guess)</h2>
+      <p>Export profit can disappear when you ignore landed cost. Your pricing should cover:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Product cost + processing/cleaning</li>
+        <li>Packaging + labeling</li>
+        <li>Local transport to the exporter/forwarder</li>
+        <li>Freight + destination handling</li>
+        <li>Payment fees and refunds/returns policy</li>
+      </ul>
+      <p>Start with small orders and refine your pricing based on real shipping bills, not estimates.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Quality Standards (What Gets You Repeat Buyers)</h2>
+      <p>Diaspora buyers care about taste, hygiene, and consistency. B2B buyers care about documentation and repeatable quality. Build a basic system:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Standardize drying/smoking and reduce moisture (mold is a major rejection reason).</li>
+        <li>Use food-grade packaging and seal properly to prevent contamination.</li>
+        <li>Create batch labels and track suppliers (traceability helps with larger buyers).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need NEPC registration?</h3>
+      <p>For legal export operations, NEPC registration is commonly required. Requirements can change, so confirm from official channels before shipping commercially.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I find buyers faster?</h3>
+      <p>Start with diaspora communities and African stores, then grow into repeat B2B buyers. Samples + consistency + fast communication usually win.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Where to Find Buyers (Faster)</h2>
+      <p>Buyer acquisition is the real work. Combine multiple channels so you are not dependent on one source:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Diaspora communities:</strong> WhatsApp groups and local community pages (start with samples and small orders).</li>
+        <li><strong>African stores:</strong> call and pitch with a clear price list + MOQ + delivery timeline.</li>
+        <li><strong>B2B sourcing:</strong> use LinkedIn to find importers and procurement managers.</li>
+        <li><strong>Referrals:</strong> one satisfied buyer can introduce you to 3 more stores.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Packaging for International Shipping</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Seal properly (vacuum sealing helps many dry goods).</li>
+        <li>Use strong cartons and inner packaging to prevent crushing.</li>
+        <li>Label clearly and keep batch records (helps with repeat orders).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Which market should I start with?</h3>
+      <p>Start where you have access: diaspora communities and African stores in one country/city. A focused market helps you learn faster and build repeat buyers before expanding.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">How should I structure payments?</h3>
+      <p>For new buyers, start with small orders and require payment upfront or staged payments. As trust grows, you can offer better terms. Keep documentation for every transaction.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need branding to export?</h3>
+      <p>Branding helps, especially for retail shelves. For early B2B orders, consistency and quality matter most. Add branding as soon as your product quality and supply are stable.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist (Before You Ship)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Confirm buyer requirements and destination rules.</li>
+        <li>Test packaging with a small shipment first.</li>
+        <li>Document every order (invoice, packing list, payment proof).</li>
+        <li>Keep quality consistent (batch records and clean processing).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Build Visibility (Diaspora Buyers Search Online)</h2>
+      <p>Create a profile page that buyers can verify and share:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your export business on 9jaDirectory</a> and include your WhatsApp, product list, and minimum order quantities.</p>
+      <p>Explore related categories like <a href="/categories/agriculture" class="text-green-600 hover:underline">Agriculture</a>, <a href="/categories/manufacturing" class="text-green-600 hover:underline">Manufacturing</a>, and <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a>.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Shipping Options (Start Small, Then Scale)</h2>
+      <p>Many exporters begin with small parcels or consolidated shipments to test demand, packaging strength, and buyer reliability. Once you have repeat orders, scale into consolidated cargo so your cost per kilogram improves.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Parcels:</strong> fastest testing, higher cost per kg.</li>
+        <li><strong>Consolidated cargo:</strong> better pricing, requires planning and documentation.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>Foodstuff export rewards consistency: reliable quality, clear documentation, and fast communication with buyers. Start with one market, build repeat orders, and increase shipment size gradually as your process becomes stable.</p>
     `,
     image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 21, 2025",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
     readTime: "9 min read",
+    keywords: [
+      "foodstuff export business Nigeria",
+      "export Nigerian food to UK",
+      "export Nigerian food to USA",
+      "NEPC registration Nigeria",
+      "NAFDAC for exports",
+      "how to find diaspora buyers",
+      "export logistics Nigeria",
+      "earn dollars Nigeria business",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3485,13 +3942,120 @@ export const blogPosts: BlogPost[] = [
       <br />
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Solar is an asset. A generator is a liability. Make the switch.</p>
-      <p>Find verified solar installers in our <a href="/categories/energy" class="text-green-600 hover:underline">Energy Directory</a>.</p>
+      <p>Find verified solar installers and contractors in <a href="/categories/home-services" class="text-green-600 hover:underline">Home Services</a> and <a href="/categories/construction" class="text-green-600 hover:underline">Construction</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Size a Solar System (Simple Approach)</h2>
+      <p>The best system is the one that matches your business load. List your daily equipment and estimate:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Essentials:</strong> lights, fans, laptops, POS, CCTV</li>
+        <li><strong>Heavy loads:</strong> ACs, freezers, compressors, servers</li>
+        <li><strong>Hours needed:</strong> how many hours you need power daily</li>
+      </ul>
+      <p>Ask your installer for a clear load calculation, not guesses.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid Being Scammed)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Get a written bill of materials (inverter model, battery type, panel wattage, cables, breakers).</li>
+        <li>Ask about warranty and after-sales support.</li>
+        <li>Demand proper protection: breakers, earthing, surge protection.</li>
+        <li>Insist on monitoring (app or simple display) to track performance.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Maintenance Tips</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Clean panels regularly (dust reduces output).</li>
+        <li>Don’t overload the inverter—add capacity before expanding equipment.</li>
+        <li>Keep ventilation around batteries and inverter to reduce heat damage.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Size a Solar System (Simple Method)</h2>
+      <p>Most people overpay because they don’t calculate their load. A simple way to estimate:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>List appliances + their wattage (W)</li>
+        <li>Estimate how many hours/day you use each</li>
+        <li>Total watt-hours (Wh) = watts × hours</li>
+        <li>Add a safety buffer (10–25%)</li>
+      </ul>
+      <p>This helps you and the installer agree on a realistic inverter/battery setup for your home or business.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Drives the Price in Nigeria (2025)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Battery type:</strong> lithium is usually more expensive upfront but lasts longer than many tubular options.</li>
+        <li><strong>Inverter quality:</strong> pure sine wave, hybrid inverters, and brand reliability matter.</li>
+        <li><strong>Panel capacity:</strong> more panels = faster charging and longer runtime (but higher cost).</li>
+        <li><strong>Installation quality:</strong> wiring, breakers, earthing, and proper mounting protect your investment.</li>
+        <li><strong>Warranty & support:</strong> cheap systems become expensive when there’s no after-sales support.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid “Fake Capacity”)</h2>
+      <p>Before paying a vendor, ask these questions:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>What exact brands/models are you installing? (Request model numbers.)</li>
+        <li>What warranty is included for inverter, batteries, and panels?</li>
+        <li>Is there a site inspection before final pricing?</li>
+        <li>Do you provide proper protection: breakers, surge protection, earthing, and battery fuses?</li>
+        <li>Who handles maintenance and troubleshooting after installation?</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Maintenance Tips (Make It Last)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Clean panels periodically (dust reduces output).</li>
+        <li>Keep battery area ventilated and dry.</li>
+        <li>Do not overload beyond your inverter rating.</li>
+        <li>Track performance: sudden drops can indicate wiring or battery issues.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Is 5kVA enough for a small business?</h3>
+      <p>For many small shops, 5kVA can work if you manage heavy loads (AC, large freezers) carefully. The right answer depends on your load and daily usage hours.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Should I choose lithium batteries?</h3>
+      <p>Lithium often offers longer lifespan and better performance, but price varies widely. Compare warranty, cycle life, and after-sales support before deciding.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Payback vs Generator (Why Solar Can Be Cheaper Long-Term)</h2>
+      <p>Many businesses burn cash daily on fuel, repairs, and downtime. Solar can reduce recurring fuel spend and stabilize operations. The best approach is to compare monthly generator spend to a solar payment plan or upfront cost, then estimate payback over 12–36 months.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I maintain a solar system?</h3>
+      <p>Keep panels clean, avoid overloading, and monitor performance. A periodic inspection helps catch wiring or battery issues early. Good installers also provide basic training and after-sales support.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Best Business Use Cases</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Salons and barbershops (steady daily load)</li>
+        <li>Pharmacies (power for storage and operations)</li>
+        <li>Small offices and coworking setups</li>
+        <li>Retail stores using POS and lighting</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Build Visibility (If You Sell Solar)</h2>
+      <p>If you’re an installer or solar vendor, create a profile clients can verify and share:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your solar business on 9jaDirectory</a> and add photos, service areas, and contact details.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid Bad Jobs)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Ask for a load audit (what you power and how many hours daily).</li>
+        <li>Confirm warranty terms in writing (inverter, batteries, panels).</li>
+        <li>Request photos of past installations and real customer references.</li>
+        <li>Insist on protections: breakers, fuses, surge protection, and proper earthing.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>Solar is an investment in uptime. If you size correctly and choose a solid installer, you can reduce fuel spend, avoid downtime, and run your business with more predictability.</p>
     `,
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop",
     date: "Nov 20, 2025",
     author: "9jaDirectory Tech Team",
     category: "Technology",
-    readTime: "6 min read",
+    readTime: "12 min read",
+    keywords: [
+      "solar power Nigeria",
+      "solar inverter price Nigeria 2025",
+      "5kVA solar system Nigeria",
+      "10kVA solar system Nigeria",
+      "lithium battery vs tubular",
+      "solar installers Nigeria",
+      "business solar solutions Nigeria",
+      "generator alternative Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3560,12 +4124,129 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>The best time to start was yesterday. The second best time is today. Pick a skill, commit 6 months to it, and watch your income transform.</p>
       <p>Looking for a training center? Search our <a href="/categories/education" class="text-green-600 hover:underline">Education Directory</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Skills 6-10 (Also High Paying)</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Performance Marketing (Paid Ads)</h3>
+      <p>Businesses pay for people who can run profitable Facebook/Instagram/Google campaigns and track conversions.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Where it pays:</strong> agencies, e-commerce brands, startups.</li>
+        <li><strong>Proof needed:</strong> case studies, results screenshots, landing page knowledge.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. QA / Software Testing</h3>
+      <p>Quality assurance is underrated. Great testers help teams ship faster with fewer bugs.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Tools:</strong> Jira, Postman, Playwright/Cypress (for automation).</li>
+        <li><strong>Path:</strong> manual testing → automation → QA lead.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Data Analytics (Business Intelligence)</h3>
+      <p>Not everyone needs AI. Many companies need dashboards, reporting, and decision support.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Tools:</strong> Excel, SQL, Power BI/Tableau.</li>
+        <li><strong>Where it pays:</strong> fintech, logistics, e-commerce, consulting.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Product Management</h3>
+      <p>Product managers coordinate teams to ship features that drive revenue and retention.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Skills:</strong> research, writing, prioritization, stakeholder management.</li>
+        <li><strong>Proof:</strong> case studies, product teardowns, shipped work.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Technical Writing</h3>
+      <p>Good documentation saves engineering time and supports users. Technical writers can earn well globally.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Where it pays:</strong> SaaS companies, open-source projects, fintechs.</li>
+        <li><strong>Proof:</strong> sample docs, tutorials, a writing portfolio.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Paid (Nigeria + Remote)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Build a portfolio (GitHub, case studies, Figma links, dashboards).</li>
+        <li>Use LinkedIn consistently: post weekly and connect with recruiters.</li>
+        <li>Apply to remote roles and freelance platforms, but start with small projects to build reviews.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">90-Day Roadmap (From Learning to Income)</h2>
+      <p>If you want to earn from a digital skill, focus on speed to a simple portfolio:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>Days 1–30:</strong> learn basics + complete 3 small practice projects.</li>
+        <li><strong>Days 31–60:</strong> build 2 portfolio projects that solve real business problems.</li>
+        <li><strong>Days 61–90:</strong> outreach daily, get 1–2 paid clients, collect testimonials.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Portfolio Checklist (What Clients Want to See)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Before/after examples (results, not just designs)</li>
+        <li>Short case studies: goal, what you did, outcome</li>
+        <li>Clear services and starting prices</li>
+        <li>Easy contact method (WhatsApp, email, booking link)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Getting Paid (Avoid Underpricing)</h2>
+      <p>Start with a simple pricing model: one-off projects for quick wins, then move to monthly retainers once you have results. Always define deliverables and request upfront payment for new clients.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I get clients with no experience?</h3>
+      <p>Build 2–3 portfolio projects for local businesses (even as demos), then reach out with a clear offer and proof. Your first goal is testimonials, not perfection.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Should I learn many skills at once?</h3>
+      <p>No. Choose one skill for 60–90 days, get competent, then add supporting skills later. Depth beats scattered learning.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Client Acquisition (3 Channels That Work)</h2>
+      <p>Most people learn skills but never market them. Use a simple multi-channel approach:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Warm network:</strong> friends, classmates, church/mosque groups, and local business owners.</li>
+        <li><strong>Partnerships:</strong> collaborate with agencies and vendors who already serve your target clients.</li>
+        <li><strong>Outbound:</strong> daily outreach to 5–10 businesses with a clear offer and one proof example.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Simple Outreach Message</h3>
+      <p>“Hi [Name], I help [who] get [result] using [how]. I noticed [specific issue]. If you want, I can share 2 quick improvements and a price range.”</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Pricing Tip</h3>
+      <p>Start with a “starter package” price you can deliver confidently, then move to higher fees when you have proof. Underpricing traps you with stressful clients and no time to improve.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Tools & Learning Resources</h2>
+      <p>Speed matters. Use simple resources and learn by building:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Free tutorials + practice projects (YouTube and documentation)</li>
+        <li>Communities for feedback (Discord, WhatsApp groups, local meetups)</li>
+        <li>Templates and checklists to deliver faster</li>
+        <li>A portfolio site or Notion page to showcase work</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Turn Your Skill into Clients</h2>
+      <p>If you offer services (design, development, marketing), create a profile people can share:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your service on 9jaDirectory</a> under <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> or <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">90-Day Plan (If You Want Results Fast)</h2>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>Weeks 1–2:</strong> learn the basics and finish 2 tutorials end-to-end.</li>
+        <li><strong>Weeks 3–6:</strong> build 2 portfolio projects for Nigerian business use-cases.</li>
+        <li><strong>Weeks 7–12:</strong> do daily outreach, deliver 1–2 small paid jobs, and collect testimonials.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>High-paying skills pay when you combine competence with marketing. Build proof, talk to real buyers, and improve with every project.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Skill Selection Tip</h2>
+      <p>If you’re unsure where to start, pick a skill you can practice consistently: design for creatives, development for builders, data for analytical minds, marketing for communicators. Consistency beats the “perfect” choice.</p>
     `,
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 19, 2025",
     author: "9jaDirectory Careers",
     category: "Technology",
-    readTime: "8 min read",
+    readTime: "12 min read",
+    keywords: [
+      "high paying digital skills Nigeria",
+      "tech skills Nigeria 2025",
+      "learn software development Nigeria",
+      "UI UX design Nigeria",
+      "cybersecurity Nigeria",
+      "data analytics Nigeria",
+      "DevOps Nigeria",
+      "remote jobs Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3585,31 +4266,158 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "dropshipping-nigeria-zero-capital-guide",
     title: "Dropshipping in Nigeria: How to Start with Zero Capital (2025)",
-    excerpt: "No money? No problem. Learn how to start a dropshipping business in Nigeria using Jumia, Konga, and WhatsApp without buying inventory upfront.",
+    excerpt: "Learn how to start dropshipping in Nigeria in 2025: pick a niche, find suppliers, sell on WhatsApp/Instagram/Jumia, and deliver without holding stock.",
     content: `
       <p><strong>By 9jaDirectory E-commerce Team</strong> | <em>Updated: November 2025</em></p>
-      <p>The biggest lie in business is "You need money to make money." In 2025, the internet has broken that barrier. <strong>Dropshipping</strong> allows you to sell products you don't own and keep the profit.</p>
-      <p>You don't need a warehouse. You don't need to buy stock. You just need a smartphone and data.</p>
-      <br />
-      <h2 class="text-2xl font-bold mt-8 mb-4">How It Works (The Simple Version)</h2>
+
+      <p>Dropshipping is a simple business model: you market and sell a product, then a supplier fulfills the order. You don’t buy inventory upfront, so you can start lean—even as a student or full-time worker.</p>
+
+      <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+        <p class="text-sm text-green-900"><strong>Reality check:</strong> dropshipping is not “free money”. Your success depends on product selection, supplier reliability, customer trust, and delivery speed—especially in Nigeria where cash-on-delivery and logistics can make or break you.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Dropshipping Is (and What It Isn’t)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>It is:</strong> marketing + taking orders + coordinating fulfillment.</li>
+        <li><strong>It isn’t:</strong> a way to avoid customer service. Customers will still call <em>you</em> when delivery is late.</li>
+        <li><strong>It isn’t:</strong> a “no capital” business forever. You’ll need data, ads, and sometimes a small buffer for logistics.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How It Works (Simple Example)</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li>Find a supplier selling a shoe for ₦5,000.</li>
-        <li>Post the picture on your WhatsApp Status / Instagram for ₦8,000.</li>
-        <li>Customer pays you ₦8,000.</li>
-        <li>You pay the supplier ₦5,000.</li>
-        <li>Supplier sends the shoe to the customer.</li>
-        <li>You keep ₦3,000.</li>
+        <li>You find a supplier selling a shoe for <strong>₦5,000</strong>.</li>
+        <li>You list it on WhatsApp/Instagram for <strong>₦8,000</strong>.</li>
+        <li>A customer pays you <strong>₦8,000</strong> (or pays a deposit + delivery fee).</li>
+        <li>You pay the supplier <strong>₦5,000</strong>.</li>
+        <li>The supplier ships it (or hands it to a dispatch rider).</li>
+        <li>You keep the margin (<strong>₦3,000</strong>) minus delivery/ads.</li>
       </ol>
-      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: Start Dropshipping in 7 Days</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1) Pick a niche you can win</h3>
+      <p>Don’t sell “everything”. Choose a niche where you can post daily and build trust:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Phones & accessories, skincare, sneakers, kids items, hair products, kitchen gadgets.</li>
+        <li>Start with 1–2 categories, then expand after you understand demand.</li>
+      </ul>
+      <p>For inspiration, browse businesses in <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2) Find reliable suppliers (local first)</h3>
+      <p>Your supplier is your “warehouse”. Aim for suppliers in your city/state so delivery is faster and returns are easier.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Ask for <strong>real pictures/videos</strong> and verify stock before you take payment.</li>
+        <li>Negotiate a consistent price and agree on delivery timelines.</li>
+        <li>Prefer suppliers that can do same-day or next-day within <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> or <a href="/states/fct" class="text-green-600 hover:underline">FCT</a>.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3) Set up your storefront (WhatsApp + Instagram)</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>WhatsApp Business:</strong> catalog, quick replies, labels (New Order / Paid / Delivered).</li>
+        <li><strong>Instagram/TikTok:</strong> daily videos, customer reviews, delivery proof.</li>
+        <li><strong>Optional marketplaces:</strong> Jumia/Konga seller accounts can help you get early traffic, but margins may be tighter.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4) Define your order & delivery workflow</h3>
+      <p>Make fulfillment predictable. A simple workflow:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li>Customer orders → confirm size/color/address.</li>
+        <li>Confirm stock with supplier → reserve item.</li>
+        <li>Collect payment (or delivery fee + deposit) → send receipt.</li>
+        <li>Book dispatch → share tracking/call rider.</li>
+        <li>After delivery → request review + referral.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Fulfillment & Logistics (Nigeria)</h2>
+      <p>Most dropshipping failures happen at delivery. Use trusted dispatch and set expectations:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Charge delivery upfront to reduce fake orders (especially for cash-on-delivery).</li>
+        <li>Use riders/logistics companies from <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for same-day delivery.</li>
+        <li>Have a clear return policy (e.g., returns within 24–48 hours if unused).</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Profit (Simple Formula)</h2>
+      <p>Use this formula to avoid “selling at a loss”:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Selling price</strong> = supplier price + delivery + packaging + ad cost + profit margin.</li>
+        <li>Target <strong>20%–40%</strong> margin for fast-moving products, higher for unique products.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Marketing That Works in 2025</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Short videos:</strong> unboxing, “before/after”, customer testimonials.</li>
+        <li><strong>WhatsApp broadcast:</strong> weekly deals + restocks.</li>
+        <li><strong>Micro-influencers:</strong> partner with creators in your niche.</li>
+        <li><strong>Local SEO:</strong> get found when people search “{product} near me”.</li>
+      </ul>
+      <p>To build trust, create a public profile people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the “Claim this Business” button on the listing page.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes to Avoid</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Posting supplier photos without proof—customers want real videos.</li>
+        <li>Taking full payment before confirming stock.</li>
+        <li>Undercharging and forgetting delivery/ads.</li>
+        <li>Ignoring customer service and follow-up.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC to start?</h3>
+      <p>You can start small without CAC, but once you’re consistent, registration helps with trust, business accounts, and payment integrations.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Is cash-on-delivery safe?</h3>
+      <p>It can work, but reduce risk by collecting delivery fees upfront and confirming phone numbers before dispatch.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Where do I find suppliers?</h3>
+      <p>Start with local wholesalers and distributors, then expand. Browse <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/manufacturing" class="text-green-600 hover:underline">Manufacturing</a> listings.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Supplier Vetting (Quality Control Without Holding Stock)</h2>
+      <p>Dropshipping lives and dies by supplier reliability. Before you scale ads, test suppliers like a professional:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Order a sample to your own address and check quality, packaging, and delivery speed.</li>
+        <li>Confirm return/replacement process for damaged items.</li>
+        <li>Keep 2 suppliers for your top product so you can switch if one fails.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Returns, Refunds & Delivery Policy (This Builds Trust)</h2>
+      <p>Most Nigerian customers hesitate because of scams. A clear policy increases conversion:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>State delivery timelines by city and who pays delivery.</li>
+        <li>Offer a simple replacement policy for wrong/damaged items (with photo evidence within 24 hours).</li>
+        <li>Do not promise what your supplier cannot deliver; under-promise and over-deliver.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Scaling to 100 Orders/Month (Simple System)</h2>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>Week 1:</strong> pick 1 winning product and create 10–15 short videos showing it in use.</li>
+        <li><strong>Week 2:</strong> run small tests and track cost per WhatsApp inquiry.</li>
+        <li><strong>Week 3:</strong> improve your offer (bundle, free delivery threshold, bonus item) and add testimonials.</li>
+        <li><strong>Week 4:</strong> scale only what works, and build repeat buyers with broadcast lists and after-sales follow-up.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC registration to start dropshipping?</h3>
+      <p>You can start informally, but registration helps when you want business bank accounts, payment gateways, and bigger partnerships. If you plan to scale, register early.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">Should I do cash on delivery?</h3>
+      <p>It can work, but protect yourself: collect delivery fees upfront, confirm orders by call, and prioritize repeat customers over first-time COD orders.</p>
+
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-      <p>Dropshipping is the easiest way to start a business with zero capital. Start today!</p>
-      <p>Find suppliers in our <a href="/categories/business" class="text-green-600 hover:underline">Business Directory</a>.</p>
+      <p>Dropshipping is one of the fastest ways to start selling online in Nigeria without holding inventory. Treat it like a real business: pick a niche, build trust, deliver fast, and improve weekly.</p>
+      <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business for free on 9jaDirectory</a> so customers can find and verify you.</p>
     `,
     image: "https://images.unsplash.com/photo-1599368358486-53d928373307?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 18, 2025",
     author: "9jaDirectory E-commerce Team",
     category: "Business",
-    readTime: "5 min read",
+    readTime: "10 min read",
+    keywords: [
+      "dropshipping Nigeria",
+      "how to start dropshipping in Nigeria",
+      "dropshipping suppliers Nigeria",
+      "WhatsApp dropshipping",
+      "Instagram dropshipping",
+      "Jumia seller Nigeria",
+      "ecommerce Nigeria",
+      "online business Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3629,50 +4437,154 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-coworking-spaces-lagos-2025",
     title: "Top Co-working Spaces in Lagos for Freelancers & Startups (2025)",
-    excerpt: "Need 24/7 power and fast internet? We review the best co-working hubs in Ikeja, Lekki, and Yaba with current pricing.",
+    excerpt: "A practical 2025 guide to choosing the best coworking spaces in Lagos (Ikeja, Yaba, Lekki/VI): pricing ranges, amenities, and how to pick the right hub.",
     content: `
     <p><strong>By 9jaDirectory Tech Team</strong> | <em>Updated: November 2025</em></p>
-    <p>Working from home in Nigeria is an extreme sport. NEPA takes light, generator noise kills your Zoom calls, and data is expensive.</p>
-    <p>Co-working spaces are the solution. For a monthly fee, you get AC, 24/7 power, fiber internet, and free coffee. Here are the top spots in Lagos for 2025.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Ikeja (Mainland Hub)</h2>
-    <h3 class="text-xl font-bold mt-6 mb-3">1. ReDahlia Workspaces</h3>
-    <p>Located in the heart of Ikeja. Great for serious business owners.</p>
+    <p>Working from home in Nigeria can be tough: unstable power, noisy generators, and unreliable internet. Coworking spaces solve that problem by bundling power, bandwidth, meeting rooms, and a professional environment into a single monthly plan.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Tip:</strong> Prices and packages change often. Use this guide to shortlist spaces, then confirm current rates and availability directly with the provider.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What to Look For in a Coworking Space (Lagos)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Price:</strong> ~₦50,000 / month.</li>
-      <li><strong>Vibe:</strong> Professional, Quiet.</li>
+      <li><strong>Power reliability:</strong> inverter + generator + backup plan.</li>
+      <li><strong>Internet:</strong> true fiber, not “shared router”. Ask about speed at peak hours.</li>
+      <li><strong>Noise level:</strong> open-plan vs quiet zones vs private offices.</li>
+      <li><strong>Meeting rooms:</strong> booking rules, included hours, extra charges.</li>
+      <li><strong>Location:</strong> commute time matters—traffic can kill productivity.</li>
+      <li><strong>Community:</strong> events, founders, freelancers, partnerships.</li>
     </ul>
-    <h3 class="text-xl font-bold mt-6 mb-3">2. Workstation (Maryland)</h3>
-    <p>Modern, hip, and right inside the mall.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Yaba (Tech Valley)</h2>
-    <h3 class="text-xl font-bold mt-6 mb-3">1. Leadspace</h3>
-    <p>The OG tech hub. Close to Sabo.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Best Areas for Coworking in Lagos</h2>
+    <p>Most premium hubs cluster around these zones:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Price:</strong> ~₦40,000 / month.</li>
-      <li><strong>Vibe:</strong> Techy, collaborative.</li>
+      <li><strong>Ikeja/Maryland:</strong> mainland accessibility, corporate vibe.</li>
+      <li><strong>Yaba:</strong> “tech valley”, startup energy, frequent events.</li>
+      <li><strong>Lekki/VI:</strong> premium offices, agencies, consultants, proximity to clients.</li>
     </ul>
-    <h3 class="text-xl font-bold mt-6 mb-3">2. Hub One (by FCMB)</h3>
-    <p>Perfect for fintech startups.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Lekki (Island Luxury)</h2>
-    <h3 class="text-xl font-bold mt-6 mb-3">1. V8 Valley</h3>
-    <p>Premium space for high-end consultants and startups.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Typical Pricing (2025 Ranges)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Price:</strong> ~₦80,000+ / month.</li>
+      <li><strong>Day pass:</strong> ₦5,000–₦15,000/day (varies by location and access).</li>
+      <li><strong>Hot desk:</strong> ₦35,000–₦90,000/month.</li>
+      <li><strong>Dedicated desk:</strong> ₦60,000–₦150,000/month.</li>
+      <li><strong>Private office:</strong> ₦150,000–₦800,000+/month depending on size and location.</li>
     </ul>
-    <h3 class="text-xl font-bold mt-6 mb-3">2. Venia Hub</h3>
-    <p>One of the oldest and most reliable on the Island.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Why Pay for a Hub?</h2>
-    <p>It's not just about the internet. It's about the <strong>Network</strong>. Sitting next to a developer or an investor can change your business.</p>
-    <p>Find more spaces in our <a href="/categories/real-estate" class="text-green-600 hover:underline">Real Estate Directory</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose the Right Space (Fast Checklist)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Visit at peak hours (11am–3pm) to test noise and internet.</li>
+      <li>Ask about backup power and how often outages happen.</li>
+      <li>Confirm meeting room rules and printing costs.</li>
+      <li>Check parking availability and security.</li>
+      <li>Try a day pass before paying monthly.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">For Coworking Operators: How to Get More Bookings</h2>
+    <p>Most people find coworking spaces through Google Maps, Instagram, and referrals. Improve discoverability:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Add clear photos, pricing ranges, and location directions.</li>
+      <li>Collect reviews and respond to them consistently.</li>
+      <li>Create a listing page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your space on 9jaDirectory</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Coworking by Area (What to Expect)</h2>
+    <p>Lagos coworking is not one-size-fits-all. The best choice depends on where your clients are and how you work.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Ikeja / Maryland</h3>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Best for:</strong> corporate meetings, mainland access, steady weekday work.</li>
+      <li><strong>Common tradeoff:</strong> less startup community, more office vibe.</li>
+      <li><strong>Tip:</strong> confirm generator hours and whether meeting rooms are included or paid.</li>
+    </ul>
+    <h3 class="text-xl font-bold mt-6 mb-3">Yaba</h3>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Best for:</strong> founders, builders, freelancers, events and community.</li>
+      <li><strong>Common tradeoff:</strong> open-plan noise can be higher during meetups.</li>
+      <li><strong>Tip:</strong> ask about quiet zones and phone booths if you take calls often.</li>
+    </ul>
+    <h3 class="text-xl font-bold mt-6 mb-3">Lekki / VI</h3>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Best for:</strong> agencies, consultants, premium clients, brand image.</li>
+      <li><strong>Common tradeoff:</strong> higher pricing and stricter visitor policies.</li>
+      <li><strong>Tip:</strong> check parking, security, and if day passes include peak-hour access.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Questions to Ask During a Tour</h2>
+    <p>Do not buy a monthly plan without a tour (or at least a day pass). Ask these questions and get clear answers:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Internet:</strong> “What is the minimum guaranteed speed at 1pm?” and “Is there a backup ISP?”</li>
+      <li><strong>Power:</strong> “How many hours of generator per day?” and “Is there an inverter for switchover?”</li>
+      <li><strong>Access:</strong> “Is it 24/7 or fixed hours?” and “Are weekends included?”</li>
+      <li><strong>Meeting rooms:</strong> “How many hours are included per month?” and “What is the hourly rate after that?”</li>
+      <li><strong>Hidden fees:</strong> printing, guest passes, lockers, AC restrictions, late-night access.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Simple Scorecard (Pick the Best Option Fast)</h2>
+    <p>Rate each space from 1–5 on: <strong>Power</strong>, <strong>Internet</strong>, <strong>Noise</strong>, <strong>Location</strong>, <strong>Community</strong>, and <strong>Value</strong>. The best space is usually the one that scores highest on power + internet + commute time.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Save Money (Without Losing Quality)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Buy a day pass first, then negotiate monthly after 2–3 visits.</li>
+      <li>Ask for off-peak plans if you only need 2–3 days/week.</li>
+      <li>If you need meeting rooms, choose a plan that includes hours (pay-as-you-go gets expensive).</li>
+      <li>Consider a 3-month payment plan if it comes with a discount.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Is coworking worth it in Lagos?</h3>
+    <p>For many people, yes. If unstable power and poor internet reduce your output by even 2 hours daily, coworking can pay for itself through productivity and client confidence.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I choose hot desk or dedicated desk?</h3>
+    <p>Hot desk is cheaper and flexible. Dedicated desk makes sense if you go daily, need a fixed setup, or want to leave equipment safely.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Can I get clients from coworking spaces?</h3>
+    <p>Yes—especially if you attend community events and collaborate. Treat it like networking: be visible, helpful, and consistent.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Remote Work Routine (Use Coworking Properly)</h2>
+    <p>To get real value from coworking, plan your week:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use coworking for deep work, calls, and meetings.</li>
+      <li>Batch tasks (content creation, proposals, invoices) during your strongest hours.</li>
+      <li>Attend community events to build partnerships and referrals.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Is coworking good for a small team?</h3>
+    <p>Yes. Many spaces offer private offices or team plans. If you collaborate daily and take calls often, a private office can improve focus. If you mainly need reliable power and internet, hot desks may be enough.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What should I test on a day pass?</h3>
+    <p>Test internet speed at peak hours, noise levels, comfort, and how fast staff respond to issues. Also test your commute time, because Lagos traffic can destroy productivity.</p>
+
+    <h3 class="text-xl font-bold mt-6 mb-3">Can I bring guests or clients?</h3>
+    <p>Some spaces allow guests for free for short periods, while others charge per guest or require booking meeting rooms. If you meet clients often, confirm guest policy and meeting room pricing before paying monthly.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">More Places to Explore</h2>
+    <p>Browse businesses in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> and check the <a href="/categories/real-estate" class="text-green-600 hover:underline">Real Estate</a> and <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> categories for office-related providers.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist (Before You Pay Monthly)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Test power and internet during peak hours.</li>
+      <li>Confirm noise levels and meeting room costs.</li>
+      <li>Measure commute time at your busiest hours.</li>
+      <li>Ask about guest policy and laptop/security rules.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>The best coworking space is the one that protects your focus and uptime. Test first, score options, then commit monthly only when the basics are reliable.</p>
   `,
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
     date: "Nov 16, 2025",
     author: "9jaDirectory Tech Team",
     category: "Technology",
-    readTime: "5 min read",
+    readTime: "9 min read",
+    keywords: [
+      "coworking spaces Lagos",
+      "best coworking space in Lagos",
+      "coworking Ikeja",
+      "coworking Yaba",
+      "coworking Lekki",
+      "shared office Lagos",
+      "private office Lagos",
+      "remote work Lagos",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3692,39 +4604,136 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "networking-events-lagos-2025",
     title: "Networking Events in Lagos: Where to Meet Investors & Partners (2025)",
-    excerpt: "Your network is your net worth. Discover the top business and tech events in Lagos where deals happen.",
+    excerpt: "A practical guide to networking in Lagos: where to find events, how to meet partners/investors, and follow-up scripts that turn conversations into deals.",
     content: `
     <p><strong>By 9jaDirectory Events</strong> | <em>Updated: November 2025</em></p>
-    <p>Lagos is a city of connections. You can have the best product, but if you don't know the right people, you will struggle. In 2025, networking is a skill you must master.</p>
-    <p>Here are the events you cannot afford to miss.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Major Annual Events</h2>
-    <h3 class="text-xl font-bold mt-6 mb-3">1. Lagos Startup Week (July)</h3>
-    <p>A week-long celebration of the tech ecosystem. Panels, masterclasses, and mixers. Free to attend.</p>
-    <h3 class="text-xl font-bold mt-6 mb-3">2. Techpoint Build</h3>
-    <p>The largest tech conference in West Africa. Great for meeting VCs and angel investors.</p>
-    <h3 class="text-xl font-bold mt-6 mb-3">3. Lagos Tech Fest (February)</h3>
-    <p>Focuses on fintech, policy, and investment.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Monthly / Weekly Meetups</h2>
+    <p>Lagos runs on relationships. You can have a great product, but partnerships, distribution, and funding often come from the people you meet. The good news: networking is a skill—and you can learn it.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Goal:</strong> don’t “attend events”. Build a pipeline of relationships—customers, partners, mentors, and potential investors—then follow up consistently.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Where to Find Networking Events in Lagos</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Silicon Drinkabout:</strong> A casual Friday evening meetup for techies.</li>
-      <li><strong>Startup Grind Lagos:</strong> Monthly fireside chats with successful founders.</li>
+      <li><strong>Coworking hubs:</strong> founders’ mixers, demo days, community meetups (check hubs in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>).</li>
+      <li><strong>Industry associations:</strong> chambers of commerce, trade groups, professional bodies.</li>
+      <li><strong>Online calendars:</strong> Eventbrite, LinkedIn Events, X (Twitter) communities.</li>
+      <li><strong>Universities & tech communities:</strong> product meetups, hackathons, career fairs.</li>
     </ul>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">How to Network Like a Pro</h2>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">The Best Types of Events (Pick Based on Your Goal)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>To find customers:</strong> industry meetups, SME forums, business breakfasts.</li>
+      <li><strong>To find partners:</strong> trade fairs, association gatherings, niche communities.</li>
+      <li><strong>To find talent:</strong> tech meetups, university events, hackathons.</li>
+      <li><strong>To meet investors:</strong> pitch nights, demo days, accelerator events.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Network Like a Pro (Nigeria Edition)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li><strong>Don't Sell Immediately:</strong> Build a relationship first. Ask "What are you working on?"</li>
-      <li><strong>Have a Digital Card:</strong> Paper cards are outdated. Have a QR code or LinkedIn ready.</li>
-      <li><strong>Follow Up:</strong> Send a message within 24 hours. "Great meeting you at LSW."</li>
+      <li><strong>Arrive with a target:</strong> “I want 5 founder conversations + 2 potential partnerships.”</li>
+      <li><strong>Use a 1-sentence intro:</strong> “I help [who] get [result] using [how].”</li>
+      <li><strong>Ask better questions:</strong> “What’s your biggest challenge with X?”</li>
+      <li><strong>Capture contacts:</strong> save WhatsApp + LinkedIn; add a note (“met at Yaba meetup”).</li>
+      <li><strong>Follow up within 24–48 hours:</strong> send value (resource, intro, idea), not “How far?”</li>
     </ol>
-    <p>Stay updated on upcoming events on our <a href="/blog" class="text-green-600 hover:underline">Blog</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Follow-up Templates (Copy & Paste)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">1) Customer follow-up</h3>
+    <p>“Hi [Name], great meeting you at [Event]. You mentioned [problem]. Here’s a quick idea: [1–2 lines]. If you want, I can share a short plan on a 10-minute call this week.”</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">2) Partnership follow-up</h3>
+    <p>“Hi [Name], enjoyed our chat at [Event]. I think there’s a partnership opportunity: you do [X], we do [Y]. If you’re open, let’s explore a small pilot.”</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Make It Easy for People to Remember You</h2>
+    <p>When someone asks “send your details”, don’t send a long voice note. Send a link people can share:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Create a public profile on 9jaDirectory: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business (free)</a>.</li>
+      <li>If your business is already listed, search for it and use the “Claim this Business” button to manage it.</li>
+      <li>Update your WhatsApp Business catalog and add a clear service description.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Before the Event: Quick Preparation</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Set a goal:</strong> 5 quality conversations beats 50 shallow handshakes.</li>
+      <li><strong>Prepare your intro:</strong> one sentence + one proof point (result, client type, metric).</li>
+      <li><strong>Prepare your “one-link” profile:</strong> a page you can share instantly (website or directory profile).</li>
+      <li><strong>Know your ask:</strong> partnership? customers? mentorship? hiring? investors? Decide before you arrive.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conversation Starters That Work in Lagos</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>“What are you building right now?”</li>
+      <li>“Who is your ideal customer?”</li>
+      <li>“What is the biggest bottleneck for growth this quarter?”</li>
+      <li>“What kind of partnerships are you open to?”</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Investor Conversations (Be Ready, Don’t Beg)</h2>
+    <p>If you want to meet investors, your job is not to pitch instantly. Your job is to qualify interest and book a follow-up. Have these ready:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>What you sell + your traction (revenue, users, pilots, partnerships).</li>
+      <li>Your business model in one sentence (how money comes in).</li>
+      <li>Clear use of funds (what exactly you will do with the money).</li>
+      <li>A short deck or 1-page summary you can send after the event.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Follow-up Sequence (Day 1–7)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li><strong>Day 1:</strong> send a message referencing what you discussed + one useful link/resource.</li>
+      <li><strong>Day 3:</strong> propose a short call with 2 time options.</li>
+      <li><strong>Day 7:</strong> send a reminder and an update (new result, new offer, new insight).</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How many events should I attend monthly?</h3>
+    <p>Start with 2–4 events/month and focus on consistent follow-up. Your network grows from follow-up, not attendance.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What should I bring?</h3>
+    <p>A strong intro, a link to your profile/website, and a simple way to save contacts (WhatsApp + LinkedIn). Fancy business cards are optional.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Relationship Management (Where Deals Are Won)</h2>
+    <p>Networking is not a one-day activity. Treat it like a pipeline:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Save notes:</strong> add one note per contact (what they do, what they need, next step).</li>
+      <li><strong>Follow up monthly:</strong> share one useful idea, intro, or opportunity.</li>
+      <li><strong>Be visible:</strong> post small updates (wins, lessons, offers) so people remember you.</li>
+    </ul>
+    <p>Most opportunities come from people who remember you when a problem appears.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I approach someone without being awkward?</h3>
+    <p>Start with context: ask what they do, what they are working on, or what brought them to the event. Keep it short, listen more than you talk, and end with a clear next step (swap contacts or book a quick call).</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I pitch immediately?</h3>
+    <p>Not usually. First qualify interest: do they have the problem you solve and the budget to pay? If yes, book a follow-up and send your one-page summary after the event.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What is the best follow-up if they don’t reply?</h3>
+    <p>Send value, not pressure: a useful resource, a quick idea, or an introduction. Then ask one clear question and offer two time options for a short call.</p>
+
+    <p><strong>Event selection tip:</strong> pick events where your ideal customers and partners actually attend. If you sell B2B services, prioritize business breakfasts and industry associations. If you’re in tech, prioritize founder meetups and demo days.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Related Categories to Explore</h2>
+    <p>If you’re looking for agencies, consultants, or service providers, browse <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Follow-Up Message Template (Copy/Paste)</h2>
+    <p>Keep your follow-up short and specific:</p>
+    <p><em>"Hi [Name], great meeting you at [Event]. You mentioned [goal/problem]. Here are 2 quick ideas: [idea 1], [idea 2]. Want to jump on a 10-minute call this week? Tue or Thu?"</em></p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Networking is a skill. Show up consistently, track contacts, and follow up with value. That is how casual chats turn into partnerships and paying clients.</p>
   `,
     image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 15, 2025",
     author: "9jaDirectory Events",
     category: "Lifestyle",
-    readTime: "4 min read",
+    readTime: "9 min read",
+    keywords: [
+      "networking events Lagos",
+      "business networking Lagos",
+      "startup events Lagos",
+      "meet investors Lagos",
+      "pitch events Lagos",
+      "how to network in Lagos",
+      "business partners Lagos",
+      "Lagos entrepreneurs",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3744,56 +4753,141 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "scuml-registration-guide-dnfi-nigeria",
     title: "SCUML Registration Guide for DNFI Businesses (2025 Update)",
-    excerpt: "If you run a car dealership, real estate firm, or jewelry store, you need a SCUML certificate. Here is how to get it from the EFCC without stress.",
+    excerpt: "If you run a DNFI (real estate, car sales, jewelry, hotels, NGOs), you may need SCUML. Here’s the 2025 step-by-step process, requirements, and common mistakes.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
-    <p>Have you tried to open a corporate bank account and the bank asked for your "SCUML"?</p>
-    <p><strong>SCUML (Special Control Unit Against Money Laundering)</strong> is a certificate issued by the EFCC to monitor businesses that deal in large cash transactions. These are called <strong>DNFIs (Designated Non-Financial Institutions)</strong>.</p>
-    <p>In 2025, enforcement is stricter. Without SCUML, your business account will be frozen.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Who Needs SCUML?</h2>
-    <p>You need it if you are in:</p>
+    <p>Many Nigerian business owners only hear about SCUML when the bank asks for it during corporate account opening. If you operate in certain high-cash sectors, SCUML registration helps your business comply with anti–money laundering regulations.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>What SCUML means:</strong> SCUML (Special Control Unit Against Money Laundering) is a compliance unit under the EFCC that regulates certain businesses called <strong>DNFIs</strong> (Designated Non-Financial Institutions).</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Who Needs SCUML? (DNFI Categories)</h2>
+    <p>You may need SCUML if your business frequently handles large cash transactions or falls into DNFI categories such as:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Real Estate (Agents & Developers).</li>
-      <li>Car Dealerships.</li>
-      <li>Jewelry & Precious Stones.</li>
-      <li>Hotels & Casinos.</li>
-      <li>Law Firms & Accounting Firms.</li>
-      <li>NGOs & Churches.</li>
+      <li><strong>Real estate:</strong> agents, developers, property managers (<a href="/categories/real-estate" class="text-green-600 hover:underline">Real Estate</a>).</li>
+      <li><strong>Car dealers:</strong> sales and imports.</li>
+      <li><strong>Jewelry & precious stones:</strong> retail and wholesale.</li>
+      <li><strong>Hotels & hospitality:</strong> especially high-cash operations (<a href="/categories/hotels" class="text-green-600 hover:underline">Hotels & Lodging</a>).</li>
+      <li><strong>Law firms & accounting firms:</strong> specific cases where required.</li>
+      <li><strong>NGOs and religious organizations:</strong> depending on structure and banking requirements.</li>
     </ul>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Requirements for Registration</h2>
-    <p>Registration is <strong>FREE</strong> and online.</p>
+    <p>If you’re unsure, ask your bank which documents they require for your sector and account type.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Why Banks Request SCUML</h2>
+    <p>Banks are required to perform compliance checks. If your business fits a DNFI profile, the bank may ask for SCUML before fully activating your corporate account or certain services.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>CAC Certificate & Forms (BN01 or CAC 1.1).</li>
-      <li>Tax Identification Number (TIN).</li>
-      <li>BVN of Directors.</li>
-      <li>Valid ID (NIN, Passport, Voters Card).</li>
-      <li>Professional Certificate (for Lawyers / Accountants).</li>
+      <li>It reduces compliance risk for the bank.</li>
+      <li>It helps validate your business type and directors.</li>
+      <li>It can prevent account restrictions when regulators conduct audits.</li>
     </ul>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step Process</h2>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Before You Apply (Prep Checklist)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>CAC registration:</strong> your business must be registered. If you haven’t registered, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
+      <li><strong>Business details:</strong> registered address, directors, and ownership information should be consistent everywhere.</li>
+      <li><strong>TIN:</strong> many banks request your Tax Identification Number.</li>
+      <li><strong>Clear scans:</strong> most delays happen because documents are blurry or incomplete.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">SCUML Registration Requirements (Common Documents)</h2>
+    <p>Registration is commonly advertised as free and handled online, but requirements can vary by business type. Prepare:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>CAC documents:</strong> certificate and relevant forms (BN / CAC 1.1 / status report).</li>
+      <li><strong>Valid ID:</strong> NIN slip, passport, driver’s license, or voter’s card (as accepted).</li>
+      <li><strong>BVN:</strong> BVN of directors/owners.</li>
+      <li><strong>TIN:</strong> if available.</li>
+      <li><strong>Address proof:</strong> may be requested (utility bill) depending on workflow.</li>
+      <li><strong>Professional certificates:</strong> for regulated professions where applicable.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: How to Register on SCUML (2025)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li>Go to the <a href="https://scuml.org" target="_blank" class="text-green-600 hover:underline">SCUML Website</a>.</li>
-      <li>Fill the online form. Upload your documents (PDF format, clear scans).</li>
-      <li>Submit.</li>
-      <li>Wait for approval (usually 2-4 weeks).</li>
-      <li>Once approved, you will be invited to pick up your certificate at the nearest EFCC office.</li>
+      <li>Visit the official portal: <a href="https://scuml.org" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">scuml.org</a>.</li>
+      <li>Select the appropriate DNFI category (choose carefully—wrong category causes delays).</li>
+      <li>Fill your business information exactly as it appears on CAC documents.</li>
+      <li>Upload clear scans in the required format (PDF/JPG). Use good lighting and avoid cropped pages.</li>
+      <li>Submit the application and keep a copy of your reference number.</li>
+      <li>Monitor for updates and respond quickly if additional documentation is requested.</li>
+      <li>When approved, follow instructions for certificate collection or download (depending on the current process).</li>
     </ol>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Common Rejection Reasons</h2>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Timeline (What to Expect)</h2>
+    <p>Timelines vary. Many businesses receive feedback within a few weeks, but delays can happen if documentation is incomplete or your category requires more checks.</p>
+    <p><strong>Pro tip:</strong> while waiting, ensure your CAC details, bank records, and any public listings are consistent (same name, phone, and address).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes That Cause Delays</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Blurry Documents:</strong> Ensure your scans are readable.</li>
-      <li><strong>Wrong Category:</strong> Don't register as a "Consultant" if you are a "Real Estate Agent".</li>
-      <li><strong>Name Mismatch:</strong> Ensure the name on your ID matches the CAC documents.</li>
+      <li><strong>Blurry documents:</strong> unreadable scans get rejected.</li>
+      <li><strong>Name mismatch:</strong> directors’ names must match CAC + IDs.</li>
+      <li><strong>Wrong category:</strong> choosing “consultant” when you’re clearly “real estate” or “car dealer”.</li>
+      <li><strong>Incomplete forms:</strong> missing address, phone, or ownership information.</li>
     </ul>
-    <p>Need legal help? Find lawyers in our <a href="/categories/legal" class="text-green-600 hover:underline">Legal Directory</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Is SCUML required for every business?</h3>
+    <p>No. It’s typically required for DNFI categories and specific high-cash sectors. Your bank often guides you based on your business type.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Can I apply without CAC registration?</h3>
+    <p>Usually no. Most workflows require valid CAC documents for verification.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Timeline & What Happens After Approval</h2>
+    <p>Processing times vary. Once approved, keep your certificate and registration details safe because banks and compliance teams may request them during audits or account reviews.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Keep a digital copy and a printed copy of your SCUML certificate.</li>
+      <li>Ensure your business details (address, directors) remain consistent across bank records.</li>
+      <li>Build a simple compliance habit: keep transaction records and invoices for large payments.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Is SCUML registration free?</h3>
+    <p>It is commonly presented as free on official channels, but processes and requirements can change. Always verify from the official portal and avoid paying random “agents” who promise shortcuts.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do all businesses need SCUML?</h3>
+    <p>No. SCUML typically applies to DNFIs and certain high-cash sectors. If your bank requests it, confirm the exact DNFI category and apply early.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (That Cause Delays)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Choosing the wrong DNFI category</li>
+      <li>Uploading blurry or incomplete documents</li>
+      <li>Business details not matching CAC records (name, address, directors)</li>
+      <li>Waiting until the bank blocks your account before applying</li>
+    </ul>
+    <p>Apply early and keep records. Compliance is easier when you are prepared, not pressured.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Practical Tip</h2>
+    <p>Keep your compliance simple: invoices for large transactions, proof of payments, and consistent records. This helps when banks or regulators request clarification and reduces future account restrictions.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>SCUML is mainly about compliance and avoiding banking roadblocks. If you operate in a DNFI category, it’s worth doing early—before you need it urgently.</p>
+    <p>Need professional help? Find providers in <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>. To build trust online, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a> (and claim your listing if it already exists).</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist (When Your Bank Requests SCUML)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Confirm your DNFI category and gather CAC docs that match your bank records.</li>
+      <li>Apply via official channels and keep screenshots/receipts of submissions.</li>
+      <li>Save your certificate (PDF + print) and share it with your bank compliance team.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Does SCUML expire?</h3>
+    <p>Requirements can change, but most businesses treat SCUML as an ongoing compliance item. Keep details consistent if you change address, directors, or business activities.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What if my application is delayed?</h3>
+    <p>Recheck document clarity and consistency with CAC records. If your bank needs it urgently, ask what alternative evidence they accept while the process is pending.</p>
   `,
     image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 14, 2025",
     author: "9jaDirectory Legal Team",
     category: "Legal",
-    readTime: "5 min read",
+    readTime: "11 min read",
+    keywords: [
+      "SCUML registration Nigeria",
+      "SCUML certificate EFCC",
+      "DNFI SCUML Nigeria",
+      "SCUML requirements Nigeria",
+      "how to get SCUML certificate",
+      "real estate SCUML Nigeria",
+      "car dealer SCUML Nigeria",
+      "corporate bank account SCUML",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3813,47 +4907,147 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cac-business-registration-nigeria-guide-2025",
     title: "How to Register a Company in Nigeria (CAC Step-by-Step 2025)",
-    excerpt: "Register your business name or Limited Liability Company (LLC) online with the CAC. A complete guide to the CRP portal, fees, and requirements.",
+    excerpt: "Step-by-step CAC registration in Nigeria (2025): business name vs LTD, required documents, CRP portal workflow, fees, timelines, and common mistakes.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
-    <p>Operating an unregistered business in Nigeria is risky. You can't open a corporate bank account, you can't apply for loans, and you lose trust with customers. In 2025, the Corporate Affairs Commission (CAC) has made the process 100% online.</p>
-    <p>Here is how to register your business from your bedroom.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Name Reservation</h2>
-    <p>Before you register, you must check if your name is available.</p>
+    <p>Registering your business with the Corporate Affairs Commission (CAC) is one of the fastest ways to increase trust, open a corporate bank account, accept payments more easily, and qualify for grants or loans. The CAC process is now largely online through its portals.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Which should you register?</strong> If you’re starting small, a <strong>Business Name (BN)</strong> may be enough. If you want investors, bigger contracts, or strong liability protection, consider a <strong>Limited Liability Company (LTD)</strong>.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 0: Choose Your Business Structure</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Portal:</strong> Visit <a href="https://pre.cac.gov.ng" target="_blank" class="text-green-600 hover:underline">pre.cac.gov.ng</a>.</li>
-      <li><strong>Cost:</strong> ₦1,000 (Note: Fees may vary).</li>
-      <li><strong>Timeline:</strong> Instant or up to 24 hours.</li>
+      <li><strong>Business Name (BN):</strong> simpler setup for sole proprietors and small businesses.</li>
+      <li><strong>Limited Liability Company (LTD):</strong> better for scale, contracts, and partnerships; liability is limited to the company.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Choose Your Structure</h2>
+    <p>If you’re unsure, a quick chat with a professional can help—see <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Create Your CAC Account</h2>
+    <p>Start from the official CAC portals. Create an account with a working email and phone number, because verification and updates often come through those channels.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Business Name (BN):</strong> For sole proprietors. Cheaper (~₦20,000). Liability is on you.</li>
-      <li><strong>Limited Liability Company (LTD):</strong> For scalable businesses. Cost starts at ~₦10,000 for 1 Million share capital + Stamp Duty. Liability is limited to the company.</li>
+      <li><strong>Name reservation portal:</strong> <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a></li>
+      <li><strong>Keep records:</strong> save your login details and reference numbers.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Registration Requirements</h2>
-    <p>You no longer need a lawyer for basic registration. You need:</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Name Reservation (Availability Check)</h2>
+    <p>Your name can be approved quickly or rejected if it’s too similar to an existing business. Tips that reduce rejection:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>NIN:</strong> National Identity Number is mandatory for all directors.</li>
-      <li><strong>Passport Photo:</strong> Digital copy.</li>
-      <li><strong>Signature:</strong> Scanned signature on white paper.</li>
-      <li><strong>Address:</strong> A valid Nigerian address.</li>
+      <li>Prepare 2–3 alternatives (e.g., “Bright Homes Services”, “Bright Homes Ventures”, “Bright Homes Nigeria”).</li>
+      <li>Avoid restricted words unless you have approvals (e.g., “Bank”, “Federal”, “Government”).</li>
+      <li>Be specific and unique; generic names are more likely to clash.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: Download Certificate</h2>
-    <p>Once approved (usually 3-7 days), you will download your:</p>
+    <p><strong>Cost/timeline:</strong> fees and timelines can change—confirm inside the CAC portal before payment.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Prepare Your Documents (Before You Start the Form)</h2>
+    <p>Most delays happen because applicants start the process without documents ready. Prepare:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Certificate of Incorporation.</li>
-      <li>Status Report (Replacing CAC 2 & 7).</li>
-      <li>Memorandum & Articles of Association (for LTDs).</li>
+      <li><strong>NIN:</strong> typically required for proprietors/directors.</li>
+      <li><strong>Passport photo:</strong> clear digital copy.</li>
+      <li><strong>Signature:</strong> scanned signature on white background.</li>
+      <li><strong>Registered address:</strong> a valid Nigerian address.</li>
+      <li><strong>Business nature/object:</strong> what the company does (keep it aligned with your reality).</li>
     </ul>
-    <p>Need a professional to handle it? Find accredited agents in our <a href="/categories/legal" class="text-green-600 hover:underline">Legal Directory</a>.</p>
-    <p>For a more comprehensive look at post-incorporation steps like getting your TIN and SCUML, read our <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">Ultimate Guide to Business Registration</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: Complete Registration (BN or LTD)</h2>
+    <p>After name reservation is approved, proceed to complete the registration on the CAC workflow:</p>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Enter business details exactly as approved.</li>
+      <li>Add proprietor/directors and ownership details.</li>
+      <li>Select business activities and fill required fields.</li>
+      <li>Upload required documents (passport, signatures, IDs if requested).</li>
+      <li>Pay CAC and related fees as prompted in the portal.</li>
+      <li>Submit and track your application status.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Download Your Certificate & Status Report</h2>
+    <p>When approved, you can download your CAC documents. Keep both digital and printed copies for banks and partners.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Certificate</li>
+      <li>Status report (often replaces older CAC forms in many workflows)</li>
+      <li>Memorandum & Articles (for LTDs)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">After CAC: Next Steps Most Businesses Need</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Business bank account</strong> (banks may request SCUML depending on sector): <a href="/blog/scuml-registration-guide-dnfi-nigeria" class="text-green-600 hover:underline">SCUML guide</a>.</li>
+      <li><strong>NAFDAC</strong> if you make regulated products (food/cosmetics): <a href="/blog/nafdac-registration-requirements-nigeria-2025" class="text-green-600 hover:underline">NAFDAC registration guide</a>.</li>
+      <li><strong>Online visibility:</strong> create a profile customers can verify: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common CAC Registration Mistakes</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Inconsistent names across CAC forms and IDs.</li>
+      <li>Low-quality scans (cropped, blurry, or unreadable).</li>
+      <li>Choosing the wrong structure for your goals.</li>
+      <li>Using generic business objects that don’t match your actual operations.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need a lawyer to register?</h3>
+    <p>Many basic registrations can be completed without a lawyer, but professional help can save time if your structure is complex or you face repeated rejections.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How long does CAC registration take?</h3>
+    <p>Timelines vary based on name approval, documentation, and portal workflow. Plan for days to a few weeks, and avoid last-minute deadlines.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Costs & Timeline (What to Expect)</h2>
+    <p>Fees and timelines can change depending on CAC updates and your business type. As a general rule, Business Name registration is cheaper and faster than LTD. The biggest time-waster is usually name rejection or inconsistent documentation. Prepare 2–3 name options and keep your details consistent across all forms.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Reasons Applications Get Rejected</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Name too similar to an existing business</li>
+      <li>Incorrect or inconsistent addresses and personal details</li>
+      <li>Blurry uploads or incomplete documents</li>
+      <li>Using restricted words without approvals</li>
+    </ul>
+    <p>Fixing these early saves you days (sometimes weeks) of back-and-forth.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">After CAC: Quick Checklist</h2>
+    <p>Registration is step one. To unlock growth, do these next:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Open a business bank account and separate personal vs business money.</li>
+      <li>Set up invoices/receipts and basic bookkeeping (even a spreadsheet).</li>
+      <li>Register for TIN and keep tax records if applicable.</li>
+      <li>Build visibility: Google Business Profile + a directory profile you can share.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need a physical office address?</h3>
+    <p>You need an address for registration. Many small businesses start with a home address and later update it when they move into an office or shop. Use a real address you can access.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I register as Business Name or LTD?</h3>
+    <p>Business Name is simpler and cheaper for small operations. LTD is better for bigger contracts, partnerships, investors, and stronger liability protection. Choose based on your growth plan.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>CAC registration is a foundational step for growth. Once registered, build credibility online and make it easy for customers to find you.</p>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> and start collecting leads. If you find your business already listed, you can claim it from the listing page.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Name Reservation Tips</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Prepare 2–3 alternative names in case your first choice is unavailable.</li>
+      <li>Avoid restricted words unless you already have approvals ready.</li>
+      <li>Use a name that matches what customers already call you (brand consistency).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Can I update details after registration?</h3>
+    <p>Yes, but changes (address, directors, share structure) can require additional filings and time. Get details right upfront to avoid extra cost.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Compliance Tip</h2>
+    <p>Keep your company active: file annual returns when due and keep your business address updated. Simple compliance protects you when you apply for loans, contracts, or partnerships.</p>
   `,
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 13, 2025",
     author: "9jaDirectory Legal Team",
     category: "Legal",
-    readTime: "8 min read",
+    readTime: "14 min read",
+    keywords: [
+      "CAC registration Nigeria",
+      "how to register a company in Nigeria",
+      "CAC business name registration",
+      "CAC LTD registration Nigeria",
+      "pre.cac.gov.ng guide",
+      "CRP CAC portal Nigeria",
+      "business registration Nigeria 2025",
+      "company incorporation Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3873,46 +5067,158 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-payment-gateways-nigeria-2025",
     title: "Best Payment Gateways for Nigerian Businesses: Paystack vs Flutterwave (2025)",
-    excerpt: "Collecting payments online? We compare fees, settlement times, and features of Paystack, Flutterwave, and Monnify to help you choose.",
+    excerpt: "A 2025 comparison of Paystack, Flutterwave, and Monnify: fees, settlement, features, and which payment gateway fits your Nigerian business.",
     content: `
     <p><strong>By 9jaDirectory Fintech Team</strong> | <em>Updated: November 2025</em></p>
-    <p>Cash is no longer king. To scale your business in 2025, you need to accept card payments, transfers, and USSD automatically. But which gateway is best?</p>
-    <p>We compared the giants: <strong>Paystack</strong>, <strong>Flutterwave</strong>, and the challenger <strong>Monnify</strong>.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">1. Paystack</h2>
-    <p>The user favorite. Owned by Stripe.</p>
+
+    <p>In 2025, online payment is not optional. Customers want to pay with cards, bank transfers, USSD, and sometimes international cards—without stress. Your payment gateway affects your <strong>conversion rate</strong>, your <strong>cashflow</strong>, and your ability to scale.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Important:</strong> fees and terms can change. Use this guide to choose a gateway, then confirm current pricing and settlement timelines on the provider’s official dashboard.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What to Compare Before You Choose</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Local Fee:</strong> 1.5% + ₦100 (Capped at ₦2,000). ₦100 waived for transactions under ₦2,500.</li>
-      <li><strong>International Fee:</strong> 3.9% + ₦100.</li>
-      <li><strong>Settlement:</strong> Next Day (T+1).</li>
-      <li><strong>Best For:</strong> E-commerce stores, reliability.</li>
+      <li><strong>Payment methods:</strong> cards, bank transfer, USSD, Apple Pay/Google Pay (where available).</li>
+      <li><strong>Settlement speed:</strong> same day vs next day vs delayed (cashflow matters).</li>
+      <li><strong>Success rate:</strong> failed payments = lost sales.</li>
+      <li><strong>Chargebacks & disputes:</strong> how disputes are handled and the documentation needed.</li>
+      <li><strong>International payments:</strong> if you sell to Nigerians abroad or global customers.</li>
+      <li><strong>Developer experience:</strong> APIs, plugins, and webhooks—especially if you run an e-commerce store.</li>
+      <li><strong>Extra tools:</strong> invoices, payment links, subscriptions, split payments, POS integration.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">2. Flutterwave</h2>
-    <p>The African giant with global reach.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Paystack (Best for simplicity + reliability)</h2>
+    <p>Paystack is popular with startups and SMEs because it’s simple to set up, has strong documentation, and works well for most Nigerian use cases.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Local Fee:</strong> ~2% (Check dashboard for latest rates).</li>
-      <li><strong>International Fee:</strong> ~4.8%.</li>
-      <li><strong>Settlement:</strong> Next Day.</li>
-      <li><strong>Best For:</strong> Businesses selling to other African countries (Kenya, Ghana, SA).</li>
+      <li><strong>Best for:</strong> e-commerce, digital products, service businesses.</li>
+      <li><strong>Strengths:</strong> solid developer tools, payment links, good reporting.</li>
+      <li><strong>Watch-outs:</strong> percentage fees can be expensive for high-value transactions.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">3. Monnify</h2>
-    <p>The king of bank transfers.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Flutterwave (Best for cross-border payments)</h2>
+    <p>Flutterwave is built for businesses that want to sell across Africa and beyond. If you expect customers from multiple countries, it’s worth considering.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Fee:</strong> Flat fees for transfers (e.g., ₦100) or low percentage.</li>
-      <li><strong>Best For:</strong> B2B businesses, schools, and high-value transactions where 1.5% is too much.</li>
+      <li><strong>Best for:</strong> cross-border commerce, multi-currency payments.</li>
+      <li><strong>Strengths:</strong> broader regional coverage, multiple payment options.</li>
+      <li><strong>Watch-outs:</strong> always confirm fees per country and payment method.</li>
     </ul>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Verdict</h2>
-    <p><strong>Choose Paystack</strong> for simple, reliable card payments.</p>
-    <p><strong>Choose Flutterwave</strong> if you have customers across Africa.</p>
-    <p><strong>Choose Monnify</strong> if your customers prefer bank transfers.</p>
-    <p>Need a developer to integrate these? Check our <a href="/categories/technology" class="text-green-600 hover:underline">Tech Directory</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Monnify (Best for bank transfers + high-value payments)</h2>
+    <p>Monnify is known for bank transfer flows, virtual accounts, and B2B-friendly payments. Many Nigerian customers prefer transfers over cards.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Best for:</strong> schools, B2B services, high-ticket transactions.</li>
+      <li><strong>Strengths:</strong> strong transfer experience, virtual account options.</li>
+      <li><strong>Watch-outs:</strong> confirm which payment methods are strongest for your audience.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Which One Should You Use? (Fast Decision Guide)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>You sell locally (Nigeria) and want ease:</strong> start with Paystack.</li>
+      <li><strong>You sell across Africa / multiple currencies:</strong> consider Flutterwave.</li>
+      <li><strong>Your customers prefer transfers or you do high-value payments:</strong> consider Monnify.</li>
+      <li><strong>You want maximum redundancy:</strong> integrate two gateways and failover when one is down.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Set Up (Quick Checklist)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Create a business account and complete KYC (CAC docs may be required depending on volume).</li>
+      <li>Set settlement account details.</li>
+      <li>Choose your payment method: checkout page, payment links, invoices, or API integration.</li>
+      <li>Test with small amounts before launching ads.</li>
+      <li>Set up alerts for failed payments and chargebacks.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conversion Tip: Trust + Speed</h2>
+    <p>Payment is a trust moment. To increase successful payments:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Show your business phone number and WhatsApp for support.</li>
+      <li>Use a clean checkout page and confirm delivery policy.</li>
+      <li>Create a profile people can verify and share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Fees (Example Calculations)</h2>
+    <p>Gateway fees vary by payment method and can change. Still, it helps to estimate impact on margins. For example, if your fee averages around 1.5%:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>On a &#8358;10,000 sale, fees may be ~&#8358;150 (plus any additional charges based on the gateway).</li>
+      <li>On a &#8358;100,000 sale, fees may be ~&#8358;1,500.</li>
+    </ul>
+    <p>This is why high-ticket businesses often prioritize bank transfers and strong fraud controls.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Settlement & Cashflow</h2>
+    <p>Settlement speed matters because you still have to deliver, restock, and pay staff. Before choosing a gateway, confirm:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Typical settlement timeline (same-day vs next-day vs delays)</li>
+      <li>Whether weekends/holidays affect payout</li>
+      <li>How disputes and chargebacks affect your balance</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Chargebacks & Disputes (Reduce Risk)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Keep proof: invoices, delivery confirmation, and customer communication.</li>
+      <li>Use clear policies: delivery timeline, returns, and refunds.</li>
+      <li>For digital products, keep access logs and confirmation emails.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Redundancy (Never Depend on One Provider)</h2>
+    <p>Network downtime happens. Many serious businesses keep two options: a primary gateway and a backup (bank transfer or second gateway) so sales don’t stop.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I integrate more than one payment gateway?</h3>
+    <p>If payments are mission-critical, yes. Redundancy protects revenue when one provider has downtime or settlement issues.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC registration to use a gateway?</h3>
+    <p>Many providers require business details and may request CAC documents depending on volume and risk profile. If you plan to scale, register early.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">International Payments (If You Sell Globally)</h2>
+    <p>If you sell to Nigerians abroad or international customers, confirm which payment methods work best (international cards, multi-currency, payout options) and test end-to-end before running ads.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Setup Checklist</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Complete KYC correctly (avoid settlement holds).</li>
+      <li>Test payments on mobile and desktop.</li>
+      <li>Set up webhook/notifications for successful payments.</li>
+      <li>Write clear refund and delivery policy on your checkout page.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Decision Summary</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Fast setup + simplicity:</strong> start with Paystack.</li>
+      <li><strong>Cross-border and multi-currency:</strong> consider Flutterwave.</li>
+      <li><strong>Transfer-heavy/high-ticket:</strong> consider Monnify and virtual accounts.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Reconciliation (Don’t Lose Money)</h2>
+    <p>Reconcile payments weekly: match gateway transactions to orders, track failed payments, and follow up on chargebacks. This prevents “missing money” issues and helps you measure real conversion rates.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Support (Don’t Ignore This)</h2>
+    <p>If a gateway fails during sales peak, you need fast support. Before scaling ads, test support responsiveness and keep a backup payment option for emergencies.</p>
+
+    <p>Need a developer or fintech consultant? Explore <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> and <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How long do settlements take?</h3>
+    <p>It depends on the provider and your risk profile. Test with small transactions and confirm your settlement schedule before running big campaigns.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What about chargebacks and disputes?</h3>
+    <p>Have clear refund and delivery policies, keep proof of delivery, and respond fast. Dispute handling is easier when you document every order.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Choose one gateway that matches your business model, then optimize checkout and reconciliation. Reliable payments improve trust and conversion more than fancy features.</p>
   `,
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 12, 2025",
     author: "9jaDirectory Fintech Team",
     category: "Technology",
-    readTime: "6 min read",
+    readTime: "11 min read",
+    keywords: [
+      "best payment gateway in Nigeria",
+      "Paystack vs Flutterwave",
+      "Monnify Nigeria",
+      "collect payments online Nigeria",
+      "payment links Nigeria",
+      "card payments Nigeria",
+      "bank transfer payments Nigeria",
+      "ecommerce payments Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3932,33 +5238,178 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "social-media-marketing-nigeria-guide-2025",
     title: "Ultimate Guide to Social Media Marketing for Nigerian SMEs (2025)",
-    excerpt: "Stop wasting money on ads. Learn the 2025 trends: TikTok dominance, Micro-influencers, and how to create content that converts.",
+    excerpt: "A complete 2025 social media marketing playbook for Nigerian SMEs: content strategy, ads, WhatsApp funnels, and how to turn followers into customers.",
     content: `
     <p><strong>By 9jaDirectory Marketing</strong> | <em>Updated: November 2025</em></p>
-    <p>In 2025, posting "Good morning fam" is not marketing. The algorithm has changed. Organic reach is dead on Facebook, but alive on TikTok and LinkedIn.</p>
-    <p>Here is what works for Nigerian businesses right now.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Trend 1: Video is Mandatory</h2>
-    <p>If you are not making Reels or TikToks, you are invisible. Show behind-the-scenes, packing orders, or customer reviews.</p>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Trend 2: Micro-Influencers</h2>
-    <p>Don't pay millions to celebrities. Pay ₦50k to 10 micro-influencers (5k-20k followers) in your niche. Their engagement is higher.</p>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Trend 3: Social Commerce</h2>
-    <p>People want to buy <em>on</em> the app. Set up your Instagram Shop. Use WhatsApp Catalogs. Don't make them click a link to a slow website unless necessary.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Platform Breakdown</h2>
+
+    <p>In 2025, social media is a full customer acquisition system—not “posting vibes”. The brands winning in Nigeria do three things well:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Instagram:</strong> For fashion, food, and lifestyle. Visuals must be high quality.</li>
-      <li><strong>TikTok:</strong> For viral reach. Low production quality is fine; entertainment is key.</li>
-      <li><strong>LinkedIn:</strong> For B2B services. Professional tone.</li>
-      <li><strong>Twitter (X):</strong> For customer service and banter.</li>
+      <li><strong>They have an offer</strong> that solves a clear problem.</li>
+      <li><strong>They create consistent content</strong> that builds trust.</li>
+      <li><strong>They move people to action</strong> (WhatsApp, calls, checkout, bookings).</li>
     </ul>
-    <p>Need a social media manager? Find one in our <a href="/categories/marketing" class="text-green-600 hover:underline">Marketing Directory</a>.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Quick win:</strong> turn your social profile into a “mini-landing page”: clear bio, price range or starting price, location (e.g., Lagos), WhatsApp button, and a link to your business profile.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Pick Your Goal (Don’t Post Randomly)</h2>
+    <p>Choose one primary goal for 30 days:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Sales:</strong> “20 paid orders per month”</li>
+      <li><strong>Leads:</strong> “50 WhatsApp inquiries per month”</li>
+      <li><strong>Bookings:</strong> “30 appointments per month”</li>
+    </ul>
+    <p>Your content, ads, and platform choice should match the goal.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Build a Content System (Pillars)</h2>
+    <p>Use 4–5 content pillars so you never run out of ideas:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Proof:</strong> reviews, before/after, results, testimonials.</li>
+      <li><strong>Process:</strong> behind-the-scenes, how it’s made, packing orders.</li>
+      <li><strong>Education:</strong> tips, mistakes to avoid, mini-guides.</li>
+      <li><strong>Offers:</strong> promos, bundles, limited slots.</li>
+      <li><strong>Personality:</strong> founder story, values, community.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Platform Playbook (Nigeria)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Instagram:</strong> strong for beauty, lifestyle, retail. Focus on Reels + Stories + WhatsApp clicks.</li>
+      <li><strong>TikTok:</strong> best for reach. Low production is okay—clarity and hooks matter.</li>
+      <li><strong>Facebook:</strong> community groups and Marketplace still work for local sales.</li>
+      <li><strong>WhatsApp:</strong> the real “checkout page” in Nigeria—use Business catalog, labels, and broadcast lists.</li>
+      <li><strong>LinkedIn:</strong> B2B services, consulting, corporate clients.</li>
+      <li><strong>X (Twitter):</strong> customer service, community, and thought leadership.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: The WhatsApp Funnel (Simple + Effective)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Content → “DM/WhatsApp for price”</li>
+      <li>WhatsApp auto-reply → ask 3 questions (budget, location, timeline)</li>
+      <li>Send 2–3 options + proof + delivery/payment policy</li>
+      <li>Close → payment → delivery → review request</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Ads That Don’t Waste Money</h2>
+    <p>Most ad failures come from bad offers and weak creatives. Start small:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Budget:</strong> ₦3,000–₦10,000/day to test.</li>
+      <li><strong>Creative:</strong> 15–30s video showing the product/service + result.</li>
+      <li><strong>Objective:</strong> messages (WhatsApp) or leads—avoid “boost post” for serious campaigns.</li>
+      <li><strong>Retargeting:</strong> show proof + offer to people who engaged in the last 30 days.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 6: Local SEO + Directories (Underrated Growth Hack)</h2>
+    <p>Social posts disappear fast, but search traffic can last for months. Combine both:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Create a shareable profile page: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a>.</li>
+      <li>Use consistent business name, phone, and address across platforms (NAP consistency).</li>
+      <li>Ask customers for reviews and respond professionally.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">7-Day Content Plan (Copy This)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Day 1:</strong> founder story + what you do</li>
+      <li><strong>Day 2:</strong> behind-the-scenes</li>
+      <li><strong>Day 3:</strong> customer review</li>
+      <li><strong>Day 4:</strong> 3 common mistakes in your niche</li>
+      <li><strong>Day 5:</strong> offer/bundle</li>
+      <li><strong>Day 6:</strong> FAQ video (“how long delivery takes”, “pricing”)</li>
+      <li><strong>Day 7:</strong> results / before-after / recap</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Inconsistent posting (the algorithm rewards consistency).</li>
+      <li>No clear offer or price range (people don’t like guessing).</li>
+      <li>Slow replies (Nigeria moves fast—reply speed closes deals).</li>
+      <li>No proof (testimonials, delivery proof, reviews).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Metrics That Matter (Stop Chasing Vanity)</h2>
+    <p>Followers do not pay your bills. Track the numbers that move revenue:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Inbound leads:</strong> WhatsApp inquiries, calls, bookings, form fills.</li>
+      <li><strong>Conversion rate:</strong> how many leads become paying customers.</li>
+      <li><strong>Cost per lead:</strong> ad spend divided by leads.</li>
+      <li><strong>Repeat customers:</strong> retention is cheaper than always finding new people.</li>
+      <li><strong>Saves and shares:</strong> often more valuable than likes because they signal intent.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Weekly Content Calendar (Simple Template)</h2>
+    <p>If you want consistent sales, you need consistent content. Here is a weekly template many Nigerian SMEs can sustain:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Mon:</strong> proof (testimonials, delivery proof, before/after)</li>
+      <li><strong>Tue:</strong> education (tips, mistakes, mini tutorial)</li>
+      <li><strong>Wed:</strong> behind-the-scenes (process, packaging, team)</li>
+      <li><strong>Thu:</strong> offer/bundle (pricing, promo, limited slots)</li>
+      <li><strong>Fri:</strong> FAQ video (answer common objections)</li>
+      <li><strong>Sat:</strong> community + stories (polls, Q&A, customer shoutouts)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Micro-Influencers (The Nigeria-Friendly Shortcut)</h2>
+    <p>Instead of paying one big influencer, test 3–10 micro-influencers in your city or niche. Look for creators with engaged comments, not just views. Give them a clear offer and a tracking code so you can measure results.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I boost posts or run proper ads?</h3>
+    <p>Boosting can work for awareness, but serious growth usually comes from campaigns optimized for messages/leads or conversions. Start small, test creatives, and track cost per lead.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How many times should I post weekly?</h3>
+    <p>Start with 4–6 quality posts per week plus daily Stories/Status. Consistency matters more than perfection.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What if my page has low followers?</h3>
+    <p>Low followers is not a problem if you have a clear offer and strong proof. Combine content with targeted ads and partnerships to get leads quickly.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">WhatsApp Automation (Nigeria’s Real Funnel)</h2>
+    <p>Most Nigerian customers buy on WhatsApp. Set up:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Quick replies for price, location, delivery, and payment</li>
+      <li>Labels to track leads (new, paid, delivered, repeat)</li>
+      <li>Broadcast list for repeat buyers (restocks, promos)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Hooks That Work (For Reels/TikTok)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>“Stop doing this if you want better results…”</li>
+      <li>“3 mistakes Nigerians make when buying [product]…”</li>
+      <li>“If you’re in [city], this will save you money…”</li>
+      <li>“Before vs after: watch the transformation…”</li>
+    </ul>
+    <p>Strong hooks + proof + clear CTA (WhatsApp/book now) is a simple formula that works across many niches.</p>
+
+    <p>Need help with content or ads? Explore providers in <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick KPI Checklist (Weekly)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Leads/messages received</li>
+      <li>Cost per lead (if you run ads)</li>
+      <li>Reply time and follow-up rate</li>
+      <li>Sales conversion rate (leads to paid customers)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Social media marketing works when you combine proof, consistency, and a clear offer. Start with simple content + WhatsApp conversion, then scale with ads and partnerships.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (Quick)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Posting without a clear offer or CTA.</li>
+      <li>No proof (reviews, screenshots, delivery proof).</li>
+      <li>Slow replies on WhatsApp and no follow-up.</li>
+      <li>Running ads without tracking cost per lead.</li>
+    </ul>
   `,
     image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop",
     date: "Nov 11, 2025",
     author: "9jaDirectory Marketing",
     category: "Marketing",
-    readTime: "7 min read",
+    readTime: "14 min read",
+    keywords: [
+      "social media marketing Nigeria",
+      "social media strategy for SMEs",
+      "TikTok marketing Nigeria",
+      "Instagram marketing Nigeria",
+      "WhatsApp marketing Nigeria",
+      "Facebook ads Nigeria",
+      "how to get customers online Nigeria",
+      "local SEO Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -3978,40 +5429,164 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "business-ideas-students-nigeria-2025",
     title: "Top 10 Business Ideas for Students in Nigeria (Low Capital 2025)",
-    excerpt: "Make money while in school. From POS business to graphic design, here are 10 side hustles you can start with little capital.",
+    excerpt: "10 realistic low-capital business ideas for Nigerian students in 2025—plus how to start, what to charge, and how to find customers without hurting your grades.",
     content: `
     <p><strong>By 9jaDirectory Careers</strong> | <em>Updated: November 2025</em></p>
-    <p>ASUU strikes and rising tuition fees mean every Nigerian student needs a side hustle. But you also need time to study. Here are businesses that are flexible and require low capital.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">1. POS Agent</h2>
-    <p>Every hostel needs cash. Get a POS machine (Opay, Moniepoint) and charge for withdrawals.</p>
+
+    <p>ASUU strikes, rising costs, and limited allowances mean many Nigerian students need a side hustle. The best student business is:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Capital:</strong> ₦30,000 - ₦70,000.</li>
+      <li><strong>Low capital</strong> (start small, reinvest profit)</li>
+      <li><strong>Flexible time</strong> (fits around lectures and exams)</li>
+      <li><strong>Campus demand</strong> (you already have a market around you)</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">2. Graphic Design</h2>
-    <p>Design flyers for campus fellowships and events. Learn Canva or Photoshop.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Student rule:</strong> pick one hustle for 60 days. Don’t jump from POS → crypto → perfumes every week.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">1) POS Agent (Hostel Cash Point)</h2>
+    <p>Every campus needs cash withdrawals and transfers. POS can work if you control fraud risk and cashflow.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Capital:</strong> ₦0 (If you have a laptop/phone).</li>
+      <li><strong>Startup:</strong> ₦30,000–₦100,000 (float + setup depending on provider)</li>
+      <li><strong>How you earn:</strong> charges per withdrawal/transfer</li>
+      <li><strong>Tip:</strong> keep records and set strict rules for credit.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">3. Perfume Oil Sales</h2>
-    <p>Buy in bulk, re-bottle, and sell to classmates. High profit margin.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">2) Graphic Design / Canva Design</h2>
+    <p>Campus events need flyers, logos, and banners. You can start with Canva on your phone and upgrade later.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Capital:</strong> ₦10,000.</li>
+      <li><strong>Startup:</strong> ₦0–₦15,000 (data + Canva Pro optional)</li>
+      <li><strong>Pricing:</strong> ₦2,000–₦20,000 per design depending on complexity</li>
+      <li><strong>Where to find clients:</strong> fellowships, departments, student entrepreneurs.</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">4. Phone Charging / Repair</h2>
-    <p>If your hostel has power issues, a generator + extension box = money.</p>
-    <h2 class="text-2xl font-bold mt-8 mb-4">5. Tutoring</h2>
-    <p>Teach year 1 students difficult courses. Charge per hour.</p>
-    <br />
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">3) Tutoring (Academic + Exam Prep)</h2>
+    <p>If you’re strong in a “hard course”, you can tutor juniors. Results and consistency bring referrals fast.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Startup:</strong> ₦0</li>
+      <li><strong>Pricing:</strong> ₦2,000–₦10,000 per session or weekly bundles</li>
+      <li><strong>Tip:</strong> run group tutorials for better hourly income.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">4) Social Media Management (For Small Shops)</h2>
+    <p>Many SMEs want Instagram/TikTok content but don’t have time. If you can shoot and edit short videos, you can manage pages.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Startup:</strong> ₦0–₦20,000 (data + basic tools)</li>
+      <li><strong>Pricing:</strong> ₦30,000–₦150,000/month depending on deliverables</li>
+      <li><strong>Where to start:</strong> nearby vendors, salons, campus businesses.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">5) Perfume Oils / Skincare Reselling</h2>
+    <p>Small, portable products sell well on campus. Focus on quality and repeat buyers.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Startup:</strong> ₦10,000–₦50,000</li>
+      <li><strong>Tip:</strong> sample packs + referral discounts work well.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">6) Mini Importation / Bulk Buying</h2>
+    <p>Buy in bulk, split into smaller units, and sell on campus. Start with items you understand (accessories, gadgets, beauty items).</p>
+    <p>See our full guide: <a href="/blog/mini-importation-nigeria-china-guide-2025" class="text-green-600 hover:underline">Mini Importation (China to Nigeria)</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">7) Laundry Pickup & Delivery (Hostel Service)</h2>
+    <p>Offer pickup + delivery and partner with a local laundry or handle it yourself if you have capacity.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Startup:</strong> ₦5,000–₦30,000</li>
+      <li><strong>Pricing:</strong> per basket or per item</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">8) Phone Repairs / Accessories</h2>
+    <p>Phone-related services are evergreen. Start with accessories and learn repairs gradually.</p>
+    <p>Find vendors in <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> and <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">9) Event Photography / Videography</h2>
+    <p>Campus events need coverage. If you have a good phone camera, you can start and upgrade later.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Startup:</strong> ₦0–₦50,000 (ring light, tripod)</li>
+      <li><strong>Tip:</strong> offer same-day highlights for premium pricing.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">10) Food / Snacks Delivery (Smart Execution)</h2>
+    <p>Don’t fight “big vendors”. Pick a niche: late-night delivery, healthy meals, or snacks for specific hostels.</p>
+    <p>Explore <a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a> and learn packaging + consistency.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Customers Fast (Campus)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Post results daily (delivery proof, testimonials).</li>
+      <li>Use WhatsApp broadcast lists + class groups (respect rules).</li>
+      <li>Offer referral rewards (₦200–₦500 discounts work).</li>
+      <li>Create a profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your hustle on 9jaDirectory</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose the Right Student Hustle</h2>
+    <p>Pick a hustle that fits your schedule and gives you skills you can sell after graduation. Use this simple decision framework:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Time:</strong> can you run it during exams and busy weeks?</li>
+      <li><strong>Capital:</strong> can you start small and reinvest profits without borrowing?</li>
+      <li><strong>Demand:</strong> are people already paying for it on your campus?</li>
+      <li><strong>Repeat customers:</strong> does it bring weekly/monthly repeat business?</li>
+      <li><strong>Skill value:</strong> does it build a portfolio you can use later?</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">7-Day Validation Plan (Before You Spend Money)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li><strong>Day 1:</strong> choose one idea and define your offer (what you sell + price).</li>
+      <li><strong>Day 2:</strong> talk to 15 potential customers and ask what they really want.</li>
+      <li><strong>Day 3:</strong> create a simple flyer/post and share in 3 relevant groups.</li>
+      <li><strong>Day 4:</strong> collect 5–10 inquiries and refine your message.</li>
+      <li><strong>Day 5:</strong> get your first paid order (even small) to prove demand.</li>
+      <li><strong>Day 6:</strong> document results (photos, proof, testimonial).</li>
+      <li><strong>Day 7:</strong> repeat what worked and drop what didn’t.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Time Management (So You Don’t Fail School)</h2>
+    <p>Make your hustle support your education, not destroy it. Block 1–2 hours daily for business tasks, keep one rest day, and automate where possible (WhatsApp quick replies, simple pricing, standard delivery days).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">What is the best business for a student with no capital?</h3>
+    <p>Service businesses usually win: design, tutoring, social media management, writing, and repairs. You can start with skills and grow with referrals.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I get customers fast?</h3>
+    <p>Sell to the people around you first (hostels, departments, fellowships). Post proof daily, use referrals, and keep your offer simple.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Money Management (So Your Hustle Actually Pays)</h2>
+    <p>Many student businesses fail because money is mixed up. Use two simple rules:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Separate float/capital from profit (don’t spend your stock money).</li>
+      <li>Track every expense for 30 days (data, transport, packaging, ads) so you know your real profit.</li>
+    </ul>
+    <p>Small discipline now builds skills that make you unstoppable after school.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Safety Tip (Avoid Campus Scams)</h2>
+    <p>When money starts moving, scammers show up. Use simple protection: confirm transfers properly, avoid lending customers on credit, keep records, and never share OTPs or account logins. Build trust, but keep boundaries.</p>
+
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>Don't wait until you graduate. Start building your business skills now.</p>
-    <p>Explore more opportunities in our <a href="/categories/education" class="text-green-600 hover:underline">Education Directory</a>.</p>
+    <p>Don’t wait until graduation to learn business. Start small, stay consistent, and build skills that pay you for life.</p>
+    <p>Explore more opportunities in <a href="/categories/education" class="text-green-600 hover:underline">Education</a>, <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>, and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Time Management (School + Business)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Pick a hustle with predictable hours (evenings/weekends) so you don’t miss lectures.</li>
+      <li>Batch tasks: buy stock once, deliver twice, post content daily.</li>
+      <li>Use pre-orders to avoid tying money down in unsold inventory.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+    <p>When you start earning, build a simple online profile and collect reviews. It makes referrals easier and helps you keep growing after graduation.</p>
   `,
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 10, 2025",
     author: "9jaDirectory Careers",
     category: "Business Guide",
-    readTime: "5 min read",
+    readTime: "14 min read",
+    keywords: [
+      "business ideas for students in Nigeria",
+      "side hustles for students Nigeria",
+      "low capital business Nigeria",
+      "POS business for students",
+      "make money in school Nigeria",
+      "student entrepreneurship Nigeria",
+      "campus business ideas",
+      "how to get customers Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -4031,40 +5606,171 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nafdac-registration-requirements-nigeria-2025",
     title: "How to Get NAFDAC Registration for Your Product (2025 Guide)",
-    excerpt: "Selling food or cosmetics? You need a NAFDAC number. We explain the NAPAMS portal, documentation, fees, and timeline.",
+    excerpt: "Selling food, cosmetics, water, or health products in Nigeria? Here’s the 2025 NAFDAC registration process: requirements, NAPAMS portal steps, timelines, and how to avoid delays.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
-    <p>If you manufacture food, water, drugs, or cosmetics in Nigeria, selling without a NAFDAC number is a crime. It also limits you from selling in supermarkets like Shoprite.</p>
-    <p>The process used to be a nightmare, but the <strong>NAPAMS Portal</strong> has improved things.</p>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Documents Required</h2>
+    <p>If you manufacture or sell regulated products in Nigeria, NAFDAC registration is not optional—it’s a major trust signal and often required by distributors, supermarkets, and corporate buyers.</p>
+
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p class="text-sm text-green-900"><strong>Scope:</strong> This is a practical overview, not legal advice. Requirements can vary by product category. Always confirm current requirements on the official NAFDAC portal.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What Products Need NAFDAC Registration?</h2>
+    <p>NAFDAC regulates products that can affect health and safety. Common examples include:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>CAC Certificate:</strong> You must be a registered company.</li>
-      <li><strong>Trademark:</strong> Evidence of trademark registration from the Ministry of Trade.</li>
-      <li><strong>SOPs:</strong> Standard Operating Procedures for production.</li>
-      <li><strong>Fumigation Certificate:</strong> For your factory.</li>
-      <li><strong>Food Handlers Test:</strong> Medical fitness for staff.</li>
+      <li>Packaged foods and beverages</li>
+      <li>Cosmetics, skincare, and personal care products</li>
+      <li>Water and packaged drinks</li>
+      <li>Medical/health products and supplements</li>
+      <li>Pharmaceuticals (usually stricter requirements)</li>
     </ul>
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: The Process</h2>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Before You Apply (The Real Requirements)</h2>
+    <p>Many applications fail because businesses apply too early. Make sure you have:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>CAC registration:</strong> you typically need a registered business. If you haven’t done CAC yet, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
+      <li><strong>Production location:</strong> a verifiable factory/production address (even small scale needs clear processes).</li>
+      <li><strong>Basic documentation:</strong> SOPs, quality control plan, and clear labeling.</li>
+      <li><strong>Product consistency:</strong> same formulation, same packaging, consistent batch records.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Documents Commonly Requested (Checklist)</h2>
+    <p>Exact documents vary by category, but these are frequently required:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>CAC documents:</strong> certificate + status report/forms.</li>
+      <li><strong>Trademark (optional but useful):</strong> brand protection can reduce disputes.</li>
+      <li><strong>SOPs:</strong> Standard Operating Procedures (production, cleaning, quality checks).</li>
+      <li><strong>Facility documents:</strong> fumigation certificate and/or facility suitability evidence (as required).</li>
+      <li><strong>Medical tests:</strong> food handlers test/medical fitness (for food categories).</li>
+      <li><strong>Label artwork:</strong> ingredients, net weight, manufacturer details, batch/expiry format.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: NAFDAC Registration via NAPAMS (2025)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li><strong>Register on NAPAMS:</strong> Visit <a href="https://registration.nafdac.gov.ng" target="_blank" class="text-green-600 hover:underline">registration.nafdac.gov.ng</a>.</li>
-      <li><strong>Submit Application:</strong> Upload documents.</li>
-      <li><strong>Payment:</strong> Pay fees (approx. ₦50,000 for Food/Cosmetics, higher for Drugs).</li>
-      <li><strong>Inspection:</strong> NAFDAC officers will visit your factory.</li>
-      <li><strong>Lab Analysis:</strong> Submit samples for testing.</li>
-      <li><strong>Approval:</strong> Receive your NAFDAC number.</li>
+      <li>Create an account on the official portal: <a href="https://registration.nafdac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">registration.nafdac.gov.ng</a>.</li>
+      <li>Select your product category and application type.</li>
+      <li>Complete the online forms (company details, product details, facility information).</li>
+      <li>Upload required documents in clear, readable format.</li>
+      <li>Pay the required fees as displayed on the portal (fees differ by product category).</li>
+      <li>Prepare for facility inspection (NAFDAC may inspect your production space).</li>
+      <li>Submit samples for laboratory analysis (where applicable).</li>
+      <li>Track your application status and respond quickly if clarifications are requested.</li>
+      <li>When approved, your product receives a NAFDAC registration number.</li>
     </ol>
-    <br />
-    <h2 class="text-2xl font-bold mt-8 mb-4">Timeline</h2>
-    <p>Officially: 90 days for food, 120 days for drugs.</p>
-    <p>Realistically: 3-6 months. Patience is required.</p>
-    <p>Need a consultant to help? Check our <a href="/categories/legal" class="text-green-600 hover:underline">Legal Directory</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Timeline: How Long Does It Take?</h2>
+    <p>Timelines vary by category, your preparedness, and inspection scheduling. Plan for weeks to months. The fastest approvals usually happen when:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Your documents are complete and consistent</li>
+      <li>Your facility is inspection-ready</li>
+      <li>Your labeling meets requirements</li>
+      <li>Your samples pass laboratory analysis</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Reasons Applications Get Delayed</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Inconsistent info:</strong> business name/address differs from CAC documents.</li>
+      <li><strong>Poor scans:</strong> blurry or incomplete documents.</li>
+      <li><strong>Label issues:</strong> missing manufacturer details, ingredients, batch/expiry format.</li>
+      <li><strong>Facility gaps:</strong> no clear production process, hygiene issues, missing SOPs.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">After You Get the NAFDAC Number (Don’t Stop There)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use the number correctly on packaging and marketing materials.</li>
+      <li>Maintain batch records and quality control—this protects your brand.</li>
+      <li>Build distribution: supermarkets, hotels, wholesalers, and online sales.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Labeling Checklist (Common Requirements)</h2>
+    <p>Label requirements vary by product category, but many regulated products need clear, consistent information. Before you print thousands of labels, confirm requirements on the official portal. Common items include:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Product name and brand</li>
+      <li>Ingredients list (where applicable)</li>
+      <li>Net weight/volume</li>
+      <li>Manufacturer name and address</li>
+      <li>Batch/lot number and manufacture/expiry format</li>
+      <li>Storage instructions and warnings (where applicable)</li>
+      <li>NAFDAC number (added only after approval)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Facility Readiness (What Inspectors Look For)</h2>
+    <p>You don’t need a massive factory to be compliant, but you do need a controlled process:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Clean production area with documented cleaning routines</li>
+      <li>Basic SOPs for production, packaging, and quality checks</li>
+      <li>Batch records (so you can trace issues)</li>
+      <li>Safe storage for raw materials and finished goods</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Can I sell while my NAFDAC application is pending?</h3>
+    <p>Some businesses sell small locally while preparing compliance, but large distributors and supermarkets may require registration depending on the product. Confirm what your target buyers require and plan accordingly.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What causes the biggest delays?</h3>
+    <p>Incomplete documents, inconsistent company/product details, poor labeling, and facilities that are not inspection-ready. Clear scans and consistent information reduce delays.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Cost Planning (Avoid Surprise Expenses)</h2>
+    <p>Costs vary by product category and can change over time. Plan beyond portal fees:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Label redesign and printing adjustments</li>
+      <li>Facility improvements (cleaning, basic equipment, storage)</li>
+      <li>Laboratory tests and sample preparation (where required)</li>
+      <li>Professional support (optional, but helpful for some categories)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I use an agent/consultant?</h3>
+    <p>Some businesses do it themselves successfully. Consultants can save time, but choose carefully: use someone with verifiable experience, keep your portal access, and avoid anyone promising “instant approval”.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Rejection/Delay Triggers</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Mismatch between CAC details and application details</li>
+      <li>Labels missing required information or making unverified claims</li>
+      <li>Facility not ready for inspection</li>
+      <li>Unclear product formulation or inconsistent batches</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Practical Tip</h2>
+    <p>Create a simple compliance folder (digital + printed): CAC docs, SOPs, batch records, label versions, test results, and portal receipts. When you’re asked for clarification, fast responses reduce delays.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Grow Visibility While You Wait</h2>
+    <p>Even before approval, you can build your brand and customer base. Create a profile people can verify and share:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> (and update it once your NAFDAC number is approved).</li>
+      <li>Explore related categories like <a href="/categories/manufacturing" class="text-green-600 hover:underline">Manufacturing</a>, <a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a>, and <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a>.</li>
+    </ul>
+
+    <p>Need help? Find professionals in <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Label Checklist (Basic)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Product name and variant</li>
+      <li>Net weight/volume</li>
+      <li>Ingredients list (and allergens where relevant)</li>
+      <li>Manufacturing/expiry dates and batch number</li>
+      <li>Manufacturer address and contact details</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>NAFDAC registration becomes easier when your business details, labels, and facility are consistent and inspection-ready. Prepare early, document everything, and respond quickly to portal requests to reduce delays.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+    <p>While your application is processing, keep your records organized and build visibility. Update your directory profile with your NAFDAC number once approved to increase trust and conversions.</p>
   `,
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 09, 2025",
     author: "9jaDirectory Legal Team",
     category: "Legal",
-    readTime: "8 min read",
+    readTime: "13 min read",
+    keywords: [
+      "NAFDAC registration Nigeria",
+      "how to get NAFDAC number",
+      "NAPAMS portal NAFDAC",
+      "NAFDAC requirements for food",
+      "NAFDAC registration for cosmetics",
+      "NAFDAC registration timeline",
+      "product registration Nigeria",
+      "manufacturing compliance Nigeria",
+      "9jaDirectory",
+    ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
@@ -4127,6 +5833,94 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Months 1-3:</strong> 0-100/month traffic → ₦0. <strong>Months 4-6:</strong> 100-1K traffic → ₦500-₦5K. <strong>Months 7-12:</strong> 1K-10K traffic → ₦5K-₦50K. <strong>Year 2+:</strong> 50K+ traffic → ₦200K-₦1M+.</p>
 
     <p>Start today. The best time to plant a tree was 20 years ago. The second-best time is now.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pick a Niche That Can Pay</h2>
+    <p>Most blogs fail because they write about “everything”. A profitable niche has:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Clear audience:</strong> SMEs, students, professionals, or a specific industry.</li>
+      <li><strong>Problems with money:</strong> people pay to solve them (finance, marketing, legal, tech).</li>
+      <li><strong>Low competition angle:</strong> “Nigeria-specific” or “state/city-specific”.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">SEO Basics (How Blogs Get Free Traffic)</h2>
+    <p>SEO is the difference between “posting” and “building an asset”. Start with:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Write topics people search for (“how to…”, “best…”, “cost of…”)</li>
+      <li>Use internal links between related posts</li>
+      <li>Answer questions clearly with headings and FAQs</li>
+      <li>Update old posts instead of always writing new ones</li>
+    </ul>
+    <p>For distribution, combine SEO with social: <a href="/blog/social-media-marketing-nigeria-guide-2025" class="text-green-600 hover:underline">Social media marketing guide</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Monetization (Realistic Options)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Affiliate offers:</strong> tools, courses, business services.</li>
+      <li><strong>Ads:</strong> works best with high traffic and consistent publishing.</li>
+      <li><strong>Digital products:</strong> templates, mini-courses, guides.</li>
+      <li><strong>Services:</strong> content writing, SEO, social media management.</li>
+      <li><strong>Sponsorships:</strong> brands pay once you have a niche audience.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">The 30-Day Plan (Simple & Effective)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Pick 1 niche and list 30 topic ideas.</li>
+      <li>Write 8 strong posts (2/week) that answer “how-to” questions.</li>
+      <li>Create a lead magnet (checklist/template) and collect emails.</li>
+      <li>Post short videos on TikTok/Instagram pointing to your posts.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose Blog Topics That Rank in Nigeria</h2>
+    <p>Most blogs fail because they write what they like, not what people search for. Use this method:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Start with “how to”, “cost of”, “best”, and “requirements” keywords.</li>
+      <li>Make it location-specific (Nigeria, Lagos, Abuja) to reduce competition.</li>
+      <li>Write one core post, then create 3–5 supporting posts that link back to it.</li>
+      <li>Update old posts every 2–3 months (Google rewards freshness).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">On-Page SEO Checklist (Simple)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use one primary keyword in the title and first paragraph.</li>
+      <li>Write clear headings (H2/H3) that match user questions.</li>
+      <li>Add internal links to related posts (keeps readers longer).</li>
+      <li>Use short paragraphs, lists, and examples (improves readability).</li>
+      <li>End with a clear CTA (subscribe, download, book, buy, or contact).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Monetization Tip: Sell Leads, Not Just Views</h2>
+    <p>Ads require high traffic. If you want money earlier, monetize with services and leads: write helpful content, then offer related services (writing, SEO, marketing, consulting) or connect customers to providers and take a referral fee.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How long before a blog makes money?</h3>
+    <p>Most blogs need 3–6 months of consistent publishing before meaningful traffic arrives. With a clear niche and SEO, some blogs start earning earlier through services and affiliate offers.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need to write long posts?</h3>
+    <p>Write as long as needed to answer the question fully. Many competitive topics need depth (examples, steps, FAQs). Short posts can work for low-competition niches.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Build an Email List (Faster Monetization)</h2>
+    <p>Traffic can fluctuate, but an email list is an asset. Create a simple lead magnet (checklist, template, mini-guide) and collect emails. Then send 1 useful newsletter weekly and include a soft offer (service, affiliate link, product).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Repurpose Content (One Post, Many Channels)</h2>
+    <p>Turn each blog post into 5–10 short posts for TikTok/Instagram/X. Link back to the original article. This brings early traffic while SEO grows.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Tracking (Improve What Works)</h2>
+    <p>Check which posts get traffic and which posts convert. Double down on topics that bring leads, affiliate clicks, and email signups. Small improvements compound over time.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Turn Your Blog into a Business</h2>
+    <p>If you offer services (writing, SEO, marketing), create a public profile so clients can find you:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your service on 9jaDirectory</a> and share your profile link.</li>
+      <li>Browse <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> for competition and positioning ideas.</li>
+    </ul>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Topic Research Framework (Easy Wins)</h2>
+    <p>Choose topics where people are already searching and where you can add a Nigerian angle (prices, locations, regulations, step-by-step). A simple method:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Start with one niche (business, careers, local services, finance, etc.).</li>
+      <li>Write 10 posts that answer “how to”, “cost”, and “best” questions.</li>
+      <li>Interlink posts and update them every 3–6 months with new data.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Blogging becomes a business when you treat it like a system: research, publish consistently, capture leads, and sell a clear offer. Start small and improve weekly.</p>
     `,
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 29, 2025",
@@ -4204,6 +5998,108 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>By Day 8, expect your first orders.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Payments: Don’t Lose Customers at Checkout</h2>
+    <p>Nigerian customers will abandon your store if payment fails or looks suspicious. Choose a reliable payment flow early.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Offer bank transfer + card payments where possible.</li>
+      <li>Use trusted gateways and test before running ads.</li>
+      <li>Read our comparison: <a href="/blog/best-payment-gateways-nigeria-2025" class="text-green-600 hover:underline">Paystack vs Flutterwave vs Monnify</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Fulfillment & Delivery (The Silent Profit Killer)</h2>
+    <p>Most online stores fail because delivery is slow, expensive, or unreliable. Decide your fulfillment model:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Same-city delivery:</strong> partner with dispatch riders/logistics.</li>
+      <li><strong>Nationwide shipping:</strong> use courier partners and clear return policies.</li>
+      <li><strong>Cash-on-delivery:</strong> risky—reduce fraud with delivery fee deposits.</li>
+    </ul>
+    <p>Find logistics partners in <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Build Trust (How New Stores Win)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use real photos/videos and show “delivery proof”.</li>
+      <li>Display clear pricing and return policy.</li>
+      <li>Collect reviews and repost customer feedback.</li>
+      <li>Create a public profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your store on 9jaDirectory</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Platform Choice: What to Use (Fast Guide)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Instagram/WhatsApp store:</strong> fastest to launch, good for early sales.</li>
+      <li><strong>Shopify/WooCommerce:</strong> best for long-term scale, payments, and automation.</li>
+      <li><strong>Marketplaces:</strong> easy traffic but higher competition and lower control.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Selling “everything” instead of a niche.</li>
+      <li>Ignoring delivery costs in pricing.</li>
+      <li>Running ads without proof (reviews, testimonials, content).</li>
+      <li>Slow replies (WhatsApp reply speed affects sales).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Product Research (Win Before You Build)</h2>
+    <p>The easiest way to fail is to build a store around a product nobody wants. Do basic research first:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Demand:</strong> are people already searching for it and buying it?</li>
+      <li><strong>Competition:</strong> who is selling it today and what do they do well?</li>
+      <li><strong>Margin:</strong> after delivery, ads, and refunds, can you still profit?</li>
+      <li><strong>Repeat rate:</strong> does it bring repeat customers (skincare, consumables) or one-time sales (gadgets)?</li>
+      <li><strong>Delivery risk:</strong> fragile items and bulky items can kill profit if logistics is weak.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Operations (The Boring Part That Makes Money)</h2>
+    <p>Most Nigerian e-commerce brands don’t fail because of bad design. They fail because of slow replies, unclear delivery, and messy inventory.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Inventory:</strong> track stock daily (even in a spreadsheet) so you don’t sell what you don’t have.</li>
+      <li><strong>Customer support:</strong> set WhatsApp quick replies for price, delivery timeline, and return policy.</li>
+      <li><strong>Returns:</strong> define what is returnable, return window, and who pays delivery.</li>
+      <li><strong>Packaging:</strong> pack like a professional (protect items, brand label, thank-you note).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Retention (Make Customers Buy Again)</h2>
+    <p>Acquiring customers with ads is expensive. Retention is where profit lives:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Ask for a review after delivery (and repost proof).</li>
+      <li>Use broadcast lists for restocks, bundles, and seasonal offers.</li>
+      <li>Create bundles that increase average order value (AOV).</li>
+      <li>Offer free delivery above a threshold to encourage bigger carts.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need a website to start?</h3>
+    <p>No. Many Nigerians start with Instagram + WhatsApp + a trusted payment flow. A website helps with scale, tracking, and professionalism, but it is not required on day one.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What is the fastest way to get first sales?</h3>
+    <p>Sell to warm audiences first: friends, campus/community groups, referrals, and existing WhatsApp contacts. Use proof (videos, testimonials) and a clear delivery promise.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I avoid getting scammed?</h3>
+    <p>Use verified payment channels, confirm transfers properly, avoid risky cash-on-delivery, and keep clear records of every order and delivery.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (Avoid These)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Running ads without proof (reviews, delivery proof, testimonials).</li>
+      <li>Slow replies on WhatsApp (response time affects conversion).</li>
+      <li>No clear delivery/return policy (customers fear scams).</li>
+      <li>Pricing without considering delivery and refunds.</li>
+      <li>Scaling too early without stable fulfillment.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Tracking (Simple Dashboard)</h2>
+    <p>Track weekly: number of leads, conversion rate, average order value, refunds, and delivery time. Even a simple spreadsheet helps you see what is working and what is leaking profit.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>E-commerce is not about a perfect website—it’s about product demand, trust, and consistent fulfillment. Start small, track every order, and improve weekly.</p>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your online business on 9jaDirectory</a> so customers can find and verify you.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Return Policy (Build Trust)</h2>
+    <p>Many shoppers fear scams. A simple return policy increases conversion. Define: return window, what is eligible, who pays delivery, and how refunds are processed. Keep it clear and visible.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">30-Day Growth Plan</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li><strong>Week 1:</strong> product photos/videos + WhatsApp templates + delivery partners.</li>
+      <li><strong>Week 2:</strong> collect 10 reviews/testimonials and post daily proof.</li>
+      <li><strong>Week 3:</strong> run small ads or influencer tests and track cost per lead.</li>
+      <li><strong>Week 4:</strong> improve best sellers and fix delivery/refund issues.</li>
+    </ol>
     `,
     image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 28, 2025",
@@ -4288,6 +6184,111 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>You're now a consultant. Ready to scale.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose a Niche (The Money Test)</h2>
+    <p>The best niche is where clients have a painful problem and a real budget. Ask:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Is the problem urgent?</li>
+      <li>Can you tie your work to revenue growth or cost reduction?</li>
+      <li>Do decision-makers feel the pain directly?</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing: Project vs Retainer</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Project fee:</strong> fixed deliverables, clear scope, best for starting.</li>
+      <li><strong>Retainer:</strong> monthly support, predictable income, best once you have proof.</li>
+      <li><strong>Value-based pricing:</strong> charge based on outcome when you have strong case studies.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">What to Put in Your Proposal</h2>
+    <p>A good proposal makes it easy to say yes. Keep it simple:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Problem summary (what you heard)</li>
+      <li>Deliverables (what you will do)</li>
+      <li>Timeline + milestones</li>
+      <li>Fee + payment terms</li>
+      <li>Next steps</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Protect Yourself (Contracts & Scope)</h2>
+    <p>Scope creep can destroy your profit. Use a basic contract and clarify:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>What’s included vs excluded</li>
+      <li>How revisions work</li>
+      <li>Payment schedule (e.g., 50% upfront)</li>
+      <li>Confidentiality</li>
+    </ul>
+    <p>Need legal templates? Explore <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Get Found Without Begging (Visibility)</h2>
+    <p>Outbound works, but inbound is better. Build a simple “trust stack”:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Weekly LinkedIn posts sharing insights and mini case studies</li>
+      <li>One-page portfolio site with services and results</li>
+      <li>Testimonials and before/after outcomes</li>
+      <li>A shareable profile page: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your consulting service on 9jaDirectory</a></li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Discovery Call Checklist (Close More Deals)</h2>
+    <p>Most consulting sales are won on the discovery call. Ask better questions:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>What is the problem and why is it urgent now?</li>
+      <li>What have you tried already and what failed?</li>
+      <li>What is the impact on revenue, cost, or time?</li>
+      <li>Who will approve the decision and what is the timeline?</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Contracts & Payment Terms (Protect Your Profit)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Milestones:</strong> define deliverables and what “done” means.</li>
+      <li><strong>Payment structure:</strong> common options are 50% upfront + 50% on delivery, or monthly retainer.</li>
+      <li><strong>Scope boundaries:</strong> list what is included and what is not included (prevents scope creep).</li>
+      <li><strong>Communication:</strong> set meeting frequency and response times.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need certifications to be a consultant?</h3>
+    <p>Not always. Proof beats certificates. If you can show case studies, results, and testimonials, you can sell. Certifications help when competing for corporate clients.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I get my first client?</h3>
+    <p>Start with warm networks and partnerships: vendors, agencies, and professionals who already serve your target clients. Offer a small “quick win” package to build proof fast.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (That Reduce Your Fees)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Selling “time” instead of outcomes:</strong> clients pay more for clear results than for hours.</li>
+      <li><strong>No proof:</strong> without case studies and testimonials, you compete on price.</li>
+      <li><strong>Weak boundaries:</strong> unclear scope leads to endless revisions and low profit.</li>
+      <li><strong>Talking to the wrong person:</strong> qualify the decision-maker early.</li>
+      <li><strong>Skipping follow-up:</strong> many deals close after 2–4 follow-ups, not the first call.</li>
+    </ul>
+    <p>Fix these and your consulting income becomes more predictable.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Steps (Keep It Simple)</h2>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Pick one niche and one offer you can explain in one sentence.</li>
+      <li>Write one case study (even from a past job) and one testimonial.</li>
+      <li>Do daily outreach to 5 ideal clients for 30 days.</li>
+    </ol>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Case Study Template (Copy This)</h2>
+    <p>Case studies help you charge higher fees. Keep it short:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Client type:</strong> who you helped (industry, size).</li>
+      <li><strong>Problem:</strong> what was broken and why it mattered.</li>
+      <li><strong>Process:</strong> what you did (3–5 bullets).</li>
+      <li><strong>Result:</strong> measurable outcome (revenue, cost saved, time saved).</li>
+      <li><strong>Testimonial:</strong> one quote if available.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Retainers (Predictable Income)</h2>
+    <p>Once you deliver results, move clients from one-off projects to monthly retainers (support + reporting + optimization). Retainers stabilize cashflow and reduce constant selling.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Consulting pays well when you package an outcome, sell consistently, and deliver proof. Start with one niche, get results, then scale into retainers.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing (Simple Guide)</h2>
+    <p>Charge based on value, not only time. Start with a clear package price and scope. As your proof grows, increase fees and add retainers. If you solve expensive problems (revenue growth, compliance, cost reduction), you can charge more.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+    <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your consulting service on 9jaDirectory</a> so clients can verify you, see your offer, and contact you fast.</p>
     `,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 27, 2025",
@@ -4380,6 +6381,101 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>First shipment arrives by Month 4.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Import/Export 101: What You’re Really Doing</h2>
+    <p>Import/export is a logistics + compliance + sales business. Your profit comes from buying well, landing goods legally, and selling fast without currency risk destroying margins.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Choose the Right Product (3 Filters)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Demand:</strong> people already buy it regularly.</li>
+      <li><strong>Margin:</strong> after shipping and duties, there’s still profit.</li>
+      <li><strong>Compliance:</strong> avoid products with heavy regulation unless you’re ready.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Compliance Checklist (Nigeria)</h2>
+    <p>Exact requirements depend on product category, but these are common foundations:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>CAC registration:</strong> most serious trade requires a registered business (<a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC guide</a>).</li>
+      <li><strong>TIN + business bank account</strong></li>
+      <li><strong>Regulators:</strong> NAFDAC (food/cosmetics), SON (standards), customs/NCS processes.</li>
+      <li><strong>Documentation:</strong> invoices, packing list, bill of lading/airway bill.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Cost Your Shipment (Avoid Loss)</h2>
+    <p>Use “landed cost” so you don’t guess pricing:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Supplier cost + shipping + insurance + clearing + duties + inland logistics = landed cost</li>
+      <li>Landed cost + your margin = selling price</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Avoid Scams (Supplier Vetting)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Start with small test orders before bulk.</li>
+      <li>Use verified platforms/escrow where possible.</li>
+      <li>Ask for live video proof of goods and factory.</li>
+      <li>Keep all agreements in writing (invoice + terms).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Selling Strategy (Before Goods Arrive)</h2>
+    <p>Don’t import and hope. Pre-sell or secure buyers early:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Build a buyer list (wholesalers, retailers, corporate supply).</li>
+      <li>Post samples and specs online (videos sell).</li>
+      <li>Offer early-bird pricing for bulk buyers.</li>
+    </ul>
+    <p>To generate leads, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your import/export business on 9jaDirectory</a> and include the categories you supply.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Costing (The Formula That Saves You)</h2>
+    <p>Your profit is made at the buying stage. Use this simple formula:</p>
+    <p><strong>Supplier cost + shipping + insurance + clearing + duties + inland logistics = landed cost.</strong></p>
+    <p>Then price your goods with margin plus a buffer for FX changes and delays.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Incoterms (Beginner-Friendly)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>FOB:</strong> supplier delivers to port; you handle shipping onward.</li>
+      <li><strong>CIF:</strong> supplier covers cost + insurance + freight to your port (confirm what is included).</li>
+    </ul>
+    <p>Ask your freight forwarder which option reduces risk for your product category and destination.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FX Risk (Don’t Let Profit Disappear)</h2>
+    <p>Currency moves can wipe out margin. Reduce risk by pre-selling to buyers, keeping a buffer, and updating prices when exchange rates move significantly.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need to import a full container?</h3>
+    <p>No. Many people start with shared shipments (groupage) and scale to containers after they have repeat buyers and reliable supply.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I get buyers before goods arrive?</h3>
+    <p>Pre-sell using samples, a price list, and proof of shipment. The best importers sell before landing to reduce cashflow pressure.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (Avoid Expensive Lessons)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>No landed-cost calculation:</strong> profit disappears when you guess duties and logistics.</li>
+      <li><strong>No buyer before shipment:</strong> inventory sitting in a warehouse kills cashflow.</li>
+      <li><strong>Weak documentation:</strong> delays and extra charges happen when paperwork is incomplete.</li>
+      <li><strong>No FX buffer:</strong> exchange-rate changes can wipe out margin.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pre-Shipping Checklist</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Confirm landed cost and selling price (with buffer).</li>
+      <li>Confirm documents are complete before goods arrive.</li>
+      <li>Insure high-value shipments where possible.</li>
+      <li>Have at least 3 serious buyers or pre-orders before you scale.</li>
+      <li>Keep records of supplier chats, invoices, and receipts.</li>
+    </ul>
+    <p>This checklist reduces delays, cashflow stress, and “surprise fees” that wipe out profit.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Import/export can be profitable, but it’s not gambling. Win with accurate costing, compliance, supplier vetting, and pre-selling to buyers.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need a clearing agent?</h3>
+    <p>For your first shipments, an experienced clearing agent can save time and costly mistakes. Over time, learn the process so you can verify costs and avoid overcharging.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Air freight or sea freight?</h3>
+    <p>Air is faster but more expensive and best for small, high-margin items. Sea is cheaper per unit and best for bulk, but takes longer and needs stronger cashflow planning.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I reduce FX risk?</h3>
+    <p>Price with a buffer, collect deposits, and avoid committing to fixed prices for long periods when rates are unstable. Small test shipments also reduce risk.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+    <p>If you sell imported products, make it easy for buyers to verify you: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a> and add your WhatsApp, product list, and service areas.</p>
     `,
     image: "https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 26, 2025",
@@ -4443,7 +6539,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Revenue Example: Restaurant Delivery</h2>
     <p>Partner with 5 restaurants. Each does 20 deliveries/day = 100 deliveries/day. At ₦2K per delivery = ₦200K/day = ₦4M/month (minus fuel ₦500K, other costs ₦500K) = <strong>₦3M profit</strong>.</p>
 
-    <p>That's from ONE rider with ONE bike. Scale to 10 riders and you're doing ₦30M+/month.</p>
+    <p>As your delivery volume becomes predictable, you can hire more riders, add routes, and move from one-off deliveries to monthly contracts.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 60-Day Launch</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -4453,6 +6549,115 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>First month: ₦500K-₦800K revenue.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Choose a Niche (This Is How You Win)</h2>
+    <p>“Delivery” is broad. Niches help you price better and get repeat customers:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Food delivery (restaurants):</strong> short distances, high volume (<a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a>).</li>
+      <li><strong>E-commerce last-mile:</strong> vendor pickups + customer deliveries (<a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a>).</li>
+      <li><strong>B2B courier:</strong> documents and parcels for companies (<a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>).</li>
+      <li><strong>Inter-state logistics:</strong> higher ticket, more complexity (partners + warehousing).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Strategy (Simple & Profitable)</h2>
+    <p>Avoid random pricing. Create a clear rate card your clients understand:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Base fee:</strong> within a zone (e.g., “Ikeja to Ikeja”).</li>
+      <li><strong>Distance add-on:</strong> price increases after a certain km.</li>
+      <li><strong>Weight/size add-on:</strong> larger parcels cost more.</li>
+      <li><strong>Urgency:</strong> same-hour deliveries cost more than same-day.</li>
+      <li><strong>Returns:</strong> define who pays if delivery fails.</li>
+    </ul>
+    <p>For business clients, offer monthly packages (number of deliveries) so revenue is predictable.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Operations: What You Must Track</h2>
+    <p>Good logistics is more about systems than speed. Track these weekly:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Pickup time:</strong> average minutes from request to pickup.</li>
+      <li><strong>Delivery success rate:</strong> successful deliveries vs failed deliveries.</li>
+      <li><strong>Cost per delivery:</strong> fuel + rider pay + maintenance.</li>
+      <li><strong>Customer complaints:</strong> late deliveries, missing items, poor communication.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Safety, Fraud & Cash Handling</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Verify addresses and phone numbers before dispatch.</li>
+      <li>Use deposits/delivery fees upfront for cash-on-delivery orders.</li>
+      <li>Train riders on item checks, signatures, and proof-of-delivery photos.</li>
+      <li>Don’t let one rider control cash without reporting.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Your First 10 Business Clients</h2>
+    <p>Most delivery businesses grow through partnerships. Start local:</p>
+    <ol class="list-decimal pl-5 mt-2 mb-4">
+      <li>Walk into nearby restaurants and vendors with a simple one-page offer.</li>
+      <li>Offer a 7-day trial with clear service levels (pickup time + delivery time).</li>
+      <li>Collect testimonials and delivery proof (photos/receipts) and post them.</li>
+      <li>Convert trials to monthly packages.</li>
+    </ol>
+    <p>Make it easy for clients to verify you: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your logistics business on 9jaDirectory</a> and share your profile link.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Tools You Can Start With</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>WhatsApp Business:</strong> quick replies + labels (New / In Transit / Delivered).</li>
+      <li><strong>Google Maps:</strong> route optimization.</li>
+      <li><strong>Simple spreadsheet:</strong> order ID, pickup, delivery, fee, rider, status.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Unit Economics (Know Your Cost Per Delivery)</h2>
+    <p>Profit comes from predictable margins. Calculate your real cost per delivery:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Rider payment (per trip or daily)</li>
+      <li>Fuel and maintenance (or allowances)</li>
+      <li>Failed deliveries and refunds</li>
+      <li>Customer support time and disputes</li>
+    </ul>
+    <p>Once you know your cost, pricing becomes simple: delivery fee must cover cost + profit.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Models That Work</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Per-delivery:</strong> best for small clients and one-off orders.</li>
+      <li><strong>Monthly retainer:</strong> best for restaurants and stores that ship daily.</li>
+      <li><strong>Hybrid:</strong> retainer + discounted per-delivery after a quota.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Safety & Trust</h2>
+    <p>Logistics is a trust business. Reduce risk with basic rules:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use rider ID and track deliveries (photos or confirmation code).</li>
+      <li>Define claims policy for damages and lost items.</li>
+      <li>Train riders on customer service and handling disputes.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I buy bikes immediately?</h3>
+    <p>Not always. Many startups begin by partnering with independent riders, then buy bikes once delivery volume is consistent and unit economics are proven.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What niche is easiest to start with?</h3>
+    <p>Same-city delivery for restaurants, pharmacies, and small e-commerce stores is often easier than interstate logistics because operations are simpler.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">KPIs to Track Weekly</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>On-time delivery rate:</strong> late deliveries reduce repeat business.</li>
+      <li><strong>Failed delivery rate:</strong> measure address issues and customer availability.</li>
+      <li><strong>Average delivery cost:</strong> fuel + rider + overhead per order.</li>
+      <li><strong>Customer complaints:</strong> categories and fixes (packaging, delay, rider behavior).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Contracts & SLAs (For Business Clients)</h2>
+    <p>If you deliver for restaurants and SMEs, set simple terms: delivery zones, price list, delivery timelines, claims policy, and payment schedule. Clear terms reduce disputes and make it easier to scale.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Logistics can be profitable when you focus on a niche, track operations, and build business contracts. Start small, build trust, and scale riders only after your system works.</p>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your delivery business on 9jaDirectory</a> to get found by restaurants, vendors, and SMEs looking for reliable logistics.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist (Before You Scale)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Know your unit economics (average revenue per delivery vs cost).</li>
+      <li>Set rider rules: safety, customer service, proof of delivery.</li>
+      <li>Use simple tracking (Google Sheets + WhatsApp templates) before building an app.</li>
+      <li>Collect reviews from business clients and display them.</li>
+    </ul>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Tip</h2>
+    <p>Start with a simple price table by zone/distance and a minimum fee. As volume grows, offer weekly billing to business clients and track unpaid invoices tightly.</p>
     `,
     image: "https://images.unsplash.com/photo-1494522510464-82a42ec8a0f1?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 25, 2025",
@@ -4534,6 +6739,118 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>Opening day: Ready to serve.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Choose Your Salon Model</h2>
+    <p>There are three models that work well in Nigeria. Pick one based on your budget and market:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Home service:</strong> low overhead, flexible (great for makeup, nails, braiding).</li>
+      <li><strong>Small studio:</strong> 1–2 stations; ideal for starting in Lagos or Abuja with limited budget.</li>
+      <li><strong>Full salon:</strong> multiple stations + staff; higher cost but scalable.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Location Tips (What Actually Matters)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Visibility:</strong> foot traffic beats “cheap rent” in most cases.</li>
+      <li><strong>Power:</strong> budget for inverter/generator—downtime kills revenue.</li>
+      <li><strong>Target market:</strong> price your services based on neighborhood spending power.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Service Packaging (How to Increase Profit)</h2>
+    <p>Don’t sell “one service”. Create packages:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Monthly hair care plan:</strong> wash + treatment + styling</li>
+      <li><strong>Bridal bundle:</strong> trial + makeup + touch-ups</li>
+      <li><strong>Combo day:</strong> hair + nails + brows (discounted)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Marketing That Brings Clients (2025)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Before/after videos:</strong> short Reels/TikToks convert better than flyers.</li>
+      <li><strong>Reviews:</strong> ask every happy client for a review and referral.</li>
+      <li><strong>WhatsApp bookings:</strong> use WhatsApp Business auto-replies for slots and prices.</li>
+      <li><strong>Local SEO:</strong> show up for “salon near me” searches.</li>
+    </ul>
+    <p>To build trust, create a profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your salon on 9jaDirectory</a> (use <a href="/categories/beauty-spa" class="text-green-600 hover:underline">Beauty & Spa</a>).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Hygiene & Standards (Non-Negotiable)</h2>
+    <p>Beauty businesses succeed long-term when clients feel safe. Set basic SOPs:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Sanitize tools between clients</li>
+      <li>Use disposable items where needed</li>
+      <li>Maintain clean towels and workstations</li>
+      <li>Keep a booking log to reduce waiting time</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Services & Pricing (Build a Simple Menu)</h2>
+    <p>Salons grow faster when pricing is clear. Create a simple menu with 3 tiers (basic, standard, premium) so customers can choose quickly:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Hair services (braids, installs, treatment)</li>
+      <li>Nails (basic, gel, acrylic)</li>
+      <li>Lashes/brows (optional high-margin add-on)</li>
+      <li>Skincare/facials (if you have trained staff)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Equipment Checklist (Start Small, Upgrade)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Salon chairs + mirrors + workstation lighting</li>
+      <li>Hair tools (dryer, straightener, sterilizer)</li>
+      <li>Nail kit (UV lamp, tools, hygiene supplies)</li>
+      <li>Waiting area basics (chairs, water, clean environment)</li>
+      <li>Power backup plan (inverter/generator) to avoid losing customers</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Hiring & Training (Protect Your Reputation)</h2>
+    <p>Skill is important, but attitude and hygiene matter just as much. Create simple standards:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Clean tools for every customer (no shortcuts)</li>
+      <li>Time discipline (late starts kill repeat business)</li>
+      <li>Customer service (explain options, confirm prices upfront)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I get customers in the first 30 days?</h3>
+    <p>Post transformations daily, run a limited “opening offer”, partner with nearby boutiques/vendors, and collect reviews. Consistency and proof beat expensive ads.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Should I start from home or rent a shop?</h3>
+    <p>Starting from home reduces cost, but a shop increases walk-ins and trust. Start where you can deliver quality consistently, then expand when demand is steady.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Customer Experience (How Salons Win)</h2>
+    <p>Most salons compete on price. The better strategy is experience + consistency:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Use a simple booking system (WhatsApp templates are enough) to reduce waiting time.</li>
+      <li>Keep hygiene standards high (sterilize tools, clean towels, clean workstations).</li>
+      <li>Upsell ethically: treatment packages, home-care products, and monthly maintenance plans.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Retention & Referrals</h2>
+    <p>Your best customers are repeat customers. Ask for reviews after each service, offer referral discounts, and keep a simple customer list so you can notify clients about new services and promos.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Marketing Checklist (Weekly)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Post 3–5 transformations (before/after) weekly</li>
+      <li>Ask 5 customers for reviews monthly</li>
+      <li>Run a small promo for slow days (weekday offers)</li>
+      <li>Partner with nearby boutiques and makeup artists</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I set prices without losing customers?</h3>
+    <p>Price based on costs + time + quality. Create packages (basic/standard/premium) so customers can choose. Avoid competing only on cheap prices; focus on proof, hygiene, and consistent results.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>A salon business can be highly profitable in Nigeria when you package services, deliver consistent quality, and market daily. Start small, build loyal clients, and scale with demand.</p>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your beauty business on 9jaDirectory</a> and start getting customers from your area.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Hygiene Checklist (Non-Negotiable)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Sterilize tools between clients and use clean towels/capes.</li>
+      <li>Keep disposable items (gloves, neck strips) where needed.</li>
+      <li>Take clear before/after photos with customer permission.</li>
+      <li>Maintain a clean workstation and visible hygiene standards.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Staffing (When to Hire)</h2>
+    <p>Hire when you have consistent bookings and your calendar is full. Start with one assistant, train with checklists, and track quality with customer feedback.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Local SEO Tip</h2>
+    <p>Ask happy customers for Google reviews and include nearby landmarks in your profile description. Many salon clients choose whoever is closest and most trusted.</p>
     `,
     image: "https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 24, 2025",
@@ -4604,7 +6921,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Critical: NAFDAC Registration</h2>
-    <p>If selling packaged food, you MUST have NAFDAC number. Apply via NAPAMS portal. Cost: ₦50K-₦100K. Timeline: 2-4 weeks.</p>
+    <p>If you sell packaged food at scale (supermarkets, distributors, corporate supply), you may need NAFDAC registration depending on product category. The timeline can be weeks to months. Start early and plan for compliance: <a href="/blog/nafdac-registration-requirements-nigeria-2025" class="text-green-600 hover:underline">NAFDAC registration guide</a>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 60-Day Launch</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -4615,6 +6932,97 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>By Month 3, you can be doing ₦500K/month revenue.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quality Control (What Protects Your Brand)</h2>
+    <p>Food businesses grow with repeat customers. That only happens when quality is consistent.</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Standardize your recipe and document measurements.</li>
+      <li>Use batch labels and track production dates.</li>
+      <li>Invest in hygienic packaging and storage to reduce spoilage.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Packaging & Branding Tips</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Clear label: brand name, net weight, ingredients, contact details, batch/expiry format.</li>
+      <li>Start with simple, clean packaging that looks “supermarket ready”.</li>
+      <li>Take professional product photos for online sales.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Sell (Distribution Strategy)</h2>
+    <p>Most food businesses fail because they focus only on production. Distribution is the real business:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Retailers & kiosks:</strong> supply in cartons for volume.</li>
+      <li><strong>Supermarkets:</strong> slower onboarding but strong credibility.</li>
+      <li><strong>Offices & events:</strong> recurring supply contracts.</li>
+      <li><strong>Online:</strong> WhatsApp/Instagram direct orders.</li>
+    </ul>
+    <p>Need delivery partners? Explore <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Marketing That Works</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Free sampling at offices, gyms, and stores (with permission).</li>
+      <li>Bundle deals (buy 5 packs, get 1 free).</li>
+      <li>Social proof: testimonials + reseller shoutouts.</li>
+    </ul>
+    <p>To get found by wholesalers and customers, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your food business on 9jaDirectory</a> under <a href="/categories/manufacturing" class="text-green-600 hover:underline">Manufacturing</a> (and link your WhatsApp).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Margin (Simple Math That Protects Profit)</h2>
+    <p>Many snack businesses lose money because they price based on competitors, not costs. Your pricing should cover:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Direct costs:</strong> raw materials, oil/gas/electricity, packaging, labels.</li>
+      <li><strong>Operating costs:</strong> staff, transport, equipment maintenance, rent (if any).</li>
+      <li><strong>Distribution costs:</strong> commissions to resellers and returns/damages.</li>
+    </ul>
+    <p>A simple approach: calculate cost per pack, then target a consistent gross margin for wholesale and retail. Keep wholesale margins lower but use volume. Keep retail margins higher to absorb marketing and delivery.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Retail Onboarding Checklist (Supermarkets & Big Stores)</h2>
+    <p>To get into supermarkets and larger stores, prepare like a serious brand:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Consistent packaging + label format (and barcode where requested)</li>
+      <li>Supply plan (how often you can restock reliably)</li>
+      <li>Product shelf life and storage instructions</li>
+      <li>Clear wholesale price list + minimum order quantities</li>
+      <li>Proof of registration/compliance (as required by the store)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need NAFDAC before I start selling?</h3>
+    <p>You can start small locally, but once you want supermarkets, distributors, or large-scale packaged sales, you may need NAFDAC depending on your product category. Start early because compliance can take time.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">What is the fastest way to grow distribution?</h3>
+    <p>Build a reseller network. Offer clear margins, consistent supply, and simple marketing materials. Resellers can scale you faster than direct retail alone.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I reduce spoilage and returns?</h3>
+    <p>Standardize production, use proper sealing/packaging, track batch dates, and store inventory in a cool, dry place. Quality control is cheaper than replacing bad stock.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Scaling (From 50 Packs to 5,000 Packs)</h2>
+    <p>Scale is less about “working harder” and more about systems:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Document your recipe/process so quality stays consistent.</li>
+      <li>Buy inputs in bulk to reduce unit cost.</li>
+      <li>Build reseller routes (weekly restock schedule).</li>
+      <li>Track returns and fix the root cause (packaging, moisture, handling).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I hire staff without losing quality?</h3>
+    <p>Hire slowly and train with documented processes. Start with one helper, standardize the recipe, and use checklists for packaging and hygiene. Quality control should not depend on only one person.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">Where should I focus first: retail or resellers?</h3>
+    <p>Resellers often scale faster because they buy volume. Retail gives higher margins but takes more time. Many brands start with resellers, then add retail once production is stable.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Food processing can scale quickly in Nigeria when quality and distribution are handled seriously. Start small, standardize production, and expand through retailers and online channels.</p>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> to attract retailers, wholesalers, and customers.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Packaging & Label Checklist</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Clear product name, net weight, and batch/date.</li>
+      <li>Ingredients list and storage instructions.</li>
+      <li>Contact/WhatsApp and location (for repeat orders).</li>
+      <li>Consistent sealing to prevent moisture/oil leaks.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Tip</h2>
+    <p>Price from true cost: ingredients + packaging + labor + transport + overhead, then add profit. If resellers are part of your plan, build their margin into pricing from day one.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Distribution Tip</h2>
+    <p>To grow, focus on one channel first: resellers, offices, or small supermarkets. Deliver consistently, keep a weekly restock schedule, and track which locations reorder.</p>
     `,
     image: "https://images.unsplash.com/photo-1599599810694-b5ac4dd33e2d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 23, 2025",
@@ -4720,6 +7128,111 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <p>By Month 4, receiving consistent monthly income.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose the Right Agribusiness (Quick Filter)</h2>
+    <p>Use this filter before you invest:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Market:</strong> who will buy and at what price?</li>
+      <li><strong>Speed:</strong> how fast do you get cash back (fish vs crops)?</li>
+      <li><strong>Risk:</strong> disease, theft, spoilage, weather.</li>
+      <li><strong>Skill:</strong> do you have access to mentorship and veterinary support?</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Market First: Secure Buyers Before You Start</h2>
+    <p>Many farmers produce first and then struggle to sell. Before your first batch:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Identify 10 buyers: restaurants, hotels, wholesalers, processors.</li>
+      <li>Agree on quality, quantity, and delivery schedule.</li>
+      <li>Plan logistics: cold chain for fish, crates for eggs, bags for grains.</li>
+    </ul>
+    <p>Explore demand in <a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a> and <a href="/categories/hotels" class="text-green-600 hover:underline">Hotels</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Records & Simple Farm Systems</h2>
+    <p>Record keeping is the difference between “I’m busy” and “I’m profitable”. Track:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Feed purchases and consumption</li>
+      <li>Mortality/disease incidents</li>
+      <li>Sales (buyer, quantity, price)</li>
+      <li>Monthly profit (revenue minus costs)</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Risk Management (Nigeria Reality)</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Disease:</strong> vaccination schedule + vet relationship.</li>
+      <li><strong>Theft:</strong> secure perimeter, trusted staff, controlled access.</li>
+      <li><strong>Power:</strong> plan for cold storage or fast distribution.</li>
+      <li><strong>Feed cost swings:</strong> diversify suppliers and buy strategically.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Marketing: Sell Like a Business</h2>
+    <p>In 2025, farms that market online grow faster. Use:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>WhatsApp Business catalog for eggs, fish, chicken, produce.</li>
+      <li>Weekly updates to buyers (“fresh harvest available”).</li>
+      <li>Local listings so bulk buyers can find you.</li>
+    </ul>
+    <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your farm on 9jaDirectory</a> under <a href="/categories/agriculture" class="text-green-600 hover:underline">Agriculture</a> so buyers can find and contact you.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Market-First Planning (Secure Buyers Early)</h2>
+    <p>The fastest way to lose money in farming is to produce first and search for buyers later. Do the opposite:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Call 10 potential buyers (restaurants, hotels, bulk traders) and ask what they buy weekly.</li>
+      <li>Agree on quality and delivery expectations (size, packaging, timing).</li>
+      <li>Start with a small cycle and prove reliability.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Risk Management</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Disease:</strong> follow vaccination and hygiene routines (especially poultry).</li>
+      <li><strong>Theft:</strong> basic security and trusted staff reduce losses.</li>
+      <li><strong>Weather:</strong> plan irrigation/drainage where needed.</li>
+      <li><strong>Price swings:</strong> reduce risk with contracts and multiple buyer channels.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Do I need land to start?</h3>
+    <p>Not always. Fish farming (tarpaulin/pond) and small-scale poultry can start with rented space. Start with what you can control and scale into land later.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How soon can I make profit?</h3>
+    <p>It depends on the cycle. Broilers can be 6–8 weeks, while some crops take longer. Profit comes faster when buyers are secured early.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Funding Options (Grow Without Killing Cashflow)</h2>
+    <p>Agribusiness often needs working capital for feed, inputs, and labor. Consider these options (based on your scale):</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Customer pre-orders:</strong> collect deposits from repeat buyers (restaurants, hotels, bulk traders).</li>
+      <li><strong>Cooperatives:</strong> some cooperatives provide input support and bulk selling access.</li>
+      <li><strong>Grants/SME programs:</strong> apply when you have basic records and registration.</li>
+      <li><strong>Partnerships:</strong> split roles (one person funds, one person runs operations) with clear agreements.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Record Keeping (Your Hidden Advantage)</h2>
+    <p>Simple records help you price correctly, detect losses early, and qualify for bigger buyers and funding:</p>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Daily expenses (feed, labor, fuel, transport)</li>
+      <li>Output records (mortality, harvest size, sales volume)</li>
+      <li>Buyer contacts and repeat order history</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">Which agribusiness is easiest for beginners?</h3>
+    <p>Start with a cycle you can manage and measure: broiler poultry, small fish farming, or a focused crop with guaranteed buyers. The best choice depends on your local demand and your ability to manage risks.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist</h2>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li>Confirm buyers and pricing before scaling production.</li>
+      <li>Track costs and losses weekly (feed, mortality, transport).</li>
+      <li>Improve one thing per cycle (quality, speed, packaging, distribution).</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+    <p>Agribusiness can be profitable, but it rewards planning, consistency, and strong distribution. Start with a niche you can manage, secure buyers early, and scale with data—not emotion.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
+    <p>Make it easy for buyers to find you. <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your farm or agribusiness on 9jaDirectory</a>, add photos, your location, and what you sell (price range and minimum order).</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I find buyers?</h3>
+    <p>Start with nearby restaurants, hotels, bulk traders, and market buyers. Use samples, consistent delivery, and WhatsApp follow-up to turn first orders into repeat customers.</p>
+    <h3 class="text-xl font-bold mt-6 mb-3">How do I reduce losses?</h3>
+    <p>Start small, track mortality/spoilage, and improve one thing per cycle (housing, feed, storage, transport). Loss control often increases profit more than chasing bigger sales.</p>
     `,
     image: "https://images.unsplash.com/photo-1500595046891-d87efc1f2a6f?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 22, 2025",
