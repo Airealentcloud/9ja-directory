@@ -22,7 +22,9 @@ interface ListingData {
   phone?: string
   email?: string
   website_url?: string
+  website?: string
   whatsapp_number?: string
+  whatsapp?: string
   facebook_url?: string
   instagram_url?: string
   twitter_url?: string
@@ -98,6 +100,8 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   // ✅ Extract category and state for use throughout component
   const category = Array.isArray(listing.categories) ? listing.categories[0] : listing.categories
   const state = Array.isArray(listing.states) ? listing.states[0] : listing.states
+  const whatsappNumber = listing.whatsapp_number || listing.whatsapp || ''
+  const websiteUrl = listing.website_url || listing.website || ''
 
   // Fetch reviews for this listing
   let reviews: Array<{ rating: number; id?: string; comment?: string; created_at?: string }> = []
@@ -514,33 +518,33 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                   )}
 
                   {/* WhatsApp */}
-                  {listing.whatsapp_number && (
+                  {whatsappNumber && (
                     <div className="pb-4 border-b">
                       <div className="text-sm font-medium text-gray-600 mb-2 flex items-center">
                         <span className="mr-2">💬</span>
                         WhatsApp
                       </div>
                       <a
-                        href={`https://wa.me/${listing.whatsapp_number.replace(/[^0-9]/g, '')}`}
+                        href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-green-600 hover:text-green-700 font-semibold flex items-center gap-2"
                       >
-                        {listing.whatsapp_number}
+                        {whatsappNumber}
                         <span className="text-xs">→</span>
                       </a>
                     </div>
                   )}
 
                   {/* Website */}
-                  {listing.website_url && (
+                  {websiteUrl && (
                     <div className="pb-4 border-b">
                       <div className="text-sm font-medium text-gray-600 mb-2 flex items-center">
                         <span className="mr-2">🌐</span>
                         Website
                       </div>
                       <a
-                        href={listing.website_url}
+                        href={websiteUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-green-600 hover:text-green-700 font-medium break-all"
@@ -639,9 +643,9 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                       Call Now
                     </a>
                   )}
-                  {listing.whatsapp_number && (
+                  {whatsappNumber && (
                     <a
-                      href={`https://wa.me/${listing.whatsapp_number.replace(/[^0-9]/g, '')}`}
+                      href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"
@@ -753,6 +757,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const stateName = state?.name || 'Nigeria'
   const cityName = listing.city || ''
   const locationName = [cityName, stateName].filter(Boolean).join(', ')
+  const websiteUrl = listing.website_url || listing.website || ''
 
   const metaTitleRaw = (listing as any)?.meta_title
   const metaDescriptionRaw = (listing as any)?.meta_description
@@ -879,7 +884,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       
       // Business-specific OG properties
       ...(listing.phone && { 'business:contact_data:phone_number': listing.phone }),
-      ...(listing.website_url && { 'business:contact_data:website': listing.website_url }),
+      ...(websiteUrl && { 'business:contact_data:website': websiteUrl }),
       ...(listing.email && { 'business:contact_data:email': listing.email }),
     },
     

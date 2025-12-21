@@ -2,7 +2,49 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
-import { redirect } from 'next/navigation'
+
+type SupabaseErrorLike = {
+    message?: string
+    code?: string
+}
+
+function getMissingColumnName(error: SupabaseErrorLike): string | null {
+    const message = error?.message
+    if (!message) return null
+
+    const schemaCacheMatch = message.match(/Could not find the '([^']+)' column/i)
+    if (schemaCacheMatch?.[1]) return schemaCacheMatch[1]
+
+    const relationMatch = message.match(/column \"([^\"]+)\" of relation/i)
+    if (relationMatch?.[1]) return relationMatch[1]
+
+    return null
+}
+
+function applyColumnFallback(payload: Record<string, unknown>, missingColumn: string) {
+    const next = { ...payload }
+
+    if (missingColumn === 'website_url') {
+        const value = next.website_url
+        delete next.website_url
+        if (typeof value === 'string' && value.length > 0 && !('website' in next)) {
+            next.website = value
+        }
+        return next
+    }
+
+    if (missingColumn === 'whatsapp_number') {
+        const value = next.whatsapp_number
+        delete next.whatsapp_number
+        if (typeof value === 'string' && value.length > 0 && !('whatsapp' in next)) {
+            next.whatsapp = value
+        }
+        return next
+    }
+
+    delete next[missingColumn]
+    return next
+}
 
 export async function createListing(formData: FormData) {
     const supabase = await createClient()
@@ -22,7 +64,7 @@ export async function createListing(formData: FormData) {
     const websiteUrlValue = formData.get('website_url') ?? formData.get('website')
     const whatsappNumberValue = formData.get('whatsapp_number') ?? formData.get('whatsapp')
 
-    const rawData = {
+    let rawData: Record<string, unknown> = {
         user_id: user.id,
         business_name,
         slug,
@@ -50,13 +92,39 @@ export async function createListing(formData: FormData) {
         status: 'pending'
     }
 
-    const { error } = await supabase
-        .from('listings')
-        .insert(rawData)
+    let lastError: SupabaseErrorLike | null = null
+    for (let attempt = 0; attempt < 10; attempt++) {
+        const { error } = await supabase.from('listings').insert(rawData)
+        if (!error) {
+            lastError = null
+            break
+        }
 
-    if (error) {
-        console.error('Error creating listing:', error)
-        throw new Error(`Failed to create listing: ${error.message}`)
+        lastError = error
+        const missingColumn = getMissingColumnName(error)
+
+        if (missingColumn) {
+            if (missingColumn === 'user_id') {
+                throw new Error(
+                    "Database is missing required column 'user_id' on listings. Run `supabase_schema_update.sql` in Supabase SQL Editor."
+                )
+            }
+            rawData = applyColumnFallback(rawData, missingColumn)
+            continue
+        }
+
+        if (error.message?.toLowerCase().includes('row-level security')) {
+            throw new Error(
+                'Database RLS blocked listing creation. Ensure you ran `supabase_schema_update.sql` (RLS + insert policy) in Supabase SQL Editor.'
+            )
+        }
+
+        break
+    }
+
+    if (lastError) {
+        console.error('Error creating listing:', lastError)
+        throw new Error(`Failed to create listing: ${lastError.message}`)
     }
 
     revalidatePath('/dashboard')
@@ -88,7 +156,7 @@ export async function updateListing(formData: FormData) {
         }
     }
 
-    const rawData = {
+    let rawData: Record<string, unknown> = {
         business_name: formData.get('business_name') as string,
         description: formData.get('description') as string,
         category_id: formData.get('category_id') as string,
@@ -120,19 +188,42 @@ export async function updateListing(formData: FormData) {
     console.log('Update Listing - Raw Images:', formData.get('images'))
     console.log('Update Listing - Parsed Images:', rawData.images)
 
-    const { data: updatedData, error } = await supabase
-        .from('listings')
-        .update(rawData)
-        .eq('id', listingId)
-        .select()
-        .single()
+    let updatedData: any = null
+    let updateError: SupabaseErrorLike | null = null
+
+    for (let attempt = 0; attempt < 10; attempt++) {
+        const result = await supabase
+            .from('listings')
+            .update(rawData)
+            .eq('id', listingId)
+            .select()
+            .single()
+
+        updatedData = result.data
+        updateError = result.error
+
+        if (!updateError) break
+
+        const missingColumn = getMissingColumnName(updateError)
+        if (missingColumn) {
+            if (missingColumn === 'user_id') {
+                throw new Error(
+                    "Database is missing required column 'user_id' on listings. Run `supabase_schema_update.sql` in Supabase SQL Editor."
+                )
+            }
+            rawData = applyColumnFallback(rawData, missingColumn)
+            continue
+        }
+
+        break
+    }
 
     console.log('Update Result:', updatedData)
-    console.log('Update Error:', error)
+    console.log('Update Error:', updateError)
 
-    if (error) {
-        console.error('Error updating listing:', error)
-        throw new Error(`Failed to update listing: ${error.message}`)
+    if (updateError) {
+        console.error('Error updating listing:', updateError)
+        throw new Error(`Failed to update listing: ${updateError.message}`)
     }
 
     // Revalidate paths

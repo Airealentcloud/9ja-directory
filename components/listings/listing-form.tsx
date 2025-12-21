@@ -187,7 +187,7 @@ export default function ListingForm({ initialData, categories, states, isEditing
                                             onClick={() => setImages(images.filter((_, i) => i !== idx))}
                                             className="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
                                         >
-                                            ✕
+                                            ×
                                         </button>
                                     </div>
                                 ))}
