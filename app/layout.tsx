@@ -4,6 +4,8 @@ import './globals.css'
 import Link from 'next/link'
 import AuthButton from '@/components/auth-button'
 import NavLink from '@/components/nav-link'
+import MobileNav from '@/components/mobile-nav'
+import { createClient } from '@/lib/supabase/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,11 +55,16 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -67,17 +74,24 @@ export default function RootLayout({
               <div className="flex items-center">
                 <NavLink href="/" className="text-2xl font-bold text-green-600">9jaDirectory</NavLink>
               </div>
-              <div className="hidden md:flex space-x-8 items-center">
-                <NavLink href="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
-                <NavLink href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</NavLink>
-                <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
-                <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
-                <NavLink href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</NavLink>
-                <NavLink href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
-                  List Your Business
-                </NavLink>
-                <div className="ml-4 flex items-center">
-                  <AuthButton />
+              <div className="flex items-center gap-3">
+                <div className="hidden md:flex space-x-8 items-center">
+                  <NavLink href="/" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
+                  <NavLink href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</NavLink>
+                  <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
+                  <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
+                  <NavLink href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</NavLink>
+                  <NavLink href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
+                    List Your Business
+                  </NavLink>
+                  <div className="ml-4 flex items-center">
+                    <AuthButton user={user} />
+                  </div>
+                </div>
+                <div className="md:hidden">
+                  <MobileNav>
+                    <AuthButton user={user} variant="mobile" />
+                  </MobileNav>
                 </div>
               </div>
             </div>
