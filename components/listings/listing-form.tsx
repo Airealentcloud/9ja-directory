@@ -37,15 +37,19 @@ export default function ListingForm({ initialData, categories, states, isEditing
 
         const form = e.currentTarget
         if (!form.checkValidity()) {
+            setError('Please fill in all required fields before submitting.')
             // Find the first invalid field
-            const invalidField = form.querySelector(':invalid') as HTMLElement
+            const invalidField = form.querySelector(':invalid') as HTMLElement | null
             if (invalidField) {
                 // Find which tab contains this field
                 const tabName = invalidField.closest('[data-tab]')?.getAttribute('data-tab')
                 if (tabName) {
                     setActiveTab(tabName)
-                    // Give React a moment to render the tab as visible before focusing
-                    setTimeout(() => invalidField.focus(), 100)
+                    // Give React a moment to render the tab as visible before scrolling/focusing
+                    setTimeout(() => {
+                        invalidField.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        invalidField.focus()
+                    }, 100)
                 }
             }
             setSubmitting(false)
@@ -214,13 +218,32 @@ export default function ListingForm({ initialData, categories, states, isEditing
                         </div>
 
                         <div className="sm:col-span-3">
+                            <label htmlFor="whatsapp_number" className="block text-sm font-medium text-gray-700">WhatsApp</label>
+                            <input
+                                type="tel"
+                                name="whatsapp_number"
+                                id="whatsapp_number"
+                                defaultValue={initialData?.whatsapp_number || initialData?.whatsapp}
+                                placeholder="+234..."
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                            />
+                        </div>
+
+                        <div className="sm:col-span-3">
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
                             <input type="email" name="email" id="email" defaultValue={initialData?.email} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" />
                         </div>
 
                         <div className="sm:col-span-3">
-                            <label htmlFor="website" className="block text-sm font-medium text-gray-700">Website</label>
-                            <input type="url" name="website" id="website" defaultValue={initialData?.website} placeholder="https://" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" />
+                            <label htmlFor="website_url" className="block text-sm font-medium text-gray-700">Website</label>
+                            <input
+                                type="url"
+                                name="website_url"
+                                id="website_url"
+                                defaultValue={initialData?.website_url || initialData?.website}
+                                placeholder="https://"
+                                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                            />
                         </div>
 
                         <div className="sm:col-span-6 border-t pt-4 mt-2">

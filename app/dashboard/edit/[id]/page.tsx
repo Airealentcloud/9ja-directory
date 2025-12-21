@@ -33,7 +33,7 @@ export default function EditListingPage({ params }: { params: Promise<{ id: stri
         category_id: '',
         phone: '',
         email: '',
-        website: '',
+        website_url: '',
         address: '',
         state_id: '',
         city: '',
@@ -81,7 +81,7 @@ export default function EditListingPage({ params }: { params: Promise<{ id: stri
                     category_id: listing.category_id,
                     phone: listing.phone || '',
                     email: listing.email || '',
-                    website: listing.website || '',
+                    website_url: listing.website_url || listing.website || '',
                     address: listing.address || '',
                     state_id: listing.state_id,
                     city: listing.city || '',
@@ -117,7 +117,7 @@ export default function EditListingPage({ params }: { params: Promise<{ id: stri
                     category_id: formData.category_id,
                     phone: formData.phone,
                     email: formData.email,
-                    website: formData.website,
+                    website_url: formData.website_url,
                     address: formData.address,
                     state_id: formData.state_id,
                     city: formData.city,
@@ -241,15 +241,15 @@ export default function EditListingPage({ params }: { params: Promise<{ id: stri
                         </div>
 
                         <div className="col-span-6">
-                            <label htmlFor="website" className="block text-sm font-medium text-gray-700">
+                            <label htmlFor="website_url" className="block text-sm font-medium text-gray-700">
                                 Website
                             </label>
                             <input
                                 type="url"
-                                name="website"
-                                id="website"
+                                name="website_url"
+                                id="website_url"
                                 placeholder="https://example.com"
-                                value={formData.website}
+                                value={formData.website_url}
                                 onChange={handleChange}
                                 className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                             />

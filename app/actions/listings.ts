@@ -19,6 +19,9 @@ export async function createListing(formData: FormData) {
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)+/g, '') + '-' + Math.random().toString(36).substring(2, 7)
 
+    const websiteUrlValue = formData.get('website_url') ?? formData.get('website')
+    const whatsappNumberValue = formData.get('whatsapp_number') ?? formData.get('whatsapp')
+
     const rawData = {
         user_id: user.id,
         business_name,
@@ -27,7 +30,8 @@ export async function createListing(formData: FormData) {
         category_id: formData.get('category_id') as string,
         phone: formData.get('phone') as string,
         email: formData.get('email') as string,
-        website: formData.get('website') as string,
+        website_url: typeof websiteUrlValue === 'string' ? websiteUrlValue : '',
+        whatsapp_number: typeof whatsappNumberValue === 'string' ? whatsappNumberValue : '',
         address: formData.get('address') as string,
         state_id: formData.get('state_id') as string,
         city: formData.get('city') as string,
@@ -52,7 +56,7 @@ export async function createListing(formData: FormData) {
 
     if (error) {
         console.error('Error creating listing:', error)
-        throw new Error('Failed to create listing')
+        throw new Error(`Failed to create listing: ${error.message}`)
     }
 
     revalidatePath('/dashboard')
@@ -90,7 +94,12 @@ export async function updateListing(formData: FormData) {
         category_id: formData.get('category_id') as string,
         phone: formData.get('phone') as string,
         email: formData.get('email') as string,
-        website: formData.get('website') as string,
+        website_url: typeof (formData.get('website_url') ?? formData.get('website')) === 'string'
+            ? ((formData.get('website_url') ?? formData.get('website')) as string)
+            : '',
+        whatsapp_number: typeof (formData.get('whatsapp_number') ?? formData.get('whatsapp')) === 'string'
+            ? ((formData.get('whatsapp_number') ?? formData.get('whatsapp')) as string)
+            : '',
         address: formData.get('address') as string,
         state_id: formData.get('state_id') as string,
         city: formData.get('city') as string,
@@ -123,7 +132,7 @@ export async function updateListing(formData: FormData) {
 
     if (error) {
         console.error('Error updating listing:', error)
-        throw new Error('Failed to update listing')
+        throw new Error(`Failed to update listing: ${error.message}`)
     }
 
     // Revalidate paths
