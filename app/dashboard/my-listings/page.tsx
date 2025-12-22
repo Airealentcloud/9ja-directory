@@ -68,6 +68,12 @@ export default async function MyListingsPage() {
                                         </div>
                                         <div className="ml-5 flex-shrink-0 flex space-x-2">
                                             <Link
+                                                href={`/dashboard/my-listings/${listing.id}/promote`}
+                                                className="text-green-600 hover:text-green-800 text-sm font-medium"
+                                            >
+                                                {listing.featured ? 'Featured' : 'Promote'}
+                                            </Link>
+                                            <Link
                                                 href={`/dashboard/my-listings/${listing.id}/edit`}
                                                 className="text-indigo-600 hover:text-indigo-900 text-sm font-medium"
                                             >

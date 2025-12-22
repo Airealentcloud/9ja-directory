@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { sendEmail } from '@/lib/email/resend'
 
 // This API route processes pending email notifications
 // You can call this manually or set up a cron job to run it periodically
@@ -46,27 +47,11 @@ export async function POST(request: NextRequest) {
         // Process each notification
         for (const notification of notifications) {
             try {
-                // Send email using Supabase Auth's email system
-                // Note: This uses the auth.users table email
-                const { error: emailError } = await supabaseAdmin.auth.admin.inviteUserByEmail(
-                    notification.email,
-                    {
-                        data: {
-                            notification_type: notification.type,
-                            notification_subject: notification.subject,
-                            notification_body: notification.body
-                        }
-                    }
-                )
-
-                if (emailError) {
-                    console.error('Email send error:', emailError)
-                    errors.push({
-                        id: notification.id,
-                        error: emailError.message
-                    })
-                    continue
-                }
+                await sendEmail({
+                    to: notification.email,
+                    subject: notification.subject,
+                    text: notification.body,
+                })
 
                 // Mark as sent
                 await supabaseAdmin
