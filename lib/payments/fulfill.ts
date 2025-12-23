@@ -1,5 +1,6 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPaymentPlan } from '@/lib/payments/plans'
+import { getPlanById as getSubscriptionPlanById, type PlanId } from '@/lib/pricing'
 
 type PaymentStatus = 'pending' | 'success' | 'failed' | 'abandoned'
 
@@ -91,6 +92,94 @@ export async function fulfillPaystackSuccess(input: {
     listingSlug = (listingData as { slug?: string } | null)?.slug ?? null
   }
 
+  try {
+    const subscriptionPlan = getSubscriptionPlanById(payment.plan as PlanId)
+    if (subscriptionPlan) {
+      const now = new Date()
+      const periodEnd = new Date(now)
+
+      if (subscriptionPlan.interval === 'monthly') {
+        periodEnd.setMonth(periodEnd.getMonth() + 1)
+      } else {
+        periodEnd.setFullYear(periodEnd.getFullYear() + 1)
+      }
+
+      const { data: existingSub, error: subSelectError } = await supabase
+        .from('subscriptions')
+        .select('id')
+        .eq('user_id', payment.user_id)
+        .maybeSingle()
+
+      if (subSelectError) {
+        console.error('Subscription select error:', subSelectError)
+      } else if (existingSub?.id) {
+        const { error: subUpdateError } = await supabase
+          .from('subscriptions')
+          .update({
+            plan: subscriptionPlan.id,
+            status: 'active',
+            amount: payment.amount,
+            currency: payment.currency,
+            interval: subscriptionPlan.interval,
+            current_period_start: now.toISOString(),
+            current_period_end: periodEnd.toISOString(),
+          })
+          .eq('id', existingSub.id)
+
+        if (subUpdateError) console.error('Subscription update error:', subUpdateError)
+      } else {
+        const { error: subInsertError } = await supabase.from('subscriptions').insert({
+          user_id: payment.user_id,
+          plan: subscriptionPlan.id,
+          status: 'active',
+          amount: payment.amount,
+          currency: payment.currency,
+          interval: subscriptionPlan.interval,
+          current_period_start: now.toISOString(),
+          current_period_end: periodEnd.toISOString(),
+        })
+
+        if (subInsertError) console.error('Subscription insert error:', subInsertError)
+      }
+
+      const profileUpdate: Record<string, unknown> = {
+        subscription_plan: subscriptionPlan.id,
+        subscription_status: 'active',
+        subscription_expires_at: periodEnd.toISOString(),
+        can_add_listings: true,
+        can_claim_listings: subscriptionPlan.id === 'standard' || subscriptionPlan.id === 'premium',
+        can_feature_listings: subscriptionPlan.id === 'premium',
+        featured_posts_remaining: subscriptionPlan.id === 'premium' ? 2 : 0,
+      }
+
+      const { error: profileError } = await supabase
+        .from('profiles')
+        .update(profileUpdate)
+        .eq('id', payment.user_id)
+
+      if (profileError) console.error('Profile subscription update error:', profileError)
+
+      if (payment.listing_id && subscriptionPlan.id === 'premium') {
+        const featuredUntil = periodEnd.toISOString()
+        let updatePayload: Record<string, unknown> = { featured: true, featured_until: featuredUntil }
+
+        const attemptUpdate = async () =>
+          supabase.from('listings').update(updatePayload).eq('id', payment.listing_id as string)
+
+        let { error: listingError } = await attemptUpdate()
+        if (listingError) {
+          const missingColumn = getMissingColumnName((listingError as { message?: string }).message)
+          if (missingColumn === 'featured_until') {
+            updatePayload = { featured: true }
+            ;({ error: listingError } = await attemptUpdate())
+          }
+          if (listingError) console.error('Premium listing feature update error:', listingError)
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Subscription fulfillment error:', err)
+  }
+
   return { paymentId: payment.id, listingId: payment.listing_id, listingSlug }
 }
-

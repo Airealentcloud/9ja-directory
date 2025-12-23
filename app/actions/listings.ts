@@ -94,10 +94,11 @@ export async function createListing(formData: FormData) {
 
     let lastError: SupabaseErrorLike | null = null
     for (let attempt = 0; attempt < 10; attempt++) {
-        const { error } = await supabase.from('listings').insert(rawData)
-        if (!error) {
+        const { data: insertedData, error } = await supabase.from('listings').insert(rawData).select('id').single()
+        if (!error && insertedData) {
             lastError = null
-            break
+            revalidatePath('/dashboard')
+            return { success: true, listingId: insertedData.id }
         }
 
         lastError = error
@@ -127,8 +128,8 @@ export async function createListing(formData: FormData) {
         throw new Error(`Failed to create listing: ${lastError.message}`)
     }
 
-    revalidatePath('/dashboard')
-    return { success: true }
+    // This shouldn't be reached normally since we return inside the loop
+    return { success: false, listingId: null }
 }
 
 export async function updateListing(formData: FormData) {

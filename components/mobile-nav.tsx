@@ -110,6 +110,12 @@ export default function MobileNav({ children }: MobileNavProps) {
                 Blog
               </NavLink>
               <NavLink
+                href="/pricing"
+                className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
+              >
+                Pricing
+              </NavLink>
+              <NavLink
                 href="/faq"
                 className="block rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-green-600"
               >

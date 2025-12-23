@@ -80,7 +80,7 @@ export default async function RootLayout({
                   <NavLink href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</NavLink>
                   <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
                   <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
-                  <NavLink href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</NavLink>
+                  <NavLink href="/pricing" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</NavLink>
                   <NavLink href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
                     List Your Business
                   </NavLink>

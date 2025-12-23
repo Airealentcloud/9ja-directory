@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import Sidebar from '@/components/dashboard/sidebar'
-import Header from '@/components/dashboard/header'
+import DashboardLayoutClient from '@/components/dashboard/dashboard-layout'
 
 export const metadata: Metadata = {
     robots: { index: false, follow: false },
@@ -33,14 +32,8 @@ export default async function DashboardLayout({
     const isAdmin = profile?.role === 'admin'
 
     return (
-        <div className="flex min-h-screen bg-gray-50">
-            <Sidebar isAdmin={isAdmin} />
-            <div className="flex-1 flex flex-col">
-                <Header user={user} />
-                <main className="flex-1 p-6 overflow-y-auto">
-                    {children}
-                </main>
-            </div>
-        </div>
+        <DashboardLayoutClient user={user} isAdmin={isAdmin}>
+            {children}
+        </DashboardLayoutClient>
     )
 }

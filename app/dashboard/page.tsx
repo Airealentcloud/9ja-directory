@@ -1,11 +1,24 @@
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
+import { PRICING_PLANS } from '@/lib/pricing'
 
 export default async function DashboardPage() {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) return null
+
+    // Fetch user profile with subscription info
+    const { data: profile } = await supabase
+        .from('profiles')
+        .select('subscription_plan, subscription_status, subscription_expires_at, can_add_listings, can_claim_listings, can_feature_listings, featured_posts_remaining')
+        .eq('id', user.id)
+        .single()
+
+    // Get current plan details
+    const currentPlan = PRICING_PLANS.find(p => p.id === profile?.subscription_plan) || null
+    const isSubscribed = profile?.subscription_status === 'active'
+    const expiresAt = profile?.subscription_expires_at ? new Date(profile.subscription_expires_at) : null
 
     // Fetch all user listings
     const { data: allListings } = await supabase
@@ -30,8 +43,58 @@ export default async function DashboardPage() {
         <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
 
+            {/* Subscription Banner */}
+            {!isSubscribed ? (
+                <div className="mb-8 bg-gradient-to-r from-green-600 to-green-700 rounded-lg p-6 text-white">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 className="text-xl font-bold mb-2">Upgrade Your Plan</h3>
+                            <p className="text-green-100">
+                                Get more visibility, faster approvals, and premium features for your business.
+                            </p>
+                        </div>
+                        <Link
+                            href="/pricing"
+                            className="mt-4 md:mt-0 inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                        >
+                            View Plans
+                        </Link>
+                    </div>
+                </div>
+            ) : (
+                <div className="mb-8 bg-white border border-green-200 rounded-lg p-6">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-semibold rounded-full">
+                                    {currentPlan?.name || 'Active'} Plan
+                                </span>
+                                {profile?.can_feature_listings && (
+                                    <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-semibold rounded-full">
+                                        {profile.featured_posts_remaining || 0} Featured Posts Left
+                                    </span>
+                                )}
+                            </div>
+                            <p className="text-gray-600">
+                                {expiresAt && expiresAt > new Date() ? (
+                                    <>Valid until {expiresAt.toLocaleDateString('en-NG', { year: 'numeric', month: 'long', day: 'numeric' })}</>
+                                ) : (
+                                    <>Your subscription is active</>
+                                )}
+                            </p>
+                        </div>
+                        <Link
+                            href="/pricing"
+                            className="mt-4 md:mt-0 inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                        >
+                            Upgrade Plan
+                        </Link>
+                    </div>
+                </div>
+            )}
+
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 mb-8">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
                 <div className="bg-white overflow-hidden shadow rounded-lg">
                     <div className="px-4 py-5 sm:p-6">
                         <dt className="text-sm font-medium text-gray-500 truncate">Total Listings</dt>
@@ -48,6 +111,14 @@ export default async function DashboardPage() {
                     <div className="px-4 py-5 sm:p-6">
                         <dt className="text-sm font-medium text-gray-500 truncate">Live Listings</dt>
                         <dd className="mt-1 text-3xl font-semibold text-green-600">{approvedListings || 0}</dd>
+                    </div>
+                </div>
+                <div className="bg-white overflow-hidden shadow rounded-lg">
+                    <div className="px-4 py-5 sm:p-6">
+                        <dt className="text-sm font-medium text-gray-500 truncate">Current Plan</dt>
+                        <dd className="mt-1 text-2xl font-semibold text-green-600 capitalize">
+                            {currentPlan?.name || 'Free'}
+                        </dd>
                     </div>
                 </div>
             </div>

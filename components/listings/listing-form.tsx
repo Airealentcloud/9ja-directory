@@ -75,11 +75,17 @@ export default function ListingForm({ initialData, categories, states, isEditing
             if (isEditing) {
                 await updateListing(formData)
                 router.push('/dashboard/my-listings')
+                router.refresh()
             } else {
-                await createListing(formData)
-                router.push('/dashboard?success=true')
+                const result = await createListing(formData)
+                if (result.success && result.listingId) {
+                    // Redirect to payment prompt page with listing ID
+                    router.push(`/listing-created?listing_id=${result.listingId}`)
+                } else {
+                    router.push('/dashboard?success=true')
+                    router.refresh()
+                }
             }
-            router.refresh()
         } catch (err: any) {
             console.error('Submission error:', err)
             setError(err.message)
@@ -98,8 +104,8 @@ export default function ListingForm({ initialData, categories, states, isEditing
     return (
         <div className="bg-white shadow rounded-lg overflow-hidden">
             {/* Tabs */}
-            <div className="border-b border-gray-200">
-                <nav className="-mb-px flex">
+            <div className="border-b border-gray-200 overflow-x-auto">
+                <nav className="-mb-px flex min-w-max">
                     {['basic', 'media', 'contact', 'hours'].map((tab) => (
                         <button
                             key={tab}
@@ -107,15 +113,15 @@ export default function ListingForm({ initialData, categories, states, isEditing
                             className={`${activeTab === tab
                                 ? 'border-green-500 text-green-600'
                                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                                } w-1/4 py-4 px-1 text-center border-b-2 font-medium text-sm capitalize`}
+                                } flex-1 min-w-[80px] py-3 sm:py-4 px-2 sm:px-4 text-center border-b-2 font-medium text-xs sm:text-sm capitalize whitespace-nowrap`}
                         >
-                            {tab} Info
+                            {tab}
                         </button>
                     ))}
                 </nav>
             </div>
 
-            <form onSubmit={handleSubmit} className="p-6 space-y-6">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-6">
                 {/* Basic Info Tab */}
                 <div className={activeTab === 'basic' ? 'block' : 'hidden'} data-tab="basic">
                     <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
