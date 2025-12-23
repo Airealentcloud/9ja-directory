@@ -1,6 +1,12 @@
 // Paystack API helper functions
 
-const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY!
+function getPaystackSecretKey() {
+    const key = process.env.PAYSTACK_SECRET_KEY
+    if (!key) {
+        throw new Error('Missing PAYSTACK_SECRET_KEY env var')
+    }
+    return key
+}
 const PAYSTACK_BASE_URL = 'https://api.paystack.co'
 
 export interface PaystackInitializeResponse {
@@ -91,6 +97,7 @@ export function generateReference(): string {
 
 // Initialize a payment transaction
 export async function initializePayment(params: InitializePaymentParams): Promise<PaystackInitializeResponse> {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const response = await fetch(`${PAYSTACK_BASE_URL}/transaction/initialize`, {
         method: 'POST',
         headers: {
@@ -117,6 +124,7 @@ export async function initializePayment(params: InitializePaymentParams): Promis
 
 // Verify a payment transaction
 export async function verifyPayment(reference: string): Promise<PaystackVerifyResponse> {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const response = await fetch(`${PAYSTACK_BASE_URL}/transaction/verify/${reference}`, {
         method: 'GET',
         headers: {
@@ -139,6 +147,7 @@ export async function createPlan(params: {
     interval: 'hourly' | 'daily' | 'weekly' | 'monthly' | 'annually'
     amount: number // in kobo
 }): Promise<{ status: boolean; data: { plan_code: string } }> {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const response = await fetch(`${PAYSTACK_BASE_URL}/plan`, {
         method: 'POST',
         headers: {
@@ -162,6 +171,7 @@ export async function createSubscription(params: {
     plan: string // plan code
     authorization?: string // authorization code for automatic charge
 }): Promise<{ status: boolean; data: { subscription_code: string } }> {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const response = await fetch(`${PAYSTACK_BASE_URL}/subscription`, {
         method: 'POST',
         headers: {
@@ -181,6 +191,7 @@ export async function createSubscription(params: {
 
 // Verify webhook signature
 export function verifyWebhookSignature(payload: string, signature: string): boolean {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const crypto = require('crypto')
     const hash = crypto
         .createHmac('sha512', PAYSTACK_SECRET_KEY)
@@ -191,6 +202,7 @@ export function verifyWebhookSignature(payload: string, signature: string): bool
 
 // Get list of banks for bank transfer
 export async function getBanks(): Promise<{ status: boolean; data: Array<{ name: string; code: string }> }> {
+    const PAYSTACK_SECRET_KEY = getPaystackSecretKey()
     const response = await fetch(`${PAYSTACK_BASE_URL}/bank`, {
         method: 'GET',
         headers: {
