@@ -23,12 +23,7 @@ export default function SignupPage() {
         try {
             const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
             const runtimeBaseUrl = window.location.origin.replace(/\/$/, '')
-            const isLocal =
-                runtimeBaseUrl.includes('localhost') ||
-                runtimeBaseUrl.includes('127.0.0.1') ||
-                runtimeBaseUrl.includes('0.0.0.0')
-
-            const baseUrl = isLocal && configuredBaseUrl ? configuredBaseUrl : runtimeBaseUrl
+            const baseUrl = configuredBaseUrl || runtimeBaseUrl
             const { error } = await supabase.auth.signUp({
                 email,
                 password,
