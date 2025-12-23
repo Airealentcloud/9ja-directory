@@ -75,6 +75,8 @@ A modern, full-featured business directory website for Nigerian businesses built
    - `NEXT_PUBLIC_SUPABASE_URL`
    - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY` (required for admin import + send-emails API routes)
+   - `NEXT_PUBLIC_SITE_URL` (your production URL, used for payment callbacks)
+   - `PAYSTACK_SECRET_KEY` (required for payments)
 
 ## License
 

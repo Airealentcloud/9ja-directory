@@ -3,7 +3,9 @@
 function getPaystackSecretKey() {
     const key = process.env.PAYSTACK_SECRET_KEY
     if (!key) {
-        throw new Error('Missing PAYSTACK_SECRET_KEY env var')
+        throw new Error(
+            'Payments are not configured (missing PAYSTACK_SECRET_KEY). Set it in your deployment environment variables and redeploy.'
+        )
     }
     return key
 }
