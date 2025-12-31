@@ -15,7 +15,12 @@ interface CategoryPageProps {
   params: Promise<{
     categorySlug: string
   }>
+  searchParams: Promise<{
+    page?: string
+  }>
 }
+
+const LISTINGS_PER_PAGE = 12
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: { params: Promise<{ categorySlug: string }> }): Promise<Metadata> {
@@ -83,8 +88,10 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   }
 }
 
-export default async function CategoryPage({ params }: { params: Promise<{ categorySlug: string }> }) {
+export default async function CategoryPage({ params, searchParams }: CategoryPageProps) {
   const { categorySlug: slug } = await params
+  const { page: pageParam } = await searchParams
+  const currentPage = Math.max(1, parseInt(pageParam || '1', 10))
   const supabase = await createClient()
 
   // Fetch category details
@@ -98,7 +105,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     notFound()
   }
 
-  // Fetch listings for this category
+  // Get total count for pagination
+  const { count: totalCount } = await supabase
+    .from('listings')
+    .select('*', { count: 'exact', head: true })
+    .eq('category_id', category.id)
+    .eq('status', 'approved')
+
+  const totalPages = Math.ceil((totalCount || 0) / LISTINGS_PER_PAGE)
+  const offset = (currentPage - 1) * LISTINGS_PER_PAGE
+
+  // Fetch paginated listings for this category
   const { data: listings, error: listingsError } = await supabase
     .from('listings')
     .select(
@@ -117,6 +134,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     .eq('category_id', category.id)
     .eq('status', 'approved')
     .order('created_at', { ascending: false })
+    .range(offset, offset + LISTINGS_PER_PAGE - 1)
 
   // Defensive filter to prevent accidental cross-category bleed
   const filteredListings =
@@ -126,13 +144,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const categoryContent = getCategoryContent(slug)
   const seoContent = getCategorySEOContent(slug)
 
-  // Count total listings
-  const totalCount = filteredListings.length
-
   // Generate schema markup
-  const itemListSchema = generateCategoryItemListSchema(category, filteredListings, totalCount)
+  const itemListSchema = generateCategoryItemListSchema(category, filteredListings, totalCount || 0)
   const breadcrumbSchema = generateCategoryBreadcrumbSchema(category)
-  const collectionSchema = generateCategoryCollectionSchema(category, totalCount)
+  const collectionSchema = generateCategoryCollectionSchema(category, totalCount || 0)
   const faqSchema = seoContent?.faqs
     ? {
         '@context': 'https://schema.org',
@@ -198,7 +213,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   </p>
                 )}
                 <div className="mt-4 text-green-100">
-                  <span className="font-semibold">{totalCount || 0}</span> {totalCount === 1 ? 'business' : 'businesses'} found
+                  <span className="font-semibold">{totalCount || 0}</span> {(totalCount || 0) === 1 ? 'business' : 'businesses'} found
+                  {totalPages > 1 && (
+                    <span className="ml-2">• Page {currentPage} of {totalPages}</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -444,12 +462,78 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 </div>
               )}
 
-              {/* Pagination placeholder */}
-              {listings && listings.length >= 50 && (
-                <div className="mt-8 text-center">
-                  <button className="px-6 py-3 bg-white border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-                    Load More
-                  </button>
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="mt-8 flex items-center justify-center gap-2">
+                  {/* Previous Page */}
+                  {currentPage > 1 ? (
+                    <Link
+                      href={`/categories/${category.slug}${currentPage > 2 ? `?page=${currentPage - 1}` : ''}`}
+                      className="px-4 py-2 bg-white border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-1"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Previous
+                    </Link>
+                  ) : (
+                    <span className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg font-medium text-gray-400 flex items-center gap-1 cursor-not-allowed">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Previous
+                    </span>
+                  )}
+
+                  {/* Page Numbers */}
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                      let pageNum: number
+                      if (totalPages <= 5) {
+                        pageNum = i + 1
+                      } else if (currentPage <= 3) {
+                        pageNum = i + 1
+                      } else if (currentPage >= totalPages - 2) {
+                        pageNum = totalPages - 4 + i
+                      } else {
+                        pageNum = currentPage - 2 + i
+                      }
+
+                      return (
+                        <Link
+                          key={pageNum}
+                          href={`/categories/${category.slug}${pageNum > 1 ? `?page=${pageNum}` : ''}`}
+                          className={`w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-colors ${
+                            currentPage === pageNum
+                              ? 'bg-green-600 text-white'
+                              : 'bg-white border border-gray-300 hover:bg-gray-50'
+                          }`}
+                        >
+                          {pageNum}
+                        </Link>
+                      )
+                    })}
+                  </div>
+
+                  {/* Next Page */}
+                  {currentPage < totalPages ? (
+                    <Link
+                      href={`/categories/${category.slug}?page=${currentPage + 1}`}
+                      className="px-4 py-2 bg-white border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-1"
+                    >
+                      Next
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  ) : (
+                    <span className="px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg font-medium text-gray-400 flex items-center gap-1 cursor-not-allowed">
+                      Next
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  )}
                 </div>
               )}
 

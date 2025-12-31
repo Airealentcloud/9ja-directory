@@ -5,6 +5,8 @@ import Link from 'next/link'
 import AuthButton from '@/components/auth-button'
 import NavLink from '@/components/nav-link'
 import MobileNav from '@/components/mobile-nav'
+import NewsletterSignup from '@/components/newsletter-signup'
+import GoogleAnalytics from '@/components/google-analytics'
 import { createClient } from '@/lib/supabase/server'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -68,6 +70,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <GoogleAnalytics />
         <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
@@ -100,10 +103,11 @@ export default async function RootLayout({
         <main>{children}</main>
         <footer className="bg-gray-900 text-white mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+              <div className="lg:col-span-2">
                 <h3 className="text-xl font-bold mb-4">9jaDirectory</h3>
-                <p className="text-gray-400">Your trusted Nigerian business directory connecting local businesses with customers nationwide</p>
+                <p className="text-gray-400 mb-6">Your trusted Nigerian business directory connecting local businesses with customers nationwide</p>
+                <NewsletterSignup />
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Company</h4>

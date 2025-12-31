@@ -3,6 +3,7 @@ type SendEmailInput = {
   subject: string
   text: string
   html?: string
+  replyTo?: string
 }
 
 function getResendApiKey() {
@@ -39,6 +40,7 @@ export async function sendEmail(input: SendEmailInput) {
       subject: input.subject,
       text: input.text,
       html: input.html ?? textToHtml(input.text),
+      ...(input.replyTo && { reply_to: input.replyTo }),
     }),
     cache: 'no-store',
   })

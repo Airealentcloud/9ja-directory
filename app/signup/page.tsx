@@ -37,6 +37,16 @@ export default function SignupPage() {
 
             if (error) throw error
 
+            // Notify admin of new signup (fire and forget)
+            fetch('/api/notifications', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type: 'new_signup',
+                    data: { email, fullName }
+                })
+            }).catch(console.error)
+
             setSuccess(true)
         } catch (err: any) {
             setError(err.message)

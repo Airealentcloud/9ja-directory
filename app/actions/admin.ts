@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { notifyCustomerListingApproved, notifyCustomerListingRejected } from '@/lib/email/notifications'
 
 // Helper to check if user is admin
 // Helper to check if user is admin
@@ -151,6 +152,16 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
 export async function approveListingServer(id: string) {
     const supabase = await checkAdmin()
 
+    // Get listing with owner details before approving
+    const { data: listing } = await supabase
+        .from('listings')
+        .select(`
+            id, business_name, slug,
+            profiles!listings_user_id_fkey(email, full_name)
+        `)
+        .eq('id', id)
+        .single()
+
     const { data, error } = await supabase
         .from('listings')
         .update({
@@ -161,12 +172,36 @@ export async function approveListingServer(id: string) {
         .select()
 
     if (error) return { error }
+
+    // Send notification to customer
+    if (listing) {
+        const profile = listing.profiles as any
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
+        notifyCustomerListingApproved({
+            businessName: listing.business_name,
+            ownerEmail: profile?.email,
+            ownerName: profile?.full_name,
+            listingUrl: `${siteUrl}/listings/${listing.slug}`
+        }).catch(console.error)
+    }
+
     revalidatePath('/admin/listings')
     return { data }
 }
 
 export async function rejectListingServer(id: string, reason: string) {
     const supabase = await checkAdmin()
+
+    // Get listing with owner details before rejecting
+    const { data: listing } = await supabase
+        .from('listings')
+        .select(`
+            id, business_name,
+            profiles!listings_user_id_fkey(email, full_name)
+        `)
+        .eq('id', id)
+        .single()
 
     const { data, error } = await supabase
         .from('listings')
@@ -178,6 +213,19 @@ export async function rejectListingServer(id: string, reason: string) {
         .select()
 
     if (error) return { error }
+
+    // Send notification to customer
+    if (listing) {
+        const profile = listing.profiles as any
+
+        notifyCustomerListingRejected({
+            businessName: listing.business_name,
+            ownerEmail: profile?.email,
+            ownerName: profile?.full_name,
+            rejectionReason: reason
+        }).catch(console.error)
+    }
+
     revalidatePath('/admin/listings')
     return { data }
 }

@@ -50,14 +50,22 @@ export default async function Home() {
     .select('name, slug')
     .order('name', { ascending: true })
 
-  // Fetch featured listings (show approved listings, prioritize featured ones)
-  const { data: featuredListings } = await supabase
+  // Fetch featured/promoted listings (businesses that paid for promotion)
+  const { data: promotedListings } = await supabase
     .from('listings')
     .select('id, business_name, slug, category_id, categories(name), state_id, states(name), image_url, description, featured')
     .eq('status', 'approved')
-    .order('featured', { ascending: false })
+    .eq('featured', true)
     .order('created_at', { ascending: false })
     .limit(6)
+
+  // Fetch recently added listings (newest first)
+  const { data: recentListings } = await supabase
+    .from('listings')
+    .select('id, business_name, slug, category_id, categories(name), state_id, states(name), image_url, description, featured, created_at')
+    .eq('status', 'approved')
+    .order('created_at', { ascending: false })
+    .limit(8)
 
   const { count: totalListings } = await supabase
     .from('listings')
@@ -161,21 +169,88 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Featured Listings */}
+        {/* Promoted Businesses Spotlight */}
+        {promotedListings && promotedListings.length > 0 && (
+          <section className="bg-gradient-to-r from-amber-50 to-orange-50 py-16 border-y border-amber-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <span className="text-2xl">⭐</span>
+                <h2 className="text-3xl font-bold text-center">Promoted Businesses</h2>
+                <span className="text-2xl">⭐</span>
+              </div>
+              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Premium businesses trusted by thousands of Nigerians
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {promotedListings.map((listing) => (
+                  <Link
+                    key={listing.id}
+                    href={`/listings/${listing.slug}`}
+                    className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group border-2 border-amber-300"
+                  >
+                    <div className="h-48 bg-gray-200 relative overflow-hidden">
+                      {listing.image_url ? (
+                        <img
+                          src={listing.image_url}
+                          alt={listing.business_name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-5xl">
+                          🏢
+                        </div>
+                      )}
+                      <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <span>⭐</span> Promoted
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <h3 className="font-bold text-lg mb-2 text-gray-900">{listing.business_name}</h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        {Array.isArray(listing.categories) && listing.categories.length > 0
+                          ? listing.categories[0].name
+                          : 'Business'}
+                      </p>
+                      <p className="text-sm text-gray-500 flex items-center">
+                        <span className="mr-1">📍</span>
+                        {Array.isArray(listing.states) && listing.states.length > 0
+                          ? listing.states[0].name
+                          : 'Nigeria'}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all font-semibold"
+                >
+                  <span>⭐</span> Promote Your Business
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Recently Added Listings */}
         <section className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-4">Featured Businesses</h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="text-2xl">🆕</span>
+              <h2 className="text-3xl font-bold text-center">Recently Added</h2>
+            </div>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              High-quality businesses trusted by thousands of Nigerians
+              Discover the newest businesses on 9jaDirectory
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(featuredListings || []).slice(0, 6).map((listing) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {(recentListings || []).map((listing) => (
                 <Link
                   key={listing.id}
                   href={`/listings/${listing.slug}`}
                   className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
                 >
-                  <div className="h-48 bg-gray-200 relative overflow-hidden">
+                  <div className="h-40 bg-gray-200 relative overflow-hidden">
                     {listing.image_url ? (
                       <img
                         src={listing.image_url}
@@ -183,22 +258,27 @@ export default async function Home() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-5xl">
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-4xl">
                         🏢
                       </div>
                     )}
-                    <div className="absolute top-2 right-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-semibold">
-                      Featured
+                    {listing.featured && (
+                      <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-0.5 rounded text-xs font-semibold">
+                        ⭐ Promoted
+                      </div>
+                    )}
+                    <div className="absolute bottom-2 left-2 bg-green-600 text-white px-2 py-0.5 rounded text-xs font-medium">
+                      New
                     </div>
                   </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-lg mb-2 text-gray-900">{listing.business_name}</h3>
-                    <p className="text-sm text-gray-600 mb-2">
+                  <div className="p-4">
+                    <h3 className="font-bold text-base mb-1 text-gray-900 truncate">{listing.business_name}</h3>
+                    <p className="text-xs text-gray-600 mb-1">
                       {Array.isArray(listing.categories) && listing.categories.length > 0
                         ? listing.categories[0].name
                         : 'Business'}
                     </p>
-                    <p className="text-sm text-gray-500 flex items-center">
+                    <p className="text-xs text-gray-500 flex items-center">
                       <span className="mr-1">📍</span>
                       {Array.isArray(listing.states) && listing.states.length > 0
                         ? listing.states[0].name
@@ -207,6 +287,14 @@ export default async function Home() {
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/search"
+                className="inline-block px-6 py-3 text-green-600 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors font-semibold"
+              >
+                Browse All Businesses
+              </Link>
             </div>
           </div>
         </section>
@@ -360,10 +448,10 @@ export default async function Home() {
               Join thousands of businesses already listed on 9jaDirectory
             </p>
             <Link
-              href="/add-business"
+              href="/pricing"
               className="inline-block px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors"
             >
-              List Your Business - It's Free!
+              List Your Business Today
             </Link>
           </div>
         </section>

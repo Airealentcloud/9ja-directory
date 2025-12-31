@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { notifyAdminNewListing } from '@/lib/email/notifications'
 
 type SupabaseErrorLike = {
     message?: string
@@ -94,10 +95,22 @@ export async function createListing(formData: FormData) {
 
     let lastError: SupabaseErrorLike | null = null
     for (let attempt = 0; attempt < 10; attempt++) {
-        const { data: insertedData, error } = await supabase.from('listings').insert(rawData).select('id').single()
+        const { data: insertedData, error } = await supabase.from('listings').insert(rawData).select('id, business_name, city').single()
         if (!error && insertedData) {
             lastError = null
             revalidatePath('/dashboard')
+
+            // Notify admin of new listing (fire and forget)
+            notifyAdminNewListing({
+                listingId: insertedData.id,
+                businessName: insertedData.business_name,
+                ownerEmail: user.email || 'Unknown',
+                ownerName: user.user_metadata?.full_name,
+                city: insertedData.city,
+                category: rawData.category_id as string,
+                submittedAt: new Date()
+            }).catch(console.error)
+
             return { success: true, listingId: insertedData.id }
         }
 
