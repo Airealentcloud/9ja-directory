@@ -130,7 +130,8 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         .select(`
             *,
             categories (name),
-            profiles (full_name, email)
+            profiles (full_name, email),
+            payments (status, reference, created_at, paid_at)
         `)
         .order('created_at', { ascending: false })
 
@@ -145,8 +146,26 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         throw error
     }
 
-    console.log(`Admin listings fetch result: Found ${data?.length || 0} listings`)
-    return data
+    const normalized = (data || []).map((listing: any) => {
+        const payments = Array.isArray(listing.payments) ? listing.payments : []
+        const latestPayment = payments.reduce((latest: any, current: any) => {
+            if (!latest) return current
+            const latestTime = new Date(latest.created_at || 0).getTime()
+            const currentTime = new Date(current.created_at || 0).getTime()
+            return currentTime > latestTime ? current : latest
+        }, null as any)
+
+        return {
+            ...listing,
+            payment_status: latestPayment?.status ?? 'none',
+            payment_reference: latestPayment?.reference ?? null,
+            payment_created_at: latestPayment?.created_at ?? null,
+            payment_paid_at: latestPayment?.paid_at ?? null,
+        }
+    })
+
+    console.log(`Admin listings fetch result: Found ${normalized.length} listings`)
+    return normalized
 }
 
 export async function approveListingServer(id: string) {
@@ -161,6 +180,18 @@ export async function approveListingServer(id: string) {
         `)
         .eq('id', id)
         .single()
+
+    const { data: latestPayment } = await supabase
+        .from('payments')
+        .select('status, reference, created_at')
+        .eq('listing_id', id)
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .maybeSingle()
+
+    if (!latestPayment || latestPayment.status !== 'success') {
+        return { error: { message: 'Payment not completed for this listing.' } }
+    }
 
     const { data, error } = await supabase
         .from('listings')

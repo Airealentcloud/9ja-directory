@@ -59,6 +59,37 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // 5. Category + State Pages (New - HIGH PRIORITY for local SEO)
     // These 540+ dynamic pages target searches like "restaurants in Lagos", "salons in Abuja", etc.
+    const hasCategories = (categories || []).length > 0
+    const hasStates = (states || []).length > 0
+
+    const fallbackCategoryUrls = hasCategories
+        ? []
+        : [
+              {
+                  url: `${baseUrl}/categories/real-estate`,
+                  lastModified: new Date(),
+                  changeFrequency: 'weekly' as const,
+                  priority: 0.8,
+              },
+          ]
+
+    const fallbackStateUrls = hasStates
+        ? []
+        : [
+              {
+                  url: `${baseUrl}/states/lagos`,
+                  lastModified: new Date(),
+                  changeFrequency: 'weekly' as const,
+                  priority: 0.8,
+              },
+              {
+                  url: `${baseUrl}/states/fct`,
+                  lastModified: new Date(),
+                  changeFrequency: 'weekly' as const,
+                  priority: 0.8,
+              },
+          ]
+
     const categoryStateUrls = (categories || []).flatMap((category: any) =>
         (states || []).map((state: any) => ({
             url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
@@ -67,6 +98,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8, // High priority - these pages target high-volume keywords
         }))
     )
+
+    const fallbackCategoryStateUrls = hasCategories && hasStates
+        ? []
+        : [
+              {
+                  url: `${baseUrl}/categories/real-estate/lagos`,
+                  lastModified: new Date(),
+                  changeFrequency: 'weekly' as const,
+                  priority: 0.8,
+              },
+              {
+                  url: `${baseUrl}/categories/real-estate/fct`,
+                  lastModified: new Date(),
+                  changeFrequency: 'weekly' as const,
+                  priority: 0.8,
+              },
+          ]
 
     // 6. Listings (Approved only)
     // Fetching only necessary fields to minimize payload
@@ -83,5 +131,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.6,
     }))
 
-    return [...routes, ...blogUrls, ...categoryUrls, ...stateUrls, ...categoryStateUrls, ...listingUrls]
+    return [
+        ...routes,
+        ...blogUrls,
+        ...categoryUrls,
+        ...fallbackCategoryUrls,
+        ...stateUrls,
+        ...fallbackStateUrls,
+        ...categoryStateUrls,
+        ...fallbackCategoryStateUrls,
+        ...listingUrls,
+    ]
 }

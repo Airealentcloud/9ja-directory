@@ -11,6 +11,7 @@ export async function generateMetadata({
   params: Promise<{ categorySlug: string; stateSlug: string }>
 }): Promise<Metadata> {
   const { categorySlug, stateSlug } = await params
+  const isRealEstate = categorySlug === 'real-estate'
   const supabase = await createClient()
 
   const { data: category } = await supabase
@@ -30,23 +31,39 @@ export async function generateMetadata({
   }
 
   const categoryName = category.name
-  const stateName = state.name
+  const stateDisplayName = stateSlug === 'fct' ? 'Abuja' : state.name
+  const stateLongName = stateSlug === 'fct' ? 'Abuja (FCT)' : state.name
 
   // ✅ OPTIMIZED FOR LOCAL KEYWORDS WITH MODIFIERS
-  const title = `Best ${categoryName} in ${stateName} | Top Rated ${categoryName} ${stateName} 2025 | 9jaDirectory`
-  const description = `Find the best verified ${categoryName} in ${stateName}. Compare ratings, prices, and contact details. Browse top-rated ${categoryName} near you on 9jaDirectory. Updated 2025.`
+  const title = isRealEstate
+    ? `Best Real Estate Companies in ${stateDisplayName} | Top Rated Real Estate ${stateDisplayName} 2025 | 9jaDirectory`
+    : `Best ${categoryName} in ${stateDisplayName} | Top Rated ${categoryName} ${stateDisplayName} 2025 | 9jaDirectory`
+  const description = isRealEstate
+    ? `Find the best real estate companies in ${stateLongName}. Compare verified agencies, developers, and agents with reviews and contact details on 9jaDirectory.`
+    : `Find the best verified ${categoryName} in ${stateLongName}. Compare ratings, prices, and contact details. Browse top-rated ${categoryName} near you on 9jaDirectory. Updated 2025.`
   
-  const keywords = [
-    `${categoryName} in ${stateName}`,
-    `best ${categoryName} in ${stateName}`,
-    `${categoryName} near me ${stateName}`,
-    `top rated ${categoryName} ${stateName}`,
-    `verified ${categoryName} ${stateName}`,
-    `${stateName} ${categoryName} directory`,
-    `${categoryName} ${stateName} 2025`,
-    `where to find ${categoryName} ${stateName}`,
-    `${categoryName} services ${stateName}`,
-  ]
+  const keywords = isRealEstate
+    ? [
+        `real estate companies in ${stateDisplayName}`,
+        `best real estate company in ${stateDisplayName}`,
+        `real estate agencies in ${stateDisplayName}`,
+        `property developers in ${stateDisplayName}`,
+        `real estate directory ${stateDisplayName}`,
+        `real estate ${stateDisplayName} 2025`,
+        `top real estate ${stateDisplayName}`,
+        `real estate agents ${stateDisplayName}`,
+      ]
+    : [
+        `${categoryName} in ${stateDisplayName}`,
+        `best ${categoryName} in ${stateDisplayName}`,
+        `${categoryName} near me ${stateDisplayName}`,
+        `top rated ${categoryName} ${stateDisplayName}`,
+        `verified ${categoryName} ${stateDisplayName}`,
+        `${stateDisplayName} ${categoryName} directory`,
+        `${categoryName} ${stateDisplayName} 2025`,
+        `where to find ${categoryName} ${stateDisplayName}`,
+        `${categoryName} services ${stateDisplayName}`,
+      ]
 
   return {
     title,
@@ -89,6 +106,7 @@ export default async function CategoryStateListingPage({
   params: Promise<{ categorySlug: string; stateSlug: string }>
 }) {
   const { categorySlug, stateSlug } = await params
+  const isRealEstate = categorySlug === 'real-estate'
   const supabase = await createClient()
 
   // Fetch category
@@ -109,6 +127,13 @@ export default async function CategoryStateListingPage({
     notFound()
   }
 
+  const stateDisplayName = state.slug === 'fct' ? 'Abuja' : state.name
+  const stateLongName = state.slug === 'fct' ? 'Abuja (FCT)' : state.name
+  const categoryLabel = isRealEstate ? 'Real Estate Companies' : category.name
+  const categoryLabelLower = isRealEstate ? 'real estate companies' : category.name.toLowerCase()
+
+
+
   // ✅ FETCH LISTINGS FOR THIS CATEGORY + STATE COMBINATION
   const { data: listings, count: totalCount } = await supabase
     .from('listings')
@@ -117,6 +142,7 @@ export default async function CategoryStateListingPage({
     .eq('state_id', state.id)
     .eq('status', 'approved')
     .order('featured', { ascending: false })
+    .order('average_rating', { ascending: false, nullsFirst: false })
     .order('created_at', { ascending: false })
     .limit(30) // Show top 30, with load more option
 
@@ -126,14 +152,16 @@ export default async function CategoryStateListingPage({
     : 'N/A'
 
   const verified = listings?.filter(l => l.verified).length || 0
+  const topListing = listings && listings.length > 0 ? listings[0] : null
+  const topRating = topListing ? Number((topListing as any).average_rating) : Number.NaN
 
   // ✅ COLLECTION PAGE SCHEMA FOR BETTER INDEXING
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     '@id': `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}#page`,
-    name: `Best ${category.name} in ${state.name}`,
-    description: `Directory of verified ${category.name} in ${state.name}`,
+    name: `Best ${categoryLabel} in ${stateDisplayName}`,
+    description: `Directory of verified ${categoryLabelLower} in ${stateLongName}`,
     url: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
     image: 'https://9jadirectory.org/opengraph-image',
     dateModified: new Date().toISOString(),
@@ -146,7 +174,7 @@ export default async function CategoryStateListingPage({
       '@type': 'LocalBusiness',
       areaServed: {
         '@type': 'State',
-        name: state.name,
+        name: stateDisplayName,
         addressCountry: 'NG',
       },
     },
@@ -172,19 +200,19 @@ export default async function CategoryStateListingPage({
       {
         '@type': 'ListItem',
         position: 3,
-        name: category.name,
+        name: categoryLabel,
         item: `https://9jadirectory.org/categories/${categorySlug}`,
       },
       {
         '@type': 'ListItem',
         position: 4,
-        name: state.name,
+        name: stateDisplayName,
         item: `https://9jadirectory.org/states/${stateSlug}`,
       },
       {
         '@type': 'ListItem',
         position: 5,
-        name: `${category.name} in ${state.name}`,
+        name: `${categoryLabel} in ${stateDisplayName}`,
         item: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
       },
     ],
@@ -204,10 +232,10 @@ export default async function CategoryStateListingPage({
               <span className="text-5xl">{category.icon || '🏢'}</span>
               <div>
                 <h1 className="text-3xl md:text-5xl font-bold">
-                  Best {category.name} in {state.name}
+                  Best {categoryLabel} in {stateDisplayName}
                 </h1>
                 <p className="text-green-100 mt-2">
-                  Discover verified {category.name.toLowerCase()} with real ratings & reviews
+                  Discover verified {categoryLabelLower} with real ratings & reviews
                 </p>
               </div>
             </div>
@@ -219,7 +247,7 @@ export default async function CategoryStateListingPage({
           <div className="bg-white rounded-lg shadow-lg p-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-600">{totalCount}</div>
-              <div className="text-sm text-gray-600 mt-1">Verified {category.name}</div>
+              <div className="text-sm text-gray-600 mt-1">Verified {categoryLabel}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-500">{avgRating}</div>
@@ -236,19 +264,60 @@ export default async function CategoryStateListingPage({
           </div>
         </section>
 
+        {isRealEstate && topListing && (
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div>
+                  <p className="text-sm uppercase tracking-wide text-green-600 font-semibold">
+                    Top Rated in {stateDisplayName}
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
+                    Best Real Estate Company in {stateDisplayName}
+                  </h2>
+                  <p className="text-gray-700 mt-3">
+                    {topListing.business_name}
+                    {topListing.description ? ` - ${topListing.description}` : '.'}
+                  </p>
+                </div>
+                {topListing.verified && (
+                  <span className="inline-flex items-center gap-2 bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">
+                    Verified
+                  </span>
+                )}
+              </div>
+              <div className="mt-5 flex flex-wrap gap-4 text-sm text-gray-600">
+                {Number.isFinite(topRating) && (
+                  <div>Rating: {topRating.toFixed(1)} / 5</div>
+                )}
+                {topListing.city && <div>City: {topListing.city}</div>}
+              </div>
+              <div className="mt-6">
+                <Link
+                  href={`/listings/${topListing.slug}`}
+                  className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                >
+                  View {topListing.business_name}
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+
         {/* ✅ RICH DESCRIPTION FOR SEO */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-lg shadow-md p-8 mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Looking for the Best {category.name} in {state.name}?
+              Looking for the Best {categoryLabel} in {stateDisplayName}?
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              9jaDirectory has curated a comprehensive list of verified {category.name.toLowerCase()} across {state.name}. 
+              9jaDirectory has curated a comprehensive list of verified {categoryLabelLower} across {stateLongName}. 
               Whether you are looking for highly-rated establishments, affordable options, or specialty services, 
-              you will find what you need in our directory of {totalCount}+ {category.name.toLowerCase()}.
+              you will find what you need in our directory of {totalCount}+ {categoryLabelLower}.
             </p>
             
-            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">✅ Why Choose These {category.name}?</h3>
+            <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">✅ Why Choose These {categoryLabel}?</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
@@ -281,13 +350,13 @@ export default async function CategoryStateListingPage({
         {/* ✅ LISTINGS GRID */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-            Browse {totalCount} {category.name} in {state.name}
+            Browse {totalCount} {categoryLabel} in {stateDisplayName}
           </h2>
           
           {!listings || listings.length === 0 ? (
             <div className="text-center py-12 bg-white rounded-lg">
               <p className="text-gray-600 text-lg">
-                No {category.name.toLowerCase()} found in {state.name} yet.
+                No {categoryLabelLower} found in {stateDisplayName} yet.
               </p>
               <p className="text-gray-500 mt-2 mb-6">
                 Be the first to list your business!
@@ -366,29 +435,29 @@ export default async function CategoryStateListingPage({
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              Frequently Asked Questions About {category.name} in {state.name}
+              Frequently Asked Questions About {categoryLabel} in {stateDisplayName}
             </h2>
             
             <div className="space-y-6">
               {[
                 {
-                  q: `Where can I find the best ${category.name.toLowerCase()} in ${state.name}?`,
-                  a: `9jaDirectory has a comprehensive list of verified ${category.name.toLowerCase()} in ${state.name}. Simply browse the listings above, sorted by rating and popularity.`,
+                  q: `Where can I find the best ${categoryLabelLower} in ${stateDisplayName}?`,
+                  a: `9jaDirectory has a comprehensive list of verified ${categoryLabelLower} in ${stateDisplayName}. Simply browse the listings above, sorted by rating and popularity.`,
                 },
                 {
-                  q: `How are ${category.name.toLowerCase()} rated on 9jaDirectory?`,
-                  a: `All ${category.name.toLowerCase()} are rated on a 5-star scale by real customers. Ratings are based on verified reviews from actual users who have used their services.`,
+                  q: `How are ${categoryLabelLower} rated on 9jaDirectory?`,
+                  a: `All ${categoryLabelLower} are rated on a 5-star scale by real customers. Ratings are based on verified reviews from actual users who have used their services.`,
                 },
                 {
-                  q: `Can I contact ${category.name.toLowerCase()} directly through 9jaDirectory?`,
+                  q: `Can I contact ${categoryLabelLower} directly through 9jaDirectory?`,
                   a: `Yes! Each listing includes phone numbers, email addresses, and direct messaging options. You can reach out to businesses directly to inquire about their services and pricing.`,
                 },
                 {
-                  q: `Are all ${category.name.toLowerCase()} on this list verified?`,
+                  q: `Are all ${categoryLabelLower} on this list verified?`,
                   a: `Yes, all businesses are verified with active contact information and operating details. We ensure only legitimate, verified businesses appear in our directory.`,
                 },
                 {
-                  q: `How often is the ${category.name.toLowerCase()} directory updated?`,
+                  q: `How often is the ${categoryLabelLower} directory updated?`,
                   a: `Our directory is updated daily with new listings and ratings. We regularly verify business information to ensure accuracy and relevance.`,
                 },
               ].map((item, idx) => (
@@ -410,13 +479,13 @@ export default async function CategoryStateListingPage({
                 href={`/categories/${categorySlug}`}
                 className="bg-white p-4 rounded-lg hover:shadow-lg transition-shadow text-green-600 hover:text-green-700 font-semibold"
               >
-                ← All {category.name} in Nigeria
+                ← All {categoryLabel} in Nigeria
               </Link>
               <Link
                 href={`/states/${stateSlug}`}
                 className="bg-white p-4 rounded-lg hover:shadow-lg transition-shadow text-blue-600 hover:text-blue-700 font-semibold"
               >
-                ← All Businesses in {state.name}
+                ← All Businesses in {stateDisplayName}
               </Link>
               <Link
                 href="/categories"

@@ -16,6 +16,20 @@ const nextConfig = {
             },
         ],
     },
+    async redirects() {
+        return [
+            {
+                source: '/categories/:categorySlug/abuja',
+                destination: '/categories/:categorySlug/fct',
+                permanent: true,
+            },
+            {
+                source: '/states/abuja',
+                destination: '/states/fct',
+                permanent: true,
+            },
+        ]
+    },
 };
 
 module.exports = nextConfig;

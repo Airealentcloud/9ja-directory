@@ -17,6 +17,10 @@ type Listing = {
     address?: string
     category_id?: string
     rejection_reason?: string
+    payment_status?: string
+    payment_reference?: string | null
+    payment_created_at?: string | null
+    payment_paid_at?: string | null
     categories?: {
         name: string
     }
@@ -34,6 +38,7 @@ export default function AdminListingsPage() {
     const [rejectionReason, setRejectionReason] = useState('')
     const [searchQuery, setSearchQuery] = useState('')
     const [statusFilter, setStatusFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('pending')
+    const [paymentFilter, setPaymentFilter] = useState<'all' | 'success' | 'pending' | 'failed' | 'abandoned' | 'none'>('success')
     const [processingId, setProcessingId] = useState<string | null>(null)
     const supabase = createClient()
 
@@ -102,10 +107,43 @@ export default function AdminListingsPage() {
                 }
             }
 
-            // 3. Combine data
+            // 3. Fetch payments separately (may be blocked by RLS for non-admin users)
+            const listingIds = Array.from(new Set(listingsData.map(l => l.id)))
+            let paymentsMap: Record<string, any> = {}
+
+            if (listingIds.length > 0) {
+                const { data: paymentsData, error: paymentsError } = await supabase
+                    .from('payments')
+                    .select('listing_id, status, reference, created_at, paid_at')
+                    .in('listing_id', listingIds)
+
+                if (paymentsData && !paymentsError) {
+                    paymentsData.forEach((payment: any) => {
+                        if (!payment.listing_id) return
+                        const existing = paymentsMap[payment.listing_id]
+                        if (!existing) {
+                            paymentsMap[payment.listing_id] = payment
+                            return
+                        }
+                        const existingTime = new Date(existing.created_at || 0).getTime()
+                        const nextTime = new Date(payment.created_at || 0).getTime()
+                        if (nextTime > existingTime) {
+                            paymentsMap[payment.listing_id] = payment
+                        }
+                    })
+                } else if (paymentsError) {
+                    console.warn('Error fetching payments (likely RLS):', paymentsError)
+                }
+            }
+
+            // 4. Combine data
             const combinedData = listingsData.map(l => ({
                 ...l,
-                profiles: profilesMap[l.user_id] || { email: 'Unknown (RLS restricted)' }
+                profiles: profilesMap[l.user_id] || { email: 'Unknown (RLS restricted)' },
+                payment_status: paymentsMap[l.id]?.status ?? 'none',
+                payment_reference: paymentsMap[l.id]?.reference ?? null,
+                payment_created_at: paymentsMap[l.id]?.created_at ?? null,
+                payment_paid_at: paymentsMap[l.id]?.paid_at ?? null,
             }))
 
             console.log(`Found ${combinedData.length} listings with status: ${statusFilter}`)
@@ -125,7 +163,12 @@ export default function AdminListingsPage() {
     // Filter listings based on search query
     useEffect(() => {
         if (!searchQuery.trim()) {
-            setFilteredListings(listings)
+            const filtered = listings.filter(listing => {
+                const paymentStatus = listing.payment_status || 'none'
+                if (paymentFilter !== 'all' && paymentStatus !== paymentFilter) return false
+                return true
+            })
+            setFilteredListings(filtered)
             return
         }
 
@@ -135,19 +178,29 @@ export default function AdminListingsPage() {
             listing.city?.toLowerCase().includes(query) ||
             listing.description?.toLowerCase().includes(query) ||
             listing.profiles?.email?.toLowerCase().includes(query)
-        )
+        ).filter(listing => {
+            const paymentStatus = listing.payment_status || 'none'
+            if (paymentFilter !== 'all' && paymentStatus !== paymentFilter) return false
+            return true
+        })
         setFilteredListings(filtered)
-    }, [searchQuery, listings])
+    }, [searchQuery, listings, paymentFilter])
 
-    const handleApprove = async (id: string) => {
+    const handleApprove = async (listing: Listing) => {
+        const paymentStatus = listing.payment_status || 'none'
+        if (paymentStatus !== 'success') {
+            alert('Payment is not completed for this listing. Only paid listings can be approved.')
+            return
+        }
+
         if (!confirm('Are you sure you want to approve this listing?')) return
 
-        setProcessingId(id)
-        console.log('Attempting to approve listing:', id)
+        setProcessingId(listing.id)
+        console.log('Attempting to approve listing:', listing.id)
 
         try {
             // Try server action first
-            const result = await approveListingServer(id)
+            const result = await approveListingServer(listing.id)
 
             if (result && !result.error) {
                 console.log('Successfully approved listing via server')
@@ -157,7 +210,7 @@ export default function AdminListingsPage() {
                     await fetch('/api/send-emails', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: id, action: 'approved' })
+                        body: JSON.stringify({ listingId: listing.id, action: 'approved' })
                     })
                 } catch (emailError) {
                     console.error('Error sending email:', emailError)
@@ -169,11 +222,18 @@ export default function AdminListingsPage() {
 
             // Fallback to client-side
             console.log('Server action failed/skipped, trying client-side...', result?.error)
+            if (result?.error?.message) {
+                alert(result.error.message)
+                if (result.error.message.toLowerCase().includes('payment')) {
+                    setProcessingId(null)
+                    return
+                }
+            }
 
             const { data, error } = await supabase
                 .from('listings')
                 .update({ status: 'approved', rejection_reason: null })
-                .eq('id', id)
+                .eq('id', listing.id)
                 .select()
 
             console.log('Approve result:', { data, error })
@@ -193,7 +253,7 @@ export default function AdminListingsPage() {
                     await fetch('/api/send-emails', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: id, action: 'approved' })
+                        body: JSON.stringify({ listingId: listing.id, action: 'approved' })
                     })
                 } catch (emailError) {
                     console.error('Error sending email:', emailError)
@@ -350,6 +410,23 @@ export default function AdminListingsPage() {
                         </button>
                     ))}
                 </div>
+
+                {/* Payment Filter */}
+                <div className="flex items-center gap-3">
+                    <label className="text-sm font-medium text-gray-600">Payment:</label>
+                    <select
+                        value={paymentFilter}
+                        onChange={(e) => setPaymentFilter(e.target.value as any)}
+                        className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-green-500 focus:border-green-500"
+                    >
+                        <option value="all">All</option>
+                        <option value="success">Paid</option>
+                        <option value="pending">Pending</option>
+                        <option value="abandoned">Abandoned</option>
+                        <option value="failed">Failed</option>
+                        <option value="none">No payment started</option>
+                    </select>
+                </div>
             </div>
 
             {/* Results Count */}
@@ -364,6 +441,28 @@ export default function AdminListingsPage() {
                         filteredListings.map((listing) => {
                             const duplicateCount = getPotentialDuplicates(listing.business_name)
                             const isProcessing = processingId === listing.id
+                            const paymentStatus = listing.payment_status || 'none'
+                            const paymentLabel =
+                                paymentStatus === 'success'
+                                    ? 'Paid'
+                                    : paymentStatus === 'pending'
+                                        ? 'Pending'
+                                        : paymentStatus === 'abandoned'
+                                            ? 'Abandoned'
+                                            : paymentStatus === 'failed'
+                                                ? 'Failed'
+                                                : 'No payment'
+                            const paymentClass =
+                                paymentStatus === 'success'
+                                    ? 'bg-green-100 text-green-800'
+                                    : paymentStatus === 'pending'
+                                        ? 'bg-yellow-100 text-yellow-800'
+                                        : paymentStatus === 'abandoned'
+                                            ? 'bg-orange-100 text-orange-800'
+                                            : paymentStatus === 'failed'
+                                                ? 'bg-red-100 text-red-800'
+                                                : 'bg-gray-100 text-gray-600'
+                            const canApprove = paymentStatus === 'success'
 
                             return (
                                 <li key={listing.id} className="px-4 py-4 sm:px-6">
@@ -378,6 +477,9 @@ export default function AdminListingsPage() {
                                                         'bg-yellow-100 text-yellow-800'
                                                     }`}>
                                                     {listing.status.charAt(0).toUpperCase() + listing.status.slice(1)}
+                                                </span>
+                                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${paymentClass}`}>
+                                                    {paymentLabel}
                                                 </span>
                                                 {duplicateCount > 0 && (
                                                     <span className="px-2 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-800">
@@ -410,6 +512,10 @@ export default function AdminListingsPage() {
                                             <p className="mt-1 text-xs text-gray-400">
                                                 Submitted: {new Date(listing.created_at).toLocaleString()}
                                             </p>
+                                            <p className="mt-1 text-xs text-gray-400">
+                                                Payment status: {paymentLabel}
+                                                {listing.payment_reference ? ` (ref: ${listing.payment_reference})` : ''}
+                                            </p>
 
                                             {listing.rejection_reason && listing.status === 'rejected' && (
                                                 <div className="mt-2 text-sm text-red-600 bg-red-50 p-2 rounded">
@@ -422,10 +528,12 @@ export default function AdminListingsPage() {
                                         {listing.status === 'pending' && (
                                             <div className="ml-4 flex items-center space-x-2">
                                                 <button
-                                                    onClick={() => handleApprove(listing.id)}
-                                                    disabled={isProcessing}
+                                                    onClick={() => handleApprove(listing)}
+                                                    disabled={isProcessing || !canApprove}
                                                     className={`inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white ${isProcessing
                                                         ? 'bg-gray-400 cursor-not-allowed'
+                                                        : !canApprove
+                                                            ? 'bg-gray-300 cursor-not-allowed'
                                                         : 'bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
                                                         }`}
                                                 >

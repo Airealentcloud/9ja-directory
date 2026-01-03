@@ -41,25 +41,40 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
 
   const seoContent = getCategorySEOContent(slug)
 
-  const title = `${category.name} in Nigeria | 9jaDirectory`
-  const description =
-    seoContent?.introText ||
-    category.description ||
-    `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`
+  const isRealEstate = slug === 'real-estate'
+  const title = isRealEstate
+    ? 'Real Estate Companies in Nigeria | 9jaDirectory'
+    : `${category.name} in Nigeria | 9jaDirectory`
+  const description = isRealEstate
+    ? 'Find verified real estate agencies, property developers, and agents across Nigeria. Compare top real estate companies in Lagos, Abuja (FCT), and major cities.'
+    : seoContent?.introText ||
+      category.description ||
+      `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`
 
   const canonical = `https://9jadirectory.org/categories/${slug}`
 
   return {
     title,
     description,
-    keywords: [
-      `${category.name} in Nigeria`,
-      `best ${category.name} in Nigeria`,
-      `${category.name} directory Nigeria`,
-      `verified ${category.name} Nigeria`,
-      'Nigeria business directory',
-      '9jaDirectory',
-    ],
+    keywords: isRealEstate
+      ? [
+          'real estate companies in Nigeria',
+          'real estate agencies in Nigeria',
+          'property developers in Nigeria',
+          'real estate company Lagos',
+          'real estate company Abuja',
+          'real estate directory Nigeria',
+          'real estate agents Nigeria',
+          '9jaDirectory',
+        ]
+      : [
+          `${category.name} in Nigeria`,
+          `best ${category.name} in Nigeria`,
+          `${category.name} directory Nigeria`,
+          `verified ${category.name} Nigeria`,
+          'Nigeria business directory',
+          '9jaDirectory',
+        ],
     alternates: {
       canonical,
     },
@@ -143,6 +158,11 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
   // Get category content
   const categoryContent = getCategoryContent(slug)
   const seoContent = getCategorySEOContent(slug)
+  const isRealEstate = slug === 'real-estate'
+  const headerTitle = isRealEstate ? 'Real Estate Companies in Nigeria' : category.name
+  const headerDescription = isRealEstate
+    ? 'Verified real estate agencies, developers, and agents across Nigeria.'
+    : category.description
 
   // Generate schema markup
   const itemListSchema = generateCategoryItemListSchema(category, filteredListings, totalCount || 0)
@@ -205,11 +225,11 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               )}
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-3">
-                  {category.name}
+                  {headerTitle}
                 </h1>
-                {category.description && (
+                {headerDescription && (
                   <p className="text-xl text-green-100 max-w-3xl">
-                    {category.description}
+                    {headerDescription}
                   </p>
                 )}
                 <div className="mt-4 text-green-100">
@@ -242,6 +262,36 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               </div>
             )}
           </div>
+
+          {isRealEstate && (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">Best Real Estate Companies by City</h2>
+              <p className="text-gray-700 mb-4">
+                Looking for the best real estate company in Lagos or Abuja? Start with the top city pages below to compare
+                verified agencies, developers, and agents.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Link
+                  href="/categories/real-estate/lagos"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                >
+                  Best Real Estate Companies in Lagos
+                </Link>
+                <Link
+                  href="/categories/real-estate/fct"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                >
+                  Best Real Estate Companies in Abuja (FCT)
+                </Link>
+                <Link
+                  href="/categories/real-estate/rivers"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                >
+                  Real Estate in Port Harcourt
+                </Link>
+              </div>
+            </div>
+          )}
 
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar - Filters */}
