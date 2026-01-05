@@ -1,11 +1,16 @@
 'use client'
 
 import { createClient } from '@/lib/supabase/client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { PRICING_PLANS, type PlanId } from '@/lib/pricing'
 
 export default function SignupPage() {
+    const searchParams = useSearchParams()
+    const planId = searchParams.get('plan') as PlanId | null
+    const selectedPlan = PRICING_PLANS.find(p => p.id === planId)
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [fullName, setFullName] = useState('')
@@ -24,13 +29,20 @@ export default function SignupPage() {
             const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
             const runtimeBaseUrl = window.location.origin.replace(/\/$/, '')
             const baseUrl = configuredBaseUrl || runtimeBaseUrl
+
+            // Include plan in the callback URL
+            const callbackUrl = planId
+                ? `${baseUrl}/auth/callback?plan=${planId}`
+                : `${baseUrl}/auth/callback`
+
             const { error } = await supabase.auth.signUp({
                 email,
                 password,
                 options: {
-                    emailRedirectTo: `${baseUrl}/auth/callback`,
+                    emailRedirectTo: callbackUrl,
                     data: {
                         full_name: fullName,
+                        selected_plan: planId || null,
                     },
                 },
             })
@@ -43,7 +55,7 @@ export default function SignupPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     type: 'new_signup',
-                    data: { email, fullName }
+                    data: { email, fullName, plan: planId }
                 })
             }).catch(console.error)
 
@@ -66,6 +78,11 @@ export default function SignupPage() {
                         <br />
                         Please click the link to verify your account.
                     </p>
+                    {selectedPlan && (
+                        <p className="mt-4 text-sm text-gray-500">
+                            After verification, you'll complete payment for the <strong>{selectedPlan.name}</strong> plan.
+                        </p>
+                    )}
                     <div className="mt-6">
                         <Link href="/login" className="text-green-600 hover:text-green-500 font-medium">
                             Back to Sign In
@@ -83,12 +100,23 @@ export default function SignupPage() {
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                         Create your account
                     </h2>
-                    <p className="mt-2 text-center text-sm text-gray-600">
-                        Or{' '}
-                        <Link href="/login" className="font-medium text-green-600 hover:text-green-500">
-                            sign in to existing account
-                        </Link>
-                    </p>
+                    {selectedPlan ? (
+                        <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+                            <p className="text-sm text-green-800 text-center">
+                                You selected the <strong>{selectedPlan.name}</strong> plan
+                            </p>
+                            <p className="text-lg font-bold text-green-700 text-center mt-1">
+                                {selectedPlan.priceFormatted}/{selectedPlan.intervalLabel}
+                            </p>
+                        </div>
+                    ) : (
+                        <p className="mt-2 text-center text-sm text-gray-600">
+                            Already have an account?{' '}
+                            <Link href="/login" className="font-medium text-green-600 hover:text-green-500">
+                                Sign in
+                            </Link>
+                        </p>
+                    )}
                 </div>
                 <form className="mt-8 space-y-6" onSubmit={handleSignup}>
                     {error && (
@@ -139,7 +167,7 @@ export default function SignupPage() {
                                 autoComplete="new-password"
                                 required
                                 className="appearance-none rounded-none rounded-b-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
-                                placeholder="Password"
+                                placeholder="Password (min 6 characters)"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -152,10 +180,25 @@ export default function SignupPage() {
                             disabled={loading}
                             className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50"
                         >
-                            {loading ? 'Creating account...' : 'Sign up'}
+                            {loading ? 'Creating account...' : 'Create Account'}
                         </button>
                     </div>
+
+                    <p className="text-xs text-gray-500 text-center">
+                        By signing up, you agree to our{' '}
+                        <Link href="/terms" className="text-green-600 hover:underline">Terms</Link>
+                        {' '}and{' '}
+                        <Link href="/privacy" className="text-green-600 hover:underline">Privacy Policy</Link>
+                    </p>
                 </form>
+
+                {!selectedPlan && (
+                    <div className="text-center">
+                        <Link href="/pricing" className="text-sm text-green-600 hover:text-green-500">
+                            View pricing plans
+                        </Link>
+                    </div>
+                )}
             </div>
         </div>
     )

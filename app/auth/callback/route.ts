@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server'
 export async function GET(request: Request) {
     const { searchParams, origin } = new URL(request.url)
     const code = searchParams.get('code')
+    const plan = searchParams.get('plan')
     const next = searchParams.get('next') ?? '/'
 
     if (code) {
@@ -31,8 +32,16 @@ export async function GET(request: Request) {
                 },
             }
         )
-        const { error } = await supabase.auth.exchangeCodeForSession(code)
+        const { error, data } = await supabase.auth.exchangeCodeForSession(code)
         if (!error) {
+            // Check for plan in URL params or user metadata
+            const selectedPlan = plan || data.user?.user_metadata?.selected_plan
+
+            if (selectedPlan) {
+                // Redirect to payment page with the selected plan
+                return NextResponse.redirect(`${origin}/checkout?plan=${selectedPlan}`)
+            }
+
             return NextResponse.redirect(`${origin}${next}`)
         }
     }
