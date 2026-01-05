@@ -48,18 +48,12 @@ export default function AuthButton({ user, variant = 'desktop' }: AuthButtonProp
 
   if (variant === 'mobile') {
     return (
-      <div className="grid grid-cols-2 gap-2">
+      <div className="space-y-2">
         <Link
           href="/login"
-          className="w-full rounded-md border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-700 hover:bg-gray-50"
+          className="block w-full rounded-md border border-gray-200 px-3 py-2 text-center text-sm font-medium text-gray-700 hover:bg-gray-50"
         >
           Sign In
-        </Link>
-        <Link
-          href="/signup"
-          className="w-full rounded-md bg-green-600 px-3 py-2 text-center text-sm font-medium text-white hover:bg-green-700"
-        >
-          Sign Up
         </Link>
       </div>
     )
@@ -72,12 +66,6 @@ export default function AuthButton({ user, variant = 'desktop' }: AuthButtonProp
         className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
       >
         Sign In
-      </Link>
-      <Link
-        href="/signup"
-        className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium"
-      >
-        Sign Up
       </Link>
     </div>
   )

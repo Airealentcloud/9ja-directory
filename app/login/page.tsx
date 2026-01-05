@@ -43,9 +43,9 @@ export default function LoginPage() {
                         Sign in to your account
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
-                        Or{' '}
-                        <Link href="/signup" className="font-medium text-green-600 hover:text-green-500">
-                            create a new account
+                        New here?{' '}
+                        <Link href="/pricing" className="font-medium text-green-600 hover:text-green-500">
+                            Get listed today
                         </Link>
                     </p>
                 </div>
