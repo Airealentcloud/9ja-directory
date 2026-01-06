@@ -55,6 +55,26 @@ export async function createListing(formData: FormData) {
         throw new Error('You must be logged in to add a business')
     }
 
+    const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('can_add_listings, role')
+        .eq('id', user.id)
+        .maybeSingle()
+
+    if (profileError) {
+        const missingColumn = getMissingColumnName(profileError)
+        if (missingColumn === 'can_add_listings') {
+            throw new Error(
+                "Database is missing required column 'can_add_listings' on profiles. Run `migrations/008_subscriptions_and_profile_permissions.sql` in Supabase SQL Editor."
+            )
+        }
+        throw new Error(`Failed to check listing permissions: ${profileError.message}`)
+    }
+
+    if (profile?.role !== 'admin' && !profile?.can_add_listings) {
+        throw new Error('Please complete payment before adding a listing.')
+    }
+
     const business_name = formData.get('business_name') as string
     // Generate slug
     const slug = business_name

@@ -42,7 +42,19 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: msg }, { status: 500 })
     }
 
-    if (!abandoned || abandoned.length === 0) {
+    const { data: leadAbandoned, error: leadError } = await supabase
+      .from('payment_leads')
+      .update({ status: 'abandoned' })
+      .eq('status', 'pending')
+      .lt('created_at', cutoff)
+      .select('id, email, business_name, reference, created_at')
+
+    if (leadError) {
+      const msg = (leadError as { message?: string }).message || 'Failed to mark abandoned payment leads'
+      return NextResponse.json({ error: msg }, { status: 500 })
+    }
+
+    if ((!abandoned || abandoned.length === 0) && (!leadAbandoned || leadAbandoned.length === 0)) {
       return NextResponse.json({ success: true, abandoned: 0 })
     }
 
@@ -96,14 +108,43 @@ export async function GET(request: NextRequest) {
       })
       .filter(Boolean)
 
-    if (notifications.length > 0) {
-      const { error: insertError } = await supabase.from('email_notifications').insert(notifications)
+    const leadNotifications = (leadAbandoned || [])
+      .map((lead) => {
+        if (!lead.email) return null
+        const businessName = lead.business_name || 'your business listing'
+        const resumeUrl = `${siteUrl}/pricing`
+
+        return {
+          user_id: null,
+          email: lead.email,
+          type: 'payment_lead_abandoned',
+          subject: `Complete your 9jaDirectory listing`,
+          body:
+            `Hi there,\n\n` +
+            `We noticed you started a payment for ${businessName}, but it was not completed.\n\n` +
+            `Finish your payment to get listed and start receiving customers:\n` +
+            `${resumeUrl}\n\n` +
+            `If you need help, reply to this email.\n\n` +
+            `Reference: ${lead.reference}\n`,
+          listing_id: null,
+        }
+      })
+      .filter(Boolean)
+
+    const allNotifications = [...notifications, ...leadNotifications]
+
+    if (allNotifications.length > 0) {
+      const { error: insertError } = await supabase.from('email_notifications').insert(allNotifications)
       if (insertError) {
         console.error('Failed to queue abandoned payment emails:', insertError)
       }
     }
 
-    return NextResponse.json({ success: true, abandoned: abandoned.length, queued: notifications.length })
+    return NextResponse.json({
+      success: true,
+      abandoned: (abandoned?.length ?? 0) + (leadAbandoned?.length ?? 0),
+      queued: allNotifications.length,
+    })
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : 'Failed to mark abandoned payments' },

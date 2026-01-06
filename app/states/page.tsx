@@ -340,7 +340,7 @@ export default async function StatesPage() {
               Reach customers in your local area by listing your business today
             </p>
             <Link
-              href="/add-business"
+              href="/pricing"
               className="inline-block px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors"
             >
               Add Your Business - Free

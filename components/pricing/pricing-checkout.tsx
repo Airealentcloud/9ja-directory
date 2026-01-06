@@ -1,6 +1,8 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { createClient } from '@/lib/supabase/client'
 import { PRICING_PLANS, type PlanId } from '@/lib/pricing'
 
 type PricingCheckoutProps = {
@@ -9,10 +11,25 @@ type PricingCheckoutProps = {
 
 export default function PricingCheckout({ className }: PricingCheckoutProps) {
     const router = useRouter()
+    const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null)
+    const supabase = createClient()
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            const { data: { user } } = await supabase.auth.getUser()
+            setIsLoggedIn(!!user)
+        }
+        checkAuth()
+    }, [supabase.auth])
 
     const handleSelectPlan = (planId: PlanId) => {
-        // Redirect to signup page with selected plan
-        router.push(`/signup?plan=${planId}`)
+        if (isLoggedIn) {
+            // User is logged in, go directly to checkout
+            router.push(`/checkout?plan=${planId}`)
+        } else {
+            // User not logged in, go to signup first
+            router.push(`/signup?plan=${planId}`)
+        }
     }
 
     return (

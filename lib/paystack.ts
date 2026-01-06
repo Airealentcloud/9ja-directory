@@ -78,9 +78,12 @@ export interface InitializePaymentParams {
     reference?: string
     callback_url?: string
     metadata?: {
-        plan_id: string
-        user_id: string
+        plan_id?: string
+        user_id?: string
         listing_id?: string
+        lead_reference?: string
+        business_name?: string
+        phone?: string
         custom_fields?: Array<{
             display_name: string
             variable_name: string

@@ -362,7 +362,7 @@ export default async function CategoryStateListingPage({
                 Be the first to list your business!
               </p>
               <Link
-                href="/add-business"
+                href="/pricing"
                 className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
               >
                 Add Your Business →

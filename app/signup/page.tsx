@@ -26,9 +26,11 @@ export default function SignupPage() {
         setError(null)
 
         try {
-            const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
+            // Use runtime URL for local development, configured URL for production
             const runtimeBaseUrl = window.location.origin.replace(/\/$/, '')
-            const baseUrl = configuredBaseUrl || runtimeBaseUrl
+            const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
+            const isLocalhost = runtimeBaseUrl.includes('localhost') || runtimeBaseUrl.includes('127.0.0.1')
+            const baseUrl = isLocalhost ? runtimeBaseUrl : (configuredBaseUrl || runtimeBaseUrl)
 
             // Include plan in the callback URL
             const callbackUrl = planId

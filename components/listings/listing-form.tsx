@@ -79,8 +79,7 @@ export default function ListingForm({ initialData, categories, states, isEditing
             } else {
                 const result = await createListing(formData)
                 if (result.success && result.listingId) {
-                    // Redirect to payment prompt page with listing ID
-                    router.push(`/listing-created?listing_id=${result.listingId}`)
+                    router.push('/dashboard/my-listings')
                 } else {
                     router.push('/dashboard?success=true')
                     router.refresh()

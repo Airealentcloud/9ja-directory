@@ -16,6 +16,26 @@ export default async function AddBusinessPage() {
         redirect('/login?next=/add-business')
     }
 
+    const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('can_add_listings')
+        .eq('id', user.id)
+        .maybeSingle()
+
+    if (profileError) {
+        const message = (profileError as { message?: string }).message || ''
+        if (message.includes('can_add_listings')) {
+            throw new Error(
+                "Database is missing required column 'can_add_listings' on profiles. Run `migrations/008_subscriptions_and_profile_permissions.sql` in Supabase SQL Editor."
+            )
+        }
+        throw new Error(`Failed to check listing permissions: ${message || 'Unknown error'}`)
+    }
+
+    if (!profile?.can_add_listings) {
+        redirect('/pricing')
+    }
+
     // Fetch data for form
     const { data: categories } = await supabase.from('categories').select('id, name').order('name')
     const { data: states } = await supabase.from('states').select('id, name').order('name')

@@ -4,7 +4,7 @@ import { createClient } from '@/lib/supabase/server'
 
 export const metadata: Metadata = {
   title: 'About Us | Nigeria Premier Business Directory | 9jaDirectory',
-  description: 'Learn about 9jaDirectory - Nigeria most comprehensive business directory connecting millions of users with verified businesses across all 36 states + FCT. Free listings, trusted reviews, nationwide coverage.',
+  description: 'Learn about 9jaDirectory - Nigeria most comprehensive business directory connecting millions of users with verified businesses across all 36 states + FCT. Trusted reviews, nationwide coverage, and transparent listing plans.',
   keywords: 'about 9jaDirectory, Nigeria business directory, Nigerian business listings, verified businesses Nigeria, business directory Lagos, Abuja business listings, trusted Nigerian directory',
   openGraph: {
     title: 'About 9jaDirectory - Nigeria Leading Business Directory',
@@ -106,10 +106,10 @@ export default async function AboutPage() {
       },
       {
         '@type': 'Question',
-        name: 'Is it free to list my business on 9jaDirectory?',
+        name: 'Do I need a plan to list my business on 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! We offer free business listings to help Nigerian businesses grow their online presence and reach more customers nationwide.',
+          text: 'Yes. To publish a business listing, choose a plan and complete payment. This keeps listings verified and helps us maintain quality and visibility for businesses.',
         },
       },
       {
@@ -213,11 +213,11 @@ export default async function AboutPage() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                   <span className="text-green-600 text-2xl mr-3">Check Mark</span>
-                  100% Free Business Listings
+                  Transparent Listing Plans
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Unlike other Nigerian directories that charge listing fees, 9jaDirectory offers completely free business
-                  listings to all Nigerian businesses. We believe in democratizing access to online visibility.
+                  We offer transparent plans so businesses can choose the right level of visibility and support.
+                  Every plan includes verified profiles and nationwide exposure across Nigeria.
                 </p>
               </div>
 
@@ -293,9 +293,9 @@ export default async function AboutPage() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr>
-                    <td className="px-6 py-4 text-sm text-gray-700">Free Business Listings</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-bold">Yes</td>
-                    <td className="px-6 py-4 text-center text-gray-500">Paid (N12,000+/year)</td>
+                    <td className="px-6 py-4 text-sm text-gray-700">Listing Plans</td>
+                    <td className="px-6 py-4 text-center text-green-600 font-bold">Transparent paid plans</td>
+                    <td className="px-6 py-4 text-center text-gray-500">Hidden fees or add-ons</td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="px-6 py-4 text-sm text-gray-700">States Coverage</td>
@@ -304,7 +304,7 @@ export default async function AboutPage() {
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-700">Business Verification</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-bold">Free Verification</td>
+                    <td className="px-6 py-4 text-center text-green-600 font-bold">Included</td>
                     <td className="px-6 py-4 text-center text-gray-500">Premium only</td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -341,7 +341,7 @@ export default async function AboutPage() {
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 font-bold mr-3">Arrow</span>
-                <span>Business owners need free, accessible tools to grow their online presence without expensive fees</span>
+                <span>Business owners need affordable, accessible tools to grow their online presence with clear pricing</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 font-bold mr-3">Arrow</span>
@@ -349,7 +349,7 @@ export default async function AboutPage() {
               </li>
             </ul>
             <p className="text-lg text-gray-700 leading-relaxed">
-              This commitment drives everything we do at 9jaDirectory, from our free listing policy to our
+              This commitment drives everything we do at 9jaDirectory, from our transparent pricing to our
               comprehensive state-by-state coverage and rigorous verification process.
             </p>
           </div>
@@ -365,18 +365,18 @@ export default async function AboutPage() {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   9jaDirectory is Nigeria most comprehensive online business directory, connecting millions of users
-                  with verified businesses and services across all 36 states plus FCT Abuja. We provide free business
-                  listings, detailed profiles, customer reviews, and easy search functionality.
+                  with verified businesses and services across all 36 states plus FCT Abuja. We provide paid listing
+                  plans, detailed profiles, customer reviews, and easy search functionality.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Is it free to list my business on 9jaDirectory?
+                  Do I need a plan to list my business on 9jaDirectory?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Yes! We offer completely free business listings to all Nigerian businesses. Unlike other directories
-                  that charge N12,000 or more per year, 9jaDirectory provides free visibility to help your business grow.
+                  Yes. To publish your listing, choose a plan and complete payment. This ensures verified listings and
+                  gives your business the right level of visibility.
                 </p>
               </div>
 
@@ -419,9 +419,9 @@ export default async function AboutPage() {
                   How is 9jaDirectory different from VConnect or YelloPages Nigeria?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Unlike other directories, 9jaDirectory offers 100% free listings with no annual fees. We provide complete
-                  coverage of all 37 Nigerian states (not just major cities), free verification for all businesses, and a
-                  modern, mobile-friendly platform designed specifically for Nigerian users.
+                  Unlike other directories, 9jaDirectory provides clear pricing, complete coverage of all 37 Nigerian
+                  states (not just major cities), verification included with every plan, and a modern, mobile-friendly
+                  platform designed specifically for Nigerian users.
                 </p>
               </div>
             </div>
@@ -430,15 +430,15 @@ export default async function AboutPage() {
 
         <section className="bg-green-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to List Your Business?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Listed?</h2>
             <p className="text-xl mb-8 text-green-100">
               Join {(totalListings || 10000).toLocaleString()}+ businesses already on 9jaDirectory
             </p>
             <Link
-              href="/add-business"
+              href="/pricing"
               className="inline-block px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors"
             >
-              List Your Business - Free Forever
+              Get Listed Today
             </Link>
           </div>
         </section>

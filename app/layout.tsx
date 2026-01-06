@@ -84,8 +84,8 @@ export default async function RootLayout({
                   <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
                   <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
                   <NavLink href="/pricing" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</NavLink>
-                  <NavLink href="/add-business" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
-                    List Your Business
+                  <NavLink href="/pricing" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
+                    Get Listed
                   </NavLink>
                   <div className="ml-4 flex items-center">
                     <AuthButton user={user} />
@@ -115,7 +115,7 @@ export default async function RootLayout({
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                   <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                  <li><Link href="/add-business" className="hover:text-white transition-colors">List Your Business</Link></li>
+                  <li><Link href="/pricing" className="hover:text-white transition-colors">Get Listed</Link></li>
                 </ul>
               </div>
               <div>

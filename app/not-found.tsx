@@ -4,7 +4,7 @@ const quickLinks = [
   { href: '/categories', label: 'Browse all categories' },
   { href: '/states', label: 'Browse by state' },
   { href: '/featured', label: 'Featured listings' },
-  { href: '/add-business', label: 'Add your business' },
+  { href: '/pricing', label: 'Get listed' },
 ]
 
 export default function NotFound() {

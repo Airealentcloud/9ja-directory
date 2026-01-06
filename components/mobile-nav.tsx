@@ -32,10 +32,10 @@ export default function MobileNav({ children }: MobileNavProps) {
   return (
     <div className="relative flex items-center gap-2">
       <NavLink
-        href="/add-business"
+        href="/pricing"
         className="rounded-md bg-green-600 px-3 py-2 text-sm font-medium text-white hover:bg-green-700"
       >
-        List
+        Get Listed
       </NavLink>
       <button
         type="button"
@@ -122,10 +122,10 @@ export default function MobileNav({ children }: MobileNavProps) {
                 FAQ
               </NavLink>
               <NavLink
-                href="/add-business"
+                href="/pricing"
                 className="mt-2 block rounded-md bg-green-600 px-3 py-2 text-center text-sm font-medium text-white hover:bg-green-700"
               >
-                List Your Business
+                Get Listed
               </NavLink>
             </div>
             {children && (
@@ -137,4 +137,3 @@ export default function MobileNav({ children }: MobileNavProps) {
     </div>
   )
 }
-

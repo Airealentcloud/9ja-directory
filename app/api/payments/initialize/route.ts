@@ -22,13 +22,68 @@ export async function POST(request: NextRequest) {
 
         // Get request body
         const body = await request.json()
-        const { plan_id, listing_id } = body as { plan_id: PlanId; listing_id?: string }
+        const { plan_id, listing_id, listing_data } = body as {
+            plan_id: PlanId
+            listing_id?: string
+            listing_data?: {
+                business_name: string
+                category_id: string
+                description: string
+                phone: string
+                email?: string
+                website_url?: string
+                whatsapp_number?: string
+                address?: string
+                state_id: string
+                city: string
+            }
+        }
 
         if (!plan_id) {
             return NextResponse.json(
                 { error: 'Plan ID is required' },
                 { status: 400 }
             )
+        }
+
+        // Validate listing data if provided (for new listings during checkout)
+        if (listing_data) {
+            if (!listing_data.business_name?.trim()) {
+                return NextResponse.json(
+                    { error: 'Business name is required' },
+                    { status: 400 }
+                )
+            }
+            if (!listing_data.category_id) {
+                return NextResponse.json(
+                    { error: 'Category is required' },
+                    { status: 400 }
+                )
+            }
+            if (!listing_data.description?.trim()) {
+                return NextResponse.json(
+                    { error: 'Description is required' },
+                    { status: 400 }
+                )
+            }
+            if (!listing_data.phone?.trim()) {
+                return NextResponse.json(
+                    { error: 'Phone number is required' },
+                    { status: 400 }
+                )
+            }
+            if (!listing_data.state_id) {
+                return NextResponse.json(
+                    { error: 'State is required' },
+                    { status: 400 }
+                )
+            }
+            if (!listing_data.city?.trim()) {
+                return NextResponse.json(
+                    { error: 'City is required' },
+                    { status: 400 }
+                )
+            }
         }
 
         // Get plan details
@@ -83,6 +138,8 @@ export async function POST(request: NextRequest) {
                 plan_interval: plan.interval,
                 listing_id: listing_id || null,
                 user_id: user.id,
+                // Store listing data for creation after payment success
+                listing_data: listing_data ? JSON.stringify(listing_data) : null,
             },
         })
 

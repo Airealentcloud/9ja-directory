@@ -14,7 +14,13 @@
       "Bash(npm install)",
       "Bash(echo:*)",
       "Bash(npx -y @modelcontextprotocol/server-supabase --version)",
-      "Bash(npx playwright test:*)"
+      "Bash(npx playwright test:*)",
+      "Bash(npm run build:*)",
+      "Bash(if exist .next rmdir /s /q .next)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nSimplify user flow: pay first, account created after\n\n- Remove signup links from navigation\n- Direct new users to /pricing instead of /signup\n- Login page now shows \"Get listed today\" for new users\n- Cleaner flow: Pricing → Pay → Account Created → Edit Listing\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nEnforce payment before listing creation\n\n- Checkout page now includes listing form \\(combined payment + listing\\)\n- Listing data stored in payment metadata, created after successful payment\n- Pricing buttons check auth: logged in → checkout, not logged in → signup\n- Payment verify page shows listing submission confirmation\n- Auth callback redirects to checkout after email verification\n- Created auth-code-error page for handling auth failures\n\nFlow: Pricing → Signup \\(if needed\\) → Checkout \\(fill listing + pay\\) → Listing created\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ],
     "deny": [],
     "ask": []

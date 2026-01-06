@@ -43,8 +43,8 @@ const faqs = [
         answer: '9jaDirectory is Nigeria\'s comprehensive online business directory connecting customers with trusted local businesses across all 36 states and the FCT. We help people find restaurants, hotels, healthcare services, shops, and more.',
     },
     {
-        question: 'Is it free to list my business?',
-        answer: 'Yes! Listing your business on 9jaDirectory is completely free. Simply create an account, submit your business details, and once approved, your listing will be visible to thousands of potential customers searching for services in your area.',
+        question: 'Do I need a plan to list my business?',
+        answer: 'Yes. To publish your listing, choose a plan and complete payment. This keeps listings verified and helps you get the right level of visibility.',
     },
     {
         question: 'How long does it take for my listing to be approved?',
@@ -178,10 +178,10 @@ export default function FAQPage() {
                                 Contact Support
                             </Link>
                             <Link
-                                href="/add-business"
+                                href="/pricing"
                                 className="inline-block px-6 py-3 bg-white text-green-600 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors font-semibold"
                             >
-                                List Your Business
+                                Get Listed
                             </Link>
                         </div>
                     </div>

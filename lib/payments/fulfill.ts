@@ -14,6 +14,30 @@ type PaymentRow = {
   currency: string
   status: PaymentStatus
   paid_at: string | null
+  metadata?: {
+    listing_data?: string
+    [key: string]: unknown
+  } | null
+}
+
+type ListingData = {
+  business_name: string
+  category_id: string
+  description: string
+  phone: string
+  email?: string
+  website_url?: string
+  whatsapp_number?: string
+  address?: string
+  state_id: string
+  city: string
+}
+
+function generateSlug(businessName: string): string {
+  return businessName
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '') + '-' + Math.random().toString(36).substring(2, 7)
 }
 
 function getMissingColumnName(message?: string | null) {
@@ -37,7 +61,7 @@ export async function fulfillPaystackSuccess(input: {
 
   const { data: paymentRaw, error: paymentError } = await supabase
     .from('payments')
-    .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at')
+    .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
     .eq('reference', input.reference)
     .single()
 
@@ -181,5 +205,58 @@ export async function fulfillPaystackSuccess(input: {
     console.error('Subscription fulfillment error:', err)
   }
 
-  return { paymentId: payment.id, listingId: payment.listing_id, listingSlug }
+  // Create listing from metadata if present (new checkout flow)
+  let createdListingId: string | null = null
+  if (payment.metadata?.listing_data && !payment.listing_id) {
+    try {
+      const listingData: ListingData = JSON.parse(payment.metadata.listing_data as string)
+
+      if (listingData.business_name) {
+        const slug = generateSlug(listingData.business_name)
+
+        const { data: newListing, error: listingError } = await supabase
+          .from('listings')
+          .insert({
+            user_id: payment.user_id,
+            business_name: listingData.business_name,
+            slug,
+            description: listingData.description,
+            category_id: listingData.category_id,
+            phone: listingData.phone,
+            email: listingData.email || '',
+            website_url: listingData.website_url || '',
+            whatsapp_number: listingData.whatsapp_number || '',
+            address: listingData.address || '',
+            state_id: listingData.state_id,
+            city: listingData.city,
+            status: 'pending', // Requires admin approval
+          })
+          .select('id, slug')
+          .single()
+
+        if (listingError) {
+          console.error('Error creating listing from payment:', listingError)
+        } else if (newListing) {
+          createdListingId = newListing.id
+          listingSlug = newListing.slug
+
+          // Update payment record with the new listing_id
+          await supabase
+            .from('payments')
+            .update({ listing_id: newListing.id })
+            .eq('id', payment.id)
+
+          console.log('Listing created from payment:', newListing.id)
+        }
+      }
+    } catch (parseErr) {
+      console.error('Error parsing listing data from payment metadata:', parseErr)
+    }
+  }
+
+  return {
+    paymentId: payment.id,
+    listingId: createdListingId || payment.listing_id,
+    listingSlug
+  }
 }

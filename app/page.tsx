@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
+import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',
@@ -440,6 +441,17 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Get Listed */}
+        <section className="py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Get Listed on 9jaDirectory</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Pick a plan, enter your details, and complete payment to start your listing.
+            </p>
+          </div>
+          <PricingCheckoutClient />
+        </section>
+
         {/* CTA Section */}
         <section className="bg-green-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -451,7 +463,7 @@ export default async function Home() {
               href="/pricing"
               className="inline-block px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors"
             >
-              List Your Business Today
+              Get Listed Today
             </Link>
           </div>
         </section>

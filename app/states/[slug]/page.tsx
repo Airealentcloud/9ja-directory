@@ -286,7 +286,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
                     Be the first to add your business in {state.name} State!
                   </p>
                   <Link
-                    href="/add-business"
+                    href="/pricing"
                     className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
                   >
                     Add Your Business
@@ -435,10 +435,10 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
               Own a Business in {state.name}?
             </h2>
             <p className="text-xl mb-8 text-green-100">
-              List your business for free and reach thousands of potential customers in {state.name} State
+              List your business and reach thousands of potential customers in {state.name} State
             </p>
             <Link
-              href="/add-business"
+              href="/pricing"
               className="inline-block px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors"
             >
               Add Your {state.name} Business - Free
