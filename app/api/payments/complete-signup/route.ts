@@ -73,8 +73,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Lead email is missing' }, { status: 500 })
     }
 
-    const { data: existingUser } = await supabase.auth.admin.getUserByEmail(email)
-    if (existingUser?.user) {
+    // Check if user already exists by listing users and filtering by email
+    const { data: existingUsers } = await supabase.auth.admin.listUsers()
+    const existingUser = existingUsers?.users?.find(u => u.email?.toLowerCase() === email)
+    if (existingUser) {
       return NextResponse.json(
         { error: 'An account already exists for this email. Please sign in.' },
         { status: 409 }
