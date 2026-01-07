@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-business-listing-sites-in-nigeria-2025",
     title: "Top Business Listing Sites in Nigeria to Grow Your Visibility (2025 Guide)",
-    excerpt: "Discover the top 10 business listing sites in Nigeria for 2025. Boost your online visibility, improve local SEO, and reach more customers with these essential directories.",
+    excerpt: "Business listing sites in Nigeria help you rank and get customers. See the top 10 directories for 2025 and how to use them for local SEO.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "business-registration-nigeria-guide",
     title: "The Ultimate Guide to Business Registration in Nigeria (2025 Update)",
-    excerpt: "The ultimate guide to business registration in Nigeria (2025). Learn the step-by-step CAC process, updated costs, requirements for Business Name vs. Limited Company, and how to get your TIN.",
+    excerpt: "Business registration Nigeria guide: CAC steps, costs, and requirements for business name vs limited company, plus how to get your TIN.",
     keywords: [
       "business registration Nigeria",
       "CAC registration",
@@ -567,7 +567,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-10-investment-opportunities-lagos",
     title: "Top 10 Investment Opportunities in Lagos for 2025: Where Smart Money is Heading",
-    excerpt: "Discover the top 10 profitable investment opportunities in Lagos, Nigeria for 2025. From real estate (20-35% ROI) to fintech and agriculture. Complete guide with ROI data, locations, and entry points.",
+    excerpt: "Investment opportunities in Lagos for 2025: real estate, fintech, and agribusiness with ROI ranges, entry costs, and location tips.",
     keywords: [
       "investment opportunities in Lagos",
       "best investments in Lagos 2025",
@@ -855,7 +855,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "digital-marketing-strategies-small-business",
     title: "Effective Digital Marketing Strategies for Small Businesses in Nigeria (2025)",
-    excerpt: "Learn how to grow your customer base using social media, SEO, and email marketing without breaking the bank. A comprehensive guide for Nigerian SMEs.",
+    excerpt: "Digital marketing Nigeria guide for SMEs: social media, SEO, email, and low-cost tactics to grow customers without big budgets.",
     keywords: [
       "digital marketing Nigeria",
       "small business marketing",
@@ -1287,7 +1287,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "remote-work-tools-productivity",
     title: "Essential Tools for Remote Work Productivity in 2025: The Complete Guide",
-    excerpt: "Boost your team's efficiency with these top-rated tools for communication, project management, and time tracking. A comprehensive guide for remote teams.",
+    excerpt: "Remote work tools for 2025: top picks for communication, project management, and time tracking to keep teams productive.",
     keywords: [
       "remote work tools",
       "productivity tools",
@@ -1547,7 +1547,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "starting-agriculture-business-nigeria",
     title: "How to Start a Profitable Agriculture Business in Nigeria (2025 Complete Guide): Poultry, Fish, Crops & More",
-    excerpt: "Start profitable agribusiness in Nigeria with ₦100K-₦10M. Complete guide on poultry farming, fish farming, crop production, government funding (CBN, NIRSAL, BOA), and step-by-step startup process. ROI data, costs, and tips included.",
+    excerpt: "Agriculture business Nigeria guide for 2025: poultry, fish, and crops, startup costs, funding options, and steps to profit.",
     keywords: [
       "agriculture business Nigeria",
       "how to start farm Nigeria",
@@ -1982,7 +1982,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-get-business-loan-without-collateral-nigeria-2025",
     title: "How to Get a Business Loan Without Collateral in Nigeria (2025): Fast Approval in 24 Hours | 10 Best Lenders",
-    excerpt: "Get ₦1M-₦50M business loans in 24 hours with ZERO collateral. Compare Carbon, Renmoney, Moniepoint, CBN loans & more. 2025 interest rates, fees, requirements, and pro tips for traders, retailers & entrepreneurs.",
+    excerpt: "Business loan without collateral Nigeria: compare top lenders, rates, and requirements for SMEs, plus tips to get fast approval.",
     keywords: [
       "business loan without collateral Nigeria",
       "how to get business loan Nigeria",
@@ -2541,7 +2541,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "small-business-grants-nigeria-2025",
     title: "Top 10 Small Business Grants in Nigeria for 2025 (Apply Now)",
-    excerpt: "Free money for your business? Yes, it exists. Here is the ultimate list of government and private grants for Nigerian entrepreneurs in 2025. Includes Tony Elumelu, BOI, and more.",
+    excerpt: "Small business grants in Nigeria for 2025: top government and private programs, eligibility, and how to apply with deadlines.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -2693,7 +2693,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-banks-small-business-nigeria-comparison-2025",
     title: "Best Banks for Small Business in Nigeria (2025): Moniepoint, Kuda, GTBank, OPay, Access Bank",
-    excerpt: "Compare Moniepoint, Kuda, GTBank, OPay, and Access Bank for Nigerian SMEs. See fees, reliability, loan access, POS support, and who each bank is best for.",
+    excerpt: "Best banks for small business Nigeria: compare Moniepoint, Kuda, GTBank, OPay, and Access Bank for fees, SME support, and features.",
     keywords: [
       "best banks for small business Nigeria",
       "business bank account Nigeria",
@@ -3029,7 +3029,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "start-pos-business-nigeria-cost-profit-2025",
     title: "How to Start a POS Business in Nigeria: Cost & Profit Breakdown (2025)",
-    excerpt: "Is the POS business still profitable in 2025? We break down the startup costs for Moniepoint, OPay, and Palmpay, and calculate your potential daily profit.",
+    excerpt: "POS business Nigeria guide: startup costs, Moniepoint vs OPay vs PalmPay, daily profit range, location tips, and setup checklist.",
     content: `
       <p><strong>By Musa Ibrahim</strong> | <em>Updated: November 2025</em></p>
 
@@ -3227,7 +3227,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "mini-importation-nigeria-china-guide-2025",
     title: "Mini Importation Guide: How to Import from China to Nigeria (2025)",
-    excerpt: "Learn how to buy cheap goods from 1688.com and Alibaba and ship them to Nigeria. A step-by-step guide for beginners starting with ₦50,000.",
+    excerpt: "Mini importation Nigeria made simple: buy from 1688 or Alibaba, ship to Nigeria, and start with N50,000 using a product checklist.",
     content: `
       <p><strong>By Chinyere Okeke</strong> | <em>Updated: November 2025</em></p>
 
@@ -3393,7 +3393,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "reits-nigeria-investment-guide-2025",
     title: "Real Estate Investment Trusts (REITs) in Nigeria: 2025 Investment Guide",
-    excerpt: "Want to invest in real estate with ₦50,000? REITs allow you to own a piece of premium property and earn dividends. Here is how to start.",
+    excerpt: "REITs in Nigeria let you invest in property with small capital. Learn how to buy, earn dividends, and start in 2025 with a step-by-step guide.",
     content: `
       <p><strong>By Chinedu Okonkwo</strong> | <em>Updated: November 2025</em></p>
 
@@ -3566,7 +3566,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "foodstuff-export-business-nigeria-guide",
     title: "How to Start a Profitable Foodstuff Export Business in Nigeria (2025)",
-    excerpt: "Earn in Dollars by exporting Nigerian food. A step-by-step guide on NEPC registration, NAFDAC requirements, and finding foreign buyers.",
+    excerpt: "Foodstuff export business Nigeria guide: NEPC registration, NAFDAC compliance, logistics, and finding overseas buyers with pricing tips.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -3747,7 +3747,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "solar-power-solutions-nigeria-business-prices",
     title: "Solar Power Solutions for Nigerian Businesses: Prices & Installers (2025)",
-    excerpt: "Stop buying fuel. Discover the cost of 5kVA and 10kVA solar systems in Nigeria for 2025. We review Lithium batteries vs. Tubular and list top installers.",
+    excerpt: "Solar power Nigeria pricing for businesses: 5kVA and 10kVA system costs, battery options, and top installers for 2025 with sizing tips.",
     content: `
       <p><strong>By 9jaDirectory Tech Team</strong> | <em>Updated: November 2025</em></p>
       <p>With petrol hitting ₦1,200/liter and the grid collapsing weekly, running a business on a generator is financial suicide. In 2025, <strong>Solar Energy</strong> is not a luxury; it is a survival tool.</p>
@@ -3916,7 +3916,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "high-paying-digital-skills-nigeria-2025",
     title: "Top 10 High-Paying Digital Skills to Learn in Nigeria in 2025",
-    excerpt: "Want to earn in Dollars while living in Nigeria? These 10 tech skills are in highest demand for 2025. Includes salary estimates.",
+    excerpt: "High paying digital skills Nigeria 2025 list: software, data, design, and cybersecurity with income potential and where to learn them.",
     content: `
       <p><strong>By 9jaDirectory Careers</strong> | <em>Updated: November 2025</em></p>
       <p>The "Japa" wave is real. But for those staying back, the digital economy offers a way to earn global standard wages while living in Nigeria. In 2025, companies are desperate for talent.</p>
@@ -4278,7 +4278,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-coworking-spaces-lagos-2025",
     title: "Top Co-working Spaces in Lagos for Freelancers & Startups (2025)",
-    excerpt: "A practical 2025 guide to choosing the best coworking spaces in Lagos (Ikeja, Yaba, Lekki/VI): pricing ranges, amenities, and how to pick the right hub.",
+    excerpt: "Co-working spaces Lagos guide for 2025: pricing, amenities, and best hubs in Ikeja, Yaba, and Lekki, plus who each space suits.",
     content: `
     <p><strong>By 9jaDirectory Tech Team</strong> | <em>Updated: November 2025</em></p>
     <p>Working from home in Nigeria can be tough: unstable power, noisy generators, and unreliable internet. Coworking spaces solve that problem by bundling power, bandwidth, meeting rooms, and a professional environment into a single monthly plan.</p>
@@ -4415,7 +4415,8 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Tech Team",
     category: "Technology",
     readTime: "9 min read",
-    keywords: [
+        keywords: [
+      "co-working spaces Lagos",
       "coworking spaces Lagos",
       "best coworking space in Lagos",
       "coworking Ikeja",
@@ -4423,7 +4424,6 @@ export const blogPosts: BlogPost[] = [
       "coworking Lekki",
       "shared office Lagos",
       "private office Lagos",
-      "remote work Lagos",
       "9jaDirectory",
     ],
     schema: JSON.stringify({
@@ -4445,7 +4445,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "networking-events-lagos-2025",
     title: "Networking Events in Lagos: Where to Meet Investors & Partners (2025)",
-    excerpt: "A practical guide to networking in Lagos: where to find events, how to meet partners/investors, and follow-up scripts that turn conversations into deals.",
+    excerpt: "Networking events Lagos 2025: where to meet investors, how to network, and follow-up tips that convert for founders and SMEs.",
     content: `
     <p><strong>By 9jaDirectory Events</strong> | <em>Updated: November 2025</em></p>
     <p>Lagos runs on relationships. You can have a great product, but partnerships, distribution, and funding often come from the people you meet. The good news: networking is a skill—and you can learn it.</p>
@@ -4594,7 +4594,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "scuml-registration-guide-dnfi-nigeria",
     title: "SCUML Registration Guide for DNFI Businesses (2025 Update)",
-    excerpt: "If you run a DNFI (real estate, car sales, jewelry, hotels, NGOs), you may need SCUML. Here’s the 2025 step-by-step process, requirements, and common mistakes.",
+    excerpt: "SCUML registration guide for DNFI businesses: requirements, steps, timelines, and common mistakes to avoid, plus documents you need.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
     <p>Many Nigerian business owners only hear about SCUML when the bank asks for it during corporate account opening. If you operate in certain high-cash sectors, SCUML registration helps your business comply with anti–money laundering regulations.</p>
@@ -4718,14 +4718,14 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Legal Team",
     category: "Legal",
     readTime: "11 min read",
-    keywords: [
+        keywords: [
+      "SCUML registration guide",
       "SCUML registration Nigeria",
       "SCUML certificate EFCC",
       "DNFI SCUML Nigeria",
       "SCUML requirements Nigeria",
       "how to get SCUML certificate",
       "real estate SCUML Nigeria",
-      "car dealer SCUML Nigeria",
       "corporate bank account SCUML",
       "9jaDirectory",
     ],
@@ -4748,7 +4748,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "cac-business-registration-nigeria-guide-2025",
     title: "How to Register a Company in Nigeria (CAC Step-by-Step 2025)",
-    excerpt: "Step-by-step CAC registration in Nigeria (2025): business name vs LTD, required documents, CRP portal workflow, fees, timelines, and common mistakes.",
+    excerpt: "How to register a company in Nigeria (CAC 2025): business name vs LTD, required documents, CRP portal steps, fees, and timelines.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
     <p>Registering your business with the Corporate Affairs Commission (CAC) is one of the fastest ways to increase trust, open a corporate bank account, accept payments more easily, and qualify for grants or loans. The CAC process is now largely online through its portals.</p>
@@ -4878,9 +4878,9 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Legal Team",
     category: "Legal",
     readTime: "14 min read",
-    keywords: [
-      "CAC registration Nigeria",
+        keywords: [
       "how to register a company in Nigeria",
+      "CAC registration Nigeria",
       "CAC business name registration",
       "CAC LTD registration Nigeria",
       "pre.cac.gov.ng guide",
@@ -4908,7 +4908,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-payment-gateways-nigeria-2025",
     title: "Best Payment Gateways for Nigerian Businesses: Paystack vs Flutterwave (2025)",
-    excerpt: "A 2025 comparison of Paystack, Flutterwave, and Monnify: fees, settlement, features, and which payment gateway fits your Nigerian business.",
+    excerpt: "Best payment gateway in Nigeria comparison: Paystack vs Flutterwave vs Monnify on fees, payouts, and features for SMEs and ecommerce.",
     content: `
     <p><strong>By 9jaDirectory Fintech Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -5447,7 +5447,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "nafdac-registration-requirements-nigeria-2025",
     title: "How to Get NAFDAC Registration for Your Product (2025 Guide)",
-    excerpt: "Selling food, cosmetics, water, or health products in Nigeria? Here’s the 2025 NAFDAC registration process: requirements, NAPAMS portal steps, timelines, and how to avoid delays.",
+    excerpt: "NAFDAC registration for your product in 2025: requirements, NAPAMS portal steps, timelines, costs, and how to avoid delays.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
     <p>If you manufacture or sell regulated products in Nigeria, NAFDAC registration is not optional—it’s a major trust signal and often required by distributors, supermarkets, and corporate buyers.</p>
@@ -5601,7 +5601,8 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Legal Team",
     category: "Legal",
     readTime: "13 min read",
-    keywords: [
+        keywords: [
+      "NAFDAC registration for your product",
       "NAFDAC registration Nigeria",
       "how to get NAFDAC number",
       "NAPAMS portal NAFDAC",
@@ -5609,7 +5610,6 @@ export const blogPosts: BlogPost[] = [
       "NAFDAC registration for cosmetics",
       "NAFDAC registration timeline",
       "product registration Nigeria",
-      "manufacturing compliance Nigeria",
       "9jaDirectory",
     ],
     schema: JSON.stringify({
@@ -5632,7 +5632,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-blogging-content-business-nigeria-2025",
     title: "How to Start a Blogging & Content Business in Nigeria (2025): Step-by-Step Guide",
-    excerpt: "Start a profitable blogging & content creation business in Nigeria with zero startup costs. Learn monetization strategies, tools, and how to earn ₦100K+ monthly.",
+    excerpt: "How to start blogging in Nigeria: pick a niche, set up your blog, and monetize with ads, services, affiliates, and email.",
     content: `
     <p><strong>By 9jaDirectory Business Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -5800,7 +5800,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-ecommerce-business-nigeria-2025",
     title: "How to Start an E-Commerce Business in Nigeria (2025): Complete Setup Guide",
-    excerpt: "Launch your e-commerce store in Nigeria in 7 days. Complete guide to choosing products, platforms, payment solutions, and reaching first ₦500K in sales.",
+    excerpt: "Start an e-commerce business in Nigeria: choose products, set up a store, payments, and get your first sales with marketing basics.",
     content: `
     <p><strong>By 9jaDirectory Commerce Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -5947,12 +5947,12 @@ export const blogPosts: BlogPost[] = [
     author: "9jaDirectory Commerce Team",
     category: "Business",
     readTime: "13 min read",
-    keywords: [
+        keywords: [
+      "start an e-commerce business in Nigeria",
       "how to start ecommerce in Nigeria",
       "ecommerce business Nigeria 2025",
       "start online store Nigeria",
       "sell online Nigeria",
-      "profitable online businesses"
     ],
     schema: JSON.stringify({
       "@context": "https://schema.org",
@@ -5978,7 +5978,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-consulting-business-nigeria-2025",
     title: "How to Start a Consulting Business in Nigeria (2025): ₦200K-₦2M Per Project",
-    excerpt: "Start a high-income consulting business in Nigeria. Find profitable niches, land clients, and charge ₦200K-₦2M per project. Complete step-by-step guide.",
+    excerpt: "How to start consulting business in Nigeria: pick a niche, price your service, and win high-value clients with a simple proposal process.",
     content: `
     <p><strong>By 9jaDirectory Professional Services Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -6346,7 +6346,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-logistics-delivery-business-nigeria-2025",
     title: "How to Start a Logistics & Delivery Business in Nigeria (2025): ₦500K-₦2M Monthly",
-    excerpt: "Launch a profitable logistics business in Nigeria. Simple model with ₦500K startup cost. Serve restaurants, e-commerce stores, and SMEs. ₦500K-₦2M monthly revenue.",
+    excerpt: "Logistics business Nigeria guide: startup costs, delivery model, client niches, and how to reach N500K-N2M monthly revenue.",
     content: `
     <p><strong>By 9jaDirectory Services Team</strong> | <em>Updated: November 2025</em></p>
 
@@ -6721,7 +6721,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-food-processing-snacks-business-nigeria-2025",
     title: "How to Start a Food Processing & Snacks Business in Nigeria (2025): ₦500K-₦3M",
-    excerpt: "Launch a profitable food processing business. Make plantain chips, snacks, pastries, or sauces. Start with ₦500K. Scale to ₦2M-₦5M monthly revenue.",
+    excerpt: "Food processing business Nigeria guide: snacks, plantain chips, and sauces with startup cost, licensing basics, and growth tips.",
     content: `
     <p><strong>By 9jaDirectory Food Business Team</strong> | <em>Updated: November 2025</em></p>
 

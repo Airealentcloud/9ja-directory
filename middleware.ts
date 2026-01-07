@@ -5,10 +5,15 @@ export async function middleware(request: NextRequest) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
   const canonicalHost = new URL(siteUrl).hostname
   const requestHost = request.nextUrl.hostname
+  const requestPath = request.nextUrl.pathname
+  const isAmpersandPath = requestPath === '/&' || requestPath === '/%26'
 
-  if (requestHost === `www.${canonicalHost}`) {
+  if (requestHost === `www.${canonicalHost}` || isAmpersandPath) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.hostname = canonicalHost
+    if (isAmpersandPath) {
+      redirectUrl.pathname = '/'
+    }
     return NextResponse.redirect(redirectUrl, 308)
   }
 

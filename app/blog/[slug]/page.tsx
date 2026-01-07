@@ -234,6 +234,61 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </article>
 
+                {post.keywords && post.keywords.length > 0 && (
+                    <div className="mt-10 rounded-2xl bg-green-50 p-6">
+                        <h2 className="text-xl font-semibold text-gray-900">Key topics</h2>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {post.keywords.slice(0, 6).map((keyword) => (
+                                <span
+                                    key={keyword}
+                                    className="rounded-full bg-white px-3 py-1 text-sm font-medium text-green-700 shadow-sm"
+                                >
+                                    {keyword}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                <div className="mt-10 grid gap-4 rounded-2xl bg-white p-6 shadow-sm sm:grid-cols-2">
+                    <div className="rounded-xl border border-gray-100 p-4">
+                        <h3 className="text-lg font-semibold text-gray-900">Explore categories</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                            Browse verified businesses by industry and service.
+                        </p>
+                        <Link href="/categories" className="mt-3 inline-flex text-sm font-semibold text-green-700 hover:text-green-800">
+                            View categories
+                        </Link>
+                    </div>
+                    <div className="rounded-xl border border-gray-100 p-4">
+                        <h3 className="text-lg font-semibold text-gray-900">Explore locations</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                            Find businesses by state and city across Nigeria.
+                        </p>
+                        <Link href="/states" className="mt-3 inline-flex text-sm font-semibold text-green-700 hover:text-green-800">
+                            View locations
+                        </Link>
+                    </div>
+                    <div className="rounded-xl border border-gray-100 p-4">
+                        <h3 className="text-lg font-semibold text-gray-900">Featured businesses</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                            See top-rated and highlighted listings.
+                        </p>
+                        <Link href="/featured" className="mt-3 inline-flex text-sm font-semibold text-green-700 hover:text-green-800">
+                            View featured
+                        </Link>
+                    </div>
+                    <div className="rounded-xl border border-gray-100 p-4">
+                        <h3 className="text-lg font-semibold text-gray-900">Get listed</h3>
+                        <p className="mt-2 text-sm text-gray-600">
+                            Publish your business and reach more customers.
+                        </p>
+                        <Link href="/pricing" className="mt-3 inline-flex text-sm font-semibold text-green-700 hover:text-green-800">
+                            See plans
+                        </Link>
+                    </div>
+                </div>
+
                 {/* Share/Tags Placeholder */}
                 <div className="mt-12 border-t border-gray-200 py-8">
                     <p className="text-center text-gray-500">Share this article</p>

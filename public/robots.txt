@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block private pages
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /login
+Disallow: /signup
+Disallow: /checkout
+Disallow: /payment/
+
+# Sitemap
+Sitemap: https://9jadirectory.org/sitemap.xml
