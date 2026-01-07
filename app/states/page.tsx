@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
   title: 'Find Businesses by Location - All Nigerian States | 9jaDirectory',
   description: 'Browse businesses and services in all 36 Nigerian states + FCT Abuja. Find local businesses in Lagos, Kano, Rivers, Abuja, Kaduna, Oyo, Delta, Anambra and every state in Nigeria.',
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Browse Businesses by State | All 37 Nigerian States',
     description: 'Find trusted businesses across every Nigerian state - from Lagos to Sokoto',
-    url: 'https://9jadirectory.org/states',
+    url: `${siteUrl}/states`,
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
   },
   alternates: {
-    canonical: 'https://9jadirectory.org/states',
+    canonical: `${siteUrl}/states`,
   },
 }
 
@@ -96,13 +98,13 @@ export default async function StatesPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://9jadirectory.org',
+        item: siteUrl,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'States',
-        item: 'https://9jadirectory.org/states',
+        item: `${siteUrl}/states`,
       },
     ],
   }
@@ -110,12 +112,12 @@ export default async function StatesPage() {
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': 'https://9jadirectory.org/states#page',
+    '@id': `${siteUrl}/states#page`,
     name: 'Businesses by Location in Nigeria',
     description: 'Browse businesses and services in all 36 Nigerian states + FCT Abuja.',
-    url: 'https://9jadirectory.org/states',
+    url: `${siteUrl}/states`,
     inLanguage: 'en-NG',
-    isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+    isPartOf: { '@type': 'WebSite', '@id': `${siteUrl}#website` },
     numberOfItems: statesWithCounts.length,
   }
 
@@ -123,7 +125,7 @@ export default async function StatesPage() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Nigerian States and Territories',
-    url: 'https://9jadirectory.org/states',
+    url: `${siteUrl}/states`,
     numberOfItems: statesWithCounts.length,
     itemListElement: statesWithCounts.map((state, index) => ({
       '@type': 'ListItem',
@@ -131,7 +133,7 @@ export default async function StatesPage() {
       item: {
         '@type': 'Place',
         name: state.name,
-        url: `https://9jadirectory.org/states/${state.slug}`,
+        url: `${siteUrl}/states/${state.slug}`,
       },
     })),
   }

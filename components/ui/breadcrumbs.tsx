@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export interface BreadcrumbItem {
     label: string
     href: string
@@ -21,13 +23,13 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://9jadirectory.org',
+                item: siteUrl,
             },
             ...items.map((item, index) => ({
                 '@type': 'ListItem',
                 position: index + 2,
                 name: item.label,
-                item: `https://9jadirectory.org${item.href}`,
+                item: `${siteUrl}${item.href}`,
             })),
         ],
     }

@@ -45,6 +45,8 @@ type Review = {
     user_id?: string
 }
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 /**
  * Generates LocalBusiness JSON-LD schema for a listing
  * Supports multiple business types including Real Estate
@@ -62,7 +64,7 @@ export function generateLocalBusinessSchema(
     const schema: any = {
         '@context': 'https://schema.org',
         '@type': [businessType, 'LocalBusiness'], // Multiple types for better SERP features
-        '@id': `https://9jadirectory.org/listings/${listing.slug}`,
+        '@id': `${siteUrl}/listings/${listing.slug}`,
         name: listing.business_name,
         description: listing.description,
     }
@@ -195,7 +197,7 @@ export function generateLocalBusinessSchema(
     if (reviews && reviews.length > 0) {
         schema.review = reviews.slice(0, 5).map((review) => ({
             '@type': 'Review',
-            '@id': `https://9jadirectory.org/listings/${listing.slug}#review-${review.id}`,
+            '@id': `${siteUrl}/listings/${listing.slug}#review-${review.id}`,
             author: {
                 '@type': 'Person',
                 name: review.reviewer_name || 'Anonymous',
@@ -240,10 +242,10 @@ export function generateLocalBusinessSchema(
     // ✅ ENHANCED: Organization hierarchy - for knowledge graph
     schema.parentOrganization = {
       '@type': 'Organization',
-      '@id': 'https://9jadirectory.org#organization',
+      '@id': `${siteUrl}#organization`,
       name: '9jaDirectory',
-      url: 'https://9jadirectory.org',
-      logo: 'https://9jadirectory.org/logo.svg',
+      url: siteUrl,
+      logo: `${siteUrl}/logo.svg`,
       sameAs: [
         'https://www.facebook.com/9jadirectory',
         'https://twitter.com/9jaDirectory',
@@ -387,7 +389,7 @@ export function generateBreadcrumbSchema(listing: Listing) {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://9jadirectory.org',
+            item: siteUrl,
         },
     ]
 
@@ -396,7 +398,7 @@ export function generateBreadcrumbSchema(listing: Listing) {
             '@type': 'ListItem',
             position: 2,
             name: listing.states.name,
-            item: `https://9jadirectory.org/states/${listing.states.slug}`,
+            item: `${siteUrl}/states/${listing.states.slug}`,
         })
     }
 
@@ -405,7 +407,7 @@ export function generateBreadcrumbSchema(listing: Listing) {
             '@type': 'ListItem',
             position: items.length + 1,
             name: listing.categories.name,
-            item: `https://9jadirectory.org/categories/${listing.categories.slug}`,
+            item: `${siteUrl}/categories/${listing.categories.slug}`,
         })
     }
 
@@ -413,7 +415,7 @@ export function generateBreadcrumbSchema(listing: Listing) {
         '@type': 'ListItem',
         position: items.length + 1,
         name: listing.business_name,
-        item: `https://9jadirectory.org/listings/${listing.slug}`,
+        item: `${siteUrl}/listings/${listing.slug}`,
     })
 
     return {
@@ -431,10 +433,10 @@ export function generateRealEstateListingSchema(listing: Listing) {
     const schema: any = {
         '@context': 'https://schema.org',
         '@type': 'RealEstateListing',
-        '@id': `https://9jadirectory.org/listings/${listing.slug}#listing`,
+        '@id': `${siteUrl}/listings/${listing.slug}#listing`,
         name: listing.business_name,
         description: listing.description,
-        url: `https://9jadirectory.org/listings/${listing.slug}`,
+        url: `${siteUrl}/listings/${listing.slug}`,
         datePosted: listing.created_at,
     }
 

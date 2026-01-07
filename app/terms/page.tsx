@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
     title: 'Terms of Service | 9jaDirectory',
     description: 'Read the 9jaDirectory terms of service and conditions for using our business directory platform.',
     alternates: {
-        canonical: 'https://9jadirectory.org/terms',
+        canonical: `${siteUrl}/terms`,
     },
     openGraph: {
         title: 'Terms of Service | 9jaDirectory',
         description: 'Terms and conditions for using 9jaDirectory services.',
-        url: 'https://9jadirectory.org/terms',
+        url: `${siteUrl}/terms`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -35,21 +37,21 @@ export default function TermsPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: 'https://9jadirectory.org/terms' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${siteUrl}/terms` },
         ],
     }
 
     const pageSchema = {
         '@context': 'https://schema.org',
         '@type': ['WebPage', 'TermsOfService'],
-        '@id': 'https://9jadirectory.org/terms#page',
+        '@id': `${siteUrl}/terms#page`,
         name: 'Terms of Service',
-        url: 'https://9jadirectory.org/terms',
+        url: `${siteUrl}/terms`,
         description: 'Terms and conditions for using 9jaDirectory services.',
         inLanguage: 'en-NG',
-        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
-        publisher: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        isPartOf: { '@type': 'WebSite', '@id': `${siteUrl}#website` },
+        publisher: { '@type': 'Organization', '@id': `${siteUrl}#organization` },
         dateModified: new Date().toISOString(),
     }
 

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
   title: 'About Us | Nigeria Premier Business Directory | 9jaDirectory',
   description: 'Learn about 9jaDirectory - Nigeria most comprehensive business directory connecting millions of users with verified businesses across all 36 states + FCT. Trusted reviews, nationwide coverage, and transparent listing plans.',
@@ -9,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About 9jaDirectory - Nigeria Leading Business Directory',
     description: 'Connecting Nigerians with trusted businesses across all 36 states since 2025',
-    url: 'https://9jadirectory.org/about',
+    url: `${siteUrl}/about`,
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
   },
   alternates: {
-    canonical: 'https://9jadirectory.org/about',
+    canonical: `${siteUrl}/about`,
   },
 }
 
@@ -55,8 +57,8 @@ export default async function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-      { '@type': 'ListItem', position: 2, name: 'About', item: 'https://9jadirectory.org/about' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'About', item: `${siteUrl}/about` },
     ],
   }
 
@@ -64,8 +66,8 @@ export default async function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: '9jaDirectory',
-    url: 'https://9jadirectory.org',
-    logo: 'https://9jadirectory.org/logo.svg',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
     description: 'Nigeria most comprehensive business directory platform',
     areaServed: {
       '@type': 'Country',
@@ -85,7 +87,7 @@ export default async function AboutPage() {
     '@type': 'AboutPage',
     name: 'About 9jaDirectory',
     description: 'Learn about Nigeria premier business directory platform',
-    url: 'https://9jadirectory.org/about',
+    url: `${siteUrl}/about`,
     mainEntity: {
       '@type': 'Organization',
       name: '9jaDirectory',

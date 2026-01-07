@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
     title: 'Privacy Policy | 9jaDirectory',
     description: 'Read the 9jaDirectory privacy policy to learn how we collect, use, and protect your data when you use our platform.',
     alternates: {
-        canonical: 'https://9jadirectory.org/privacy',
+        canonical: `${siteUrl}/privacy`,
     },
     openGraph: {
         title: 'Privacy Policy | 9jaDirectory',
         description: 'Learn how 9jaDirectory collects, uses, and protects your data.',
-        url: 'https://9jadirectory.org/privacy',
+        url: `${siteUrl}/privacy`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -35,21 +37,21 @@ export default function PrivacyPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://9jadirectory.org/privacy' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${siteUrl}/privacy` },
         ],
     }
 
     const pageSchema = {
         '@context': 'https://schema.org',
         '@type': ['WebPage', 'PrivacyPolicy'],
-        '@id': 'https://9jadirectory.org/privacy#page',
+        '@id': `${siteUrl}/privacy#page`,
         name: 'Privacy Policy',
-        url: 'https://9jadirectory.org/privacy',
+        url: `${siteUrl}/privacy`,
         description: 'Privacy policy and data protection information for 9jaDirectory users.',
         inLanguage: 'en-NG',
-        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
-        publisher: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        isPartOf: { '@type': 'WebSite', '@id': `${siteUrl}#website` },
+        publisher: { '@type': 'Organization', '@id': `${siteUrl}#organization` },
         dateModified: new Date().toISOString(),
     }
 

@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 interface StatePageProps {
   params: Promise<{
     slug: string
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${state.name} State Business Directory | 9jaDirectory`,
       description: `Find trusted businesses and services in ${state.name} State`,
-      url: `https://9jadirectory.org/states/${slug}`,
+      url: `${siteUrl}/states/${slug}`,
       siteName: '9jaDirectory',
       locale: 'en_NG',
       type: 'website',
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: ['/opengraph-image'],
     },
     alternates: {
-      canonical: `https://9jadirectory.org/states/${slug}`,
+      canonical: `${siteUrl}/states/${slug}`,
     },
   }
 }
@@ -124,19 +126,19 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://9jadirectory.org',
+        item: siteUrl,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'States',
-        item: 'https://9jadirectory.org/states',
+        item: `${siteUrl}/states`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: state.name,
-        item: `https://9jadirectory.org/states/${slug}`,
+        item: `${siteUrl}/states/${slug}`,
       },
     ],
   }
@@ -145,7 +147,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
     '@context': 'https://schema.org',
     '@type': 'Place',
     name: `${state.name} State`,
-    '@id': `https://9jadirectory.org/states/${slug}`,
+    '@id': `${siteUrl}/states/${slug}`,
     containedInPlace: {
       '@type': 'Country',
       name: 'Nigeria',
@@ -157,7 +159,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `Businesses in ${state.name} State`,
-    url: `https://9jadirectory.org/states/${slug}`,
+    url: `${siteUrl}/states/${slug}`,
     numberOfItems: totalCount || 0,
     itemListElement: (listings || []).slice(0, 10).map((listing: any, index: number) => ({
       '@type': 'ListItem',
@@ -165,7 +167,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
       item: {
         '@type': 'LocalBusiness',
         name: listing.business_name,
-        url: `https://9jadirectory.org/listings/${listing.slug}`,
+        url: `${siteUrl}/listings/${listing.slug}`,
         description: listing.description,
       },
     })),

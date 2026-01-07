@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import OperatingHours from '@/components/operating-hours'
@@ -11,6 +12,8 @@ import {
   generateRealEstateListingSchema,
   generateFAQSchema
 } from '@/lib/schema/local-business'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
 
 // Define listing type for proper typing
 interface ListingData {
@@ -717,7 +720,7 @@ async function getCategoryAndState(listing: any) {
 }
 
 // Generate metadata for SEO - ENHANCED FOR RANKING
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const supabase = await createClient()
 
@@ -858,7 +861,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   // ✅ CANONICAL URL TO PREVENT DUPLICATES
-  const canonicalUrl = `https://9jadirectory.org/listings/${slug}`
+  const canonicalUrl = `${siteUrl}/listings/${slug}`
 
   return {
     title: seoTitle,

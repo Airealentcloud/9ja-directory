@@ -3,6 +3,8 @@ import BlogCard from '@/components/blog/blog-card';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org';
+
 export const metadata: Metadata = {
     title: 'Business Blog & Guides | 9jaDirectory',
     description: 'Latest insights, guides, and news about business in Nigeria. Learn how to grow, find services, and make smarter decisions with 9jaDirectory.',
@@ -14,12 +16,12 @@ export const metadata: Metadata = {
         '9jaDirectory blog',
     ],
     alternates: {
-        canonical: 'https://9jadirectory.org/blog',
+        canonical: `${siteUrl}/blog`,
     },
     openGraph: {
         title: 'Business Blog & Guides | 9jaDirectory',
         description: 'Insights, guides, and news about business in Nigeria.',
-        url: 'https://9jadirectory.org/blog',
+        url: `${siteUrl}/blog`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -48,33 +50,33 @@ export default function BlogIndexPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://9jadirectory.org/blog' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
         ],
     };
 
     const blogSchema = {
         '@context': 'https://schema.org',
         '@type': 'Blog',
-        '@id': 'https://9jadirectory.org/blog#blog',
+        '@id': `${siteUrl}/blog#blog`,
         name: '9jaDirectory Blog',
         description: 'Insights, guides, and news about business in Nigeria.',
-        url: 'https://9jadirectory.org/blog',
+        url: `${siteUrl}/blog`,
         inLanguage: 'en-NG',
         publisher: {
             '@type': 'Organization',
             name: '9jaDirectory',
-            url: 'https://9jadirectory.org',
+            url: siteUrl,
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://9jadirectory.org/logo.png',
+                url: `${siteUrl}/logo.png`,
             },
         },
         blogPost: blogPosts.slice(0, 20).map((post) => ({
             '@type': 'BlogPosting',
             headline: post.title,
             description: post.excerpt,
-            url: `https://9jadirectory.org/blog/${post.slug}`,
+            url: `${siteUrl}/blog/${post.slug}`,
             datePublished: post.date,
             author: { '@type': 'Person', name: post.author },
         })),

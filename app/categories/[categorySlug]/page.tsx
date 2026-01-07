@@ -21,10 +21,19 @@ interface CategoryPageProps {
 }
 
 const LISTINGS_PER_PAGE = 12
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: Promise<{ categorySlug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ categorySlug: string }>
+  searchParams?: Promise<{ page?: string; state?: string }>
+}): Promise<Metadata> {
   const { categorySlug: slug } = await params
+  const { page: pageParam, state: stateParam } = (await searchParams) || {}
+  const hasQueryParams = Boolean(pageParam) || Boolean(stateParam)
   const supabase = await createClient()
 
   const { data: category } = await supabase
@@ -51,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
       category.description ||
       `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`
 
-  const canonical = `https://9jadirectory.org/categories/${slug}`
+  const canonical = `${siteUrl}/categories/${slug}`
 
   return {
     title,
@@ -78,6 +87,7 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
     alternates: {
       canonical,
     },
+    ...(hasQueryParams ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title,
       description,

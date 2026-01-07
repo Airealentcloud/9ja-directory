@@ -2,6 +2,16 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function middleware(request: NextRequest) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+  const canonicalHost = new URL(siteUrl).hostname
+  const requestHost = request.nextUrl.hostname
+
+  if (requestHost === `www.${canonicalHost}`) {
+    const redirectUrl = request.nextUrl.clone()
+    redirectUrl.hostname = canonicalHost
+    return NextResponse.redirect(redirectUrl, 308)
+  }
+
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     console.error('Missing Supabase Env Vars in Middleware!')
   }

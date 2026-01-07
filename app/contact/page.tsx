@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/contact-form'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
     title: 'Contact 9jaDirectory | Support & Business Listing Help',
     description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries. We respond within 24 hours.',
@@ -11,12 +13,12 @@ export const metadata: Metadata = {
         'Nigeria business directory contact',
     ],
     alternates: {
-        canonical: 'https://9jadirectory.org/contact',
+        canonical: `${siteUrl}/contact`,
     },
     openGraph: {
         title: 'Contact 9jaDirectory | Support & Business Listing Help',
         description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries.',
-        url: 'https://9jadirectory.org/contact',
+        url: `${siteUrl}/contact`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -42,26 +44,26 @@ export default function ContactPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://9jadirectory.org/contact' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Contact', item: `${siteUrl}/contact` },
         ],
     }
 
     const contactPageSchema = {
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        '@id': 'https://9jadirectory.org/contact#page',
+        '@id': `${siteUrl}/contact#page`,
         name: 'Contact 9jaDirectory',
-        url: 'https://9jadirectory.org/contact',
+        url: `${siteUrl}/contact`,
         description: 'Contact the 9jaDirectory team for support, business listing help, partnerships, or general inquiries.',
         inLanguage: 'en-NG',
-        isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
-        about: { '@type': 'Organization', '@id': 'https://9jadirectory.org#organization' },
+        isPartOf: { '@type': 'WebSite', '@id': `${siteUrl}#website` },
+        about: { '@type': 'Organization', '@id': `${siteUrl}#organization` },
         mainEntity: {
             '@type': 'Organization',
             name: '9jaDirectory',
-            url: 'https://9jadirectory.org',
-            logo: { '@type': 'ImageObject', url: 'https://9jadirectory.org/logo.png' },
+            url: siteUrl,
+            logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.png` },
             contactPoint: [
                 {
                     '@type': 'ContactPoint',

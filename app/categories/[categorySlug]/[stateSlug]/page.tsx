@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 // ✅ GENERATE DYNAMIC METADATA FOR STATE + CATEGORY COMBINATION
 export async function generateMetadata({
   params,
@@ -72,7 +74,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
+      url: `${siteUrl}/categories/${categorySlug}/${stateSlug}`,
       type: 'website',
       locale: 'en_NG',
       siteName: '9jaDirectory',
@@ -94,7 +96,7 @@ export async function generateMetadata({
       images: ['/opengraph-image'],
     },
     alternates: {
-      canonical: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
+      canonical: `${siteUrl}/categories/${categorySlug}/${stateSlug}`,
     },
   }
 }
@@ -159,16 +161,16 @@ export default async function CategoryStateListingPage({
   const pageSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}#page`,
+    '@id': `${siteUrl}/categories/${categorySlug}/${stateSlug}#page`,
     name: `Best ${categoryLabel} in ${stateDisplayName}`,
     description: `Directory of verified ${categoryLabelLower} in ${stateLongName}`,
-    url: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
-    image: 'https://9jadirectory.org/opengraph-image',
+    url: `${siteUrl}/categories/${categorySlug}/${stateSlug}`,
+    image: `${siteUrl}/opengraph-image`,
     dateModified: new Date().toISOString(),
     publisher: {
       '@type': 'Organization',
       name: '9jaDirectory',
-      url: 'https://9jadirectory.org',
+      url: siteUrl,
     },
     mainEntity: {
       '@type': 'LocalBusiness',
@@ -189,31 +191,31 @@ export default async function CategoryStateListingPage({
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://9jadirectory.org',
+        item: siteUrl,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Categories',
-        item: 'https://9jadirectory.org/categories',
+        item: `${siteUrl}/categories`,
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: categoryLabel,
-        item: `https://9jadirectory.org/categories/${categorySlug}`,
+        item: `${siteUrl}/categories/${categorySlug}`,
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: stateDisplayName,
-        item: `https://9jadirectory.org/states/${stateSlug}`,
+        item: `${siteUrl}/states/${stateSlug}`,
       },
       {
         '@type': 'ListItem',
         position: 5,
         name: `${categoryLabel} in ${stateDisplayName}`,
-        item: `https://9jadirectory.org/categories/${categorySlug}/${stateSlug}`,
+        item: `${siteUrl}/categories/${categorySlug}/${stateSlug}`,
       },
     ],
   }

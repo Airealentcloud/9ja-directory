@@ -15,6 +15,8 @@ type Listing = {
     states?: { name: string; slug: string } | null | any
 }
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 /**
  * Generates ItemList schema for category pages
  * Shows listings as a structured list for search engines
@@ -35,9 +37,9 @@ export function generateCategoryItemListSchema(
             position: index + 1,
             item: {
                 '@type': 'LocalBusiness',
-                '@id': `https://9jadirectory.org/listings/${listing.slug}`,
+                '@id': `${siteUrl}/listings/${listing.slug}`,
                 name: listing.business_name,
-                url: `https://9jadirectory.org/listings/${listing.slug}`,
+                url: `${siteUrl}/listings/${listing.slug}`,
                 description: listing.description,
             },
         })),
@@ -56,19 +58,19 @@ export function generateCategoryBreadcrumbSchema(category: Category) {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://9jadirectory.org',
+                item: siteUrl,
             },
             {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Categories',
-                item: 'https://9jadirectory.org/categories',
+                item: `${siteUrl}/categories`,
             },
             {
                 '@type': 'ListItem',
                 position: 3,
                 name: category.name,
-                item: `https://9jadirectory.org/categories/${category.slug}`,
+                item: `${siteUrl}/categories/${category.slug}`,
             },
         ],
     }
@@ -83,7 +85,7 @@ export function generateCategoryCollectionSchema(category: Category, totalCount:
         '@type': 'CollectionPage',
         name: `${category.name} in Nigeria`,
         description: category.description || `Comprehensive directory of ${category.name} businesses in Nigeria`,
-        url: `https://9jadirectory.org/categories/${category.slug}`,
+        url: `${siteUrl}/categories/${category.slug}`,
         inLanguage: 'en-NG',
         about: {
             '@type': 'Thing',

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
     title: 'Featured Businesses in Nigeria | 9jaDirectory',
     description: 'Discover top-rated and featured businesses across Nigeria. Handpicked selections of trusted services and providers in your area.',
@@ -13,12 +15,12 @@ export const metadata: Metadata = {
         '9jaDirectory featured',
     ],
     alternates: {
-        canonical: 'https://9jadirectory.org/featured',
+        canonical: `${siteUrl}/featured`,
     },
     openGraph: {
         title: 'Featured Businesses in Nigeria | 9jaDirectory',
         description: 'Discover top-rated and featured businesses across Nigeria.',
-        url: 'https://9jadirectory.org/featured',
+        url: `${siteUrl}/featured`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -70,8 +72,8 @@ export default async function FeaturedPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'Featured', item: 'https://9jadirectory.org/featured' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Featured', item: `${siteUrl}/featured` },
         ],
     }
 
@@ -79,7 +81,7 @@ export default async function FeaturedPage() {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'Featured Businesses in Nigeria',
-        url: 'https://9jadirectory.org/featured',
+        url: `${siteUrl}/featured`,
         numberOfItems: listings?.length || 0,
         itemListElement: (listings || []).slice(0, 20).map((listing: any, index: number) => ({
             '@type': 'ListItem',
@@ -87,7 +89,7 @@ export default async function FeaturedPage() {
             item: {
                 '@type': 'LocalBusiness',
                 name: listing.business_name,
-                url: `https://9jadirectory.org/listings/${listing.slug}`,
+                url: `${siteUrl}/listings/${listing.slug}`,
                 description: listing.description,
             },
         })),

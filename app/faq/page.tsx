@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
     title: 'Frequently Asked Questions | 9jaDirectory',
     description: 'Get answers to common questions about listing your business, searching for services, and using 9jaDirectory - Nigeria\'s premier business directory.',
@@ -11,12 +13,12 @@ export const metadata: Metadata = {
         'Nigeria business directory help',
     ],
     alternates: {
-        canonical: 'https://9jadirectory.org/faq',
+        canonical: `${siteUrl}/faq`,
     },
     openGraph: {
         title: 'Frequently Asked Questions | 9jaDirectory',
         description: 'Answers to common questions about listing, searching, and using 9jaDirectory.',
-        url: 'https://9jadirectory.org/faq',
+        url: `${siteUrl}/faq`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
         type: 'website',
@@ -105,8 +107,8 @@ export default function FAQPage() {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-            { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://9jadirectory.org/faq' },
+            { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'FAQ', item: `${siteUrl}/faq` },
         ],
     }
 

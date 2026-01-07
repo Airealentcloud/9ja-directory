@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { CategoryCard } from '@/components/category-card'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
   title: 'Browse Business Categories in Nigeria | 9jaDirectory',
   description: 'Explore business categories across Nigeria. Browse verified listings by category and discover top services in all 36 states + FCT.',
@@ -13,12 +15,12 @@ export const metadata: Metadata = {
     '9jaDirectory categories',
   ],
   alternates: {
-    canonical: 'https://9jadirectory.org/categories',
+    canonical: `${siteUrl}/categories`,
   },
   openGraph: {
     title: 'Browse Business Categories in Nigeria | 9jaDirectory',
     description: 'Explore business categories across Nigeria and discover verified listings by category.',
-    url: 'https://9jadirectory.org/categories',
+    url: `${siteUrl}/categories`,
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -70,21 +72,21 @@ export default async function CategoriesPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://9jadirectory.org' },
-      { '@type': 'ListItem', position: 2, name: 'Categories', item: 'https://9jadirectory.org/categories' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Categories', item: `${siteUrl}/categories` },
     ],
   }
 
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': 'https://9jadirectory.org/categories#page',
+    '@id': `${siteUrl}/categories#page`,
     name: 'Business Categories in Nigeria',
     description:
       'Explore business categories across Nigeria. Browse verified listings by category and discover top services in all 36 states + FCT.',
-    url: 'https://9jadirectory.org/categories',
+    url: `${siteUrl}/categories`,
     inLanguage: 'en-NG',
-    isPartOf: { '@type': 'WebSite', '@id': 'https://9jadirectory.org#website' },
+    isPartOf: { '@type': 'WebSite', '@id': `${siteUrl}#website` },
     numberOfItems: categoriesWithCounts.length,
   }
 
@@ -98,7 +100,7 @@ export default async function CategoriesPage() {
       item: {
         '@type': 'Thing',
         name: category.name,
-        url: `https://9jadirectory.org/categories/${category.slug}`,
+        url: `${siteUrl}/categories/${category.slug}`,
       },
     })),
   }

@@ -4,6 +4,8 @@ import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',
   description: 'Discover trusted businesses and services across Nigeria. Search 10,000+ verified listings in Lagos, Abuja, and all 36 states. Find restaurants, hotels, healthcare, shops and more.',
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nigeria Business Directory - Find Services in Lagos, Abuja & All States',
     description: 'Find and connect with verified businesses across all 36 Nigerian states',
-    url: 'https://9jadirectory.org',
+    url: siteUrl,
     siteName: '9jaDirectory',
     locale: 'en_NG',
     type: 'website',
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
   },
   alternates: {
-    canonical: 'https://9jadirectory.org',
+    canonical: siteUrl,
   },
 }
 
@@ -83,8 +85,8 @@ export default async function Home() {
     '@type': 'Organization',
     name: '9jaDirectory',
     alternateName: '9ja Directory',
-    url: 'https://9jadirectory.org',
-    logo: 'https://9jadirectory.org/logo.svg',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
     description: 'Nigeria\'s premier online business directory connecting customers with trusted local businesses across all 36 states.',
     foundingDate: '2024',
     areaServed: {
@@ -112,10 +114,10 @@ export default async function Home() {
     '@type': 'WebSite',
     name: '9jaDirectory',
     description: 'Nigeria Premier Business Directory',
-    url: 'https://9jadirectory.org',
+    url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://9jadirectory.org/search?q={search_term_string}',
+      target: `${siteUrl}/search?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
     areaServed: {

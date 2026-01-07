@@ -3,6 +3,8 @@ import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+
 // ✅ GENERATE DYNAMIC METADATA FOR SEARCH RESULTS PAGE
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string; state?: string }> }): Promise<Metadata> {
   const { q, state } = await searchParams
@@ -57,7 +59,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     openGraph: {
       title,
       description,
-      url: `https://9jadirectory.org/search?q=${encodeURIComponent(query)}${stateSlug ? `&state=${stateSlug}` : ''}`,
+      url: `${siteUrl}/search?q=${encodeURIComponent(query)}${stateSlug ? `&state=${stateSlug}` : ''}`,
       type: 'website',
       locale: 'en_NG',
       siteName: '9jaDirectory',
@@ -81,7 +83,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
     },
     
     alternates: {
-      canonical: `https://9jadirectory.org/search?q=${encodeURIComponent(query)}${stateSlug ? `&state=${stateSlug}` : ''}`,
+      canonical: `${siteUrl}/search?q=${encodeURIComponent(query)}${stateSlug ? `&state=${stateSlug}` : ''}`,
     },
   }
 }
@@ -156,6 +158,11 @@ export default async function SearchPage({
     
     // Generate FAQ schema for this search
     const faqSchema = generateFAQSchema(query || 'business', stateName)
+    const headerText = query && stateSlug
+      ? `Showing results for "${query}" in ${stateName}`
+      : query
+        ? `Showing results for "${query}"`
+        : `Showing businesses in ${stateName}`
 
     // Build the search query - simplified to avoid relation errors
     let searchQuery = supabase
@@ -210,15 +217,37 @@ export default async function SearchPage({
                     </Link>
                     <h1 className="text-3xl font-bold">Search Results</h1>
                     <p className="text-green-100 mt-2">
-                        {query && `Showing results for "${query}"`}
-                        {query && stateSlug && ' in '}
-                        {stateSlug && stateSlug !== '' && `${stateSlug.replace('-', ' ')}`}
+                        {headerText}
                     </p>
                 </div>
             </div>
 
             {/* Results */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+                    <div className="rounded-lg bg-white p-6 shadow-sm lg:col-span-2">
+                        <h2 className="text-xl font-semibold text-gray-900">Search tips</h2>
+                        <ul className="mt-4 list-disc space-y-2 pl-5 text-gray-600">
+                            <li>Use a business name or service keyword (for example, "real estate").</li>
+                            <li>Add a city or state to narrow results.</li>
+                            <li>Try fewer words if you get no results.</li>
+                        </ul>
+                    </div>
+                    <div className="rounded-lg bg-white p-6 shadow-sm">
+                        <h2 className="text-xl font-semibold text-gray-900">Explore</h2>
+                        <div className="mt-4 space-y-2">
+                            <Link href="/categories" className="block text-green-700 hover:text-green-800">
+                                Browse categories
+                            </Link>
+                            <Link href="/states" className="block text-green-700 hover:text-green-800">
+                                Browse locations
+                            </Link>
+                            <Link href="/featured" className="block text-green-700 hover:text-green-800">
+                                Featured businesses
+                            </Link>
+                        </div>
+                    </div>
+                </div>
                 {error && (
                     <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
                         Error loading results. Please try again.
