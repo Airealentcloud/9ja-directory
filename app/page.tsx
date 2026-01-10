@@ -127,6 +127,54 @@ export default async function Home() {
     },
   }
 
+  // FAQ Schema for rich results
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is 9jaDirectory?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '9jaDirectory is Nigeria\'s leading online business directory that helps customers find verified businesses and services across all 36 states and the FCT. We connect millions of Nigerians with trusted local businesses in categories like restaurants, real estate, healthcare, technology, and more.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I list my business on 9jaDirectory?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Listing your business is simple: Choose a plan that fits your needs, fill in your business details including name, category, location, and contact information, complete the payment, and your listing will be live after a quick review. Premium plans include featured placement and enhanced visibility.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is 9jaDirectory free to use for customers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, searching and browsing the directory is completely free for customers. You can search for businesses by category, location, or keyword, view contact details, and read reviews without creating an account or paying any fees.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which Nigerian states does 9jaDirectory cover?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: '9jaDirectory covers all 36 Nigerian states plus the Federal Capital Territory (FCT). Whether you\'re looking for businesses in Lagos, Abuja, Kano, Rivers, or any other state, you\'ll find verified listings in our directory.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How can I contact a business listed on 9jaDirectory?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Each business listing includes contact information such as phone numbers, email addresses, WhatsApp numbers, and physical addresses. Simply click on a listing to view all available contact methods and reach out directly to the business.',
+        },
+      },
+    ],
+  }
+
   return (
     <>
       {/* Multiple Schema Markup for Rich Results */}
@@ -138,14 +186,43 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <div>
         {/* Hero Section with Search */}
         <SearchHero states={states || []} />
 
+        {/* SEO Intro Section - Keyword Rich Content */}
+        <section className="bg-white py-12 border-b border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+              Nigeria&apos;s Leading Business Directory
+            </h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Welcome to <strong>9jaDirectory</strong>, the most comprehensive <strong>business directory in Nigeria</strong>.
+              Whether you&apos;re searching for restaurants in Lagos, real estate agents in Abuja, or healthcare services
+              in Port Harcourt, our directory connects you with verified businesses across all 36 states and the FCT.
+            </p>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              Finding trusted <strong>Nigerian businesses</strong> has never been easier. Our platform features thousands
+              of listings organized by category and location, complete with contact details, reviews, and business
+              information. From small local shops to large enterprises, 9jaDirectory helps customers discover services
+              and helps business owners reach new customers throughout Nigeria.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              <strong>Business owners:</strong> List your company today and get discovered by millions of Nigerians
+              searching for products and services like yours. Our affordable plans include premium features like
+              featured listings, enhanced visibility, and analytics to help grow your business.
+            </p>
+          </div>
+        </section>
+
         {/* Featured Categories */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-4">Explore by Category</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Browse Business Categories in Nigeria</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             Find businesses in key sectors across Nigeria
           </p>
@@ -178,12 +255,12 @@ export default async function Home() {
           <section className="bg-gradient-to-r from-amber-50 to-orange-50 py-16 border-y border-amber-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-center gap-2 mb-4">
-                <span className="text-2xl">⭐</span>
-                <h2 className="text-3xl font-bold text-center">Promoted Businesses</h2>
-                <span className="text-2xl">⭐</span>
+                <span className="text-2xl" aria-hidden="true">⭐</span>
+                <h2 className="text-3xl font-bold text-center">Featured Nigerian Businesses</h2>
+                <span className="text-2xl" aria-hidden="true">⭐</span>
               </div>
               <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Premium businesses trusted by thousands of Nigerians
+                Top-rated businesses trusted by thousands of customers across Nigeria
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {promotedListings.map((listing) => (
@@ -244,10 +321,10 @@ export default async function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-2xl" aria-hidden="true">🆕</span>
-              <h2 className="text-3xl font-bold text-center">Recently Added</h2>
+              <h2 className="text-3xl font-bold text-center">New Business Listings in Nigeria</h2>
             </div>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Discover the newest businesses on 9jaDirectory
+              Discover the newest businesses added to our Nigerian directory
             </p>
 
             {/* Show listings or fallback message */}
@@ -438,9 +515,9 @@ export default async function Home() {
         <section className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Why Use 9jaDirectory?</h2>
+              <h2 className="text-3xl font-bold mb-4">Why Choose Our Nigeria Business Directory?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Your trusted partner for finding and growing businesses in Nigeria
+                The trusted platform for finding and growing businesses across Nigeria
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -469,10 +546,64 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-4">
+              Frequently Asked Questions About Our Nigeria Business Directory
+            </h2>
+            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+              Everything you need to know about finding and listing businesses on 9jaDirectory
+            </p>
+            <div className="space-y-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">What is 9jaDirectory?</h3>
+                <p className="text-gray-700">
+                  9jaDirectory is Nigeria&apos;s leading online business directory that helps customers find verified
+                  businesses and services across all 36 states and the FCT. We connect millions of Nigerians with
+                  trusted local businesses in categories like restaurants, real estate, healthcare, technology, and more.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">How do I list my business on 9jaDirectory?</h3>
+                <p className="text-gray-700">
+                  Listing your business is simple: Choose a plan that fits your needs, fill in your business details
+                  including name, category, location, and contact information, complete the payment, and your listing
+                  will be live after a quick review. Premium plans include featured placement and enhanced visibility.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Is 9jaDirectory free to use for customers?</h3>
+                <p className="text-gray-700">
+                  Yes, searching and browsing the directory is completely free for customers. You can search for
+                  businesses by category, location, or keyword, view contact details, and read reviews without
+                  creating an account or paying any fees.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Which Nigerian states does 9jaDirectory cover?</h3>
+                <p className="text-gray-700">
+                  9jaDirectory covers all 36 Nigerian states plus the Federal Capital Territory (FCT). Whether
+                  you&apos;re looking for businesses in Lagos, Abuja, Kano, Rivers, or any other state, you&apos;ll find
+                  verified listings in our directory.
+                </p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">How can I contact a business listed on 9jaDirectory?</h3>
+                <p className="text-gray-700">
+                  Each business listing includes contact information such as phone numbers, email addresses,
+                  WhatsApp numbers, and physical addresses. Simply click on a listing to view all available
+                  contact methods and reach out directly to the business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Get Listed */}
-        <section className="py-16">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Get Listed on 9jaDirectory</h2>
+            <h2 className="text-3xl font-bold mb-4">List Your Business in Nigeria&apos;s Top Directory</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Pick a plan, enter your details, and complete payment to start your listing.
             </p>
