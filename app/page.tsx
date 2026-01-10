@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
@@ -193,18 +194,20 @@ export default async function Home() {
                   >
                     <div className="h-48 bg-gray-200 relative overflow-hidden">
                       {listing.image_url ? (
-                        <img
+                        <Image
                           src={listing.image_url}
-                          alt={listing.business_name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                          alt={`${listing.business_name} - Business in Nigeria`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-5xl">
+                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-5xl" aria-label="Business placeholder">
                           🏢
                         </div>
                       )}
                       <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                        <span>⭐</span> Promoted
+                        <span aria-hidden="true">⭐</span> Promoted
                       </div>
                     </div>
                     <div className="p-5">
@@ -240,57 +243,80 @@ export default async function Home() {
         <section className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-2xl">🆕</span>
+              <span className="text-2xl" aria-hidden="true">🆕</span>
               <h2 className="text-3xl font-bold text-center">Recently Added</h2>
             </div>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
               Discover the newest businesses on 9jaDirectory
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {(recentListings || []).map((listing) => (
-                <Link
-                  key={listing.id}
-                  href={`/listings/${listing.slug}`}
-                  className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
-                >
-                  <div className="h-40 bg-gray-200 relative overflow-hidden">
-                    {listing.image_url ? (
-                      <img
-                        src={listing.image_url}
-                        alt={listing.business_name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-4xl">
-                        🏢
+
+            {/* Show listings or fallback message */}
+            {recentListings && recentListings.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {recentListings.map((listing) => (
+                  <Link
+                    key={listing.id}
+                    href={`/listings/${listing.slug}`}
+                    className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
+                  >
+                    <div className="h-40 bg-gray-200 relative overflow-hidden">
+                      {listing.image_url ? (
+                        <Image
+                          src={listing.image_url}
+                          alt={`${listing.business_name} - Business in Nigeria`}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          className="object-cover group-hover:scale-105 transition-transform"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-gray-400 text-4xl" aria-label="Business placeholder">
+                          🏢
+                        </div>
+                      )}
+                      {listing.featured && (
+                        <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-0.5 rounded text-xs font-semibold">
+                          <span aria-hidden="true">⭐</span> Promoted
+                        </div>
+                      )}
+                      <div className="absolute bottom-2 left-2 bg-green-600 text-white px-2 py-0.5 rounded text-xs font-medium">
+                        New
                       </div>
-                    )}
-                    {listing.featured && (
-                      <div className="absolute top-2 right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-white px-2 py-0.5 rounded text-xs font-semibold">
-                        ⭐ Promoted
-                      </div>
-                    )}
-                    <div className="absolute bottom-2 left-2 bg-green-600 text-white px-2 py-0.5 rounded text-xs font-medium">
-                      New
                     </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-bold text-base mb-1 text-gray-900 truncate">{listing.business_name}</h3>
-                    <p className="text-xs text-gray-600 mb-1">
-                      {Array.isArray(listing.categories) && listing.categories.length > 0
-                        ? listing.categories[0].name
-                        : 'Business'}
-                    </p>
-                    <p className="text-xs text-gray-500 flex items-center">
-                      <span className="mr-1">📍</span>
-                      {Array.isArray(listing.states) && listing.states.length > 0
-                        ? listing.states[0].name
-                        : 'Nigeria'}
-                    </p>
-                  </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-base mb-1 text-gray-900 truncate">{listing.business_name}</h3>
+                      <p className="text-xs text-gray-600 mb-1">
+                        {Array.isArray(listing.categories) && listing.categories.length > 0
+                          ? listing.categories[0].name
+                          : 'Business'}
+                      </p>
+                      <p className="text-xs text-gray-500 flex items-center">
+                        <span className="mr-1" aria-hidden="true">📍</span>
+                        {Array.isArray(listing.states) && listing.states.length > 0
+                          ? listing.states[0].name
+                          : 'Nigeria'}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              /* Fallback when no recent listings */
+              <div className="bg-white rounded-lg shadow-md p-8 text-center max-w-2xl mx-auto">
+                <div className="text-5xl mb-4" aria-hidden="true">🏢</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Be the First to List Your Business</h3>
+                <p className="text-gray-600 mb-6">
+                  Join 9jaDirectory and get discovered by thousands of customers across Nigeria.
+                  List your business today and start growing your customer base.
+                </p>
+                <Link
+                  href="/pricing"
+                  className="inline-block px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+                >
+                  Get Listed Now
                 </Link>
-              ))}
-            </div>
+              </div>
+            )}
+
             <div className="text-center mt-10">
               <Link
                 href="/search"
