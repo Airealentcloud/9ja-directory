@@ -70,30 +70,56 @@ export const categorySEOContent: CategorySEOContent[] = [
     },
     {
         slug: 'real-estate',
-        introText: `Explore Nigeria's real estate marketplace with verified real estate agencies, property developers, and real estate agents across the country. Whether you're buying, selling, renting, or investing in property, our directory connects you with trusted professionals who can help. Find residential properties (apartments, houses, duplexes), commercial spaces (offices, shops, warehouses), land for sale, and property management services. From luxury estates in Lekki and Banana Island to affordable housing in emerging neighborhoods, discover opportunities across Lagos, Abuja, Port Harcourt, and all major Nigerian cities. Filter by property type, location, price range, and agent specialization to find the right real estate partner.`,
+        introText: `Looking for the best real estate companies in Nigeria? Our comprehensive directory features verified real estate agencies, property developers, and licensed agents across all 36 states and the FCT. Whether you are buying your first home, investing in commercial property, or searching for rental apartments, 9jaDirectory connects you with trusted real estate professionals who can guide you through every step of the process.
+
+Nigeria's real estate market offers diverse opportunities across major cities like Lagos, Abuja, Port Harcourt, and Ibadan. In Lagos, you will find premium properties in Lekki, Victoria Island, Ikoyi, and Banana Island, as well as affordable options in emerging areas like Ibeju-Lekki, Ajah, and Epe. Abuja (FCT) offers excellent opportunities in Maitama, Wuse, Asokoro, and Gwarinpa, while Port Harcourt's GRA and Trans Amadi areas remain popular for both residential and commercial investments.
+
+Our directory includes all types of real estate services: residential property sales and rentals (apartments, duplexes, detached houses, terraces), commercial real estate (office spaces, retail shops, warehouses), land sales, estate development, and property management services. Many listed agencies also offer additional services such as facility management, property valuation, and documentation assistance including C of O verification and survey plan processing.
+
+To find the right real estate company for your needs, use our filters to narrow down by location, property type, and specialization. Look for agencies with verified badges and positive reviews from previous clients. We recommend contacting multiple agents to compare services and fees before making a decision. Professional real estate companies in Nigeria should be registered with CAC and may hold certifications from bodies like ESVARBON (Estate Surveyors and Valuers Registration Board of Nigeria) or NIESV (Nigerian Institution of Estate Surveyors and Valuers).`,
         faqs: [
             {
-                question: 'How do I verify a real estate agent is legitimate?',
-                answer: 'Look for agents with verified badges, check their reviews and ratings, verify their company registration with CAC, and ask for professional certifications like ESVARBON or NIESV membership.',
+                question: 'What are the different types of real estate in Nigeria?',
+                answer: 'Real estate in Nigeria falls into four main categories: (1) Residential - apartments, flats, duplexes, bungalows, and detached houses for living; (2) Commercial - office buildings, retail shops, shopping malls, and hotels; (3) Industrial - warehouses, factories, and manufacturing facilities; (4) Land - undeveloped plots for future development or investment. Each type has different investment considerations, returns, and legal requirements.',
             },
             {
-                question: 'What areas in Lagos have the best property investment potential?',
-                answer: 'Emerging areas like Ibeju-Lekki, Epe, and Ajah offer high growth potential due to infrastructure development (Lekki Deep Sea Port, Dangote Refinery). Established areas like Victoria Island and Ikoyi offer stable, premium investments.',
+                question: 'How do I find the best real estate company in Nigeria?',
+                answer: 'Follow these steps: (1) Define your needs - buying, selling, renting, or investing; (2) Research companies on 9jaDirectory and check reviews; (3) Verify CAC registration and professional certifications (ESVARBON/NIESV); (4) Compare fees from at least 3 agencies; (5) Ask for references from previous clients; (6) Visit their office in person; (7) Check their track record with similar transactions.',
+            },
+            {
+                question: 'What services do real estate companies offer in Nigeria?',
+                answer: 'Nigerian real estate companies offer: property sales and purchases, rental/lease arrangements, property management, land acquisition, estate development, property valuation, documentation and legal assistance (C of O, survey plans, deed of assignment), facility management, investment advisory, and mortgage facilitation through partner banks.',
+            },
+            {
+                question: 'How much do real estate agents charge in Nigeria?',
+                answer: 'Standard fees are: Agency/commission fee - typically 10% of annual rent for rentals or 5-10% of sale price for purchases; Legal fees - 5-10% for documentation; Inspection fees - usually free or minimal. Be wary of agents demanding large upfront payments. Fees are negotiable, especially for high-value transactions.',
+            },
+            {
+                question: 'What are the best areas to invest in Nigerian real estate?',
+                answer: 'Top investment areas include: Lagos - Lekki (especially Ibeju-Lekki near the Deep Sea Port), Victoria Island, Ikoyi, Ajah, Epe; Abuja - Maitama, Asokoro, Wuse 2, Gwarinpa, Lugbe; Port Harcourt - GRA, Trans Amadi, Rukpokwu; Ibadan - Bodija, Jericho, Oluyole. Emerging areas offer higher growth potential while established areas provide stable returns.',
+            },
+            {
+                question: 'Are real estate companies worth using instead of dealing directly with landlords?',
+                answer: 'Yes, for several reasons: (1) Access to more property options; (2) Professional negotiation on your behalf; (3) Assistance with documentation and verification; (4) Protection from fraudulent transactions; (5) Market knowledge and fair pricing guidance; (6) Ongoing support for issues after transactions. The agency fee is often worth the security and convenience.',
+            },
+            {
+                question: 'How do I verify a real estate agent is legitimate?',
+                answer: 'Look for agents with verified badges, check their reviews and ratings, verify their company registration with CAC, and ask for professional certifications like ESVARBON or NIESV membership. Visit their physical office and request references from past clients.',
             },
             {
                 question: 'Should I pay agency fees upfront?',
-                answer: 'Standard practice is to pay agency fees (typically 10% of annual rent) only after a property is secured and agreements signed. Be cautious of agents demanding large upfront payments without showing properties.',
-            },
-            {
-                question: 'Can I find mortgage assistance through these agents?',
-                answer: 'Many real estate agencies partner with banks and mortgage providers. Ask about mortgage facilitation services when contacting agents.',
+                answer: 'Standard practice is to pay agency fees (typically 10% of annual rent) only after a property is secured and agreements signed. Be cautious of agents demanding large upfront payments without showing properties. Legitimate agents earn their commission upon successful completion of transactions.',
             },
         ],
         tips: [
-            'Visit properties in person - never rent/buy based solely on photos',
-            'Verify property documents and ownership before making payments',
+            'Visit properties in person - never rent/buy based solely on photos or videos',
+            'Verify property documents (C of O, survey plan, deed of assignment) before making payments',
             'Negotiate - listed prices are often negotiable in the Nigerian market',
-            'Consider location, infrastructure, and future development plans',
+            'Consider location, infrastructure, security, and future development plans',
+            'Use a lawyer to review all documents before signing any agreements',
+            'Check the property title to ensure there are no disputes or encumbrances',
+            'Research the neighborhood - visit at different times of day to assess noise, traffic, and security',
+            'Ask about additional costs like service charges, caution deposits, and maintenance fees',
         ],
     },
     {

@@ -138,3 +138,60 @@ export function generateRealEstateFAQSchema() {
         ],
     }
 }
+
+/**
+ * Generates Article schema for category pages with editorial content
+ * This signals to Google that the page contains valuable written content
+ */
+export function generateCategoryArticleSchema(
+    category: Category,
+    options?: {
+        datePublished?: string
+        dateModified?: string
+        wordCount?: number
+    }
+) {
+    const datePublished = options?.datePublished || '2024-01-15'
+    const dateModified = options?.dateModified || new Date().toISOString().split('T')[0]
+    const wordCount = options?.wordCount || 1500
+
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: `${category.name} in Nigeria - Complete Directory & Guide`,
+        description: category.description || `Comprehensive guide to ${category.name} in Nigeria with verified listings, tips, and FAQs.`,
+        image: `${siteUrl}/opengraph-image`,
+        datePublished,
+        dateModified,
+        wordCount,
+        author: {
+            '@type': 'Organization',
+            name: '9jaDirectory',
+            url: siteUrl,
+            logo: {
+                '@type': 'ImageObject',
+                url: `${siteUrl}/logo.png`,
+            },
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: '9jaDirectory',
+            url: siteUrl,
+            logo: {
+                '@type': 'ImageObject',
+                url: `${siteUrl}/logo.png`,
+            },
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${siteUrl}/categories/${category.slug}`,
+        },
+        inLanguage: 'en-NG',
+        isPartOf: {
+            '@type': 'WebSite',
+            '@id': `${siteUrl}#website`,
+            name: '9jaDirectory',
+            url: siteUrl,
+        },
+    }
+}

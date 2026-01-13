@@ -854,7 +854,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     listing.image_url,
     listing.logo_url,
     ...(listing.images || [])
-  ].filter(Boolean)
+  ].filter((img): img is string => Boolean(img))
 
   if (ogImages.length === 0) {
     ogImages.push('/opengraph-image')

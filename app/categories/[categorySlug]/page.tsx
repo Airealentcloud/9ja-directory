@@ -9,6 +9,7 @@ import {
   generateCategoryItemListSchema,
   generateCategoryBreadcrumbSchema,
   generateCategoryCollectionSchema,
+  generateCategoryArticleSchema,
 } from '@/lib/schema/category-page'
 
 interface CategoryPageProps {
@@ -192,6 +193,14 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
         })),
       }
     : null
+  // Article schema for editorial content (especially for real estate)
+  const articleSchema = isRealEstate
+    ? generateCategoryArticleSchema(category, {
+        datePublished: '2024-01-15',
+        dateModified: new Date().toISOString().split('T')[0],
+        wordCount: 1800,
+      })
+    : null
 
   return (
     <>
@@ -212,6 +221,12 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      {articleSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
       )}
 
@@ -280,26 +295,178 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                 Looking for the best real estate company in Lagos or Abuja? Start with the top city pages below to compare
                 verified agencies, developers, and agents.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 <Link
                   href="/categories/real-estate/lagos"
-                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
                 >
-                  Best Real Estate Companies in Lagos
+                  Real Estate Companies in Lagos
                 </Link>
                 <Link
                   href="/categories/real-estate/fct"
-                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
                 >
-                  Best Real Estate Companies in Abuja (FCT)
+                  Real Estate in Abuja (FCT)
                 </Link>
                 <Link
                   href="/categories/real-estate/rivers"
-                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
                 >
                   Real Estate in Port Harcourt
                 </Link>
+                <Link
+                  href="/categories/real-estate/oyo"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
+                >
+                  Real Estate in Ibadan
+                </Link>
+                <Link
+                  href="/categories/real-estate/kano"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
+                >
+                  Real Estate in Kano
+                </Link>
+                <Link
+                  href="/categories/real-estate/enugu"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
+                >
+                  Real Estate in Enugu
+                </Link>
+                <Link
+                  href="/categories/real-estate/delta"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
+                >
+                  Real Estate in Delta
+                </Link>
+                <Link
+                  href="/categories/real-estate/kaduna"
+                  className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-green-700 font-semibold hover:bg-green-50 transition-colors text-sm"
+                >
+                  Real Estate in Kaduna
+                </Link>
               </div>
+
+              {/* Related Categories */}
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">Related Categories</h3>
+                <div className="flex flex-wrap gap-2">
+                  <Link
+                    href="/categories/construction"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors"
+                  >
+                    Construction Companies
+                  </Link>
+                  <span className="text-gray-300">|</span>
+                  <Link
+                    href="/categories/architecture"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors"
+                  >
+                    Architecture Firms
+                  </Link>
+                  <span className="text-gray-300">|</span>
+                  <Link
+                    href="/categories/interior-design"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors"
+                  >
+                    Interior Design
+                  </Link>
+                  <span className="text-gray-300">|</span>
+                  <Link
+                    href="/categories/legal-services"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors"
+                  >
+                    Property Lawyers
+                  </Link>
+                  <span className="text-gray-300">|</span>
+                  <Link
+                    href="/categories/banking"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors"
+                  >
+                    Mortgage Banks
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {isRealEstate && (
+            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Top Real Estate Companies in Nigeria 2025</h2>
+              <p className="text-gray-700 mb-6">
+                Nigeria&apos;s real estate sector features several established companies known for quality developments,
+                transparent dealings, and professional services. Here are some of the most recognized names in Nigerian
+                real estate:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">Sujimoto Construction</h3>
+                  <p className="text-sm text-green-600 mb-2">Luxury Real Estate</p>
+                  <p className="text-sm text-gray-600">
+                    Premium developments in Lagos including LucreziaBySujimoto and Giuliano. Known for ultra-luxury
+                    apartments in Banana Island and Ikoyi.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">UPDC (UAC Property Development Company)</h3>
+                  <p className="text-sm text-green-600 mb-2">Mixed Development</p>
+                  <p className="text-sm text-gray-600">
+                    One of Nigeria&apos;s oldest real estate companies since 1997. Portfolio includes residential estates,
+                    office buildings, and shopping malls.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">Adron Homes & Properties</h3>
+                  <p className="text-sm text-green-600 mb-2">Affordable Housing</p>
+                  <p className="text-sm text-gray-600">
+                    Specializes in affordable housing with flexible payment plans. Operates across multiple states with
+                    various estate developments.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">PWAN Homes Limited</h3>
+                  <p className="text-sm text-green-600 mb-2">Land & Property Sales</p>
+                  <p className="text-sm text-gray-600">
+                    Leading real estate company focusing on land sales, property development, and real estate consultancy
+                    with nationwide coverage.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">Landwey Investment Limited</h3>
+                  <p className="text-sm text-green-600 mb-2">Tech-Enabled Real Estate</p>
+                  <p className="text-sm text-gray-600">
+                    Known for smart tech integration in developments. Popular in Lagos with projects in Lekki, Ajah,
+                    and Ibeju-Lekki areas.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">RevolutionPlus Property</h3>
+                  <p className="text-sm text-green-600 mb-2">Estate Development</p>
+                  <p className="text-sm text-gray-600">
+                    Major estate developer with properties across Lagos. Known for customer-centric approach and
+                    various pricing tiers.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">Dradrock Real Estate</h3>
+                  <p className="text-sm text-green-600 mb-2">Development & Consultancy</p>
+                  <p className="text-sm text-gray-600">
+                    Real estate development, management, and consultancy firm committed to addressing Nigeria&apos;s
+                    housing deficit with sustainable urban solutions.
+                  </p>
+                </div>
+                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
+                  <h3 className="font-bold text-gray-900">Fine and Country</h3>
+                  <p className="text-sm text-green-600 mb-2">Luxury Real Estate Agency</p>
+                  <p className="text-sm text-gray-600">
+                    Award-winning agency since 2008. Specializes in luxury property sales and lettings in prime
+                    Lagos and Abuja locations.
+                  </p>
+                </div>
+              </div>
+              <p className="text-sm text-gray-500 mt-4 italic">
+                Note: This list is for informational purposes. We recommend doing your own research and due diligence
+                before engaging any real estate company.
+              </p>
             </div>
           )}
 
