@@ -122,11 +122,9 @@ export async function fulfillPaystackSuccess(input: {
       const now = new Date()
       const periodEnd = new Date(now)
 
-      if (subscriptionPlan.interval === 'monthly') {
-        periodEnd.setMonth(periodEnd.getMonth() + 1)
-      } else {
-        periodEnd.setFullYear(periodEnd.getFullYear() + 1)
-      }
+      // All plans are one-time payments with lifetime access
+      // Set expiry far in the future (100 years)
+      periodEnd.setFullYear(periodEnd.getFullYear() + 100)
 
       const { data: existingSub, error: subSelectError } = await supabase
         .from('subscriptions')
@@ -166,14 +164,18 @@ export async function fulfillPaystackSuccess(input: {
         if (subInsertError) console.error('Subscription insert error:', subInsertError)
       }
 
+      // Set permissions based on plan (basic, premium, lifetime)
+      const isPremiumOrHigher = subscriptionPlan.id === 'premium' || subscriptionPlan.id === 'lifetime'
+      const isLifetime = subscriptionPlan.id === 'lifetime'
+
       const profileUpdate: Record<string, unknown> = {
         subscription_plan: subscriptionPlan.id,
         subscription_status: 'active',
         subscription_expires_at: periodEnd.toISOString(),
         can_add_listings: true,
-        can_claim_listings: subscriptionPlan.id === 'standard' || subscriptionPlan.id === 'premium',
-        can_feature_listings: subscriptionPlan.id === 'premium',
-        featured_posts_remaining: subscriptionPlan.id === 'premium' ? 2 : 0,
+        can_claim_listings: isPremiumOrHigher,
+        can_feature_listings: isPremiumOrHigher,
+        featured_posts_remaining: isLifetime ? 2 : 0,
       }
 
       const { error: profileError } = await supabase
@@ -183,7 +185,7 @@ export async function fulfillPaystackSuccess(input: {
 
       if (profileError) console.error('Profile subscription update error:', profileError)
 
-      if (payment.listing_id && subscriptionPlan.id === 'premium') {
+      if (payment.listing_id && isLifetime) {
         const featuredUntil = periodEnd.toISOString()
         let updatePayload: Record<string, unknown> = { featured: true, featured_until: featuredUntil }
 
