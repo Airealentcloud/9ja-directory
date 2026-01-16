@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import FileUploader from '@/components/common/file-uploader'
+import AIDescriptionButton from '@/components/listings/ai-description-button'
 import { createListing, updateListing } from '@/app/actions/listings'
 import { type PlanLimits } from '@/lib/pricing'
 
@@ -55,6 +56,15 @@ export default function ListingForm({
     const [logoUrl, setLogoUrl] = useState(initialData?.logo_url || '')
     const [images, setImages] = useState<string[]>(initialData?.images || [])
     const [description, setDescription] = useState(initialData?.description || '')
+    const [businessName, setBusinessName] = useState(initialData?.business_name || '')
+    const [selectedCategoryId, setSelectedCategoryId] = useState(initialData?.category_id || '')
+    const [selectedStateId, setSelectedStateId] = useState(initialData?.state_id || '')
+    const [city, setCity] = useState(initialData?.city || '')
+
+    // Get category and state names for AI
+    const selectedCategory = categories.find(c => c.id === selectedCategoryId)?.name || ''
+    const selectedState = states.find(s => s.id === selectedStateId)?.name || ''
+    const locationString = city && selectedState ? `${city}, ${selectedState}` : selectedState || city || 'Nigeria'
 
     // Simple hours state (Mon-Fri, Sat, Sun)
     const defaultHours = {
@@ -234,7 +244,8 @@ export default function ListingForm({
                                 type="text"
                                 name="business_name"
                                 id="business_name"
-                                defaultValue={initialData?.business_name}
+                                value={businessName}
+                                onChange={(e) => setBusinessName(e.target.value)}
                                 required
                                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
                             />
@@ -245,7 +256,8 @@ export default function ListingForm({
                             <select
                                 id="category_id"
                                 name="category_id"
-                                defaultValue={initialData?.category_id}
+                                value={selectedCategoryId}
+                                onChange={(e) => setSelectedCategoryId(e.target.value)}
                                 required
                                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
                             >
@@ -257,20 +269,37 @@ export default function ListingForm({
                         </div>
 
                         <div className="sm:col-span-6">
-                            <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                                Description
-                                {planLimits.maxDescriptionLength !== -1 && (
-                                    <span className={`ml-2 text-xs ${descriptionOverLimit ? 'text-red-500' : 'text-gray-400'}`}>
-                                        ({description.length}/{planLimits.maxDescriptionLength} characters)
-                                    </span>
-                                )}
-                            </label>
+                            <div className="flex items-center justify-between mb-1">
+                                <label htmlFor="description" className="block text-sm font-medium text-gray-700">
+                                    Description
+                                    {planLimits.maxDescriptionLength !== -1 && (
+                                        <span className={`ml-2 text-xs ${descriptionOverLimit ? 'text-red-500' : 'text-gray-400'}`}>
+                                            ({description.length}/{planLimits.maxDescriptionLength} characters)
+                                        </span>
+                                    )}
+                                </label>
+                                <AIDescriptionButton
+                                    businessName={businessName}
+                                    category={selectedCategory}
+                                    location={locationString}
+                                    hasAccess={planLimits.hasAiDescription}
+                                    onDescriptionGenerated={(text) => {
+                                        // Respect plan limits
+                                        if (planLimits.maxDescriptionLength !== -1 && text.length > planLimits.maxDescriptionLength) {
+                                            setDescription(text.slice(0, planLimits.maxDescriptionLength))
+                                        } else {
+                                            setDescription(text)
+                                        }
+                                    }}
+                                />
+                            </div>
                             <textarea
                                 id="description"
                                 name="description"
-                                rows={4}
+                                rows={5}
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
+                                placeholder="Describe your business, services, and what makes you unique..."
                                 className={`mt-1 block w-full border rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm ${
                                     descriptionOverLimit ? 'border-red-300 bg-red-50' : 'border-gray-300'
                                 }`}
@@ -408,14 +437,28 @@ export default function ListingForm({
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="state_id" className="block text-sm font-medium text-gray-700">State</label>
-                                    <select id="state_id" name="state_id" defaultValue={initialData?.state_id} required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                    <select
+                                        id="state_id"
+                                        name="state_id"
+                                        value={selectedStateId}
+                                        onChange={(e) => setSelectedStateId(e.target.value)}
+                                        required
+                                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                                    >
                                         <option value="">Select State</option>
                                         {states.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
                                     </select>
                                 </div>
                                 <div className="sm:col-span-3">
                                     <label htmlFor="city" className="block text-sm font-medium text-gray-700">City</label>
-                                    <input type="text" name="city" id="city" defaultValue={initialData?.city} className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" />
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        id="city"
+                                        value={city}
+                                        onChange={(e) => setCity(e.target.value)}
+                                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                                    />
                                 </div>
                             </div>
                         </div>
