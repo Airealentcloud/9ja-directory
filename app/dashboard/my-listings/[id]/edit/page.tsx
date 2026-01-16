@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { notFound, redirect } from 'next/navigation'
 import ListingForm from '@/components/listings/listing-form'
+import { getPlanLimits, type PlanId } from '@/lib/pricing'
 
 export default async function EditListingPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params
@@ -22,13 +23,23 @@ export default async function EditListingPage({ params }: { params: Promise<{ id
         notFound()
     }
 
+    // Fetch user profile for plan info
+    const { data: profile } = await supabase
+        .from('profiles')
+        .select('role, subscription_plan')
+        .eq('id', user.id)
+        .single()
+
     // Verify ownership or admin
     if (listing.user_id !== user.id) {
-        const { data: profile } = await supabase.from('profiles').select('role').eq('id', user.id).single()
         if (profile?.role !== 'admin') {
             redirect('/dashboard/my-listings')
         }
     }
+
+    // Get the user's plan and limits
+    const userPlan = (profile?.subscription_plan as PlanId) || 'basic'
+    const planLimits = getPlanLimits(userPlan)
 
     // Fetch form data
     const { data: categories } = await supabase.from('categories').select('id, name').order('name')
@@ -48,6 +59,8 @@ export default async function EditListingPage({ params }: { params: Promise<{ id
                 categories={categories || []}
                 states={states || []}
                 isEditing={true}
+                planLimits={planLimits}
+                userPlan={userPlan}
             />
         </div>
     )

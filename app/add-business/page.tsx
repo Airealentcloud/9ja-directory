@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import ListingForm from '@/components/listings/listing-form'
+import { getPlanLimits, type PlanId } from '@/lib/pricing'
 
 export const metadata: Metadata = {
     title: 'Add Your Business | 9jaDirectory',
@@ -18,7 +19,7 @@ export default async function AddBusinessPage() {
 
     const { data: profile, error: profileError } = await supabase
         .from('profiles')
-        .select('can_add_listings')
+        .select('can_add_listings, subscription_plan')
         .eq('id', user.id)
         .maybeSingle()
 
@@ -36,6 +37,10 @@ export default async function AddBusinessPage() {
         redirect('/pricing')
     }
 
+    // Get the user's plan and limits
+    const userPlan = (profile?.subscription_plan as PlanId) || 'basic'
+    const planLimits = getPlanLimits(userPlan)
+
     // Fetch data for form
     const { data: categories } = await supabase.from('categories').select('id, name').order('name')
     const { data: states } = await supabase.from('states').select('id, name').order('name')
@@ -52,6 +57,8 @@ export default async function AddBusinessPage() {
             <ListingForm
                 categories={categories || []}
                 states={states || []}
+                planLimits={planLimits}
+                userPlan={userPlan}
             />
         </div>
     )
