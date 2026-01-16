@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { scoreAndSortListings, type SearchableListing } from '@/lib/search/scoring'
+import SearchResultCard from '@/components/listings/search-result-card'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
 
@@ -164,10 +166,15 @@ export default async function SearchPage({
         ? `Showing results for "${query}"`
         : `Showing businesses in ${stateName}`
 
-    // Build the search query - simplified to avoid relation errors
+    // Build the search query with profile data for plan-based scoring
     let searchQuery = supabase
         .from('listings')
-        .select('*')
+        .select(`
+            *,
+            profiles!listings_user_id_fkey(subscription_plan),
+            categories(id, name, slug),
+            states(id, name, slug)
+        `)
         .eq('status', 'approved')
 
     // Filter by search term if provided
@@ -190,16 +197,16 @@ export default async function SearchPage({
         }
     }
 
-    const { data: results, error } = await searchQuery.order('created_at', {
-        ascending: false,
-    })
+    const { data: rawResults, error } = await searchQuery.limit(100)
 
-    // Debug logging with full error details
-    console.log('Search params:', { query, stateSlug })
-    console.log('Search results:', { count: results?.length, error: error ? JSON.stringify(error) : null })
-    if (error) {
-        console.error('Full search error:', error)
-    }
+    // Apply weighted scoring and sort results
+    const results = rawResults
+        ? scoreAndSortListings(rawResults as unknown as SearchableListing[], query)
+        : []
+
+    // Count premium listings for display
+    const premiumCount = results.filter(r => r._isPremium || r._isLifetime).length
+    const featuredCount = results.filter(r => r._isFeatured).length
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -274,58 +281,35 @@ export default async function SearchPage({
 
                 {!error && results && results.length > 0 && (
                     <>
-                        <div className="mb-6">
-                            <p className="text-gray-600">
-                                Found <strong>{results.length}</strong> business
-                                {results.length !== 1 ? 'es' : ''}
-                            </p>
+                        <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                            <div>
+                                <p className="text-gray-600">
+                                    Found <strong>{results.length}</strong> business
+                                    {results.length !== 1 ? 'es' : ''}
+                                    {query && <span className="text-gray-500"> matching "{query}"</span>}
+                                </p>
+                                {(featuredCount > 0 || premiumCount > 0) && (
+                                    <p className="text-sm text-gray-500 mt-1">
+                                        Sorted by relevance
+                                        {featuredCount > 0 && ` • ${featuredCount} featured`}
+                                        {premiumCount > 0 && ` • ${premiumCount} premium`}
+                                    </p>
+                                )}
+                            </div>
+                            <div className="flex items-center gap-2 text-sm">
+                                <span className="text-gray-500">Legend:</span>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-amber-100 text-amber-700">Featured</span>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-purple-100 text-purple-700">Top Rated</span>
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-green-100 text-green-700">Premium</span>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {results.map((listing) => (
-                                <Link
+                                <SearchResultCard
                                     key={listing.id}
-                                    href={`/listings/${listing.slug}`}
-                                    className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
-                                >
-                                    <div className="h-48 bg-gray-200 relative overflow-hidden">
-                                        {listing.image_url ? (
-                                            <img
-                                                src={listing.image_url}
-                                                alt={listing.business_name}
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                                            />
-                                        ) : (
-                                            <div className="w-full h-full flex items-center justify-center text-gray-400 text-5xl">
-                                                🏢
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="p-5">
-                                        <div className="flex items-start justify-between mb-2">
-                                            <h3 className="font-bold text-lg text-gray-900 flex-1">
-                                                {listing.business_name}
-                                            </h3>
-                                            {listing.status && listing.status !== 'approved' && (
-                                                <span className="ml-2 px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                                    {listing.status}
-                                                </span>
-                                            )}
-                                        </div>
-                                        <p className="text-sm text-gray-600 mb-2">
-                                            Business
-                                        </p>
-                                        <p className="text-sm text-gray-500 flex items-center mb-2">
-                                            <span className="mr-1">📍</span>
-                                            {listing.city || 'Nigeria'}
-                                        </p>
-                                        {listing.description && (
-                                            <p className="text-sm text-gray-600 line-clamp-2">
-                                                {listing.description}
-                                            </p>
-                                        )}
-                                    </div>
-                                </Link>
+                                    listing={listing}
+                                />
                             ))}
                         </div>
                     </>
