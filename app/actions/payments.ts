@@ -76,3 +76,50 @@ export async function startFeaturedPayment(input: { listingId: string; planId: s
   return { authorizationUrl: paystack.authorization_url, reference: paystack.reference }
 }
 
+export async function startTestPayment() {
+  const plan = getPaymentPlan('test_payment')
+  if (!plan) throw new Error('Test payment plan not found')
+
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user?.id || !user.email) {
+    throw new Error('You must be logged in to make a payment')
+  }
+
+  const reference = generateReference()
+
+  const { error: insertError } = await supabase.from('payments').insert({
+    user_id: user.id,
+    listing_id: null,
+    provider: 'paystack',
+    reference,
+    plan: plan.id,
+    amount: plan.amountKobo,
+    currency: plan.currency,
+    status: 'pending',
+    metadata: { planId: plan.id, test: true },
+  })
+
+  if (insertError) {
+    const msg = insertError.message?.toLowerCase().includes('relation') && insertError.message?.includes('payments')
+      ? 'Database table `payments` is missing. Run `migrations/006_payments_and_featured.sql` in Supabase SQL Editor.'
+      : insertError.message
+    throw new Error(msg)
+  }
+
+  const callbackUrl = `${getSiteUrl()}/paystack/callback`
+  const paystack = await initializePaystackTransaction({
+    email: user.email,
+    amountKobo: plan.amountKobo,
+    reference,
+    callbackUrl,
+    currency: plan.currency,
+    metadata: { planId: plan.id, test: true },
+  })
+
+  return { authorizationUrl: paystack.authorization_url, reference: paystack.reference }
+}
+

@@ -24,6 +24,13 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     currency: 'NGN',
     featuredDays: 90,
   },
+  test_payment: {
+    id: 'test_payment',
+    name: 'Test Payment',
+    description: 'Simple test to verify Paystack integration is working.',
+    amountKobo: 500000, // ₦5,000
+    currency: 'NGN',
+  },
 }
 
 export function getPaymentPlan(planId: string): PaymentPlan | null {
