@@ -28,7 +28,7 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     id: 'test_payment',
     name: 'Test Payment',
     description: 'Simple test to verify Paystack integration is working.',
-    amountKobo: 500000, // ₦5,000
+    amountKobo: 200000, // ₦2,000
     currency: 'NGN',
   },
 }
