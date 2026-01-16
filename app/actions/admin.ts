@@ -13,12 +13,37 @@ async function checkAdmin() {
     // This avoids RLS recursion issues
     const { data: isAdmin, error } = await supabase.rpc('is_admin')
 
-    if (error) {
-        console.error('Error checking admin status:', error)
+    if (!error) {
+        if (!isAdmin) {
+            throw new Error('Unauthorized: Admin access required')
+        }
+        return supabase
+    }
+
+    console.warn('RPC admin check failed, falling back to profile role check:', error)
+
+    const {
+        data: { user },
+        error: userError,
+    } = await supabase.auth.getUser()
+
+    if (userError || !user) {
+        console.error('Error loading user for admin check:', userError)
+        throw new Error('Unauthorized: Admin access required')
+    }
+
+    const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .single()
+
+    if (profileError) {
+        console.error('Error checking admin status:', profileError)
         throw new Error('Error checking admin status')
     }
 
-    if (!isAdmin) {
+    if (profile?.role !== 'admin') {
         throw new Error('Unauthorized: Admin access required')
     }
 
@@ -127,40 +152,105 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
 
     let query = supabase
         .from('listings')
-        .select(`
-            *,
-            categories (name),
-            profiles (full_name, email),
-            payments (status, reference, created_at, paid_at)
-        `)
+        .select('*')
         .order('created_at', { ascending: false })
 
     if (status !== 'all') {
         query = query.eq('status', status)
     }
 
-    const { data, error } = await query
+    const { data: listingsData, error } = await query
 
     if (error) {
         console.error('Error fetching admin listings:', error)
         throw error
     }
 
-    const normalized = (data || []).map((listing: any) => {
-        const payments = Array.isArray(listing.payments) ? listing.payments : []
-        const latestPayment = payments.reduce((latest: any, current: any) => {
-            if (!latest) return current
-            const latestTime = new Date(latest.created_at || 0).getTime()
-            const currentTime = new Date(current.created_at || 0).getTime()
-            return currentTime > latestTime ? current : latest
-        }, null as any)
+    const listings = listingsData || []
+
+    const categoryIds = Array.from(
+        new Set(listings.map((listing: any) => listing.category_id).filter(Boolean))
+    )
+    const userIds = Array.from(
+        new Set(listings.map((listing: any) => listing.user_id).filter(Boolean))
+    )
+    const listingIds = Array.from(
+        new Set(listings.map((listing: any) => listing.id).filter(Boolean))
+    )
+
+    let categoriesMap: Record<string, { name: string }> = {}
+    if (categoryIds.length > 0) {
+        const { data: categoriesData, error: categoriesError } = await supabase
+            .from('categories')
+            .select('id, name')
+            .in('id', categoryIds)
+
+        if (categoriesError) {
+            console.warn('Error fetching categories for admin listings:', categoriesError)
+        } else {
+            categoriesMap = (categoriesData || []).reduce((acc, category: any) => {
+                acc[category.id] = { name: category.name }
+                return acc
+            }, {} as Record<string, { name: string }>)
+        }
+    }
+
+    let profilesMap: Record<string, { email?: string; full_name?: string }> = {}
+    if (userIds.length > 0) {
+        const { data: profilesData, error: profilesError } = await supabase
+            .from('profiles')
+            .select('id, full_name, email')
+            .in('id', userIds)
+
+        if (profilesError) {
+            console.warn('Error fetching profiles for admin listings:', profilesError)
+        } else {
+            profilesMap = (profilesData || []).reduce((acc, profile: any) => {
+                acc[profile.id] = { email: profile.email, full_name: profile.full_name }
+                return acc
+            }, {} as Record<string, { email?: string; full_name?: string }>)
+        }
+    }
+
+    let paymentsMap: Record<string, any> = {}
+    if (listingIds.length > 0) {
+        const { data: paymentsData, error: paymentsError } = await supabase
+            .from('payments')
+            .select('listing_id, status, reference, created_at, paid_at')
+            .in('listing_id', listingIds)
+
+        if (paymentsError) {
+            console.warn('Error fetching payments for admin listings:', paymentsError)
+        } else {
+            (paymentsData || []).forEach((payment: any) => {
+                if (!payment.listing_id) return
+                const existing = paymentsMap[payment.listing_id]
+                if (!existing) {
+                    paymentsMap[payment.listing_id] = payment
+                    return
+                }
+                const existingTime = new Date(existing.created_at || 0).getTime()
+                const nextTime = new Date(payment.created_at || 0).getTime()
+                if (nextTime > existingTime) {
+                    paymentsMap[payment.listing_id] = payment
+                }
+            })
+        }
+    }
+
+    const normalized = listings.map((listing: any) => {
+        const payment = listing.id ? paymentsMap[listing.id] : null
+        const category = listing.category_id ? categoriesMap[listing.category_id] : null
+        const profile = listing.user_id ? profilesMap[listing.user_id] : null
 
         return {
             ...listing,
-            payment_status: latestPayment?.status ?? 'none',
-            payment_reference: latestPayment?.reference ?? null,
-            payment_created_at: latestPayment?.created_at ?? null,
-            payment_paid_at: latestPayment?.paid_at ?? null,
+            categories: category || undefined,
+            profiles: profile || undefined,
+            payment_status: payment?.status ?? 'none',
+            payment_reference: payment?.reference ?? null,
+            payment_created_at: payment?.created_at ?? null,
+            payment_paid_at: payment?.paid_at ?? null,
         }
     })
 
@@ -172,14 +262,30 @@ export async function approveListingServer(id: string) {
     const supabase = await checkAdmin()
 
     // Get listing with owner details before approving
-    const { data: listing } = await supabase
+    const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select(`
-            id, business_name, slug,
-            profiles!listings_user_id_fkey(email, full_name)
-        `)
+        .select('id, business_name, slug, user_id')
         .eq('id', id)
         .single()
+
+    if (listingError) {
+        return { error: listingError }
+    }
+
+    let profile: { email?: string; full_name?: string } | null = null
+    if (listing?.user_id) {
+        const { data: profileData, error: profileError } = await supabase
+            .from('profiles')
+            .select('email, full_name')
+            .eq('id', listing.user_id)
+            .maybeSingle()
+
+        if (profileError) {
+            console.warn('Error fetching listing owner profile:', profileError)
+        } else {
+            profile = profileData
+        }
+    }
 
     const { data: latestPayment } = await supabase
         .from('payments')
@@ -205,14 +311,13 @@ export async function approveListingServer(id: string) {
     if (error) return { error }
 
     // Send notification to customer
-    if (listing) {
-        const profile = listing.profiles as any
+    if (listing && profile?.email) {
         const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
 
         notifyCustomerListingApproved({
             businessName: listing.business_name,
-            ownerEmail: profile?.email,
-            ownerName: profile?.full_name,
+            ownerEmail: profile.email,
+            ownerName: profile.full_name,
             listingUrl: `${siteUrl}/listings/${listing.slug}`
         }).catch(console.error)
     }
@@ -225,14 +330,30 @@ export async function rejectListingServer(id: string, reason: string) {
     const supabase = await checkAdmin()
 
     // Get listing with owner details before rejecting
-    const { data: listing } = await supabase
+    const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select(`
-            id, business_name,
-            profiles!listings_user_id_fkey(email, full_name)
-        `)
+        .select('id, business_name, user_id')
         .eq('id', id)
         .single()
+
+    if (listingError) {
+        return { error: listingError }
+    }
+
+    let profile: { email?: string; full_name?: string } | null = null
+    if (listing?.user_id) {
+        const { data: profileData, error: profileError } = await supabase
+            .from('profiles')
+            .select('email, full_name')
+            .eq('id', listing.user_id)
+            .maybeSingle()
+
+        if (profileError) {
+            console.warn('Error fetching listing owner profile:', profileError)
+        } else {
+            profile = profileData
+        }
+    }
 
     const { data, error } = await supabase
         .from('listings')
@@ -246,13 +367,11 @@ export async function rejectListingServer(id: string, reason: string) {
     if (error) return { error }
 
     // Send notification to customer
-    if (listing) {
-        const profile = listing.profiles as any
-
+    if (listing && profile?.email) {
         notifyCustomerListingRejected({
             businessName: listing.business_name,
-            ownerEmail: profile?.email,
-            ownerName: profile?.full_name,
+            ownerEmail: profile.email,
+            ownerName: profile.full_name,
             rejectionReason: reason
         }).catch(console.error)
     }
