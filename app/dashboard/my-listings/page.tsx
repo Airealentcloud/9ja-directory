@@ -68,6 +68,13 @@ export default async function MyListingsPage() {
                                         </div>
                                         <div className="ml-5 flex-shrink-0 flex space-x-2">
                                             <Link
+                                                href={`/dashboard/my-listings/${listing.id}/analytics`}
+                                                className="text-purple-600 hover:text-purple-800 text-sm font-medium"
+                                                title="View reviews and AI insights"
+                                            >
+                                                Insights
+                                            </Link>
+                                            <Link
                                                 href={`/dashboard/my-listings/${listing.id}/promote`}
                                                 className="text-green-600 hover:text-green-800 text-sm font-medium"
                                             >
