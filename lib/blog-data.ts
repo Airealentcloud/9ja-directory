@@ -17,20 +17,15 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "local-lead-generation-mistakes-nigeria-2025",
     title: "Local Lead Generation Mistakes: 7 Errors That Kill Customers in Nigeria (2025)",
-    excerpt: "Local lead generation mistakes can drain customers. Learn 7 errors Nigerian businesses make and the fixes that drive calls and visits.",
+    excerpt: "Local lead generation mistakes can drain customers. Learn 7 errors Nigerian businesses make and how a Nigeria business directory listing drives calls and visits.",
     content: `
       <p><strong>By 9jaDirectory Marketing Team</strong> | <em>Updated: January 2026</em></p>
-
-      <div class="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4">
-        <p><strong>Meta title:</strong> Local Lead Generation Mistakes: 7 Errors That Kill Customers in Nigeria (2025)</p>
-        <p><strong>Meta description:</strong> Local lead generation mistakes can drain customers. Learn 7 errors Nigerian businesses make and the fixes that drive calls and visits.</p>
-        <p><strong>Focus keyword:</strong> local lead generation mistakes</p>
-        <p><strong>Breadcrumb:</strong> <a href="/" class="text-green-600 hover:underline">Home</a> &gt; <a href="/blog" class="text-green-600 hover:underline">Blog</a> &gt; Local Lead Mistakes</p>
-      </div>
 
       <p>Local businesses in Nigeria do not lose customers because they are bad at what they do. They lose customers because people cannot find them, trust them, or reach them fast enough. Google reports that 76% of people who search for something nearby visit a business within a day, and 28% make a purchase. If you are missing the basics, those visits go to someone else.</p>
 
       <p>After 10 years helping shops, clinics, agencies, and service providers in Lagos, Abuja, and Port Harcourt, I see the same issues repeat. The fixes are not expensive, but they require consistency. This guide covers the most common local lead generation mistakes and the simple steps that turn searchers into calls, WhatsApp messages, and walk-ins.</p>
+
+      <p>These local lead generation mistakes appear in every industry, from repairs and clinics to property and logistics. The good news is that each one has a clear fix.</p>
 
       <p>Most leads start with three actions: a map search, a category browse, or a referral that needs verification. If your listing does not answer basic questions like price range, service area, and availability, people drop. Clarity beats big ad spend every time.</p>
 
@@ -49,6 +44,15 @@ export const blogPosts: BlogPost[] = [
         <li>List your business on <a href="/add-business" class="text-green-600 hover:underline">9jaDirectory</a> and choose the right category.</li>
         <li>Use clear service names that match how customers search.</li>
         <li>Check your listing in key cities like <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> and Abuja to confirm it appears.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Why a Nigeria business directory listing converts faster</h2>
+      <p>A Nigeria business directory puts your listing in category and location pages where buyers already search. You show up for high intent queries and build trust faster than social-only traffic.</p>
+      <p>For a deeper breakdown, read our guides to <a href="/blog/top-business-listing-sites-in-nigeria-2025" class="text-green-600 hover:underline">top business listing sites in Nigeria</a> and <a href="/blog/digital-marketing-strategies-small-business" class="text-green-600 hover:underline">digital marketing strategies for small businesses</a>.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Complete listings earn more calls, direction requests, and reviews.</li>
+        <li>Categories and service areas make it easier for buyers to choose you.</li>
+        <li>Listings support your website by sending qualified traffic.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">2. Inaccurate or inconsistent business information</h2>
@@ -131,8 +135,14 @@ export const blogPosts: BlogPost[] = [
       <p>Once the basics are fixed, paid ads become more efficient. If you run ads before your listings and response system are tight, you pay for traffic that leaks. Fix the leaks first, then scale with small, trackable budgets.</p>
       <p>Start with one channel, measure for two weeks, then expand.</p>
 
+      <h2 class="text-2xl font-bold mt-8 mb-4">Related reading from the blog</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><a href="/blog/top-business-listing-sites-in-nigeria-2025" class="text-green-600 hover:underline">Top business listing sites in Nigeria (2025)</a></li>
+        <li><a href="/blog/best-payment-gateways-nigeria-2025" class="text-green-600 hover:underline">Best payment gateways in Nigeria (2025)</a></li>
+      </ul>
+
       <p><strong>Conclusion:</strong> Most local lead generation mistakes come down to missing proof and slow access. Fix the basics, and customers will find you, trust you, and contact you. If you want more calls this month, start by tightening your listings and your response time.</p>
-      <p><strong>Call to action:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> and make sure your details, photos, and categories are complete.</p>
+      <p><strong>Call to action:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a>, a Nigeria business directory built for local searches, and make sure your details, photos, and categories are complete.</p>
 
       <p><strong>FAQs</strong></p>
       <h3 class="text-xl font-bold mt-6 mb-3">What is the fastest way to fix local lead leaks?</h3>
@@ -148,13 +158,13 @@ export const blogPosts: BlogPost[] = [
     category: "Marketing",
     readTime: "12 min read",
     keywords: [
+      "Nigeria business directory",
       "local lead generation mistakes",
       "local leads Nigeria",
       "local SEO Nigeria",
       "business listing Nigeria",
       "Google Business Profile Nigeria",
       "customer reviews Nigeria",
-      "business directory Nigeria",
       "Nigerian SMEs",
       "9jaDirectory"
     ],
@@ -178,7 +188,8 @@ export const blogPosts: BlogPost[] = [
           }
         },
         "datePublished": "2026-01-08",
-        "description": "Local lead generation mistakes can drain customers. Learn 7 errors Nigerian businesses make and the fixes that drive calls and visits.",
+        "description": "Local lead generation mistakes can drain customers. Learn 7 errors Nigerian businesses make and how a Nigeria business directory listing drives calls and visits.",
+        "keywords": "Nigeria business directory, local lead generation mistakes, local SEO Nigeria",
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": "https://9jadirectory.org/blog/local-lead-generation-mistakes-nigeria-2025"

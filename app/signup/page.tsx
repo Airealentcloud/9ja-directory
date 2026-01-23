@@ -20,12 +20,44 @@ export default function SignupPage() {
     const router = useRouter()
     const supabase = createClient()
 
+    const formatSignupError = (err: any) => {
+        const code = err?.code || err?.error_code
+        if (code === 'over_email_send_rate_limit') {
+            return 'Too many signup attempts. Please wait a moment and try again.'
+        }
+        if (code === 'email_address_invalid') {
+            return 'Please use a valid email address. If this email already has an account, try signing in.'
+        }
+        if (code === 'user_already_exists') {
+            return 'An account with this email already exists. Try signing in or resetting your password.'
+        }
+        if (code === 'weak_password') {
+            return 'Password should be at least 6 characters.'
+        }
+        return err?.message || 'Something went wrong. Please try again.'
+    }
+
     const handleSignup = async (e: React.FormEvent) => {
         e.preventDefault()
         setLoading(true)
         setError(null)
 
         try {
+            const normalizedEmail = email.trim().toLowerCase()
+            const normalizedFullName = fullName.trim()
+
+            if (!normalizedEmail || !normalizedFullName) {
+                setError('Please fill in your name and email address.')
+                setLoading(false)
+                return
+            }
+
+            if (password.length < 6) {
+                setError('Password should be at least 6 characters.')
+                setLoading(false)
+                return
+            }
+
             // Use runtime URL for local development, configured URL for production
             const runtimeBaseUrl = window.location.origin.replace(/\/$/, '')
             const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
@@ -38,12 +70,12 @@ export default function SignupPage() {
                 : `${baseUrl}/auth/callback`
 
             const { error } = await supabase.auth.signUp({
-                email,
+                email: normalizedEmail,
                 password,
                 options: {
                     emailRedirectTo: callbackUrl,
                     data: {
-                        full_name: fullName,
+                        full_name: normalizedFullName,
                         selected_plan: planId || null,
                     },
                 },
@@ -63,7 +95,7 @@ export default function SignupPage() {
 
             setSuccess(true)
         } catch (err: any) {
-            setError(err.message)
+            setError(formatSignupError(err))
         } finally {
             setLoading(false)
         }
@@ -120,7 +152,7 @@ export default function SignupPage() {
                         </p>
                     )}
                 </div>
-                <form className="mt-8 space-y-6" onSubmit={handleSignup}>
+                <form className="mt-8 space-y-6" onSubmit={handleSignup} noValidate>
                     {error && (
                         <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-md text-sm">
                             {error}
@@ -135,6 +167,7 @@ export default function SignupPage() {
                                 id="full-name"
                                 name="fullName"
                                 type="text"
+                                autoComplete="name"
                                 required
                                 className="appearance-none rounded-none rounded-t-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                                 placeholder="Full Name"
@@ -167,6 +200,7 @@ export default function SignupPage() {
                                 name="password"
                                 type="password"
                                 autoComplete="new-password"
+                                minLength={6}
                                 required
                                 className="appearance-none rounded-none rounded-b-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                                 placeholder="Password (min 6 characters)"

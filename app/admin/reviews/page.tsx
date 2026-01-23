@@ -11,16 +11,41 @@ export default async function AdminReviewsPage({
     const currentStatus = status || 'pending'
     const supabase = await createClient()
 
-    // Check admin using secure RPC
-    const { data: isAdmin, error: adminError } = await supabase.rpc('is_admin')
+    // Check if user is authenticated
+    const {
+        data: { user },
+    } = await supabase.auth.getUser()
 
-    if (adminError || !isAdmin) {
-        console.error('Admin check failed:', adminError)
-        redirect('/')
+    if (!user) {
+        redirect('/login')
+    }
+
+    // Check admin role from profiles table (same pattern as layout)
+    const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .single()
+
+    if (profileError || profile?.role !== 'admin') {
+        redirect('/dashboard')
     }
 
     // Fetch reviews with listing and user details
-    const { data: reviews, error } = await supabase
+    let reviews: Array<{
+        id: string
+        listing_id: string
+        user_id: string | null
+        rating: number
+        comment: string
+        reviewer_name: string | null
+        status: string
+        created_at: string
+        listings: { business_name: string; slug: string } | null
+        profiles: { full_name: string; email: string } | null
+    }> | null = null
+
+    const { data, error } = await supabase
         .from('reviews')
         .select(`
       *,
@@ -31,7 +56,14 @@ export default async function AdminReviewsPage({
         .order('created_at', { ascending: false })
 
     if (error) {
-        console.error('Error fetching reviews:', error)
+        // Log detailed error for debugging
+        console.error('Error fetching reviews:', error.message, error.code, error.hint)
+        // If table doesn't exist, don't crash - just show empty state
+        if (error.code === '42P01' || error.message?.includes('does not exist')) {
+            console.warn('Reviews table may not exist in database')
+        }
+    } else {
+        reviews = data
     }
 
     return (
