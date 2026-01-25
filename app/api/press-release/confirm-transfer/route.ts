@@ -103,6 +103,7 @@ export async function POST(request: NextRequest) {
         await sendEmail({
           to: adminEmail,
           subject: `Receipt Uploaded - ${order.payment_reference} | Press Release`,
+          text: `Receipt uploaded for ${order.payment_reference} by ${order.customer_name} (${order.customer_email}). Package: ${order.package_name}. Amount: NGN ${(order.package_price / 100).toLocaleString()}. ${receiptUrl ? `Receipt: ${receiptUrl}` : ''}`,
           html: `
             <h2>Bank Transfer Receipt Uploaded</h2>
             <p>A customer has uploaded their payment receipt for review.</p>
@@ -134,6 +135,7 @@ export async function POST(request: NextRequest) {
       await sendEmail({
         to: order.customer_email,
         subject: `Receipt Received - ${order.package_name} | 9jaDirectory`,
+        text: `We received your payment receipt for ${order.package_name}. Reference: ${order.payment_reference}. Amount: NGN ${(order.package_price / 100).toLocaleString()}. We will verify within 24 hours.`,
         html: `
           <h2>Receipt Received!</h2>
           <p>Thank you, ${order.customer_name}! We've received your payment receipt.</p>
@@ -248,6 +250,7 @@ export async function PATCH(request: NextRequest) {
         await sendEmail({
           to: order.customer_email,
           subject: `Payment Confirmed - ${order.package_name} | 9jaDirectory`,
+          text: `Payment confirmed for ${order.package_name}. Reference: ${order.payment_reference}. Amount: NGN ${(order.package_price / 100).toLocaleString()}. Please reply with your press release content, logo, and any images.`,
           html: `
             <h2>Payment Confirmed!</h2>
             <p>Great news, ${order.customer_name}! Your bank transfer has been verified.</p>
@@ -303,6 +306,7 @@ export async function PATCH(request: NextRequest) {
         await sendEmail({
           to: order.customer_email,
           subject: `Payment Issue - ${order.package_name} | 9jaDirectory`,
+          text: `We could not verify your payment for ${order.package_name}. Reference: ${order.payment_reference}. ${adminNotes ? `Note: ${adminNotes}. ` : ''}Please contact us with proof via WhatsApp +234 916 002 3442 or email support@9jadirectory.org.`,
           html: `
             <h2>Payment Verification Issue</h2>
             <p>Hi ${order.customer_name},</p>
