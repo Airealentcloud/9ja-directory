@@ -98,6 +98,7 @@ export async function GET(request: NextRequest) {
         await sendEmail({
           to: order.customer_email,
           subject: `Payment Confirmed - ${order.package_name} | 9jaDirectory`,
+          text: `Payment confirmed for ${order.package_name}. Reference: ${order.payment_reference}. Amount: NGN ${(order.package_price / 100).toLocaleString()}. Please reply with your press release content, logo, and images.`,
           html: `
             <h2>Payment Confirmed!</h2>
             <p>Thank you, ${order.customer_name}! Your payment has been received.</p>
@@ -135,6 +136,7 @@ export async function GET(request: NextRequest) {
           await sendEmail({
             to: adminEmail,
             subject: `Payment Received - ${order.payment_reference} | Press Release`,
+            text: `Payment received for ${order.package_name}. Reference: ${order.payment_reference}. Amount: NGN ${(order.package_price / 100).toLocaleString()}. Customer: ${order.customer_name} (${order.customer_email}).`,
             html: `
               <h2>Payment Received!</h2>
               <p>A press release order has been paid via Paystack.</p>
