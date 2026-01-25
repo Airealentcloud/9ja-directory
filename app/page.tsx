@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
+import { HomeCategoryCard } from '@/components/home-category-card'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
 
@@ -228,16 +229,13 @@ export default async function Home() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {(categories || []).map((category) => (
-              <Link
+              <HomeCategoryCard
                 key={category.id}
-                href={`/categories/${category.slug}`}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all text-center border border-gray-200 hover:border-green-500 group"
-              >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform" aria-hidden="true">
-                  {category.icon || '🏢'}
-                </div>
-                <h3 className="font-semibold text-gray-900">{category.name}</h3>
-              </Link>
+                id={category.id}
+                name={category.name}
+                slug={category.slug}
+                icon={category.icon || undefined}
+              />
             ))}
           </div>
           <div className="text-center mt-10">

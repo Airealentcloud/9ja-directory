@@ -83,6 +83,7 @@ export default async function RootLayout({
                   <NavLink href="/categories" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Categories</NavLink>
                   <NavLink href="/states" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Locations</NavLink>
                   <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
+                  <NavLink href="/press-release" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Press Release</NavLink>
                   <NavLink href="/pricing" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</NavLink>
                   <NavLink href="/pricing" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
                     Get Listed
@@ -114,6 +115,7 @@ export default async function RootLayout({
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
                   <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                  <li><Link href="/press-release" className="hover:text-white transition-colors">Press Release</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                   <li><Link href="/pricing" className="hover:text-white transition-colors">Get Listed</Link></li>
                 </ul>
