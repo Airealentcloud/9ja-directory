@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
             package_name: packageName,
             customer_name: customerName,
             customer_phone: customerPhone,
-          },
+          } as Record<string, any>,
         })
 
         if (!paystackResponse.status || !paystackResponse.data?.authorization_url) {
