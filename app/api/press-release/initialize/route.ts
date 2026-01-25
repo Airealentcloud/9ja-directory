@@ -154,6 +154,7 @@ export async function POST(request: NextRequest) {
         await sendEmail({
           to: customerEmail,
           subject: `Order Confirmation - ${packageName} | 9jaDirectory`,
+          text: `Order received for ${packageName}. Reference: ${orderReference}. Amount: NGN ${(packagePrice / 100).toLocaleString()}. Bank: Zenith Bank 1219916577 (A.I ROBOTICS LOGISTICS LTD). Use the reference in narration and upload receipt: ${siteUrl}/press-release/order-pending?order=${order.id}`,
           html: `
             <h2>Thank you for your order, ${customerName}!</h2>
             <p>Your order for <strong>${packageName}</strong> has been received.</p>
@@ -197,6 +198,7 @@ export async function POST(request: NextRequest) {
           await sendEmail({
             to: adminEmail,
             subject: `New Press Release Order (Bank Transfer) - ${orderReference}`,
+            text: `New bank transfer order ${orderReference}. Customer: ${customerName} (${customerEmail}, ${customerPhone})${companyName ? `, Company: ${companyName}` : ''}. Package: ${packageName}. Amount: NGN ${(packagePrice / 100).toLocaleString()}. Notes: ${orderNotes || 'None'}.`,
             html: `
               <h2>New Press Release Order</h2>
               <p><strong>Payment Method:</strong> Bank Transfer (Pending)</p>
@@ -245,3 +247,5 @@ export async function POST(request: NextRequest) {
     )
   }
 }
+
+
