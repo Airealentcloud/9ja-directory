@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { getPackageBySlug, BANK_ACCOUNT, WHATSAPP_NUMBER } from '@/lib/press-release/packages'
 import { CreditCard, Building2, CheckCircle2, ArrowLeft, Loader2 } from 'lucide-react'
+import PressReleaseWhatsApp from '@/components/press-release-whatsapp'
 
 type PaymentMethod = 'paystack' | 'bank_transfer'
 
@@ -29,22 +30,25 @@ export default function PressReleaseCheckoutPage() {
 
   if (!selectedPackage) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-          <div className="text-6xl mb-4">📦</div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Package Not Found</h1>
-          <p className="text-gray-600 mb-6">
-            The selected package could not be found. Please choose a package from our offerings.
-          </p>
-          <Link
-            href="/press-release"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            View Packages
-          </Link>
+      <>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+            <div className="text-6xl mb-4">📦</div>
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Package Not Found</h1>
+            <p className="text-gray-600 mb-6">
+              The selected package could not be found. Please choose a package from our offerings.
+            </p>
+            <Link
+              href="/press-release"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              View Packages
+            </Link>
+          </div>
         </div>
-      </div>
+        <PressReleaseWhatsApp />
+      </>
     )
   }
 
@@ -105,22 +109,23 @@ export default function PressReleaseCheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 lg:py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Link */}
-        <Link
-          href={`/press-release/${selectedPackage.slug}`}
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-green-600 mb-6 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to package details
-        </Link>
+    <>
+      <div className="min-h-screen bg-gray-50 py-8 lg:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back Link */}
+          <Link
+            href={`/press-release/${selectedPackage.slug}`}
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-green-600 mb-6 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to package details
+          </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Checkout Form */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
-              <h1 className="text-2xl font-bold text-gray-900 mb-6">Complete Your Order</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Checkout Form */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
+                <h1 className="text-2xl font-bold text-gray-900 mb-6">Complete Your Order</h1>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Customer Information */}
@@ -336,6 +341,7 @@ export default function PressReleaseCheckoutPage() {
                   )}
                 </button>
               </form>
+              </div>
             </div>
           </div>
 
@@ -398,6 +404,7 @@ export default function PressReleaseCheckoutPage() {
           </div>
         </div>
       </div>
-    </div>
+      <PressReleaseWhatsApp />
+    </>
   )
 }

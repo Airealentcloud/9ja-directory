@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ShoppingCart, MessageCircle, Mail, ArrowLeft } from 'lucide-react'
+import PressReleaseWhatsApp from '@/components/press-release-whatsapp'
 
 type PageConfig = {
   slug: string
@@ -228,20 +229,124 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
   }
 
   return (
-    <div className="bg-gray-50">
-      <section className="bg-white border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div className="space-y-4">
-            <p className="text-sm font-semibold text-green-700">{page.title}</p>
-            <h1 className="text-4xl font-bold text-gray-900 leading-tight">{page.summary}</h1>
-            <div className="flex items-center gap-3 text-sm text-gray-700">
-              <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
-              <span>{page.delivery ?? 'Fast onboarding'}</span>
+    <>
+      <div className="bg-gray-50">
+        <section className="bg-white border-b border-gray-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-4">
+              <p className="text-sm font-semibold text-green-700">{page.title}</p>
+              <h1 className="text-4xl font-bold text-gray-900 leading-tight">{page.summary}</h1>
+              <div className="flex items-center gap-3 text-sm text-gray-700">
+                <span className="h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                <span>{page.delivery ?? 'Fast onboarding'}</span>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href={`/press-release/checkout?package=${page.slug}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-green-700"
+                >
+                  <ShoppingCart className="w-5 h-5" />
+                  Proceed to Checkout
+                </Link>
+                {page.whatsapp && (
+                  <a
+                    href={page.whatsapp}
+                    className="inline-flex items-center justify-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp
+                  </a>
+                )}
+                <Link
+                  href="/press-release"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-800 font-semibold hover:border-gray-300"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  All packages
+                </Link>
+              </div>
+            </div>
+            <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 space-y-4">
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="text-sm text-green-700 font-semibold">{page.title}</p>
+                  <h2 className="text-3xl font-bold text-gray-900 mt-1">{page.price}</h2>
+                  {page.releases && <p className="text-sm text-gray-600">{page.releases}</p>}
+                </div>
+                {page.delivery && (
+                  <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
+                    {page.delivery}
+                  </span>
+                )}
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">What you get</h3>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {page.includes.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {page.outcomes && (
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900 mb-2">Deliverables</h3>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    {page.outcomes.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {page.needs && (
+                <div className="rounded-2xl bg-gray-50 border border-gray-200 p-4">
+                  <h4 className="text-sm font-semibold text-gray-900">What we need from you</h4>
+                  <ul className="mt-2 space-y-2 text-sm text-gray-700">
+                    {page.needs.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {(page.sampleImage || page.sampleNote) && (
+          <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+              <div>
+                <p className="text-sm font-semibold text-green-700">Sample outlets</p>
+                <h3 className="text-2xl font-bold text-gray-900">Example publications</h3>
+                {page.sampleNote && <p className="text-gray-600 mt-2">{page.sampleNote}</p>}
+              </div>
+            </div>
+            {page.sampleImage && (
+              <div className="mb-6 overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
+                <img src={page.sampleImage} alt="Sample press release outlet logos" className="w-full object-cover" />
+              </div>
+            )}
+          </section>
+        )}
+
+        <section className="bg-white border-t border-b border-gray-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row items-center gap-6 justify-between">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900">Ready to proceed?</h3>
+              <p className="text-gray-600 mt-2">{page.summary}</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
                 href={`/press-release/checkout?package=${page.slug}`}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold shadow-sm hover:bg-green-700"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700"
               >
                 <ShoppingCart className="w-5 h-5" />
                 Proceed to Checkout
@@ -249,120 +354,17 @@ export default async function PackageDetailPage({ params }: { params: Promise<{ 
               {page.whatsapp && (
                 <a
                   href={page.whatsapp}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-800 font-semibold hover:border-gray-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp
                 </a>
               )}
-              <Link
-                href="/press-release"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-800 font-semibold hover:border-gray-300"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                All packages
-              </Link>
             </div>
           </div>
-          <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 space-y-4">
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="text-sm text-green-700 font-semibold">{page.title}</p>
-                <h2 className="text-3xl font-bold text-gray-900 mt-1">{page.price}</h2>
-                {page.releases && <p className="text-sm text-gray-600">{page.releases}</p>}
-              </div>
-              {page.delivery && (
-                <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-                  {page.delivery}
-                </span>
-              )}
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-gray-900 mb-2">What you get</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                {page.includes.map((item) => (
-                  <li key={item} className="flex gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {page.outcomes && (
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">Deliverables</h3>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  {page.outcomes.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {page.needs && (
-              <div className="rounded-2xl bg-gray-50 border border-gray-200 p-4">
-                <h4 className="text-sm font-semibold text-gray-900">What we need from you</h4>
-                <ul className="mt-2 space-y-2 text-sm text-gray-700">
-                  {page.needs.map((item) => (
-                    <li key={item} className="flex gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-green-500" aria-hidden />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {(page.sampleImage || page.sampleNote) && (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            <div>
-              <p className="text-sm font-semibold text-green-700">Sample outlets</p>
-              <h3 className="text-2xl font-bold text-gray-900">Example publications</h3>
-              {page.sampleNote && <p className="text-gray-600 mt-2">{page.sampleNote}</p>}
-            </div>
-          </div>
-          {page.sampleImage && (
-            <div className="mb-6 overflow-hidden rounded-3xl border border-gray-200 shadow-sm">
-              <img src={page.sampleImage} alt="Sample press release outlet logos" className="w-full object-cover" />
-            </div>
-          )}
         </section>
-      )}
-
-      <section className="bg-white border-t border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col lg:flex-row items-center gap-6 justify-between">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900">Ready to proceed?</h3>
-            <p className="text-gray-600 mt-2">
-              {page.summary}
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href={`/press-release/checkout?package=${page.slug}`}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Proceed to Checkout
-            </Link>
-            {page.whatsapp && (
-              <a
-                href={page.whatsapp}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-800 font-semibold hover:border-gray-300"
-              >
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp
-              </a>
-            )}
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+      <PressReleaseWhatsApp />
+    </>
   )
 }

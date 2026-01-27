@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { CheckCircle2, Loader2, XCircle, ArrowRight, MessageCircle } from 'lucide-react'
 import { WHATSAPP_NUMBER } from '@/lib/press-release/packages'
+import PressReleaseWhatsApp from '@/components/press-release-whatsapp'
 
 type OrderStatus = 'loading' | 'success' | 'failed' | 'pending'
 
@@ -59,25 +60,29 @@ export default function OrderSuccessPage() {
   // Loading State
   if (status === 'loading') {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-          <Loader2 className="w-16 h-16 text-green-600 animate-spin mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Verifying Payment...</h1>
-          <p className="text-gray-600">Please wait while we confirm your payment.</p>
+      <>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+            <Loader2 className="w-16 h-16 text-green-600 animate-spin mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Verifying Payment...</h1>
+            <p className="text-gray-600">Please wait while we confirm your payment.</p>
+          </div>
         </div>
-      </div>
+        <PressReleaseWhatsApp />
+      </>
     )
   }
 
   // Success State
   if (status === 'success' && order) {
     return (
-      <div className="min-h-screen bg-gray-50 py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-12 h-12 text-green-600" />
-            </div>
+      <>
+        <div className="min-h-screen bg-gray-50 py-12 px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CheckCircle2 className="w-12 h-12 text-green-600" />
+              </div>
 
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Payment Successful!</h1>
             <p className="text-lg text-gray-600 mb-8">
@@ -151,63 +156,71 @@ export default function OrderSuccessPage() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
+            </div>
           </div>
         </div>
-      </div>
+        <PressReleaseWhatsApp />
+      </>
     )
   }
 
   // Pending State
   if (status === 'pending') {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-          <Loader2 className="w-16 h-16 text-yellow-500 animate-spin mx-auto mb-4" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Payment Processing</h1>
-          <p className="text-gray-600 mb-6">
-            Your payment is still being processed. This may take a few moments.
-          </p>
-          <button
-            onClick={() => window.location.reload()}
-            className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            Check Again
-          </button>
+      <>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+            <Loader2 className="w-16 h-16 text-yellow-500 animate-spin mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">Payment Processing</h1>
+            <p className="text-gray-600 mb-6">
+              Your payment is still being processed. This may take a few moments.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            >
+              Check Again
+            </button>
+          </div>
         </div>
-      </div>
+        <PressReleaseWhatsApp />
+      </>
     )
   }
 
   // Failed State
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
-        <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <XCircle className="w-12 h-12 text-red-600" />
-        </div>
+    <>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center">
+          <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <XCircle className="w-12 h-12 text-red-600" />
+          </div>
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Payment Failed</h1>
-        <p className="text-gray-600 mb-6">
-          {errorMessage || 'We could not verify your payment. Please try again or contact support.'}
-        </p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Payment Failed</h1>
+          <p className="text-gray-600 mb-6">
+            {errorMessage || 'We could not verify your payment. Please try again or contact support.'}
+          </p>
 
-        <div className="flex flex-col gap-4">
-          <Link
-            href="/press-release"
-            className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
-          >
-            Try Again
-          </Link>
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi,%20I%20had%20an%20issue%20with%20my%20payment%20(Reference:%20${reference}).%20Can%20you%20help?`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-          >
-            Contact Support
-          </a>
+          <div className="flex flex-col gap-4">
+            <Link
+              href="/press-release"
+              className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            >
+              Try Again
+            </Link>
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi,%20I%20had%20an%20issue%20with%20my%20payment%20(Reference:%20${reference}).%20Can%20you%20help?`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
+              Contact Support
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+      <PressReleaseWhatsApp />
+    </>
   )
 }

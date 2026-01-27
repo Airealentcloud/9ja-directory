@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import CopywritingGallery from '@/components/copywriting-gallery'
 import CopywritingConfigurator from '@/components/copywriting-configurator'
+import PressReleaseWhatsApp from '@/components/press-release-whatsapp'
 
 const offer = {
   priceLabel: 'NGN 100,000',
@@ -127,6 +128,7 @@ export default function CopywritingPage() {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <CopywritingConfigurator basePrice={100000} extras={extras} whatsappLink={whatsappBase} />
       </section>
+      <PressReleaseWhatsApp />
     </div>
   )
 }

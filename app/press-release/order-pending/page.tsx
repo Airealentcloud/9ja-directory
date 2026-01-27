@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { Clock, Upload, CheckCircle2, Loader2, Copy, Check, MessageCircle, ArrowLeft } from 'lucide-react'
 import { BANK_ACCOUNT, WHATSAPP_NUMBER } from '@/lib/press-release/packages'
+import PressReleaseWhatsApp from '@/components/press-release-whatsapp'
 
 interface OrderDetails {
   id: string
@@ -138,9 +139,9 @@ export default function OrderPendingPage() {
     )
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-2xl mx-auto">
+    return (
+      <div className="min-h-screen bg-gray-50 py-12 px-4">
+        <div className="max-w-2xl mx-auto">
         {/* Success Banner if Receipt Uploaded */}
         {uploadSuccess && (
           <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6 flex items-start gap-3">
@@ -310,6 +311,7 @@ export default function OrderPendingPage() {
           </div>
         </div>
       </div>
+      <PressReleaseWhatsApp />
     </div>
   )
 }
