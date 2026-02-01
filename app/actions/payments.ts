@@ -5,7 +5,7 @@ import { getPaymentPlan } from '@/lib/payments/plans'
 import { initializePaystackTransaction } from '@/lib/payments/paystack'
 
 function getSiteUrl() {
-  return process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+  return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 }
 
 function generateReference() {

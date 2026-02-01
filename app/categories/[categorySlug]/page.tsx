@@ -22,7 +22,7 @@ interface CategoryPageProps {
 }
 
 const LISTINGS_PER_PAGE = 12
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 // Generate metadata for SEO
 export async function generateMetadata({

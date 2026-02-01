@@ -13,7 +13,7 @@ import {
   generateFAQSchema
 } from '@/lib/schema/local-business'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 // Define listing type for proper typing
 interface ListingData {

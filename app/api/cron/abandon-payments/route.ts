@@ -80,7 +80,7 @@ export async function GET(request: NextRequest) {
       return acc
     }, {})
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const notifications = abandoned
       .map((payment) => {
         const profile = profilesMap[payment.user_id]

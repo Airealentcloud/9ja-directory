@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 // ✅ GENERATE DYNAMIC METADATA FOR STATE + CATEGORY COMBINATION
 export async function generateMetadata({

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org';
 
 const stopwords = new Set([
     'a',
@@ -68,7 +68,7 @@ function safeJsonParse(value: string): unknown | null {
 }
 
 function fixJsonLdImages(node: unknown, fallbackImageUrl: string): unknown {
-    const isBadBlogImage = (url: string) => url.startsWith('https://9jadirectory.org/images/blog/');
+    const isBadBlogImage = (url: string) => url.startsWith('https://www.9jadirectory.org/images/blog/');
 
     const fixImageValue = (value: unknown): unknown => {
         if (typeof value === 'string') return isBadBlogImage(value) ? fallbackImageUrl : value;

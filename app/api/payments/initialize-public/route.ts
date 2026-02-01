@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: leadError.message }, { status: 500 })
     }
 
-    const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const callbackUrl = `${origin}/payment/verify?reference=${reference}`
 
     const paystackResponse = await initializePayment({

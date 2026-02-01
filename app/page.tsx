@@ -6,7 +6,7 @@ import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 import { HomeCategoryCard } from '@/components/home-category-card'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',

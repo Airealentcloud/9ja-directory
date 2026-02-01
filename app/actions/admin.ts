@@ -312,7 +312,7 @@ export async function approveListingServer(id: string) {
 
     // Send notification to customer
     if (listing && profile?.email) {
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
         notifyCustomerListingApproved({
             businessName: listing.business_name,

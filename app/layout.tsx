@@ -11,7 +11,7 @@ import { createClient } from '@/lib/supabase/server'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

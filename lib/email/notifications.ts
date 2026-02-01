@@ -139,7 +139,7 @@ Business Details:
 - Submitted: ${data.submittedAt.toLocaleString('en-NG', { timeZone: 'Africa/Lagos' })}
 
 Please review this listing in your admin dashboard:
-https://9jadirectory.org/admin/listings
+https://www.9jadirectory.org/admin/listings
 
 Best regards,
 9jaDirectory System
@@ -177,7 +177,7 @@ Best regards,
                 <p><strong>Submitted:</strong> ${data.submittedAt.toLocaleString('en-NG', { timeZone: 'Africa/Lagos' })}</p>
             </div>
 
-            <a href="https://9jadirectory.org/admin/listings" class="btn">Review Listing</a>
+            <a href="https://www.9jadirectory.org/admin/listings" class="btn">Review Listing</a>
         </div>
         <div class="footer">
             <p>9jaDirectory - Nigeria's Business Directory</p>
@@ -267,7 +267,7 @@ The 9jaDirectory Team
         </div>
         <div class="footer">
             <p>9jaDirectory - Nigeria's Business Directory</p>
-            <p><a href="https://9jadirectory.org">www.9jadirectory.org</a></p>
+            <p><a href="https://www.9jadirectory.org">www.9jadirectory.org</a></p>
         </div>
     </div>
 </body>
@@ -298,7 +298,7 @@ Reason: ${data.rejectionReason}
 Don't worry! You can update your listing and resubmit it for review. Please address the issues mentioned above and try again.
 
 Edit your listing here:
-https://9jadirectory.org/dashboard/my-listings
+https://www.9jadirectory.org/dashboard/my-listings
 
 If you have any questions, please contact our support team.
 
@@ -337,14 +337,14 @@ The 9jaDirectory Team
             <p>Don't worry! You can update your listing and resubmit it for review. Please address the issues mentioned above and try again.</p>
 
             <p style="text-align: center;">
-                <a href="https://9jadirectory.org/dashboard/my-listings" class="btn">Edit Your Listing</a>
+                <a href="https://www.9jadirectory.org/dashboard/my-listings" class="btn">Edit Your Listing</a>
             </p>
 
             <p>If you have any questions, please contact our support team.</p>
         </div>
         <div class="footer">
             <p>9jaDirectory - Nigeria's Business Directory</p>
-            <p><a href="https://9jadirectory.org">www.9jadirectory.org</a></p>
+            <p><a href="https://www.9jadirectory.org">www.9jadirectory.org</a></p>
         </div>
     </div>
 </body>
@@ -448,7 +448,7 @@ Best regards,
 
 // Send newsletter verification email
 export async function sendNewsletterVerification(data: NewsletterVerificationData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const verifyUrl = `${siteUrl}/newsletter/verify?token=${data.verificationToken}`
     const subject = 'Confirm your 9jaDirectory Newsletter Subscription'
 
@@ -517,7 +517,7 @@ The 9jaDirectory Team
 
 // Send newsletter welcome email after verification
 export async function sendNewsletterWelcome(data: NewsletterWelcomeData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const unsubscribeUrl = `${siteUrl}/newsletter/unsubscribe?email=${encodeURIComponent(data.email)}`
     const subject = 'Welcome to the 9jaDirectory Newsletter!'
 
@@ -606,7 +606,7 @@ The 9jaDirectory Team
 
 // Send unsubscribe confirmation email
 export async function sendNewsletterUnsubscribeConfirmation(data: NewsletterUnsubscribeData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const subject = 'You have been unsubscribed from 9jaDirectory Newsletter'
 
     const text = `

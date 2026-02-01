@@ -15,7 +15,7 @@ import { standalonePackages, bundlePackages, reputationPackages } from '@/lib/pr
  * @see https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
     const supabase = await createClient()
 
     // Current date for pages without specific modification tracking
@@ -34,7 +34,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { path: '/blog', priority: 0.8, changeFreq: 'daily' as const },
         { path: '/categories', priority: 0.9, changeFreq: 'weekly' as const },
         { path: '/states', priority: 0.9, changeFreq: 'weekly' as const },
-        { path: '/search', priority: 0.8, changeFreq: 'daily' as const },
     ].map((route) => ({
         url: `${baseUrl}${route.path}`,
         lastModified: now,

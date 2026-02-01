@@ -15,7 +15,7 @@ type Listing = {
     states?: { name: string; slug: string } | null | any
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 /**
  * Generates ItemList schema for category pages

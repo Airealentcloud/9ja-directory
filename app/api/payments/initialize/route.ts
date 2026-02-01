@@ -153,7 +153,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Get callback URL (Paystack will redirect back here)
-        const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+        const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
         const callbackUrl = `${origin}/payment/verify?reference=${reference}`
 
         // Initialize payment with Paystack

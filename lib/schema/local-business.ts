@@ -45,7 +45,7 @@ type Review = {
     user_id?: string
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 /**
  * Generates LocalBusiness JSON-LD schema for a listing

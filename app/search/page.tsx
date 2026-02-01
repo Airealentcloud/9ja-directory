@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 import { scoreAndSortListings, type SearchableListing } from '@/lib/search/scoring'
 import SearchResultCard from '@/components/listings/search-result-card'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://9jadirectory.org'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
 // ✅ GENERATE DYNAMIC METADATA FOR SEARCH RESULTS PAGE
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string; state?: string }> }): Promise<Metadata> {
