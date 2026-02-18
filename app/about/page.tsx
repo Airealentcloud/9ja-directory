@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { CheckCircle, Shield, MapPin, Search, LayoutGrid, Smartphone, ArrowRight } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
@@ -214,7 +215,7 @@ export default async function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Check Mark</span>
+                  <CheckCircle className="text-green-600 mr-3 shrink-0" size={24} />
                   Transparent Listing Plans
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -225,7 +226,7 @@ export default async function AboutPage() {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Shield</span>
+                  <Shield className="text-green-600 mr-3 shrink-0" size={24} />
                   Verified Business Profiles
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -236,7 +237,7 @@ export default async function AboutPage() {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Map</span>
+                  <MapPin className="text-green-600 mr-3 shrink-0" size={24} />
                   All 37 Nigerian States Coverage
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -247,7 +248,7 @@ export default async function AboutPage() {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Search</span>
+                  <Search className="text-green-600 mr-3 shrink-0" size={24} />
                   Easy Search and Discovery
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -258,7 +259,7 @@ export default async function AboutPage() {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Categories</span>
+                  <LayoutGrid className="text-green-600 mr-3 shrink-0" size={24} />
                   {(totalCategories || 0)}+ Business Categories
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -269,12 +270,49 @@ export default async function AboutPage() {
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                  <span className="text-green-600 text-2xl mr-3">Mobile</span>
+                  <Smartphone className="text-green-600 mr-3 shrink-0" size={24} />
                   Mobile-Friendly Platform
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   Access 9jaDirectory seamlessly on any device - smartphone, tablet, or desktop.
                   Find businesses on the go with our responsive, fast-loading platform.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-8 md:p-12 mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Who We Are</h2>
+            <p className="text-gray-600 mb-8">The team behind 9jaDirectory</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="mx-auto h-20 w-20 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-2xl mb-4">
+                  IA
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Israel Akhas</h3>
+                <p className="text-sm text-green-600 font-medium mb-2">Founder & CEO</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Digital entrepreneur with experience building online platforms for Nigerian SMEs. Passionate about connecting local businesses with customers nationwide.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto h-20 w-20 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-2xl mb-4">
+                  ET
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Editorial Team</h3>
+                <p className="text-sm text-green-600 font-medium mb-2">Content & Research</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  A dedicated team of Nigerian business writers, researchers, and SEO specialists producing in-depth guides for entrepreneurs across all 37 states.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mx-auto h-20 w-20 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-2xl mb-4">
+                  VT
+                </div>
+                <h3 className="text-lg font-bold text-gray-900">Verification Team</h3>
+                <p className="text-sm text-green-600 font-medium mb-2">Quality & Trust</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Our verification specialists review every business listing to ensure accuracy, authenticity, and compliance before it goes live on the platform.
                 </p>
               </div>
             </div>
@@ -334,19 +372,19 @@ export default async function AboutPage() {
             </p>
             <ul className="space-y-3 text-gray-700 mb-6">
               <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-3">Arrow</span>
+                <ArrowRight className="text-green-600 mr-3 mt-0.5 shrink-0" size={18} />
                 <span>Small businesses in secondary cities like Owerri, Ilorin, Minna, and Ado-Ekiti deserve equal visibility as those in Lagos or Abuja</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-3">Arrow</span>
+                <ArrowRight className="text-green-600 mr-3 mt-0.5 shrink-0" size={18} />
                 <span>Nigerian consumers prefer local, trusted businesses they can verify and contact directly</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-3">Arrow</span>
+                <ArrowRight className="text-green-600 mr-3 mt-0.5 shrink-0" size={18} />
                 <span>Business owners need affordable, accessible tools to grow their online presence with clear pricing</span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-3">Arrow</span>
+                <ArrowRight className="text-green-600 mr-3 mt-0.5 shrink-0" size={18} />
                 <span>Every state in Nigeria - from Abia to Zamfara - has valuable businesses that deserve to be discovered</span>
               </li>
             </ul>
