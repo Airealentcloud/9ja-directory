@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 import { HomeCategoryCard } from '@/components/home-category-card'
+import { blogPosts } from '@/lib/blog-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
@@ -90,7 +91,7 @@ export default async function Home() {
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     description: 'Nigeria\'s premier online business directory connecting customers with trusted local businesses across all 36 states.',
-    foundingDate: '2024',
+    foundingDate: '2025',
     areaServed: {
       '@type': 'Country',
       name: 'Nigeria',
@@ -440,17 +441,17 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* AI Assistant CTA */}
+        {/* Search CTA */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="text-5xl mb-4">🤖</div>
+            <div className="text-5xl mb-4">🔍</div>
             <h2 className="text-3xl font-bold mb-4">Need Help Finding Something?</h2>
             <p className="text-xl mb-8 text-blue-100">
-              Ask our AI assistant to help you find the perfect business
+              Search thousands of verified Nigerian businesses by name, category, or location
             </p>
-            <button className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
-              Chat with Our Assistant
-            </button>
+            <Link href="/search" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
+              Search Businesses
+            </Link>
           </div>
         </section>
 
@@ -462,14 +463,12 @@ export default async function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
+              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
               <p className="text-gray-700 mb-4 italic">
-                "Listing my restaurant on 9jaDirectory increased our visibility significantly. We now get more customers every week!"
+                &ldquo;Listing my restaurant on 9jaDirectory increased our visibility significantly. We now get more customers every week!&rdquo;
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-lg">👤</span>
-                </div>
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">CO</div>
                 <div>
                   <div className="font-semibold">Chioma Okafor</div>
                   <div className="text-sm text-gray-500">Restaurant Owner, Lagos</div>
@@ -477,14 +476,12 @@ export default async function Home() {
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
+              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
               <p className="text-gray-700 mb-4 italic">
-                "I found a reliable plumber in my area within minutes. The directory is easy to use and has accurate contact information."
+                &ldquo;I found a reliable plumber in my area within minutes. The directory is easy to use and has accurate contact information.&rdquo;
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-lg">👤</span>
-                </div>
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">TA</div>
                 <div>
                   <div className="font-semibold">Tunde Adebayo</div>
                   <div className="text-sm text-gray-500">Customer, Abuja</div>
@@ -492,14 +489,12 @@ export default async function Home() {
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="text-yellow-500 mb-3">⭐⭐⭐⭐⭐</div>
+              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
               <p className="text-gray-700 mb-4 italic">
-                "Best platform for discovering local services. The categories are well-organized and the search is very fast."
+                &ldquo;Best platform for discovering local services. The categories are well-organized and the search is very fast.&rdquo;
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
-                  <span className="text-lg">👤</span>
-                </div>
+                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">AN</div>
                 <div>
                   <div className="font-semibold">Amaka Nwosu</div>
                   <div className="text-sm text-gray-500">Business Consultant, Port Harcourt</div>
@@ -609,12 +604,45 @@ export default async function Home() {
           <PricingCheckoutClient />
         </section>
 
+        {/* Latest Blog Posts */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-center mb-4">Business Guides & Resources</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Free guides to help Nigerian businesses grow, register, and succeed
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {blogPosts.slice(0, 3).map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all">
+                <div className="h-48 relative overflow-hidden bg-gray-100">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform"
+                  />
+                </div>
+                <div className="p-5">
+                  <span className="text-xs font-semibold text-green-600 uppercase tracking-wide">{post.category}</span>
+                  <h3 className="mt-1 font-bold text-gray-900 leading-snug line-clamp-2 group-hover:text-green-700">{post.title}</h3>
+                  <p className="mt-2 text-sm text-gray-500">{post.readTime} &middot; {post.date}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/blog" className="inline-block px-6 py-3 text-green-600 border-2 border-green-600 rounded-lg hover:bg-green-50 transition-colors font-semibold">
+              View All Business Guides
+            </Link>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-green-600 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Grow Your Business?</h2>
             <p className="text-xl mb-8 text-green-100">
-              Join thousands of businesses already listed on 9jaDirectory
+              Join {totalListings && totalListings > 0 ? `${totalListings.toLocaleString()}+` : 'Nigerian'} businesses already listed on 9jaDirectory
             </p>
             <Link
               href="/pricing"
