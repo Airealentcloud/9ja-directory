@@ -28,6 +28,17 @@ const nextConfig = {
                 destination: '/states/fct',
                 permanent: true,
             },
+            // Catch malformed ampersand URLs seen in Google crawl logs
+            {
+                source: '/&',
+                destination: '/',
+                permanent: true,
+            },
+            {
+                source: '/%26',
+                destination: '/',
+                permanent: true,
+            },
         ]
     },
 };

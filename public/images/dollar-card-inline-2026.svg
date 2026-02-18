@@ -1,0 +1,74 @@
+<svg width="960" height="520" viewBox="0 0 960 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0f9d58" offset="0%"/>
+      <stop stop-color="#0c7d46" offset="50%"/>
+      <stop stop-color="#0a5c36" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#1f2937" offset="0%"/>
+      <stop stop-color="#111827" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="520" rx="24" fill="url(#bg)" />
+  <circle cx="180" cy="130" r="80" fill="#e8f5e9" opacity="0.12"/>
+  <circle cx="820" cy="390" r="110" fill="#e8f5e9" opacity="0.10"/>
+
+  <!-- headline -->
+  <text x="64" y="120" fill="#ffffff" font-family="Inter, 'DM Sans', sans-serif" font-size="36" font-weight="800">
+    Compare Dollar Cards in Nigeria
+  </text>
+  <text x="64" y="160" fill="#d9f5e4" font-family="Inter, 'DM Sans', sans-serif" font-size="18" font-weight="600">
+    Fees • Limits • MFA rule • Success rate for ads & subscriptions
+  </text>
+
+  <!-- cards stack -->
+  <g transform="translate(64,210)">
+    <rect width="320" height="190" rx="18" fill="url(#card)" stroke="#1ed760" stroke-width="1.5" opacity="0.9"/>
+    <text x="24" y="42" fill="#e5e7eb" font-family="Inter, 'DM Sans', sans-serif" font-size="16" font-weight="700">
+      Chipper USD Card
+    </text>
+    <text x="24" y="70" fill="#c7d2fe" font-family="Inter, 'DM Sans', sans-serif" font-size="14" font-weight="600">
+      Issuance ~$3 • $0.90/txn • Decline ₦250
+    </text>
+    <text x="24" y="96" fill="#d1fae5" font-family="Inter, 'DM Sans', sans-serif" font-size="13" font-weight="600">
+      Works for: Ads, Netflix, SaaS
+    </text>
+    <text x="24" y="128" fill="#fef3c7" font-family="Inter, 'DM Sans', sans-serif" font-size="13" font-weight="600">
+      MFA prompts above $200/day
+    </text>
+    <text x="24" y="160" fill="#9ca3af" font-family="Inter, 'DM Sans', sans-serif" font-size="12" font-weight="500">
+      Tip: keep 5–10% balance buffer to avoid decline fees.
+    </text>
+  </g>
+
+  <g transform="translate(420,230)">
+    <rect width="300" height="150" rx="16" fill="rgba(255,255,255,0.08)" stroke="#b7e6c5" stroke-width="1.2"/>
+    <text x="18" y="36" fill="#ffffff" font-family="Inter, 'DM Sans', sans-serif" font-size="16" font-weight="700">
+      Bank USD Prepaid
+    </text>
+    <text x="18" y="64" fill="#d9f5e4" font-family="Inter, 'DM Sans', sans-serif" font-size="13" font-weight="600">
+      Higher compliance, lower limits
+    </text>
+    <text x="18" y="90" fill="#e5e7eb" font-family="Inter, 'DM Sans', sans-serif" font-size="12" font-weight="600">
+      Check MFA flow per bank; ads may be blocked
+    </text>
+  </g>
+
+  <g transform="translate(420,390)">
+    <text x="0" y="0" fill="#c8f0d8" font-family="Inter, 'DM Sans', sans-serif" font-size="14" font-weight="700">
+      Providers to validate: Geegpay • Changera • Barter • Eversend • Cardify
+    </text>
+    <text x="0" y="26" fill="#d9f5e4" font-family="Inter, 'DM Sans', sans-serif" font-size="13" font-weight="600">
+      Verify fees in-app before funding; MFA applies above $200/day.
+    </text>
+  </g>
+
+  <!-- CTA -->
+  <g transform="translate(64,430)">
+    <rect width="360" height="52" rx="12" fill="#ffffff"/>
+    <text x="24" y="34" fill="#0f9d58" font-family="Inter, 'DM Sans', sans-serif" font-size="16" font-weight="800">
+      Get listed + guaranteed press for your fintech
+    </text>
+  </g>
+</svg>

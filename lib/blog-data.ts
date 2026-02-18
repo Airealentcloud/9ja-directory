@@ -7909,4 +7909,979 @@ export const blogPosts: BlogPost[] = [
       "description": "Start profitable agribusiness in Nigeria. Poultry, fishing, snail farming. ₦500K-₦5M startup. ₦1M-₦50M annual profit."
     })
   },
+
+  // ── CAC PUBLIC SEARCH ──────────────────────────────────────────────────────
+  {
+    slug: "cac-public-search-verify-company-nigeria",
+    title: "CAC Public Search: How to Verify Any Nigerian Company by Name or RC Number (2026)",
+    excerpt: "CAC public search guide 2026: how to verify any Nigerian company or business name by RC number, understand search results, spot red flags, and protect yourself from fraud.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>Every week, Nigerians lose money to fake companies. A supplier collects payment and vanishes. A contractor takes a deposit and stops responding. A "registered" business turns out to be a name printed on a flyer with no backing. The tool to prevent most of these losses already exists and it is free — the <strong>CAC public search</strong> portal at the Corporate Affairs Commission.</p>
+
+      <p>Whether you are about to pay a vendor, sign a contract, hire a supplier, or invest in a business, spending five minutes on the CAC public search can save you five figures — or more. This guide walks you through exactly how to use it, what your results mean, what to watch for, and what to do when something looks off.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/cac-public-search-infographic.webp" alt="CAC public search infographic — verify Nigerian companies by name or RC number" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">The CAC public search covers Business Names, Limited Companies, PLCs, Incorporated Trustees, and LLPs — search free at search.cac.gov.ng.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Is the CAC Public Search?</h2>
+      <p>The CAC public search is a free online tool maintained by Nigeria's Corporate Affairs Commission — the government body responsible for registering and regulating all companies and business names in the country. It allows anyone to look up any registered Nigerian business using either the company's name or its RC number (Registration Certificate number).</p>
+
+      <p>The database covers all entities registered with CAC including:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Business Names</strong> — sole proprietorships and partnerships trading under a registered name</li>
+        <li><strong>Private Limited Companies (Ltd)</strong> — the most common corporate structure for Nigerian SMEs</li>
+        <li><strong>Public Limited Companies (PLC)</strong> — larger companies that can offer shares to the public</li>
+        <li><strong>Incorporated Trustees</strong> — NGOs, religious bodies, associations, and foundations</li>
+        <li><strong>Limited Liability Partnerships (LLP)</strong> — combining partnership flexibility with limited liability</li>
+      </ul>
+
+      <p>If a business is genuinely registered in Nigeria, it will appear here. If it does not appear, treat that as a serious warning sign.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Is an RC Number?</h2>
+      <p>Before you run a search, you need to understand the RC number — because it is the most reliable way to verify a specific company.</p>
+
+      <p><strong>RC</strong> stands for <strong>Registration Certificate</strong>. When the CAC approves a company or business name, it assigns a unique RC number to that entity. Think of it as the business equivalent of a NIN — a permanent identifier that belongs to that registration alone.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>For Business Names:</strong> the RC number appears on the Certificate of Registration issued by the CAC.</li>
+        <li><strong>For Limited Companies:</strong> it appears on the Certificate of Incorporation, preceded by "RC" (e.g., RC 1234567).</li>
+        <li><strong>For Incorporated Trustees:</strong> the number is prefixed with "IT" (e.g., IT 12345).</li>
+      </ul>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Important:</strong> Two businesses can have similar names. Only the RC number uniquely identifies a specific registration. When verifying a business before a large transaction, always confirm the RC number matches the certificate they present.
+      </blockquote>
+
+      <p>Any legitimate Nigerian business will share its RC number without hesitation. If a vendor or contractor refuses to provide it, that alone is a red flag.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: How to Use the CAC Public Search</h2>
+      <p>There are two ways to search — by company name and by RC number. Here is how to do both.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Option A: Search by Company Name</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Open your browser and go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> — the official CAC public search portal.</li>
+        <li>In the search box, type the business name exactly as it appears on the invoice, contract, or receipt you received.</li>
+        <li>Click <strong>Search</strong> or press Enter.</li>
+        <li>Browse the results. Multiple businesses may have similar names — look carefully at the full registered name.</li>
+        <li>Click the matching result to view the full profile including registration type, status, registration date, and RC number.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Option B: Search by RC Number</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>.</li>
+        <li>Select the <strong>"Search by RC Number"</strong> option (usually a tab or dropdown near the search bar).</li>
+        <li>Enter the RC number exactly as provided — including any letter prefix (RC, BN, or IT).</li>
+        <li>Click <strong>Search</strong>.</li>
+        <li>The result should display only one record — the exact entity registered under that number.</li>
+      </ol>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Tip:</strong> If the CAC portal is slow or returns errors, you can also check name availability on the CAC pre-incorporation portal at <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a>.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Understanding Your Search Results</h2>
+      <p>A successful CAC public search result will typically show the following fields. Here is what each one means:</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Field</th>
+            <th class="border border-gray-300 p-3 text-left">What It Means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Registered Name</td><td class="border border-gray-300 p-3">The exact legal name of the business as approved by CAC</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">RC Number</td><td class="border border-gray-300 p-3">The unique registration certificate number</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Entity Type</td><td class="border border-gray-300 p-3">Business Name, Private Company, PLC, Incorporated Trustees, etc.</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Status</td><td class="border border-gray-300 p-3">Active, Struck Off, or Dormant — the most critical field to check</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Registration Date</td><td class="border border-gray-300 p-3">When the entity was officially registered with CAC</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Address</td><td class="border border-gray-300 p-3">The registered office address on file with CAC</td></tr>
+        </tbody>
+      </table>
+
+      <p>The most important field to check is <strong>Status</strong>. Active means the company is in good standing. Struck Off means CAC has removed it from its register, usually for failing to file annual returns. A business with a struck-off status cannot legally enter into contracts.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Red Flags: What to Watch For When Verifying a Business</h2>
+      <p>Not every suspicious situation is obvious. Here are the warning signs to look for during and after your CAC public search:</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. The business does not appear at all</h3>
+      <p>If a name search and RC number search both return no results, the business is either not registered or trading under a completely different name. Do not proceed with any financial commitment until registration is confirmed.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. The status says "Struck Off"</h3>
+      <p>A struck-off company has been removed from the CAC register, typically for failing to file annual returns for two or more years. Signing contracts with a struck-off company is legally risky and practically unenforceable.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. The registered address does not match</h3>
+      <p>If the address on the CAC record differs significantly from the address on the business card, invoice, or website — ask for an explanation. Companies are required to update their registered address with CAC within 14 days of any change.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. The name on the certificate does not match</h3>
+      <p>Fraudsters sometimes present certificates for a different but similarly named company. Always compare the full registered name character by character. "Lagos Logistics Limited" and "Lagos Logistic Limited" are different registrations.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. A reluctance to share their RC number</h3>
+      <p>Any registered Nigerian business knows its RC number — it appears on the certificate, official letterhead, and bank documents. Hesitation, deflection, or an inability to provide this number quickly is a serious warning sign.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Registration is very recent for a supposedly established business</h3>
+      <p>If a vendor claims 10 years of experience but their registration date is six months ago, press for an explanation. New registrations are fine for new businesses — but inconsistency with stated history warrants scrutiny.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Limitations of CAC Public Search</h2>
+      <p>The CAC public search is powerful but not a complete due diligence tool. Understand what it cannot tell you:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>It does not show operational status:</strong> a company can be registered but not actively trading, or trading in a completely different sector.</li>
+        <li><strong>It does not show financial health:</strong> CAC registration says nothing about whether a company pays its debts or has pending litigation.</li>
+        <li><strong>It does not show court judgments:</strong> to check litigation history, search the Federal High Court or relevant State High Court records separately.</li>
+        <li><strong>Annual returns may be outdated:</strong> some companies are marked active but have not filed returns recently — a compliance issue in itself.</li>
+      </ul>
+
+      <p>For larger transactions, complement your CAC public search with additional checks: request audited accounts, run a credit bureau check, and ask for references from previous clients. For the full step-by-step registration process, see our guide on <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a>.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">After You Verify: List Your Business for Others to Find</h2>
+      <p>If you run a registered Nigerian business, the best thing you can do after verifying others is to make your own business easy to verify. Customers who find you online want proof you are legitimate before they call, WhatsApp, or walk in.</p>
+
+      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory's Business category</a> gives your verified business a public profile that appears in local search results across Nigeria — from <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> to <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a> to <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>. Add your CAC registration number, WhatsApp, photos, and services so customers can verify you instantly.</p>
+
+      <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">List Your Verified Business on 9jaDirectory</h3>
+        <p class="text-gray-700 mb-4">Join thousands of CAC-registered Nigerian businesses getting discovered by customers who are actively searching. Free listing available — add your RC number, photos, WhatsApp, and service area.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
+            List Your Business Free →
+          </a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
+            See Premium Plans
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is the CAC public search free to use?</h3>
+      <p>Yes. The CAC public search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> is completely free for anyone to use. You do not need to create an account or pay any fee to look up a registered business name or company. Only activities like filing documents, reserving names, or downloading certified copies require payment.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What does it mean if a company status shows "Struck Off"?</h3>
+      <p>A struck-off status means CAC has removed the company from its active register, usually because the company failed to file annual returns for two or more consecutive years. Legally, the company no longer exists as a corporate entity. You should not enter into contracts or make payments to a struck-off company. Directors can apply for restoration, but until that happens the company has no legal standing.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I search for a business using just a phone number or address?</h3>
+      <p>No. The CAC public search only accepts searches by company name or RC number. To find a business by phone number or location, use a business directory like 9jaDirectory. Once you find the business name there, you can then confirm it on the CAC portal.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between a Business Name and a Limited Company on the CAC search?</h3>
+      <p>A Business Name registration is simpler and cheaper — it registers a trading name for a sole proprietor or partnership but does not create a separate legal entity. The owner is personally liable for all debts. A Limited Company (Ltd) is a separate legal entity from its owners, providing limited liability protection. The "Entity Type" field in your search results will tell you which category applies.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How often is the CAC public search database updated?</h3>
+      <p>New registrations and status changes typically appear within a few days to a few weeks of processing. If you registered recently and your business does not appear yet, check again after two to three weeks. For urgent verification during an active transaction, you can visit a CAC office directly to request a certified search result.</p>
+    `,
+    image: "/images/blog/cac-public-search-infographic.webp",
+    date: "Feb 18, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "9 min read",
+    keywords: [
+      "cac public search",
+      "cac name search",
+      "rc number nigeria",
+      "cac verify",
+      "verify company nigeria",
+      "CAC registration",
+      "how to check company nigeria",
+      "corporate affairs commission search",
+      "registered company nigeria",
+      "business verification nigeria",
+      "cac search portal",
+      "business name search nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "CAC Public Search: How to Verify Any Nigerian Company by Name or RC Number (2026)",
+        "image": ["https://www.9jadirectory.org/images/blog/cac-public-search-infographic.jpg"],
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-02-18",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "description": "CAC public search guide 2026: how to verify any Nigerian company or business name by RC number, understand search results, spot red flags, and protect yourself from fraud.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-public-search-verify-company-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the CAC public search free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC public search at search.cac.gov.ng is completely free for anyone to use. You do not need to create an account or pay any fee to look up a registered business name or company." } },
+          { "@type": "Question", "name": "What does it mean if a company status shows Struck Off?", "acceptedAnswer": { "@type": "Answer", "text": "A struck-off status means CAC has removed the company from its active register. The company no longer exists as a legal entity and you should not enter into contracts with it." } },
+          { "@type": "Question", "name": "Can I search for a business using just a phone number or address?", "acceptedAnswer": { "@type": "Answer", "text": "No. The CAC public search only accepts searches by company name or RC number. Use a business directory like 9jaDirectory to find by phone or location, then verify on the CAC portal." } },
+          { "@type": "Question", "name": "What is the difference between a Business Name and a Limited Company on the CAC search?", "acceptedAnswer": { "@type": "Answer", "text": "A Business Name registers a trading name for a sole proprietor but does not create a separate legal entity. A Limited Company (Ltd) is a separate legal entity providing limited liability protection to its owners." } },
+          { "@type": "Question", "name": "How often is the CAC public search database updated?", "acceptedAnswer": { "@type": "Answer", "text": "New registrations and status changes typically appear within a few days to a few weeks. For urgent verification, visit a CAC office directly to request a certified search result." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "CAC Public Search Guide", "item": "https://www.9jadirectory.org/blog/cac-public-search-verify-company-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  // ── CAC NAME SEARCH ───────────────────────────────────────────────────────
+  {
+    slug: "cac-name-search-business-verification-nigeria",
+    title: "CAC Name Search Nigeria: How to Check Business Names and Avoid Fraud (2026)",
+    excerpt: "CAC name search Nigeria 2026: how to check if a business name is available before registration, verify existing companies, and avoid scams using the CAC public search portal.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>The CAC name search is one of the most used tools on the Corporate Affairs Commission website — and for good reason. Every month, thousands of Nigerians run name searches either to check if their chosen business name is available before registering, or to verify whether a company they are dealing with actually exists. Both are smart moves.</p>
+
+      <p>This guide covers both use cases: how to search CAC for a name you want to register, and how to use the same search to verify any existing Nigerian business before you sign a contract, pay a deposit, or commit your money.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/cac-certificate-verification.webp" alt="Entrepreneur reviewing CAC certificate and checking business name on portal" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">A quick CAC name search before registering or transacting can save weeks of wasted time or money lost to fraud.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Two Reasons to Run a CAC Name Search</h2>
+      <p>Before going further, it helps to understand the two distinct reasons people use the CAC name search tool:</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Use Case</th>
+            <th class="border border-gray-300 p-3 text-left">Who Does This</th>
+            <th class="border border-gray-300 p-3 text-left">What They Are Looking For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Name availability check</td><td class="border border-gray-300 p-3">Entrepreneurs about to register a business</td><td class="border border-gray-300 p-3">Is this name already taken? Can I use it?</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Business verification</td><td class="border border-gray-300 p-3">Buyers, investors, job seekers, contract signers</td><td class="border border-gray-300 p-3">Is this company real and legally registered?</td></tr>
+        </tbody>
+      </table>
+
+      <p>The tool is the same — the CAC public search portal — but your goal determines what you do with the results. Let us walk through both scenarios.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Use Case 1: Checking Name Availability Before Registration</h2>
+      <p>The CAC will not register a business name that is identical or confusingly similar to an existing registration. Before you invest time preparing documents or paying fees, run a name search first. It takes two minutes and costs nothing.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Check if a Business Name Is Available</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Visit <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> or go directly to <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> and use the name availability checker in the registration flow.</li>
+        <li>Type your desired business name exactly as you plan to register it.</li>
+        <li>Review all results that appear. Look for any name that is identical or very similar to yours.</li>
+        <li>If no close match appears, your name is likely available — but not guaranteed until you reserve it.</li>
+        <li>Prepare a second alternative name in case your first choice fails at the reservation stage.</li>
+      </ol>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Pro tip:</strong> Even if a name does not appear in the public search, it could still be reserved by another applicant in the CAC system. Always have a backup name ready. Struck-off names can be re-registered, but the process takes additional steps.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Makes a Name Acceptable to the CAC?</h2>
+      <p>Not all names pass CAC approval. Understanding the rules saves you from wasted name reservation fees. The CAC will reject or query a name that:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Is identical or deceptively similar to a registered business or company name</li>
+        <li>Contains restricted words without approval — including "Federal," "National," "Government," "State," "Municipal," "Chartered," "Bank," "Insurance," or "Trust"</li>
+        <li>Is offensive, vulgar, or contrary to public policy</li>
+        <li>Implies a connection with the Nigerian government or royalty without evidence</li>
+        <li>Contains foreign words without an English translation or explanation</li>
+        <li>Is so generic it could apply to any type of business (though this is applied inconsistently)</li>
+      </ul>
+
+      <p>Good names are specific, distinctive, and describe what the business does without triggering the restricted words list. "Alara Engineering Services Limited" is far more likely to pass than "Nigerian Engineering Trust."</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Use Case 2: Verifying an Existing Business</h2>
+      <p>If someone presents you with a business certificate, invoice, or contract, the CAC name search is your fastest verification tool. Here is a methodical approach:</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step-by-Step: Verifying a Business Before You Pay</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Get the full registered name:</strong> ask for the company's exact registered name and RC number — not just their trading name or brand name.</li>
+        <li><strong>Search by name first:</strong> go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> and enter the name. Confirm a match exists.</li>
+        <li><strong>Cross-check the RC number:</strong> if the name matches, then search by the RC number they provided. The result should show the same entity name.</li>
+        <li><strong>Check the status:</strong> confirm the status reads "Active." If it shows "Struck Off" or any other status, investigate further before proceeding.</li>
+        <li><strong>Note the registration date:</strong> a company claiming years of experience but registered recently is worth questioning.</li>
+        <li><strong>Compare the registered address:</strong> see if the address on CAC matches what they have told you or shown on their materials.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Common CAC Name Search Mistakes to Avoid</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Searching an abbreviation instead of the full name</h3>
+      <p>Many companies are registered under a full formal name but trade under an abbreviated or shortened name. If you search "ABC Consult" but they are registered as "ABC Consulting Services Limited," you will not find a match. Always request and search the complete registered name.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Assuming no result means no registration</h3>
+      <p>CAC's search engine is not perfect. A result may fail to appear due to a spelling variation in the database or a system delay after recent processing. If the search returns nothing but the company insists they are registered, ask them to produce the physical certificate with the RC number and search by that number instead.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Not checking entity type</h3>
+      <p>A search may return a result but it could be an Incorporated Trustee (IT) — a church or NGO — rather than the limited liability company the vendor claims to be. Check the entity type field carefully. An NGO operating as a for-profit contractor should raise questions.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Stopping at the name search alone</h3>
+      <p>For any high-value transaction, name search is a starting point, not a finish line. Combine it with a request for the actual CAC certificate, check if annual returns have been filed, and for very large sums, obtain a certified true copy of the company's filing from CAC directly.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What to Do After a Successful Name Search</h2>
+      <p>If you are registering a new business and your name is available, the next step is formal name reservation through the CAC pre-incorporation portal at <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a>. Name reservation locks your chosen name for 60 days while you complete the registration forms.</p>
+
+      <p>Once registered, your next move is visibility. A registered business with no online presence is invisible to the customers searching for what you offer. Read our full guide on <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> for every step from name reservation to certificate collection, then list on 9jaDirectory to start getting found.</p>
+
+      <p>Find businesses in your sector on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory's Business listings</a> across <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, and every state in Nigeria.</p>
+
+      <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Got Your CAC Certificate? Make Your Business Easy to Find</h3>
+        <p class="text-gray-700 mb-4">Thousands of customers search 9jaDirectory every day for verified Nigerian businesses. List yours with your RC number, photos, WhatsApp link, and service area to get discovered immediately.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
+            List Your Business Free →
+          </a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
+            See Premium Plans
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is the CAC name search free?</h3>
+      <p>Yes. Searching for a name on the CAC public portal at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> is completely free. You only pay when you move to the formal name reservation step inside the CAC pre-incorporation portal, which requires a government fee.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can two businesses have the same name in Nigeria?</h3>
+      <p>No. The CAC will not register a business name that is identical or confusingly similar to an existing registration. However, similar-sounding names can sometimes slip through. This is why verifying the exact RC number of a business — not just the name — is important before a major transaction.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What happens if I reserve a name and do not complete registration?</h3>
+      <p>CAC name reservation is valid for 60 days. If you do not complete your registration within that period, the reservation expires and the name becomes available for others to register. You can re-reserve the name but you will need to pay the reservation fee again.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I search for CAC-registered NGOs and churches?</h3>
+      <p>Yes. The CAC public search covers all entity types including Incorporated Trustees — the category under which NGOs, churches, mosques, associations, and foundations are registered. Their registration numbers are prefixed with "IT" rather than "RC." Search by the organisation name the same way you would for any other business.</p>
+    `,
+    image: "/images/blog/cac-certificate-verification.webp",
+    date: "Feb 18, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "8 min read",
+    keywords: [
+      "cac name search",
+      "cac public search",
+      "business name search nigeria",
+      "cac search",
+      "check business name nigeria",
+      "cac name availability",
+      "verify business nigeria",
+      "corporate affairs commission name search",
+      "business name availability nigeria",
+      "cac registration",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "CAC Name Search Nigeria: How to Check Business Names and Avoid Fraud (2026)",
+        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-02-18",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "description": "CAC name search Nigeria 2026: how to check if a business name is available before registration, verify existing companies, and avoid scams using the CAC public search portal.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-name-search-business-verification-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the CAC name search free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Searching for a name on the CAC public portal at search.cac.gov.ng is completely free. You only pay when you move to the formal name reservation step inside the CAC pre-incorporation portal." } },
+          { "@type": "Question", "name": "Can two businesses have the same name in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "No. The CAC will not register a business name that is identical or confusingly similar to an existing registration. Always verify the RC number of a business, not just the name." } },
+          { "@type": "Question", "name": "What happens if I reserve a name and do not complete registration?", "acceptedAnswer": { "@type": "Answer", "text": "CAC name reservation is valid for 60 days. If you do not complete registration within that period, the reservation expires and the name becomes available to others." } },
+          { "@type": "Question", "name": "Can I search for CAC-registered NGOs and churches?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC public search covers all entity types including Incorporated Trustees — NGOs, churches, and associations — whose registration numbers are prefixed with IT." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "CAC Name Search Guide", "item": "https://www.9jadirectory.org/blog/cac-name-search-business-verification-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  // ── COMPANY CODE NIGERIA ──────────────────────────────────────────────────
+  {
+    slug: "company-code-nigeria-meaning-how-to-find",
+    title: "Company Code in Nigeria: Full Meaning, How to Find Yours & CAC Verification Guide",
+    excerpt: "Company code Nigeria explained: what RC numbers, BN numbers, and IT numbers mean, how to find your company code, and how to verify any business on the CAC portal in 2026.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>If you have ever filled in a form for a bank, a government portal, or a corporate client and been asked for your "company code," you may have wondered exactly what that means. In Nigeria, the term covers several different identifiers — and using the wrong one can cause delays, rejected applications, or failed verifications.</p>
+
+      <p>This guide explains every Nigerian company code in plain English: what each one means, where it comes from, how to find yours, and how to verify any other company's code using the CAC public search tool.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/cac-certificate-verification.webp" alt="Nigerian business professional reviewing CAC certificate and company documents" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Company codes in Nigeria identify your business to banks, government portals, and corporate clients. Knowing yours is non-negotiable.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Is a Company Code in Nigeria?</h2>
+      <p>In everyday Nigerian business usage, "company code" most often refers to the <strong>RC number</strong> — the unique Registration Certificate number assigned by the Corporate Affairs Commission (CAC) when a business is registered. However, the full picture is slightly more complex. There are several official codes a Nigerian business may carry, depending on its structure.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Code Type</th>
+            <th class="border border-gray-300 p-3 text-left">Prefix</th>
+            <th class="border border-gray-300 p-3 text-left">Issued By</th>
+            <th class="border border-gray-300 p-3 text-left">Who Uses It</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">RC Number (Company)</td><td class="border border-gray-300 p-3">RC</td><td class="border border-gray-300 p-3">CAC</td><td class="border border-gray-300 p-3">Private Ltd, PLC, LLP companies</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">BN Number (Business Name)</td><td class="border border-gray-300 p-3">BN</td><td class="border border-gray-300 p-3">CAC</td><td class="border border-gray-300 p-3">Sole proprietors and partnerships</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">IT Number (Incorporated Trustees)</td><td class="border border-gray-300 p-3">IT</td><td class="border border-gray-300 p-3">CAC</td><td class="border border-gray-300 p-3">NGOs, churches, associations</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">TIN (Tax ID Number)</td><td class="border border-gray-300 p-3">None (numeric)</td><td class="border border-gray-300 p-3">FIRS / Joint Tax Board</td><td class="border border-gray-300 p-3">All registered businesses for tax filing</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">SCUML Code</td><td class="border border-gray-300 p-3">Varies</td><td class="border border-gray-300 p-3">SCUML (via NFIU)</td><td class="border border-gray-300 p-3">Businesses in regulated sectors (legal, accounting, real estate)</td></tr>
+        </tbody>
+      </table>
+
+      <p>When a bank, government portal, or corporate client asks for your "company code," they almost always mean your <strong>RC number</strong> (for limited companies) or <strong>BN number</strong> (for sole proprietors). These two are the most commonly requested.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">RC Number: The Primary Company Code in Nigeria</h2>
+      <p>The RC number is your company's unique fingerprint in Nigeria's official business register. It never changes, never expires, and is tied to your specific registration — not to the directors, shareholders, or any individual. Even if ownership changes completely, the RC number remains the same.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What Your RC Number Looks Like</h3>
+      <p>An RC number for a limited company typically looks like: <strong>RC 1234567</strong> — the letters "RC" followed by a 6 or 7-digit number. Older registrations may have shorter numbers. Business names (sole proprietorships) registered with CAC carry a BN prefix: <strong>BN 123456</strong>.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Where to Find Your RC Number</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Certificate of Incorporation</strong> — it appears prominently on the certificate issued by CAC after successful registration</li>
+        <li><strong>CAC status report</strong> — downloadable from your account on <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a></li>
+        <li><strong>Company letterhead and invoices</strong> — reputable Nigerian companies print their RC number on all official documents</li>
+        <li><strong>Corporate bank account documents</strong> — banks require and record the RC number when opening business accounts</li>
+        <li><strong>CAC public search</strong> — if you know your registered name, search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> to retrieve the RC number</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Verify a Company Code (RC Number) on CAC</h2>
+      <p>If you have been given a company code by a vendor, contractor, or business partner, verifying it takes under five minutes. Here is the process:</p>
+
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>.</li>
+        <li>Switch to the <strong>"Search by RC Number"</strong> tab or option.</li>
+        <li>Enter the full RC number including the prefix (RC, BN, or IT).</li>
+        <li>Click <strong>Search</strong>.</li>
+        <li>Confirm the registered name matches the business you are dealing with.</li>
+        <li>Check that the status reads <strong>Active</strong>.</li>
+        <li>Note the entity type and registration date for further context.</li>
+      </ol>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Watch out:</strong> A company code that returns no results on the CAC portal is a major red flag. Either the number is fake, the business is not registered, or a typo was made. Always ask for the physical certificate and verify the number printed on it matches what they provided verbally.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Company Code Lists: What They Are and When They Matter</h2>
+      <p>Some industries and government databases maintain "company code lists" — internal reference numbers that identify businesses within a specific system. For example:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Central Bank of Nigeria (CBN):</strong> assigns bank codes (3-digit codes) that identify each licensed bank in Nigeria</li>
+        <li><strong>FIRS:</strong> uses TIN numbers to track tax filings across all registered entities</li>
+        <li><strong>PENCOM:</strong> assigns Pension Fund Administrator (PFA) codes to licensed pension managers</li>
+        <li><strong>SEC Nigeria:</strong> assigns registration codes to capital market operators</li>
+        <li><strong>NCC:</strong> assigns carrier codes to licensed telecom operators</li>
+      </ul>
+
+      <p>If a form asks for a "company code" in one of these regulated sectors, it may be asking for the sector-specific code rather than your CAC RC number. Read the context carefully or contact the relevant agency to confirm which identifier they need.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Make Your Company Code Visible to Customers</h2>
+      <p>One practical reason to understand your company code is trust-building. Customers and corporate clients increasingly ask to see a company's RC number before transacting. Displaying your RC number on your website, invoices, and business directory listing signals transparency and professionalism.</p>
+
+      <p>When you list your business on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a>, you can include your CAC registration details alongside your WhatsApp number, service area, and photos — making it easy for clients in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, and beyond to verify you before they reach out. Read our guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> if you have not yet completed your CAC registration.</p>
+
+      <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Display Your Company Code Where Clients Can See It</h3>
+        <p class="text-gray-700 mb-4">List your business on 9jaDirectory with your RC number, services, and WhatsApp link. Customers searching for verified Nigerian businesses will find you — and trust you — faster.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
+            List Your Business Free →
+          </a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
+            See Premium Plans
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is an RC number in Nigeria?</h3>
+      <p>An RC number (Registration Certificate number) is the unique identifier assigned by the Corporate Affairs Commission (CAC) to every registered Nigerian company. It appears on the Certificate of Incorporation and never changes, even if the company changes directors, shareholders, or address. It is the primary "company code" used by banks, government portals, and corporate clients to verify a business.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is the RC number the same as the TIN?</h3>
+      <p>No. The RC number is issued by the CAC and identifies a company in the business register. The TIN (Tax Identification Number) is issued by the Federal Inland Revenue Service (FIRS) and identifies a business for tax purposes. Both are required for operating a legitimate Nigerian business, but they come from different government agencies and serve different purposes.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What does a company code starting with "BN" mean?</h3>
+      <p>A BN prefix indicates a Business Name registration — a sole proprietorship or partnership registered under a business name. This is different from an RC (limited company) registration. Business Name owners are personally liable for all business debts, unlike directors of a limited company who have limited liability protection.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I find a company's RC number if I only have their name?</h3>
+      <p>Yes. Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>, search by the company name, and the RC number will appear in the search results alongside the registration status and entity type.</p>
+    `,
+    image: "/images/blog/cac-certificate-verification.webp",
+    date: "Feb 18, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "7 min read",
+    keywords: [
+      "company code nigeria",
+      "rc number nigeria",
+      "company code meaning nigeria",
+      "cac public search",
+      "company code list nigeria",
+      "BN number nigeria",
+      "RC number meaning",
+      "how to find rc number nigeria",
+      "company verification nigeria",
+      "corporate affairs commission",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Company Code in Nigeria: Full Meaning, How to Find Yours & CAC Verification Guide",
+        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-02-18",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "description": "Company code Nigeria explained: what RC numbers, BN numbers, and IT numbers mean, how to find your company code, and how to verify any business on the CAC portal in 2026.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/company-code-nigeria-meaning-how-to-find" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is an RC number in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "An RC number (Registration Certificate number) is the unique identifier assigned by the CAC to every registered Nigerian company. It appears on the Certificate of Incorporation and never changes." } },
+          { "@type": "Question", "name": "Is the RC number the same as the TIN?", "acceptedAnswer": { "@type": "Answer", "text": "No. The RC number is issued by CAC and identifies a company in the business register. The TIN is issued by FIRS for tax purposes. Both are required for a legitimate Nigerian business but come from different agencies." } },
+          { "@type": "Question", "name": "What does a company code starting with BN mean?", "acceptedAnswer": { "@type": "Answer", "text": "A BN prefix indicates a Business Name registration — a sole proprietorship or partnership. Business Name owners are personally liable for all business debts, unlike directors of a limited company." } },
+          { "@type": "Question", "name": "Can I find a company RC number if I only have their name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go to search.cac.gov.ng, search by the company name, and the RC number will appear in the search results alongside registration status and entity type." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Company Code Nigeria Guide", "item": "https://www.9jadirectory.org/blog/company-code-nigeria-meaning-how-to-find" }
+        ]
+      }
+    ])
+  },
+
+  // ── CAC PRE-INCORPORATION ─────────────────────────────────────────────────
+  {
+    slug: "cac-pre-incorporation-guide-nigeria-2026",
+    title: "CAC Pre-Incorporation Nigeria: Complete Step-by-Step Guide for New Businesses (2026)",
+    excerpt: "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>Every business registration in Nigeria begins in the same place: <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> — the Corporate Affairs Commission's pre-incorporation portal. Whether you are registering a business name, a private limited company, or an incorporated trustee, you must go through this portal first.</p>
+
+      <p>"Pre-incorporation" refers to all the steps that happen before your business is formally recognised as a legal entity. This includes creating your CAC account, reserving your business name, completing your registration forms, uploading documents, and paying the government fees. Once all of that is done, the CAC reviews your application and — if everything is in order — issues your certificate.</p>
+
+      <p>This guide walks through every step of the CAC pre-incorporation process in plain language, covering what to prepare, common mistakes to avoid, and what happens after you submit.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/cac-certificate-verification.webp" alt="Nigerian entrepreneur reviewing CAC certificate before completing pre-incorporation registration" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">The CAC pre-incorporation portal is where every Nigerian business registration begins — and where most delays happen if you are not prepared.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Is the CAC Pre-Incorporation Portal?</h2>
+      <p>The pre-incorporation portal at <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> is the CAC's digital platform for submitting new business registration applications. Before this portal existed, registration required physical visits to CAC offices and weeks of manual processing. The portal has made registration faster, though it still requires care and patience.</p>
+
+      <p>The portal handles three main registration types:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Business Name:</strong> for sole proprietors and partnerships (the simplest and cheapest option)</li>
+        <li><strong>Private Limited Company (Ltd):</strong> for businesses that want a separate legal entity with limited liability</li>
+        <li><strong>Incorporated Trustees:</strong> for NGOs, churches, associations, and similar non-profit bodies</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What to Prepare Before You Start</h2>
+      <p>Most delays on the pre-incorporation portal happen because applicants start without having all their documents ready. Prepare these before you open the portal:</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Document / Information</th>
+            <th class="border border-gray-300 p-3 text-left">Required For</th>
+            <th class="border border-gray-300 p-3 text-left">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">NIN (National Identity Number)</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">CAC increasingly requires NIN for identity verification</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Valid government ID</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Passport, driver's licence, voter's card, or national ID card</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Passport photograph</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Clear, white background, digital format (JPEG)</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Scanned signature</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Signature on white paper, scanned or photographed clearly</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Business address</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Can be residential — no rented office required to start</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Two proposed business names</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Primary choice and one alternative in case the first is taken</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Director / shareholder details</td><td class="border border-gray-300 p-3">Limited Companies only</td><td class="border border-gray-300 p-3">Full names, addresses, email, NIN, shareholding percentage</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Memorandum &amp; Articles of Association</td><td class="border border-gray-300 p-3">Limited Companies only</td><td class="border border-gray-300 p-3">CAC provides a template you can use; customise the objects clause</td></tr>
+        </tbody>
+      </table>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Important:</strong> Ensure your date of birth on all ID documents exactly matches what you input on the portal. A single digit mismatch is the most common reason CAC queries and returns applications.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: CAC Pre-Incorporation Registration</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 1: Create Your CAC Account</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Go to <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a>.</li>
+        <li>Click <strong>Register</strong> (for new users) or <strong>Login</strong> if you already have an account.</li>
+        <li>Fill in your personal details: full name, email address, phone number, and NIN.</li>
+        <li>Verify your email address by clicking the link sent to your inbox.</li>
+        <li>Log in to your new CAC account.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 2: Check Name Availability</h3>
+      <p>Before reserving a name, run a quick check to ensure it is not already taken. You can do this on the public search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> or directly within the pre-incorporation portal during the name reservation step. Have your primary and alternative name ready before you start.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 3: Reserve Your Business Name</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>In your CAC dashboard, select <strong>New Application</strong> and choose your registration type (Business Name, Private Company, or Incorporated Trustees).</li>
+        <li>Enter your proposed name in the name availability checker and click <strong>Check Availability</strong>.</li>
+        <li>If available, proceed to reserve the name. Pay the name reservation fee (the amount varies by entity type — check the current fee schedule on the portal).</li>
+        <li>Name reservation is valid for <strong>60 days</strong>. You must complete registration within this window or the reservation expires.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 4: Complete the Registration Forms</h3>
+      <p>After successful name reservation, the portal will prompt you to fill in the registration forms. What you fill in depends on your entity type:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Business Name:</strong> proprietor details, nature of business, address, and signature upload</li>
+        <li><strong>Private Limited Company:</strong> director details, shareholding structure, company objects (what the company will do), registered address, and Memorandum &amp; Articles of Association</li>
+        <li><strong>Incorporated Trustees:</strong> trustee details, aims and objectives of the organisation, rules and regulations document</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 5: Upload Your Documents</h3>
+      <p>Upload scanned copies of all required documents. Common issues to avoid:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Ensure scans are clear and not blurry — CAC reviewers reject unclear images</li>
+        <li>File sizes must be within the portal's limits (usually 200KB to 1MB per file)</li>
+        <li>For passport photos, use a plain white background with a clear, front-facing image</li>
+        <li>Signature images should be captured against white paper with no shadows</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 6: Pay the Registration Fee</h3>
+      <p>After completing the forms and uploading documents, the portal generates your Remita payment reference. Pay through Remita using a debit card, bank transfer, or internet banking. Keep your payment receipt — you will need the reference number if there are any issues with your application. Registration fees vary by entity type and share capital (for companies); check the current schedule on the portal as fees are updated periodically.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 7: Submit Your Application</h3>
+      <p>After payment, click <strong>Submit Application</strong>. You will receive a tracking number. Save this number — it is how you monitor your application's progress in the CAC system.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Happens After You Submit</h2>
+      <p>Once your application is submitted, the CAC pre-incorporation team reviews it. Here is what typically happens:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Review (1–5 working days):</strong> the CAC team checks your documents and details for completeness and accuracy</li>
+        <li><strong>Query (if issues found):</strong> if there is a problem — a mismatch in details, unclear documents, or a name issue — you will receive a query via email or on your dashboard. You must respond and resubmit the corrected information</li>
+        <li><strong>Approval:</strong> if everything is in order, the application is approved and your certificate is generated</li>
+        <li><strong>Certificate download:</strong> download your Certificate of Registration (Business Name) or Certificate of Incorporation (Limited Company) directly from your CAC dashboard</li>
+      </ul>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Typical timeline:</strong> A straightforward Business Name registration can be approved in 3–7 working days. Limited Company registrations typically take 7–14 working days. Delays are almost always caused by queries — which are caused by document issues or detail mismatches. Prepare carefully and you will avoid the common hold-ups.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Common Pre-Incorporation Mistakes to Avoid</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Starting without both proposed names ready:</strong> if your first name fails, you will waste days waiting before you can proceed</li>
+        <li><strong>Using restricted words without approval:</strong> names containing "Federal," "National," "Bank," "Insurance," "Trust," or "Government" require special approval — using them without it will get your application queried</li>
+        <li><strong>Uploading blurry documents:</strong> this is the single biggest cause of CAC queries — always scan at minimum 300 DPI</li>
+        <li><strong>Mismatched personal details:</strong> your name, date of birth, and NIN must be exactly consistent across all documents and the form</li>
+        <li><strong>Not logging out of the portal before the session expires:</strong> unsaved progress can be lost — fill each section and save before moving to the next</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">After Registration: Your Next Steps</h2>
+      <p>After you have your CAC certificate, three things matter most for turning your new legal entity into a visible, revenue-generating business:</p>
+
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Open a corporate bank account:</strong> take your certificate, TIN (get one from FIRS), and directors' IDs to your preferred bank</li>
+        <li><strong>Get your Tax Identification Number (TIN):</strong> register with FIRS online at <a href="https://www.firs.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">firs.gov.ng</a> — this is required for the bank account and all government contracts</li>
+        <li><strong>Get your business online and discoverable:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a> so customers searching for what you offer can find and verify you immediately</li>
+      </ol>
+
+      <p>Find more detail on every step in our comprehensive guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a>. Once registered, discover businesses in your category across <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, and every Nigerian state on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a>.</p>
+
+      <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Registered? Now Get Found by Customers</h3>
+        <p class="text-gray-700 mb-4">Thousands of Nigerians search 9jaDirectory daily for verified businesses. List yours with your CAC number, photos, WhatsApp, and service area — free to start.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
+            List Your Business Free →
+          </a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
+            See Premium Plans
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between pre-incorporation and post-incorporation?</h3>
+      <p>Pre-incorporation covers all steps before your business becomes a legal entity — creating your CAC account, reserving a name, filling forms, uploading documents, and paying fees. Post-incorporation refers to activities after your certificate is issued — filing annual returns, updating company details, and managing your registration on the post-incorporation portal at <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a>.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I register a company on the CAC portal without a lawyer or agent?</h3>
+      <p>Yes. The CAC pre-incorporation portal is designed for direct use by business owners. You do not need a lawyer, accountant, or accredited agent to register a Business Name or a simple Private Limited Company. However, if your company structure is complex — multiple share classes, foreign directors, or a large Memorandum — professional help reduces the risk of queries and delays.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much does CAC pre-incorporation registration cost in 2026?</h3>
+      <p>The fees are set by the CAC and are updated periodically. As of 2025/2026, Business Name registration costs approximately ₦10,000–₦15,000 in government fees (name reservation plus registration). Private Limited Company fees depend on share capital but typically range from ₦30,000 to ₦100,000 or more for higher share capital. Always check the current fee schedule on the portal before paying, as these amounts change.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What happens if my CAC pre-incorporation application is queried?</h3>
+      <p>A query means the CAC reviewer found an issue — a document is unclear, details are inconsistent, or a name is problematic. You will receive the query through your CAC dashboard or email. Log in, read the query notes carefully, correct the specific issues flagged, re-upload the corrected documents, and resubmit. Most queries can be resolved within one to three days if you address the exact points raised.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I use a residential address for CAC registration?</h3>
+      <p>Yes. You do not need a rented office space or commercial address to register a Business Name or Private Limited Company in Nigeria. A residential address is acceptable as the registered office address. You can update the address later through the post-incorporation portal if and when your business moves to commercial premises.</p>
+    `,
+    image: "/images/blog/cac-certificate-verification.webp",
+    date: "Feb 18, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "10 min read",
+    keywords: [
+      "cac pre incorporation",
+      "pre incorporation cac",
+      "cac registration portal",
+      "pre cac login",
+      "pre.cac.gov.ng",
+      "CAC registration nigeria",
+      "how to register business nigeria",
+      "cac name reservation",
+      "business registration cac",
+      "new business registration nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "CAC Pre-Incorporation Nigeria: Complete Step-by-Step Guide for New Businesses (2026)",
+        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-02-18",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "description": "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-pre-incorporation-guide-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the difference between pre-incorporation and post-incorporation?", "acceptedAnswer": { "@type": "Answer", "text": "Pre-incorporation covers all steps before your business becomes a legal entity — account creation, name reservation, forms, documents, and payment. Post-incorporation is managing your registration after your certificate is issued." } },
+          { "@type": "Question", "name": "Can I register on the CAC portal without a lawyer or agent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC pre-incorporation portal is designed for direct use by business owners. You do not need a lawyer or agent for a Business Name or simple Private Limited Company registration." } },
+          { "@type": "Question", "name": "How much does CAC pre-incorporation registration cost in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Business Name registration costs approximately ₦10,000–₦15,000 in government fees. Private Limited Company fees depend on share capital and typically range from ₦30,000 to ₦100,000+. Check the current fee schedule on the portal." } },
+          { "@type": "Question", "name": "What happens if my CAC application is queried?", "acceptedAnswer": { "@type": "Answer", "text": "Log in to your CAC dashboard, read the query notes, correct the specific issues flagged, re-upload corrected documents, and resubmit. Most queries are resolved within one to three days." } },
+          { "@type": "Question", "name": "Can I use a residential address for CAC registration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A residential address is acceptable as the registered office address for both Business Name and Private Limited Company registrations. You can update it later through the post-incorporation portal." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "CAC Pre-Incorporation Guide", "item": "https://www.9jadirectory.org/blog/cac-pre-incorporation-guide-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ── HOW TO CHECK IF COMPANY IS REGISTERED ─────────────────────────────────
+  {
+    slug: "how-to-check-if-company-is-registered-nigeria",
+    title: "How to Check if a Company is Registered in Nigeria (CAC Verification Guide 2026)",
+    excerpt: "How to check if a company is registered in Nigeria: four methods including the free CAC public search, status report, certified copy, and what to do if the company is not found.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>Before you pay a supplier, sign a partnership agreement, hire a contractor, or invest in a Nigerian business, you should verify that it is actually registered. This is not paranoia — it is standard due diligence. According to consumer protection agencies, business fraud and impersonation are among the most common financial crimes targeting Nigerian SMEs and individuals.</p>
+
+      <p>The good news: checking whether a company is registered in Nigeria is free, fast, and requires no legal expertise. You just need to know where to look and what to look for. This guide covers four verification methods — from the quickest free check to the most thorough official process — so you can choose the right level of scrutiny for the situation.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/cac-certificate-verification.webp" alt="Business professional verifying company registration certificate in Nigeria" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Verifying a company's registration before transacting is one of the simplest protections against business fraud in Nigeria.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 1: CAC Public Search (Free — Best for Quick Checks)</h2>
+      <p>The fastest way to check if a company is registered in Nigeria is through the <strong>CAC public search portal</strong> at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>. This is the official database maintained by the Corporate Affairs Commission and covers all registered entities in Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Run a CAC Public Search</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> in any browser.</li>
+        <li>Enter the company name or RC number in the search box.</li>
+        <li>Click <strong>Search</strong>.</li>
+        <li>If a match appears, click on it to see the full profile: registered name, RC number, entity type, status, registration date, and address.</li>
+        <li>Confirm the status reads <strong>Active</strong>.</li>
+      </ol>
+
+      <p><strong>What it tells you:</strong> whether the business is registered, its registration status, entity type, RC number, and registered address.</p>
+      <p><strong>What it does not tell you:</strong> financial health, litigation history, actual directors' identities, or whether annual returns have been filed recently.</p>
+
+      <p><strong>Best for:</strong> quick pre-transaction checks, verifying a vendor before payment, or confirming a name and RC number match.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 2: CAC Status Report (Free — Includes Filing History)</h2>
+      <p>A CAC status report is a more detailed document showing a company's current registration status and some history. It is available for free download if you have a CAC account and the company's RC number.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Get a CAC Status Report</h3>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li>Log in to the CAC post-incorporation portal at <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a>.</li>
+        <li>Navigate to the <strong>Public Search</strong> or <strong>Status Report</strong> option.</li>
+        <li>Enter the RC number of the company you want to check.</li>
+        <li>Request and download the status report.</li>
+      </ol>
+
+      <p>The status report typically shows: registration status, entity type, company objects, names of current directors or proprietors, share capital details (for companies), and whether annual returns have been filed.</p>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Tip:</strong> If a company's directors listed on the status report do not match the person you are dealing with, ask for an explanation. Directors can change, but the change must be filed with CAC. If it has not been filed, that is a compliance issue worth noting.
+      </blockquote>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 3: Certified True Copy (Paid — Official Legal Proof)</h2>
+      <p>For high-value transactions — property purchases, major supply contracts, investment deals — a certified true copy of the company's CAC filing is the most legally robust form of verification. This is an official document issued and stamped by the CAC confirming the company's registration details.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Request a Certified True Copy</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Visit your nearest CAC office (in Lagos, Abuja, Port Harcourt, or any state branch) in person.</li>
+        <li>Request a certified search for the company by name or RC number.</li>
+        <li>Pay the applicable government fee (check the current schedule at the CAC office).</li>
+        <li>Receive a stamped, signed document confirming the company's registration details.</li>
+      </ul>
+
+      <p>This document can be used as evidence in legal proceedings and is accepted by banks, courts, and regulatory bodies as official proof of registration.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 4: Ask for Their Annual Returns Filing Proof</h2>
+      <p>Beyond confirming registration, a serious due diligence check includes confirming that a company is actively maintaining its registration. Nigerian law requires all registered companies and business names to file annual returns with the CAC. Companies that have not filed are in default and can be struck off.</p>
+
+      <p>Ask the company to show you proof of their most recent annual return filing from their CAC dashboard. A company that hesitates to show this — or claims they "have not had time to file" — may have a struck-off or compliance-risk status that will not appear immediately on the public search.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What to Do If a Company Is Not Found</h2>
+      <p>If your CAC search returns no result for a company that claims to be registered, do not assume the worst immediately — but do proceed carefully:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Try alternative name variations:</strong> the company may trade under a different name from their registered name. Ask for the exact registered name on their certificate.</li>
+        <li><strong>Search by RC number instead:</strong> if they give you an RC number, search that directly rather than by name.</li>
+        <li><strong>Check if the name was recently registered:</strong> new registrations can take up to two weeks to appear in the public search. Ask for the date of their certificate.</li>
+        <li><strong>Request the physical certificate:</strong> a genuine Certificate of Incorporation or Certificate of Registration from CAC is hard to convincingly fake. Look for the CAC watermark, stamp, and signature.</li>
+        <li><strong>Do not pay before verifying:</strong> if no verification is possible through any of the methods above, do not make any payment. Legitimate businesses will understand and accommodate a reasonable verification request.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Special Cases: NGOs, Churches, and Associations</h2>
+      <p>Not all organisations use the standard RC number system. Here is how to verify non-company entities:</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Entity Type</th>
+            <th class="border border-gray-300 p-3 text-left">Registration Body</th>
+            <th class="border border-gray-300 p-3 text-left">How to Verify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">NGOs / Associations</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Search by name on CAC public search — IT prefix on registration number</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Churches / Mosques</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Same as NGOs — search by organisation name</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Professional firms (law, accounting)</td><td class="border border-gray-300 p-3">CAC + Sector regulator (NBA, ICAN)</td><td class="border border-gray-300 p-3">Verify CAC registration AND confirm membership with the professional body</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Banks and fintechs</td><td class="border border-gray-300 p-3">CBN + CAC</td><td class="border border-gray-300 p-3">Check CBN's list of licensed institutions on <a href="https://www.cbn.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">cbn.gov.ng</a></td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Insurance companies</td><td class="border border-gray-300 p-3">NAICOM + CAC</td><td class="border border-gray-300 p-3">Check NAICOM's register of licensed insurers</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Make Your Own Business Easy to Verify</h2>
+      <p>If you run a registered Nigerian business, every customer you deal with has the same due diligence question: "Can I trust this company?" The best answer is a transparent online presence where your CAC details, contact information, and services are publicly visible.</p>
+
+      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a> lets you display your RC number, WhatsApp number, photos, service area, and category alongside your business name — giving customers everything they need to verify and contact you without friction. Businesses in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>, and across Nigeria are already getting discovered this way.</p>
+
+      <p>For the full registration process, read our guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> and our <a href="/blog/cac-pre-incorporation-guide-nigeria-2026" class="text-green-600 hover:underline">CAC pre-incorporation step-by-step guide</a>.</p>
+
+      <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">List Your Verified Business on 9jaDirectory</h3>
+        <p class="text-gray-700 mb-4">Make it easy for customers to find and verify your business. Add your RC number, WhatsApp, photos, and service area — and start appearing in local searches across Nigeria today.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
+            List Your Business Free →
+          </a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
+            See Premium Plans
+          </a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is the CAC public search 100% reliable?</h3>
+      <p>The CAC public search is highly reliable for confirming whether a business is registered and checking its status. However, it is not infallible — very recent registrations may not yet appear, and the database may have minor delays after status changes. For critical transactions, combine the public search with a request for the physical certificate and, where necessary, a certified true copy from a CAC office.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can a company be registered but still be fraudulent?</h3>
+      <p>Yes. CAC registration confirms legal existence — it does not validate a company's honesty, financial health, or ability to deliver on promises. A registered company can still be operated fraudulently. Always combine CAC verification with other due diligence: check reviews, request references, speak to previous clients, and for large sums, engage a lawyer to conduct a more thorough background check.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the fastest way to check if a Nigerian company is registered?</h3>
+      <p>The fastest method is the CAC public search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>. It is free, requires no login, and returns results in seconds. Search by the company name or by RC number — RC number searches are more precise since names can have near-identical variations.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I know if a company has been struck off by CAC?</h3>
+      <p>A struck-off status will appear in the "Status" field when you view the company's record on the CAC public search. The record will still exist in the database — the company just will not show as "Active." If a company that was previously active now shows as "Struck Off," it means they have not filed annual returns for two or more years and have been removed from the active register.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Do partnerships need to be registered with the CAC?</h3>
+      <p>Yes. Partnerships operating under a business name in Nigeria must register that business name with the CAC. They receive a BN (Business Name) registration number. However, general partnerships not operating under a specific business name can technically exist without CAC registration, though they lose access to corporate bank accounts, contracts, and other benefits that come with formal registration.</p>
+    `,
+    image: "/images/blog/cac-certificate-verification.webp",
+    date: "Feb 18, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "9 min read",
+    keywords: [
+      "how to check if company is registered in nigeria",
+      "cac verify",
+      "registered companies nigeria",
+      "cac public search",
+      "verify company nigeria",
+      "check company registration nigeria",
+      "cac status check",
+      "corporate affairs commission verification",
+      "business verification nigeria",
+      "company registration check nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Check if a Company is Registered in Nigeria (CAC Verification Guide 2026)",
+        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "datePublished": "2026-02-18",
+        "dateModified": "2026-02-18",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "description": "How to check if a company is registered in Nigeria: four methods including the free CAC public search, status report, certified copy, and what to do if the company is not found.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/how-to-check-if-company-is-registered-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is the CAC public search 100% reliable?", "acceptedAnswer": { "@type": "Answer", "text": "The CAC public search is highly reliable for confirming whether a business is registered. Very recent registrations may not yet appear. For critical transactions, combine the public search with the physical certificate and, where necessary, a certified true copy from a CAC office." } },
+          { "@type": "Question", "name": "Can a company be registered but still be fraudulent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CAC registration confirms legal existence, not honesty or financial health. Always combine CAC verification with reviews, references, and for large sums, a lawyer conducting a thorough background check." } },
+          { "@type": "Question", "name": "What is the fastest way to check if a Nigerian company is registered?", "acceptedAnswer": { "@type": "Answer", "text": "The fastest method is the CAC public search at search.cac.gov.ng — it is free, requires no login, and returns results in seconds. RC number searches are more precise than name searches." } },
+          { "@type": "Question", "name": "How do I know if a company has been struck off by CAC?", "acceptedAnswer": { "@type": "Answer", "text": "A struck-off status appears in the Status field when you view the company record on the CAC public search. It means the company has not filed annual returns for two or more years and has been removed from the active register." } },
+          { "@type": "Question", "name": "Do partnerships need to be registered with the CAC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Partnerships operating under a business name must register that name with the CAC and receive a BN registration number. Without registration they lose access to corporate bank accounts, contracts, and other business benefits." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "How to Check Company Registration Nigeria", "item": "https://www.9jadirectory.org/blog/how-to-check-if-company-is-registered-nigeria" }
+        ]
+      }
+    ])
+  },
 ];
