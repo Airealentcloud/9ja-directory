@@ -154,10 +154,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         notFound();
     }
 
-    // Get related posts (exclude current post, take first 3)
-    const relatedPosts = blogPosts
-        .filter((p) => p.slug !== slug)
-        .slice(0, 3);
+    // Get related posts: same category first, then fill with others
+    const sameCat = blogPosts.filter((p) => p.slug !== slug && p.category === post.category);
+    const otherPosts = blogPosts.filter((p) => p.slug !== slug && p.category !== post.category);
+    const relatedPosts = [...sameCat, ...otherPosts].slice(0, 3);
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
@@ -169,8 +169,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         ],
     };
 
+    const absolutePostImage = post.image.startsWith('/') ? `${siteUrl}${post.image}` : post.image;
     const parsedSchema = post.schema ? safeJsonParse(post.schema) : null;
-    const fixedSchema = parsedSchema ? fixJsonLdImages(parsedSchema, post.image) : null;
+    const fixedSchema = parsedSchema ? fixJsonLdImages(parsedSchema, absolutePostImage) : null;
     const schemaJson = fixedSchema ? JSON.stringify(fixedSchema) : post.schema;
 
     return (

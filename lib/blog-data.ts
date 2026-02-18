@@ -336,7 +336,7 @@ export const blogPosts: BlogPost[] = [
             "name": "9jaDirectory",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://www.9jadirectory.org/logo.png"
+              "url": "https://www.9jadirectory.org/logo.svg"
             }
           },
           "description": "PayPal Nigeria 2026 complete guide: Paga partnership explained, how to receive payments, withdraw to Naira, business account setup, transaction fees, limits & top 7 alternatives for freelancers.",
@@ -589,7 +589,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2026-01-08",
@@ -831,7 +831,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-25",
@@ -1148,7 +1148,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-23",
@@ -1424,7 +1424,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-20",
@@ -1707,7 +1707,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-18",
@@ -1919,7 +1919,7 @@ export const blogPosts: BlogPost[] = [
         "name": "9jaDirectory",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.9jadirectory.org/logo.png"
+          "url": "https://www.9jadirectory.org/logo.svg"
         }
       },
       "datePublished": "2025-11-15",
@@ -2158,7 +2158,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-12",
@@ -2478,7 +2478,7 @@ export const blogPosts: BlogPost[] = [
           "name": "9jaDirectory",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.9jadirectory.org/logo.png"
+            "url": "https://www.9jadirectory.org/logo.svg"
           }
         },
         "datePublished": "2025-11-10",
@@ -3026,7 +3026,7 @@ export const blogPosts: BlogPost[] = [
         "publisher": {
           "@type": "Organization",
           "name": "9jaDirectory",
-          "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+          "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
         },
         "datePublished": "2025-11-28",
         "dateModified": "2025-11-30",
@@ -3326,7 +3326,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-27",
       "description": "Here is the ultimate list of government and private grants for Nigerian entrepreneurs in 2025."
@@ -4028,7 +4028,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-25",
       "description": "Is the POS business still profitable in 2025? We break down the startup costs for Moniepoint, OPay, and Palmpay."
@@ -4194,7 +4194,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-24",
       "description": "Learn how to buy cheap goods from 1688.com and Alibaba and ship them to Nigeria. A step-by-step guide for beginners."
@@ -4367,7 +4367,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-22",
       "description": "Want to invest in real estate with ₦50,000? REITs allow you to own a piece of premium property and earn dividends."
@@ -4548,7 +4548,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-21",
       "description": "Earn in Dollars by exporting Nigerian food. A step-by-step guide on NEPC registration and finding buyers."
@@ -4717,7 +4717,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-20",
       "description": "Stop buying fuel. Discover the cost of 5kVA and 10kVA solar systems in Nigeria for 2025."
@@ -4908,7 +4908,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-19",
       "description": "Want to earn in Dollars while living in Nigeria? These 10 tech skills are in highest demand for 2025."
@@ -5079,7 +5079,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-18",
       "description": "Learn how to start a dropshipping business in Nigeria using Jumia, Konga, and WhatsApp without buying inventory upfront."
@@ -5246,7 +5246,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-16",
       "description": "We review the best co-working hubs in Ikeja, Lekki, and Yaba with current pricing."
@@ -5395,7 +5395,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-15",
       "description": "Discover the top business and tech events in Lagos where deals happen."
@@ -5549,7 +5549,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-14",
       "description": "If you run a car dealership, real estate firm, or jewelry store, you need a SCUML certificate. Here is how to get it."
@@ -5709,7 +5709,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-13",
       "description": "Register your business name or Limited Liability Company (LLC) online with the CAC."
@@ -5880,7 +5880,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-12",
       "description": "We compare fees, settlement times, and features of Paystack, Flutterwave, and Monnify."
@@ -6071,7 +6071,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-11",
       "description": "Learn the 2025 trends: TikTok dominance, Micro-influencers, and how to create content that converts."
@@ -6248,7 +6248,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-10",
       "description": "Make money while in school. From POS business to graphic design, here are 10 side hustles."
@@ -6432,7 +6432,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-09",
       "description": "Selling food or cosmetics? You need a NAFDAC number. We explain the NAPAMS portal, documentation, fees, and timeline."
@@ -6601,7 +6601,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "description": "Start a profitable blogging & content creation business in Nigeria with zero startup costs."
     })
@@ -6779,7 +6779,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "description": "Launch your e-commerce store in Nigeria. Complete guide to products, platforms, payment solutions, and reaching first ₦500K in sales."
     })
@@ -6968,7 +6968,7 @@ export const blogPosts: BlogPost[] = [
       "publisher": {
         "@type": "Organization",
         "name": "9jaDirectory",
-        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "description": "Start a high-income consulting business in Nigeria. Find profitable niches and charge ₦200K-₦2M per project."
     })
@@ -7148,7 +7148,7 @@ export const blogPosts: BlogPost[] = [
       "image": ["https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-26",
       "author": { "@type": "Organization", "name": "9jaDirectory Trade Team", "url": "https://www.9jadirectory.org" },
-      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
       "description": "Start import/export business in Nigeria. Make ₦2M-₦10M per shipment. Complete guide to regulations, customs, documentation."
     })
   },
@@ -7330,7 +7330,7 @@ export const blogPosts: BlogPost[] = [
       "image": ["https://images.unsplash.com/photo-1494522510464-82a42ec8a0f1?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-25",
       "author": { "@type": "Organization", "name": "9jaDirectory Services Team", "url": "https://www.9jadirectory.org" },
-      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
       "description": "Start logistics/delivery business in Nigeria. ₦500K startup. ₦500K-₦2M monthly revenue. Complete guide."
     })
   },
@@ -7523,7 +7523,7 @@ export const blogPosts: BlogPost[] = [
       "image": ["https://images.unsplash.com/photo-1570158268183-d296b2892211?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-24",
       "author": { "@type": "Organization", "name": "9jaDirectory Beauty Team", "url": "https://www.9jadirectory.org" },
-      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
       "description": "Start a profitable beauty/salon business. ₦300K-₦2M startup. ₦500K+/month revenue."
     })
   },
@@ -7695,7 +7695,7 @@ export const blogPosts: BlogPost[] = [
       "image": ["https://images.unsplash.com/photo-1599599810694-b5ac4dd33e2d?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-23",
       "author": { "@type": "Organization", "name": "9jaDirectory Food Business Team", "url": "https://www.9jadirectory.org" },
-      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
       "description": "Start profitable food processing/snacks business. ₦500K-₦3M startup. ₦2M-₦5M monthly revenue potential."
     })
   },
@@ -7905,7 +7905,7 @@ export const blogPosts: BlogPost[] = [
       "image": ["https://images.unsplash.com/photo-1500595046891-d87efc1f2a6f?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-22",
       "author": { "@type": "Organization", "name": "9jaDirectory Agriculture Team", "url": "https://www.9jadirectory.org" },
-      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+      "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
       "description": "Start profitable agribusiness in Nigeria. Poultry, fishing, snail farming. ₦500K-₦5M startup. ₦1M-₦50M annual profit."
     })
   },
@@ -8101,7 +8101,7 @@ export const blogPosts: BlogPost[] = [
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
-        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
         "description": "CAC public search guide 2026: how to verify any Nigerian company or business name by RC number, understand search results, spot red flags, and protect yourself from fraud.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-public-search-verify-company-nigeria" }
       },
@@ -8281,7 +8281,7 @@ export const blogPosts: BlogPost[] = [
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
-        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
         "description": "CAC name search Nigeria 2026: how to check if a business name is available before registration, verify existing companies, and avoid scams using the CAC public search portal.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-name-search-business-verification-nigeria" }
       },
@@ -8450,7 +8450,7 @@ export const blogPosts: BlogPost[] = [
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
-        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
         "description": "Company code Nigeria explained: what RC numbers, BN numbers, and IT numbers mean, how to find your company code, and how to verify any business on the CAC portal in 2026.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/company-code-nigeria-meaning-how-to-find" }
       },
@@ -8668,7 +8668,7 @@ export const blogPosts: BlogPost[] = [
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
-        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
         "description": "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-pre-incorporation-guide-nigeria-2026" }
       },
@@ -8858,7 +8858,7 @@ export const blogPosts: BlogPost[] = [
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
-        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" } },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
         "description": "How to check if a company is registered in Nigeria: four methods including the free CAC public search, status report, certified copy, and what to do if the company is not found.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/how-to-check-if-company-is-registered-nigeria" }
       },
