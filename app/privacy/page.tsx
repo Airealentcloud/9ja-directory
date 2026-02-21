@@ -6,7 +6,7 @@ const lastUpdated = 'January 25, 2026'
 export const metadata: Metadata = {
   title: 'Privacy Policy | 9jaDirectory',
   description:
-    'Read the 9jaDirectory privacy policy to learn how we collect, use, and protect your data when you use our platform.',
+    'Read the 9jaDirectory privacy policy to understand how we collect, use, store, and protect your personal data when using our Nigeria business directory platform.',
   alternates: {
     canonical: `${siteUrl}/privacy`,
   },

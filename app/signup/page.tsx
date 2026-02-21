@@ -106,7 +106,7 @@ export default function SignupPage() {
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md text-center">
                     <div className="text-green-500 text-5xl mb-4">✓</div>
-                    <h2 className="text-3xl font-extrabold text-gray-900">Check your email</h2>
+                    <h1 className="text-3xl font-extrabold text-gray-900">Check your email</h1>
                     <p className="mt-2 text-gray-600">
                         We've sent a confirmation link to <strong>{email}</strong>.
                         <br />
@@ -131,9 +131,9 @@ export default function SignupPage() {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md">
                 <div>
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    <h1 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                         Create your account
-                    </h2>
+                    </h1>
                     {selectedPlan ? (
                         <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
                             <p className="text-sm text-green-800 text-center">

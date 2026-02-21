@@ -155,7 +155,7 @@ export default function CheckoutPage() {
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
                 <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md text-center">
                     <div className="text-red-500 text-5xl mb-4">!</div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">No plan selected</h2>
+                    <h1 className="text-2xl font-bold text-gray-900 mb-4">No plan selected</h1>
                     <p className="text-gray-600 mb-6">Please select a plan to continue.</p>
                     <Link
                         href="/pricing"

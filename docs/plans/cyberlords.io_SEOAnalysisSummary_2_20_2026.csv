@@ -1,0 +1,6 @@
+﻿"URL","Severity","Page count","Error count"
+"Too many pages with identical meta descriptions. ","Moderate severity","67","67"
+"Too many pages with identical titles.","Moderate severity","50","50"
+"There are too many pages with insufficient content. ","Moderate severity","35","35"
+"Meta descriptions on many of your pages are too short. ","Moderate severity","31","31"
+"The <h1> tag is missing.","High severity","13","13"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Complete Your Listing | 9jaDirectory',
+  description: 'Finalize your listing submission and complete your setup on 9jaDirectory.',
   robots: { index: false, follow: false },
 }
 

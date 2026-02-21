@@ -56,10 +56,10 @@ export async function generateMetadata({
     ? 'Real Estate Companies in Nigeria | 9jaDirectory'
     : `${category.name} in Nigeria | 9jaDirectory`
   const description = isRealEstate
-    ? 'Find verified real estate agencies, property developers, and agents across Nigeria. Compare top real estate companies in Lagos, Abuja (FCT), and major cities.'
+    ? 'Find verified real estate agencies, developers & agents across Nigeria. Compare top real estate companies in Lagos, Abuja (FCT), and major cities.'
     : seoContent?.introText ||
       category.description ||
-      `Find the best ${category.name} businesses across Nigeria. Browse verified listings in all 36 states + FCT.`
+      `Discover verified ${category.name} listings in all 36 Nigerian states and FCT Abuja. Browse ratings, contact details, and reviews to find the best ${category.name} near you on 9jaDirectory.`
 
   const canonical = `${siteUrl}/categories/${slug}`
 
@@ -196,7 +196,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
   // Article schema for editorial content (especially for real estate)
   const articleSchema = isRealEstate
     ? generateCategoryArticleSchema(category, {
-        datePublished: '2024-01-15',
+        datePublished: '2025-01-10',
         dateModified: new Date().toISOString().split('T')[0],
         wordCount: 1800,
       })
@@ -391,7 +391,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
 
           {isRealEstate && (
             <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Top Real Estate Companies in Nigeria 2025</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Top Real Estate Companies in Nigeria {new Date().getFullYear()}</h2>
               <p className="text-gray-700 mb-6">
                 Nigeria&apos;s real estate sector features several established companies known for quality developments,
                 transparent dealings, and professional services. Here are some of the most recognized names in Nigerian
@@ -446,14 +446,21 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                     various pricing tiers.
                   </p>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
-                  <h3 className="font-bold text-gray-900">Dradrock Real Estate</h3>
-                  <p className="text-sm text-green-600 mb-2">Development & Consultancy</p>
+                <Link
+                  href="/listings/a-i-realent-global-resources-ltd-kwv2h"
+                  className="border border-green-300 rounded-lg p-4 hover:border-green-500 hover:bg-green-50 transition-colors block"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-gray-900">A.I. Realent Global Resources</h3>
+                    <span className="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full font-medium">Verified</span>
+                  </div>
+                  <p className="text-sm text-green-600 mb-2">Independent Real Estate Agency &middot; Abuja (FCT)</p>
                   <p className="text-sm text-gray-600">
-                    Real estate development, management, and consultancy firm committed to addressing Nigeria&apos;s
-                    housing deficit with sustainable urban solutions.
+                    Abuja&apos;s trusted independent agency offering property search, title verification, investment
+                    advisory, and diaspora buyer support across all FCT districts.
                   </p>
-                </div>
+                  <p className="text-sm text-green-600 font-semibold mt-2">View Listing &rarr;</p>
+                </Link>
                 <div className="border border-gray-200 rounded-lg p-4 hover:border-green-300 transition-colors">
                   <h3 className="font-bold text-gray-900">Fine and Country</h3>
                   <p className="text-sm text-green-600 mb-2">Luxury Real Estate Agency</p>
@@ -474,30 +481,29 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
             {/* Sidebar - Filters */}
             <aside className="lg:w-64 flex-shrink-0">
               <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
-                <h3 className="font-bold text-lg mb-4">Filter Results</h3>
+                <h3 className="font-bold text-lg mb-4">Browse by State</h3>
 
-                {/* State Filter */}
-                <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    State
-                  </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                    <option value="">All States</option>
-                    <option value="lagos">Lagos</option>
-                    <option value="abuja">Abuja</option>
-                    <option value="rivers">Rivers</option>
-                  </select>
-                </div>
-
-                {/* Verified Filter */}
-                <div className="mb-6">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-green-600 focus:ring-green-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Verified Only</span>
-                  </label>
+                <div className="flex flex-col gap-2 mb-6">
+                  {isRealEstate ? (
+                    <>
+                      <Link href="/categories/real-estate/lagos" className="text-sm text-green-700 hover:text-green-900 hover:underline">Lagos</Link>
+                      <Link href="/categories/real-estate/fct" className="text-sm text-green-700 hover:text-green-900 hover:underline">Abuja (FCT)</Link>
+                      <Link href="/categories/real-estate/rivers" className="text-sm text-green-700 hover:text-green-900 hover:underline">Rivers (Port Harcourt)</Link>
+                      <Link href="/categories/real-estate/oyo" className="text-sm text-green-700 hover:text-green-900 hover:underline">Oyo (Ibadan)</Link>
+                      <Link href="/categories/real-estate/kano" className="text-sm text-green-700 hover:text-green-900 hover:underline">Kano</Link>
+                      <Link href="/categories/real-estate/enugu" className="text-sm text-green-700 hover:text-green-900 hover:underline">Enugu</Link>
+                      <Link href="/categories/real-estate/delta" className="text-sm text-green-700 hover:text-green-900 hover:underline">Delta</Link>
+                      <Link href="/categories/real-estate/kaduna" className="text-sm text-green-700 hover:text-green-900 hover:underline">Kaduna</Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link href={`/categories/${slug}/lagos`} className="text-sm text-green-700 hover:text-green-900 hover:underline">Lagos</Link>
+                      <Link href={`/categories/${slug}/fct`} className="text-sm text-green-700 hover:text-green-900 hover:underline">Abuja (FCT)</Link>
+                      <Link href={`/categories/${slug}/rivers`} className="text-sm text-green-700 hover:text-green-900 hover:underline">Rivers</Link>
+                      <Link href={`/categories/${slug}/oyo`} className="text-sm text-green-700 hover:text-green-900 hover:underline">Oyo</Link>
+                      <Link href={`/categories/${slug}/kano`} className="text-sm text-green-700 hover:text-green-900 hover:underline">Kano</Link>
+                    </>
+                  )}
                 </div>
 
                 {/* Back to Categories */}
@@ -578,7 +584,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                       </svg>
                       <h3 className="font-semibold text-gray-800">Quality</h3>
                     </div>
-                    <p className="text-3xl font-bold text-purple-600">4.8ƒ~.</p>
+                    <p className="text-3xl font-bold text-purple-600">4.8/5</p>
                     <p className="text-sm text-gray-600 mt-1">Avg. Rating</p>
                   </div>
                 </div>
@@ -595,7 +601,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-amber-800">
-                        dY'­ <strong>Pro Tip:</strong> Filter by verified listings to ensure reliability, or search by state to find businesses near you.
+                        <strong>Pro Tip:</strong> Filter by verified listings to ensure reliability, or browse by state to find businesses near you.
                       </p>
                     </div>
                   </div>
@@ -643,7 +649,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                                       clipRule="evenodd"
                                     />
                                   </svg>
-                                  ƒo" Verified
+                                  Verified
                                 </span>
                               )}
                             </div>
@@ -677,7 +683,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
 
                           {/* CTA Button */}
                           <div className="mt-4 flex items-center justify-between">
-                            <span className="text-sm font-semibold text-green-600">View Details ƒ+'</span>
+                            <span className="text-sm font-semibold text-green-600">View Details &rarr;</span>
                             <button className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition-colors hidden sm:inline-block">
                               Contact
                             </button>

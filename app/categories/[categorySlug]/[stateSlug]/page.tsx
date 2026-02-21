@@ -37,13 +37,14 @@ export async function generateMetadata({
   const stateLongName = stateSlug === 'fct' ? 'Abuja (FCT)' : state.name
 
   // ✅ OPTIMIZED FOR LOCAL KEYWORDS WITH MODIFIERS
+  const currentYear = new Date().getFullYear()
   const title = isRealEstate
-    ? `Best Real Estate Companies in ${stateDisplayName} | Top Rated Real Estate ${stateDisplayName} 2025 | 9jaDirectory`
-    : `Best ${categoryName} in ${stateDisplayName} | Top Rated ${categoryName} ${stateDisplayName} 2025 | 9jaDirectory`
+    ? `Best Real Estate Companies in ${stateDisplayName} | Top Rated Real Estate ${stateDisplayName} ${currentYear} | 9jaDirectory`
+    : `Best ${categoryName} in ${stateDisplayName} | Top Rated ${categoryName} ${stateDisplayName} ${currentYear} | 9jaDirectory`
   const description = isRealEstate
     ? `Find the best real estate companies in ${stateLongName}. Compare verified agencies, developers, and agents with reviews and contact details on 9jaDirectory.`
-    : `Find the best verified ${categoryName} in ${stateLongName}. Compare ratings, prices, and contact details. Browse top-rated ${categoryName} near you on 9jaDirectory. Updated 2025.`
-  
+    : `Find the best verified ${categoryName} in ${stateLongName}. Compare ratings, prices, and contact details. Browse top-rated ${categoryName} near you on 9jaDirectory. Updated ${currentYear}.`
+
   const keywords = isRealEstate
     ? [
         `real estate companies in ${stateDisplayName}`,
@@ -51,7 +52,7 @@ export async function generateMetadata({
         `real estate agencies in ${stateDisplayName}`,
         `property developers in ${stateDisplayName}`,
         `real estate directory ${stateDisplayName}`,
-        `real estate ${stateDisplayName} 2025`,
+        `real estate ${stateDisplayName} ${currentYear}`,
         `top real estate ${stateDisplayName}`,
         `real estate agents ${stateDisplayName}`,
       ]
@@ -62,7 +63,7 @@ export async function generateMetadata({
         `top rated ${categoryName} ${stateDisplayName}`,
         `verified ${categoryName} ${stateDisplayName}`,
         `${stateDisplayName} ${categoryName} directory`,
-        `${categoryName} ${stateDisplayName} 2025`,
+        `${categoryName} ${stateDisplayName} ${currentYear}`,
         `where to find ${categoryName} ${stateDisplayName}`,
         `${categoryName} services ${stateDisplayName}`,
       ]

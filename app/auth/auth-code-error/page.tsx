@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Authentication Error | 9jaDirectory',
-    description: 'There was an error with your authentication',
+    description: 'Authentication could not be completed. Retry account verification or sign in again.',
+    robots: { index: false, follow: false },
 }
 
 export default function AuthCodeErrorPage() {
@@ -10,9 +12,9 @@ export default function AuthCodeErrorPage() {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md text-center">
                 <div className="text-red-500 text-5xl mb-4">!</div>
-                <h2 className="text-3xl font-extrabold text-gray-900">
+                <h1 className="text-3xl font-extrabold text-gray-900">
                     Authentication Error
-                </h2>
+                </h1>
                 <p className="mt-2 text-gray-600">
                     We couldn't verify your email. This could happen if:
                 </p>

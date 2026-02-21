@@ -5,7 +5,7 @@ const lastUpdated = 'January 25, 2026'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | 9jaDirectory',
-  description: 'Read the 9jaDirectory terms of service and conditions for using our business directory platform.',
+  description: 'Read the 9jaDirectory terms of service. Understand the rules and responsibilities for listing a business and using our Nigeria business directory platform.',
   alternates: {
     canonical: `${siteUrl}/terms`,
   },

@@ -112,7 +112,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 8. Category + State Combination Pages - HIGH VALUE for Local SEO
     // These dynamic pages target high-intent searches like:
     // "restaurants in Lagos", "hotels in Abuja", "real estate in Port Harcourt"
-    // Estimated 540+ pages (15 categories × 37 states)
+    //
+    // Quality threshold: only include a combination when at least one approved
+    // listing exists for it. Thin/empty combos are excluded to protect crawl
+    // budget and avoid indexing low-value pages (P2-T1, P2-T2).
     const hasCategories = (categories || []).length > 0
     const hasStates = (states || []).length > 0
 
@@ -144,14 +147,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               },
           ]
 
-    // Generate all category + state combinations for maximum local SEO coverage
+    // Fetch distinct category+state combos that have at least one approved listing.
+    // Using an INNER JOIN so only rows with valid FK relations are returned.
+    const { data: activeCombos } = await supabase
+        .from('listings')
+        .select('categories!inner(slug), states!inner(slug)')
+        .eq('status', 'approved')
+        .not('category_id', 'is', null)
+        .not('state_id', 'is', null)
+
+    // Build a Set for O(1) membership checks: "categorySlug/stateSlug"
+    // Supabase returns joined relations as arrays, so we use [0] to get the first (and only) match.
+    const validComboSet = new Set(
+        (activeCombos || []).flatMap((listing) => {
+            const cats = listing.categories
+            const sts = listing.states
+            const catSlug = Array.isArray(cats) ? cats[0]?.slug : (cats as { slug: string } | null)?.slug
+            const stateSlug = Array.isArray(sts) ? sts[0]?.slug : (sts as { slug: string } | null)?.slug
+            return catSlug && stateSlug ? [`${catSlug}/${stateSlug}`] : []
+        })
+    )
+
+    // Only include combinations present in the live listing data
     const categoryStateUrls = (categories || []).flatMap((category: { slug: string }) =>
-        (states || []).map((state: { slug: string }) => ({
-            url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
-            lastModified: now,
-            changeFrequency: 'weekly' as const,
-            priority: 0.75, // Slightly lower than main category pages
-        }))
+        (states || [])
+            .filter((state: { slug: string }) =>
+                validComboSet.has(`${category.slug}/${state.slug}`)
+            )
+            .map((state: { slug: string }) => ({
+                url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
+                lastModified: now,
+                changeFrequency: 'weekly' as const,
+                priority: 0.75,
+            }))
     )
 
     const fallbackCategoryStateUrls = hasCategories && hasStates

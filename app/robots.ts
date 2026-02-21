@@ -32,12 +32,18 @@ export default function robots(): MetadataRoute.Robots {
           // Business submission flow (private)
           '/add-business',
           '/listing-created',
+          '/listings/*/claim',
 
           // Payment & Transaction Pages (not for indexing)
+          '/checkout',
           '/payment/',
           '/press-release/checkout',
           '/press-release/order-success',
           '/press-release/order-pending',
+          '/test-payment',
+
+          // Newsletter flow (transactional, not for indexing)
+          '/newsletter/',
 
           // Development & Testing
           '/debug',
