@@ -361,6 +361,196 @@ The 9jaDirectory Team
     }
 }
 
+// Send email to customer when their claim is approved
+interface ClaimApprovedData {
+    businessName: string
+    ownerEmail: string
+    ownerName?: string
+    listingUrl: string
+}
+
+export async function notifyCustomerClaimApproved(data: ClaimApprovedData) {
+    const subject = `Claim Approved - ${data.businessName} is now yours!`
+
+    const text = `
+Hello ${data.ownerName || 'Valued Customer'},
+
+Great news! Your claim for "${data.businessName}" has been approved. You now have full ownership of this listing on 9jaDirectory.
+
+You can manage your listing from your dashboard:
+https://www.9jadirectory.org/dashboard/my-listings
+
+View your listing here:
+${data.listingUrl}
+
+What you can do now:
+- Update your business details, photos, and opening hours
+- Reply to customer reviews
+- Promote your listing for more visibility
+
+Thank you for choosing 9jaDirectory!
+
+Best regards,
+The 9jaDirectory Team
+    `.trim()
+
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #16a34a; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .success-icon { font-size: 48px; margin-bottom: 10px; }
+        .content { background-color: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
+        .btn { display: inline-block; background-color: #16a34a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 15px; }
+        .tips { background-color: white; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .tips h3 { color: #16a34a; margin-top: 0; }
+        .tips ul { margin: 0; padding-left: 20px; }
+        .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="success-icon">✓</div>
+            <h1>Claim Approved!</h1>
+        </div>
+        <div class="content">
+            <p>Hello ${data.ownerName || 'Valued Customer'},</p>
+            <p>Great news! Your claim for <strong>"${data.businessName}"</strong> has been approved. You now have full ownership of this listing on 9jaDirectory.</p>
+
+            <p style="text-align: center;">
+                <a href="${data.listingUrl}" class="btn">View Your Listing</a>
+            </p>
+
+            <div class="tips">
+                <h3>What you can do now:</h3>
+                <ul>
+                    <li>Update your business details, photos, and opening hours</li>
+                    <li>Reply to customer reviews</li>
+                    <li>Promote your listing for more visibility</li>
+                </ul>
+            </div>
+
+            <p style="text-align: center;">
+                <a href="https://www.9jadirectory.org/dashboard/my-listings" class="btn" style="background-color: #4f46e5;">Manage in Dashboard</a>
+            </p>
+
+            <p>Thank you for choosing 9jaDirectory!</p>
+        </div>
+        <div class="footer">
+            <p>9jaDirectory - Nigeria's Business Directory</p>
+            <p><a href="https://www.9jadirectory.org">www.9jadirectory.org</a></p>
+        </div>
+    </div>
+</body>
+</html>
+    `.trim()
+
+    try {
+        await sendEmail({ to: data.ownerEmail, subject, text, html })
+        console.log('Customer notified of claim approval:', data.ownerEmail)
+        return true
+    } catch (error) {
+        console.error('Failed to notify customer of claim approval:', error)
+        return false
+    }
+}
+
+// Send email to customer when their claim is rejected
+interface ClaimRejectedData {
+    businessName: string
+    ownerEmail: string
+    ownerName?: string
+    rejectionReason: string
+}
+
+export async function notifyCustomerClaimRejected(data: ClaimRejectedData) {
+    const subject = `Claim Update - ${data.businessName}`
+
+    const text = `
+Hello ${data.ownerName || 'Valued Customer'},
+
+We have reviewed your claim for "${data.businessName}" and unfortunately it was not approved at this time.
+
+Reason: ${data.rejectionReason}
+
+You can submit a new claim with additional proof of ownership. Accepted documents include:
+- CAC registration certificate
+- Business license or utility bill
+- Official company letterhead
+
+Submit a new claim here:
+https://www.9jadirectory.org/claim-your-business
+
+If you have any questions, please contact our support team.
+
+Best regards,
+The 9jaDirectory Team
+    `.trim()
+
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: #dc2626; color: white; padding: 20px; text-align: center; border-radius: 8px 8px 0 0; }
+        .content { background-color: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
+        .reason-box { background-color: #fef2f2; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #dc2626; }
+        .btn { display: inline-block; background-color: #16a34a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin-top: 15px; }
+        .footer { text-align: center; margin-top: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Claim Not Approved</h1>
+        </div>
+        <div class="content">
+            <p>Hello ${data.ownerName || 'Valued Customer'},</p>
+            <p>We have reviewed your claim for <strong>"${data.businessName}"</strong> and unfortunately it was not approved at this time.</p>
+
+            <div class="reason-box">
+                <p><strong>Reason:</strong></p>
+                <p>${data.rejectionReason}</p>
+            </div>
+
+            <p>You can submit a new claim with additional proof of ownership. Accepted documents include:</p>
+            <ul>
+                <li>CAC registration certificate</li>
+                <li>Business license or utility bill</li>
+                <li>Official company letterhead</li>
+            </ul>
+
+            <p style="text-align: center;">
+                <a href="https://www.9jadirectory.org/claim-your-business" class="btn">Learn More About Claiming</a>
+            </p>
+
+            <p>If you have any questions, please contact our support team.</p>
+        </div>
+        <div class="footer">
+            <p>9jaDirectory - Nigeria's Business Directory</p>
+            <p><a href="https://www.9jadirectory.org">www.9jadirectory.org</a></p>
+        </div>
+    </div>
+</body>
+</html>
+    `.trim()
+
+    try {
+        await sendEmail({ to: data.ownerEmail, subject, text, html })
+        console.log('Customer notified of claim rejection:', data.ownerEmail)
+        return true
+    } catch (error) {
+        console.error('Failed to notify customer of claim rejection:', error)
+        return false
+    }
+}
+
 // Send email to admin when contact form is submitted
 export async function notifyAdminContactForm(data: ContactFormData) {
     const subject = `Contact Form: ${data.subject}`

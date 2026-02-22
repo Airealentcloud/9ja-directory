@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
-import { notifyCustomerListingApproved, notifyCustomerListingRejected } from '@/lib/email/notifications'
+import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
 
 // Helper to check if user is admin
 // Helper to check if user is admin
@@ -124,12 +124,42 @@ export async function approveClaim(claimId: string) {
 
     if (claimError) throw claimError
 
+    // Send email notification to the claimer
+    const { data: listing } = await supabase
+        .from('listings')
+        .select('business_name, slug')
+        .eq('id', claim.listing_id)
+        .maybeSingle()
+
+    const { data: claimProfile } = await supabase
+        .from('profiles')
+        .select('email, full_name')
+        .eq('id', claim.user_id)
+        .maybeSingle()
+
+    if (listing && claimProfile?.email) {
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+        notifyCustomerClaimApproved({
+            businessName: listing.business_name,
+            ownerEmail: claimProfile.email,
+            ownerName: claimProfile.full_name,
+            listingUrl: `${siteUrl}/listings/${listing.slug}`,
+        }).catch(console.error)
+    }
+
     revalidatePath('/admin/claims')
     revalidatePath('/listings')
 }
 
 export async function rejectClaim(claimId: string, reason?: string) {
     const supabase = await checkAdmin()
+
+    // Get claim details for notification
+    const { data: claim } = await supabase
+        .from('claim_requests')
+        .select('listing_id, user_id')
+        .eq('id', claimId)
+        .maybeSingle()
 
     const { error } = await supabase
         .from('claim_requests')
@@ -142,6 +172,31 @@ export async function rejectClaim(claimId: string, reason?: string) {
         .eq('id', claimId)
 
     if (error) throw error
+
+    // Send email notification to the claimer
+    if (claim) {
+        const { data: listing } = await supabase
+            .from('listings')
+            .select('business_name')
+            .eq('id', claim.listing_id)
+            .maybeSingle()
+
+        const { data: claimProfile } = await supabase
+            .from('profiles')
+            .select('email, full_name')
+            .eq('id', claim.user_id)
+            .maybeSingle()
+
+        if (listing && claimProfile?.email) {
+            notifyCustomerClaimRejected({
+                businessName: listing.business_name,
+                ownerEmail: claimProfile.email,
+                ownerName: claimProfile.full_name,
+                rejectionReason: reason || 'Insufficient proof of ownership',
+            }).catch(console.error)
+        }
+    }
+
     revalidatePath('/admin/claims')
 }
 
