@@ -129,6 +129,18 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
     ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
     : undefined
 
+  // Check auth status and claim permission for ClaimButton
+  const { data: { user } } = await supabase.auth.getUser()
+  let canClaim = false
+  if (user) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('can_claim_listings')
+      .eq('id', user.id)
+      .maybeSingle()
+    canClaim = profile?.can_claim_listings ?? false
+  }
+
   // Check if this is a real estate listing
   const isRealEstate = listing.categories?.name?.toLowerCase().includes('real estate')
 
@@ -689,7 +701,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 {/* Claim Business */}
-                <ClaimButton slug={listing.slug} isClaimed={listing.claimed ?? false} />
+                <ClaimButton slug={listing.slug} isClaimed={listing.claimed ?? false} isLoggedIn={!!user} canClaim={canClaim} />
               </div>
             </div>
           </div>

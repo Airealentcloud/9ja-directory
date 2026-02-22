@@ -34,6 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { path: '/blog', priority: 0.8, changeFreq: 'daily' as const },
         { path: '/categories', priority: 0.9, changeFreq: 'weekly' as const },
         { path: '/states', priority: 0.9, changeFreq: 'weekly' as const },
+        { path: '/claim-your-business', priority: 0.8, changeFreq: 'monthly' as const },
     ].map((route) => ({
         url: `${baseUrl}${route.path}`,
         lastModified: now,

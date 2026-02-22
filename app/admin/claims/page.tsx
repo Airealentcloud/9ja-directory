@@ -15,6 +15,14 @@ export default async function AdminClaimsPage({
     const { data: { user } } = await supabase.auth.getUser()
     if (!user) redirect('/login')
 
+    const { data: profile } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', user.id)
+        .maybeSingle()
+
+    if (profile?.role !== 'admin') redirect('/dashboard')
+
     // Fetch claims with listing and user details
     const { data: claims, error } = await supabase
         .from('claim_requests')
@@ -117,29 +125,46 @@ export default async function AdminClaimsPage({
                                 </div>
 
                                 {currentStatus === 'pending' && (
-                                    <div className="flex justify-end space-x-3">
-                                        <form action={async () => {
+                                    <div className="space-y-3">
+                                        <form action={async (formData: FormData) => {
                                             'use server'
-                                            await rejectClaim(claim.id, 'Insufficient proof')
+                                            const reason = formData.get('rejection_reason') as string || 'Insufficient proof'
+                                            await rejectClaim(claim.id, reason)
                                         }}>
-                                            <button
-                                                type="submit"
-                                                className="text-red-600 hover:text-red-900 font-medium px-4 py-2"
-                                            >
-                                                Reject
-                                            </button>
+                                            <div className="flex items-end gap-3 justify-end">
+                                                <div className="flex-1 max-w-xs">
+                                                    <label htmlFor={`reject-reason-${claim.id}`} className="block text-xs font-medium text-gray-500 mb-1">
+                                                        Rejection Reason
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        id={`reject-reason-${claim.id}`}
+                                                        name="rejection_reason"
+                                                        placeholder="Insufficient proof"
+                                                        className="block w-full text-sm border border-gray-300 rounded-md px-3 py-1.5"
+                                                    />
+                                                </div>
+                                                <button
+                                                    type="submit"
+                                                    className="text-red-600 hover:text-red-900 font-medium px-4 py-2"
+                                                >
+                                                    Reject
+                                                </button>
+                                            </div>
                                         </form>
-                                        <form action={async () => {
-                                            'use server'
-                                            await approveClaim(claim.id)
-                                        }}>
-                                            <button
-                                                type="submit"
-                                                className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 font-medium"
-                                            >
-                                                Approve Claim
-                                            </button>
-                                        </form>
+                                        <div className="flex justify-end">
+                                            <form action={async () => {
+                                                'use server'
+                                                await approveClaim(claim.id)
+                                            }}>
+                                                <button
+                                                    type="submit"
+                                                    className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 font-medium"
+                                                >
+                                                    Approve Claim
+                                                </button>
+                                            </form>
+                                        </div>
                                     </div>
                                 )}
                             </li>

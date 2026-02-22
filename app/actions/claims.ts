@@ -12,6 +12,17 @@ export async function submitClaim(formData: FormData) {
         throw new Error('You must be logged in to claim a business')
     }
 
+    // Check claim permission (Premium/Lifetime only)
+    const { data: profile } = await supabase
+        .from('profiles')
+        .select('can_claim_listings')
+        .eq('id', user.id)
+        .maybeSingle()
+
+    if (!profile?.can_claim_listings) {
+        throw new Error('Claiming is available on Premium and Lifetime plans. Please upgrade at /pricing to claim this listing.')
+    }
+
     const slug = formData.get('slug') as string | null
     let listingId = formData.get('listing_id') as string | null
     const notes = formData.get('notes') as string

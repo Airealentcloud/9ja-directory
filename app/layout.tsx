@@ -118,6 +118,7 @@ export default async function RootLayout({
                   <li><Link href="/press-release" className="hover:text-white transition-colors">Press Release</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                   <li><Link href="/pricing" className="hover:text-white transition-colors">Get Listed</Link></li>
+                  <li><Link href="/claim-your-business" className="hover:text-white transition-colors">Claim Your Business</Link></li>
                 </ul>
               </div>
               <div>

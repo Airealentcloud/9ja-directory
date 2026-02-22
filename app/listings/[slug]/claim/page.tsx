@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, use } from 'react'
+import { useState, use, useEffect } from 'react'
 import { submitClaim } from '@/app/actions/claims'
 import { useRouter } from 'next/navigation'
+import { createBrowserClient } from '@supabase/ssr'
 import FileUploader from '@/components/common/file-uploader'
 
 export default function ClaimPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -10,7 +11,23 @@ export default function ClaimPage({ params }: { params: Promise<{ slug: string }
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [proofUrl, setProofUrl] = useState('')
+    const [checking, setChecking] = useState(true)
     const router = useRouter()
+
+    // Check auth on mount — redirect if not logged in
+    useEffect(() => {
+        const supabase = createBrowserClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL!,
+            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+        )
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            if (!user) {
+                router.replace(`/login?next=/listings/${slug}/claim`)
+            } else {
+                setChecking(false)
+            }
+        })
+    }, [router, slug])
 
     async function handleSubmit(formData: FormData) {
         setIsSubmitting(true)
@@ -32,6 +49,14 @@ export default function ClaimPage({ params }: { params: Promise<{ slug: string }
         } finally {
             setIsSubmitting(false)
         }
+    }
+
+    if (checking) {
+        return (
+            <div className="max-w-2xl mx-auto py-12 px-4 text-center text-gray-500">
+                Checking authentication...
+            </div>
+        )
     }
 
     return (
@@ -88,7 +113,7 @@ export default function ClaimPage({ params }: { params: Promise<{ slug: string }
                         </div>
 
                         {error && (
-                            <div className="text-red-600 text-sm">{error}</div>
+                            <div className="text-red-600 text-sm bg-red-50 p-3 rounded-md">{error}</div>
                         )}
 
                         <div className="flex justify-end">
