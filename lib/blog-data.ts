@@ -11575,9 +11575,12 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
-        <h3 class="text-lg font-bold text-green-900 mb-2">Are you a solar installation company in Nigeria?</h3>
-        <p class="text-green-800 mb-4">Get found by thousands of Nigerians searching for solar solutions every month. List your business on 9jaDirectory.</p>
-        <a href="/categories/solar-energy" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Solar Business &rarr;</a>
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your solar company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for solar installation companies every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Solar Business Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
@@ -11769,9 +11772,12 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
-        <h3 class="text-lg font-bold text-green-900 mb-2">Is your security company looking for new clients?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for security services every month. Get found on 9jaDirectory.</p>
-        <a href="/categories/security-services" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company &rarr;</a>
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your security company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for NSCDC-licensed security companies every month on 9jaDirectory. List your company for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
@@ -11958,9 +11964,12 @@ export const blogPosts: BlogPost[] = [
       </div>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
-        <h3 class="text-lg font-bold text-green-900 mb-2">Are you an insurance broker or company in Nigeria?</h3>
-        <p class="text-green-800 mb-4">Reach thousands of Nigerians looking for insurance products every month. List your business on 9jaDirectory.</p>
-        <a href="/categories/insurance" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Insurance Business &rarr;</a>
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your insurance company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for NAICOM-licensed insurance companies every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Insurance Business Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
