@@ -20,9 +20,11 @@ import {
   Plane,
   Scale,
   Scissors,
+  Shield,
   ShoppingBag,
   Sparkles,
   Stethoscope,
+  Sun,
   Truck,
   Utensils,
   Wheat,
@@ -78,6 +80,18 @@ export const categoryIcons: Record<string, LucideIcon> = {
   'finance': CreditCard,
   'banking': CreditCard,
   'insurance': CreditCard,
+
+  // Insurance (dedicated category)
+  'insurance-services': CreditCard,
+
+  // Security Services
+  'security-services': Shield,
+  'security': Shield,
+
+  // Solar & Power Solutions
+  'solar-energy': Sun,
+  'solar': Sun,
+  'power-solutions': Sun,
 
   // Food & Restaurants
   'restaurants': Utensils,
@@ -192,6 +206,16 @@ export const categoryColors: Record<string, { bg: string; iconBg: string; iconCo
   'finance': { bg: 'from-emerald-50 to-teal-100', iconBg: 'bg-emerald-600', iconColor: 'text-white' },
   'banking': { bg: 'from-emerald-50 to-teal-100', iconBg: 'bg-emerald-600', iconColor: 'text-white' },
   'insurance': { bg: 'from-emerald-50 to-teal-100', iconBg: 'bg-emerald-600', iconColor: 'text-white' },
+  'insurance-services': { bg: 'from-emerald-50 to-teal-100', iconBg: 'bg-emerald-600', iconColor: 'text-white' },
+
+  // Security Services - Strong Dark Blue
+  'security-services': { bg: 'from-slate-50 to-blue-100', iconBg: 'bg-slate-700', iconColor: 'text-white' },
+  'security': { bg: 'from-slate-50 to-blue-100', iconBg: 'bg-slate-700', iconColor: 'text-white' },
+
+  // Solar & Power - Bright Yellow/Orange
+  'solar-energy': { bg: 'from-yellow-50 to-orange-100', iconBg: 'bg-yellow-500', iconColor: 'text-white' },
+  'solar': { bg: 'from-yellow-50 to-orange-100', iconBg: 'bg-yellow-500', iconColor: 'text-white' },
+  'power-solutions': { bg: 'from-yellow-50 to-orange-100', iconBg: 'bg-yellow-500', iconColor: 'text-white' },
 
   // Food - Appetizing Orange
   'restaurants': { bg: 'from-amber-50 to-yellow-100', iconBg: 'bg-amber-500', iconColor: 'text-white' },
