@@ -10589,4 +10589,861 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
+  {
+    slug: "best-plumbing-materials-companies-nigeria",
+    title: "Best Plumbing Materials & Companies in Nigeria (2026 Guide)",
+    excerpt: "Complete guide to the best plumbing materials and suppliers in Nigeria. Covers top brands, PVC pipe prices in Naira, where to buy in Lagos and Abuja, and what to look for when sourcing plumbing materials for construction projects.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
+
+      <p>Whether you are building a new house, renovating a property, or managing a construction project in Nigeria, choosing the right plumbing materials determines the long-term integrity of your water supply and drainage systems. With countless brands flooding Nigerian markets — many of substandard quality — knowing which plumbing materials companies are reliable can save you significant cost and stress.</p>
+
+      <p>This guide covers the best plumbing materials brands and suppliers in Nigeria in 2026, including pricing, where to buy, and what to watch out for when sourcing in Nigerian markets.</p>
+
+      <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+        <p class="font-semibold text-green-800">Key Facts for 2026</p>
+        <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
+          <li>Nigeria's construction industry grows at 4.5%+ annually — demand for plumbing materials is rising</li>
+          <li>PVC pipes remain the dominant choice (70%+ of installations) due to cost and durability</li>
+          <li>Top markets: Ojota (Lagos), Alaba (Lagos), Utako market (Abuja), Onitsha main market</li>
+          <li>Counterfeit pipes are a major problem — always buy from verified suppliers or direct from manufacturers</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Types of Plumbing Materials Used in Nigeria</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. PVC Pipes &amp; Fittings</h3>
+      <p>The most widely used plumbing material in Nigeria. PVC (polyvinyl chloride) pipes are lightweight, corrosion-resistant, affordable, and easy to install. Used for cold water supply, drainage, sewage, and underground water lines. Available in pressure ratings from Class B (light-duty) to Class E (high-pressure systems).</p>
+      <p><strong>Typical 2026 prices in Lagos:</strong> ½-inch PVC pipe (3m) from ₦2,500–₦4,500 | 1-inch pipe from ₦4,000–₦7,000 | 4-inch drainage pipe from ₦8,000–₦15,000.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. PPR Pipes (Polypropylene Random Copolymer)</h3>
+      <p>The premium alternative to PVC for hot and cold water supply inside buildings. PPR pipes can handle temperatures up to 95°C, making them ideal for hot water plumbing, boiler systems, and underfloor heating. More expensive than PVC but significantly longer-lasting (50+ year lifespan). Increasingly popular in high-end residential and commercial construction in Lagos and Abuja.</p>
+      <p><strong>Typical 2026 prices:</strong> 20mm PPR pipe (4m) from ₦6,000–₦12,000 depending on brand and wall thickness.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. HDPE Pipes (High-Density Polyethylene)</h3>
+      <p>Used for underground water mains, borehole connections, and industrial water distribution. HDPE pipes are flexible, highly durable (50+ years), and chemical-resistant. Common in borehole installations and estate water distribution systems across Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Cast Iron &amp; Galvanised Steel Pipes</h3>
+      <p>Less common in new construction but still used for industrial applications and in older Nigerian buildings. Heavy and durable but susceptible to rust and corrosion. Being replaced by PVC and PPR in most residential applications.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Copper Pipes</h3>
+      <p>The gold standard for plumbing in developed markets — antibacterial, extremely durable, and excellent for hot water. However, the high cost (₦15,000–₦50,000 per metre depending on diameter) and risk of theft make copper pipes uncommon in Nigerian residential projects. Primarily used in high-end hotels, embassies, and premium commercial buildings.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Sanitary Wares &amp; Fittings</h3>
+      <p>Includes toilets, washbasins, bathtubs, shower trays, taps, valves, water heaters, and cisterns. Brands available in Nigeria range from budget imports to premium European and Asian brands.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Best Plumbing Materials Companies &amp; Brands in Nigeria</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Pamo Industries Ltd</h3>
+      <p>One of Nigeria's foremost manufacturers of PVC pipes and fittings. Pamo produces a full range of pressure pipes, drainage pipes, conduit pipes, and fittings. Their products meet SON (Standards Organisation of Nigeria) certification standards. Pamo pipes are widely distributed across Nigeria and are among the most trusted locally-manufactured plumbing materials in the country.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> PVC pressure pipes, drainage pipes, electrical conduits, fittings</li>
+        <li><strong>Certification:</strong> SON certified</li>
+        <li><strong>Availability:</strong> Major building materials markets across Nigeria</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Nigerian Foundries Limited (NFL)</h3>
+      <p>A subsidiary of the CFAO Group, Nigerian Foundries has been manufacturing cast iron pipes, fittings, and manhole covers in Nigeria since 1959. Their products are used extensively in municipal water supply infrastructure, sewage systems, and industrial pipelines. NFL is a key supplier to state water boards and the Federal Ministry of Water Resources.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Cast iron pipes, ductile iron fittings, manhole covers, valves</li>
+        <li><strong>Key clients:</strong> State water boards, FMWR, industrial plants</li>
+        <li><strong>Location:</strong> Ikeja, Lagos</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Nikalit Products Ltd</h3>
+      <p>A major manufacturer of PVC pipes, fittings, and plastic products for the Nigerian construction market. Nikalit products are known for consistent quality and are available through a nationwide distributor network. Popular for both residential and commercial plumbing projects.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. WAVIN Nigeria</h3>
+      <p>WAVIN is a leading global piping systems brand with strong distribution in Nigeria. Their product range includes hot and cold water systems, underfloor heating, drainage solutions, and sewer systems. WAVIN's PPR and HDPE pipes are the preferred choice for mid-to-high-end construction projects. Available through authorised distributors in Lagos, Abuja, Port Harcourt, and Kano.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Best for:</strong> PPR hot water systems, HDPE borehole connections, drainage</li>
+        <li><strong>Price range:</strong> Premium — 20–40% above local PVC brands</li>
+        <li><strong>Why choose:</strong> Certified to international standards, 50-year lifespan warranty on some products</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Georg Fischer (GF) Piping Systems</h3>
+      <p>GF Piping Systems (Swiss brand) is the market leader for industrial-grade piping in Nigeria. Used in oil and gas facilities, chemical plants, hospitals, and large commercial developments. GF's PP-H, PVDF, and ABS piping systems handle aggressive chemicals and high-pressure applications. Available through specialist distributors in Lagos and Port Harcourt.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Rinnai Nigeria — Water Heaters</h3>
+      <p>Rinnai (Japanese brand) is the most trusted name for gas and electric water heaters in Nigeria. Their instant water heaters, storage tanks, and solar water heater systems are widely used in Nigerian homes and hotels. Rinnai products are sold through plumbing merchants and dedicated showrooms in Lagos and Abuja.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Gas water heaters, electric water heaters, solar systems</li>
+        <li><strong>Price range:</strong> ₦80,000–₦350,000 depending on capacity</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Ideal Standard (Sanitaryware)</h3>
+      <p>Ideal Standard is one of the most popular premium sanitary ware brands in Nigeria. Their toilets, washbasins, bathtubs, and bathroom accessories are available in authorised showrooms across Lagos, Abuja, and Port Harcourt. Popular for mid-to-high-end residential developments and hotel fit-outs.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Grohe Nigeria (Taps &amp; Fittings)</h3>
+      <p>Grohe (German brand) is the premium tap and fitting brand of choice for high-end Nigerian construction. Their kitchen and bathroom taps, shower systems, and flush systems are available through authorised dealers in Lagos and Abuja. Price range: ₦25,000–₦250,000+ per unit.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Geberit (Concealed Cisterns)</h3>
+      <p>The Swiss market leader for concealed cistern systems and wall-hung toilet frames. Geberit products are increasingly popular in Nigerian luxury apartment developments and hotels. Available through premium bathroom showrooms in Victoria Island and Lekki, Lagos.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Prince Pipes (Budget PVC)</h3>
+      <p>An Indian-origin brand with significant distribution in Nigeria, Prince Pipes offers affordable PVC pipes and fittings for budget-conscious construction projects. Their products are widely available in Alaba market, Ojota, and building materials markets across Nigeria.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Where to Buy Plumbing Materials in Nigeria</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Lagos</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Ojota Building Materials Market:</strong> The largest building and plumbing materials market in Lagos. PVC pipes, fittings, sanitary wares, tiles, and everything construction-related.</li>
+        <li><strong>Alaba International Market:</strong> Strong on imported plumbing fixtures, taps, valves, and sanitary wares from China, Europe, and India.</li>
+        <li><strong>Isale Eko / Lagos Island:</strong> Traditional hardware and plumbing merchants, ideal for fittings and spare parts.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Abuja (FCT)</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Utako Market:</strong> The main building materials hub in Abuja. Stocks PVC pipes, HDPE, sanitary wares, and tiles.</li>
+        <li><strong>Nyanya Building Materials Market:</strong> Budget-friendly, popular with contractors working in satellite towns.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Other Cities</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
+        <li><strong>Onitsha Main Market:</strong> Nigeria's largest market — excellent for wholesale plumbing materials</li>
+        <li><strong>Port Harcourt:</strong> Rumuola Road and Elekahia markets</li>
+        <li><strong>Kano:</strong> Sabon Gari market and Yankaba markets</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Avoid Counterfeit Plumbing Materials in Nigeria</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Check for SON certification mark</strong> on the pipe</li>
+        <li><strong>Buy from manufacturer-authorised distributors</strong> rather than roadside stalls</li>
+        <li><strong>Check wall thickness:</strong> Counterfeit pipes are visibly thinner and lighter</li>
+        <li><strong>Verify batch numbers:</strong> Reputable brands include batch numbers for traceability</li>
+        <li><strong>Avoid suspiciously cheap prices:</strong> If a pipe is 40%+ cheaper than market rate, it is almost certainly counterfeit</li>
+        <li><strong>Request test certificates</strong> for high-specification projects</li>
+      </ul>
+
+      <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Find Plumbing &amp; Construction Businesses Near You</h3>
+        <p class="text-gray-700 mb-4">Search 9jaDirectory for verified plumbing suppliers, contractors, and construction companies across Nigeria.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/categories/construction" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">Find Construction Companies &rarr;</a>
+          <a href="/categories/home-services" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Home Services Listings &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the best plumbing pipe brand in Nigeria?</h3>
+      <p>For locally-manufactured PVC pipes, Pamo Industries and Nikalit are the most trusted with SON certification. For premium PPR hot and cold water systems, WAVIN is the market leader. For industrial applications, Georg Fischer (GF) Piping Systems is the top choice.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between PVC and PPR pipes?</h3>
+      <p>PVC pipes are used for cold water supply and drainage — affordable and widely available. PPR pipes handle both hot and cold water up to 95°C, are more durable, and are the better choice for indoor hot water plumbing systems.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much do plumbing materials cost in Nigeria in 2026?</h3>
+      <p>A standard ½-inch PVC pipe (3m) costs ₦2,500–₦4,500 in Lagos markets. PPR 20mm pipes (4m) cost ₦6,000–₦12,000. Premium brands carry a 20–50% premium over local brands.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Where is the cheapest place to buy plumbing materials in Nigeria?</h3>
+      <p>Onitsha Main Market consistently offers the lowest wholesale prices. In Lagos, Ojota Building Materials Market is best for competitive pricing. Buying directly from manufacturers like Pamo or Nikalit eliminates distributor markups for large projects.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I identify fake PVC pipes in Nigeria?</h3>
+      <p>Check for the SON certification mark stamped on the pipe. Genuine pipes have uniform wall thickness and batch numbers. Always buy from manufacturer-authorised distributors and avoid prices 30–40% below market rate.</p>
+    `,
+    image: "/images/blog/plumbing-materials-nigeria.jpg",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Construction",
+    readTime: "10 min read",
+    keywords: [
+      "best plumbing materials nigeria",
+      "plumbing materials companies nigeria",
+      "pvc pipes nigeria",
+      "plumbing supplies lagos",
+      "best plumbing brands nigeria",
+      "ppr pipes nigeria",
+      "where to buy plumbing materials nigeria",
+      "plumbing materials prices nigeria 2026",
+      "hdpe pipes nigeria",
+      "building materials nigeria"
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Plumbing Materials & Companies in Nigeria (2026 Guide)",
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Complete guide to the best plumbing materials brands and suppliers in Nigeria 2026. Covers PVC, PPR, HDPE pipes, sanitaryware, prices in Naira, and where to buy.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-plumbing-materials-companies-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the best plumbing pipe brand in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "For locally-manufactured PVC pipes, Pamo Industries and Nikalit are the most trusted with SON certification. For premium PPR systems, WAVIN is the market leader. For industrial applications, Georg Fischer (GF) Piping Systems is the top choice." } },
+          { "@type": "Question", "name": "What is the difference between PVC and PPR pipes?", "acceptedAnswer": { "@type": "Answer", "text": "PVC pipes are for cold water supply and drainage. PPR pipes handle both hot and cold water up to 95 degrees C, are more durable, and are better for indoor hot water plumbing systems." } },
+          { "@type": "Question", "name": "How much do plumbing materials cost in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "A half-inch PVC pipe (3m) costs N2,500-N4,500. PPR 20mm pipes (4m) cost N6,000-N12,000. Premium brands carry a 20-50% premium over local brands." } },
+          { "@type": "Question", "name": "Where is the cheapest place to buy plumbing materials in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Onitsha Main Market has the lowest wholesale prices. In Lagos, Ojota Building Materials Market is best. Buying directly from manufacturers eliminates distributor markups." } },
+          { "@type": "Question", "name": "How do I identify fake PVC pipes in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Check for the SON certification mark. Genuine pipes have uniform wall thickness and batch numbers. Avoid prices 30-40% below market rate and buy from manufacturer-authorised distributors." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Plumbing Materials Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-plumbing-materials-companies-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "best-plastic-manufacturing-companies-nigeria",
+    title: "Top 15 Best Plastic Manufacturing Companies in Nigeria (2026)",
+    excerpt: "Discover the top 15 plastic manufacturing companies in Nigeria in 2026. Covers household plastics, packaging, industrial containers, furniture, and pipes — with company profiles, products, and contacts.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
+
+      <p>Nigeria's plastic manufacturing industry is one of the most active in Sub-Saharan Africa. From household items to industrial packaging, plastic products are essential to virtually every sector of the Nigerian economy. The industry generates billions of naira annually and employs hundreds of thousands of workers across production, distribution, and retail.</p>
+
+      <p>This guide profiles the <strong>top 15 plastic manufacturing companies in Nigeria</strong> — covering what they produce, where they operate, and what makes each one stand out.</p>
+
+      <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+        <p class="font-semibold text-green-800">Nigeria Plastics Industry — 2026 Overview</p>
+        <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
+          <li>Industry worth: estimated US$2.5 billion annually</li>
+          <li>Major hubs: Lagos, Onitsha, Aba, Kano</li>
+          <li>Key sectors: packaging, pipes, household, furniture, automotive</li>
+          <li>Regulatory body: SON (Standards Organisation of Nigeria)</li>
+          <li>Challenge: competition from cheaper imports, especially from China</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 15 Plastic Manufacturing Companies in Nigeria</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Dana Plast Nigeria</h3>
+      <p>Dana Plast is one of Nigeria's leading plastic manufacturers with over 25 years of experience. A subsidiary of the Dana Group, they produce a wide range of custom-built and general-purpose plastic products for industrial, commercial, and consumer markets. Known for premium quality and product diversity.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Industrial containers, packaging, custom plastic components, consumer goods</li>
+        <li><strong>Location:</strong> Lagos</li>
+        <li><strong>Strength:</strong> Custom moulding capability and large-scale industrial supply</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Sunplast (Sun Group Nigeria)</h3>
+      <p>Sunplast, part of the Sun Group conglomerate, has nearly 30 years of experience manufacturing plastic products in Nigeria. They are one of the largest producers of household plastic items and food-grade containers in the country, supplying supermarkets, restaurants, and household consumers nationwide.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Basins, baskets, bowls, buckets, drums, chairs, tables, takeaway containers</li>
+        <li><strong>Location:</strong> Lagos</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Rida National Plastics</h3>
+      <p>Established in 1957, Rida National Plastics is one of Nigeria's oldest and most respected plastic manufacturers. With over 65 years of proven manufacturing history, Rida is best known for their iconic plastic chairs — with over 18 million sold across Nigeria and West Africa.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Plastic chairs, tables, household storage, outdoor furniture</li>
+        <li><strong>Location:</strong> Lagos</li>
+        <li><strong>Founded:</strong> 1957</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Geeta Plastic</h3>
+      <p>Geeta Plastic is an ISO 9001:2015 certified plastic packaging manufacturer in Nigeria. They specialise in plastic packaging solutions including bottles, containers, and custom moulds for the pharmaceutical, cosmetic, and FMCG industries.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Plastic bottles, jars, custom packaging, pharmaceutical containers</li>
+        <li><strong>Certification:</strong> ISO 9001:2015</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Techblow Nigeria Ltd</h3>
+      <p>Techblow specialises in blow moulding technology, producing hollow plastic products including jerry cans, water storage tanks, and industrial containers. Their blow-moulded containers are widely used across Nigeria for water storage, fuel storage, and industrial liquid packaging.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Jerry cans, water tanks, industrial containers (5L–1,000L+)</li>
+        <li><strong>Technology:</strong> Blow moulding</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Chi Limited</h3>
+      <p>While Chi Limited is primarily known as a food and beverage company (Chivita, Hollandia), their packaging division makes them one of Nigeria's significant plastic producers. Chi manufactures PET bottles, HDPE containers, and multilayer packaging for their own products and for third-party FMCG companies.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> PET bottles, HDPE containers, food-grade packaging</li>
+        <li><strong>Location:</strong> Ota, Ogun State</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Polyplast Nigeria</h3>
+      <p>Polyplast produces a wide range of plastic products for household and commercial use including water storage tanks, crates, bins, and various injection-moulded components. Well-distributed across the Nigerian market with a strong presence in southern Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Sonnex Packaging Nigeria</h3>
+      <p>Sonnex is one of Nigeria's leading flexible packaging manufacturers, producing polythene bags, stretch wraps, printed pouches, and industrial film packaging. Their clients include major FMCG companies, pharmaceutical manufacturers, and agribusinesses across Nigeria and West Africa.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Polythene bags, printed pouches, stretch film, industrial packaging</li>
+        <li><strong>Location:</strong> Lagos</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Nagode Industries</h3>
+      <p>Nagode Industries is a diversified Nigerian conglomerate with a plastics division producing pipes, fittings, and construction materials, competing directly with Pamo and Nikalit in the Nigerian market.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Leoplast Nigeria</h3>
+      <p>Leoplast manufactures household plastic products with a focus on quality and affordability. Their range includes storage containers, kitchenware, and outdoor furniture popular in Nigerian households and the open retail market.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">11. Pamo Industries Ltd</h3>
+      <p>While primarily known as a plumbing materials manufacturer, Pamo Industries is also a major player in Nigeria's plastic manufacturing sector. Their PVC pipes, conduits, and fittings make them one of the largest volume plastic manufacturers in the construction segment. SON-certified and widely distributed nationwide.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">12. Black Horse Plastic Manufacturers</h3>
+      <p>Black Horse produces industrial-grade plastic containers, crates, and packaging solutions serving the agricultural, logistics, and manufacturing sectors with durable returnable transit packaging and storage solutions.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">13. Universal Plastics Nigeria</h3>
+      <p>Universal Plastics manufactures a variety of consumer and industrial plastic products including household containers, office products, and custom injection-moulded components for manufacturing clients.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">14. Stocorp Nigeria</h3>
+      <p>Stocorp is a growing plastic manufacturer focusing on packaging solutions for Nigeria's food, pharmaceutical, and cosmetics industries. They offer both stock packaging and custom-designed solutions with competitive lead times.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">15. NBO Plastics</h3>
+      <p>Part of the NBO Group, NBO Plastics produces water storage tanks, crates, and industrial containers. Their water tanks (500L–10,000L capacity) are widely used in Nigerian homes and businesses for borehole and overhead water storage.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Key Plastic Manufacturing Hubs in Nigeria</h2>
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">City</th>
+            <th class="border border-gray-300 p-3 text-left">Specialisation</th>
+            <th class="border border-gray-300 p-3 text-left">Key Markets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Lagos</td><td class="border border-gray-300 p-3">Packaging, industrial, household</td><td class="border border-gray-300 p-3">Alaba, Trade Fair, Ojota</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Onitsha</td><td class="border border-gray-300 p-3">Consumer plastics, wholesale</td><td class="border border-gray-300 p-3">Main Market, Bridge Head</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Aba</td><td class="border border-gray-300 p-3">SME plastic products</td><td class="border border-gray-300 p-3">Ariaria, Eziukwu</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Kano</td><td class="border border-gray-300 p-3">Northern Nigeria distribution</td><td class="border border-gray-300 p-3">Sabon Gari, Kantin Kwari</td></tr>
+        </tbody>
+      </table>
+
+      <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Own a Manufacturing or Industrial Business?</h3>
+        <p class="text-gray-700 mb-4">Get found by businesses searching for plastic manufacturers, suppliers, and industrial companies across Nigeria.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">Add Your Business Free &rarr;</a>
+          <a href="/categories/manufacturing" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Manufacturing Directory &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Who is the largest plastic manufacturer in Nigeria?</h3>
+      <p>Dana Plast, Sunplast (Sun Group), and Rida National Plastics are among the largest by production volume. Chi Limited operates one of the largest integrated plastic packaging operations in the country. The industry is fragmented — no single company dominates all segments.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Are Nigerian plastic products SON certified?</h3>
+      <p>The best Nigerian plastic manufacturers hold SON (Standards Organisation of Nigeria) certification. Companies like Pamo Industries and Geeta Plastic (ISO 9001:2015) maintain quality certifications. Always confirm SON certification when purchasing for regulated applications.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What types of plastics are manufactured in Nigeria?</h3>
+      <p>Nigerian manufacturers produce: PVC pipes and fittings, HDPE containers and tanks, injection-moulded household items, blow-moulded jerry cans and drums, PET bottles for beverages, flexible polythene packaging, furniture, and industrial plastic components.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I order custom plastic products from Nigerian manufacturers?</h3>
+      <p>Yes. Companies like Dana Plast, Geeta Plastic, and Sonnex Packaging offer custom moulding and packaging solutions. Minimum order quantities (MOQs) vary — typically 1,000–10,000 units for injection-moulded parts. Contact manufacturers directly for quotes.</p>
+    `,
+    image: "/images/blog/plastic-manufacturing-nigeria.jpg",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Manufacturing",
+    readTime: "11 min read",
+    keywords: [
+      "best plastic manufacturing companies in nigeria",
+      "plastic companies in nigeria",
+      "plastic manufacturers nigeria",
+      "top plastic companies lagos",
+      "plastic packaging companies nigeria",
+      "dana plast nigeria",
+      "sunplast nigeria",
+      "rida plastics nigeria",
+      "plastic pipe manufacturers nigeria",
+      "plastic products nigeria"
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top 15 Best Plastic Manufacturing Companies in Nigeria (2026)",
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Top 15 plastic manufacturing companies in Nigeria 2026 — household plastics, packaging, industrial containers, pipes, and furniture manufacturers.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-plastic-manufacturing-companies-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top 15 Plastic Manufacturing Companies in Nigeria",
+        "numberOfItems": 15,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Dana Plast Nigeria" },
+          { "@type": "ListItem", "position": 2, "name": "Sunplast (Sun Group Nigeria)" },
+          { "@type": "ListItem", "position": 3, "name": "Rida National Plastics" },
+          { "@type": "ListItem", "position": 4, "name": "Geeta Plastic" },
+          { "@type": "ListItem", "position": 5, "name": "Techblow Nigeria Ltd" },
+          { "@type": "ListItem", "position": 6, "name": "Chi Limited" },
+          { "@type": "ListItem", "position": 7, "name": "Polyplast Nigeria" },
+          { "@type": "ListItem", "position": 8, "name": "Sonnex Packaging Nigeria" },
+          { "@type": "ListItem", "position": 9, "name": "Nagode Industries" },
+          { "@type": "ListItem", "position": 10, "name": "Leoplast Nigeria" },
+          { "@type": "ListItem", "position": 11, "name": "Pamo Industries Ltd" },
+          { "@type": "ListItem", "position": 12, "name": "Black Horse Plastic Manufacturers" },
+          { "@type": "ListItem", "position": 13, "name": "Universal Plastics Nigeria" },
+          { "@type": "ListItem", "position": 14, "name": "Stocorp Nigeria" },
+          { "@type": "ListItem", "position": 15, "name": "NBO Plastics" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who is the largest plastic manufacturer in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Dana Plast, Sunplast (Sun Group), and Rida National Plastics are among the largest by volume. Chi Limited operates one of the largest integrated plastic packaging operations." } },
+          { "@type": "Question", "name": "Are Nigerian plastic products SON certified?", "acceptedAnswer": { "@type": "Answer", "text": "The best manufacturers hold SON certification. Pamo Industries and Geeta Plastic (ISO 9001:2015) maintain quality certifications. Always confirm for regulated applications." } },
+          { "@type": "Question", "name": "What types of plastics are manufactured in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Nigerian manufacturers produce PVC pipes and fittings, HDPE containers, injection-moulded household items, blow-moulded jerry cans, PET bottles, flexible polythene packaging, furniture, and industrial components." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Plastic Manufacturing Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-plastic-manufacturing-companies-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "best-food-processing-companies-nigeria",
+    title: "Top 15 Best Food Processing Companies in Nigeria (2026)",
+    excerpt: "Comprehensive guide to the top 15 food processing companies in Nigeria in 2026. Covers Nestle, Dangote, Flour Mills, Dufil (Indomie), Chi Limited, BUA Foods and more — with company profiles, products, and industry insights.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
+
+      <p>Nigeria's food processing industry is one of the most dynamic sectors of the economy, driven by a population of 220 million+ people, rapid urbanisation, and growing demand for packaged and processed food. The sector spans flour milling, sugar refining, vegetable oil processing, beverage manufacturing, noodle production, dairy, confectionery, and more.</p>
+
+      <p>This guide profiles the <strong>top 15 food processing companies in Nigeria</strong> — the brands behind the foods millions of Nigerians eat every day.</p>
+
+      <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+        <p class="font-semibold text-green-800">Nigeria Food Processing Industry — 2026</p>
+        <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
+          <li>Industry contribution: ~5% of Nigeria's GDP</li>
+          <li>Key sub-sectors: flour milling, sugar, beverages, dairy, noodles, edible oil</li>
+          <li>Regulatory body: NAFDAC (National Agency for Food and Drug Administration and Control)</li>
+          <li>Exchange-listed players: Nestle Nigeria, Cadbury, Flour Mills, BUA Foods, Dangote Sugar</li>
+          <li>Fastest growing: packaged water, instant noodles, dairy, snacks</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 15 Food Processing Companies in Nigeria</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Nestle Nigeria PLC</h3>
+      <p>Nestle Nigeria is the country's most recognised food and beverage company. A subsidiary of Nestle S.A. (Switzerland) and listed on the NGX, Nestle Nigeria operates manufacturing plants in Lagos and Ogun State. Their brands are household staples across all income levels.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Maggi, Milo, Nescafe, Golden Morn, Nestle Pure Life, Kit Kat</li>
+        <li><strong>Headquarters:</strong> Ilupeju, Lagos | <strong>Founded:</strong> 1961 | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Flour Mills of Nigeria PLC (FMN)</h3>
+      <p>Nigeria's largest flour milling company and one of the biggest food businesses in Africa. Founded in 1960, FMN operates the Golden Penny brand which dominates Nigeria's flour, pasta, semolina, and noodle markets. Their integrated agribusiness model spans flour, pasta, sugar, animal feeds, and agro-allied products.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Golden Penny (flour, pasta, semolina, noodles, sugar, salt)</li>
+        <li><strong>Headquarters:</strong> Apapa, Lagos | <strong>Founded:</strong> 1960 | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Dufil Prima Foods PLC (Indomie)</h3>
+      <p>Dufil Prima Foods is the manufacturer of Indomie Instant Noodles — Nigeria's best-selling noodle brand. A joint venture between the Tolaram Group and partners, Dufil operates multiple production plants across Nigeria and exports Indomie to over 70 countries. Nigeria consumes approximately 4.5 billion packs of instant noodles annually.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Indomie, Minimie (chinchin, noodles), Power Oil</li>
+        <li><strong>Plants:</strong> Lagos, Ota (Ogun), Kaduna</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Dangote Sugar Refinery PLC</h3>
+      <p>Nigeria's largest sugar producer and one of the largest in Africa. Part of the Dangote Group, the company refines raw sugar and operates the Numan Sugar Estate in Adamawa State. A major supplier to FMCG companies across Nigeria.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Refined sugar, molasses | <strong>Capacity:</strong> ~1.44 million metric tonnes annually</li>
+        <li><strong>Headquarters:</strong> Lagos | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. BUA Foods PLC</h3>
+      <p>BUA Foods is the food subsidiary of BUA Group and one of Nigeria's fastest-growing food companies. Listed on the NGX in 2022, BUA Foods operates in sugar, flour, pasta, edible oils, and rice. Their integrated manufacturing complex in Lagos is among the most modern food processing facilities in Africa.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> BUA Sugar, BUA Flour, BUA Pasta, Rite Foods</li>
+        <li><strong>NGX Listed:</strong> Yes (2022) | See: <a href="/listings/bua-group" class="text-green-600 hover:underline">BUA Group on 9jaDirectory</a></li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Chi Limited</h3>
+      <p>Chi Limited is the company behind Nigeria's most popular fruit juice and dairy brands. Their Chivita and Hollandia brands dominate the fruit juice and evaporated milk segments. Chi operates a large integrated food and beverage complex in Ota, Ogun State.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Chivita (juice), Hollandia (dairy), Capri-Sonne (licensing)</li>
+        <li><strong>Headquarters:</strong> Ota, Ogun State | <strong>Founded:</strong> 1980</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Cadbury Nigeria PLC</h3>
+      <p>A subsidiary of Mondelez International, Cadbury Nigeria has been manufacturing confectionery and food products in Nigeria since 1965. Their brands are deeply embedded in Nigerian childhood and culture. NSE-listed and manufacturing locally in Ikeja, Lagos.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Bournvita, Tom Tom, Clorets, Buttermint</li>
+        <li><strong>Headquarters:</strong> Ikeja, Lagos | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Promasidor Nigeria</h3>
+      <p>Promasidor operates one of Nigeria's most diverse food brand portfolios targeting the mass market with affordable, widely available products.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Cowbell (powdered milk), Onga (seasoning), Loya Milk, Climax, Amila</li>
+        <li><strong>Reach:</strong> Products sold in 35+ African countries</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. FrieslandCampina WAMCO Nigeria PLC</h3>
+      <p>The maker of Peak Milk — Nigeria's most iconic evaporated milk brand. Part of FrieslandCampina (Dutch cooperative), WAMCO has been producing in Nigeria since 1954.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Peak Milk, Three Crowns, Peak Choco</li>
+        <li><strong>Headquarters:</strong> Lagos | <strong>NGX Listed:</strong> Yes | <strong>Founded in Nigeria:</strong> 1954</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Honeywell Flour Mills PLC</h3>
+      <p>One of Nigeria's top flour milling companies, recently acquired by Flour Mills of Nigeria PLC, consolidating Nigeria's flour milling market. Products include bread flour, semolina, bran, and animal feed.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">11. UAC Foods (UAC of Nigeria PLC)</h3>
+      <p>UAC of Nigeria's foods division operates some of Nigeria's most recognisable snack brands. They are the parent company of Gala sausage roll — Nigeria's best-selling snack food, sold at every major highway and petrol station in the country.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Gala (sausage roll), Supreme Ice Cream, Funtime</li>
+        <li><strong>Fun fact:</strong> Gala sausage rolls sold at 10,000+ points across Nigeria daily</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">12. Unilever Nigeria PLC</h3>
+      <p>Unilever Nigeria's food division produces some of the most widely used cooking and seasoning ingredients in Nigerian kitchens.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Knorr (seasoning cubes), Royco, Lipton (tea)</li>
+        <li><strong>Headquarters:</strong> Lagos | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">13. Okomu Oil Palm PLC</h3>
+      <p>Nigeria's leading palm oil producer, operating a large plantation and processing mill in Edo State. NSE-listed and one of the best-performing agro-processing companies in Nigeria.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Products:</strong> Crude palm oil (CPO), palm kernel oil, palm kernel cake</li>
+        <li><strong>Location:</strong> Udo, Edo State | <strong>NGX Listed:</strong> Yes</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">14. Rite Foods Limited</h3>
+      <p>A subsidiary of BUA Group, Rite Foods produces popular ready-to-eat snacks and beverages competing in Nigeria's fast-growing packaged drinks market.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
+        <li><strong>Key brands:</strong> Fearless Energy Drink, Sosa (carbonated drinks), Rite Sausage Roll</li>
+        <li><strong>Headquarters:</strong> Ososa, Ogun State</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">15. Primus Foods Nigeria</h3>
+      <p>Primus Foods is a growing Nigerian food processing company producing edible oils, tomato paste, seasoning, and canned foods — focused on import substitution and mass market supply.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Company</th>
+            <th class="border border-gray-300 p-3 text-left">Best Known For</th>
+            <th class="border border-gray-300 p-3 text-left">NGX Listed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">Nestle Nigeria</td><td class="border border-gray-300 p-3">Maggi, Milo, Golden Morn</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">Flour Mills of Nigeria</td><td class="border border-gray-300 p-3">Golden Penny flour &amp; pasta</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">Dufil Prima Foods</td><td class="border border-gray-300 p-3">Indomie Noodles</td><td class="border border-gray-300 p-3">No</td></tr>
+          <tr><td class="border border-gray-300 p-3">Dangote Sugar</td><td class="border border-gray-300 p-3">Nigeria's largest sugar refinery</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">BUA Foods</td><td class="border border-gray-300 p-3">Sugar, flour, pasta, edible oils</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">Chi Limited</td><td class="border border-gray-300 p-3">Chivita juice, Hollandia dairy</td><td class="border border-gray-300 p-3">No</td></tr>
+          <tr><td class="border border-gray-300 p-3">Cadbury Nigeria</td><td class="border border-gray-300 p-3">Bournvita, Tom Tom</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">Promasidor Nigeria</td><td class="border border-gray-300 p-3">Cowbell, Onga</td><td class="border border-gray-300 p-3">No</td></tr>
+          <tr><td class="border border-gray-300 p-3">FrieslandCampina WAMCO</td><td class="border border-gray-300 p-3">Peak Milk</td><td class="border border-gray-300 p-3">Yes</td></tr>
+          <tr><td class="border border-gray-300 p-3">UAC Foods</td><td class="border border-gray-300 p-3">Gala sausage roll</td><td class="border border-gray-300 p-3">Yes (UAC)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Find Food &amp; Restaurant Businesses Near You</h3>
+        <p class="text-gray-700 mb-4">Browse verified food businesses across Nigeria on 9jaDirectory.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/categories/restaurants" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">Restaurants &amp; Food &rarr;</a>
+          <a href="/listings/food-concepts-plc" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Chicken Republic (Food Concepts) &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the largest food processing company in Nigeria?</h3>
+      <p>By revenue, Nestle Nigeria PLC and Flour Mills of Nigeria PLC are consistently the largest. BUA Foods rapidly became one of the most valuable food companies by market cap after its 2022 NGX listing. Dufil Prima Foods (Indomie) is the largest by volume in the instant noodle segment.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which Nigerian food companies are listed on the stock exchange?</h3>
+      <p>NGX-listed food companies include Nestle Nigeria, Flour Mills of Nigeria, Cadbury Nigeria, FrieslandCampina WAMCO (Peak Milk), Dangote Sugar Refinery, BUA Foods, Honeywell Flour Mills, Unilever Nigeria, and Okomu Oil Palm.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How is food processing regulated in Nigeria?</h3>
+      <p>NAFDAC (National Agency for Food and Drug Administration and Control) is the primary regulator. All food products sold commercially in Nigeria must be NAFDAC-registered. The Standards Organisation of Nigeria (SON) also sets quality standards. Companies must comply with NAFDAC labelling, ingredient, and safety requirements before commercial sale.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What food products does Nigeria produce most of?</h3>
+      <p>Nigeria's food processing sector is strongest in: flour and semolina, instant noodles (one of the world's largest markets), sugar, palm oil, dairy products, beverages, seasoning and condiments, and packaged rice. Nigeria is also the world's largest cassava producer — driving a fast-growing starch processing industry.</p>
+    `,
+    image: "/images/blog/food-processing-nigeria.jpg",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Business",
+    readTime: "12 min read",
+    keywords: [
+      "best food processing companies in nigeria",
+      "food processing companies nigeria",
+      "nestle nigeria",
+      "flour mills of nigeria",
+      "dufil prima foods indomie",
+      "dangote sugar refinery",
+      "bua foods nigeria",
+      "top food companies nigeria",
+      "food manufacturing companies nigeria",
+      "nigerian food industry"
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top 15 Best Food Processing Companies in Nigeria (2026)",
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Top 15 food processing companies in Nigeria 2026 — Nestle, Flour Mills, Dufil (Indomie), Dangote Sugar, BUA Foods, Chi Limited, Cadbury, Peak Milk and more.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-food-processing-companies-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top 15 Food Processing Companies in Nigeria",
+        "numberOfItems": 15,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Nestle Nigeria PLC" },
+          { "@type": "ListItem", "position": 2, "name": "Flour Mills of Nigeria PLC" },
+          { "@type": "ListItem", "position": 3, "name": "Dufil Prima Foods PLC" },
+          { "@type": "ListItem", "position": 4, "name": "Dangote Sugar Refinery PLC" },
+          { "@type": "ListItem", "position": 5, "name": "BUA Foods PLC" },
+          { "@type": "ListItem", "position": 6, "name": "Chi Limited" },
+          { "@type": "ListItem", "position": 7, "name": "Cadbury Nigeria PLC" },
+          { "@type": "ListItem", "position": 8, "name": "Promasidor Nigeria" },
+          { "@type": "ListItem", "position": 9, "name": "FrieslandCampina WAMCO Nigeria PLC" },
+          { "@type": "ListItem", "position": 10, "name": "Honeywell Flour Mills PLC" },
+          { "@type": "ListItem", "position": 11, "name": "UAC Foods" },
+          { "@type": "ListItem", "position": 12, "name": "Unilever Nigeria PLC" },
+          { "@type": "ListItem", "position": 13, "name": "Okomu Oil Palm PLC" },
+          { "@type": "ListItem", "position": 14, "name": "Rite Foods Limited" },
+          { "@type": "ListItem", "position": 15, "name": "Primus Foods Nigeria" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the largest food processing company in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "By revenue, Nestle Nigeria PLC and Flour Mills of Nigeria PLC are consistently the largest. BUA Foods rapidly became one of the most valuable by market cap after its 2022 NGX listing." } },
+          { "@type": "Question", "name": "Which Nigerian food companies are listed on the stock exchange?", "acceptedAnswer": { "@type": "Answer", "text": "NGX-listed food companies include Nestle Nigeria, Flour Mills of Nigeria, Cadbury Nigeria, FrieslandCampina WAMCO, Dangote Sugar, BUA Foods, Honeywell Flour Mills, Unilever Nigeria, and Okomu Oil Palm." } },
+          { "@type": "Question", "name": "How is food processing regulated in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "NAFDAC is the primary regulator. All food products sold commercially must be NAFDAC-registered. The Standards Organisation of Nigeria (SON) also sets quality standards." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Food Processing Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-food-processing-companies-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "best-telecommunication-companies-nigeria",
+    title: "Best Telecommunication Companies in Nigeria (2026): MTN, Airtel, Glo & More",
+    excerpt: "Complete guide to the best telecom companies in Nigeria in 2026. Compare MTN, Airtel, Glo, and 9mobile on network coverage, data plans, call quality, and customer service to choose the right network for you.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
+
+      <p>Nigeria is one of Africa's largest telecommunications markets, with over <strong>230 million active SIM connections</strong> and one of the continent's fastest-growing mobile data user bases. The Nigerian Communications Commission (NCC) regulates the sector, which contributes approximately 14–16% to Nigeria's GDP.</p>
+
+      <p>Whether you want the best network for calls, the fastest 4G data in Lagos, or the most affordable data plans, this guide breaks down every major telecom in Nigeria so you can make the right choice.</p>
+
+      <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+        <p class="font-semibold text-green-800">Nigeria Telecom Industry — 2026 Snapshot</p>
+        <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
+          <li>Active SIM subscriptions: 230M+ (NCC data)</li>
+          <li>Mobile internet subscribers: 145M+</li>
+          <li>4G LTE coverage: available in all state capitals</li>
+          <li>5G: pilot deployments by MTN and Airtel in Lagos and Abuja</li>
+          <li>Regulator: NCC (Nigerian Communications Commission)</li>
+          <li>Major players: MTN Nigeria, Airtel Nigeria, Glo (Globacom), 9mobile</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">The Big Four: Nigeria's Major Telecom Networks</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. MTN Nigeria — Market Leader</h3>
+      <p>MTN Nigeria is the country's largest mobile network operator, commanding approximately <strong>40–42% market share</strong> by subscribers. Listed on the Nigerian Stock Exchange (NGX) since 2019, MTN Nigeria is also one of the most valuable companies on the exchange. Their network covers 99% of Nigeria's population and they were the first to commercially launch 5G in Nigeria.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold w-40">Subscribers</td><td class="border border-gray-300 p-3">83M+ (approx.)</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Coverage</td><td class="border border-gray-300 p-3">2G, 3G, 4G LTE nationwide; 5G in Lagos, Abuja, Port Harcourt</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Best for</td><td class="border border-gray-300 p-3">Widest coverage, most reliable 4G, corporate services</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Customer care</td><td class="border border-gray-300 p-3">180 (toll-free), 0803 000 0180</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">HQ</td><td class="border border-gray-300 p-3">MTN House, Victoria Island, Lagos</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">NGX Listed</td><td class="border border-gray-300 p-3">Yes (MTNN)</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>MTN Strengths:</strong> Best nationwide coverage (especially rural areas), most stable 4G speeds in Lagos and Abuja, largest agent and service centre network, MoMo mobile money integration, Xtratime credit advance feature.</p>
+      <p><strong>MTN Weaknesses:</strong> Generally the most expensive network; customer service queues at service centres can be long.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Airtel Nigeria — Strong Challenger</h3>
+      <p>Airtel Nigeria is the second-largest mobile operator, a subsidiary of Bharti Airtel Limited (India/Africa). With approximately <strong>55M+ subscribers</strong>, Airtel competes directly with MTN on price and data value. Known for aggressive data bundle promotions and consistent network quality in major cities.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold w-40">Subscribers</td><td class="border border-gray-300 p-3">55M+ (approx.)</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Coverage</td><td class="border border-gray-300 p-3">2G, 3G, 4G LTE; 5G pilot in Lagos and Abuja</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Best for</td><td class="border border-gray-300 p-3">Data value, urban speed, unlimited data plans</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Customer care</td><td class="border border-gray-300 p-3">121 (toll-free), 0802 300 0121</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">HQ</td><td class="border border-gray-300 p-3">Airtel House, Victoria Island, Lagos</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Airtel Strengths:</strong> Often the best data speed in urban areas; competitive data bundle pricing; Airtel Money (mobile financial services); strong international roaming; popular night bundles.</p>
+      <p><strong>Airtel Weaknesses:</strong> Coverage gaps in rural areas and some northern states; customer service resolution times can be slower.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Glo (Globacom) — Nigeria's Own Network</h3>
+      <p>Globacom (Glo) is Nigeria's only indigenous telecoms company, founded in 2003 by business magnate Mike Adenuga. Despite being third in subscriber numbers, Glo has invested heavily in network infrastructure including the Glo-1 submarine cable connecting Nigeria to the UK. Popular for competitive call rates and strong brand loyalty.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold w-40">Subscribers</td><td class="border border-gray-300 p-3">55M+ (approx.)</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Best for</td><td class="border border-gray-300 p-3">Affordable calls, value data bundles</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Customer care</td><td class="border border-gray-300 p-3">121, 0805 000 0121</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">HQ</td><td class="border border-gray-300 p-3">Mike Adenuga Towers, Victoria Island, Lagos</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Ownership</td><td class="border border-gray-300 p-3">Mike Adenuga (100% Nigerian-owned)</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Glo Strengths:</strong> Cheapest call rates among major networks; excellent data value on specific promotions; Glo-1 submarine cable gives strong data backbone; Nigerian-owned (appeals to buy-Nigerian sentiment).</p>
+      <p><strong>Glo Weaknesses:</strong> Data network quality is less consistent than MTN and Airtel in some regions; 4G rollout has been slower than competitors in some areas.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. 9mobile (formerly Etisalat Nigeria)</h3>
+      <p>9mobile is the fourth and smallest of Nigeria's major networks. Originally launched as Etisalat Nigeria in 2008, the company rebranded to 9mobile in 2017. Currently operated by Teleology Nigeria, 9mobile has a loyal customer base particularly among professionals and data users in Lagos and Abuja.</p>
+
+      <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
+        <tbody>
+          <tr><td class="border border-gray-300 p-3 font-semibold w-40">Subscribers</td><td class="border border-gray-300 p-3">14M+ (approx.)</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Best for</td><td class="border border-gray-300 p-3">Data quality in Lagos/Abuja, corporate SIM plans</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Customer care</td><td class="border border-gray-300 p-3">200 (toll-free), 0809 000 0200</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">HQ</td><td class="border border-gray-300 p-3">Victoria Island, Lagos</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>9mobile Strengths:</strong> Strong data speeds in Lagos and Abuja where 4G is well-deployed; less congested network due to smaller subscriber base; good customer service reputation.</p>
+      <p><strong>9mobile Weaknesses:</strong> Smallest coverage area — struggles in rural areas and northern states; fewest service centres.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Head-to-Head Comparison (2026)</h2>
+      <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 p-3 text-left">Feature</th>
+            <th class="border border-gray-300 p-3 text-center">MTN</th>
+            <th class="border border-gray-300 p-3 text-center">Airtel</th>
+            <th class="border border-gray-300 p-3 text-center">Glo</th>
+            <th class="border border-gray-300 p-3 text-center">9mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 p-3">National Coverage</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td></tr>
+          <tr><td class="border border-gray-300 p-3">4G Speed (Urban)</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
+          <tr><td class="border border-gray-300 p-3">Data Value</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
+          <tr><td class="border border-gray-300 p-3">Call Rates</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
+          <tr><td class="border border-gray-300 p-3">5G Availability</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★</td><td class="border border-gray-300 p-3 text-center">★</td></tr>
+          <tr><td class="border border-gray-300 p-3">Rural Coverage</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose the Right Nigerian Network</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>If you travel across Nigeria regularly:</strong> MTN has the widest coverage and is the safest choice.</li>
+        <li><strong>If you are a heavy data user in Lagos or Abuja:</strong> Airtel or 9mobile often deliver the best urban 4G speeds.</li>
+        <li><strong>If you want the cheapest calls and data:</strong> Glo consistently offers the most aggressive pricing.</li>
+        <li><strong>If you need a corporate or business line:</strong> MTN Business and Airtel Business have the most comprehensive enterprise offerings.</li>
+        <li><strong>If you live in northern Nigeria:</strong> MTN has the strongest presence in Kano, Kaduna, Sokoto, and the northeast.</li>
+        <li><strong>Pro tip: Use two SIMs</strong> — most Nigerians carry two lines for redundancy. A common combination is MTN (coverage) + Glo or Airtel (data value).</li>
+      </ul>
+
+      <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Find Technology &amp; Telecom Businesses in Nigeria</h3>
+        <p class="text-gray-700 mb-4">Browse telecom, IT, and technology companies on 9jaDirectory.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/categories/technology" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">Technology Companies &rarr;</a>
+          <a href="/states/lagos" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Lagos Businesses &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which telecom network is best in Nigeria in 2026?</h3>
+      <p>MTN Nigeria is the best overall for coverage and reliability. For data speed in major cities, Airtel is often the fastest. Glo offers the best value on calls and data for budget-conscious users. 9mobile is solid for data quality in Lagos and Abuja. Most serious users carry two SIMs across networks.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which network has the best 4G coverage in Nigeria?</h3>
+      <p>MTN has the widest 4G LTE coverage, reaching all 36 states and FCT. MTN was also the first to launch commercial 5G in Nigeria in 2022.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which Nigerian network has the cheapest data plans?</h3>
+      <p>Glo consistently offers the most competitively priced data bundles. Airtel also runs frequent data promotions. Always check current prices on *131# (MTN), *141# (Airtel), *127# (Glo), or *200# (9mobile) as tariffs change.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Does Nigeria have 5G network?</h3>
+      <p>Yes. MTN Nigeria launched commercial 5G in 2022, initially in Lagos and Abuja, with ongoing expansion. Airtel has deployed 5G in pilot zones. Glo and 9mobile have not yet commercially launched 5G as of early 2026. A 5G-compatible handset is required to access the network.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Who regulates telecoms in Nigeria?</h3>
+      <p>The Nigerian Communications Commission (NCC) is the independent federal regulator. The NCC issues operating licences, sets quality of service (QoS) standards, approves tariff changes, and handles consumer complaints. File complaints at ncc.gov.ng or call the NCC Consumer Portal at 622.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How many telecom subscribers does Nigeria have?</h3>
+      <p>Nigeria has over 230 million active SIM subscriptions as of 2026. MTN leads with approximately 83M subscribers, followed by Airtel and Glo (~55M each), and 9mobile (~14M). Note: many Nigerians hold multiple SIMs across networks.</p>
+    `,
+    image: "/images/blog/telecom-companies-nigeria.jpg",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Technology",
+    readTime: "13 min read",
+    keywords: [
+      "best telecommunication companies in nigeria",
+      "telecom companies nigeria",
+      "mtn nigeria",
+      "airtel nigeria",
+      "glo nigeria",
+      "9mobile nigeria",
+      "best network in nigeria 2026",
+      "cheapest data plan nigeria",
+      "4g coverage nigeria",
+      "ncc nigeria telecom"
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Telecommunication Companies in Nigeria (2026): MTN, Airtel, Glo & More",
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Compare the best telecom companies in Nigeria 2026 — MTN, Airtel, Glo, and 9mobile. Coverage, data plans, 5G, call rates, and which network is best for you.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-telecommunication-companies-nigeria" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which telecom network is best in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "MTN Nigeria is the best overall for coverage and reliability. Airtel is often the fastest for data in major cities. Glo offers the best value on calls and data. 9mobile is solid for data quality in Lagos and Abuja." } },
+          { "@type": "Question", "name": "Which network has the best 4G coverage in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "MTN has the widest 4G LTE coverage, reaching all 36 states and FCT. MTN was also the first to launch commercial 5G in Nigeria in 2022." } },
+          { "@type": "Question", "name": "Which Nigerian network has the cheapest data plans?", "acceptedAnswer": { "@type": "Answer", "text": "Glo consistently offers the most competitively priced data bundles. Airtel also runs frequent promotions. Check current prices on *131# (MTN), *141# (Airtel), *127# (Glo), or *200# (9mobile)." } },
+          { "@type": "Question", "name": "Does Nigeria have 5G network?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. MTN Nigeria launched commercial 5G in 2022, initially in Lagos and Abuja. Airtel has 5G in pilot zones. Glo and 9mobile have not commercially launched 5G as of early 2026." } },
+          { "@type": "Question", "name": "Who regulates telecoms in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "The Nigerian Communications Commission (NCC) is the independent federal regulator. File complaints at ncc.gov.ng or call 622." } },
+          { "@type": "Question", "name": "How many telecom subscribers does Nigeria have?", "acceptedAnswer": { "@type": "Answer", "text": "Nigeria has over 230 million active SIM subscriptions. MTN leads with ~83M subscribers, followed by Airtel and Glo (~55M each), and 9mobile (~14M)." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Telecommunication Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-telecommunication-companies-nigeria" }
+        ]
+      }
+    ])
+  },
+
 ];
