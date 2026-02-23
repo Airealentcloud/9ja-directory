@@ -10517,7 +10517,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">How do I compete with Chowdeck and Jumia Food?</h3>
       <p>You do not compete head-on with platforms — you use them. The smart play is to list on Chowdeck for discovery, then convert one-time platform customers into direct WhatsApp regulars where you keep 100% of revenue. Offer a loyalty incentive: "Order 5 times directly via WhatsApp and get one free." Building a 200-person repeat customer base is worth more than ranking on any platform.</p>
     `,
-    image: "/images/blog/food-delivery-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop",
     date: "Feb 23, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business",
@@ -10741,7 +10741,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">How do I identify fake PVC pipes in Nigeria?</h3>
       <p>Check for the SON certification mark stamped on the pipe. Genuine pipes have uniform wall thickness and batch numbers. Always buy from manufacturer-authorised distributors and avoid prices 30–40% below market rate.</p>
     `,
-    image: "/images/blog/plumbing-materials-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Construction",
@@ -10932,7 +10932,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Can I order custom plastic products from Nigerian manufacturers?</h3>
       <p>Yes. Companies like Dana Plast, Geeta Plastic, and Sonnex Packaging offer custom moulding and packaging solutions. Minimum order quantities (MOQs) vary — typically 1,000–10,000 units for injection-moulded parts. Contact manufacturers directly for quotes.</p>
     `,
-    image: "/images/blog/plastic-manufacturing-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Manufacturing",
@@ -11171,7 +11171,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">What food products does Nigeria produce most of?</h3>
       <p>Nigeria's food processing sector is strongest in: flour and semolina, instant noodles (one of the world's largest markets), sugar, palm oil, dairy products, beverages, seasoning and condiments, and packaged rice. Nigeria is also the world's largest cassava producer — driving a fast-growing starch processing industry.</p>
     `,
-    image: "/images/blog/food-processing-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1565118531796-763e5082d113?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business",
@@ -11393,7 +11393,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">How many telecom subscribers does Nigeria have?</h3>
       <p>Nigeria has over 230 million active SIM subscriptions as of 2026. MTN leads with approximately 83M subscribers, followed by Airtel and Glo (~55M each), and 9mobile (~14M). Note: many Nigerians hold multiple SIMs across networks.</p>
     `,
-    image: "/images/blog/telecom-companies-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Technology",

@@ -43,8 +43,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-    const featuredPost = blogPosts[0];
-    const recentPosts = blogPosts.slice(1);
+    const sortedPosts = [...blogPosts].reverse();
+    const featuredPost = sortedPosts[0];
+    const recentPosts = sortedPosts.slice(1);
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
