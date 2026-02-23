@@ -11465,4 +11465,592 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
+  // ── BEST SOLAR COMPANIES NIGERIA ───────────────────────────────────────────
+  {
+    slug: "best-solar-companies-nigeria-2026",
+    title: "Best Solar Panel Installation Companies in Nigeria (2026)",
+    excerpt: "Nigeria's electricity crisis makes solar essential. Here are the 12 best solar panel installation companies in Nigeria for 2026 — with prices, services, and how to choose the right installer.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>NEPA never came. It never will. With Nigeria generating roughly 4,000MW for a population of over 220 million people, the average Nigerian household or business runs on generators for 8 to 20 hours a day. The cost is brutal — diesel at ₦1,600+ per litre, maintenance, noise, fumes, and the constant uncertainty of running out of fuel mid-operation.</p>
+
+      <p>Solar is no longer a luxury. For thousands of Nigerian homes, SMEs, schools, and factories, it is the most practical decision they have made in years. This guide covers the <strong>best solar panel installation companies in Nigeria in 2026</strong> — what they offer, who they serve, and what their systems cost.</p>
+
+      <figure class="my-6">
+        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070&auto=format&fit=crop" alt="Solar panels installed on a rooftop in Nigeria" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Solar energy is the fastest-growing power solution for Nigerian homes and businesses in 2026.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Solar Panel Prices in Nigeria (2026)</h2>
+      <p>Before picking a company, understand the cost range. Solar prices in Nigeria shift with the Naira/dollar exchange rate since approximately 95% of panels are imported from China.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse border border-gray-200 rounded-lg">
+          <thead class="bg-green-50">
+            <tr>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">System Size</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Typical Use</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Cost Range (₦)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">1–2 kVA</td><td class="border border-gray-200 px-4 py-3">Lights, fans, TV, laptop</td><td class="border border-gray-200 px-4 py-3 font-medium">₦850,000 – ₦1.2M</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">3–4 kVA</td><td class="border border-gray-200 px-4 py-3">Fridge, water pump, small AC</td><td class="border border-gray-200 px-4 py-3 font-medium">₦2M – ₦3M</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">5 kVA+</td><td class="border border-gray-200 px-4 py-3">Full home backup / office</td><td class="border border-gray-200 px-4 py-3 font-medium">₦2M – ₦5M+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Commercial 10–50 kVA</td><td class="border border-gray-200 px-4 py-3">Factory, school, hotel</td><td class="border border-gray-200 px-4 py-3 font-medium">₦7M – ₦50M+</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">The 12 Best Solar Installation Companies in Nigeria (2026)</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Arnergy Solar — Best for SMEs</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Arnergy is one of Nigeria's most recognised solar brands. Founded around 2014, it focuses on commercial, industrial, and SME clients who need reliable hybrid solar systems with remote monitoring capabilities. Their flexible payment options including Pay-As-You-Go models make solar accessible without a large upfront capital outlay — a major advantage for growing businesses.</p>
+      <p><strong>Best for:</strong> SMEs, offices, and commercial properties.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Daystar Power Group — Best for C&I Clients</h3>
+      <p><strong>Location:</strong> Lagos (operations in Nigeria, Ghana, Togo, Senegal)</p>
+      <p>Daystar Power is the most heavily funded solar company operating in Nigeria, having raised over $62 million from international development finance institutions including IFC, DEG, and SunFunder. Their Power-as-a-Service model is tailored to Commercial and Industrial (C&I) clients — businesses that consume large amounts of power and pay crippling diesel costs. Daystar designs, finances, installs, and operates the system; you pay per kWh consumed.</p>
+      <p><strong>Best for:</strong> Factories, manufacturing plants, large commercial estates.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Rensource Energy — Best C&I Power-as-a-Service</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Founded in 2016 by Olajuwon Ademola, Rensource raised a $20M Series A and serves the Commercial and Industrial segment with a Power-as-a-Service model. They design, finance, install, and operate solar systems on client premises — clients pay per unit of electricity consumed. Rensource has expanded into Ghana and other African markets.</p>
+      <p><strong>Best for:</strong> Businesses with high electricity bills looking to eliminate generator dependency long-term.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. GVE Projects (Green Village Electricity) — Best for Communities & Off-Grid</h3>
+      <p><strong>Location:</strong> Port Harcourt (HQ), Abuja office at 22A Suez Crescent, Wuse Zone 4</p>
+      <p>GVE is Nigeria's leader in solar mini-grids and rural electrification. Founded in 2009 by Ifeanyi B. Orajaka, GVE has partnered with the World Bank, the Rural Electrification Agency (REA), and IEEE Smart Village to power off-grid Nigerian communities with their proprietary G-Vend smart metering system. They also serve commercial rooftop installations and publish detailed solar pricing guides.</p>
+      <p><strong>Best for:</strong> Community developers, real estate developers, and businesses in off-grid locations.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Auxano Solar — Nigeria's Indigenous Panel Maker</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Founded in 2014, Auxano Solar is the first indigenous solar panel assembler and manufacturer in Nigeria, with panels certified by the Standards Organization of Nigeria (SON). Backed by a $1.5M investment from USADF and Shell's "All On" fund, Auxano provides full residential and commercial installations using their own SON-certified panels and international brands.</p>
+      <p><strong>Best for:</strong> Nigerians who prefer a locally-made, certified solar panel option.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Lumos Nigeria — Best Pay-As-You-Go for Homes</h3>
+      <p><strong>Model:</strong> Pay-As-You-Go solar home systems via MTN Nigeria partnership</p>
+      <p>Lumos partners with MTN Nigeria to distribute solar home systems to rural and semi-urban households. The model requires roughly $50 down and ~$0.50/day via MTN mobile money, with ownership transferring after 3–5 years of payments. Lumos has deployed over 88,000 solar home systems in Nigeria and received $90M+ in funding.</p>
+      <p><strong>Best for:</strong> Rural homes and small shops without access to grid power.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. BBOXX Nigeria — Solar for Southwest Nigeria</h3>
+      <p><strong>Coverage:</strong> Lagos, Ogun, Oyo, Ondo, Osun, Ekiti states</p>
+      <p>UK-based BBOXX entered Nigeria with their first shop in Ijebu Ode, Ogun State, targeting off-grid and partially-connected communities across southwest Nigeria through flexible Pay-As-You-Go solar home systems.</p>
+      <p><strong>Best for:</strong> Rural and peri-urban homes in southwest Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Wavetra Energy — Best for Training & Residential</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Wavetra Energy provides residential, commercial, and industrial solar solutions, and also runs a Solar Academy — one of the few companies in Nigeria that trains solar technicians while also installing systems.</p>
+      <p><strong>Best for:</strong> Residential clients who want a reliable installer with long-term support.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Rubitec Solar — Bespoke Solutions</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Rubitec specialises in custom-designed solar solutions including solar water pumps, solar-powered refrigeration systems, and unique commercial requirements.</p>
+      <p><strong>Best for:</strong> Businesses with unique power needs such as cold storage or water pumping.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. SolarKobo — Best for Product Research</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>SolarKobo positions itself as the consumer's guide to solar in Nigeria — offering product comparisons, reviews, and educational content about panels, inverters, and batteries at competitive prices.</p>
+      <p><strong>Best for:</strong> DIY solar buyers who want to compare equipment before installation.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">11. Suluway (Sulu Expert Solutions) — Best Budget Residential</h3>
+      <p>A fast-growing company known for affordable residential solar packages with long-term support. Popular among homeowners in Lagos and southwest Nigeria.</p>
+      <p><strong>Best for:</strong> Homeowners on a tight budget who want reliable, affordable solar.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">12. Gennex Technologies — Industrial Solar Engineering</h3>
+      <p><strong>Location:</strong> Lagos, Nigeria</p>
+      <p>Gennex provides full solar engineering and installation services focused on industrial and commercial clients requiring precision system design.</p>
+      <p><strong>Best for:</strong> Industrial facilities and large commercial properties requiring custom-engineered solar solutions.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose a Solar Company in Nigeria</h2>
+      <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Check their track record.</strong> Ask for photos and contacts of past installations.</li>
+        <li><strong>Confirm they use certified equipment.</strong> Ask for panel and inverter brands — verify panels are SON-certified or from reputable international manufacturers.</li>
+        <li><strong>Get multiple quotes.</strong> Get at least 3 quotes for the same system specification before deciding.</li>
+        <li><strong>Ask about warranties.</strong> Panels: 25-year performance warranty. Inverters: 5 years. Batteries: varies by chemistry.</li>
+        <li><strong>Confirm after-sales support.</strong> Who do you call when the system underperforms?</li>
+        <li><strong>Understand the payment model.</strong> Some offer PaaS, pay-as-you-go, or instalments. Match the model to your cash flow.</li>
+      </ol>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Are you a solar installation company in Nigeria?</h3>
+        <p class="text-green-800 mb-4">Get found by thousands of Nigerians searching for solar solutions every month. List your business on 9jaDirectory.</p>
+        <a href="/categories/solar-energy" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Solar Business &rarr;</a>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much does solar installation cost in Nigeria in 2026?</h3>
+      <p>A small 1–2 kVA system for basic home use costs between ₦850,000 and ₦1.2 million. A mid-range 3–4 kVA system costs ₦2–3 million. A full 5 kVA+ home backup system costs ₦2–5 million. Commercial systems start from ₦7 million. Prices fluctuate with the Naira exchange rate.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which solar panel brand is best in Nigeria?</h3>
+      <p>Jinko Solar is consistently rated the most popular brand in Nigeria for residential and commercial use. Canadian Solar and Longi Solar are also highly regarded. For a locally certified option, Auxano Solar makes SON-certified panels assembled in Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is solar worth it in Nigeria?</h3>
+      <p>Yes. A generator consuming 5 litres of diesel per day at ₦1,600/litre costs ₦2.4 million per year in fuel alone. A ₦3 million solar system with proper sizing can eliminate that cost and pays for itself in 3–5 years.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between hybrid solar and off-grid solar in Nigeria?</h3>
+      <p>A hybrid system connects to the grid (when available) and solar, switching intelligently while storing excess energy in batteries. An off-grid system operates entirely independently of the grid. Most urban Nigerian installations are hybrid; rural and community installations are typically off-grid.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How long do solar panels last in Nigeria?</h3>
+      <p>Quality solar panels carry 25-year performance warranties and can last 30+ years. Inverters typically last 5–10 years. Lithium batteries last 10–15 years; lead-acid batteries need replacement every 2–5 years.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Solar Energy",
+    readTime: "12 min read",
+    keywords: [
+      "best solar companies in nigeria",
+      "solar panel installation lagos",
+      "solar panel price nigeria 2026",
+      "solar energy companies nigeria",
+      "solar installation company nigeria",
+      "best solar panels nigeria",
+      "solar inverter nigeria",
+      "off grid solar nigeria",
+      "hybrid solar system nigeria",
+      "arnergy solar",
+      "daystar power nigeria",
+      "how much does solar cost nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Solar Panel Installation Companies in Nigeria (2026)",
+        "image": ["https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "The 12 best solar panel installation companies in Nigeria in 2026 — Arnergy, Daystar Power, Rensource, GVE, Auxano, Lumos and more. Includes prices, services, and how to choose.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-solar-companies-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best Solar Companies in Nigeria 2026",
+        "numberOfItems": 12,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Arnergy Solar", "url": "https://www.arnergy.com" },
+          { "@type": "ListItem", "position": 2, "name": "Daystar Power Group", "url": "https://daystar-power.com" },
+          { "@type": "ListItem", "position": 3, "name": "Rensource Energy", "url": "https://rensource.energy" },
+          { "@type": "ListItem", "position": 4, "name": "GVE Projects Limited", "url": "https://gve-group.com" },
+          { "@type": "ListItem", "position": 5, "name": "Auxano Solar", "url": "https://auxanosolar.com" },
+          { "@type": "ListItem", "position": 6, "name": "Lumos Nigeria", "url": "https://lumosng.com" },
+          { "@type": "ListItem", "position": 7, "name": "BBOXX Nigeria", "url": "https://www.bboxx.com" },
+          { "@type": "ListItem", "position": 8, "name": "Wavetra Energy", "url": "https://wavetra.com" },
+          { "@type": "ListItem", "position": 9, "name": "Rubitec Solar", "url": "https://www.rubitec.com" },
+          { "@type": "ListItem", "position": 10, "name": "SolarKobo", "url": "https://solarkobo.com" },
+          { "@type": "ListItem", "position": 11, "name": "Suluway (Sulu Expert Solutions)", "url": "https://suluway.ng" },
+          { "@type": "ListItem", "position": 12, "name": "Gennex Technologies", "url": "https://www.gennextechnologies.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How much does solar installation cost in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "A 1–2 kVA system costs ₦850,000–₦1.2M. A 3–4 kVA system costs ₦2–3M. A 5 kVA+ system costs ₦2–5M+. Commercial systems start from ₦7M." } },
+          { "@type": "Question", "name": "Which solar panel brand is best in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Jinko Solar is the most popular brand. Canadian Solar and Longi Solar are also highly rated. Auxano makes SON-certified panels assembled locally in Nigeria." } },
+          { "@type": "Question", "name": "Is solar worth it in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A generator consuming 5 litres of diesel per day costs ₦2.4M/year in fuel alone. A ₦3M solar system pays for itself in 3–5 years." } },
+          { "@type": "Question", "name": "How long do solar panels last in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Quality panels carry 25-year warranties and last 30+ years. Inverters last 5–10 years. Lithium batteries last 10–15 years; lead-acid batteries need replacement every 2–5 years." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Solar Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-solar-companies-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ── BEST SECURITY COMPANIES NIGERIA ────────────────────────────────────────
+  {
+    slug: "best-security-companies-nigeria-2026",
+    title: "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
+    excerpt: "Looking for the best security company in Nigeria? This guide covers the top 10 licensed security firms in Lagos, Abuja, and Port Harcourt — manned guards, CCTV, armed escorts, and more.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>Security is not optional in Nigeria. From residential estates in Lekki to corporate head offices in Victoria Island, every property owner and business operator faces the same challenge: finding a licensed, reliable security company they can trust.</p>
+
+      <p>The private security industry in Nigeria is regulated by the <strong>Nigerian Security and Civil Defence Corps (NSCDC)</strong>, which licenses and supervises all private security outfits. Only NSCDC-licensed companies are legally permitted to provide guarding services. This guide covers the <strong>top 10 security companies in Nigeria in 2026</strong> — what they offer, where they operate, and what makes each one stand out.</p>
+
+      <figure class="my-6">
+        <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop" alt="Professional security guard at a corporate building in Lagos Nigeria" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Nigeria's private security sector employs hundreds of thousands of licensed guards across the country.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Important: Nigeria's Security Licensing Rules</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>All private security companies must hold a valid <strong>NSCDC licence</strong></li>
+        <li>Private security guards are <strong>not legally permitted to carry firearms</strong></li>
+        <li>Armed escort services require attachment of <strong>Nigerian Mobile Police Force (MOPOL)</strong> officers</li>
+        <li>Category A licences (3,000+ guards): ₦3 million; Category B (up to 3,000 guards): ₦2.5 million</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Security Companies in Nigeria (2026)</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Halogen Group — Nigeria's Largest Indigenous Security Firm</h3>
+      <p><strong>Headquarters:</strong> Ikeja, Lagos | <strong>Branches:</strong> Abuja, Port Harcourt, all major cities</p>
+      <p>Founded in July 1992 by Biodun Shobanjo, Halogen Group is the first indigenous private security company in Nigeria and remains the largest, with over 18,000 staff across 6 subsidiaries. Their services extend far beyond manned guarding — including cybersecurity, risk advisory, secured mobility (armed escorts with MOPOL), identity management, background checks, emergency response, and MEDEVAC services.</p>
+      <p><strong>Best for:</strong> Large enterprises needing comprehensive, integrated security across multiple sites nationwide.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. G4S Nigeria — International Standards, Local Operations</h3>
+      <p><strong>Coverage:</strong> Lagos, Abuja, Port Harcourt, and major Nigerian cities</p>
+      <p>G4S Nigeria (now part of Allied Universal globally) is one of the world's most recognised security brands in Nigeria. Their AssetGuard manned security product is used by major corporations, and they offer technology-integrated security including CCTV design, access control, alarm monitoring, executive protection, vehicle tracking, and maritime security.</p>
+      <p><strong>Best for:</strong> Multinationals and large corporations requiring international-standard security protocols.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Kings Guards Nigeria Limited — Abuja's Leading Security Firm</h3>
+      <p><strong>Headquarters:</strong> Abuja, FCT | <strong>Founded:</strong> 1992</p>
+      <p>Kings Guards is one of the most prominent security companies in Abuja, offering uniformed and plainclothes guards, VIP and executive protection, maritime security, armored vehicle services, special investigations, and K9 (security dog) units. Affiliated with ALPSPN and the Nigerian Institute of Industrial Security.</p>
+      <p><strong>Best for:</strong> Government bodies, diplomatic missions, and businesses in Abuja and the FCT.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Damon Guards Nigeria — Widest National Coverage</h3>
+      <p><strong>Founded:</strong> 1993 | <strong>Offices:</strong> Abuja, Lagos, Port Harcourt, Kaduna, Uyo, Maiduguri, Akure, Jos, Ado Ekiti</p>
+      <p>With a presence in more Nigerian cities than almost any other security company, Damon Guards is one of the largest security organisations in Nigeria by geographic reach. For businesses with operations spread across multiple states, Damon's nationwide footprint is a major advantage.</p>
+      <p><strong>Best for:</strong> Multi-location businesses needing a single security provider across multiple states.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Synergy Guards Nigeria — International-Backed Service</h3>
+      <p><strong>Parent:</strong> Subsidiary of Synergy Guards UK</p>
+      <p>Synergy Guards brings UK parent company standards to Nigerian operations. Their services include key management, mobile patrol, alarm response, security training, equipment supply, event security, and CCTV supply, installation, and remote monitoring.</p>
+      <p><strong>Best for:</strong> Businesses seeking UK-compliant security management standards in Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Laser Security Limited — Abuja Specialist</h3>
+      <p><strong>Location:</strong> 5 Yaounde Street, Wuse Zone 6, FCT, Abuja</p>
+      <p>Laser Security is one of the most cited security companies for the FCT, combining trained personnel with technology integration and access control. They publish regular security advisory content for their clients and are a top choice for Abuja-based businesses.</p>
+      <p><strong>Best for:</strong> Abuja-based businesses, estates, and residential properties.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Proton Security Services Ltd — Nationwide Reliability</h3>
+      <p><strong>Location:</strong> 10 Jibowu Street, Yaba, Lagos | <strong>Coverage:</strong> All 36 states</p>
+      <p>Proton Security operates across all 36 states in Nigeria, offering manned guard services, armed escort and VIP protection, electronic security systems, and special events security. Their nationwide reach with consistent service delivery makes them practical for businesses in multiple locations.</p>
+      <p><strong>Best for:</strong> Businesses requiring nationwide guard deployment with consistent standards.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Mantra Operations — Armed Escort Specialists</h3>
+      <p><strong>Location:</strong> Lagos | <strong>Also registered in the United Kingdom</strong></p>
+      <p>Mantra Operations specialises in armed escort and executive protection. Their teams include trained escort commanders, defensively-trained drivers, and MOPOL officers — the legal framework for armed security in Nigeria. Used by high-net-worth individuals, corporate executives, and expatriates in high-risk environments.</p>
+      <p><strong>Best for:</strong> VIPs and executives requiring armed escorts or close protection.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Eliezer Security Group — 20+ Years Experience</h3>
+      <p><strong>Experience:</strong> Over 20 years in the Nigerian security industry</p>
+      <p>Eliezer Security Group specialises in bespoke security planning — detailed threat assessment followed by a customised security plan for each client. Over two decades, they have built a client base that values tailored service over volume.</p>
+      <p><strong>Best for:</strong> Clients who need a customised security plan rather than standard guard posting.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Control Risks Nigeria — High-End Risk Consultancy</h3>
+      <p><strong>Parent:</strong> Control Risks Group (UK-headquartered global risk consultancy)</p>
+      <p>Control Risks operates at the premium end — not manned guarding, but crisis management, intelligence, executive protection, and security risk consulting for multinationals and international NGOs in Nigeria.</p>
+      <p><strong>Best for:</strong> Multinational corporations, oil and gas operators, and NGOs in complex operating environments.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Types of Security Services in Nigeria</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse border border-gray-200 rounded-lg">
+          <thead class="bg-green-50">
+            <tr>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Service</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">What It Covers</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Typical Clients</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Manned Guarding</td><td class="border border-gray-200 px-4 py-3">On-site uniformed or plainclothes guards</td><td class="border border-gray-200 px-4 py-3">Estates, offices, banks, schools</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">CCTV Installation</td><td class="border border-gray-200 px-4 py-3">Camera supply, installation, remote monitoring</td><td class="border border-gray-200 px-4 py-3">Homes, offices, retail</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Access Control</td><td class="border border-gray-200 px-4 py-3">Electronic gates, biometric entry, turnstiles</td><td class="border border-gray-200 px-4 py-3">Estates, corporate buildings</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Armed Escort (MOPOL)</td><td class="border border-gray-200 px-4 py-3">Armored/armed convoy with MOPOL attachment</td><td class="border border-gray-200 px-4 py-3">Cash-in-transit, VIPs, executives</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Executive Protection</td><td class="border border-gray-200 px-4 py-3">Close protection, threat assessment, route planning</td><td class="border border-gray-200 px-4 py-3">Executives, HNWIs, diplomats</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your security company looking for new clients?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for security services every month. Get found on 9jaDirectory.</p>
+        <a href="/categories/security-services" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company &rarr;</a>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I verify a security company is licensed in Nigeria?</h3>
+      <p>All legitimate security companies must hold a valid NSCDC licence. Ask any company to present their current NSCDC certificate. You can verify directly with the NSCDC regional office in your state. Never hire an unlicensed security outfit.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can private security guards in Nigeria carry guns?</h3>
+      <p>No. Private security guards are not permitted to carry firearms in Nigeria. Armed escort services require the attachment of Nigerian Mobile Police Force (MOPOL) officers. Any company claiming their guards are independently armed is operating illegally.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much do security companies charge in Nigeria?</h3>
+      <p>The average security guard earns ₦350,000–₦650,000 per year. Corporate clients negotiate annual contracts. Pricing depends on number of guards, training level, and risk profile. Always request quotes from at least 3 NSCDC-licensed companies before deciding.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the best security company for a residential estate in Lagos?</h3>
+      <p>Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. For smaller properties, Proton Security and Eliezer Security Group are well-regarded. Always verify NSCDC licensing.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Security Services",
+    readTime: "11 min read",
+    keywords: [
+      "best security companies in nigeria",
+      "private security lagos nigeria",
+      "security guard company nigeria",
+      "licensed security companies nigeria 2026",
+      "top security firms nigeria",
+      "CCTV installation company lagos",
+      "security company abuja nigeria",
+      "armed escort services nigeria",
+      "halogen security nigeria",
+      "G4S nigeria",
+      "NSCDC licensed security company",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
+        "image": ["https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Top 10 best security companies in Nigeria 2026 — Halogen, G4S, Kings Guards, Damon Guards, Proton, and more. NSCDC licensed firms across Lagos, Abuja and Port Harcourt.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-security-companies-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top Security Companies in Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Halogen Group Nigeria", "url": "https://halogen-group.com" },
+          { "@type": "ListItem", "position": 2, "name": "G4S Nigeria", "url": "https://www.g4s.com/en-ng" },
+          { "@type": "ListItem", "position": 3, "name": "Kings Guards Nigeria Limited", "url": "https://www.kingsguards.com" },
+          { "@type": "ListItem", "position": 4, "name": "Damon Guards Nigeria", "url": "#" },
+          { "@type": "ListItem", "position": 5, "name": "Synergy Guards Nigeria", "url": "#" },
+          { "@type": "ListItem", "position": 6, "name": "Laser Security Limited", "url": "https://lasersecuritynigeria.com" },
+          { "@type": "ListItem", "position": 7, "name": "Proton Security Services Ltd", "url": "https://protonsecurity.com" },
+          { "@type": "ListItem", "position": 8, "name": "Mantra Operations", "url": "https://www.mantraoperations.com" },
+          { "@type": "ListItem", "position": 9, "name": "Eliezer Security Group", "url": "https://eliezergroup.com" },
+          { "@type": "ListItem", "position": 10, "name": "Control Risks Nigeria", "url": "https://www.controlrisks.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "How do I verify a security company is licensed in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Ask any company to present their current NSCDC licence certificate, or verify directly with the NSCDC regional office in your state." } },
+          { "@type": "Question", "name": "Can private security guards in Nigeria carry guns?", "acceptedAnswer": { "@type": "Answer", "text": "No. Private guards cannot carry firearms. Armed escorts require MOPOL attachment — the legal framework for armed security in Nigeria." } },
+          { "@type": "Question", "name": "How much do security companies charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on number of guards, training, and risk profile. Get at least 3 quotes from NSCDC-licensed companies before deciding." } },
+          { "@type": "Question", "name": "What is the best security company for a residential estate in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. Always verify NSCDC licensing." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Security Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-security-companies-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ── BEST INSURANCE COMPANIES NIGERIA ───────────────────────────────────────
+  {
+    slug: "best-insurance-companies-nigeria-2026",
+    title: "Best Insurance Companies in Nigeria (2026): Motor, Health & Life",
+    excerpt: "Compare the best insurance companies in Nigeria for 2026 — Leadway, AIICO, AXA Mansard, NEM, Custodian, and more. Motor insurance prices, health plans, and what NAICOM approval means.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
+
+      <p>Nigeria's insurance sector is one of the fastest-growing financial services industries on the continent. With gross premiums written surpassing ₦735 billion in 2024 — a 61.4% year-on-year increase — Nigerian insurers are finally getting the traction that the market size has always suggested was possible.</p>
+
+      <p>Whether you are looking for the <strong>best car insurance in Nigeria</strong>, a health plan for your family, or a life cover policy, this guide breaks down the <strong>best insurance companies in Nigeria in 2026</strong> — what they cover, what they charge, and how they compare.</p>
+
+      <figure class="my-6">
+        <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop" alt="Insurance policy documents and financial planning in Nigeria" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Nigeria's insurance industry reached ₦735 billion in gross premiums in 2024, growing 61.4% year-on-year.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Key Insurance Facts for Nigeria (2026)</h2>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Regulator:</strong> NAICOM (National Insurance Commission) — all legitimate insurers must be NAICOM-licensed</li>
+        <li><strong>Third-party motor insurance is compulsory</strong> for all vehicles in Nigeria under the Insurance Act</li>
+        <li><strong>Third-party insurance cost:</strong> approximately ₦15,000 per year</li>
+        <li><strong>Comprehensive motor insurance:</strong> typically 3%–5% of the vehicle's current market value per year</li>
+        <li><strong>Nigeria has 50+ NAICOM-licensed insurers</strong> across life, general, and composite categories</li>
+        <li><strong>Total industry assets:</strong> ₦2.04 trillion (top 18 insurers, June 2025)</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Insurance Companies in Nigeria (2026)</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Leadway Assurance — Nigeria's Largest Insurer</h3>
+      <p><strong>Founded:</strong> 1970 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> ₦799 billion</p>
+      <p>Leadway Assurance is the largest insurance company in Nigeria by total assets. They generated ₦173.2 billion in insurance revenue in 2024 while paying out ₦117 billion in claims. Their digital-first transformation has driven 200% growth in revenue from digital channels. Leadway is widely regarded as Nigeria's most financially solid insurer with the strongest claims-paying record.</p>
+      <p><strong>Products:</strong> Life assurance, general insurance (motor, fire, marine, engineering), health management, pension, investment services.</p>
+      <p><strong>Best for:</strong> Individuals and businesses that want the most established, financially strongest Nigerian insurer.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. AIICO Insurance Plc — Nigeria's Oldest Major Insurer</h3>
+      <p><strong>Founded:</strong> 1963 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> ₦456.2 billion</p>
+      <p>Founded in 1963, AIICO is Nigeria's oldest major insurer. With 3,000+ agents nationwide, AIICO generated ₦156.1 billion in gross premiums in 2024 — a 45.54% year-on-year increase. Their comprehensive product range spans life, general, health, pensions, and asset management.</p>
+      <p><strong>Best for:</strong> Individuals looking for the widest product range and the most accessible distribution network.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. AXA Mansard Insurance Plc — International Backing</h3>
+      <p><strong>Founded:</strong> 1989 | <strong>Parent:</strong> AXA Group (France) | <strong>2024 Gross Premium:</strong> ₦138.5 billion</p>
+      <p>AXA Mansard became part of the global AXA Group in 2014. Their life insurance starts from ₦10,000/month, comprehensive motor insurance can be spread over up to 10 monthly instalments, and their HMO arm offers corporate and individual health plans. AXA Mansard has one of the strongest digital presences of any Nigerian insurer.</p>
+      <p><strong>Best for:</strong> Customers who want international brand assurance and accessible digital insurance products.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. NEM Insurance Plc — Nigeria's Motor Insurance Leader</h3>
+      <p><strong>Market Position:</strong> No. 1 in motor insurance since 2015 | <strong>2024 Motor Premium:</strong> ₦25.79 billion</p>
+      <p>NEM Insurance has been Nigeria's dominant motor insurance underwriter for nearly a decade. In 2024, NEM wrote ₦25.79 billion in motor premiums — almost double the closest competitor. Beyond motor, NEM covers fire, burglary, marine, engineering, aviation, and oil and gas.</p>
+      <p><strong>Best for:</strong> Motor vehicle owners, fleet operators, and logistics businesses.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Custodian Investment Plc — Second Largest by Assets</h3>
+      <p><strong>Total Assets:</strong> ₦456.3 billion | <strong>H1 2025 Revenue:</strong> ₦124.28 billion</p>
+      <p>Custodian and Allied Assurance is among the largest listed insurers in Nigeria. What distinguishes Custodian is the synergy between their insurance and asset management arms — policyholder funds are professionally managed to generate better returns. They ranked 4th in motor insurance in 2024 with ₦10.48 billion in motor premium.</p>
+      <p><strong>Best for:</strong> Businesses and high-net-worth individuals who want insurance combined with strong investment management.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Mutual Benefits Assurance Plc — Largest Retail Network</h3>
+      <p><strong>Founded:</strong> 1995 | <strong>Branches:</strong> 250+ nationwide</p>
+      <p>Mutual Benefits has the largest retail insurance distribution network in Nigeria. They wrote ₦14.21 billion in motor insurance in 2024 (2nd in the market). Their microinsurance arm and affordable product range make them the most accessible insurer for ordinary Nigerians — including children's education plans, travel insurance, and group life assurance for SMEs.</p>
+      <p><strong>Best for:</strong> SMEs, self-employed individuals, and families seeking affordable multi-product insurance coverage.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Coronation Insurance Plc — Nigeria's Oldest Insurer</h3>
+      <p><strong>Founded:</strong> 1958 | <strong>Total Assets:</strong> ₦100.07 billion</p>
+      <p>Founded in 1958, Coronation Insurance is one of the oldest insurers in Nigeria. Their long institutional track record and product mix covering fire, special perils, goods-in-transit, all-risk, and life insurance make them a strong choice for complex or non-standard risks.</p>
+      <p><strong>Best for:</strong> Businesses with complex insurance requirements seeking an established underwriter.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Consolidated Hallmark Holdings Plc — Growing Composite</h3>
+      <p><strong>2024 Gross Premium:</strong> ₦29.7 billion | <strong>2024 Claims Paid:</strong> ₦9.06 billion</p>
+      <p>Restructured in 2023, Consolidated Hallmark now covers general insurance, microinsurance, HMO health insurance, and financial services under a single holding structure — allowing clients to bundle multiple coverage types within one group.</p>
+      <p><strong>Best for:</strong> Businesses wanting general insurance, health, and microinsurance from a single provider group.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Zenith General Insurance — Bank-Backed Stability</h3>
+      <p><strong>Parent:</strong> Zenith Bank Plc</p>
+      <p>Zenith General Insurance benefits from the financial strength of Zenith Bank — one of Nigeria's largest banks. Bank-backed insurers provide an additional layer of financial security. Zenith General covers motor, fire, marine, aviation, and liability, ranking in the top 10 motor insurance underwriters in Nigeria.</p>
+      <p><strong>Best for:</strong> Zenith Bank customers and businesses seeking bank-backed financial strength behind their policies.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Hygeia HMO — Nigeria's Best Health Insurance</h3>
+      <p><strong>Type:</strong> Health Maintenance Organisation | <strong>Network:</strong> 2,000+ hospital facilities</p>
+      <p>For health insurance, Hygeia HMO is Nigeria's oldest and most established HMO — operating for over 30 years with a network of 2,000+ accredited hospital facilities nationwide. For affordable options, Reliance HMO offers plans from ₦3,500/month with telemedicine services.</p>
+      <p><strong>Best for:</strong> Businesses seeking group health insurance and individuals wanting Nigeria's widest hospital network.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Motor Insurance Prices in Nigeria (2026)</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full text-sm border-collapse border border-gray-200 rounded-lg">
+          <thead class="bg-green-50">
+            <tr>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Type</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">What It Covers</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Approx. Annual Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Third-Party (Mandatory)</td><td class="border border-gray-200 px-4 py-3">Damage to third parties only</td><td class="border border-gray-200 px-4 py-3 font-medium">~₦15,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Comprehensive</td><td class="border border-gray-200 px-4 py-3">Third-party + own damage, theft, fire</td><td class="border border-gray-200 px-4 py-3 font-medium">3%–5% of vehicle value</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Fleet (10+ vehicles)</td><td class="border border-gray-200 px-4 py-3">Corporate fleet with negotiated rates</td><td class="border border-gray-200 px-4 py-3 font-medium">Custom (contact insurer)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Are you an insurance broker or company in Nigeria?</h3>
+        <p class="text-green-800 mb-4">Reach thousands of Nigerians looking for insurance products every month. List your business on 9jaDirectory.</p>
+        <a href="/categories/insurance" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Insurance Business &rarr;</a>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which insurance company is best in Nigeria in 2026?</h3>
+      <p>Leadway Assurance is rated best overall for financial strength (₦799B in assets) and claims payment (₦117B paid in 2024). AXA Mansard is best for digital and customer service. NEM Insurance is best for motor. Hygeia HMO is best for health insurance. The right choice depends on your specific needs.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is car insurance compulsory in Nigeria?</h3>
+      <p>Yes. Third-party motor insurance is compulsory under the Nigerian Insurance Act. Third-party insurance costs approximately ₦15,000 per year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng — fake insurance certificates are common in Nigeria.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much is comprehensive car insurance in Nigeria?</h3>
+      <p>Comprehensive motor insurance typically costs 3%–5% of the vehicle's current market value per year. For a car worth ₦5 million, that is ₦150,000–₦250,000 per year. AXA Mansard allows comprehensive motor premium to be spread over up to 10 monthly instalments.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How can I check if an insurance company is NAICOM-licensed?</h3>
+      <p>Visit naicom.gov.ng for the list of licensed insurance companies. Verify insurance certificates at ask.naicom.gov.ng. Always check NAICOM licensing before purchasing any policy — counterfeit insurance certificates are a significant problem in Nigeria, particularly for motor insurance.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What health insurance plans are available in Nigeria?</h3>
+      <p>Health insurance in Nigeria is provided through HMOs licensed by NHIS. Top HMOs include Hygeia HMO (widest hospital network, 2,000+ facilities), Reliance HMO (most affordable, from ₦3,500/month), and AXA Mansard HMO. Individual plans typically cost ₦20,000–₦60,000 per year.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 23, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Insurance",
+    readTime: "13 min read",
+    keywords: [
+      "best insurance companies nigeria 2026",
+      "motor insurance nigeria",
+      "third party car insurance nigeria",
+      "health insurance nigeria",
+      "life insurance nigeria",
+      "NAICOM approved insurance companies",
+      "leadway assurance nigeria",
+      "AXA mansard insurance",
+      "AIICO insurance nigeria",
+      "comprehensive car insurance nigeria",
+      "best HMO nigeria",
+      "insurance broker nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Insurance Companies in Nigeria (2026): Motor, Health & Life",
+        "image": ["https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-23",
+        "dateModified": "2026-02-23",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Compare the best insurance companies in Nigeria 2026 — Leadway, AIICO, AXA Mansard, NEM, Custodian, Mutual Benefits, and more. Motor, health, and life insurance prices explained.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-insurance-companies-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best Insurance Companies in Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Leadway Assurance Company Limited", "url": "https://www.leadway.com" },
+          { "@type": "ListItem", "position": 2, "name": "AIICO Insurance Plc", "url": "https://www.aiicoplc.com" },
+          { "@type": "ListItem", "position": 3, "name": "AXA Mansard Insurance Plc", "url": "https://www.axamansard.com" },
+          { "@type": "ListItem", "position": 4, "name": "NEM Insurance Plc", "url": "https://www.neminsurance.net" },
+          { "@type": "ListItem", "position": 5, "name": "Custodian Investment Plc", "url": "https://www.custodianplc.com.ng" },
+          { "@type": "ListItem", "position": 6, "name": "Mutual Benefits Assurance Plc", "url": "https://www.mutualbenefitsassurance.com" },
+          { "@type": "ListItem", "position": 7, "name": "Coronation Insurance Plc", "url": "https://www.coronationinsurance.com.ng" },
+          { "@type": "ListItem", "position": 8, "name": "Consolidated Hallmark Holdings Plc", "url": "https://www.consolidatedhallmark.com" },
+          { "@type": "ListItem", "position": 9, "name": "Zenith General Insurance", "url": "https://www.zenithinsurance.com.ng" },
+          { "@type": "ListItem", "position": 10, "name": "Hygeia HMO", "url": "https://www.hygeiahmo.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which insurance company is best in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Leadway Assurance is best overall for financial strength. AXA Mansard is best for digital/customer service. NEM Insurance is best for motor. Hygeia HMO is best for health insurance." } },
+          { "@type": "Question", "name": "Is car insurance compulsory in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Third-party motor insurance is compulsory and costs ~₦15,000/year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng." } },
+          { "@type": "Question", "name": "How much is comprehensive car insurance in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Comprehensive insurance costs 3%–5% of the vehicle's value per year. For a ₦5M car, that is ₦150,000–₦250,000/year. AXA Mansard allows payment in monthly instalments." } },
+          { "@type": "Question", "name": "How can I check if an insurance company is NAICOM-licensed?", "acceptedAnswer": { "@type": "Answer", "text": "Visit naicom.gov.ng for the list of licensed insurers. Verify certificates at ask.naicom.gov.ng." } },
+          { "@type": "Question", "name": "What health insurance plans are available in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top HMOs include Hygeia HMO (widest network), Reliance HMO (from ₦3,500/month), and AXA Mansard HMO. Plans cost ₦20,000–₦60,000/year." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Insurance Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-insurance-companies-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
 ];
