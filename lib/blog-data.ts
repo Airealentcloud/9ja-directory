@@ -10150,7 +10150,7 @@ export const blogPosts: BlogPost[] = [
       <p>If you have been thinking about starting a food delivery business in Nigeria, this is the most practical guide available. We cover every step — from choosing your business model and registering with the CAC, to partnering with Chowdeck and calculating your monthly profit. No fluff, no generic advice.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/food-delivery-nigeria.jpg" alt="How to start a food delivery business in Nigeria 2026" class="w-full rounded-lg shadow-lg" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop" alt="How to start a food delivery business in Nigeria 2026" class="w-full rounded-lg shadow-lg" loading="lazy" />
         <figcaption class="text-sm text-gray-500 mt-2">Nigeria's food delivery market is worth over $1.4 billion and growing rapidly across Lagos, Abuja, and Port Harcourt.</figcaption>
       </figure>
 
