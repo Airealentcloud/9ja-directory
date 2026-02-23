@@ -959,7 +959,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Do paid listings help?</h3>
       <p>Paid placements can help if the directory has real traffic in your niche. But first optimize your free listings: correct details, strong photos, and reviews. Then test paid upgrades on one platform and measure results.</p>
     `,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 25, 2025",
     author: "9jaDirectory Editorial Team",
     category: "Marketing",
@@ -1287,7 +1287,7 @@ export const blogPosts: BlogPost[] = [
       <p>Whether you choose to navigate the portal yourself or engage a professional, the most important thing is to start. Don't let bureaucracy paralyze your dreams.</p>
       <p><strong>Ready to grow?</strong> Once registered, your next step is visibility. <a href="/add-business" class="text-green-600 hover:underline">List your business on 9jaDirectory</a> for free today and get discovered by customers across Nigeria.</p>
     `,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1497366412874-3415097a27e7?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 23, 2025",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -1847,7 +1847,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
       <p>Your customers are waiting. Go find them.</p>
     `,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 18, 2025",
     author: "Tunde Bakare",
     category: "Marketing",
@@ -3166,7 +3166,7 @@ export const blogPosts: BlogPost[] = [
 
       <p class="mt-8 text-lg font-semibold text-green-700">💡 Pro Tip: Your business loan is not free money. Treat it as an investment. Borrow strategically. Repay religiously. Build credit. Your future self will thank you.</p>
     `,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 30, 2025",
     author: "9jaDirectory Finance Team",
     category: "Finance",
@@ -4329,7 +4329,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Explore categories like <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for suppliers and logistics partners.</p>
     `,
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 24, 2025",
     author: "Chinyere Okeke",
     category: "Business Guide",
