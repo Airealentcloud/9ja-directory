@@ -4163,7 +4163,7 @@ export const blogPosts: BlogPost[] = [
       <p>Many people search “POS near me” when there are no ATMs. You can get discovered by listing your location:</p>
       <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your POS business on 9jaDirectory</a> and select the most relevant category such as <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>. If your POS spot is already listed, use “Claim this Business” to manage it.</p>
     `,
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80",
     date: "Nov 25, 2025",
     author: "Musa Ibrahim",
     category: "Business Guide",
@@ -4329,7 +4329,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Explore categories like <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for suppliers and logistics partners.</p>
     `,
-    image: "https://images.unsplash.com/photo-1566576912906-600afa9dd747?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80",
     date: "Nov 24, 2025",
     author: "Chinyere Okeke",
     category: "Business Guide",
@@ -5214,7 +5214,7 @@ export const blogPosts: BlogPost[] = [
       <p>Dropshipping is one of the fastest ways to start selling online in Nigeria without holding inventory. Treat it like a real business: pick a niche, build trust, deliver fast, and improve weekly.</p>
       <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business for free on 9jaDirectory</a> so customers can find and verify you.</p>
     `,
-    image: "https://images.unsplash.com/photo-1599368358486-53d928373307?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 18, 2025",
     author: "9jaDirectory E-commerce Team",
     category: "Business",
@@ -6006,6 +6006,25 @@ export const blogPosts: BlogPost[] = [
     <p>If a gateway fails during sales peak, you need fast support. Before scaling ads, test support responsiveness and keep a backup payment option for emergencies.</p>
 
     <p>Need a developer or fintech consultant? Explore <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> and <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>.</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4">Run a Payment Gateway? Get Listed on 9jaDirectory</h2>
+    <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
+      <p><strong>Own or represent a payment gateway company in Nigeria?</strong> Get discovered by merchants comparing payment providers.</p>
+      <p class="mt-2"><a href="/add-business" class="text-green-700 hover:underline font-semibold">List Your Gateway Company</a> or <a href="/contact" class="text-green-700 hover:underline font-semibold">contact our team</a> for priority review.</p>
+    </div>
+
+    <h3 class="text-xl font-bold mt-6 mb-3">What to include in your listing submission</h3>
+    <ul class="list-disc pl-5 mt-2 mb-4">
+      <li><strong>Regulatory status:</strong> CBN license type (or partner bank details), CAC/RC number, and compliance contacts.</li>
+      <li><strong>Pricing details:</strong> fees for local cards, international cards, transfer, USSD, payouts, and disputes/chargebacks.</li>
+      <li><strong>Settlement timelines:</strong> normal payout window, weekend/holiday behavior, reserve/hold conditions.</li>
+      <li><strong>Payment methods:</strong> cards, bank transfer, USSD, virtual accounts, payment links, subscriptions, and invoicing.</li>
+      <li><strong>Integrations:</strong> API docs, SDKs, webhooks, and ready plugins (for example WooCommerce/Shopify).</li>
+      <li><strong>Risk and security:</strong> fraud controls, KYC/AML workflow, and PCI-DSS/security posture.</li>
+      <li><strong>Support quality:</strong> support channels, support hours, and escalation SLA.</li>
+      <li><strong>Verification links:</strong> official pricing page, docs, and status page links for fact-checking.</li>
+    </ul>
+
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">How long do settlements take?</h3>
     <p>It depends on the provider and your risk profile. Test with small transactions and confirm your settlement schedule before running big campaigns.</p>
@@ -6015,7 +6034,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
     <p>Choose one gateway that matches your business model, then optimize checkout and reconciliation. Reliable payments improve trust and conversion more than fancy features.</p>
   `,
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80",
     date: "Nov 12, 2025",
     author: "9jaDirectory Fintech Team",
     category: "Technology",
@@ -6035,7 +6054,7 @@ export const blogPosts: BlogPost[] = [
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "Best Payment Gateways for Nigerian Businesses: Paystack vs Flutterwave (2025)",
-      "image": "https://www.9jadirectory.org/images/blog/payment-gateways-nigeria.jpg",
+      "image": "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80",
       "author": "9jaDirectory Fintech Team",
       "publisher": {
         "@type": "Organization",
@@ -7471,7 +7490,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Tip</h2>
     <p>Start with a simple price table by zone/distance and a minimum fee. As volume grows, offer weekly billing to business clients and track unpaid invoices tightly.</p>
     `,
-    image: "https://images.unsplash.com/photo-1494522510464-82a42ec8a0f1?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop",
     date: "Nov 25, 2025",
     author: "9jaDirectory Services Team",
     category: "Business",
@@ -7487,7 +7506,7 @@ export const blogPosts: BlogPost[] = [
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "How to Start a Logistics & Delivery Business in Nigeria (2025)",
-      "image": ["https://images.unsplash.com/photo-1494522510464-82a42ec8a0f1?q=80&w=2070&auto=format&fit=crop"],
+      "image": ["https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop"],
       "datePublished": "2025-11-25",
       "author": { "@type": "Organization", "name": "9jaDirectory Services Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
@@ -7836,7 +7855,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Distribution Tip</h2>
     <p>To grow, focus on one channel first: resellers, offices, or small supermarkets. Deliver consistently, keep a weekly restock schedule, and track which locations reorder.</p>
     `,
-    image: "https://images.unsplash.com/photo-1599599810694-b5ac4dd33e2d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 23, 2025",
     author: "9jaDirectory Food Business Team",
     category: "Business",
@@ -7852,7 +7871,7 @@ export const blogPosts: BlogPost[] = [
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "How to Start a Food Processing & Snacks Business in Nigeria (2025)",
-      "image": ["https://images.unsplash.com/photo-1599599810694-b5ac4dd33e2d?q=80&w=2070&auto=format&fit=crop"],
+      "image": ["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80"],
       "datePublished": "2025-11-23",
       "author": { "@type": "Organization", "name": "9jaDirectory Food Business Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
@@ -8046,7 +8065,7 @@ export const blogPosts: BlogPost[] = [
     <h3 class="text-xl font-bold mt-6 mb-3">How do I reduce losses?</h3>
     <p>Start small, track mortality/spoilage, and improve one thing per cycle (housing, feed, storage, transport). Loss control often increases profit more than chasing bigger sales.</p>
     `,
-    image: "https://images.unsplash.com/photo-1500595046891-d87efc1f2a6f?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 22, 2025",
     author: "9jaDirectory Agriculture Team",
     category: "Business",
@@ -8062,7 +8081,7 @@ export const blogPosts: BlogPost[] = [
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": "How to Start an Agribusiness in Nigeria (2025): ₦1M-₦10M+ Annual Profit",
-      "image": ["https://images.unsplash.com/photo-1500595046891-d87efc1f2a6f?q=80&w=2070&auto=format&fit=crop"],
+      "image": ["https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80"],
       "datePublished": "2025-11-22",
       "author": { "@type": "Organization", "name": "9jaDirectory Agriculture Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
@@ -8083,7 +8102,7 @@ export const blogPosts: BlogPost[] = [
       <p>Whether you are about to pay a vendor, sign a contract, hire a supplier, or invest in a business, spending five minutes on the CAC public search can save you five figures — or more. This guide walks you through exactly how to use it, what your results mean, what to watch for, and what to do when something looks off.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/cac-public-search-infographic.webp" alt="CAC public search infographic — verify Nigerian companies by name or RC number" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Nigerian business professional verifying a company on a laptop" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">The CAC public search covers Business Names, Limited Companies, PLCs, Incorporated Trustees, and LLPs — search free at search.cac.gov.ng.</figcaption>
       </figure>
 
@@ -8233,7 +8252,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">How often is the CAC public search database updated?</h3>
       <p>New registrations and status changes typically appear within a few days to a few weeks of processing. If you registered recently and your business does not appear yet, check again after two to three weeks. For urgent verification during an active transaction, you can visit a CAC office directly to request a certified search result.</p>
     `,
-    image: "/images/blog/cac-public-search-infographic.webp",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -8257,7 +8276,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "CAC Public Search: How to Verify Any Nigerian Company by Name or RC Number (2026)",
-        "image": ["https://www.9jadirectory.org/images/blog/cac-public-search-infographic.jpg"],
+        "image": ["https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -8301,7 +8320,7 @@ export const blogPosts: BlogPost[] = [
       <p>This guide covers both use cases: how to search CAC for a name you want to register, and how to use the same search to verify any existing Nigerian business before you sign a contract, pay a deposit, or commit your money.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/cac-certificate-verification.webp" alt="Entrepreneur reviewing CAC certificate and checking business name on portal" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop" alt="Entrepreneur searching for a business name on a laptop" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">A quick CAC name search before registering or transacting can save weeks of wasted time or money lost to fraud.</figcaption>
       </figure>
 
@@ -8415,7 +8434,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Can I search for CAC-registered NGOs and churches?</h3>
       <p>Yes. The CAC public search covers all entity types including Incorporated Trustees — the category under which NGOs, churches, mosques, associations, and foundations are registered. Their registration numbers are prefixed with "IT" rather than "RC." Search by the organisation name the same way you would for any other business.</p>
     `,
-    image: "/images/blog/cac-certificate-verification.webp",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -8437,7 +8456,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "CAC Name Search Nigeria: How to Check Business Names and Avoid Fraud (2026)",
-        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "image": ["https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -8480,7 +8499,7 @@ export const blogPosts: BlogPost[] = [
       <p>This guide explains every Nigerian company code in plain English: what each one means, where it comes from, how to find yours, and how to verify any other company's code using the CAC public search tool.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/cac-certificate-verification.webp" alt="Nigerian business professional reviewing CAC certificate and company documents" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070&auto=format&fit=crop" alt="Nigerian business professional reviewing company documents and financial records" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">Company codes in Nigeria identify your business to banks, government portals, and corporate clients. Knowing yours is non-negotiable.</figcaption>
       </figure>
 
@@ -8584,7 +8603,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Can I find a company's RC number if I only have their name?</h3>
       <p>Yes. Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>, search by the company name, and the RC number will appear in the search results alongside the registration status and entity type.</p>
     `,
-    image: "/images/blog/cac-certificate-verification.webp",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -8606,7 +8625,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Company Code in Nigeria: Full Meaning, How to Find Yours & CAC Verification Guide",
-        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "image": ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -8651,7 +8670,7 @@ export const blogPosts: BlogPost[] = [
       <p>This guide walks through every step of the CAC pre-incorporation process in plain language, covering what to prepare, common mistakes to avoid, and what happens after you submit.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/cac-certificate-verification.webp" alt="Nigerian entrepreneur reviewing CAC certificate before completing pre-incorporation registration" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Nigerian entrepreneur reviewing business registration documents and signing papers" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">The CAC pre-incorporation portal is where every Nigerian business registration begins — and where most delays happen if you are not prepared.</figcaption>
       </figure>
 
@@ -8802,7 +8821,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Can I use a residential address for CAC registration?</h3>
       <p>Yes. You do not need a rented office space or commercial address to register a Business Name or Private Limited Company in Nigeria. A residential address is acceptable as the registered office address. You can update the address later through the post-incorporation portal if and when your business moves to commercial premises.</p>
     `,
-    image: "/images/blog/cac-certificate-verification.webp",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -8824,7 +8843,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "CAC Pre-Incorporation Nigeria: Complete Step-by-Step Guide for New Businesses (2026)",
-        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "image": ["https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -8868,7 +8887,7 @@ export const blogPosts: BlogPost[] = [
       <p>The good news: checking whether a company is registered in Nigeria is free, fast, and requires no legal expertise. You just need to know where to look and what to look for. This guide covers four verification methods — from the quickest free check to the most thorough official process — so you can choose the right level of scrutiny for the situation.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/cac-certificate-verification.webp" alt="Business professional verifying company registration certificate in Nigeria" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=2070&auto=format&fit=crop" alt="Business professional verifying a company registration on a laptop in Nigeria" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">Verifying a company's registration before transacting is one of the simplest protections against business fraud in Nigeria.</figcaption>
       </figure>
 
@@ -8992,7 +9011,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Do partnerships need to be registered with the CAC?</h3>
       <p>Yes. Partnerships operating under a business name in Nigeria must register that business name with the CAC. They receive a BN (Business Name) registration number. However, general partnerships not operating under a specific business name can technically exist without CAC registration, though they lose access to corporate bank accounts, contracts, and other benefits that come with formal registration.</p>
     `,
-    image: "/images/blog/cac-certificate-verification.webp",
+    image: "https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Business Guide",
@@ -9014,7 +9033,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Check if a Company is Registered in Nigeria (CAC Verification Guide 2026)",
-        "image": ["https://www.9jadirectory.org/images/blog/cac-certificate-verification.jpg"],
+        "image": ["https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-18",
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -9376,7 +9395,7 @@ export const blogPosts: BlogPost[] = [
         </div>
       </div>
     `,
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 21, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Real Estate",
