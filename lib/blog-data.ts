@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
       <p>This guide is <strong>editorial only</strong>. No paid ranking slots. We focused on Nigerian hosts with visible product pages, local market relevance, and practical options for SMEs, agencies, and growing online businesses.</p>
 
       <figure class="my-6">
-        <img src="/images/hero-nigeria.jpg" alt="Best web hosting options in Nigeria for 2026" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop" alt="Best web hosting options in Nigeria for 2026" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">Choosing hosting is a business decision: speed, support, renewal cost, and upgrade path matter more than launch discounts.</figcaption>
       </figure>
 
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Can I move from one host to another later?</h3>
       <p>Yes. Most serious providers support migration, but timelines and fees differ. Ask for migration terms before purchase, not after an outage.</p>
     `,
-    image: "/images/hero-nigeria.jpg",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 19, 2026",
     author: "9jaDirectory Editorial Team",
     category: "Technology",
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Web Hosting in Nigeria (2026): Editorial Top Nigerian Hosts",
-        "image": ["https://www.9jadirectory.org/images/hero-nigeria.jpg"],
+        "image": ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-19",
         "dateModified": "2026-02-19",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
@@ -597,7 +597,7 @@ export const blogPosts: BlogPost[] = [
       <p>Use this as a checklist. Pick two fixes you can do this week, then move to the next two. Small improvements compound fast.</p>
 
       <figure class="my-6">
-        <img src="/images/blog/local-lead-generation-mistakes.png" alt="Avoid these seven mistakes that kill local leads" class="w-full rounded-lg shadow-lg" />
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Avoid these seven mistakes that kill local leads" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">Seven mistakes that kill local leads and the fixes that bring customers back.</figcaption>
       </figure>
 
@@ -717,7 +717,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Do I need a website if I have a directory listing?</h3>
       <p>A listing can bring leads, but a simple landing page converts more of them. It answers questions quickly, builds trust, and lets you control the message.</p>
     `,
-    image: "/images/blog/local-lead-generation-mistakes.png",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
     date: "Jan 8, 2026",
     author: "9jaDirectory Marketing Team",
     category: "Marketing",
@@ -738,7 +738,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Local Lead Generation Mistakes: 7 Errors That Kill Customers in Nigeria (2025)",
-        "image": ["https://www.9jadirectory.org/images/blog/local-lead-generation-mistakes.png"],
+        "image": ["https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"],
         "author": {
           "@type": "Organization",
           "name": "9jaDirectory Marketing Team",
@@ -9424,7 +9424,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Top 10 Real Estate Companies in Abuja, Nigeria (2026 Guide)",
-        "image": ["https://www.9jadirectory.org/images/hero-nigeria.jpg"],
+        "image": ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-21",
         "dateModified": "2026-02-21",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
