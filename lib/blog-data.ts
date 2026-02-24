@@ -12062,4 +12062,805 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
+  // ─── TOP LAW FIRMS IN NIGERIA 2026 ───────────────────────────────────────
+  {
+    slug: "top-law-firms-nigeria-2026",
+    title: "Top 10 Law Firms in Nigeria (2026): Corporate, Litigation & Commercial",
+    excerpt: "Looking for the best law firm in Nigeria? This guide ranks the top 10 Nigerian law firms for corporate law, litigation, oil & gas, and commercial transactions in 2026.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
+
+      <p>Nigeria has over 80,000 registered lawyers and hundreds of law firms — but only a handful consistently handle the country's most complex transactions, landmark court cases, and cross-border deals. Whether you need a firm for a corporate acquisition, a land dispute, a regulatory matter, or an oil and gas contract, choosing the right law firm in Nigeria matters enormously.</p>
+
+      <p>This guide ranks the top 10 law firms in Nigeria based on deal volume, client base, practice area strength, Bar recognition, and international partnerships.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-3">Top Law Firms in Nigeria at a Glance</h3>
+        <ul class="space-y-1 text-green-800">
+          <li><strong>#1 Udo Udoma & Belo-Osagie</strong> — Best overall, largest corporate practice</li>
+          <li><strong>#2 Aluko & Oyebode</strong> — Top for M&A and banking law</li>
+          <li><strong>#3 Banwo & Ighodalo</strong> — Leading capital markets and regulatory firm</li>
+          <li><strong>#4 Aelex</strong> — Best for oil & gas and energy law</li>
+          <li><strong>#5 G. Elias & Co.</strong> — Strongest litigation practice</li>
+          <li><strong>#6 Templars</strong> — Fast-growing, strong in fintech and telecoms</li>
+          <li><strong>#7 Olaniwun Ajayi LP</strong> — Top for project finance and infrastructure</li>
+          <li><strong>#8 Jackson Etti & Edu</strong> — Best for employment and labour law</li>
+          <li><strong>#9 Streamsowers & Köhn</strong> — Leading dispute resolution firm</li>
+          <li><strong>#10 Perchstone & Graeys</strong> — Strong real estate and property law</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Udo Udoma & Belo-Osagie (UUBO)</h2>
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" alt="Top law firms in Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
+      <p>Udo Udoma & Belo-Osagie — known as UUBO — is widely regarded as Nigeria's premier full-service law firm. With offices in Lagos and Abuja, UUBO handles the country's largest corporate transactions, including mergers and acquisitions, privatisations, capital markets offerings, and project finance deals. The firm has been involved in virtually every major privatisation in Nigeria and consistently tops the league tables for deal value. UUBO advises major multinationals, Nigerian conglomerates, government institutions, and multilateral agencies.</p>
+      <p><strong>Best for:</strong> Corporate law, M&A, privatisation, capital markets, project finance</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> uubo.org</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Aluko & Oyebode</h2>
+      <p>Aluko & Oyebode is one of Nigeria's largest and most prestigious law firms, with a 70-year history and offices in Lagos and Abuja. The firm is a market leader in banking and finance, corporate advisory, and mergers and acquisitions. Aluko & Oyebode advises Nigeria's top commercial banks, international financial institutions, and multinational corporations on their most sensitive transactions. The firm is a member of Lex Africa and the African Legal Network, giving clients access to legal expertise across the continent.</p>
+      <p><strong>Best for:</strong> Banking & finance, M&A, corporate advisory, securities law</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> aluko-oyebode.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Banwo & Ighodalo</h2>
+      <p>Banwo & Ighodalo is a leading Nigerian law firm with one of the strongest capital markets and regulatory practices in the country. The firm advises on Securities and Exchange Commission (SEC) matters, Nigerian Exchange Group (NGX) listings, bonds, and sukuk issuances. Banwo & Ighodalo also has a strong corporate finance practice, advising on major private equity deals, restructurings, and cross-border transactions. The firm is frequently ranked by Chambers & Partners and Legal 500 as a top-tier Nigerian firm.</p>
+      <p><strong>Best for:</strong> Capital markets, SEC regulation, private equity, corporate finance</p>
+      <p><strong>Offices:</strong> Lagos</p>
+      <p><strong>Website:</strong> banwo-ighodalo.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Aelex</h2>
+      <p>Aelex is Nigeria's leading law firm for energy, oil and gas, and natural resources law. The firm advises upstream and midstream oil companies, international oil companies (IOCs), power sector investors, and the Nigerian government on regulatory compliance, licensing, and transactions. Aelex also has strong practices in dispute resolution, intellectual property, and competition law. The firm is a member of several international legal networks and regularly handles cross-border arbitration proceedings.</p>
+      <p><strong>Best for:</strong> Oil & gas, energy law, mining, arbitration, competition law</p>
+      <p><strong>Offices:</strong> Lagos, Abuja, Port Harcourt</p>
+      <p><strong>Website:</strong> aelex.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. G. Elias & Co.</h2>
+      <p>G. Elias & Co. is one of Nigeria's oldest law firms, with a history dating to 1951. The firm has one of the strongest litigation and arbitration practices in Nigeria, regularly representing clients before the Supreme Court, Court of Appeal, Federal High Court, and international arbitration tribunals. G. Elias also advises on corporate and commercial matters, real estate, and tax. The firm's senior partners are highly respected members of the Nigerian Bar and have argued many of Nigeria's landmark cases.</p>
+      <p><strong>Best for:</strong> Litigation, arbitration, Supreme Court appeals, corporate law, tax</p>
+      <p><strong>Offices:</strong> Lagos</p>
+      <p><strong>Website:</strong> gelias.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Templars</h2>
+      <p>Templars is one of Nigeria's fastest-growing full-service law firms, with particular strength in fintech, telecommunications, technology, and financial services regulation. The firm advises leading Nigerian fintechs, banks, and international technology companies entering the Nigerian market. Templars also has strong practices in project finance, infrastructure, real estate, and dispute resolution. The firm has been consistently recognised by Chambers & Partners, Legal 500, and IFLR1000 as a top Nigerian firm.</p>
+      <p><strong>Best for:</strong> Fintech regulation, telecoms, technology law, project finance, banking</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> templars-law.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Olaniwun Ajayi LP</h2>
+      <p>Olaniwun Ajayi LP is a full-service Nigerian law firm with exceptional strength in project finance, infrastructure, and public-private partnerships. The firm has advised on some of Nigeria's largest infrastructure projects, including power plants, roads, and telecoms infrastructure. Olaniwun Ajayi also has strong practices in corporate advisory, restructuring, and disputes. The firm is a member of Multilaw, a global network of independent law firms, giving clients access to international legal expertise.</p>
+      <p><strong>Best for:</strong> Project finance, infrastructure, PPP, power sector, restructuring</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> olaniwunajayi.net</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Jackson Etti & Edu</h2>
+      <p>Jackson Etti & Edu (JEE) is recognised as Nigeria's leading firm for employment and labour law, advising Nigeria's largest employers — including multinationals, banks, and manufacturing companies — on HR compliance, termination disputes, and industrial relations. JEE also has strong practices in corporate advisory, real estate, and dispute resolution. The firm is a member of Ius Laboris, the world's largest employment law network, giving clients access to employment law expertise in over 40 countries.</p>
+      <p><strong>Best for:</strong> Employment & labour law, HR compliance, corporate advisory, real estate</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> jee.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Streamsowers & Köhn</h2>
+      <p>Streamsowers & Köhn is a highly regarded Nigerian law firm with one of the strongest dispute resolution practices in the country. The firm represents clients in complex commercial arbitration, investment treaty disputes, and high-value commercial litigation. Streamsowers & Köhn also advises on energy law, corporate transactions, and banking. The firm's arbitration team regularly appears before the ICC, LCIA, and ICSID, making it a first choice for cross-border dispute resolution in Nigeria.</p>
+      <p><strong>Best for:</strong> International arbitration, commercial litigation, investment disputes, energy</p>
+      <p><strong>Offices:</strong> Lagos</p>
+      <p><strong>Website:</strong> sklaw.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Perchstone & Graeys</h2>
+      <p>Perchstone & Graeys is a full-service Nigerian law firm with notable strength in real estate, property law, and construction. The firm handles land acquisition, title perfection, property development agreements, and real estate finance for developers, investors, and institutional clients across Nigeria. Perchstone & Graeys also advises on corporate law, banking, and dispute resolution. The firm is a preferred legal advisor for several of Nigeria's leading real estate developers and financial institutions.</p>
+      <p><strong>Best for:</strong> Real estate law, land acquisition, construction, corporate law, banking</p>
+      <p><strong>Offices:</strong> Lagos, Abuja</p>
+      <p><strong>Website:</strong> perchstoneandgraeys.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose a Law Firm in Nigeria</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse border border-gray-300 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="border border-gray-300 p-3 text-left">Your Need</th>
+              <th class="border border-gray-300 p-3 text-left">Best Choice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3">Company acquisition or merger</td><td class="border border-gray-300 p-3">UUBO or Aluko & Oyebode</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Stock exchange listing or bond issuance</td><td class="border border-gray-300 p-3">Banwo & Ighodalo</td></tr>
+            <tr><td class="border border-gray-300 p-3">Oil licence or upstream contract</td><td class="border border-gray-300 p-3">Aelex</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Supreme Court appeal or commercial dispute</td><td class="border border-gray-300 p-3">G. Elias & Co.</td></tr>
+            <tr><td class="border border-gray-300 p-3">Fintech or banking regulation</td><td class="border border-gray-300 p-3">Templars</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Infrastructure or power project</td><td class="border border-gray-300 p-3">Olaniwun Ajayi LP</td></tr>
+            <tr><td class="border border-gray-300 p-3">Staff termination or HR compliance</td><td class="border border-gray-300 p-3">Jackson Etti & Edu</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">International arbitration</td><td class="border border-gray-300 p-3">Streamsowers & Köhn</td></tr>
+            <tr><td class="border border-gray-300 p-3">Land purchase or property development</td><td class="border border-gray-300 p-3">Perchstone & Graeys</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your law firm not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for lawyers and law firms every month on 9jaDirectory. List your firm for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Law Firm Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which is the biggest law firm in Nigeria?</h3>
+      <p>Udo Udoma & Belo-Osagie (UUBO) is widely regarded as Nigeria's largest full-service law firm by deal volume and corporate practice size. Aluko & Oyebode is also frequently cited as one of the largest firms by headcount. Both firms have been at the centre of Nigeria's most significant transactions for decades.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much do lawyers charge in Nigeria?</h3>
+      <p>Legal fees in Nigeria vary significantly by firm size and matter type. Top-tier firms typically charge between ₦150,000 and ₦500,000 per hour for senior partner time. Transaction-based fees on major deals can run into tens of millions of naira. For smaller matters — contracts, property, employment — boutique firms and sole practitioners charge ₦50,000 to ₦300,000 for standard work.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Are Nigerian law firms ranked internationally?</h3>
+      <p>Yes. Several Nigerian law firms are ranked by Chambers & Partners, Legal 500, IFLR1000, and Who's Who Legal. UUBO, Aluko & Oyebode, Aelex, Templars, and Banwo & Ighodalo consistently appear in international legal rankings for their corporate, energy, and banking practices.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can a foreign company use a Nigerian law firm?</h3>
+      <p>Yes. All the firms listed here regularly advise international clients on Nigerian law matters. Most have experience with cross-border transactions and can coordinate with foreign counsel. For international arbitration, firms like Streamsowers & Köhn appear before ICC and ICSID tribunals on behalf of both Nigerian and foreign parties.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 24, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Legal",
+    readTime: "11 min read",
+    keywords: [
+      "top law firms nigeria 2026",
+      "best law firms in nigeria",
+      "law firms in lagos",
+      "corporate law firms nigeria",
+      "litigation lawyers nigeria",
+      "oil and gas law firms nigeria",
+      "best lawyers in nigeria",
+      "top nigerian law firms",
+      "law firms in abuja",
+      "legal services nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top 10 Law Firms in Nigeria (2026): Corporate, Litigation & Commercial",
+        "image": ["https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-02-24",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Discover the top 10 law firms in Nigeria for 2026 — ranked by practice area, deal volume, and client base. From UUBO to Aelex and Templars.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-law-firms-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top 10 Law Firms in Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Udo Udoma & Belo-Osagie (UUBO)", "url": "https://www.uubo.org" },
+          { "@type": "ListItem", "position": 2, "name": "Aluko & Oyebode", "url": "https://www.aluko-oyebode.com" },
+          { "@type": "ListItem", "position": 3, "name": "Banwo & Ighodalo", "url": "https://www.banwo-ighodalo.com" },
+          { "@type": "ListItem", "position": 4, "name": "Aelex", "url": "https://www.aelex.com" },
+          { "@type": "ListItem", "position": 5, "name": "G. Elias & Co.", "url": "https://www.gelias.com" },
+          { "@type": "ListItem", "position": 6, "name": "Templars", "url": "https://www.templars-law.com" },
+          { "@type": "ListItem", "position": 7, "name": "Olaniwun Ajayi LP", "url": "https://www.olaniwunajayi.net" },
+          { "@type": "ListItem", "position": 8, "name": "Jackson Etti & Edu", "url": "https://www.jee.com.ng" },
+          { "@type": "ListItem", "position": 9, "name": "Streamsowers & Köhn", "url": "https://www.sklaw.com.ng" },
+          { "@type": "ListItem", "position": 10, "name": "Perchstone & Graeys", "url": "https://www.perchstoneandgraeys.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which is the biggest law firm in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Udo Udoma & Belo-Osagie (UUBO) is widely regarded as Nigeria's largest full-service law firm by deal volume. Aluko & Oyebode is also among the largest by headcount." } },
+          { "@type": "Question", "name": "How much do lawyers charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top-tier firms charge ₦150,000–₦500,000 per hour for senior partner time. Boutique firms charge ₦50,000–₦300,000 for standard matters." } },
+          { "@type": "Question", "name": "Are Nigerian law firms ranked internationally?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. UUBO, Aluko & Oyebode, Aelex, Templars, and Banwo & Ighodalo are consistently ranked by Chambers & Partners, Legal 500, and IFLR1000." } },
+          { "@type": "Question", "name": "Can a foreign company use a Nigerian law firm?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All listed firms regularly advise international clients on Nigerian law and cross-border transactions. Streamsowers & Köhn handles ICC and ICSID arbitrations." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Top Law Firms Nigeria", "item": "https://www.9jadirectory.org/blog/top-law-firms-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ─── BEST PRIVATE HOSPITALS IN NIGERIA 2026 ──────────────────────────────
+  {
+    slug: "best-private-hospitals-nigeria-2026",
+    title: "Best Private Hospitals in Nigeria (2026): Lagos, Abuja & Port Harcourt",
+    excerpt: "Looking for the best private hospital in Nigeria? This guide ranks the top private hospitals in Lagos, Abuja, and Port Harcourt for quality care, specialists, and facilities in 2026.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
+
+      <p>Private healthcare in Nigeria has improved significantly over the past decade, with a number of hospitals now offering world-class diagnostics, specialist care, and surgical facilities that have reduced the need for medical tourism abroad. Choosing the right private hospital in Nigeria can be the difference between receiving timely, quality care and experiencing unnecessary delays.</p>
+
+      <p>This guide covers the best private hospitals in Nigeria across Lagos, Abuja, and Port Harcourt — ranked on specialist availability, diagnostic equipment, emergency care, patient experience, and accreditation status.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-3">Best Private Hospitals in Nigeria at a Glance</h3>
+        <ul class="space-y-1 text-green-800">
+          <li><strong>#1 Evercare Hospital Lagos</strong> — Best overall, most advanced equipment</li>
+          <li><strong>#2 Eko Hospital</strong> — Best multi-specialist hospital in Lagos</li>
+          <li><strong>#3 Reddington Hospital</strong> — Best for cardiac & neuro care</li>
+          <li><strong>#4 Lagoon Hospitals</strong> — Best hospital group (3 Lagos locations)</li>
+          <li><strong>#5 St. Nicholas Hospital</strong> — Oldest private hospital in Nigeria</li>
+          <li><strong>#6 Cedarcrest Hospitals</strong> — Best private hospital in Abuja</li>
+          <li><strong>#7 Nisa Premier Hospital</strong> — Best for obstetrics & fertility in Abuja</li>
+          <li><strong>#8 Meridian Hospital</strong> — Strong diagnostic and oncology centre</li>
+          <li><strong>#9 Lily Hospitals</strong> — Best hospital outside Lagos/Abuja</li>
+          <li><strong>#10 Clina-Lancet Laboratories</strong> — Best diagnostic and pathology lab</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Evercare Hospital Lagos</h2>
+      <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2070&auto=format&fit=crop" alt="Best private hospitals in Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
+      <p>Evercare Hospital Lagos (formerly known as Lakeside Medical Centre before its transformation) is Nigeria's most advanced private hospital, backed by the Evercare Group — a global healthcare platform operating across Africa and South Asia. Located in Lekki, Lagos, the hospital features over 165 beds, 7 operating theatres, a cardiac catheterisation lab, a neuro-surgical suite, an oncology centre with radiation therapy, a NICU, and a full-service diagnostics department. Evercare Hospital offers JCI accreditation-level standards of care and is the first choice for Nigerians who would otherwise travel abroad for complex procedures.</p>
+      <p><strong>Best for:</strong> Cardiac surgery, neurosurgery, oncology, orthopaedics, complex diagnostics</p>
+      <p><strong>Location:</strong> Admiralty Way, Lekki Phase 1, Lagos</p>
+      <p><strong>Website:</strong> evercarehealth.com/hospital-lagos</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Eko Hospital</h2>
+      <p>Eko Hospital is one of Nigeria's largest and most respected private hospitals, operating from its flagship facility in Ikeja, Lagos. Founded in 1981, Eko Hospital offers over 300 beds and a comprehensive range of specialist services including cardiology, neurology, orthopaedics, urology, ophthalmology, gastroenterology, and a dedicated cancer centre. The hospital has a strong reputation for its accident and emergency unit, which is one of the busiest and best-equipped in Lagos. Eko Hospital also has a blood bank, ICU, and modern diagnostic imaging including CT scan, MRI, and digital mammography.</p>
+      <p><strong>Best for:</strong> General specialist care, A&E, cancer centre, orthopaedics, ophthalmology</p>
+      <p><strong>Location:</strong> 31 Mobolaji Bank Anthony Way, Ikeja, Lagos</p>
+      <p><strong>Website:</strong> ekohospital.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Reddington Hospital</h2>
+      <p>Reddington Hospital, located in Victoria Island, Lagos, is known for its strong cardiac, neurological, and intensive care units. The hospital features a fully equipped cardiac catheterisation lab, a stroke unit, a modern ICU, and a high-dependency unit. Reddington attracts many of Lagos's business and diplomatic community due to its Victoria Island location and high standard of private rooms. The hospital also provides accident and emergency services, obstetrics, paediatrics, and a full diagnostics suite including PET scan and advanced MRI.</p>
+      <p><strong>Best for:</strong> Cardiology, stroke & neurology, ICU, executive health checks, VIP ward</p>
+      <p><strong>Location:</strong> 12 Catholic Mission Street, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> reddingtonhospital.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Lagoon Hospitals</h2>
+      <p>Lagoon Hospitals is a network of three private hospitals in Lagos (Apapa, Ikeja, and Victoria Island), making it one of Nigeria's most accessible premium hospital groups. Lagoon Hospitals is part of the Hygeia Group and is known for consistent quality of care, strong nursing standards, and modern facilities across all three sites. The Lagoon network offers specialist services in cardiology, internal medicine, surgery, obstetrics, paediatrics, and oncology. Lagoon Hospitals accepts most Nigerian HMO plans, making quality care accessible to employer-insured patients.</p>
+      <p><strong>Best for:</strong> HMO-covered care, multi-location access, obstetrics, internal medicine</p>
+      <p><strong>Location:</strong> Victoria Island, Ikeja & Apapa, Lagos</p>
+      <p><strong>Website:</strong> lagoonhospitals.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. St. Nicholas Hospital</h2>
+      <p>St. Nicholas Hospital, established in 1958, is the oldest private hospital in Nigeria and one of the most trusted names in Nigerian healthcare. Located on Catholic Mission Street, Lagos Island, St. Nicholas offers specialist services in medicine, surgery, obstetrics and gynaecology, paediatrics, ophthalmology, and ENT. The hospital is known for its experienced consultants, many of whom are senior professors and fellows of the West African College of Physicians and Surgeons. St. Nicholas is a first choice for many Lagosians who value established medical expertise over newer facilities.</p>
+      <p><strong>Best for:</strong> General specialist care, obstetrics, paediatrics, experienced consultants</p>
+      <p><strong>Location:</strong> Catholic Mission Street, Lagos Island, Lagos</p>
+      <p><strong>Website:</strong> stnicholashospital.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Cedarcrest Hospitals (Abuja)</h2>
+      <p>Cedarcrest Hospitals is widely regarded as the best private hospital in Abuja, offering 100+ beds, 5 operating theatres, a cardiac catheterisation lab, a neuro-surgical unit, a NICU, and an oncology centre. The hospital also operates a dedicated fertility and IVF clinic, a bariatric surgery programme, and a 24-hour A&E. Cedarcrest gained national recognition for its COVID-19 response capacity and continues to invest in advanced equipment. The hospital accepts most Nigerian HMOs and also has a self-pay executive health check programme.</p>
+      <p><strong>Best for:</strong> All specialist care in Abuja, cardiac, IVF, neurosurgery, executive health</p>
+      <p><strong>Location:</strong> 1 Lafiaji Way, Durumi, Abuja</p>
+      <p><strong>Website:</strong> cedarcresthospitals.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Nisa Premier Hospital (Abuja)</h2>
+      <p>Nisa Premier Hospital in Abuja is best known for its obstetrics, fertility, and women's health services, but has grown into a full-service tertiary hospital. Nisa's IVF and reproductive medicine department is one of the most respected in Nigeria, with experienced embryologists and consistently high success rates. The hospital also offers paediatrics, internal medicine, surgery, and a strong diagnostic department. Nisa Premier is particularly popular with Abuja's diplomatic and government community for its discretion and quality of care.</p>
+      <p><strong>Best for:</strong> IVF & fertility, obstetrics, women's health, paediatrics, Abuja</p>
+      <p><strong>Location:</strong> Life Camp, Abuja</p>
+      <p><strong>Website:</strong> nisahospital.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Meridian Hospital (Lagos)</h2>
+      <p>Meridian Hospital is a specialist private hospital in Lagos with particular strength in oncology (cancer treatment), diagnostic imaging, and endoscopy. The hospital houses a linear accelerator for radiation therapy — one of very few in Nigeria — making it a critical facility for cancer patients. Meridian also provides gastroenterology, nephrology, cardiology, and general surgery services. The hospital has a reputation for accurate diagnostics and works closely with several Lagos HMOs.</p>
+      <p><strong>Best for:</strong> Cancer treatment, radiation therapy, oncology, diagnostic imaging</p>
+      <p><strong>Location:</strong> Lekki, Lagos</p>
+      <p><strong>Website:</strong> meridianhospitalnigeria.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Lily Hospitals (Warri & Benin City)</h2>
+      <p>Lily Hospitals is the premier private hospital group outside Lagos and Abuja, with flagship facilities in Warri and Benin City. The hospital offers specialist services in cardiology, nephrology, neurology, orthopaedics, oncology, and reproductive medicine. Lily Hospitals has a strong A&E department and a functional ICU. For patients in Delta, Edo, and surrounding states, Lily Hospitals provides tertiary-level care without requiring travel to Lagos or Abuja.</p>
+      <p><strong>Best for:</strong> Best hospital in South-South Nigeria, cardiology, nephrology, oncology</p>
+      <p><strong>Location:</strong> Warri, Delta State & Benin City, Edo State</p>
+      <p><strong>Website:</strong> lilyhospitals.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Clina-Lancet Laboratories</h2>
+      <p>Clina-Lancet is Nigeria's leading diagnostic and pathology laboratory group, affiliated with Lancet Laboratories — one of Africa's largest diagnostic networks. With locations in Lagos, Abuja, and Port Harcourt, Clina-Lancet offers the widest range of diagnostic tests available in Nigeria, including advanced genomic testing, histopathology, molecular diagnostics, and all standard blood and imaging tests. Results are available online and can be compared against international reference ranges. Many top Nigerian specialists send their complex diagnostic cases to Clina-Lancet.</p>
+      <p><strong>Best for:</strong> Diagnostics, pathology, genomic testing, pre-travel blood tests, second opinion labs</p>
+      <p><strong>Locations:</strong> Lagos, Abuja, Port Harcourt</p>
+      <p><strong>Website:</strong> clinalancet.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Private Hospital Costs in Nigeria (2026)</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse border border-gray-300 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="border border-gray-300 p-3 text-left">Service</th>
+              <th class="border border-gray-300 p-3 text-left">Typical Cost Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3">Specialist outpatient consultation</td><td class="border border-gray-300 p-3">₦15,000 – ₦80,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Executive health check (full)</td><td class="border border-gray-300 p-3">₦150,000 – ₦500,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">Standard surgical admission (3 days)</td><td class="border border-gray-300 p-3">₦500,000 – ₦2,000,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cardiac catheterisation</td><td class="border border-gray-300 p-3">₦1,500,000 – ₦4,000,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">IVF cycle (one attempt)</td><td class="border border-gray-300 p-3">₦1,200,000 – ₦3,000,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">MRI scan</td><td class="border border-gray-300 p-3">₦80,000 – ₦250,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your hospital or clinic not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for hospitals, specialists, and clinics every month on 9jaDirectory. List your facility for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Hospital Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which is the best private hospital in Nigeria?</h3>
+      <p>Evercare Hospital Lagos is currently rated the best private hospital in Nigeria for the breadth and quality of its specialist services, diagnostic equipment, and surgical facilities. Reddington Hospital is top-rated for cardiac and neurological care, while Cedarcrest Hospitals leads in Abuja.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which private hospital is best in Abuja?</h3>
+      <p>Cedarcrest Hospitals is consistently rated the best private hospital in Abuja, followed by Nisa Premier Hospital (especially for IVF and women's health) and Garki Hospital (public but high-quality). For specialist diagnostics, Clina-Lancet Laboratories has a strong Abuja location.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Do Nigerian private hospitals accept HMO?</h3>
+      <p>Yes. Most top private hospitals in Nigeria accept major HMOs including Hygeia HMO, AXA Mansard HMO, Reliance HMO, and Clearline HMO. Always confirm your HMO panel status before booking, as not all hospitals accept all HMOs — and HMO coverage may not include all specialist services.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much does a private hospital consultation cost in Nigeria?</h3>
+      <p>A specialist outpatient consultation at a top private hospital in Nigeria typically costs ₦15,000 to ₦80,000 depending on the doctor's seniority and the hospital. An executive health check costs ₦150,000 to ₦500,000. HMO-covered patients typically pay only a co-payment of ₦1,000 to ₦5,000.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 24, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Health & Medical",
+    readTime: "12 min read",
+    keywords: [
+      "best private hospitals nigeria 2026",
+      "best hospital in lagos",
+      "best hospital in abuja",
+      "private hospital nigeria",
+      "top hospitals in nigeria",
+      "evercare hospital lagos",
+      "eko hospital lagos",
+      "reddington hospital",
+      "cedarcrest hospitals abuja",
+      "hospital in nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Private Hospitals in Nigeria (2026): Lagos, Abuja & Port Harcourt",
+        "image": ["https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-02-24",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Best private hospitals in Nigeria 2026 — Evercare Hospital, Eko Hospital, Reddington, Lagoon, Cedarcrest Abuja. Costs, specialists, and HMO coverage explained.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-private-hospitals-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best Private Hospitals in Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Evercare Hospital Lagos", "url": "https://www.evercarehealth.com/hospital-lagos" },
+          { "@type": "ListItem", "position": 2, "name": "Eko Hospital", "url": "https://www.ekohospital.com" },
+          { "@type": "ListItem", "position": 3, "name": "Reddington Hospital", "url": "https://www.reddingtonhospital.com" },
+          { "@type": "ListItem", "position": 4, "name": "Lagoon Hospitals", "url": "https://www.lagoonhospitals.com" },
+          { "@type": "ListItem", "position": 5, "name": "St. Nicholas Hospital", "url": "https://www.stnicholashospital.com" },
+          { "@type": "ListItem", "position": 6, "name": "Cedarcrest Hospitals", "url": "https://www.cedarcresthospitals.com" },
+          { "@type": "ListItem", "position": 7, "name": "Nisa Premier Hospital", "url": "https://www.nisahospital.com" },
+          { "@type": "ListItem", "position": 8, "name": "Meridian Hospital", "url": "https://www.meridianhospitalnigeria.com" },
+          { "@type": "ListItem", "position": 9, "name": "Lily Hospitals", "url": "https://www.lilyhospitals.com" },
+          { "@type": "ListItem", "position": 10, "name": "Clina-Lancet Laboratories", "url": "https://www.clinalancet.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which is the best private hospital in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Evercare Hospital Lagos is rated best overall. Reddington Hospital leads for cardiac and neurological care. Cedarcrest Hospitals is best in Abuja." } },
+          { "@type": "Question", "name": "Which private hospital is best in Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "Cedarcrest Hospitals is consistently rated the best private hospital in Abuja, followed by Nisa Premier Hospital for IVF and women's health." } },
+          { "@type": "Question", "name": "Do Nigerian private hospitals accept HMO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most top hospitals accept major HMOs including Hygeia, AXA Mansard, Reliance, and Clearline HMO. Confirm panel status before booking." } },
+          { "@type": "Question", "name": "How much does a private hospital consultation cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Specialist consultations cost ₦15,000–₦80,000. Executive health checks cost ₦150,000–₦500,000. HMO patients typically pay a co-payment of ₦1,000–₦5,000." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Private Hospitals Nigeria", "item": "https://www.9jadirectory.org/blog/best-private-hospitals-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ─── BEST REAL ESTATE COMPANIES IN NIGERIA 2026 ──────────────────────────
+  {
+    slug: "best-real-estate-companies-nigeria-2026",
+    title: "Best Real Estate Companies in Nigeria (2026): Buy, Sell & Invest",
+    excerpt: "Looking for a trusted real estate company in Nigeria? This guide ranks the top property developers, agents, and investment firms in Lagos, Abuja, and beyond for 2026.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
+
+      <p>Nigeria's real estate market is one of the most active in sub-Saharan Africa, driven by rapid urbanisation, a growing middle class, and a chronic housing deficit estimated at 17 million units. Whether you are buying your first home, investing in rental property, or developing land, choosing the right real estate company in Nigeria can save you millions of naira and years of legal headache.</p>
+
+      <p>This guide ranks the best real estate companies in Nigeria for 2026 — covering property developers, estate agencies, and property investment platforms.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-3">Top Real Estate Companies in Nigeria at a Glance</h3>
+        <ul class="space-y-1 text-green-800">
+          <li><strong>#1 Mixta Africa</strong> — Best large-scale developer, affordable housing</li>
+          <li><strong>#2 Brains & Hammers</strong> — Best for Abuja property development</li>
+          <li><strong>#3 RevolutionPlus Property</strong> — Best for flexible payment plans</li>
+          <li><strong>#4 Fine & Country Nigeria</strong> — Best luxury property agency</li>
+          <li><strong>#5 Landwey Investment</strong> — Best land banking & investment</li>
+          <li><strong>#6 UPDC (UAC Property)</strong> — Best established developer, Lagos</li>
+          <li><strong>#7 Jide Taiwo & Co.</strong> — Most trusted estate agency since 1980</li>
+          <li><strong>#8 PropertyMart</strong> — Best online property marketplace Nigeria</li>
+          <li><strong>#9 Purple Real Estate</strong> — Best for Lagos upmarket rentals</li>
+          <li><strong>#10 Cappa & D'Alberto</strong> — Best construction & development firm</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Mixta Africa</h2>
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop" alt="Best real estate companies in Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
+      <p>Mixta Africa is one of Nigeria's largest real estate developers, with a portfolio spanning residential estates, commercial properties, and mixed-use developments across Lagos, Abuja, and other Nigerian cities. The company is backed by AfricInvest and other institutional investors, giving it the financial strength to deliver large-scale, master-planned communities. Mixta is known for the Lakowe Lakes Golf & Country Estate in Lagos, one of Nigeria's most prestigious gated communities. The company focuses on mid-to-high-end residential development with consistent quality of construction and title documentation.</p>
+      <p><strong>Best for:</strong> Large residential estates, gated communities, institutional-grade development</p>
+      <p><strong>Key projects:</strong> Lakowe Lakes (Lagos), Toki Mixed-Use Development (Lagos)</p>
+      <p><strong>Website:</strong> mixtaafrica.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Brains & Hammers</h2>
+      <p>Brains & Hammers is Abuja's most prominent residential property developer, known for high-quality housing developments in prime FCT locations including Life Camp, Guzape, and Karsana. The company has delivered thousands of residential units in Abuja and is known for its architectural quality, green spaces, and residents' association management. Brains & Hammers also develops commercial and mixed-use properties. Their payment plans are structured to make homeownership accessible, with flexible instalment options over 12 to 36 months.</p>
+      <p><strong>Best for:</strong> Abuja residential development, quality finishing, Life Camp & Guzape locations</p>
+      <p><strong>Website:</strong> brainsandhammers.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. RevolutionPlus Property</h2>
+      <p>RevolutionPlus Property is one of Nigeria's fastest-growing real estate companies, particularly popular for its flexible payment plans that allow buyers to pay for land and homes over 6 to 24 months. The company operates primarily in Lagos (Ibeju-Lekki, Epe corridor) and Abuja, offering plots, terrace houses, and detached homes. RevolutionPlus is known for aggressive marketing, a large sales agent network, and good title documentation on its properties. The company is a strong choice for first-time property buyers who want accessible payment terms.</p>
+      <p><strong>Best for:</strong> Flexible payment plans, first-time buyers, Ibeju-Lekki land investment</p>
+      <p><strong>Website:</strong> revolutionplus.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Fine & Country Nigeria</h2>
+      <p>Fine & Country Nigeria is the local affiliate of Fine & Country International — one of the world's leading luxury real estate brands. In Nigeria, Fine & Country specialises in the sale, rental, and management of premium residential and commercial properties in Lagos, Abuja, and Port Harcourt. The company is the agency of choice for Nigeria's high-net-worth individuals, expatriates, and institutional investors seeking luxury homes, office spaces, and retail properties. Fine & Country Nigeria also provides property management and investment advisory services.</p>
+      <p><strong>Best for:</strong> Luxury property sales & rentals, expatriate housing, commercial real estate</p>
+      <p><strong>Website:</strong> fineandcountry.com/ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Landwey Investment</h2>
+      <p>Landwey Investment is Nigeria's leading land-banking and real estate investment company, offering plots of land in high-growth corridors around Lagos — particularly the Ibeju-Lekki axis and Epe area, near the Dangote Refinery and Lekki Free Trade Zone. The company markets land as an investment vehicle for Nigerians who want to hedge against inflation. Landwey offers flexible monthly payment plans, clear title documentation (Deed of Assignment, Governor's Consent), and has sold land to over 50,000 customers across Nigeria and the diaspora.</p>
+      <p><strong>Best for:</strong> Land investment, Ibeju-Lekki corridor, diaspora buyers, flexible payments</p>
+      <p><strong>Website:</strong> landwey.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. UPDC (UAC Property Development Company)</h2>
+      <p>UPDC is a publicly listed real estate company (NGX: UPDC) and one of Nigeria's most established property developers. A subsidiary of UAC of Nigeria Plc, UPDC has been developing quality residential and commercial properties in Lagos since the 1990s. Key developments include Festival Hotel (Festac), Maryland Mall, and multiple residential estates. UPDC is a trusted name for institutional-grade property with proper documentation, and its NGX listing provides financial transparency. The company also provides property management services for commercial assets.</p>
+      <p><strong>Best for:</strong> Established developer, NGX-listed, Lagos residential & commercial</p>
+      <p><strong>Website:</strong> updcplc.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Jide Taiwo & Co.</h2>
+      <p>Jide Taiwo & Co. is Nigeria's oldest and most respected estate agency, founded in 1980 and based in Lagos. The firm handles property sales, rentals, valuations, facility management, and property investment advisory. Jide Taiwo & Co. is a Fellow of the Nigerian Institution of Estate Surveyors and Valuers (NIESV) and is frequently appointed by courts, banks, and government agencies as independent property valuers. The company is a trusted name for property valuation reports used for mortgage applications, insurance, and asset assessments.</p>
+      <p><strong>Best for:</strong> Property valuation, estate agency, rental management, independent appraisals</p>
+      <p><strong>Website:</strong> jidetaiwoandco.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. PropertyMart</h2>
+      <p>PropertyMart is Nigeria's leading online property marketplace, connecting buyers, sellers, landlords, and tenants across all 36 states. The platform hosts thousands of verified property listings including land, houses, apartments, and commercial spaces. PropertyMart's mortgage advisory service helps buyers navigate Nigerian home loan options from banks and mortgage institutions. The platform also provides property price indices for major Nigerian cities, helping buyers and investors make data-driven decisions.</p>
+      <p><strong>Best for:</strong> Property search online, price comparison, mortgage advisory, all locations</p>
+      <p><strong>Website:</strong> propertymart.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Purple Real Estate</h2>
+      <p>Purple Real Estate is a Lagos-based agency specialising in premium and luxury residential properties, particularly in Victoria Island, Ikoyi, Lekki, and Banana Island. The company manages a large portfolio of furnished short-lets, serviced apartments, and long-term rentals, catering primarily to expatriates, returnees, and high-earning Nigerian professionals. Purple Real Estate is known for its professional property management service, transparent pricing, and a curated portfolio of well-maintained homes.</p>
+      <p><strong>Best for:</strong> Luxury rentals, short-lets, serviced apartments, VI/Ikoyi/Lekki/Banana Island</p>
+      <p><strong>Website:</strong> purplerealestate.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Cappa & D'Alberto</h2>
+      <p>Cappa & D'Alberto Plc is one of Nigeria's oldest building and civil engineering companies, with a real estate development arm that has delivered some of Lagos's landmark commercial and residential projects. Listed on the NGX, the company has a strong track record in construction quality and project delivery. Cappa & D'Alberto provides general contracting, design-and-build, and property development services and has built major government institutions, bank head offices, hotels, and residential estates across Nigeria since the 1920s.</p>
+      <p><strong>Best for:</strong> Construction quality, commercial development, NGX-listed, institutional projects</p>
+      <p><strong>Website:</strong> cappanigeria.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Avoid Real Estate Fraud in Nigeria</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse border border-gray-300 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="border border-gray-300 p-3 text-left">Red Flag</th>
+              <th class="border border-gray-300 p-3 text-left">What to Do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3">No land title document shown</td><td class="border border-gray-300 p-3">Demand Certificate of Occupancy or Deed of Assignment before paying</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Price far below market rate</td><td class="border border-gray-300 p-3">Verify comparable sales on PropertyMart before proceeding</td></tr>
+            <tr><td class="border border-gray-300 p-3">No physical office or registered company</td><td class="border border-gray-300 p-3">Search the CAC register at search.cac.gov.ng</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Agent rushes you to pay immediately</td><td class="border border-gray-300 p-3">Involve a solicitor and request 48–72 hours to do due diligence</td></tr>
+            <tr><td class="border border-gray-300 p-3">Same property shown by multiple agents</td><td class="border border-gray-300 p-3">Check land registry records and confirm with your solicitor</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your real estate company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for property developers, agents, and valuers every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Real Estate Business Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which real estate company is best in Nigeria?</h3>
+      <p>Mixta Africa is the best large-scale residential developer by project quality and scale. For Abuja, Brains & Hammers leads. For luxury agency services, Fine & Country Nigeria is the top choice. For land investment and flexible payment plans, RevolutionPlus and Landwey are the most popular among Nigerian buyers.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I verify a real estate company in Nigeria?</h3>
+      <p>Search the company on the CAC register at search.cac.gov.ng to confirm it is properly registered. Check if the company's agents are registered with the Estate Surveyors and Valuers Registration Board of Nigeria (ESVARBON). Always demand to see the title document on any property before making payment, and engage a solicitor for independent verification.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the best area to buy property in Lagos?</h3>
+      <p>Victoria Island, Ikoyi, and Banana Island remain the most prestigious and highest-value areas. Lekki Phase 1 offers high rental yield for investors. The Ibeju-Lekki corridor (Dangote Refinery area) offers the highest capital appreciation potential at more affordable entry prices. In Abuja, Maitama, Asokoro, and Guzape are the most sought-after areas.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I get a mortgage in Nigeria?</h3>
+      <p>Yes. The Federal Mortgage Bank of Nigeria (FMBN) offers the National Housing Fund (NHF) loan at 6% interest for contributors. Commercial banks offer mortgage loans at 18–22% per annum. The Lagos State Mortgage Board also offers subsidised mortgages to Lagos residents. Mortgage penetration in Nigeria remains low (less than 1% of GDP), so most property purchases are cash-based.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 24, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Real Estate",
+    readTime: "13 min read",
+    keywords: [
+      "best real estate companies nigeria 2026",
+      "top property developers nigeria",
+      "real estate companies in lagos",
+      "property developers abuja",
+      "land for sale nigeria",
+      "mixta africa nigeria",
+      "brains and hammers abuja",
+      "revolutionplus property nigeria",
+      "fine and country nigeria",
+      "buy property in nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Real Estate Companies in Nigeria (2026): Buy, Sell & Invest",
+        "image": ["https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-02-24",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Best real estate companies in Nigeria 2026 — Mixta Africa, Brains & Hammers, RevolutionPlus, Fine & Country, Landwey. How to buy property safely in Nigeria.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-real-estate-companies-nigeria-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best Real Estate Companies in Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Mixta Africa", "url": "https://www.mixtaafrica.com" },
+          { "@type": "ListItem", "position": 2, "name": "Brains & Hammers", "url": "https://www.brainsandhammers.com" },
+          { "@type": "ListItem", "position": 3, "name": "RevolutionPlus Property", "url": "https://www.revolutionplus.com.ng" },
+          { "@type": "ListItem", "position": 4, "name": "Fine & Country Nigeria", "url": "https://www.fineandcountry.com/ng" },
+          { "@type": "ListItem", "position": 5, "name": "Landwey Investment", "url": "https://www.landwey.com.ng" },
+          { "@type": "ListItem", "position": 6, "name": "UPDC Plc", "url": "https://www.updcplc.com" },
+          { "@type": "ListItem", "position": 7, "name": "Jide Taiwo & Co.", "url": "https://www.jidetaiwoandco.com" },
+          { "@type": "ListItem", "position": 8, "name": "PropertyMart", "url": "https://www.propertymart.com.ng" },
+          { "@type": "ListItem", "position": 9, "name": "Purple Real Estate", "url": "https://www.purplerealestate.com.ng" },
+          { "@type": "ListItem", "position": 10, "name": "Cappa & D'Alberto", "url": "https://www.cappanigeria.com" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which real estate company is best in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Mixta Africa leads for large-scale development. Brains & Hammers leads in Abuja. Fine & Country Nigeria is best for luxury agency. RevolutionPlus and Landwey are most popular for flexible land purchases." } },
+          { "@type": "Question", "name": "How do I verify a real estate company in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Search the CAC register at search.cac.gov.ng. Check ESVARBON registration. Always demand title documents and engage a solicitor before payment." } },
+          { "@type": "Question", "name": "What is the best area to buy property in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Victoria Island, Ikoyi, and Banana Island are most prestigious. Lekki Phase 1 offers high rental yield. Ibeju-Lekki offers high capital appreciation potential at lower entry prices." } },
+          { "@type": "Question", "name": "Can I get a mortgage in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FMBN offers NHF loans at 6% for contributors. Commercial banks charge 18-22% per annum. Most Nigerian property is purchased with cash due to low mortgage penetration." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Real Estate Companies Nigeria", "item": "https://www.9jadirectory.org/blog/best-real-estate-companies-nigeria-2026" }
+        ]
+      }
+    ])
+  },
+
+  // ─── BEST IT COMPANIES IN LAGOS 2026 ─────────────────────────────────────
+  {
+    slug: "best-it-companies-lagos-2026",
+    title: "Best IT & Technology Companies in Lagos, Nigeria (2026)",
+    excerpt: "Looking for a trusted IT company in Lagos? This guide ranks the top technology firms in Nigeria for software development, IT infrastructure, cybersecurity, and digital solutions in 2026.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
+
+      <p>Lagos is the technology hub of Africa — home to more tech startups, developers, and IT service companies than any other city on the continent. From global giants like Interswitch to world-class talent exporters like Andela, the Lagos tech ecosystem has matured rapidly. Whether you need software development, IT infrastructure, cybersecurity, or enterprise systems, the right IT company in Lagos can transform your business.</p>
+
+      <p>This guide ranks the best IT and technology companies in Lagos and Nigeria for 2026, covering software, fintech infrastructure, enterprise IT, and managed services.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-3">Top IT Companies in Lagos at a Glance</h3>
+        <ul class="space-y-1 text-green-800">
+          <li><strong>#1 Interswitch Group</strong> — Nigeria's leading payments & fintech infrastructure company</li>
+          <li><strong>#2 SystemSpecs (Remita)</strong> — Best for enterprise payments & government systems</li>
+          <li><strong>#3 Inlaks Computers</strong> — Best for IT infrastructure & banking technology</li>
+          <li><strong>#4 Andela</strong> — Best tech talent platform for software developers</li>
+          <li><strong>#5 Softcom</strong> — Best for digital transformation & enterprise software</li>
+          <li><strong>#6 eProcess International</strong> — Best for IT outsourcing & managed services</li>
+          <li><strong>#7 Computer Warehouse Group (CWG)</strong> — Best for enterprise IT solutions</li>
+          <li><strong>#8 Chams Plc</strong> — Best for identity management & biometrics</li>
+          <li><strong>#9 MainOne (Equinix)</strong> — Best for internet connectivity & data centres</li>
+          <li><strong>#10 Precise Financial Systems</strong> — Best for banking software & core banking</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Interswitch Group</h2>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" alt="Best IT companies Lagos Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
+      <p>Interswitch Group is Nigeria's most valuable technology company and Africa's first homegrown fintech unicorn, valued at over $1 billion. Founded in 2002 by Mitchell Elias Elegbe and headquartered in Lagos, Interswitch operates Nigeria's largest payment switching infrastructure — processing billions of transactions annually across its Quickteller, Verve card, and NIBSS-connected networks. The company serves Nigeria's banks, government agencies, telecoms, and retail sector. Interswitch also owns Paycode, a global payment platform, and has expanded across East and Southern Africa. Visa acquired a 20% stake in Interswitch in 2019.</p>
+      <p><strong>Best for:</strong> Payment switching, fintech infrastructure, card processing, digital payments</p>
+      <p><strong>Location:</strong> Plot 1261A, Bishops Court, Off Adeola Hopewell Street, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> interswitchgroup.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. SystemSpecs (Remita)</h2>
+      <p>SystemSpecs is a Nigerian technology company best known for developing Remita — the payment platform powering the Nigerian federal government's Treasury Single Account (TSA) system. Remita processes trillions of naira in government payments annually and is used by all federal ministries, agencies, and parastatals, as well as thousands of private sector organisations. SystemSpecs also develops HumanManager — Nigeria's leading HR and payroll software — and provides digital banking solutions. Founded in 1992 and headquartered in Lagos, SystemSpecs is one of Nigeria's most strategically important technology companies.</p>
+      <p><strong>Best for:</strong> Government payment systems, HR software, payroll, enterprise payments</p>
+      <p><strong>Location:</strong> 26 Keffi Street, Off Awolowo Road, SW Ikoyi, Lagos</p>
+      <p><strong>Website:</strong> systemspecs.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Inlaks Computers</h2>
+      <p>Inlaks is Nigeria's leading IT infrastructure and banking technology company, specialising in the supply, installation, and maintenance of ATMs, point-of-sale terminals, core banking systems, and IT infrastructure for Nigerian banks and financial institutions. Founded in 1982 and headquartered in Lagos, Inlaks maintains the largest ATM and POS network maintenance operation in West Africa. The company is a certified partner of major technology brands including NCR, IBM, Oracle, Cisco, and Microsoft. Inlaks also provides managed IT services, cybersecurity solutions, and data centre services to enterprise clients.</p>
+      <p><strong>Best for:</strong> ATM & POS infrastructure, banking technology, IT managed services, enterprise IT</p>
+      <p><strong>Location:</strong> Inlaks House, 4 Commercial Avenue, Sabo, Yaba, Lagos</p>
+      <p><strong>Website:</strong> inlaks.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Andela</h2>
+      <p>Andela is a global technology platform that connects companies with senior software engineers from across Africa. Founded in Lagos in 2014 by Jeremy Johnson, Iyinoluwa Aboyeji, and others, Andela has trained and placed thousands of African software developers with companies including Google, Microsoft, GitHub, and leading US startups. The company operates a competitive talent selection process — historically accepting less than 1% of applicants — ensuring clients access only top-tier engineering talent. Andela went fully remote in 2020 and now operates a distributed model across Africa, with its roots firmly in Lagos.</p>
+      <p><strong>Best for:</strong> Senior software engineer hiring, remote tech talent, Africa-based developers</p>
+      <p><strong>Location:</strong> 6 Uke Street, Garki, Abuja (HQ); originally founded in Lagos</p>
+      <p><strong>Website:</strong> andela.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Softcom</h2>
+      <p>Softcom is a Nigerian technology company specialising in digital transformation, enterprise software development, and data analytics for large organisations. The company is best known for Eyowo — a digital banking and payments product — and for building custom technology solutions for Nigerian banks, telecoms, government agencies, and multinationals. Softcom also provides cloud computing, systems integration, and cybersecurity services. Founded in 1996 and headquartered in Lagos, Softcom has over 25 years of enterprise IT experience and a strong reputation for complex, mission-critical software delivery.</p>
+      <p><strong>Best for:</strong> Digital transformation, custom software, data analytics, enterprise systems</p>
+      <p><strong>Location:</strong> 42 Saka Tinubu Street, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> softcom.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. eProcess International</h2>
+      <p>eProcess International is a leading IT outsourcing and managed services company in Nigeria, providing technology infrastructure management, help desk support, cybersecurity, and IT consulting to banks, insurance companies, and large enterprises. The company manages thousands of servers and network devices across Nigeria for major financial institutions. eProcess also provides digital banking solutions, card management systems, and enterprise application support. Founded in 2000 and headquartered in Lagos, eProcess is a subsidiary of Ecobank Transnational Incorporated (ETI), giving it deep financial sector expertise.</p>
+      <p><strong>Best for:</strong> IT outsourcing, managed services, cybersecurity, digital banking infrastructure</p>
+      <p><strong>Location:</strong> 21 Ahmadu Bello Way, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> eprocessint.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Computer Warehouse Group (CWG)</h2>
+      <p>Computer Warehouse Group (CWG) is a publicly listed (NGX) Nigerian technology company providing enterprise IT solutions, cloud services, and managed IT to businesses across Nigeria. Founded in 1993, CWG is an authorised partner of Microsoft, IBM, Oracle, SAP, and other major technology vendors. The company provides IT hardware supply, software licensing, cloud migration, enterprise resource planning (ERP) implementations, and managed IT services. CWG is a trusted technology partner for Nigeria's banking, oil and gas, manufacturing, and public sector clients.</p>
+      <p><strong>Best for:</strong> Enterprise IT solutions, ERP, cloud migration, Microsoft & SAP implementations</p>
+      <p><strong>Location:</strong> CWG House, Plot 1684, Sanusi Fafunwa Street, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> cwg.com.ng</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Chams Plc</h2>
+      <p>Chams Plc is a Nigerian technology company listed on the NGX, specialising in identity management, biometric systems, and digital payment solutions. Chams developed and manages the National Identity Management System (NIMS) in partnership with NIMC, and provides biometric enrollment, card issuance, and identity verification services to government agencies and financial institutions. Chams also operates the Chams Switch payment processing network and provides managed IT services. Founded in 1985 and headquartered in Lagos, Chams is one of Nigeria's most strategically important identity technology companies.</p>
+      <p><strong>Best for:</strong> Identity management, biometrics, NIN verification, government IT systems</p>
+      <p><strong>Location:</strong> Plot 4, Adeyemo Alakija Street, Victoria Island, Lagos</p>
+      <p><strong>Website:</strong> chamsplc.com</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. MainOne (Equinix)</h2>
+      <p>MainOne is Nigeria's leading submarine cable and internet infrastructure company, operating a 7,000km submarine cable system connecting West Africa to Europe and providing internet backbone connectivity to Nigeria and Ghana. Acquired by Equinix (NASDAQ: EQIX) in 2022, MainOne now operates as Equinix Nigeria and runs West Africa's most advanced data centres in Lagos, providing colocation, interconnection, and cloud connectivity services. MainOne/Equinix is the internet backbone for Nigeria's leading telcos, banks, and cloud providers, and is the most strategic piece of digital infrastructure in West Africa.</p>
+      <p><strong>Best for:</strong> Internet connectivity, data centre colocation, cloud interconnection, submarine cable</p>
+      <p><strong>Location:</strong> MainOne Campus, Lekki Free Zone, Lagos</p>
+      <p><strong>Website:</strong> equinix.com/locations/africa</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Precise Financial Systems</h2>
+      <p>Precise Financial Systems is a Nigerian fintech and banking software company providing core banking solutions, digital banking platforms, and financial technology services to banks, microfinance institutions, and financial cooperatives across Nigeria and West Africa. The company's FINACLE-competitive core banking system powers dozens of Nigerian financial institutions. Precise Financial Systems also provides mobile banking applications, agency banking software, and regulatory reporting tools. Founded in Lagos in the 1990s, the company is a trusted partner for smaller banks and MFBs seeking affordable, locally-supported core banking technology.</p>
+      <p><strong>Best for:</strong> Core banking software, MFB technology, digital banking platforms, fintech SMEs</p>
+      <p><strong>Location:</strong> Lagos</p>
+      <p><strong>Website:</strong> precisefinancial.net</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">IT Services Cost Guide — Nigeria 2026</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border-collapse border border-gray-300 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="border border-gray-300 p-3 text-left">Service</th>
+              <th class="border border-gray-300 p-3 text-left">Typical Cost Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3">Custom web application development</td><td class="border border-gray-300 p-3">₦2,000,000 – ₦20,000,000+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Mobile app development (iOS or Android)</td><td class="border border-gray-300 p-3">₦3,000,000 – ₦25,000,000+</td></tr>
+            <tr><td class="border border-gray-300 p-3">IT infrastructure managed services (monthly)</td><td class="border border-gray-300 p-3">₦500,000 – ₦5,000,000/month</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cybersecurity audit</td><td class="border border-gray-300 p-3">₦1,500,000 – ₦8,000,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">ERP implementation (SAP/Oracle)</td><td class="border border-gray-300 p-3">₦20,000,000 – ₦200,000,000+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Senior Nigerian developer (monthly contract)</td><td class="border border-gray-300 p-3">₦800,000 – ₦3,000,000/month</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your IT company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerian businesses search for IT companies, software developers, and tech consultants every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your IT Company Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which is the biggest IT company in Nigeria?</h3>
+      <p>Interswitch Group is Nigeria's largest and most valuable technology company, with a valuation exceeding $1 billion and Visa as a strategic investor. Interswitch processes the majority of Nigeria's electronic payment transactions through its switching infrastructure. SystemSpecs (Remita) is the most strategically critical IT company, powering the federal government's Treasury Single Account.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How much does software development cost in Nigeria?</h3>
+      <p>A custom web application costs ₦2 million to ₦20 million depending on complexity. A mobile app (iOS or Android) costs ₦3 million to ₦25 million. Senior Nigerian developers on monthly contracts cost ₦800,000 to ₦3 million per month. Rates vary significantly between Lagos-based agencies and freelancers.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is Lagos a good place to hire software developers?</h3>
+      <p>Yes. Lagos has Africa's largest concentration of software developers, with a rapidly growing pool of skilled engineers in JavaScript, Python, Java, and mobile development. Andela, Ingressive For Good, and platforms like Turing.com and Toptal have helped Lagos developers build international careers. Average developer quality and cost competitiveness make Lagos one of the best cities in the world for tech hiring.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which Nigerian IT company is listed on the stock exchange?</h3>
+      <p>Several Nigerian IT companies are listed on the Nigerian Exchange (NGX), including Computer Warehouse Group (CWG), Chams Plc, e-Tranzact International, and MTNN (MTN Nigeria). Interswitch was pursuing a dual listing on the NGX and London Stock Exchange but remains privately held as of 2026.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+    date: "Feb 24, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Technology",
+    readTime: "12 min read",
+    keywords: [
+      "best IT companies in Lagos 2026",
+      "top technology companies nigeria",
+      "IT companies in nigeria",
+      "software development companies lagos",
+      "interswitch nigeria",
+      "andela nigeria",
+      "tech companies in lagos",
+      "inlaks nigeria",
+      "systemspecs remita",
+      "IT services nigeria",
+    ],
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best IT & Technology Companies in Lagos, Nigeria (2026)",
+        "image": ["https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"],
+        "datePublished": "2026-02-24",
+        "dateModified": "2026-02-24",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
+        "description": "Best IT and technology companies in Lagos Nigeria 2026 — Interswitch, SystemSpecs, Inlaks, Andela, Softcom, CWG. IT costs, developer rates, and enterprise tech guide.",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-it-companies-lagos-2026" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best IT Companies in Lagos Nigeria 2026",
+        "numberOfItems": 10,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Interswitch Group", "url": "https://www.interswitchgroup.com" },
+          { "@type": "ListItem", "position": 2, "name": "SystemSpecs (Remita)", "url": "https://www.systemspecs.com.ng" },
+          { "@type": "ListItem", "position": 3, "name": "Inlaks Computers", "url": "https://www.inlaks.com" },
+          { "@type": "ListItem", "position": 4, "name": "Andela", "url": "https://www.andela.com" },
+          { "@type": "ListItem", "position": 5, "name": "Softcom", "url": "https://www.softcom.ng" },
+          { "@type": "ListItem", "position": 6, "name": "eProcess International", "url": "https://www.eprocessint.com" },
+          { "@type": "ListItem", "position": 7, "name": "Computer Warehouse Group (CWG)", "url": "https://www.cwg.com.ng" },
+          { "@type": "ListItem", "position": 8, "name": "Chams Plc", "url": "https://www.chamsplc.com" },
+          { "@type": "ListItem", "position": 9, "name": "MainOne (Equinix)", "url": "https://www.equinix.com/locations/africa" },
+          { "@type": "ListItem", "position": 10, "name": "Precise Financial Systems", "url": "https://www.precisefinancial.net" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Which is the biggest IT company in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Interswitch Group is Nigeria's largest IT company with a $1B+ valuation and Visa as investor. SystemSpecs (Remita) powers the federal government's TSA payment system." } },
+          { "@type": "Question", "name": "How much does software development cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Custom web apps cost ₦2M–₦20M. Mobile apps cost ₦3M–₦25M. Senior developers on monthly contracts cost ₦800,000–₦3M/month." } },
+          { "@type": "Question", "name": "Is Lagos a good place to hire software developers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lagos has Africa's largest developer pool. Andela and platforms like Turing have helped Lagos developers build international careers. Quality and cost-competitiveness are both strong." } },
+          { "@type": "Question", "name": "Which Nigerian IT company is listed on the stock exchange?", "acceptedAnswer": { "@type": "Answer", "text": "NGX-listed IT companies include Computer Warehouse Group (CWG), Chams Plc, and e-Tranzact International. Interswitch remains privately held." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best IT Companies Lagos Nigeria", "item": "https://www.9jadirectory.org/blog/best-it-companies-lagos-2026" }
+        ]
+      }
+    ])
+  },
+
 ];
