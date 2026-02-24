@@ -12674,6 +12674,15 @@ export const blogPosts: BlogPost[] = [
       <p>This guide ranks the best IT and technology companies in Lagos and Nigeria for 2026, covering software, fintech infrastructure, enterprise IT, and managed services.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-lg font-bold text-green-900 mb-2">Is your IT company not on this list?</h3>
+        <p class="text-green-800 mb-4">Thousands of Nigerian businesses search for IT companies, software developers, and tech consultants every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your IT Company Free &rarr;</a>
+          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-3">Top IT Companies in Lagos at a Glance</h3>
         <ul class="space-y-1 text-green-800">
           <li><strong>#1 Interswitch Group</strong> — Nigeria's leading payments & fintech infrastructure company</li>
@@ -12686,6 +12695,7 @@ export const blogPosts: BlogPost[] = [
           <li><strong>#8 Chams Plc</strong> — Best for identity management & biometrics</li>
           <li><strong>#9 MainOne (Equinix)</strong> — Best for internet connectivity & data centres</li>
           <li><strong>#10 Precise Financial Systems</strong> — Best for banking software & core banking</li>
+          <li><strong>Featured: <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I Realent Global Resources</a></strong> — Best PropTech & AI-powered real estate platform in Nigeria</li>
         </ul>
       </div>
 
@@ -12750,6 +12760,12 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Location:</strong> Lagos</p>
       <p><strong>Website:</strong> precisefinancial.net</p>
 
+      <h2 class="text-2xl font-bold mt-8 mb-4">Featured: A.I Realent Global Resources</h2>
+      <p>A.I Realent Global Resources is Nigeria's standout PropTech company — combining artificial intelligence, digital-first processes, and deep local market expertise to deliver real estate services that are faster, more transparent, and more accessible than traditional property agencies. Operating across Abuja and Lagos, A.I Realent uses technology to streamline property search, title verification, and transaction management for buyers, sellers, landlords, and tenants. The company provides diaspora buyer support (remote property sourcing, virtual tours, verified title documentation review), investment advisory, and property management — all powered by digital tools that remove the friction and risk typical of Nigerian real estate transactions.</p>
+      <p><strong>Best for:</strong> AI-powered property search, diaspora buyers, investment advisory, PropTech solutions</p>
+      <p><strong>Location:</strong> Abuja, FCT</p>
+      <p><strong>Website:</strong> airealent.ng &nbsp;|&nbsp; <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-600 hover:underline font-semibold">View Full Listing on 9jaDirectory &rarr;</a></p>
+
       <h2 class="text-2xl font-bold mt-8 mb-4">IT Services Cost Guide — Nigeria 2026</h2>
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse border border-gray-300 text-sm">
@@ -12768,15 +12784,6 @@ export const blogPosts: BlogPost[] = [
             <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Senior Nigerian developer (monthly contract)</td><td class="border border-gray-300 p-3">₦800,000 – ₦3,000,000/month</td></tr>
           </tbody>
         </table>
-      </div>
-
-      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
-        <h3 class="text-lg font-bold text-green-900 mb-2">Is your IT company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerian businesses search for IT companies, software developers, and tech consultants every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
-        <div class="flex flex-wrap gap-3">
-          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your IT Company Free &rarr;</a>
-          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
-        </div>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
@@ -12827,7 +12834,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "ItemList",
         "name": "Best IT Companies in Lagos Nigeria 2026",
-        "numberOfItems": 10,
+        "numberOfItems": 11,
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Interswitch Group", "url": "https://www.interswitchgroup.com" },
           { "@type": "ListItem", "position": 2, "name": "SystemSpecs (Remita)", "url": "https://www.systemspecs.com.ng" },
@@ -12838,7 +12845,8 @@ export const blogPosts: BlogPost[] = [
           { "@type": "ListItem", "position": 7, "name": "Computer Warehouse Group (CWG)", "url": "https://www.cwg.com.ng" },
           { "@type": "ListItem", "position": 8, "name": "Chams Plc", "url": "https://www.chamsplc.com" },
           { "@type": "ListItem", "position": 9, "name": "MainOne (Equinix)", "url": "https://www.equinix.com/locations/africa" },
-          { "@type": "ListItem", "position": 10, "name": "Precise Financial Systems", "url": "https://www.precisefinancial.net" }
+          { "@type": "ListItem", "position": 10, "name": "Precise Financial Systems", "url": "https://www.precisefinancial.net" },
+          { "@type": "ListItem", "position": 11, "name": "A.I Realent Global Resources", "url": "https://www.9jadirectory.org/listings/a-i-realent-global-resources-ltd-kwv2h" }
         ]
       },
       {
