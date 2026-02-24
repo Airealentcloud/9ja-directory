@@ -16,7 +16,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.or
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: '9jaDirectory - Find Businesses & Services in Nigeria',
-  description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria. Your complete Nigerian business directory for Lagos, Abuja, and all 36 states.',
+  description: 'Find trusted businesses and services across Nigeria. Your complete business directory for Lagos, Abuja, Port Harcourt, and all 36 states.',
   keywords: ['Nigeria business directory', 'Nigerian businesses', 'find services in Nigeria', '9ja directory', 'Lagos businesses', 'Abuja businesses', 'local services Nigeria', 'Nigerian companies'],
   alternates: {
     canonical: '/',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: '9jaDirectory',
     title: '9jaDirectory - Find Businesses & Services in Nigeria',
-    description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
+    description: 'Find trusted businesses and services across Nigeria. Complete directory for Lagos, Abuja, Port Harcourt, and all 36 states.',
     images: [
       {
         url: '/opengraph-image',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '9jaDirectory - Find Businesses & Services in Nigeria',
-    description: 'Discover and connect with trusted businesses, services, and professionals across Nigeria.',
+    description: 'Find trusted businesses and services across Nigeria. Complete directory for Lagos, Abuja, Port Harcourt, and all 36 states.',
     images: ['/opengraph-image'],
     creator: '@9jaDirectory',
   },
@@ -85,6 +85,8 @@ export default async function RootLayout({
                   <NavLink href="/blog" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Blog</NavLink>
                   <NavLink href="/press-release" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Press Release</NavLink>
                   <NavLink href="/pricing" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Pricing</NavLink>
+                  <NavLink href="/search" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">Search</NavLink>
+                  <NavLink href="/faq" className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">FAQ</NavLink>
                   <NavLink href="/pricing" className="bg-green-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 ml-4">
                     Get Listed
                   </NavLink>
@@ -127,6 +129,8 @@ export default async function RootLayout({
                   <li><Link href="/categories" className="hover:text-white transition-colors">All Categories</Link></li>
                   <li><Link href="/states" className="hover:text-white transition-colors">Browse States</Link></li>
                   <li><Link href="/featured" className="hover:text-white transition-colors">Featured Businesses</Link></li>
+                  <li><Link href="/search" className="hover:text-white transition-colors">Search</Link></li>
+                  <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
                 </ul>
               </div>
               <div>

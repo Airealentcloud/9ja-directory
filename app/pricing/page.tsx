@@ -1,7 +1,39 @@
-'use client'
-
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import PricingCheckout from '@/components/pricing/pricing-checkout'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+
+export const metadata: Metadata = {
+    title: 'Business Listing Pricing Plans | 9jaDirectory Nigeria',
+    description: 'List your Nigerian business from free to premium. Choose a plan with photos, verified badge, featured placement & priority support. No hidden fees.',
+    keywords: ['business listing Nigeria', 'list business Nigeria', 'Nigerian directory pricing', 'advertise business Nigeria', 'business registration Nigeria directory'],
+    alternates: {
+        canonical: `${siteUrl}/pricing`,
+    },
+    openGraph: {
+        title: 'Business Listing Pricing Plans | 9jaDirectory Nigeria',
+        description: 'List your Nigerian business from free to premium. Photos, verified badge, featured placement & priority support.',
+        url: `${siteUrl}/pricing`,
+        siteName: '9jaDirectory',
+        locale: 'en_NG',
+        type: 'website',
+        images: [
+            {
+                url: '/opengraph-image',
+                width: 1200,
+                height: 630,
+                alt: '9jaDirectory Pricing Plans',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Business Listing Pricing Plans | 9jaDirectory',
+        description: 'List your Nigerian business from free to premium. No hidden fees.',
+        images: ['/opengraph-image'],
+    },
+}
 
 export default function PricingPage() {
     return (

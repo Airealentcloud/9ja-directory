@@ -65,6 +65,7 @@ export function generateLocalBusinessSchema(
         '@context': 'https://schema.org',
         '@type': [businessType, 'LocalBusiness'], // Multiple types for better SERP features
         '@id': `${siteUrl}/listings/${listing.slug}`,
+        inLanguage: 'en-NG',
         name: listing.business_name,
         description: listing.description,
     }
@@ -434,6 +435,7 @@ export function generateRealEstateListingSchema(listing: Listing) {
         '@context': 'https://schema.org',
         '@type': 'RealEstateListing',
         '@id': `${siteUrl}/listings/${listing.slug}#listing`,
+        inLanguage: 'en-NG',
         name: listing.business_name,
         description: listing.description,
         url: `${siteUrl}/listings/${listing.slug}`,

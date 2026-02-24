@@ -86,6 +86,8 @@ export default async function Home() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${siteUrl}#organization`,
+    inLanguage: 'en-NG',
     name: '9jaDirectory',
     alternateName: '9ja Directory',
     url: siteUrl,
@@ -101,10 +103,9 @@ export default async function Home() {
       contactType: 'Customer Service',
       email: 'support@9jadirectory.org',
       areaServed: 'NG',
-      availableLanguage: ['English']
+      availableLanguage: ['en-NG', 'English']
     },
     sameAs: [
-      // Add your actual social media profiles here
       'https://twitter.com/9jadirectory',
       'https://facebook.com/9jadirectory',
       'https://instagram.com/9jadirectory',
@@ -115,6 +116,8 @@ export default async function Home() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${siteUrl}#website`,
+    inLanguage: 'en-NG',
     name: '9jaDirectory',
     description: 'Nigeria Premier Business Directory',
     url: siteUrl,

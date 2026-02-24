@@ -102,6 +102,28 @@ function fixJsonLdImages(node: unknown, fallbackImageUrl: string): unknown {
     return next;
 }
 
+/**
+ * Ensures every Article/BlogPosting node in a schema array has:
+ * - inLanguage: "en-NG"
+ * - dateModified (falls back to datePublished if missing)
+ */
+function normalizeArticleSchemas(schemas: unknown): unknown {
+    if (!Array.isArray(schemas)) return schemas;
+    return schemas.map((item) => {
+        if (!item || typeof item !== 'object') return item;
+        const s = item as Record<string, unknown>;
+        const type = s['@type'];
+        if (type === 'Article' || type === 'BlogPosting' || type === 'NewsArticle') {
+            return {
+                ...s,
+                inLanguage: s.inLanguage ?? 'en-NG',
+                dateModified: s.dateModified ?? s.datePublished,
+            };
+        }
+        return s;
+    });
+}
+
 interface BlogPostPageProps {
     params: Promise<{
         slug: string;
@@ -172,7 +194,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     const absolutePostImage = post.image.startsWith('/') ? `${siteUrl}${post.image}` : post.image;
     const parsedSchema = post.schema ? safeJsonParse(post.schema) : null;
     const fixedSchema = parsedSchema ? fixJsonLdImages(parsedSchema, absolutePostImage) : null;
-    const schemaJson = fixedSchema ? JSON.stringify(fixedSchema) : post.schema;
+    const normalizedSchema = fixedSchema ? normalizeArticleSchemas(fixedSchema) : null;
+    const schemaJson = normalizedSchema ? JSON.stringify(normalizedSchema) : post.schema;
 
     return (
         <div className="min-h-screen bg-white pb-20">

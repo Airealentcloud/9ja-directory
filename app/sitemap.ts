@@ -79,9 +79,47 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
 
     // 5. Blog Posts - Content marketing pages
+    // Posts that were edited after their original publish date (title, excerpt,
+    // schema, or content updates). These override post.date for lastModified so
+    // Google re-crawls them sooner and picks up the improved metadata.
+    const BLOG_UPDATED: Record<string, string> = {
+        'best-web-hosting-in-nigeria-2026':                        '2026-02-24', // excerpt updated
+        'paypal-nigeria-2026-receive-payments-withdraw-naira':     '2026-02-24', // title + excerpt updated
+        'local-lead-generation-mistakes-nigeria-2025':             '2026-02-24', // related guides added
+        'top-business-listing-sites-in-nigeria-2025':              '2026-02-24', // related guides added
+        'digital-marketing-strategies-small-business':             '2026-02-24', // related guides added
+        'top-10-investment-opportunities-lagos':                   '2026-02-24', // title updated
+        'starting-agriculture-business-nigeria':                   '2026-02-24', // title updated
+        'how-to-get-business-loan-without-collateral-nigeria-2025':'2026-02-24', // title updated
+        'best-banks-small-business-nigeria-comparison-2025':       '2026-02-24', // title + excerpt updated
+        'how-to-start-blogging-content-business-nigeria-2025':     '2026-02-24', // title updated
+        'how-to-start-logistics-delivery-business-nigeria-2025':   '2026-02-24', // title updated
+        'cac-public-search-verify-company-nigeria':                '2026-02-24', // title updated
+        'company-code-nigeria-meaning-how-to-find':                '2026-02-24', // title updated
+        'cac-pre-incorporation-guide-nigeria-2026':                '2026-02-24', // title + excerpt updated
+        'how-to-check-if-company-is-registered-nigeria':           '2026-02-24', // title updated
+        'top-10-real-estate-companies-abuja':                      '2026-02-24', // excerpt updated
+        'top-10-law-firms-lagos':                                  '2026-02-24', // excerpt updated
+        'top-10-law-firms-abuja-fct':                              '2026-02-24', // excerpt updated
+        'how-to-start-food-delivery-business-in-nigeria':          '2026-02-24', // excerpt updated
+        'best-plumbing-materials-companies-nigeria':               '2026-02-24', // excerpt + related guides
+        'top-plastic-manufacturing-companies-nigeria':             '2026-02-24', // excerpt + related guides
+        'top-food-processing-companies-nigeria':                   '2026-02-24', // excerpt + related guides
+        'best-telecommunication-companies-nigeria':                '2026-02-24', // excerpt + related guides
+        'best-solar-panel-installation-companies-nigeria':         '2026-02-24', // excerpt + related guides
+        'top-10-security-companies-nigeria':                       '2026-02-24', // excerpt + related guides
+        'best-insurance-companies-nigeria':                        '2026-02-24', // related guides added
+        'top-10-law-firms-nigeria':                                '2026-02-24', // related guides added
+        'best-private-hospitals-nigeria':                          '2026-02-24', // related guides added
+        'best-real-estate-companies-nigeria':                      '2026-02-24', // related guides added
+        'best-it-technology-companies-lagos':                      '2026-02-24', // related guides added
+    }
+
     const blogUrls = blogPosts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date(post.date),
+        lastModified: BLOG_UPDATED[post.slug]
+            ? new Date(BLOG_UPDATED[post.slug])
+            : new Date(post.date),
         changeFrequency: 'monthly' as const,
         priority: 0.7,
     }))

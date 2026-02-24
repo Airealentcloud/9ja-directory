@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-web-hosting-in-nigeria-2026",
     title: "Best Web Hosting in Nigeria (2026): Editorial Top Nigerian Hosts",
-    excerpt: "Looking for the best web hosting in Nigeria? Editorial-only 2026 shortlist of Nigerian hosting companies, with practical selection criteria, use cases, and what to check before you buy.",
+    excerpt: "Best web hosting in Nigeria 2026: editorial shortlist of top Nigerian hosts with practical selection criteria, use cases, and buyer checklist.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 19, 2026</em></p>
 
@@ -176,8 +176,8 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "paypal-nigeria-2026-receive-payments-withdraw-naira",
-    title: "PayPal Nigeria 2026: How to Receive Payments, Withdraw to Naira & Best Alternatives",
-    excerpt: "PayPal Nigeria 2026 complete guide: Paga partnership explained, how to receive payments, withdraw to Naira, business account setup, transaction fees, limits & top 7 alternatives for freelancers.",
+    title: "PayPal Nigeria 2026: Receive Payments & Withdraw to Naira",
+    excerpt: "PayPal Nigeria 2026 guide: receive payments, withdraw to Naira, account setup, fees, limits & top alternatives for Nigerian freelancers.",
     content: `
       <p><strong>By 9jaDirectory Fintech Team</strong> | <em>Published: January 2026</em></p>
 
@@ -422,7 +422,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Related Reading</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><a href="/blog/best-payment-gateways-nigeria-2025" class="text-green-600 hover:underline">Best Payment Gateways in Nigeria (2025)</a></li>
-        <li><a href="/blog/best-banks-small-business-nigeria-2025" class="text-green-600 hover:underline">Top 10 Banks for Small Business Nigeria (2025)</a></li>
+        <li><a href="/blog/best-banks-small-business-nigeria-comparison-2025" class="text-green-600 hover:underline">Top 10 Banks for Small Business Nigeria (2025)</a></li>
         <li><a href="/blog/digital-marketing-strategies-small-business" class="text-green-600 hover:underline">Digital Marketing Strategies for Small Business</a></li>
         <li><a href="/blog/top-business-listing-sites-in-nigeria-2025" class="text-green-600 hover:underline">Top Business Listing Sites in Nigeria (2025)</a></li>
       </ul>
@@ -1369,7 +1369,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "top-10-investment-opportunities-lagos",
-    title: "Top 10 Investment Opportunities in Lagos for 2025: Where Smart Money is Heading",
+    title: "Top 10 Investment Opportunities in Lagos (2025): Where Smart Money Goes",
     excerpt: "Investment opportunities in Lagos for 2025: real estate, fintech, and agribusiness with ROI ranges, entry costs, and location tips.",
     keywords: [
       "investment opportunities in Lagos",
@@ -2349,7 +2349,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "starting-agriculture-business-nigeria",
-    title: "How to Start a Profitable Agriculture Business in Nigeria (2025 Complete Guide): Poultry, Fish, Crops & More",
+    title: "How to Start an Agriculture Business in Nigeria (2025): Poultry, Fish & Crops",
     excerpt: "Agriculture business Nigeria guide for 2025: poultry, fish, and crops, startup costs, funding options, and steps to profit.",
     keywords: [
       "agriculture business Nigeria",
@@ -2784,7 +2784,7 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "how-to-get-business-loan-without-collateral-nigeria-2025",
-    title: "How to Get a Business Loan Without Collateral in Nigeria (2025): Fast Approval in 24 Hours | 10 Best Lenders",
+    title: "How to Get a Business Loan Without Collateral in Nigeria (2025)",
     excerpt: "Business loan without collateral Nigeria: compare top lenders, rates, and requirements for SMEs, plus tips to get fast approval.",
     keywords: [
       "business loan without collateral Nigeria",
@@ -3495,8 +3495,8 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "best-banks-small-business-nigeria-comparison-2025",
-    title: "Top 10 Banks for Small Business Nigeria (2025): Interest Rates, Limits & Fees Compared",
-    excerpt: "Top 10 banks for small business Nigeria 2025: Compare Moniepoint (15% savings), Kuda, OPay interest rates, transaction limits, fees & account requirements. GTBank, Access Bank compared.",
+    title: "Top 10 Banks for Small Business in Nigeria (2025): Rates & Fees",
+    excerpt: "Top 10 banks for small business in Nigeria 2025: Compare Moniepoint, Kuda, OPay, GTBank & Access Bank on interest rates, fees & account requirements.",
     keywords: [
       "best banks for small business Nigeria",
       "business bank account Nigeria",
@@ -6621,7 +6621,7 @@ export const blogPosts: BlogPost[] = [
   // ✅ NEW: HOW TO START BLOGGING & CONTENT BUSINESS
   {
     slug: "how-to-start-blogging-content-business-nigeria-2025",
-    title: "How to Start a Blogging & Content Business in Nigeria (2025): Step-by-Step Guide",
+    title: "How to Start a Blogging Business in Nigeria (2025 Guide)",
     excerpt: "How to start blogging in Nigeria: pick a niche, set up your blog, and monetize with ads, services, affiliates, and email.",
     content: `
     <p><strong>By 9jaDirectory Business Team</strong> | <em>Updated: November 2025</em></p>
@@ -7335,7 +7335,7 @@ export const blogPosts: BlogPost[] = [
   // ✅ NEW: LOGISTICS & DELIVERY BUSINESS
   {
     slug: "how-to-start-logistics-delivery-business-nigeria-2025",
-    title: "How to Start a Logistics & Delivery Business in Nigeria (2025): ₦500K-₦2M Monthly",
+    title: "How to Start a Logistics Business in Nigeria (2025): ₦500K-₦2M Monthly",
     excerpt: "Logistics business Nigeria guide: startup costs, delivery model, client niches, and how to reach N500K-N2M monthly revenue.",
     content: `
     <p><strong>By 9jaDirectory Services Team</strong> | <em>Updated: November 2025</em></p>
@@ -8092,7 +8092,7 @@ export const blogPosts: BlogPost[] = [
   // ── CAC PUBLIC SEARCH ──────────────────────────────────────────────────────
   {
     slug: "cac-public-search-verify-company-nigeria",
-    title: "CAC Public Search: How to Verify Any Nigerian Company by Name or RC Number (2026)",
+    title: "CAC Public Search: Verify Any Nigerian Company by Name or RC Number (2026)",
     excerpt: "CAC public search guide 2026: how to verify any Nigerian company or business name by RC number, understand search results, spot red flags, and protect yourself from fraud.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
@@ -8489,7 +8489,7 @@ export const blogPosts: BlogPost[] = [
   // ── COMPANY CODE NIGERIA ──────────────────────────────────────────────────
   {
     slug: "company-code-nigeria-meaning-how-to-find",
-    title: "Company Code in Nigeria: Full Meaning, How to Find Yours & CAC Verification Guide",
+    title: "Company Code in Nigeria: Full Meaning & How to Find Your RC Number (2026)",
     excerpt: "Company code Nigeria explained: what RC numbers, BN numbers, and IT numbers mean, how to find your company code, and how to verify any business on the CAC portal in 2026.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
@@ -8658,8 +8658,8 @@ export const blogPosts: BlogPost[] = [
   // ── CAC PRE-INCORPORATION ─────────────────────────────────────────────────
   {
     slug: "cac-pre-incorporation-guide-nigeria-2026",
-    title: "CAC Pre-Incorporation Nigeria: Complete Step-by-Step Guide for New Businesses (2026)",
-    excerpt: "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
+    title: "CAC Pre-Incorporation Nigeria: Step-by-Step Guide for New Businesses (2026)",
+    excerpt: "CAC pre-incorporation 2026: register your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
@@ -8877,7 +8877,7 @@ export const blogPosts: BlogPost[] = [
   // ── HOW TO CHECK IF COMPANY IS REGISTERED ─────────────────────────────────
   {
     slug: "how-to-check-if-company-is-registered-nigeria",
-    title: "How to Check if a Company is Registered in Nigeria (CAC Verification Guide 2026)",
+    title: "How to Check if a Company is Registered in Nigeria (2026 CAC Guide)",
     excerpt: "How to check if a company is registered in Nigeria: four methods including the free CAC public search, status report, certified copy, and what to do if the company is not found.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
@@ -9067,7 +9067,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-10-real-estate-companies-in-abuja",
     title: "Top 10 Real Estate Companies in Abuja, Nigeria (2026 Guide)",
-    excerpt: "Looking for the best real estate company in Abuja? This 2026 guide covers the top 10 developers and agencies — from luxury smart estates to affordable land schemes — with prices, districts, and buyer tips.",
+    excerpt: "Top 10 real estate companies in Abuja (2026): luxury and affordable developers, estate prices, key districts, and buyer tips for FCT property.",
     content: `
       <p>Abuja is Nigeria's most structured property market. Unlike Lagos, it was purpose-built as the Federal Capital Territory — zoned roads, master-planned districts, and government-anchored demand from ministries, embassies, and international organisations. That structure makes it attractive for buyers and investors who want stable appreciation without Lagos's volatility.</p>
 
@@ -9458,7 +9458,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-10-law-firms-in-lagos",
     title: "Top 10 Law Firms in Lagos, Nigeria (2026 Guide)",
-    excerpt: "Need a reliable law firm in Lagos? This 2026 guide ranks the top 10 commercial and full-service law firms — from Chambers Tier 1 giants to specialist boutiques — with practice areas, fees, and verification tips.",
+    excerpt: "Top 10 law firms in Lagos (2026): Chambers Tier 1 firms and specialist boutiques ranked by practice areas, fees, locations, and client reviews.",
     content: `
       <p>Lagos is Nigeria's commercial capital and legal heartbeat. With the country's largest concentration of corporate headquarters, financial institutions, multinational subsidiaries, and international transactions, it is no surprise that Lagos is home to Nigeria's most prestigious and capable law firms.</p>
 
@@ -9809,7 +9809,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "top-10-law-firms-in-abuja",
     title: "Top 10 Law Firms in Abuja (FCT), Nigeria (2026 Guide)",
-    excerpt: "Looking for a trusted law firm in Abuja? This 2026 guide covers the top 10 law firms in the FCT — from government regulatory specialists to full-service commercial firms — with SAN rankings, locations, fees, and verification tips.",
+    excerpt: "Top 10 law firms in Abuja FCT (2026): government specialists and commercial firms ranked by SAN status, practice areas, fees, and client reviews.",
     content: `
       <p>Abuja is Nigeria's seat of power. As the Federal Capital Territory, it houses every arm of government, all federal regulatory agencies, the Supreme Court, the Court of Appeal, the Federal High Court, foreign embassies, and the African Union's Economic Community of West African States (ECOWAS) institutions. This concentration of governmental and regulatory authority makes Abuja unique — and makes choosing the right law firm here critically important.</p>
 
@@ -10160,7 +10160,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-start-food-delivery-business-in-nigeria",
     title: "How to Start a Food Delivery Business in Nigeria (2026 Complete Guide)",
-    excerpt: "Step-by-step guide to starting a profitable food delivery business in Nigeria in 2026. Covers startup costs in Naira, CAC registration, top platforms (Chowdeck, Glovo, HeyFood), profit projections, and Lagos logistics.",
+    excerpt: "Start a food delivery business in Nigeria in 2026: startup costs in Naira, CAC registration, top platforms (Chowdeck, Glovo, HeyFood), and profit projections.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
@@ -10611,7 +10611,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-plumbing-materials-companies-nigeria",
     title: "Best Plumbing Materials & Companies in Nigeria (2026 Guide)",
-    excerpt: "Complete guide to the best plumbing materials and suppliers in Nigeria. Covers top brands, PVC pipe prices in Naira, where to buy in Lagos and Abuja, and what to look for when sourcing plumbing materials for construction projects.",
+    excerpt: "Best plumbing materials in Nigeria (2026): top brands, PVC pipe prices in Naira, where to buy in Lagos and Abuja, and sourcing tips for construction.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
@@ -10759,6 +10759,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I identify fake PVC pipes in Nigeria?</h3>
       <p>Check for the SON certification mark stamped on the pipe. Genuine pipes have uniform wall thickness and batch numbers. Always buy from manufacturer-authorised distributors and avoid prices 30–40% below market rate.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-plastic-manufacturing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Plastic Manufacturing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-food-processing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Food Processing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-telecommunication-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Telecom Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -10815,7 +10826,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-plastic-manufacturing-companies-nigeria",
     title: "Top 15 Best Plastic Manufacturing Companies in Nigeria (2026)",
-    excerpt: "Discover the top 15 plastic manufacturing companies in Nigeria in 2026. Covers household plastics, packaging, industrial containers, furniture, and pipes — with company profiles, products, and contacts.",
+    excerpt: "Top 15 plastic manufacturing companies in Nigeria (2026): household, packaging, industrial, furniture, and pipes — with profiles, products, and contacts.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
@@ -10950,6 +10961,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I order custom plastic products from Nigerian manufacturers?</h3>
       <p>Yes. Companies like Dana Plast, Geeta Plastic, and Sonnex Packaging offer custom moulding and packaging solutions. Minimum order quantities (MOQs) vary — typically 1,000–10,000 units for injection-moulded parts. Contact manufacturers directly for quotes.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-plumbing-materials-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Plumbing Materials Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-food-processing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Food Processing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-telecommunication-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Telecom Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -11027,7 +11049,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-food-processing-companies-nigeria",
     title: "Top 15 Best Food Processing Companies in Nigeria (2026)",
-    excerpt: "Comprehensive guide to the top 15 food processing companies in Nigeria in 2026. Covers Nestle, Dangote, Flour Mills, Dufil (Indomie), Chi Limited, BUA Foods and more — with company profiles, products, and industry insights.",
+    excerpt: "Top 15 food processing companies in Nigeria (2026): Nestle, Dangote, Flour Mills, Indomie, BUA Foods and more — with profiles, products, and industry insights.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
@@ -11189,6 +11211,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">What food products does Nigeria produce most of?</h3>
       <p>Nigeria's food processing sector is strongest in: flour and semolina, instant noodles (one of the world's largest markets), sugar, palm oil, dairy products, beverages, seasoning and condiments, and packaged rice. Nigeria is also the world's largest cassava producer — driving a fast-growing starch processing industry.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-plastic-manufacturing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Plastic Manufacturing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-plumbing-materials-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Plumbing Materials Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-telecommunication-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Telecom Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-private-hospitals-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Private Hospitals in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1565118531796-763e5082d113?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -11266,7 +11299,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-telecommunication-companies-nigeria",
     title: "Best Telecommunication Companies in Nigeria (2026): MTN, Airtel, Glo & More",
-    excerpt: "Complete guide to the best telecom companies in Nigeria in 2026. Compare MTN, Airtel, Glo, and 9mobile on network coverage, data plans, call quality, and customer service to choose the right network for you.",
+    excerpt: "Best telecom companies in Nigeria (2026): compare MTN, Airtel, Glo, and 9mobile on network coverage, data plans, call quality, and customer service.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
@@ -11411,6 +11444,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">How many telecom subscribers does Nigeria have?</h3>
       <p>Nigeria has over 230 million active SIM subscriptions as of 2026. MTN leads with approximately 83M subscribers, followed by Airtel and Glo (~55M each), and 9mobile (~14M). Note: many Nigerians hold multiple SIMs across networks.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-it-companies-lagos-2026" class="text-green-700 hover:underline font-medium">Best IT Companies in Lagos (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-food-processing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Food Processing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-plastic-manufacturing-companies-nigeria" class="text-green-700 hover:underline font-medium">Top 15 Plastic Manufacturing Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -11469,7 +11513,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-solar-companies-nigeria-2026",
     title: "Best Solar Panel Installation Companies in Nigeria (2026)",
-    excerpt: "Nigeria's electricity crisis makes solar essential. Here are the 12 best solar panel installation companies in Nigeria for 2026 — with prices, services, and how to choose the right installer.",
+    excerpt: "Top 12 solar panel installation companies in Nigeria (2026): prices, services, and how to choose the right solar installer for your home or business.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
@@ -11599,6 +11643,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">How long do solar panels last in Nigeria?</h3>
       <p>Quality solar panels carry 25-year performance warranties and can last 30+ years. Inverters typically last 5–10 years. Lithium batteries last 10–15 years; lead-acid batteries need replacement every 2–5 years.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-telecommunication-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Telecom Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-it-companies-lagos-2026" class="text-green-700 hover:underline font-medium">Best IT Companies in Lagos (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -11678,7 +11733,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-security-companies-nigeria-2026",
     title: "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
-    excerpt: "Looking for the best security company in Nigeria? This guide covers the top 10 licensed security firms in Lagos, Abuja, and Port Harcourt — manned guards, CCTV, armed escorts, and more.",
+    excerpt: "Top 10 security companies in Nigeria (2026): licensed firms in Lagos, Abuja, and Port Harcourt offering manned guards, CCTV, and armed escorts.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
@@ -11793,6 +11848,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the best security company for a residential estate in Lagos?</h3>
       <p>Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. For smaller properties, Proton Security and Eliezer Security Group are well-regarded. Always verify NSCDC licensing.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/top-law-firms-nigeria-2026" class="text-green-700 hover:underline font-medium">Top Law Firms in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-it-companies-lagos-2026" class="text-green-700 hover:underline font-medium">Best IT Companies in Lagos (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -11988,6 +12054,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">What health insurance plans are available in Nigeria?</h3>
       <p>Health insurance in Nigeria is provided through HMOs licensed by NHIS. Top HMOs include Hygeia HMO (widest hospital network, 2,000+ facilities), Reliance HMO (most affordable, from ₦3,500/month), and AXA Mansard HMO. Individual plans typically cost ₦20,000–₦60,000 per year.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-private-hospitals-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Private Hospitals in Nigeria (2026)</a></li>
+          <li><a href="/blog/top-law-firms-nigeria-2026" class="text-green-700 hover:underline font-medium">Top Law Firms in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -12196,6 +12273,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can a foreign company use a Nigerian law firm?</h3>
       <p>Yes. All the firms listed here regularly advise international clients on Nigerian law matters. Most have experience with cross-border transactions and can coordinate with foreign counsel. For international arbitration, firms like Streamsowers & Köhn appear before ICC and ICSID tribunals on behalf of both Nigerian and foreign parties.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-it-companies-lagos-2026" class="text-green-700 hover:underline font-medium">Best IT Companies in Lagos (2026)</a></li>
+          <li><a href="/blog/best-private-hospitals-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Private Hospitals in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 24, 2026",
@@ -12398,6 +12486,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does a private hospital consultation cost in Nigeria?</h3>
       <p>A specialist outpatient consultation at a top private hospital in Nigeria typically costs ₦15,000 to ₦80,000 depending on the doctor's seniority and the hospital. An executive health check costs ₦150,000 to ₦500,000. HMO-covered patients typically pay only a co-payment of ₦1,000 to ₦5,000.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/top-law-firms-nigeria-2026" class="text-green-700 hover:underline font-medium">Top Law Firms in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-it-companies-lagos-2026" class="text-green-700 hover:underline font-medium">Best IT Companies in Lagos (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 24, 2026",
@@ -12590,6 +12689,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I get a mortgage in Nigeria?</h3>
       <p>Yes. The Federal Mortgage Bank of Nigeria (FMBN) offers the National Housing Fund (NHF) loan at 6% interest for contributors. Commercial banks offer mortgage loans at 18–22% per annum. The Lagos State Mortgage Board also offers subsidised mortgages to Lagos residents. Mortgage penetration in Nigeria remains low (less than 1% of GDP), so most property purchases are cash-based.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/top-law-firms-nigeria-2026" class="text-green-700 hover:underline font-medium">Top Law Firms in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-private-hospitals-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Private Hospitals in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 24, 2026",
@@ -12799,6 +12909,17 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which Nigerian IT company is listed on the stock exchange?</h3>
       <p>Several Nigerian IT companies are listed on the Nigerian Exchange (NGX), including Computer Warehouse Group (CWG), Chams Plc, e-Tranzact International, and MTNN (MTN Nigeria). Interswitch was pursuing a dual listing on the NGX and London Stock Exchange but remains privately held as of 2026.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
+        <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog/best-telecommunication-companies-nigeria" class="text-green-700 hover:underline font-medium">Best Telecom Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-solar-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Solar Energy Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-real-estate-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Real Estate Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-security-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Security Companies in Nigeria (2026)</a></li>
+          <li><a href="/blog/best-insurance-companies-nigeria-2026" class="text-green-700 hover:underline font-medium">Best Insurance Companies in Nigeria (2026)</a></li>
+        </ul>
+      </div>
     `,
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 24, 2026",

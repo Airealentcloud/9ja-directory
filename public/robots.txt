@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Block private/functional pages
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /checkout/
+Disallow: /payment/
+Disallow: /login
+Disallow: /signup
+Disallow: /auth/
+Disallow: /api/
+Disallow: /add-business
+Disallow: /listing-created/
+Disallow: /newsletter/verify/
+Disallow: /newsletter/unsubscribe/
+Disallow: /debug/
+Disallow: /test-db/
+Disallow: /stats/
+Disallow: /test-payment/
+
+# Block paginated duplicate content
+Disallow: /categories/*?page=*
+Disallow: /states/*?page=*
+
+Sitemap: https://www.9jadirectory.org/sitemap.xml

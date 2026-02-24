@@ -12,6 +12,8 @@ type Listing = {
     slug: string
     description?: string | null
     verified?: boolean
+    phone?: string | null
+    image_url?: string | null
     states?: { name: string; slug: string } | null | any
 }
 
@@ -29,6 +31,7 @@ export function generateCategoryItemListSchema(
     return {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
+        inLanguage: 'en-NG',
         name: `${category.name} in Nigeria`,
         description: category.description || `Find the best ${category.name} businesses across Nigeria`,
         numberOfItems: totalCount,
@@ -41,6 +44,22 @@ export function generateCategoryItemListSchema(
                 name: listing.business_name,
                 url: `${siteUrl}/listings/${listing.slug}`,
                 description: listing.description,
+                ...(listing.image_url && {
+                    image: {
+                        '@type': 'ImageObject',
+                        url: listing.image_url,
+                        width: 800,
+                        height: 600,
+                    },
+                }),
+                ...(listing.phone && { telephone: listing.phone }),
+                ...(listing.states?.name && {
+                    address: {
+                        '@type': 'PostalAddress',
+                        addressCountry: 'NG',
+                        addressRegion: listing.states.name,
+                    },
+                }),
             },
         })),
     }

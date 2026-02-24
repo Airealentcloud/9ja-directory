@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.or
 
 export const metadata: Metadata = {
   title: 'About Us | Nigeria Premier Business Directory | 9jaDirectory',
-  description: 'Learn about 9jaDirectory - Nigeria most comprehensive business directory connecting millions of users with verified businesses across all 36 states + FCT. Trusted reviews, nationwide coverage, and transparent listing plans.',
+  description: '9jaDirectory is Nigeria\'s most comprehensive business directory with verified listings across all 36 states. Find trusted businesses nationwide.',
   keywords: 'about 9jaDirectory, Nigeria business directory, Nigerian business listings, verified businesses Nigeria, business directory Lagos, Abuja business listings, trusted Nigerian directory',
   openGraph: {
     title: 'About 9jaDirectory - Nigeria Leading Business Directory',

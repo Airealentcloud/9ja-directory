@@ -193,14 +193,78 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
         })),
       }
     : null
-  // Article schema for editorial content (especially for real estate)
-  const articleSchema = isRealEstate
-    ? generateCategoryArticleSchema(category, {
-        datePublished: '2025-01-10',
-        dateModified: new Date().toISOString().split('T')[0],
-        wordCount: 1800,
-      })
-    : null
+  // Article schema for editorial content — generated for ALL category pages
+  const articleSchema = generateCategoryArticleSchema(category, {
+    datePublished: isRealEstate ? '2025-01-10' : '2025-06-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    wordCount: isRealEstate ? 1800 : 1200,
+  })
+
+  // Related blog guides per category
+  const categoryRelatedGuides: Record<string, Array<{ slug: string; title: string }>> = {
+    'real-estate': [
+      { slug: 'best-real-estate-companies-nigeria-2026', title: 'Best Real Estate Companies in Nigeria (2026)' },
+      { slug: 'top-10-real-estate-companies-in-abuja', title: 'Top 10 Real Estate Companies in Abuja' },
+      { slug: 'reits-nigeria-investment-guide-2025', title: 'REITs in Nigeria: Investment Guide 2025' },
+    ],
+    'legal-services': [
+      { slug: 'top-law-firms-nigeria-2026', title: 'Top Law Firms in Nigeria (2026)' },
+      { slug: 'top-10-law-firms-in-lagos', title: 'Top 10 Law Firms in Lagos' },
+      { slug: 'top-10-law-firms-in-abuja', title: 'Top 10 Law Firms in Abuja' },
+    ],
+    'solar-energy': [
+      { slug: 'best-solar-companies-nigeria-2026', title: 'Best Solar Energy Companies in Nigeria (2026)' },
+      { slug: 'solar-power-solutions-nigeria-business-prices', title: 'Solar Power Solutions: Prices & Guide (Nigeria)' },
+    ],
+    'security-services': [
+      { slug: 'best-security-companies-nigeria-2026', title: 'Best Security Companies in Nigeria (2026)' },
+    ],
+    'insurance': [
+      { slug: 'best-insurance-companies-nigeria-2026', title: 'Best Insurance Companies in Nigeria (2026)' },
+    ],
+    'health': [
+      { slug: 'best-private-hospitals-nigeria-2026', title: 'Best Private Hospitals in Nigeria (2026)' },
+    ],
+    'healthcare': [
+      { slug: 'best-private-hospitals-nigeria-2026', title: 'Best Private Hospitals in Nigeria (2026)' },
+    ],
+    'technology': [
+      { slug: 'best-it-companies-lagos-2026', title: 'Best IT Companies in Lagos (2026)' },
+      { slug: 'best-telecommunication-companies-nigeria', title: 'Best Telecom Companies in Nigeria (2026)' },
+    ],
+    'it-services': [
+      { slug: 'best-it-companies-lagos-2026', title: 'Best IT Companies in Lagos (2026)' },
+      { slug: 'best-telecommunication-companies-nigeria', title: 'Best Telecom Companies in Nigeria (2026)' },
+    ],
+    'telecommunications': [
+      { slug: 'best-telecommunication-companies-nigeria', title: 'Best Telecom Companies in Nigeria (2026)' },
+      { slug: 'best-it-companies-lagos-2026', title: 'Best IT Companies in Lagos (2026)' },
+    ],
+    'food-processing': [
+      { slug: 'best-food-processing-companies-nigeria', title: 'Top 15 Food Processing Companies in Nigeria (2026)' },
+    ],
+    'manufacturing': [
+      { slug: 'best-plastic-manufacturing-companies-nigeria', title: 'Top 15 Plastic Manufacturing Companies in Nigeria (2026)' },
+      { slug: 'best-food-processing-companies-nigeria', title: 'Top 15 Food Processing Companies in Nigeria (2026)' },
+      { slug: 'best-plumbing-materials-companies-nigeria', title: 'Best Plumbing Materials Companies in Nigeria (2026)' },
+    ],
+    'construction': [
+      { slug: 'best-plumbing-materials-companies-nigeria', title: 'Best Plumbing Materials Companies in Nigeria (2026)' },
+    ],
+    'banking': [
+      { slug: 'best-banks-small-business-nigeria-comparison-2025', title: 'Top 10 Banks for Small Business Nigeria' },
+      { slug: 'best-payment-gateways-nigeria-2025', title: 'Best Payment Gateways in Nigeria (2025)' },
+    ],
+    'finance': [
+      { slug: 'best-banks-small-business-nigeria-comparison-2025', title: 'Top 10 Banks for Small Business Nigeria' },
+      { slug: 'reits-nigeria-investment-guide-2025', title: 'REITs in Nigeria: Investment Guide 2025' },
+    ],
+    'e-commerce': [
+      { slug: 'best-payment-gateways-nigeria-2025', title: 'Best Payment Gateways in Nigeria (2025)' },
+      { slug: 'how-to-start-ecommerce-business-nigeria-2025', title: 'How to Start an E-commerce Business in Nigeria (2025)' },
+    ],
+  }
+  const relatedGuides = categoryRelatedGuides[slug] || []
 
   return (
     <>
@@ -795,6 +859,28 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                       </details>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Related Guides */}
+              {relatedGuides.length > 0 && (
+                <div className="bg-green-50 border border-green-200 rounded-xl p-6 mt-8">
+                  <h2 className="text-xl font-bold text-green-800 mb-4">Related Guides</h2>
+                  <ul className="space-y-3">
+                    {relatedGuides.map((guide) => (
+                      <li key={guide.slug}>
+                        <Link
+                          href={`/blog/${guide.slug}`}
+                          className="text-green-700 hover:underline font-medium flex items-center gap-2"
+                        >
+                          <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          {guide.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </div>
