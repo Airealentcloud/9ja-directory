@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/seo/site-url'
+
 type Category = {
     id: string
     name: string
@@ -17,7 +19,7 @@ type Listing = {
     states?: { name: string; slug: string } | null | any
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 /**
  * Generates ItemList schema for category pages

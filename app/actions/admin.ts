@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 // Helper to check if user is admin
 // Helper to check if user is admin
@@ -138,12 +139,11 @@ export async function approveClaim(claimId: string) {
         .maybeSingle()
 
     if (listing && claimProfile?.email) {
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
         notifyCustomerClaimApproved({
             businessName: listing.business_name,
             ownerEmail: claimProfile.email,
             ownerName: claimProfile.full_name,
-            listingUrl: `${siteUrl}/listings/${listing.slug}`,
+            listingUrl: `${SITE_URL}/listings/${listing.slug}`,
         }).catch(console.error)
     }
 
@@ -367,13 +367,11 @@ export async function approveListingServer(id: string) {
 
     // Send notification to customer
     if (listing && profile?.email) {
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
-
         notifyCustomerListingApproved({
             businessName: listing.business_name,
             ownerEmail: profile.email,
             ownerName: profile.full_name,
-            listingUrl: `${siteUrl}/listings/${listing.slug}`
+            listingUrl: `${SITE_URL}/listings/${listing.slug}`
         }).catch(console.error)
     }
 

@@ -7,6 +7,7 @@ import OperatingHours from '@/components/operating-hours'
 import ReviewButton from '@/components/reviews/review-button'
 import ClaimButton from '@/components/listings/claim-button'
 import RelatedListings from '@/components/related-listings'
+import { SITE_URL } from '@/lib/seo/site-url'
 import {
   generateLocalBusinessSchema,
   generateBreadcrumbSchema,
@@ -14,7 +15,7 @@ import {
   generateFAQSchema
 } from '@/lib/schema/local-business'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 // Define listing type for proper typing
 interface ListingData {

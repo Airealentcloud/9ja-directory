@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/seo/site-url'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 const lastUpdated = 'January 25, 2026'
 
 export const metadata: Metadata = {

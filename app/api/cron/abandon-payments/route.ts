@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -80,7 +81,7 @@ export async function GET(request: NextRequest) {
       return acc
     }, {})
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+    const siteUrl = SITE_URL
     const notifications = abandoned
       .map((payment) => {
         const profile = profilesMap[payment.user_id]

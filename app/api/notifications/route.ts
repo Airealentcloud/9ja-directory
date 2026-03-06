@@ -7,6 +7,7 @@ import {
     notifyCustomerListingRejected,
     notifyAdminContactForm
 } from '@/lib/email/notifications'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 // Use service role key for admin operations
 function getSupabaseAdmin() {
@@ -86,13 +87,12 @@ export async function POST(request: NextRequest) {
 
                 if (listing) {
                     const profile = listing.profiles as any
-                    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
 
                     await notifyCustomerListingApproved({
                         businessName: listing.business_name,
                         ownerEmail: profile?.email,
                         ownerName: profile?.full_name,
-                        listingUrl: `${siteUrl}/listings/${listing.slug}`
+                        listingUrl: `${SITE_URL}/listings/${listing.slug}`
                     })
                 }
                 return NextResponse.json({ success: true, message: 'Customer notified of approval' })

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { initializePayment, generateReference } from '@/lib/paystack'
 import { getPlanById, nairaToKobo, type PlanId } from '@/lib/pricing'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 export async function POST(request: NextRequest) {
     try {
@@ -153,7 +154,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Get callback URL (Paystack will redirect back here)
-        const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+        const origin = request.headers.get('origin') || SITE_URL
         const callbackUrl = `${origin}/payment/verify?reference=${reference}`
 
         // Initialize payment with Paystack

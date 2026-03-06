@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { verifyPayment } from '@/lib/paystack'
 import { sendEmail } from '@/lib/email/resend'
+import { SITE_URL } from '@/lib/seo/site-url'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 export async function GET(request: NextRequest) {
   try {

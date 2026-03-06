@@ -1,4 +1,5 @@
 import { sendEmail } from './resend'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 // Admin email - replace with your actual admin email
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@9jadirectory.org'
@@ -638,7 +639,7 @@ Best regards,
 
 // Send newsletter verification email
 export async function sendNewsletterVerification(data: NewsletterVerificationData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+    const siteUrl = SITE_URL
     const verifyUrl = `${siteUrl}/newsletter/verify?token=${data.verificationToken}`
     const subject = 'Confirm your 9jaDirectory Newsletter Subscription'
 
@@ -707,7 +708,7 @@ The 9jaDirectory Team
 
 // Send newsletter welcome email after verification
 export async function sendNewsletterWelcome(data: NewsletterWelcomeData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+    const siteUrl = SITE_URL
     const unsubscribeUrl = `${siteUrl}/newsletter/unsubscribe?email=${encodeURIComponent(data.email)}`
     const subject = 'Welcome to the 9jaDirectory Newsletter!'
 
@@ -796,7 +797,7 @@ The 9jaDirectory Team
 
 // Send unsubscribe confirmation email
 export async function sendNewsletterUnsubscribeConfirmation(data: NewsletterUnsubscribeData) {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+    const siteUrl = SITE_URL
     const subject = 'You have been unsubscribed from 9jaDirectory Newsletter'
 
     const text = `

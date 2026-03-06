@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
+import { SITE_URL } from '@/lib/seo/site-url'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
     title: 'Featured Businesses in Nigeria | 9jaDirectory',

@@ -1,3 +1,5 @@
+import { SITE_URL } from '@/lib/seo/site-url'
+
 type Listing = {
     id: string
     business_name: string
@@ -45,7 +47,7 @@ type Review = {
     user_id?: string
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 /**
  * Generates LocalBusiness JSON-LD schema for a listing

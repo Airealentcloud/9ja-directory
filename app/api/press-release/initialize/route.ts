@@ -3,8 +3,9 @@ import { createClient } from '@/lib/supabase/server'
 import { initializePayment } from '@/lib/paystack'
 import { generateOrderReference, getPackageBySlug } from '@/lib/press-release/packages'
 import { sendEmail } from '@/lib/email/resend'
+import { SITE_URL } from '@/lib/seo/site-url'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 export async function POST(request: NextRequest) {
   try {

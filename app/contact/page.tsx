@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/contact-form'
+import { SITE_URL } from '@/lib/seo/site-url'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
     title: 'Contact 9jaDirectory | Support & Business Listing Help',

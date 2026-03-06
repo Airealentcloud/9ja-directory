@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { generateReference, initializePayment } from '@/lib/paystack'
 import { getPlanById, nairaToKobo, type PlanId } from '@/lib/pricing'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 type InitializePublicPayload = {
   plan_id?: PlanId
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: leadError.message }, { status: 500 })
     }
 
-    const origin = request.headers.get('origin') || process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+    const origin = request.headers.get('origin') || SITE_URL
     const callbackUrl = `${origin}/payment/verify?reference=${reference}`
 
     const paystackResponse = await initializePayment({

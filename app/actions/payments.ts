@@ -3,9 +3,10 @@
 import { createClient } from '@/lib/supabase/server'
 import { getPaymentPlan } from '@/lib/payments/plans'
 import { initializePaystackTransaction } from '@/lib/payments/paystack'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 function getSiteUrl() {
-  return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+  return SITE_URL
 }
 
 function generateReference() {
@@ -122,4 +123,3 @@ export async function startTestPayment() {
 
   return { authorizationUrl: paystack.authorization_url, reference: paystack.reference }
 }
-
