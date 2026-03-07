@@ -3,8 +3,9 @@ import BlogCard from '@/components/blog/blog-card';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { SITE_URL } from '@/lib/seo/site-url';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org';
+const siteUrl = SITE_URL;
 
 const stopwords = new Set([
     'a',
@@ -34,6 +35,16 @@ const stopwords = new Set([
     'top',
     'best',
 ]);
+
+function buildBlogMetaTitle(title: string): string {
+    const brandedTitle = `${title} | 9jaDirectory`;
+    return brandedTitle.length <= 60 ? brandedTitle : title;
+}
+
+function trimMetaDescription(description: string, maxLength = 155): string {
+    if (description.length <= maxLength) return description;
+    return `${description.slice(0, maxLength - 3).trimEnd()}...`;
+}
 
 function deriveKeywords(post: { title: string; category: string }): string[] {
     const base: string[] = ['Nigeria', '9jaDirectory', 'Nigeria business directory', 'Nigerian SMEs'];
@@ -65,6 +76,12 @@ function safeJsonParse(value: string): unknown | null {
     } catch {
         return null;
     }
+}
+
+function normalizeSchemaSiteUrls(schema: string, canonicalBaseUrl: string): string {
+    return schema
+        .replaceAll('https://www.9jadirectory.org', canonicalBaseUrl)
+        .replaceAll('https://9jadirectory.org', canonicalBaseUrl);
 }
 
 function fixJsonLdImages(node: unknown, fallbackImageUrl: string): unknown {
@@ -143,17 +160,19 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
     const canonical = `${siteUrl}/blog/${post.slug}`;
     const images = post.image ? [post.image] : [`${siteUrl}/opengraph-image`];
     const keywords = post.keywords?.length ? post.keywords : deriveKeywords({ title: post.title, category: post.category });
+    const metaTitle = buildBlogMetaTitle(post.title);
+    const metaDescription = trimMetaDescription(post.excerpt);
 
     return {
-        title: `${post.title} | 9jaDirectory`,
-        description: post.excerpt,
+        title: metaTitle,
+        description: metaDescription,
         alternates: {
             canonical,
         },
         keywords,
         openGraph: {
-            title: post.title,
-            description: post.excerpt,
+            title: metaTitle,
+            description: metaDescription,
             url: canonical,
             type: 'article',
             siteName: '9jaDirectory',
@@ -161,8 +180,8 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
         },
         twitter: {
             card: 'summary_large_image',
-            title: post.title,
-            description: post.excerpt,
+            title: metaTitle,
+            description: metaDescription,
             images,
         },
     };
@@ -192,10 +211,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     };
 
     const absolutePostImage = post.image.startsWith('/') ? `${siteUrl}${post.image}` : post.image;
-    const parsedSchema = post.schema ? safeJsonParse(post.schema) : null;
+    const normalizedRawSchema = post.schema ? normalizeSchemaSiteUrls(post.schema, siteUrl) : null;
+    const parsedSchema = normalizedRawSchema ? safeJsonParse(normalizedRawSchema) : null;
     const fixedSchema = parsedSchema ? fixJsonLdImages(parsedSchema, absolutePostImage) : null;
     const normalizedSchema = fixedSchema ? normalizeArticleSchemas(fixedSchema) : null;
-    const schemaJson = normalizedSchema ? JSON.stringify(normalizedSchema) : post.schema;
+    const schemaJson = normalizedSchema ? JSON.stringify(normalizedSchema) : normalizedRawSchema;
 
     return (
         <div className="min-h-screen bg-white pb-20">

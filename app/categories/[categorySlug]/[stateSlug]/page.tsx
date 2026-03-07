@@ -1,10 +1,17 @@
 import type { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
+
+const siteUrl = SITE_URL
+
+function buildMetaTitle(primaryTitle: string): string {
+  const brandedTitle = `${primaryTitle} | 9jaDirectory`
+  return brandedTitle.length <= 60 ? brandedTitle : primaryTitle
+}
 
 // ✅ GENERATE DYNAMIC METADATA FOR STATE + CATEGORY COMBINATION
 export async function generateMetadata({
@@ -14,17 +21,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { categorySlug, stateSlug } = await params
   const isRealEstate = categorySlug === 'real-estate'
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data: category } = await supabase
     .from('categories')
-    .select('name, description')
+    .select('id, name, description')
     .eq('slug', categorySlug)
     .single()
 
   const { data: state } = await supabase
     .from('states')
-    .select('name')
+    .select('id, name')
     .eq('slug', stateSlug)
     .single()
 
@@ -39,11 +46,11 @@ export async function generateMetadata({
   // ✅ OPTIMIZED FOR LOCAL KEYWORDS WITH MODIFIERS
   const currentYear = new Date().getFullYear()
   const title = isRealEstate
-    ? `Best Real Estate Companies in ${stateDisplayName} | Top Rated Real Estate ${stateDisplayName} ${currentYear} | 9jaDirectory`
-    : `Best ${categoryName} in ${stateDisplayName} | Top Rated ${categoryName} ${stateDisplayName} ${currentYear} | 9jaDirectory`
+    ? buildMetaTitle(`Real Estate Companies in ${stateDisplayName}`)
+    : buildMetaTitle(`${categoryName} in ${stateDisplayName}`)
   const description = isRealEstate
-    ? `Find the best real estate companies in ${stateLongName}. Compare verified agencies, developers, and agents with reviews and contact details on 9jaDirectory.`
-    : `Find the best verified ${categoryName} in ${stateLongName}. Compare ratings, prices, and contact details. Browse top-rated ${categoryName} near you on 9jaDirectory. Updated ${currentYear}.`
+    ? `Find verified real estate companies, agencies, and developers in ${stateLongName}. Compare listings, contact details, and locations on 9jaDirectory.`
+    : `Find verified ${categoryName.toLowerCase()} in ${stateLongName}. Compare listings, contact details, and locations on 9jaDirectory.`
 
   const keywords = isRealEstate
     ? [
@@ -68,10 +75,24 @@ export async function generateMetadata({
         `${categoryName} services ${stateDisplayName}`,
       ]
 
+  // Count listings for this combo to decide indexability
+  const { count: listingCount } = await supabase
+    .from('listings')
+    .select('id', { count: 'exact', head: true })
+    .eq('category_id', category.id ?? '')
+    .eq('state_id', state.id ?? '')
+    .eq('status', 'approved')
+
+  // Suppress indexing for truly empty combos to protect crawl budget
+  const robotsDirective = !listingCount || listingCount === 0
+    ? { index: false, follow: true }
+    : { index: true, follow: true }
+
   return {
     title,
     description,
     keywords: keywords.join(', '),
+    robots: robotsDirective,
     openGraph: {
       title,
       description,
@@ -110,7 +131,7 @@ export default async function CategoryStateListingPage({
 }) {
   const { categorySlug, stateSlug } = await params
   const isRealEstate = categorySlug === 'real-estate'
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   // Fetch category
   const { data: category, error: categoryError } = await supabase
@@ -137,17 +158,34 @@ export default async function CategoryStateListingPage({
 
 
 
-  // ✅ FETCH LISTINGS FOR THIS CATEGORY + STATE COMBINATION
-  const { data: listings, count: totalCount } = await supabase
+  // Fetch listings for this category + state combination.
+  // Order by columns that definitely exist (verified, created_at) to avoid
+  // query failures from optional columns like featured / average_rating.
+  // We try a richer sort first; on error we fall back to the safe sort.
+  let { data: listings, count: totalCount, error: listingsError } = await supabase
     .from('listings')
-    .select('*', { count: 'exact' })
+    .select('id, business_name, slug, description, tagline, logo_url, address, phone, verified, average_rating, image_url, city', { count: 'exact' })
     .eq('category_id', category.id)
     .eq('state_id', state.id)
     .eq('status', 'approved')
-    .order('featured', { ascending: false })
-    .order('average_rating', { ascending: false, nullsFirst: false })
+    .order('verified', { ascending: false })
     .order('created_at', { ascending: false })
-    .limit(30) // Show top 30, with load more option
+    .limit(30)
+
+  // If the first query errored (e.g. missing column), fall back to minimal safe query
+  if (listingsError) {
+    const fallback = await supabase
+      .from('listings')
+      .select('id, business_name, slug, description, tagline, logo_url, address, phone, verified', { count: 'exact' })
+      .eq('category_id', category.id)
+      .eq('state_id', state.id)
+      .eq('status', 'approved')
+      .order('created_at', { ascending: false })
+      .limit(30)
+    listings = fallback.data as typeof listings
+    totalCount = fallback.count
+    listingsError = fallback.error
+  }
 
   // Get stats
   const avgRating = listings && listings.length > 0
@@ -356,7 +394,13 @@ export default async function CategoryStateListingPage({
             Browse {totalCount} {categoryLabel} in {stateDisplayName}
           </h2>
           
-          {!listings || listings.length === 0 ? (
+          {listingsError ? (
+            <div className="text-center py-12 bg-white rounded-lg">
+              <p className="text-gray-500 text-base">
+                Listings are temporarily unavailable. Please check back shortly.
+              </p>
+            </div>
+          ) : !listings || listings.length === 0 ? (
             <div className="text-center py-12 bg-white rounded-lg">
               <p className="text-gray-600 text-lg">
                 No {categoryLabelLower} found in {stateDisplayName} yet.

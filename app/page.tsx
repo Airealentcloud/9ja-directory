@@ -11,12 +11,12 @@ import { createPublicClient } from '@/lib/supabase/public'
 const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
-  title: 'Nigeria Business Directory | Find Local Businesses & Services | 9jaDirectory',
-  description: 'Discover trusted businesses and services across Nigeria. Search 10,000+ verified listings in Lagos, Abuja, and all 36 states. Find restaurants, hotels, healthcare, shops and more.',
+  title: 'Nigeria Business Directory | Find Local Services | 9jaDirectory',
+  description: 'Discover trusted businesses across Nigeria. Find verified listings in Lagos, Abuja, and all 36 states, including restaurants, hotels, healthcare, shops, and more.',
   keywords: ['Nigeria business directory', 'Nigerian businesses', 'find businesses in Nigeria', 'Lagos directory', 'Abuja businesses', 'Nigerian services', '9ja directory', 'business listings Nigeria'],
   openGraph: {
-    title: 'Nigeria Business Directory - Find Services in Lagos, Abuja & All States',
-    description: 'Find and connect with verified businesses across all 36 Nigerian states',
+    title: 'Nigeria Business Directory | Find Verified Services',
+    description: 'Find verified businesses in Lagos, Abuja, and every Nigerian state.',
     url: siteUrl,
     siteName: '9jaDirectory',
     locale: 'en_NG',
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '9jaDirectory - Find Businesses in Nigeria',
-    description: 'Discover trusted businesses across Nigeria',
+    title: 'Nigeria Business Directory | 9jaDirectory',
+    description: 'Find verified businesses across Nigeria.',
     images: ['/opengraph-image'],
   },
   alternates: {

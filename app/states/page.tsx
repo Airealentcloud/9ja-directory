@@ -6,12 +6,12 @@ import { createPublicClient } from '@/lib/supabase/public'
 const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
-  title: 'Find Businesses by Location - All Nigerian States | 9jaDirectory',
-  description: 'Browse businesses and services in all 36 Nigerian states + FCT Abuja. Find local businesses in Lagos, Kano, Rivers, Abuja, Kaduna, Oyo, Delta, Anambra and every state in Nigeria.',
+  title: 'Businesses by State in Nigeria | 9jaDirectory',
+  description: 'Browse verified businesses in all 36 Nigerian states and FCT. Explore Lagos, Abuja, Port Harcourt, Kano, Rivers, and more.',
   keywords: 'Nigerian states, business locations Nigeria, find businesses by state, Lagos businesses, Abuja businesses, Port Harcourt businesses, Kano businesses, state directory Nigeria',
   openGraph: {
-    title: 'Browse Businesses by State | All 37 Nigerian States',
-    description: 'Find trusted businesses across every Nigerian state - from Lagos to Sokoto',
+    title: 'Find Businesses in All Nigerian States',
+    description: 'Browse verified businesses across Lagos, Abuja, Port Harcourt, Kano, and every Nigerian state.',
     url: `${siteUrl}/states`,
     siteName: '9jaDirectory',
     locale: 'en_NG',
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nigerian States Business Directory',
-    description: 'Find businesses in all 36 states + FCT',
+    title: 'Businesses by State in Nigeria',
+    description: 'Browse businesses across all 36 states and FCT.',
     images: ['/opengraph-image'],
   },
   alternates: {

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 interface StatePageProps {
   params: Promise<{
@@ -11,9 +12,17 @@ interface StatePageProps {
   }>
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>
+  searchParams?: Promise<{ city?: string | string[] }>
+}): Promise<Metadata> {
   const { slug } = await params
-  const supabase = await createClient()
+  const resolvedSearchParams = searchParams ? await searchParams : undefined
+  const hasCityParam = Boolean(resolvedSearchParams?.city)
+  const supabase = createPublicClient()
 
   const { data: state } = await supabase
     .from('states')
@@ -31,6 +40,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `Find Businesses in ${state.name} State | 9jaDirectory`,
     description: `Discover verified businesses, services, and companies in ${state.name} State, Nigeria. Browse local restaurants, hotels, healthcare, shopping, professional services and more in ${state.name}.`,
     keywords: `${state.name} businesses, ${state.name} directory, businesses in ${state.name}, ${state.name} services, ${state.name} companies, find businesses ${state.name} Nigeria`,
+    robots: hasCityParam
+      ? {
+          index: false,
+          follow: true,
+        }
+      : {
+          index: true,
+          follow: true,
+        },
     openGraph: {
       title: `${state.name} State Business Directory | 9jaDirectory`,
       description: `Find trusted businesses and services in ${state.name} State`,
@@ -59,9 +77,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function StatePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function StatePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
   const { slug } = await params
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data: state, error: stateError } = await supabase
     .from('states')
@@ -75,25 +97,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
 
   const { data: listings, error: listingsError } = await supabase
     .from('listings')
-    .select(`
-      id,
-      business_name,
-      slug,
-      description,
-      tagline,
-      logo_url,
-      address,
-      phone,
-      verified,
-      categories (
-        name,
-        slug,
-        icon
-      ),
-      cities (
-        name
-      )
-    `)
+    .select('id, business_name, slug, description, tagline, logo_url, address, phone, verified')
     .eq('state_id', state.id)
     .eq('status', 'approved')
     .order('verified', { ascending: false })
@@ -204,7 +208,12 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="text-6xl">Map Pin</div>
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
+                <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-3">
                   Businesses in {state.name} State
@@ -224,17 +233,16 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
           <div className="flex flex-col lg:flex-row gap-8">
             <aside className="lg:w-72 flex-shrink-0">
               <div className="bg-white rounded-lg shadow-md p-6 sticky top-4">
-                <h3 className="font-bold text-lg mb-4">Filter by City</h3>
+                <h3 className="font-bold text-lg mb-4">Popular Cities</h3>
                 {cities && cities.length > 0 ? (
-                  <div className="space-y-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {cities.map((city) => (
-                      <Link
+                      <span
                         key={city.slug}
-                        href={`/states/${slug}?city=${city.slug}`}
-                        className="block text-gray-700 hover:text-green-600 hover:bg-green-50 px-3 py-2 rounded transition-colors"
+                        className="inline-flex items-center rounded-full bg-gray-100 px-3 py-2 text-sm text-gray-700"
                       >
                         {city.name}
-                      </Link>
+                      </span>
                     ))}
                   </div>
                 ) : (
@@ -247,10 +255,10 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
                     {popularCategories.map((category) => (
                       <Link
                         key={category.slug}
-                        href={`/categories/${category.slug}?state=${slug}`}
+                        href={`/categories/${category.slug}/${slug}`}
                         className="flex items-center text-gray-700 hover:text-green-600 hover:bg-green-50 px-3 py-2 rounded transition-colors"
                       >
-                        <span className="mr-2">{category.icon || 'Icon'}</span>
+                        <span className="mr-2">{category.icon || 'Category'}</span>
                         <span className="text-sm">{category.name}</span>
                       </Link>
                     ))}
@@ -261,7 +269,7 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
                   href="/states"
                   className="block text-center w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors text-sm font-medium mt-6"
                 >
-                  Back Arrow All States
+                  Browse All States
                 </Link>
               </div>
             </aside>
@@ -280,7 +288,11 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
 
               {!listingsError && (!listings || listings.length === 0) && (
                 <div className="bg-white rounded-lg shadow-md p-12 text-center">
-                  <div className="text-6xl mb-4">Building</div>
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-700">
+                    <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21h18M5 21V7a2 2 0 012-2h10a2 2 0 012 2v14M9 9h.01M9 12h.01M9 15h.01M15 9h.01M15 12h.01M15 15h.01" />
+                    </svg>
+                  </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     No Listings in {state.name} Yet
                   </h3>
@@ -323,7 +335,9 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
                                 className="w-full h-full object-cover"
                               />
                             ) : (
-                              <div className="text-5xl">{(listing.categories as any)?.icon || 'Building'}</div>
+                              <div className="text-5xl text-green-600 font-bold text-2xl flex items-center justify-center">
+                                {listing.business_name.charAt(0).toUpperCase()}
+                              </div>
                             )}
                           </div>
 
@@ -360,19 +374,13 @@ export default async function StatePage({ params }: { params: Promise<{ slug: st
                             )}
 
                             <div className="mt-4 flex flex-wrap gap-4 text-sm text-gray-500">
-                              {listing.categories && (
-                                <div className="flex items-center">
-                                  <span className="mr-1">{(listing.categories as any).icon || 'Tag'}</span>
-                                  {(listing.categories as any).name}
-                                </div>
-                              )}
-                              {listing.cities && (
+                              {listing.address && (
                                 <div className="flex items-center">
                                   <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                   </svg>
-                                  {(listing.cities as any).name}, {state.name}
+                                  {listing.address}
                                 </div>
                               )}
                               {listing.phone && (
