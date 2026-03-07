@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 }
 
 export default async function FeaturedPage() {
-    const supabase = await createClient()
+    const supabase = createPublicClient()
 
     // Fetch featured listings
     const { data: listings } = await supabase

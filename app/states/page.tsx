@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 }
 
 export default async function StatesPage() {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data: states, error } = await supabase
     .from('states')

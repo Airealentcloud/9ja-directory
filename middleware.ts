@@ -1,15 +1,34 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname
   const isAmpersandPath = requestPath === '/&' || requestPath === '/%26'
+  const isProtectedRoute = requestPath.startsWith('/add-business') || requestPath.startsWith('/dashboard')
+  const isAdminRoute = requestPath.startsWith('/admin')
+  const canonicalHost = new URL(SITE_URL).host
+  const requestHost = request.headers.get('host')
+
+  // Canonicalize only known production hosts to avoid mixed host SEO signals.
+  if (requestHost && (requestHost === '9jadirectory.org' || requestHost === 'www.9jadirectory.org') && requestHost !== canonicalHost) {
+    const redirectUrl = request.nextUrl.clone()
+    redirectUrl.host = canonicalHost
+    redirectUrl.protocol = 'https:'
+    return NextResponse.redirect(redirectUrl, 308)
+  }
 
   // Only redirect malformed ampersand paths
   if (isAmpersandPath) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = '/'
     return NextResponse.redirect(redirectUrl, 308)
+  }
+
+  if (!isProtectedRoute && !isAdminRoute) {
+    return NextResponse.next({
+      request,
+    })
   }
 
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -45,11 +64,6 @@ export async function middleware(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser()
-
-  // 2. Check if route is protected
-  const isProtectedRoute = request.nextUrl.pathname.startsWith('/add-business') ||
-    request.nextUrl.pathname.startsWith('/dashboard')
-  const isAdminRoute = request.nextUrl.pathname.startsWith('/admin')
 
   if ((isProtectedRoute || isAdminRoute) && !user) {
     return NextResponse.redirect(new URL('/login', request.url))

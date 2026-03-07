@@ -7,11 +7,11 @@ import NavLink from '@/components/nav-link'
 import MobileNav from '@/components/mobile-nav'
 import NewsletterSignup from '@/components/newsletter-signup'
 import GoogleAnalytics from '@/components/google-analytics'
-import { createClient } from '@/lib/supabase/server'
+import { SITE_URL } from '@/lib/seo/site-url'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -57,18 +57,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
   return (
-    <html lang="en">
+    <html lang="en-NG">
       <body className={inter.className}>
         <GoogleAnalytics />
         <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
@@ -91,12 +86,12 @@ export default async function RootLayout({
                     Get Listed
                   </NavLink>
                   <div className="ml-4 flex items-center">
-                    <AuthButton user={user} />
+                    <AuthButton />
                   </div>
                 </div>
                 <div className="md:hidden">
                   <MobileNav>
-                    <AuthButton user={user} variant="mobile" />
+                    <AuthButton variant="mobile" />
                   </MobileNav>
                 </div>
               </div>

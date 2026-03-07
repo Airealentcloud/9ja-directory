@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 import { HomeCategoryCard } from '@/components/home-category-card'
 import { blogPosts } from '@/lib/blog-data'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   // Fetch featured categories (show up to 8 most popular)
   const { data: categories } = await supabase

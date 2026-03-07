@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
 import { CategoryCard } from '@/components/category-card'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 }
 
 export default async function CategoriesPage() {
-  const supabase = await createClient()
+  const supabase = createPublicClient()
 
   const { data: categories, error } = await supabase
     .from('categories')

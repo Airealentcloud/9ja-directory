@@ -1,12 +1,37 @@
+'use client'
+
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import type { User } from '@supabase/supabase-js'
+import { createClient } from '@/lib/supabase/client'
 
 type AuthButtonProps = {
-  user: User | null
   variant?: 'desktop' | 'mobile'
 }
 
-export default function AuthButton({ user, variant = 'desktop' }: AuthButtonProps) {
+export default function AuthButton({ variant = 'desktop' }: AuthButtonProps) {
+  const [user, setUser] = useState<User | null>(null)
+
+  useEffect(() => {
+    const supabase = createClient()
+    let active = true
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (active) setUser(data.user)
+    })
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (active) setUser(session?.user ?? null)
+    })
+
+    return () => {
+      active = false
+      subscription.unsubscribe()
+    }
+  }, [])
+
   if (user) {
     if (variant === 'mobile') {
       return (
