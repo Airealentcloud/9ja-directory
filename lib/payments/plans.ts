@@ -17,7 +17,7 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     id: 'basic',
     name: 'BASIC',
     description: 'Perfect for small businesses getting started. 1 listing, 4 photos, basic features.',
-    amountKobo: 3850000, // ₦38,500
+    amountKobo: 500000, // ₦5,000
     currency: 'NGN',
     planType: 'subscription',
     subscriptionPlanId: 'basic',
@@ -26,7 +26,7 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     id: 'premium',
     name: 'PREMIUM',
     description: 'Great for growing businesses. 5 listings, 15 photos, social links, AI features.',
-    amountKobo: 11550000, // ₦115,500
+    amountKobo: 1000000, // ₦10,000
     currency: 'NGN',
     planType: 'subscription',
     subscriptionPlanId: 'premium',
@@ -35,7 +35,7 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
     id: 'lifetime',
     name: 'LIFETIME',
     description: 'Maximum visibility. Unlimited listings, 100 photos, all features, never pay again.',
-    amountKobo: 19800000, // ₦198,000
+    amountKobo: 3000000, // ₦30,000
     currency: 'NGN',
     planType: 'subscription',
     subscriptionPlanId: 'lifetime',

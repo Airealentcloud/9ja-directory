@@ -2,7 +2,7 @@
 
 import Script from 'next/script'
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID?.trim()
 
 export default function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID) {
@@ -23,7 +23,7 @@ export default function GoogleAnalytics() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}', {
+            gtag('config', ${JSON.stringify(GA_MEASUREMENT_ID)}, {
               page_path: window.location.pathname,
             });
           `,
