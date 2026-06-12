@@ -2,7 +2,11 @@
 
 import Script from 'next/script'
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID?.trim()
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID
+  ?.trim()
+  .replace(/^['"]|['"]$/g, '')
+  .replace(/\\n/g, '')
+  .trim()
 
 export default function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID) {
