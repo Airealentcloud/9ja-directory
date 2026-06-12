@@ -7,6 +7,7 @@ import NavLink from '@/components/nav-link'
 import MobileNav from '@/components/mobile-nav'
 import NewsletterSignup from '@/components/newsletter-signup'
 import GoogleAnalytics from '@/components/google-analytics'
+import GoogleAdSense from '@/components/google-adsense'
 import { SITE_URL } from '@/lib/seo/site-url'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -66,6 +67,7 @@ export default function RootLayout({
     <html lang="en-NG">
       <body className={inter.className}>
         <GoogleAnalytics />
+        <GoogleAdSense />
         <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16 items-center">
