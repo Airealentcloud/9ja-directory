@@ -5,6 +5,10 @@ import Image from 'next/image'
 
 import { SITE_URL } from '@/lib/seo/site-url'
 import { createPublicClient } from '@/lib/supabase/public'
+import {
+  MIN_INDEXABLE_CATEGORY_STATE_LISTINGS,
+  isIndexableListing,
+} from '@/lib/seo/listing-quality'
 
 const siteUrl = SITE_URL
 
@@ -75,18 +79,38 @@ export async function generateMetadata({
         `${categoryName} services ${stateDisplayName}`,
       ]
 
-  // Count listings for this combo to decide indexability
-  const { count: listingCount } = await supabase
+  // Count only strong listings for indexability. One weak imported business is
+  // not enough value for an AdSense-facing local category page.
+  const { data: qualityCheckListings } = await supabase
     .from('listings')
-    .select('id', { count: 'exact', head: true })
+    .select(`
+      description,
+      phone,
+      email,
+      website,
+      website_url,
+      address,
+      image_url,
+      logo_url,
+      images,
+      opening_hours,
+      services_offered,
+      amenities,
+      verified,
+      claimed
+    `)
     .eq('category_id', category.id ?? '')
     .eq('state_id', state.id ?? '')
     .eq('status', 'approved')
+    .limit(50)
 
-  // Suppress indexing for truly empty combos to protect crawl budget
-  const robotsDirective = !listingCount || listingCount === 0
-    ? { index: false, follow: true }
-    : { index: true, follow: true }
+  const indexableListingCount = (qualityCheckListings || [])
+    .filter((listing) => isIndexableListing(listing)).length
+
+  const robotsDirective =
+    indexableListingCount >= MIN_INDEXABLE_CATEGORY_STATE_LISTINGS
+      ? { index: true, follow: true }
+      : { index: false, follow: true }
 
   return {
     title,

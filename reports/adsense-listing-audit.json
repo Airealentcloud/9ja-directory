@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-06-13T10:03:51.944Z",
+  "thresholds": {
+    "minWords": 100,
+    "minChars": 700,
+    "minSignals": 3,
+    "minComboListings": 3
+  },
+  "totalListings": 1235,
+  "qualityBuckets": {
+    "thin": 586,
+    "very_thin": 649
+  },
+  "duplicateNameGroups": 7,
+  "duplicatePhoneGroups": 3,
+  "categoryCounts": {
+    "Computers": 135,
+    "Business": 124,
+    "Agriculture": 108,
+    "Shopping": 87,
+    "Travel": 85,
+    "Education": 84,
+    "Accommodation": 82,
+    "Automotive": 75,
+    "Employment": 74,
+    "Transportation": 70,
+    "Arts": 64,
+    "Health": 62,
+    "News and Media": 56,
+    "Recreation": 46,
+    "Government": 44,
+    "Sports": 39
+  },
+  "locationCounts": {
+    "Lagos": 383,
+    "Port-Harcourt": 312,
+    "Abuja": 281,
+    "Ibadan": 259
+  }
+}

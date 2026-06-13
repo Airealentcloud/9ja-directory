@@ -8658,7 +8658,7 @@ export const blogPosts: BlogPost[] = [
   // ── CAC PRE-INCORPORATION ─────────────────────────────────────────────────
   {
     slug: "cac-pre-incorporation-guide-nigeria-2026",
-    title: "CAC Pre-Incorporation Nigeria: Step-by-Step Guide for New Businesses (2026)",
+    title: "CAC Pre-Incorporation Nigeria: Step-by-Step Guide (2026)",
     excerpt: "CAC pre-incorporation 2026: register your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>

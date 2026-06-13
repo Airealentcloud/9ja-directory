@@ -2,6 +2,10 @@ import { MetadataRoute } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { blogPosts } from '@/lib/blog-data'
 import { standalonePackages, bundlePackages, reputationPackages } from '@/lib/press-release/packages'
+import {
+    MIN_INDEXABLE_CATEGORY_STATE_LISTINGS,
+    isIndexableListing,
+} from '@/lib/seo/listing-quality'
 
 /**
  * Sitemap following Google's Guidelines:
@@ -152,9 +156,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // These dynamic pages target high-intent searches like:
     // "restaurants in Lagos", "hotels in Abuja", "real estate in Port Harcourt"
     //
-    // Quality threshold: only include a combination when at least one approved
-    // listing exists for it. Thin/empty combos are excluded to protect crawl
-    // budget and avoid indexing low-value pages (P2-T1, P2-T2).
+    // Quality threshold: only include a combination when it has enough
+    // indexable listings. This keeps thin local doorway-style pages out of
+    // the sitemap during AdSense review.
     const hasCategories = (categories || []).length > 0
     const hasStates = (states || []).length > 0
 
@@ -186,32 +190,57 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               },
           ]
 
-    // Fetch distinct category+state combos that have at least one approved listing.
+    // Fetch category+state combos with enough approved, indexable listings.
     // Using an INNER JOIN so only rows with valid FK relations are returned.
     const { data: activeCombos } = await supabase
         .from('listings')
-        .select('categories!inner(slug), states!inner(slug)')
+        .select(`
+            description,
+            phone,
+            email,
+            website,
+            website_url,
+            address,
+            image_url,
+            logo_url,
+            images,
+            opening_hours,
+            services_offered,
+            amenities,
+            verified,
+            claimed,
+            categories!inner(slug),
+            states!inner(slug)
+        `)
         .eq('status', 'approved')
         .not('category_id', 'is', null)
         .not('state_id', 'is', null)
 
-    // Build a Set for O(1) membership checks: "categorySlug/stateSlug"
-    // Supabase returns joined relations as arrays, so we use [0] to get the first (and only) match.
-    const validComboSet = new Set(
-        (activeCombos || []).flatMap((listing) => {
-            const cats = listing.categories
-            const sts = listing.states
-            const catSlug = Array.isArray(cats) ? cats[0]?.slug : (cats as { slug: string } | null)?.slug
-            const stateSlug = Array.isArray(sts) ? sts[0]?.slug : (sts as { slug: string } | null)?.slug
-            return catSlug && stateSlug ? [`${catSlug}/${stateSlug}`] : []
-        })
-    )
+    const comboCounts = new Map<string, number>()
 
-    // Only include combinations present in the live listing data
+    // Supabase returns joined relations as arrays, so we use [0] to get the first (and only) match.
+    ;(activeCombos || []).forEach((listing) => {
+        if (!isIndexableListing(listing)) {
+            return
+        }
+
+        const cats = listing.categories
+        const sts = listing.states
+        const catSlug = Array.isArray(cats) ? cats[0]?.slug : (cats as { slug: string } | null)?.slug
+        const stateSlug = Array.isArray(sts) ? sts[0]?.slug : (sts as { slug: string } | null)?.slug
+        const key = catSlug && stateSlug ? `${catSlug}/${stateSlug}` : ''
+
+        if (key) {
+            comboCounts.set(key, (comboCounts.get(key) || 0) + 1)
+        }
+    })
+
+    // Only include combinations with enough strong listing inventory.
     const categoryStateUrls = (categories || []).flatMap((category: { slug: string }) =>
         (states || [])
             .filter((state: { slug: string }) =>
-                validComboSet.has(`${category.slug}/${state.slug}`)
+                (comboCounts.get(`${category.slug}/${state.slug}`) || 0) >=
+                MIN_INDEXABLE_CATEGORY_STATE_LISTINGS
             )
             .map((state: { slug: string }) => ({
                 url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
@@ -221,39 +250,44 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             }))
     )
 
-    const fallbackCategoryStateUrls = hasCategories && hasStates
-        ? []
-        : [
-              {
-                  url: `${baseUrl}/categories/real-estate/lagos`,
-                  lastModified: now,
-                  changeFrequency: 'weekly' as const,
-                  priority: 0.75,
-              },
-              {
-                  url: `${baseUrl}/categories/real-estate/fct`,
-                  lastModified: now,
-                  changeFrequency: 'weekly' as const,
-                  priority: 0.75,
-              },
-          ]
+    const fallbackCategoryStateUrls: MetadataRoute.Sitemap = []
 
-    // 9. Business Listings (Approved only)
-    // Core content - each listing is a unique business page
-    // Limit to 40,000 to stay well under Google's 50,000 URL limit per sitemap
+    // 9. Business Listings (quality-gated)
+    // AdSense reviewers and Googlebot can sample sitemap URLs. Keep thin,
+    // templated listings out of the sitemap until they have enough unique
+    // description and business-detail signals to stand on their own.
     const { data: listings } = await supabase
         .from('listings')
-        .select('slug, updated_at')
+        .select(`
+            slug,
+            updated_at,
+            description,
+            phone,
+            email,
+            website,
+            website_url,
+            address,
+            image_url,
+            logo_url,
+            images,
+            opening_hours,
+            services_offered,
+            amenities,
+            verified,
+            claimed
+        `)
         .eq('status', 'approved')
         .order('updated_at', { ascending: false })
         .limit(40000)
 
-    const listingUrls = (listings || []).map((listing) => ({
-        url: `${baseUrl}/listings/${listing.slug}`,
-        lastModified: new Date(listing.updated_at || now),
-        changeFrequency: 'weekly' as const,
-        priority: 0.6,
-    }))
+    const listingUrls = (listings || [])
+        .filter((listing) => isIndexableListing(listing))
+        .map((listing) => ({
+            url: `${baseUrl}/listings/${listing.slug}`,
+            lastModified: new Date(listing.updated_at || now),
+            changeFrequency: 'weekly' as const,
+            priority: 0.6,
+        }))
 
     // Combine all URLs in priority order
     // Total estimated URLs: ~40,600 (well under 50,000 limit)
