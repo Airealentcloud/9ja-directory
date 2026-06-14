@@ -90,12 +90,10 @@ export async function generateMetadata({
       website,
       website_url,
       address,
-      image_url,
       logo_url,
       images,
       opening_hours,
       services_offered,
-      amenities,
       verified,
       claimed
     `)
