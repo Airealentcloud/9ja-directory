@@ -957,7 +957,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   ].filter(Boolean).join(', ')
 
   // ✅ FEATURE SNIPPET OPTIMIZATION
-  const metadataRobots = listing.verified ? 'index, follow' : 'index, follow'
+  const metadataRobots = isIndexableListing(listing)
+    ? 'index, follow'
+    : 'noindex, follow'
 
   // ✅ OPEN GRAPH - FOR SOCIAL SHARING
   const ogImages = [
