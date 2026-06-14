@@ -8,6 +8,7 @@ import ReviewButton from '@/components/reviews/review-button'
 import ClaimButton from '@/components/listings/claim-button'
 import RelatedListings from '@/components/related-listings'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { isIndexableListing } from '@/lib/seo/listing-quality'
 import {
   generateLocalBusinessSchema,
   generateBreadcrumbSchema,
