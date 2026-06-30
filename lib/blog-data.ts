@@ -1,4 +1,4 @@
-export interface BlogPost {
+﻿export interface BlogPost {
   slug: string;
   title: string;
   excerpt: string;
@@ -13,6 +13,1575 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+
+  {
+    slug: "local-seo-nigerian-small-businesses-rank-city",
+    title: "Local SEO for Nigerian Small Businesses: How to Rank in Your City",
+    excerpt: "Learn how Nigerian small businesses can rank for city searches, improve Google Business Profile visibility, build trusted citations, and turn local search traffic into customers.",
+    keywords: [
+      "local SEO for Nigerian small businesses",
+      "local SEO Nigeria",
+      "rank in your city",
+      "Google Business Profile Nigeria",
+      "business directory Nigeria",
+      "small business listing Nigeria",
+      "near me searches Nigeria",
+      "Nigerian business directory"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: June 2026</em></p>
+
+      <p>A customer in Lekki searches "best salon near me." Another person in Ibadan searches "solar installer in Ibadan." Someone in Port Harcourt needs a plumber before closing time. The question is simple: will your business appear when people in your city are ready to buy?</p>
+
+      <p>That is the real value of <strong>local SEO for Nigerian small businesses</strong>. It helps your company show up for searches that include your city, area, state, or "near me" intent. For many SMEs, this is more useful than trying to rank nationally. A bakery in Surulere does not need everyone in Nigeria. It needs people close enough to call, visit, order, or send a WhatsApp message.</p>
+
+      <p>This guide explains how local search works, what Nigerian business owners should fix first, and how a complete profile on <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory</a> can support your visibility. If you want more phone calls, map searches, and local leads, start here.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/local-seo-nigeria-hero.png" alt="Black Nigerian small business owners checking local SEO visibility on a laptop and phone" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Local SEO helps customers in your city find your phone number, location, services, and reviews before they choose a competitor.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Local SEO Means for a Nigerian Business</h2>
+      <p>Local SEO is the process of improving your online presence so customers nearby can find you through Google Search, Google Maps, directories, and location-based pages. It is different from ordinary SEO because the searcher usually wants a business they can contact quickly.</p>
+
+      <p>Examples include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>"restaurant in Ikeja"</li>
+        <li>"law firm Abuja"</li>
+        <li>"beauty spa Ilorin"</li>
+        <li>"POS agent near me"</li>
+        <li>"event decorator in Benin City"</li>
+      </ul>
+
+      <p>These searches carry strong buying intent. The person is not just reading for fun. They may need directions, pricing, reviews, or a phone number. If your business details are missing, inconsistent, or hard to trust, the lead goes somewhere else.</p>
+
+      <p>Good local SEO gives Google and customers the same clear message: who you are, what you do, where you serve, and why people should trust you.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How Google Ranks Local Businesses</h2>
+      <p>Google says local results are mainly based on three factors: relevance, distance, and prominence. These three signals should guide your work.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Relevance: Does your business match the search?</h3>
+      <p>If someone searches "phone repair in Yaba," Google needs to understand that you repair phones and that Yaba is part of your service area. Your business name, category, description, services, photos, website, and directory listings all help clarify relevance.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Distance: Are you close enough to the searcher?</h3>
+      <p>Distance matters heavily for map results. A business in Wuse may rank better for a Wuse search than a similar business in Gwarinpa. That is why your address, city, state, and service areas must be accurate everywhere online.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Prominence: Does your business look trusted?</h3>
+      <p>Prominence is about reputation and online proof. Reviews, quality links, mentions on trusted directories, complete business profiles, and strong brand signals can all help. For Nigerian SMEs, this is where verified directory listings, real photos, accurate contact details, and customer reviews become powerful.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Claim and Complete Your Google Business Profile</h2>
+      <p>Your Google Business Profile is one of the most important assets for city rankings. It can show your business on Google Maps and in the local pack that appears above normal search results.</p>
+
+      <p>Do not create a half-empty profile. Complete every important field:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Business name:</strong> Use your real business name. Do not stuff it with keywords.</li>
+        <li><strong>Primary category:</strong> Choose the category closest to your main service.</li>
+        <li><strong>Address or service area:</strong> Make it accurate and consistent with your website and listings.</li>
+        <li><strong>Phone number:</strong> Use a line customers can actually reach.</li>
+        <li><strong>Opening hours:</strong> Add public holidays or special hours when needed.</li>
+        <li><strong>Services:</strong> List the exact services customers search for.</li>
+        <li><strong>Photos:</strong> Add storefront, product, team, office, and work sample photos.</li>
+      </ul>
+
+      <p>For example, a beauty brand in Ilorin should not only say "Beauty & Spa." It should mention perfumes, fragrance oils, body care, bridal scent packages, location details, opening hours, and WhatsApp ordering if those are available.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Keep Your NAP Details Consistent Everywhere</h2>
+      <p>NAP means Name, Address, and Phone number. It sounds small, but it is one of the first things to fix. If your Google profile says "Block 12 Allen Avenue" but your directory listing says "12 Allen Ave." and your Instagram says only "Lagos," search engines and customers can become unsure.</p>
+
+      <p>Create one official version of your business details and use it everywhere:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Google Business Profile</li>
+        <li>Your website</li>
+        <li>9jaDirectory business profile</li>
+        <li>Facebook and Instagram pages</li>
+        <li>WhatsApp Business profile</li>
+        <li>Invoices, flyers, and email signatures</li>
+      </ul>
+
+      <p>This is where <a href="/add-business" class="text-green-600 hover:underline font-semibold">adding your business to 9jaDirectory</a> helps. A complete directory profile gives customers another trusted place to confirm your category, city, phone number, description, and service details. It also creates a clear Nigerian business citation that supports your local footprint.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/local-seo-nigeria-listing.png" alt="Black Nigerian entrepreneur updating her business directory listing in a boutique" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Consistent business details across Google, your website, social media, and directories make your company easier to trust.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Use City Keywords Without Sounding Fake</h2>
+      <p>City keywords help search engines connect your business to your market. But keyword stuffing can make your profile look spammy. The goal is natural clarity.</p>
+
+      <p>A weak description says:</p>
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4">We are the best company for all your needs.</blockquote>
+
+      <p>A stronger local description says:</p>
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4">We provide same-day phone repairs in Ikeja, Lagos, including screen replacement, battery replacement, charging port repairs, and software fixes.</blockquote>
+
+      <p>Use the city, state, neighborhood, and service keywords where they make sense. For <strong>local SEO for Nigerian small businesses</strong>, useful keyword patterns include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>[service] in [city]</li>
+        <li>best [category] in [city]</li>
+        <li>[service] near me</li>
+        <li>[category] in [state]</li>
+        <li>[business type] open now in [city]</li>
+      </ul>
+
+      <p>If you serve multiple cities, create honest content for each location. Do not claim to operate in Kano, Enugu, Abuja, and Lagos if customers cannot reach you there. Trust is the point.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: Build Trust With Reviews, Photos, and Proof</h2>
+      <p>Many Nigerian customers check proof before calling. They want to see if your business is active, real, and safe. That is why reviews and photos matter.</p>
+
+      <p>Ask satisfied customers to leave honest reviews. Do not buy fake reviews. A small number of real, detailed reviews is better than suspicious praise that says nothing specific. Encourage customers to mention the service and city naturally, such as "Their delivery in Abuja was fast" or "They repaired my laptop in Ikeja the same day."</p>
+
+      <p>Photos also improve confidence. Add:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Shopfront or office photos</li>
+        <li>Team members at work</li>
+        <li>Before-and-after project photos</li>
+        <li>Product displays</li>
+        <li>Delivery, installation, or service photos</li>
+      </ul>
+
+      <p>On 9jaDirectory, a richer listing makes your profile more persuasive. If you want leads to trust you quickly, include a strong description, clear photos, active phone number, correct category, and city details. If paid or verified listing options are available, use them to stand out from basic profiles.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Create Content That Matches Local Buying Intent</h2>
+      <p>Local content should answer the questions people ask before they buy. A real estate agent in Abuja can publish "Best Areas to Buy Land in Lugbe." A school in Ibadan can publish "How to Choose a Primary School in Ibadan." A solar installer can publish "Cost of Solar Installation in Port Harcourt."</p>
+
+      <p>Good local content usually includes:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Service plus city keywords</li>
+        <li>Prices or price ranges where possible</li>
+        <li>Common customer questions</li>
+        <li>Local examples and landmarks</li>
+        <li>Clear contact and booking instructions</li>
+      </ul>
+
+      <p>Then link that content to your business profile, category page, and listing page. For example, a restaurant can link to <a href="/categories/restaurants" class="text-green-600 hover:underline">restaurant listings</a>, while a consultant can link to <a href="/categories/consulting" class="text-green-600 hover:underline">consulting services</a>. Internal links help users move from education to action.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 6: Use Directory Listings to Turn Searchers Into Buyers</h2>
+      <p>Ranking is only useful if it produces action. A directory listing should make it easy for a customer to understand your business and contact you. Your profile should answer five questions quickly:</p>
+
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li>What do you sell or provide?</li>
+        <li>Where are you located?</li>
+        <li>Can I call, email, or message you now?</li>
+        <li>Why should I trust you?</li>
+        <li>What should I do next?</li>
+      </ol>
+
+      <p>That is why your 9jaDirectory listing should not be treated like a placeholder. Write a proper description, choose the right category, add your city, include photos, and keep your contact details fresh. A paid or verified listing can be useful when you want stronger trust signals, better visibility on the platform, and a more professional first impression.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-xl font-bold mb-3">Want customers in your city to find you?</h3>
+        <p class="mb-4">Create your business profile on 9jaDirectory and give customers a clear place to find your phone number, category, city, services, and business details.</p>
+        <p><a href="/add-business" class="inline-block bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700">Add Your Business Listing</a></p>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Local SEO Checklist for Nigerian SMEs</h2>
+      <p>Use this checklist before you spend money on ads:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Claim and verify your Google Business Profile.</li>
+        <li>Use the right primary and secondary categories.</li>
+        <li>Keep your business name, address, and phone number consistent.</li>
+        <li>Add your business to trusted Nigerian directories like 9jaDirectory.</li>
+        <li>Use city and service keywords naturally in descriptions.</li>
+        <li>Add real photos of your shop, team, products, or work.</li>
+        <li>Ask customers for honest reviews after successful jobs.</li>
+        <li>Create city-focused content that answers buyer questions.</li>
+        <li>Link from blog posts to your listing, category, and contact pages.</li>
+        <li>Track calls, WhatsApp messages, form submissions, and profile views.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion: Win the City Before Chasing the Whole Country</h2>
+      <p>You do not need to be everywhere to grow. You need to be visible where your customers are searching. A small business that ranks well in its own city can get steady calls, visits, bookings, and repeat customers without wasting money on broad traffic that never converts.</p>
+
+      <p>Start with the basics: complete your Google Business Profile, fix your NAP details, add real photos, collect reviews, and publish useful city-focused content. Then strengthen your online proof with a complete 9jaDirectory profile.</p>
+
+      <p>If you are serious about <strong>local SEO for Nigerian small businesses</strong>, do not leave your visibility to chance. <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory today</a>, keep your details accurate, and make it easier for customers in your city to choose you.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How long does local SEO take in Nigeria?</h3>
+      <p>Some improvements, such as completing your Google Business Profile or correcting your phone number, can help quickly. Stronger ranking gains usually take weeks or months because Google needs to see consistent information, reviews, engagement, and trusted mentions across the web.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need a website to rank locally?</h3>
+      <p>A website helps, but it is not the only requirement. You can start with a complete Google Business Profile and a trusted directory listing. However, a website gives you more control over content, services, city pages, schema markup, and conversion tracking.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can a 9jaDirectory listing help my local SEO?</h3>
+      <p>Yes. A complete 9jaDirectory listing can support your local presence by giving search engines and customers another consistent citation for your business name, category, city, phone number, and description. It also gives users a simple place to find and contact you.</p>
+    `,
+    image: "/images/blog/local-seo-nigeria-hero.png",
+    date: "Jun 29, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Marketing",
+    readTime: "12 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Local SEO for Nigerian Small Businesses: How to Rank in Your City",
+        "description": "Learn how Nigerian small businesses can rank for city searches, improve Google Business Profile visibility, build trusted citations, and turn local search traffic into customers.",
+        "image": "https://9jadirectory.org/images/blog/local-seo-nigeria-hero.png",
+        "author": {
+          "@type": "Organization",
+          "name": "9jaDirectory Editorial Team",
+          "url": "https://9jadirectory.org"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://9jadirectory.org/logo.png"
+          }
+        },
+        "datePublished": "2026-06-29",
+        "dateModified": "2026-06-29",
+        "keywords": "local SEO for Nigerian small businesses, local SEO Nigeria, rank in your city, Google Business Profile Nigeria, business directory Nigeria",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://9jadirectory.org/blog/local-seo-nigerian-small-businesses-rank-city"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long does local SEO take in Nigeria?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some improvements, such as completing your Google Business Profile or correcting your phone number, can help quickly. Stronger ranking gains usually take weeks or months because Google needs to see consistent information, reviews, engagement, and trusted mentions across the web."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a website to rank locally?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A website helps, but it is not the only requirement. You can start with a complete Google Business Profile and a trusted directory listing. However, a website gives you more control over content, services, city pages, schema markup, and conversion tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a 9jaDirectory listing help my local SEO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A complete 9jaDirectory listing can support your local presence by giving search engines and customers another consistent citation for your business name, category, city, phone number, and description."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://9jadirectory.org"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://9jadirectory.org/blog"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Local SEO for Nigerian Small Businesses",
+            "item": "https://9jadirectory.org/blog/local-seo-nigerian-small-businesses-rank-city"
+          }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "best-real-estate-companies-in-abuja",
+    title: "Best Real Estate Companies in Abuja: How to Choose a Verified Property Company",
+    excerpt: "Compare Abuja real estate companies with a buyer-first checklist covering AGIS verification, title documents, districts, red flags, reviews, and verified directory listings.",
+    keywords: [
+      "best real estate companies in Abuja",
+      "best real estate company in Abuja",
+      "real estate companies in Abuja",
+      "property companies in Abuja",
+      "verified real estate agents Abuja",
+      "Abuja property companies",
+      "AGIS land verification Abuja"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: June 2026</em></p>
+
+      <p>Buying land, a house, or an investment property in Abuja can be rewarding, but it is not a decision to rush. The city has high-value districts, planned estates, fast-growing suburbs, and many agents claiming to have the best offer. The real question is not just who is popular. It is who can prove the property, documentation, location, and after-sale process.</p>
+
+      <p>This guide is written for buyers, investors, landlords, diaspora Nigerians, and property companies that want to understand what makes the <strong>best real estate companies in Abuja</strong> stand out. Abuja search intent is heavily about safety: title verification, AGIS checks, allocation history, development status, and whether the agent is traceable after payment.</p>
+
+      <p>If you run a real estate company in Abuja, this is also your roadmap. A complete profile on <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory</a> can help buyers confirm your phone number, city, category, services, and verification status before they contact you.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/abuja-real-estate-companies.svg" alt="Black Nigerian real estate adviser reviewing Abuja property documents with a buyer" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Abuja buyers care about title checks, AGIS records, district knowledge, and real proof before paying.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Makes Abuja Real Estate Different?</h2>
+      <p>Abuja is not only Nigeria's capital; it is a planned city with a property market shaped by government presence, diplomatic demand, infrastructure expansion, and district-by-district pricing. Buyers compare Maitama, Asokoro, Wuse, Jabi, Gwarinpa, Guzape, Jahi, Katampe Extension, Lugbe, Lokogoma, Karsana, Kubwa, and developing corridors differently.</p>
+
+      <p>Because Abuja land and property decisions often involve title history and official records, buyers should look beyond beautiful flyers. A serious company should be able to explain documentation, inspection process, survey details, building approvals where applicable, and how the buyer can independently verify claims.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Identify the Best Real Estate Company in Abuja</h2>
+      <p>The <strong>best real estate company in Abuja</strong> is not always the company with the loudest advert. It is the company with strong evidence. Use these criteria before making a shortlist:</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Verified business identity:</strong> CAC details, office address, reachable phone number, and consistent online profiles.</li>
+        <li><strong>AGIS awareness:</strong> Clear explanation of Abuja Geographic Information Systems checks and title confirmation.</li>
+        <li><strong>District expertise:</strong> Practical knowledge of Abuja neighborhoods, access roads, development stage, and buyer profile.</li>
+        <li><strong>Transparent pricing:</strong> Clear land or house price, payment plan, agency fee, legal fee, documentation fee, and allocation timeline.</li>
+        <li><strong>Real inspection process:</strong> Site visit support, coordinates, estate layout, and documented next steps after inspection.</li>
+        <li><strong>Reviews and proof:</strong> Customer reviews, delivered projects, videos, testimonials, and traceable past transactions.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Best Real Estate Companies in Abuja</h2>
+      <p>This Abuja list is an editorial shortlist based on visible market presence, Abuja relevance, property focus, trust signals, and the kind of buyer each company appears best suited for. It is not a paid ranking, and buyers should still verify documents, office address, title status, and payment terms before committing money.</p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-400 rounded-r-lg p-4 my-6">
+        <p><strong>Editorial disclosure:</strong> Companies cannot buy a higher position in this list. Paid or verified listings on 9jaDirectory may improve profile visibility, but editorial ranking is based on buyer-fit signals, public presence, and verification considerations. Always run independent legal and title checks before payment.</p>
+      </div>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300">
+          <thead>
+            <tr class="bg-green-50">
+              <th class="border border-gray-300 p-3 text-left">Rank</th>
+              <th class="border border-gray-300 p-3 text-left">Company</th>
+              <th class="border border-gray-300 p-3 text-left">Best For</th>
+              <th class="border border-gray-300 p-3 text-left">Why Abuja Buyers Compare Them</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">1</td>
+              <td class="border border-gray-300 p-3">A.I Realent Global Resources</td>
+              <td class="border border-gray-300 p-3">Buyer representation and verified property guidance</td>
+              <td class="border border-gray-300 p-3">Useful for buyers who want advisory support across Abuja districts instead of being limited to one developer's estate.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">2</td>
+              <td class="border border-gray-300 p-3">Brains & Hammers</td>
+              <td class="border border-gray-300 p-3">Large gated estates and planned communities</td>
+              <td class="border border-gray-300 p-3">Known for large-scale residential developments and estate-style housing projects.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">3</td>
+              <td class="border border-gray-300 p-3">Mshel Homes Limited</td>
+              <td class="border border-gray-300 p-3">Abuja estates, flexible payment options, and branded developments</td>
+              <td class="border border-gray-300 p-3">Strong Abuja visibility with estate projects and buyer-facing content around property ownership.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">4</td>
+              <td class="border border-gray-300 p-3">Cosgrove Investment Limited</td>
+              <td class="border border-gray-300 p-3">Smart homes and premium residential developments</td>
+              <td class="border border-gray-300 p-3">Often compared by buyers looking for modern, technology-forward Abuja housing.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">5</td>
+              <td class="border border-gray-300 p-3">Urban Shelter Limited</td>
+              <td class="border border-gray-300 p-3">Mass housing, mid-market projects, and established development history</td>
+              <td class="border border-gray-300 p-3">A long-standing name for buyers who prefer established developers with broader housing experience.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">6</td>
+              <td class="border border-gray-300 p-3">Bilaad Realty</td>
+              <td class="border border-gray-300 p-3">Modern residential communities and design-led housing</td>
+              <td class="border border-gray-300 p-3">Relevant for buyers comparing newer estate brands and modern home positioning.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">7</td>
+              <td class="border border-gray-300 p-3">White Avenue Real Estate</td>
+              <td class="border border-gray-300 p-3">Luxury advisory and premium property marketing</td>
+              <td class="border border-gray-300 p-3">Useful for high-end buyers who need premium property options and stronger presentation.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">8</td>
+              <td class="border border-gray-300 p-3">Adron Homes and Properties</td>
+              <td class="border border-gray-300 p-3">Affordable land and housing across multiple locations</td>
+              <td class="border border-gray-300 p-3">A national brand often considered by first-time buyers and installment-plan seekers.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">9</td>
+              <td class="border border-gray-300 p-3">Dantata Town Developers</td>
+              <td class="border border-gray-300 p-3">Large residential communities and structured developments</td>
+              <td class="border border-gray-300 p-3">Relevant for buyers comparing established Abuja development groups.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">10</td>
+              <td class="border border-gray-300 p-3">Ochacho Real Estate</td>
+              <td class="border border-gray-300 p-3">Premium residential property and Abuja visibility</td>
+              <td class="border border-gray-300 p-3">Included for buyers who want to compare premium property brands with visible Abuja activity.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>For real estate companies:</strong> If your Abuja company should be reviewed or added to future rankings, create a complete profile on <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory</a> with your office address, service areas, documents, projects, photos, and contact details.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Abuja Real Estate Company Comparison Checklist</h2>
+      <p>Before choosing any Abuja property company, compare them with the same checklist. This prevents emotional decisions and helps you avoid agents who cannot prove what they sell.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300">
+          <thead>
+            <tr class="bg-green-50">
+              <th class="border border-gray-300 p-3 text-left">Check</th>
+              <th class="border border-gray-300 p-3 text-left">Why It Matters in Abuja</th>
+              <th class="border border-gray-300 p-3 text-left">What to Ask</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">AGIS/title verification</td>
+              <td class="border border-gray-300 p-3">Reduces risk of disputed allocation or unclear title.</td>
+              <td class="border border-gray-300 p-3">Can I verify the title before payment?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">District knowledge</td>
+              <td class="border border-gray-300 p-3">Prices and risks differ across Guzape, Jahi, Lugbe, Kubwa, and Gwarinpa.</td>
+              <td class="border border-gray-300 p-3">Which areas fit my budget and goal?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Physical inspection</td>
+              <td class="border border-gray-300 p-3">Prevents buying from only videos or edited photos.</td>
+              <td class="border border-gray-300 p-3">Who handles inspection and what documents come after?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Verified listing profile</td>
+              <td class="border border-gray-300 p-3">Makes the company easier to trace and compare.</td>
+              <td class="border border-gray-300 p-3">Is the company listed with correct contact details?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Best Abuja Districts by Buyer Intent</h2>
+      <p>Different buyers need different parts of Abuja. A luxury buyer may prefer Maitama, Asokoro, Guzape, or Katampe Extension. A middle-income family may compare Gwarinpa, Jabi, Wuye, Lokogoma, or Karsana. First-time land buyers often look at Lugbe, Kubwa, Kuje corridors, and emerging estate areas because entry prices can be lower.</p>
+
+      <p>A good property company should not force every buyer into one location. They should explain trade-offs: road access, title strength, resale demand, development timeline, distance from the city center, and likely rental appeal.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Red Flags When Choosing Abuja Property Companies</h2>
+      <p>Be careful if a company pressures you to pay immediately without inspection, refuses independent verification, hides fees until the last minute, or cannot show a real office, CAC identity, or customer proof. Also avoid agents who promise impossible returns or claim every area will "double soon" without evidence.</p>
+
+      <p>For diaspora buyers, assign a trusted representative, request video inspection plus coordinates, use a lawyer, and keep all receipts and agreements. Do not rely only on WhatsApp messages when millions of naira are involved.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How 9jaDirectory Helps Abuja Real Estate Companies Get Found</h2>
+      <p>For property companies, ranking is not only about Google. Buyers also need trusted places to compare businesses. A complete 9jaDirectory profile can show your company name, category, city, description, phone number, email, website, reviews, and verification status.</p>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <h3 class="text-xl font-bold mb-3">Run a real estate company in Abuja?</h3>
+        <p class="mb-4">Create a verified profile so buyers can find your Abuja property services, confirm your contact details, and contact you with more confidence.</p>
+        <p><a href="/add-business" class="inline-block bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700">Add Your Abuja Real Estate Company</a></p>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>The <strong>best real estate companies in Abuja</strong> win trust by proving what they sell. They understand AGIS verification, explain district differences, support inspection, disclose fees, and stay reachable after payment. Buyers should use evidence, not hype, to choose.</p>
+
+      <p>If your company wants to be discovered by Abuja buyers, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your real estate business on 9jaDirectory</a> and make your profile strong enough for serious customers to trust.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">What should I check before buying land in Abuja?</h3>
+      <p>Check title documents, allocation history, survey details, AGIS-related verification, access roads, estate layout, seller identity, and all payment terms before committing funds.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Are Abuja real estate companies on 9jaDirectory verified?</h3>
+      <p>9jaDirectory reviews listings before publication and can show verified business details where available. Buyers should still conduct legal and title checks before paying for property.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which Abuja areas are good for property investment?</h3>
+      <p>It depends on budget and goal. Maitama, Asokoro, Guzape, Jahi, Katampe, Gwarinpa, Lugbe, Lokogoma, Karsana, Kubwa, and Wuye all serve different buyer profiles.</p>
+    `,
+    image: "/images/blog/abuja-real-estate-companies.svg",
+    date: "Jun 29, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Real Estate",
+    readTime: "10 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Real Estate Companies in Abuja: How to Choose a Verified Property Company",
+        "description": "Compare Abuja real estate companies with a buyer-first checklist covering AGIS verification, title documents, districts, red flags, reviews, and verified directory listings.",
+        "image": "https://9jadirectory.org/images/blog/abuja-real-estate-companies.svg",
+        "datePublished": "2026-06-29",
+        "dateModified": "2026-06-29",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://9jadirectory.org/logo.png" } },
+        "keywords": "best real estate companies in Abuja, best real estate company in Abuja, real estate companies in Abuja, AGIS land verification Abuja",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://9jadirectory.org/blog/best-real-estate-companies-in-abuja" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top 10 Best Real Estate Companies in Abuja",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "A.I Realent Global Resources" },
+          { "@type": "ListItem", "position": 2, "name": "Brains & Hammers" },
+          { "@type": "ListItem", "position": 3, "name": "Mshel Homes Limited" },
+          { "@type": "ListItem", "position": 4, "name": "Cosgrove Investment Limited" },
+          { "@type": "ListItem", "position": 5, "name": "Urban Shelter Limited" },
+          { "@type": "ListItem", "position": 6, "name": "Bilaad Realty" },
+          { "@type": "ListItem", "position": 7, "name": "White Avenue Real Estate" },
+          { "@type": "ListItem", "position": 8, "name": "Adron Homes and Properties" },
+          { "@type": "ListItem", "position": 9, "name": "Dantata Town Developers" },
+          { "@type": "ListItem", "position": 10, "name": "Ochacho Real Estate" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What should I check before buying land in Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "Check title documents, allocation history, survey details, AGIS-related verification, access roads, estate layout, seller identity, and all payment terms before committing funds." } },
+          { "@type": "Question", "name": "Are Abuja real estate companies on 9jaDirectory verified?", "acceptedAnswer": { "@type": "Answer", "text": "9jaDirectory reviews listings before publication and can show verified business details where available. Buyers should still conduct legal and title checks before paying for property." } },
+          { "@type": "Question", "name": "Which Abuja areas are good for property investment?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on budget and goal. Maitama, Asokoro, Guzape, Jahi, Katampe, Gwarinpa, Lugbe, Lokogoma, Karsana, Kubwa, and Wuye all serve different buyer profiles." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Real Estate Companies in Abuja", "item": "https://9jadirectory.org/blog/best-real-estate-companies-in-abuja" }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "best-real-estate-companies-in-lagos",
+    title: "Best Real Estate Companies in Lagos: How to Choose a Trusted Property Firm",
+    excerpt: "A Lagos-focused guide to comparing real estate companies by neighborhood, LASRERA awareness, fee transparency, reviews, listings, and buyer protection signals.",
+    keywords: [
+      "best real estate companies in Lagos",
+      "best real estate company in Lagos",
+      "real estate companies in Lagos",
+      "property companies in Lagos",
+      "verified real estate agents Lagos",
+      "Lagos property companies",
+      "LASRERA real estate Lagos"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: June 2026</em></p>
+
+      <p>Lagos real estate moves fast. A property can be available in the morning and gone by evening. Prices change by neighborhood, access road, title type, developer reputation, and whether the property is finished, off-plan, serviced, or land-banking. That speed creates opportunity, but it also creates risk.</p>
+
+      <p>This guide is built for buyers, renters, investors, landlords, diaspora Nigerians, and agencies comparing the <strong>best real estate companies in Lagos</strong>. Lagos search intent is different from Abuja. Buyers care about neighborhood fit, fee transparency, LASRERA awareness, title clarity, flood risk, traffic access, inspection quality, and whether the agent can be trusted with fast decisions.</p>
+
+      <p>If you run a Lagos property company, this article also shows what buyers expect before they contact you. A complete <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory listing</a> can help your company appear in a trusted business directory and convert more searchers into enquiries.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/lagos-real-estate-companies.svg" alt="Black Nigerian property adviser helping a client compare Lagos real estate companies" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Lagos buyers compare location, title, access, fees, developer proof, and response speed before choosing a company.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Makes Lagos Real Estate Different?</h2>
+      <p>Lagos is not one property market. Lekki, Ikoyi, Victoria Island, Ajah, Ibeju-Lekki, Ikeja, Yaba, Surulere, Maryland, Epe, and Lagos Mainland behave differently. A luxury apartment buyer in Ikoyi has different concerns from a land buyer in Ibeju-Lekki or a young family searching for a rental in Yaba.</p>
+
+      <p>That is why the <strong>best real estate company in Lagos</strong> must be more than a sales team. It should understand neighborhood demand, documentation, developer track record, buyer budget, road access, service charges, rental yield, agency fees, and legal checks.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Compare Lagos Real Estate Companies</h2>
+      <p>Use the same standard for every company. Do not choose only because an Instagram video looks premium or because an agent says the price will increase next week.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Neighborhood specialization:</strong> The company should know the specific areas it sells, not just "Lagos property."</li>
+        <li><strong>LASRERA awareness:</strong> Serious operators should understand Lagos real estate regulation and buyer protection expectations.</li>
+        <li><strong>Fee transparency:</strong> Agency, legal, agreement, caution, service charge, and documentation fees should be clear before payment.</li>
+        <li><strong>Inspection process:</strong> Buyers should get real inspections, property condition checks, and documented next steps.</li>
+        <li><strong>Title and developer checks:</strong> The company should explain title type, approval status, developer history, and off-plan risks.</li>
+        <li><strong>Verified online presence:</strong> A company should be traceable through a website, Google profile, social pages, and directory listing.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Best Real Estate Companies in Lagos</h2>
+      <p>This Lagos list is a buyer-focused editorial shortlist based on visible market presence, Lagos neighborhood relevance, property type, trust signals, and the search patterns seen around Lagos real estate companies. It is not a paid ranking. Buyers should still verify company registration, property title, fees, and inspection details before paying.</p>
+
+      <div class="bg-amber-50 border-l-4 border-amber-400 rounded-r-lg p-4 my-6">
+        <p><strong>Editorial disclosure:</strong> No company can purchase the #1 position. Paid or verified listings may add profile features and visibility on 9jaDirectory, but ranking decisions must remain separate from sponsorship. Buyers should still confirm LASRERA-related compliance, title documents, and all fees independently.</p>
+      </div>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300">
+          <thead>
+            <tr class="bg-blue-50">
+              <th class="border border-gray-300 p-3 text-left">Rank</th>
+              <th class="border border-gray-300 p-3 text-left">Company</th>
+              <th class="border border-gray-300 p-3 text-left">Best For</th>
+              <th class="border border-gray-300 p-3 text-left">Why Lagos Buyers Compare Them</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">1</td>
+              <td class="border border-gray-300 p-3">LandWey Investment Limited</td>
+              <td class="border border-gray-300 p-3">Land banking, residential estates, and growth corridors</td>
+              <td class="border border-gray-300 p-3">Frequently compared by Lagos buyers looking at Lekki, Ibeju-Lekki, and future-growth locations.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">2</td>
+              <td class="border border-gray-300 p-3">Sujimoto</td>
+              <td class="border border-gray-300 p-3">Luxury apartments and premium lifestyle property</td>
+              <td class="border border-gray-300 p-3">Strong luxury positioning for buyers comparing Ikoyi, Banana Island, and premium Lagos addresses.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">3</td>
+              <td class="border border-gray-300 p-3">Dutum</td>
+              <td class="border border-gray-300 p-3">Development-led real estate and construction-backed projects</td>
+              <td class="border border-gray-300 p-3">Useful for buyers who want a developer with construction and project-delivery positioning.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">4</td>
+              <td class="border border-gray-300 p-3">Zylus Homes and Property</td>
+              <td class="border border-gray-300 p-3">Residential sales, investment property, and broad Lagos visibility</td>
+              <td class="border border-gray-300 p-3">A visible Lagos brand often mentioned in real estate company comparisons.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">5</td>
+              <td class="border border-gray-300 p-3">RevolutionPlus Property</td>
+              <td class="border border-gray-300 p-3">Affordable land, estate sales, and installment buyers</td>
+              <td class="border border-gray-300 p-3">Commonly considered by middle-income buyers comparing land and housing payment plans.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">6</td>
+              <td class="border border-gray-300 p-3">Adron Homes and Properties</td>
+              <td class="border border-gray-300 p-3">Affordable housing and multi-location estates</td>
+              <td class="border border-gray-300 p-3">A national developer with Lagos/Ogun corridor visibility and flexible-buyer appeal.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">7</td>
+              <td class="border border-gray-300 p-3">Veritasi Homes</td>
+              <td class="border border-gray-300 p-3">Development, advisory, and property marketing</td>
+              <td class="border border-gray-300 p-3">Relevant for buyers comparing polished development brands and advisory-led property options.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">8</td>
+              <td class="border border-gray-300 p-3">Rightive Homes and Properties</td>
+              <td class="border border-gray-300 p-3">Affordable land sales and Lagos investment entry points</td>
+              <td class="border border-gray-300 p-3">Appears in Lagos-focused real estate search patterns and affordable land conversations.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">9</td>
+              <td class="border border-gray-300 p-3">ATLAS Realtors</td>
+              <td class="border border-gray-300 p-3">Advisory-led buying, selling, and Lagos property consulting</td>
+              <td class="border border-gray-300 p-3">Useful for buyers who want a consultant-style approach rather than only estate inventory.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3 font-semibold">10</td>
+              <td class="border border-gray-300 p-3">27th Development</td>
+              <td class="border border-gray-300 p-3">Modern residential development and buyer education</td>
+              <td class="border border-gray-300 p-3">Included for buyers comparing newer Lagos development brands and educational content.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>For real estate companies:</strong> If your Lagos company should be considered for future updates, <a href="/add-business" class="text-green-600 hover:underline font-semibold">add your business to 9jaDirectory</a> with your neighborhoods, property types, photos, website, and direct contact details.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Lagos Neighborhoods and Buyer Intent</h2>
+      <p>For luxury and premium lifestyle searches, buyers often compare Ikoyi, Victoria Island, Banana Island, Oniru, Lekki Phase 1, and parts of Ikeja GRA. For mainstream residential demand, buyers may compare Ajah, Sangotedo, Surulere, Yaba, Ogudu, Maryland, Magodo, and Chevron. For land banking and future growth, Ibeju-Lekki, Epe, and developing Lekki corridors often appear in buyer conversations.</p>
+
+      <p>A good Lagos property firm should not push every buyer into the same estate. It should ask: are you buying to live, rent out, resell, build later, or preserve capital? The answer changes the neighborhood and company you should consider.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Lagos Real Estate Company Comparison Table</h2>
+      <p>Use this table before contacting or paying any Lagos property company.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300">
+          <thead>
+            <tr class="bg-blue-50">
+              <th class="border border-gray-300 p-3 text-left">Check</th>
+              <th class="border border-gray-300 p-3 text-left">Why It Matters in Lagos</th>
+              <th class="border border-gray-300 p-3 text-left">What to Ask</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Neighborhood proof</td>
+              <td class="border border-gray-300 p-3">Lagos value changes street by street.</td>
+              <td class="border border-gray-300 p-3">What recent deals or listings do you have in this area?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Fee transparency</td>
+              <td class="border border-gray-300 p-3">Hidden fees can change the real cost of buying or renting.</td>
+              <td class="border border-gray-300 p-3">What are all fees before I pay?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Title and approval checks</td>
+              <td class="border border-gray-300 p-3">Off-plan and land deals need stronger documentation review.</td>
+              <td class="border border-gray-300 p-3">Can my lawyer review the title and approvals?</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Verified business listing</td>
+              <td class="border border-gray-300 p-3">Traceable profiles reduce buyer uncertainty.</td>
+              <td class="border border-gray-300 p-3">Where can I confirm your business details?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Red Flags in the Lagos Property Market</h2>
+      <p>Be careful with agents who refuse inspection, rush you with fear-based messages, hide the full fee breakdown, cannot explain title type, avoid written agreements, or only communicate through disappearing social media accounts. Lagos has excellent property opportunities, but the speed of the market can make buyers careless.</p>
+
+      <p>For rentals, confirm who receives the payment, what the agreement covers, when you can move in, and whether the landlord or agent is authorized. For purchases, use a lawyer, check title, inspect the property, and confirm the developer or seller identity.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How Lagos Real Estate Companies Can Win More Buyers</h2>
+      <p>Buyers want proof before they call. A strong property company profile should include clear services, target neighborhoods, active phone number, email, website, property categories, inspection support, and business verification. It should also explain whether the company handles sales, rentals, property management, shortlets, land, luxury homes, or commercial property.</p>
+
+      <p>That is where a directory profile helps. A 9jaDirectory listing gives Lagos buyers another place to confirm your business and contact you without guessing whether the company is real.</p>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+        <h3 class="text-xl font-bold mb-3">Run a real estate company in Lagos?</h3>
+        <p class="mb-4">List your Lagos real estate company, add your service areas, and make it easier for buyers, renters, and investors to contact you.</p>
+        <p><a href="/add-business" class="inline-block bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700">Add Your Lagos Real Estate Company</a></p>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>The <strong>best real estate companies in Lagos</strong> combine speed with proof. They know neighborhoods, explain fees, support inspection, understand regulatory expectations, and make their business easy to verify.</p>
+
+      <p>If your company wants more visibility from Lagos buyers, <a href="/add-business" class="text-green-600 hover:underline font-semibold">create your 9jaDirectory listing</a> and make your profile clear, complete, and trustworthy.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+      <h3 class="text-xl font-bold mt-6 mb-3">What should I ask a Lagos real estate company before paying?</h3>
+      <p>Ask for full fee breakdown, inspection process, title or agreement documents, seller or landlord authority, move-in or allocation timeline, and whether your lawyer can review documents.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which Lagos areas are best for real estate investment?</h3>
+      <p>It depends on your budget and goal. Ikoyi, VI, Lekki, Ajah, Ibeju-Lekki, Ikeja, Yaba, Surulere, Epe, and Lagos Mainland all serve different buyer and investor profiles.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can a 9jaDirectory listing help Lagos property companies?</h3>
+      <p>Yes. A complete listing helps buyers confirm your business name, category, city, contact details, services, and verification status before making an enquiry.</p>
+    `,
+    image: "/images/blog/lagos-real-estate-companies.svg",
+    date: "Jun 29, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Real Estate",
+    readTime: "10 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Real Estate Companies in Lagos: How to Choose a Trusted Property Firm",
+        "description": "A Lagos-focused guide to comparing real estate companies by neighborhood, LASRERA awareness, fee transparency, reviews, listings, and buyer protection signals.",
+        "image": "https://9jadirectory.org/images/blog/lagos-real-estate-companies.svg",
+        "datePublished": "2026-06-29",
+        "dateModified": "2026-06-29",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://9jadirectory.org" },
+        "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://9jadirectory.org/logo.png" } },
+        "keywords": "best real estate companies in Lagos, best real estate company in Lagos, real estate companies in Lagos, LASRERA real estate Lagos",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://9jadirectory.org/blog/best-real-estate-companies-in-lagos" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Top 10 Best Real Estate Companies in Lagos",
+        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "LandWey Investment Limited" },
+          { "@type": "ListItem", "position": 2, "name": "Sujimoto" },
+          { "@type": "ListItem", "position": 3, "name": "Dutum" },
+          { "@type": "ListItem", "position": 4, "name": "Zylus Homes and Property" },
+          { "@type": "ListItem", "position": 5, "name": "RevolutionPlus Property" },
+          { "@type": "ListItem", "position": 6, "name": "Adron Homes and Properties" },
+          { "@type": "ListItem", "position": 7, "name": "Veritasi Homes" },
+          { "@type": "ListItem", "position": 8, "name": "Rightive Homes and Properties" },
+          { "@type": "ListItem", "position": 9, "name": "ATLAS Realtors" },
+          { "@type": "ListItem", "position": 10, "name": "27th Development" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What should I ask a Lagos real estate company before paying?", "acceptedAnswer": { "@type": "Answer", "text": "Ask for full fee breakdown, inspection process, title or agreement documents, seller or landlord authority, move-in or allocation timeline, and whether your lawyer can review documents." } },
+          { "@type": "Question", "name": "Which Lagos areas are best for real estate investment?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your budget and goal. Ikoyi, VI, Lekki, Ajah, Ibeju-Lekki, Ikeja, Yaba, Surulere, Epe, and Lagos Mainland all serve different buyer and investor profiles." } },
+          { "@type": "Question", "name": "Can a 9jaDirectory listing help Lagos property companies?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A complete listing helps buyers confirm your business name, category, city, contact details, services, and verification status before making an enquiry." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Real Estate Companies in Lagos", "item": "https://9jadirectory.org/blog/best-real-estate-companies-in-lagos" }
+        ]
+      }
+    ])
+  },
+
+  {
+    slug: "top-business-listing-sites-in-nigeria-2025",
+    title: "Top Business Listing Sites in Nigeria to Grow Your Visibility (2025 Guide)",
+    excerpt: "Discover the top 10 business listing sites in Nigeria for 2025. Boost your online visibility, improve local SEO, and reach more customers with these essential directories.",
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
+
+      <p>In the digital age, visibility is the currency of business growth. For Nigerian entrepreneurs, the question isn't just "Is your business online?" but "Can customers find you when they search?" With millions of Nigerians searching for services daily, listing your business on reputable directories is one of the most effective—and often free—ways to boost your <strong>local SEO in Nigeria</strong>.</p>
+
+      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/fashion" class="text-green-600 hover:underline">fashion brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, we’ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Why Business Listings Matter for Nigerian SMEs</h2>
+      <p>Before we dive into the list, let's understand why this matters. Business directories act as digital phonebooks. When you list your business, you create a "citation"—a mention of your business name, address, and phone number (NAP) online. Google uses these citations to verify your business's legitimacy, which directly impacts your ranking in local search results.</p>
+      <ul>
+        <li><strong>Improved Local SEO:</strong> More quality backlinks mean better Google rankings.</li>
+        <li><strong>Increased Trust:</strong> Customers trust businesses that appear on reputable platforms.</li>
+        <li><strong>Direct Traffic:</strong> Many users search directly on these platforms for services.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Business Listing Sites in Nigeria (2025)</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. 9jaDirectory.org</h3>
+      <p><strong>Best For:</strong> Comprehensive visibility, SEO boost, and modern user experience.</p>
+      <p>As Nigeria's fastest-growing business directory, <a href="/" class="text-green-600 hover:underline">9jaDirectory</a> offers a sleek, mobile-first platform designed for the modern Nigerian consumer. Unlike older directories, it focuses on speed, accuracy, and rich media content.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free & Premium options.</li>
+        <li><strong>Key Features:</strong> Verified badges, photo galleries, direct WhatsApp integration, and SEO-optimized profile pages.</li>
+        <li><strong>How to Join:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business for free</a> in under 2 minutes.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. MyNigeriaBusiness.ng</h3>
+      <p><strong>Best For:</strong> Established businesses and corporate listings.</p>
+      <p>MyNigeriaBusiness.ng is a staple in the Nigerian business ecosystem. It provides a robust platform for businesses to showcase their services and connects them with other B2B opportunities.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free basic listing.</li>
+        <li><strong>Key Features:</strong> Business networking, detailed company profiles.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Google Business Profile (formerly Google My Business)</h3>
+      <p><strong>Best For:</strong> Local map visibility and search dominance.</p>
+      <p>Technically not just a directory, but the most critical tool for <strong>local SEO</strong>. It puts your business on Google Maps and Search.</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Cost:</strong> Free.</li>
+        <li><strong>Key Features:</strong> Google Maps integration, customer reviews, posts/updates.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">4. VConnect</h3>
+      <p><strong>Best For:</strong> Service-based businesses.</p>
+      <p>One of the pioneers of business listing in Nigeria. VConnect has evolved into a service marketplace but remains a powerful database for finding local professionals.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Finelib</h3>
+      <p><strong>Best For:</strong> Niche industries and specific sectors.</p>
+      <p>Finelib is known for its detailed categorization. It’s an excellent place for specialized businesses like <a href="/categories/manufacturing" class="text-green-600 hover:underline">manufacturing</a> or <a href="/categories/agriculture" class="text-green-600 hover:underline">agriculture</a> to get listed.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">6. ConnectNigeria</h3>
+      <p><strong>Best For:</strong> Information and business articles.</p>
+      <p>ConnectNigeria combines a business portal with an information hub, organizing Nigeria's information to make it easily accessible.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">7. BusinessList Nigeria</h3>
+      <p><strong>Best For:</strong> Quick and simple listings.</p>
+      <p>A straightforward platform that allows for free business listings. It’s part of a global network of business directories.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">8. NGContacts</h3>
+      <p><strong>Best For:</strong> B2B marketing and company data.</p>
+      <p>NGContacts focuses on providing accurate contact details for Nigerian companies, making it a valuable resource for sales and marketing teams.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">9. NigerianYellowPages</h3>
+      <p><strong>Best For:</strong> Traditional directory users.</p>
+      <p>The digital evolution of the classic yellow pages. It retains a loyal user base accustomed to the traditional directory format.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">10. BusinessFinder Nigeria</h3>
+      <p><strong>Best For:</strong> Verified service providers.</p>
+      <p>Focuses on verifying businesses to reduce fraud and increase consumer confidence.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Optimize Your Business Listing</h2>
+      <p>Simply adding your name isn't enough. To get the most out of these <strong>business listing sites in Nigeria</strong>, follow these tips:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>NAP Consistency:</strong> Ensure your Name, Address, and Phone number are <em>exactly</em> the same across all platforms.</li>
+        <li><strong>Add Photos:</strong> Profiles with photos get 35% more clicks. Show off your products or office.</li>
+        <li><strong>Write a Compelling Description:</strong> Use keywords naturally. Mention your city (e.g., "Best bakery in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>").</li>
+        <li><strong>Collect Reviews:</strong> Encourage happy customers to leave positive reviews.</li>
+      </ol>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>Listing your business on these top sites is a low-effort, high-reward strategy for 2025. It builds your digital footprint and makes it easier for customers to choose you.</p>
+      <p>Start with the most effective option: <a href="/add-business" class="text-green-600 hover:underline"><strong>Add your business to 9jaDirectory now</strong></a> and watch your visibility grow.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    date: "Nov 25, 2025",
+    author: "9jaDirectory Editorial Team",
+    category: "Marketing",
+    readTime: "8 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top Business Listing Sites in Nigeria to Grow Your Visibility (2025 Guide)",
+        "image": "https://9jadirectory.org/images/blog/top-business-listing-sites.jpg",
+        "author": {
+          "@type": "Organization",
+          "name": "9jaDirectory Editorial Team",
+          "url": "https://9jadirectory.org"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://9jadirectory.org/logo.png"
+          }
+        },
+        "datePublished": "2025-11-25",
+        "description": "Discover the top 10 business listing sites in Nigeria for 2025. Boost your online visibility, improve local SEO, and reach more customers with these essential directories.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://9jadirectory.org/blog/top-business-listing-sites-in-nigeria-2025"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "9jaDirectory.org",
+            "url": "https://9jadirectory.org"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "MyNigeriaBusiness.ng",
+            "url": "https://mynigeriabusiness.ng"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Google Business Profile",
+            "url": "https://www.google.com/business/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "VConnect",
+            "url": "https://vconnect.com"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://9jadirectory.org"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://9jadirectory.org/blog"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Top Business Listing Sites in Nigeria",
+          "item": "https://9jadirectory.org/blog/top-business-listing-sites-in-nigeria-2025"
+        }]
+      }
+    ])
+  },
+
+  {
+    slug: "business-registration-nigeria-guide",
+    title: "The Ultimate Guide to Business Registration in Nigeria (2025 Update)",
+    excerpt: "The ultimate guide to business registration in Nigeria (2025). Learn the step-by-step CAC process, updated costs, requirements for Business Name vs. Limited Company, and how to get your TIN.",
+    keywords: [
+      "business registration Nigeria",
+      "CAC registration",
+      "register company in Nigeria",
+      "business name vs limited company",
+      "CAC portal guide",
+      "TIN registration Nigeria"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
+
+      <p>If you are reading this, you have likely taken the bold step to start your own venture. Congratulations. But as every seasoned entrepreneur in Lagos, Abuja, or Kano will tell you, having a brilliant idea is only half the battle. The other half? Legitimacy.</p>
+
+      <p>Operating a business without registering it with the Corporate Affairs Commission (CAC) is like building a house on land you don’t own. You might get away with it for a while, but eventually, the cracks will show. You won’t be able to open a corporate bank account, you’ll lose out on government contracts, and big clients will hesitate to trust you with their money.</p>
+
+      <p>In my decade of consulting for Nigerian SMEs, I've seen businesses lose millions simply because they delayed this one crucial step. The good news? <strong>Business registration in Nigeria</strong> has changed. Gone are the days of waiting months for a file to move from one dusty desk to another in Abuja. The process is now largely digital, faster, and-if you know what you're doing-surprisingly straightforward.</p>
+
+      <p>This comprehensive guide will walk you through everything you need to know about registering your business in 2025, from the new cost implications to the "DIY vs. Professional" decision.</p>
+
+      <figure class="my-6">
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80" alt="Nigerian entrepreneur reviewing CAC registration documents with a laptop" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">Getting CAC documents right is the first step to unlocking bank accounts, loans, and contracts.</figcaption>
+      </figure>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Why You Can’t Afford to Wait (The Benefits)</h2>
+      <p>Before we look at the <em>how</em>, let’s briefly talk about the <em>why</em>. Many small business owners ask, "Is it really necessary?" The answer is a resounding yes.</p>
+      <ul>
+        <li><strong>Corporate Bank Account:</strong> You cannot open a business bank account in Nigeria without a CAC certificate and a Tax Identification Number (TIN). Using your personal account for business signals "amateur" to investors and tax authorities.</li>
+        <li><strong>Legal Protection:</strong> Registering a Limited Liability Company (Ltd) separates you from your business. If the business goes into debt, your personal assets—like your car or house—are generally safe.</li>
+        <li><strong>Trust & Credibility:</strong> Nigerians are wary. A registered business name builds instant trust. It shows you are traceable, accountable, and serious.</li>
+        <li><strong>Access to Loans & Grants:</strong> Federal Government grants (like the survival fund) and bank loans are exclusively for registered businesses.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Prerequisites: What You Need Before You Start</h2>
+      <p>You don’t need a physical office to register a business anymore, but you do need your documentation in order. Having these ready before you log into the CAC portal will save you hours of frustration.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">The "Must-Haves" Checklist</h3>
+      <ol>
+        <li><strong>Two Proposed Names:</strong> You need a primary choice and an alternative. For example, if "Lagos Logistics" is taken, you might try "Lagos Fast Logistics."</li>
+        <li><strong>Valid Identification:</strong> A scanned copy of your NIN (National Identity Number), International Passport, Voter’s Card, or Driver’s License. <strong>Note:</strong> The CAC is increasingly insisting on NIN for identity verification.</li>
+        <li><strong>Passport Photograph:</strong> A clear, white-background digital passport photo.</li>
+        <li><strong>Signature:</strong> A scanned copy of your signature on white paper.</li>
+        <li><strong>Address:</strong> This can be your residential address if you are a sole proprietor. You do not need a rented office space to start.</li>
+        <li><strong>Email & Phone Number:</strong> Use a dedicated email address for your business if possible.</li>
+      </ol>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Pro Tip:</strong> Ensure your date of birth on your ID matches exactly with what you input on the portal. A mismatch here is the #1 reason for query delays.
+      </blockquote>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Choosing Your Structure: Business Name vs. Limited Company</h2>
+      <p>This is the most critical decision you will make. In Nigeria, the two most common structures are <strong>Business Name</strong> and <strong>Private Limited Company (Ltd)</strong>.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-2 text-left">Feature</th>
+              <th class="border border-gray-300 p-2 text-left">Business Name (Enterprise)</th>
+              <th class="border border-gray-300 p-2 text-left">Private Limited Company (Ltd)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Best For</td>
+              <td class="border border-gray-300 p-2">Sole traders, freelancers, small shops.</td>
+              <td class="border border-gray-300 p-2">Startups, growing SMEs, tech companies.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Legal Status</td>
+              <td class="border border-gray-300 p-2">You and the business are the same entity.</td>
+              <td class="border border-gray-300 p-2">The business is a separate legal entity.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Liability</td>
+              <td class="border border-gray-300 p-2">Unlimited. You are personally liable for debts.</td>
+              <td class="border border-gray-300 p-2">Limited. Your personal assets are protected.</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Cost (2025)</td>
+              <td class="border border-gray-300 p-2">Lower (approx. ?20,000 - ?30,000).</td>
+              <td class="border border-gray-300 p-2">Higher (approx. ?50,000+ depending on shares).</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Directors</td>
+              <td class="border border-gray-300 p-2">Sole Proprietor (You).</td>
+              <td class="border border-gray-300 p-2">Minimum of 1 Director (formerly 2).</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Upgradable?</td>
+              <td class="border border-gray-300 p-2">Yes, can be upgraded to Ltd later.</td>
+              <td class="border border-gray-300 p-2">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>My Advice:</strong> If you are a freelancer or running a small local shop, start with a <strong>Business Name</strong>. It’s cheaper and requires less paperwork. If you plan to raise funding, bid for government contracts, or bring in partners, go straight for a <strong>Limited Company</strong>.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. The Step-by-Step Registration Process (DIY Guide)</h2>
+      <p>Can you do this yourself? Yes. The CAC’s Company Registration Portal (CRP) is designed for public use. However, it requires patience and attention to detail.</p>
+
+      <div class="my-8">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c1fd55091ac?auto=format&fit=crop&w=1400&q=80" alt="CAC online registration steps visualized on a laptop" class="w-full rounded-lg shadow-lg" />
+        <p class="text-center text-sm text-gray-500 mt-2">Figure 1: The 6-step CAC registration process</p>
+      </div>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 1: Public Name Search</h3>
+      <p>Before paying a dime, check if your name is free.</p>
+      <ol>
+        <li>Visit the <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">CAC Public Search</a>.</li>
+        <li>Type your desired name.</li>
+        <li>If it returns "Not Found," that’s good news—it’s likely available.</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 2: Create Your Account</h3>
+      <p>Go to the <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">CAC Pre-Incorporation Portal</a>. Click "Register" and enter your details. You will need your NIN here. Once verified, you can log in.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 3: Name Reservation</h3>
+      <p>You don’t register immediately; you reserve the name first.</p>
+      <ul>
+        <li>Select "New Name Reservation."</li>
+        <li>Fill in your business type (e.g., Business Name).</li>
+        <li>Enter your two name options.</li>
+        <li><strong>Pay the filing fee</strong> (approx. ?500 - ?1,000).</li>
+        <li>Wait 24-48 hours. You will receive an approval email with an "Availability Code."</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 4: Registration (CAC 1.1)</h3>
+      <p>Once your name is reserved:</p>
+      <ol>
+        <li>Click "Start Registration" on your dashboard.</li>
+        <li>Input the Availability Code.</li>
+        <li><strong>Fill the Forms:</strong> Enter your address, nature of business (be specific!), and proprietor details.</li>
+        <li><strong>Upload Documents:</strong> Upload your ID, photo, and signature in PDF/JPEG format. ensure they are under the size limit (usually 200KB-500KB).</li>
+        <li><strong>Pay the Registration Fee:</strong> This varies by business type (see section below).</li>
+      </ol>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Step 5: Download Certificates</h3>
+      <p>Upon approval (typically 3-7 days), your dashboard status will change to "Registered." You can then download your:</p>
+      <ul>
+        <li>Certificate of Incorporation</li>
+        <li>Status Report (replacing the old CAC forms)</li>
+        <li>Memorandum & Articles of Association (for Ltd companies)</li>
+      </ul>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Need Help?</strong> If this sounds overwhelming, you can hire a <a href="/categories/legal" class="text-green-600 hover:underline">corporate lawyer</a> or a <a href="/categories/consulting" class="text-green-600 hover:underline">business consultant</a> from our directory to handle it for you.
+      </blockquote>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Cost Breakdown (2025 Estimates)</h2>
+      <p>Costs have adjusted in 2025 due to economic changes. Here is what you should budget. Note that "Official Fees" are what you pay if you do it yourself, while "Professional Fees" include the service charge of a lawyer or accredited agent.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-2 text-left">Item</th>
+              <th class="border border-gray-300 p-2 text-left">Official CAC Fee (Approx.)</th>
+              <th class="border border-gray-300 p-2 text-left">Professional Fee (Avg.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Name Reservation</td>
+              <td class="border border-gray-300 p-2">?500 - ?1,000</td>
+              <td class="border border-gray-300 p-2">?2,000 - ?5,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Business Name Reg</td>
+              <td class="border border-gray-300 p-2">?10,000 - ?15,000</td>
+              <td class="border border-gray-300 p-2">?25,000 - ?40,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">Ltd Company (1M Shares)</td>
+              <td class="border border-gray-300 p-2">?15,000 + Stamp Duty</td>
+              <td class="border border-gray-300 p-2">?60,000 - ?100,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-2 font-medium">NGO / Incorporated Trustee</td>
+              <td class="border border-gray-300 p-2">?35,000</td>
+              <td class="border border-gray-300 p-2">?120,000 - ?200,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><em>Note: Stamp duty is paid to the FIRS and is calculated based on share capital (usually 0.75%).</em></p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Post-Incorporation Checklist: You’re Not Done Yet</h2>
+      <p>Getting your certificate is a milestone, but it’s not the finish line. To be fully operational, you must tackle these three tasks immediately:</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Get Your TIN (Tax Identification Number)</h3>
+      <p>For Limited Companies, your TIN is now often generated automatically and printed on your CAC certificate. For Business Names, you may need to visit the nearest FIRS office or generate it online via the JTB (Joint Tax Board) website.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Open a Corporate Bank Account</h3>
+      <p>Take your Certificate, Status Report, TIN, and ID to any major Nigerian bank. Do not delay this. Mixing personal and business funds is a recipe for accounting disaster. Check our <a href="/categories/finance" class="text-green-600 hover:underline">Finance category</a> to find banks near you.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">3. SCUML Certificate (For Some Businesses)</h3>
+      <p>If you are in "Designated Non-Financial Institutions" (DNFIs) like Real Estate, Car Dealing, Jewelry, or Consulting, you need a SCUML certificate from the EFCC to open a bank account. This is free but requires a separate application.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Common Mistakes to Avoid</h2>
+      <ul>
+        <li><strong>Vague Business Nature:</strong> Don’t just write "General Merchandise." Be specific, e.g., "Sales of Computer Accessories and Repair Services."</li>
+        <li><strong>Ignoring Annual Returns:</strong> This is the silent killer. You must file annual returns with the CAC every year (starting the year after registration). Failure to do so leads to hefty penalties and eventually, your company being "Delisted" (removed) from the register.</li>
+        <li><strong>Losing Your Login Details:</strong> If you register yourself, guard your CRP username and password with your life. Retrieving them can be a bureaucratic nightmare.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p><strong>Business registration in Nigeria</strong> is the foundation of a successful enterprise. It transforms your "hustle" into a recognized entity capable of growth, borrowing, and building a legacy. While the process has its quirks, the digital era has made it more accessible than ever.</p>
+      <p>Whether you choose to navigate the portal yourself or engage a professional, the most important thing is to start. Don't let bureaucracy paralyze your dreams.</p>
+      <p><strong>Ready to grow?</strong> Once registered, your next step is visibility. <a href="/add-business" class="text-green-600 hover:underline">List your business on 9jaDirectory</a> for free today and get discovered by customers across Nigeria.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+    date: "Nov 23, 2025",
+    author: "9jaDirectory Editorial Team",
+    category: "Business Guide",
+    readTime: "10 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "The Ultimate Guide to Business Registration in Nigeria (2025 Update)",
+        "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80",
+        "author": {
+          "@type": "Organization",
+          "name": "9jaDirectory Editorial Team",
+          "url": "https://9jadirectory.org"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://9jadirectory.org/logo.png"
+          }
+        },
+        "datePublished": "2025-11-23",
+        "description": "The ultimate guide to business registration in Nigeria (2025). Learn the step-by-step CAC process, updated costs, requirements for Business Name vs. Limited Company, and how to get your TIN.",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://9jadirectory.org/blog/business-registration-nigeria-guide"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "How long does it take to register a business in Nigeria in 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically, Business Name registration takes 3-7 working days, while a Limited Company can take 5-10 working days. Timelines depend on portal stability and document accuracy."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Can I register a business in Nigeria online without a lawyer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the CAC portal allows individuals to register Business Names and Limited Companies directly. However, for NGOs or complex structures, hiring an accredited lawyer is recommended."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What is the difference between a Business Name and a Limited Company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Business Name is a sole proprietorship where you are personally liable for debts. A Limited Company is a separate legal entity offering limited liability protection for your personal assets."
+          }
+        }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://9jadirectory.org"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://9jadirectory.org/blog"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Business Registration Guide",
+          "item": "https://9jadirectory.org/blog/business-registration-nigeria-guide"
+        }]
+      }
+    ])
+  },
+
+  {
+    slug: "top-10-investment-opportunities-lagos",
+    title: "Top 10 Investment Opportunities in Lagos for 2025: Where Smart Money is Heading",
+    excerpt: "Discover the top 10 profitable investment opportunities in Lagos, Nigeria for 2025. From real estate (20-35% ROI) to fintech and agriculture. Complete guide with ROI data, locations, and entry points.",
+    content: `
+      <p><strong>By Sarah Adebayo</strong> | <em>Updated: November 2025</em></p>
+
+      <p>Looking for <strong>profitable investment opportunities in Lagos, Nigeria</strong>? Lagos isn't just the economic powerhouse of Nigeria—it's one of Africa's fastest-growing megacities and a magnet for investors seeking high returns. With over 22 million residents, a GDP of $136 billion, and continuous infrastructural development, Lagos offers unparalleled opportunities for both local and diaspora investors in 2025.</p>
+
+      <p>This comprehensive guide breaks down the <strong>best investments in Lagos</strong> across 10 high-growth sectors, complete with ROI data, entry points, and expert recommendations. Whether you're a seasoned investor or someone looking to diversify your portfolio, discover where smart money is heading in Nigeria's commercial capital.</p>
+
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Lagos Nigeria investment opportunities 2025 - real estate, technology, fintech, and business sectors cityscape" class="w-full rounded-lg my-6" />
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Real Estate: The Evergreen Gold Mine</h2>
+      <p>Lagos real estate has consistently delivered returns of 15-30% annually, and 2025 is no different. The chronic housing deficit (estimated at 17 million units nationally) means demand far exceeds supply.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">High-Growth Areas</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Ibeju-Lekki:</strong> Proximity to the Lekki Deep Sea Port and Dangote Refinery makes this the hottest property market. Expect land values to triple by 2027.</li>
+        <li><strong>Epe & Ajah:</strong> Affordable entry points with strong appreciation potential as infrastructure improves.</li>
+        <li><strong>Sangotedo:</strong> The new Lagos Free Trade Zone is driving commercial interest.</li>
+      </ul>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Best Investment Types</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Middle-Income Housing:</strong> Build-and-sell or rent to the growing middle class.</li>
+        <li><strong>Short-Term Rentals (Airbnb):</strong> Catering to the influx of business travelers and tourists.</li>
+        <li><strong>Commercial Properties:</strong> Near Special Economic Zones and the new Lekki Airport.</li>
+      </ul>
+
+      <p><strong>ROI:</strong> 20-35% annually for well-located properties.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Technology and FinTech: Africa's Silicon Valley</h2>
+      <p>Lagos is home to 4 of Africa's 7 "unicorns" (startups valued at $1B+). The city's tech ecosystem raised over $1.5 billion in 2024 alone.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Where to Invest</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>FinTech:</strong> Digital payments and mobile banking are revolutionizing finance (think Paystack, Flutterwave).</li>
+        <li><strong>HealthTech:</strong> Telemedicine and digital health records are booming post-pandemic.</li>
+        <li><strong>EdTech:</strong> Online learning platforms addressing Nigeria's education gap.</li>
+        <li><strong>Logistics Tech:</strong> Last-mile delivery solutions for e-commerce.</li>
+      </ul>
+
+      <p><strong>Entry Point:</strong> Angel investing in pre-seed startups (?2M-?10M) or buying equity in established companies.</p>
+      <p><strong>ROI:</strong> High risk, but potential for 10-30x returns in 3-5 years.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Agriculture and Agribusiness</h2>
+      <p>Lagos consumes more food than it produces (only 30% self-sufficient), creating a massive opportunity in <strong>agriculture and food processing</strong>.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Profitable Ventures</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Urban Farming:</strong> Hydroponics and vertical farms in Lekki and Ikoyi supply restaurants and hotels.</li>
+        <li><strong>Fish Farming:</strong> Catfish is in high demand. A small 500-fish farm can generate ?500K monthly.</li>
+        <li><strong>Poultry:</strong> Eggs and chicken—consistent demand, fast turnaround.</li>
+        <li><strong>Food Processing:</strong> Packaging garri, rice, or yam flour for retail.</li>
+      </ul>
+
+      <p><strong>ROI:</strong> 25-40% annually with proper management.</p>
+
+      <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
+        <strong>Pro Tip:</strong> The Lagos State Government offers grants up to ?10M for agribusiness through the Agrithon 2025 program.
+      </blockquote>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Renewable Energy: Solving Nigeria's Electricity Crisis</h2>
+      <p>With an average of only 4-8 hours of grid power daily, Lagos residents and businesses are desperate for reliable energy solutions.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Investment Options</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Solar Installation Services:</strong> High profit margins on residential and commercial solar setups.</li>
+        <li><strong>Battery Storage:</strong> Selling lithium-ion batteries to store solar energy.</li>
+        <li><strong>Mini-Grids:</strong> Powering entire estates or industrial parks.</li>
+      </ul>
+
+      <p><strong>ROI:</strong> 30-50% annually, with government incentives available.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Manufacturing and Light Industry</h2>
+      <p>Lagos accounts for over 50% of Nigeria's industrial output. The <strong>Lekki Free Zone</strong> offers tax holidays and import duty waivers for manufacturers.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">High-Demand Products</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Food processing (garri, palm oil, packaged snacks)</li>
+        <li>Building materials (paints, tiles, roofing sheets)</li>
+        <li>Textiles and fashion</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Infrastructure and Construction</h2>
+      <p>Ongoing mega-projects like the Lagos Urban Rail, Lekki Airport, and Fourth Mainland Bridge are creating massive construction demand.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How to Invest</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Construction companies (direct equity or PPP contracts)</li>
+        <li>Building materials supply</li>
+        <li>Heavy equipment rentals</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Healthcare and Medical Services</h2>
+      <p>Lagos's growing middle class is willing to pay for quality healthcare. The sector remains underserved.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Opportunities</h3>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Diagnostic centers (CT scans, MRIs, lab services)</li>
+        <li>Specialty hospitals (fertility, dental, eye clinics)</li>
+        <li>Pharmacies and drug distribution</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Hospitality and Tourism</h2>
+      <p>Lagos attracts millions of business travelers annually. The hotel and short-let market is booming.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Budget Hotels:</strong> ?15K-?25K/night properties in Ikeja and Yaba.</li>
+        <li><strong>Airbnb/Short-Lets:</strong> 2-bedroom apartments in Lekki can generate ?300K-?600K monthly.</li>
+        <li><strong>Event Centers:</strong> High demand for weddings, conferences, and parties.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. E-commerce and Logistics</h2>
+      <p>Online shopping is exploding in Lagos. The logistics backbone supporting it is equally lucrative.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Last-Mile Delivery:</strong> Partner with Jumia, Konga, or start your own dispatch service.</li>
+        <li><strong>Warehousing:</strong> Rent storage space to e-commerce companies.</li>
+        <li><strong>Niche E-commerce:</strong> Sell specific products (baby items, fitness gear, organic food) online.</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Education and Training</h2>
+      <p>Private schools, vocational training, and skill acquisition centers are in high demand.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>International Schools:</strong> High fees (?1M-?5M/term), strong demand from expatriates and wealthy Nigerians.</li>
+        <li><strong>Coding Bootcamps:</strong> Teaching programming, data analysis, digital marketing.</li>
+        <li><strong>Daycare/Creche:</strong> Working parents need quality childcare (?50K-?150K/child monthly).</li>
+      </ul>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Final Thoughts: Start Smart, Grow Steadily</h2>
+      <p>Lagos's economy is resilient and diversified. While every investment carries risk, these 10 sectors have proven track records and strong growth potential for 2025 and beyond.</p>
+
+      <p><strong>Action Steps:</strong></p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li>Pick ONE sector that aligns with your capital and expertise</li>
+        <li>Do thorough market research (talk to people already in the business)</li>
+        <li>Start small, test the waters, then scale</li>
+        <li><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> to attract customers</li>
+      </ol>
+
+      <p>The future of Lagos is bright. Position yourself to profit from it.</p>
+
+      <br />
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions About Investing in Lagos</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the minimum amount needed to start investing in Lagos?</h3>
+      <p>You can start investing in Lagos with as little as <strong>?2 million</strong> through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with ?500,000-?1,000,000.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Which area in Lagos has the highest ROI for property investment in 2025?</h3>
+      <p><strong>Ibeju-Lekki</strong> currently offers the highest appreciation potential with returns of 20-35% annually. This is driven by major infrastructure projects including the Lekki Deep Sea Port, Dangote Refinery, and the proposed Lekki International Airport. Other high-growth areas include Epe, Sangotedo, and Ajah along the Lekki-Epe corridor.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Is Lagos safe for foreign investment and diaspora Nigerians?</h3>
+      <p>Yes, Lagos is <strong>Africa's leading investment destination</strong>, accounting for 30% of Nigeria's GDP and attracting over $1.5 billion in venture capital annually. The city is home to 4 of Africa's 7 tech unicorns. The Lagos State Government offers investor protection programs, and sectors like real estate, PropTech, and fintech have established legal frameworks for foreign and diaspora investment.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What are the best sectors for passive income in Lagos?</h3>
+      <p>The best sectors for passive income include: <strong>Real Estate</strong> (short-let apartments generating ?300K-?600K monthly), <strong>REITs</strong> (Real Estate Investment Trusts with 7-8% annual yields), <strong>Agriculture</strong> (fish farming and poultry with managed services), and <strong>Renewable Energy</strong> (solar installation partnerships). These require minimal day-to-day involvement while generating consistent returns.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How can I invest in Lagos tech startups and fintech companies?</h3>
+      <p>You can invest in Lagos tech startups through: <strong>Angel investing networks</strong> (?2M-?10M for pre-seed/seed rounds), <strong>venture capital funds</strong> focused on African tech, <strong>equity crowdfunding platforms</strong>, or by directly approaching startups in tech hubs like Yaba and Lekki. The Lagos tech ecosystem raised over $1.5 billion in 2024, with fintech, healthtech, edtech, and logistics tech showing the highest growth potential.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
+    date: "Nov 20, 2025",
+    author: "Sarah Adebayo",
+    category: "Investment",
+    readTime: "10 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Top 10 Profitable Investment Opportunities in Lagos, Nigeria (2025)",
+        "image": "https://9jadirectory.org/images/blog/lagos_investment_opportunities.png",
+        "author": {
+          "@type": "Person",
+          "name": "Sarah Adebayo"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://9jadirectory.org/logo.png"
+          }
+        },
+        "datePublished": "2025-11-20",
+        "dateModified": "2025-11-29",
+        "description": "Discover the top 10 profitable investment opportunities in Lagos, Nigeria for 2025. From real estate (20-35% ROI) to fintech and agriculture. Complete guide with ROI data, locations, and entry points.",
+        "keywords": "Lagos investment opportunities, Nigeria real estate investment, fintech Lagos, profitable business Nigeria, Ibeju-Lekki property, Lagos ROI, investment guide 2025, PropTech Nigeria, diaspora investment"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://9jadirectory.org"
+        }, {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://9jadirectory.org/blog"
+        }, {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Investment Opportunities Lagos",
+          "item": "https://9jadirectory.org/blog/top-10-investment-opportunities-lagos"
+        }]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+          "@type": "Question",
+          "name": "What is the minimum amount needed to start investing in Lagos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can start investing in Lagos with as little as ?2 million through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with ?500,000-?1,000,000."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Which area in Lagos has the highest ROI for property investment in 2025?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ibeju-Lekki currently offers the highest appreciation potential with returns of 20-35% annually. This is driven by major infrastructure projects including the Lekki Deep Sea Port, Dangote Refinery, and the proposed Lekki International Airport."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Is Lagos safe for foreign investment and diaspora Nigerians?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Lagos is Africa's leading investment destination, accounting for 30% of Nigeria's GDP and attracting over $1.5 billion in venture capital annually. The city is home to 4 of Africa's 7 tech unicorns."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What are the best sectors for passive income in Lagos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best sectors for passive income include Real Estate (short-let apartments generating ?300K-?600K monthly), REITs (Real Estate Investment Trusts with 7-8% annual yields), Agriculture (fish farming and poultry with managed services), and Renewable Energy (solar installation partnerships)."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How can I invest in Lagos tech startups and fintech companies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can invest in Lagos tech startups through Angel investing networks (?2M-?10M for pre-seed/seed rounds), venture capital funds focused on African tech, equity crowdfunding platforms, or by directly approaching startups in tech hubs like Yaba and Lekki."
+          }
+        }]
+      }
+    ]),
+  },
 
   {
     slug: "best-web-hosting-in-nigeria-2026",
@@ -824,14 +2393,14 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
 
-      <p>In the digital age, visibility is the currency of business growth. For Nigerian entrepreneurs, the question isn't just "Is your business online?" but "Can customers find you when they search?" With millions of Nigerians searching for services daily, listing your business on reputable directories is one of the most effective—and often free—ways to boost your <strong>local SEO in Nigeria</strong>.</p>
+      <p>In the digital age, visibility is the currency of business growth. For Nigerian entrepreneurs, the question isn't just "Is your business online?" but "Can customers find you when they search?" With millions of Nigerians searching for services daily, listing your business on reputable directories is one of the most effectiveâ€”and often freeâ€”ways to boost your <strong>local SEO in Nigeria</strong>.</p>
 
-      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/shopping" class="text-green-600 hover:underline">retail brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, we’ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
+      <p>Whether you run a <a href="/categories/real-estate" class="text-green-600 hover:underline">real estate agency in Lagos</a> or a <a href="/categories/shopping" class="text-green-600 hover:underline">retail brand in Abuja</a>, appearing on top business listing sites can significantly increase your reach. In this guide, weâ€™ve curated the top 10 business directories in Nigeria for 2025 that you need to be on.</p>
 
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Why Business Listings Matter for Nigerian SMEs</h2>
-      <p>Before we dive into the list, let's understand why this matters. Business directories act as digital phonebooks. When you list your business, you create a "citation"—a mention of your business name, address, and phone number (NAP) online. Google uses these citations to verify your business's legitimacy, which directly impacts your ranking in local search results.</p>
+      <p>Before we dive into the list, let's understand why this matters. Business directories act as digital phonebooks. When you list your business, you create a "citation"â€”a mention of your business name, address, and phone number (NAP) online. Google uses these citations to verify your business's legitimacy, which directly impacts your ranking in local search results.</p>
       <ul>
         <li><strong>Improved Local SEO:</strong> More quality backlinks mean better Google rankings.</li>
         <li><strong>Increased Trust:</strong> Customers trust businesses that appear on reputable platforms.</li>
@@ -873,7 +2442,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Finelib</h3>
       <p><strong>Best For:</strong> Niche industries and specific sectors.</p>
-      <p>Finelib is known for its detailed categorization. It’s an excellent place for specialized businesses like <a href="/categories/manufacturing" class="text-green-600 hover:underline">manufacturing</a> or <a href="/categories/agriculture" class="text-green-600 hover:underline">agriculture</a> to get listed.</p>
+      <p>Finelib is known for its detailed categorization. Itâ€™s an excellent place for specialized businesses like <a href="/categories/manufacturing" class="text-green-600 hover:underline">manufacturing</a> or <a href="/categories/agriculture" class="text-green-600 hover:underline">agriculture</a> to get listed.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">6. ConnectNigeria</h3>
       <p><strong>Best For:</strong> Information and business articles.</p>
@@ -881,7 +2450,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">7. BusinessList Nigeria</h3>
       <p><strong>Best For:</strong> Quick and simple listings.</p>
-      <p>A straightforward platform that allows for free business listings. It’s part of a global network of business directories.</p>
+      <p>A straightforward platform that allows for free business listings. Itâ€™s part of a global network of business directories.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">8. NGContacts</h3>
       <p><strong>Best For:</strong> B2B marketing and company data.</p>
@@ -912,7 +2481,7 @@ export const blogPosts: BlogPost[] = [
       <p>Listing your business on these top sites is a low-effort, high-reward strategy for 2025. It builds your digital footprint and makes it easier for customers to choose you.</p>
       <p>Start with the most effective option: <a href="/add-business" class="text-green-600 hover:underline"><strong>Add your business to 9jaDirectory now</strong></a> and watch your visibility grow.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Don’t Skip Google Maps (GBP)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Donâ€™t Skip Google Maps (GBP)</h2>
       <p>Directories help, but Google Business Profile is the local SEO engine. After listing on directories:</p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li>Create/claim your Google Business Profile (Maps listing).</li>
@@ -922,7 +2491,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">If Your Business Is Already Listed, Claim It</h2>
-      <p>Sometimes your business is added by someone else. That’s normal. Find your listing, open it, and click “Claim this Business” to manage details, upload proof, and get full access.</p>
+      <p>Sometimes your business is added by someone else. Thatâ€™s normal. Find your listing, open it, and click â€œClaim this Businessâ€ to manage details, upload proof, and get full access.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Listing Optimization Checklist (Do This Once)</h2>
       <p>Most businesses get poor results from directories because their profiles are incomplete or inconsistent. Use this checklist to make your listings work like a real marketing channel:</p>
@@ -939,7 +2508,7 @@ export const blogPosts: BlogPost[] = [
       <p>Directories work best when you treat them like measurable channels. Use simple tracking so you can double down on what brings real customers:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Use UTM links:</strong> create a unique website link for each platform (example: <code>?utm_source=directory&utm_medium=listing</code>).</li>
-        <li><strong>Track WhatsApp inquiries:</strong> save quick replies and ask “Where did you find us?” during the first message.</li>
+        <li><strong>Track WhatsApp inquiries:</strong> save quick replies and ask â€œWhere did you find us?â€ during the first message.</li>
         <li><strong>Monitor calls:</strong> if you get many calls, keep a simple note on new leads (date, service, source).</li>
       </ul>
 
@@ -953,9 +2522,9 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">How many business directories should I list on?</h3>
-      <p>Start with 3–5 strong platforms (Google Business Profile + 2–4 reputable directories). Then expand gradually. The goal is quality + consistency, not being everywhere with incomplete profiles.</p>
+      <p>Start with 3â€“5 strong platforms (Google Business Profile + 2â€“4 reputable directories). Then expand gradually. The goal is quality + consistency, not being everywhere with incomplete profiles.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">How long does it take to see results?</h3>
-      <p>Most businesses see improved calls and inquiries within 4–12 weeks if listings are complete and consistent. Faster results usually come from Google Maps + directories that rank well for your category.</p>
+      <p>Most businesses see improved calls and inquiries within 4â€“12 weeks if listings are complete and consistent. Faster results usually come from Google Maps + directories that rank well for your category.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Do paid listings help?</h3>
       <p>Paid placements can help if the directory has real traffic in your niche. But first optimize your free listings: correct details, strong photos, and reviews. Then test paid upgrades on one platform and measure results.</p>
     `,
@@ -1071,7 +2640,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>If you are reading this, you have likely taken the bold step to start your own venture. Congratulations. But as every seasoned entrepreneur in Lagos, Abuja, or Kano will tell you, having a brilliant idea is only half the battle. The other half? Legitimacy.</p>
 
-      <p>Operating a business without registering it with the Corporate Affairs Commission (CAC) is like building a house on land you don’t own. You might get away with it for a while, but eventually, the cracks will show. You won’t be able to open a corporate bank account, you’ll lose out on government contracts, and big clients will hesitate to trust you with their money.</p>
+      <p>Operating a business without registering it with the Corporate Affairs Commission (CAC) is like building a house on land you donâ€™t own. You might get away with it for a while, but eventually, the cracks will show. You wonâ€™t be able to open a corporate bank account, youâ€™ll lose out on government contracts, and big clients will hesitate to trust you with their money.</p>
 
       <p>In my decade of consulting for Nigerian SMEs, I've seen businesses lose millions simply because they delayed this one crucial step. The good news? <strong>Business registration in Nigeria</strong> has changed. Gone are the days of waiting months for a file to move from one dusty desk to another in Abuja. The process is now largely digital, faster, and-if you know what you're doing-surprisingly straightforward.</p>
 
@@ -1084,11 +2653,11 @@ export const blogPosts: BlogPost[] = [
 
       <br />
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">1. Why You Can’t Afford to Wait (The Benefits)</h2>
-      <p>Before we look at the <em>how</em>, let’s briefly talk about the <em>why</em>. Many small business owners ask, "Is it really necessary?" The answer is a resounding yes.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Why You Canâ€™t Afford to Wait (The Benefits)</h2>
+      <p>Before we look at the <em>how</em>, letâ€™s briefly talk about the <em>why</em>. Many small business owners ask, "Is it really necessary?" The answer is a resounding yes.</p>
       <ul>
         <li><strong>Corporate Bank Account:</strong> You cannot open a business bank account in Nigeria without a CAC certificate and a Tax Identification Number (TIN). Using your personal account for business signals "amateur" to investors and tax authorities.</li>
-        <li><strong>Legal Protection:</strong> Registering a Limited Liability Company (Ltd) separates you from your business. If the business goes into debt, your personal assets—like your car or house—are generally safe.</li>
+        <li><strong>Legal Protection:</strong> Registering a Limited Liability Company (Ltd) separates you from your business. If the business goes into debt, your personal assetsâ€”like your car or houseâ€”are generally safe.</li>
         <li><strong>Trust & Credibility:</strong> Nigerians are wary. A registered business name builds instant trust. It shows you are traceable, accountable, and serious.</li>
         <li><strong>Access to Loans & Grants:</strong> Federal Government grants (like the survival fund) and bank loans are exclusively for registered businesses.</li>
       </ul>
@@ -1096,12 +2665,12 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">2. Prerequisites: What You Need Before You Start</h2>
-      <p>You don’t need a physical office to register a business anymore, but you do need your documentation in order. Having these ready before you log into the CAC portal will save you hours of frustration.</p>
+      <p>You donâ€™t need a physical office to register a business anymore, but you do need your documentation in order. Having these ready before you log into the CAC portal will save you hours of frustration.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">The "Must-Haves" Checklist</h3>
       <ol>
         <li><strong>Two Proposed Names:</strong> You need a primary choice and an alternative. For example, if "Lagos Logistics" is taken, you might try "Lagos Fast Logistics."</li>
-        <li><strong>Valid Identification:</strong> A scanned copy of your NIN (National Identity Number), International Passport, Voter’s Card, or Driver’s License. <strong>Note:</strong> The CAC is increasingly insisting on NIN for identity verification.</li>
+        <li><strong>Valid Identification:</strong> A scanned copy of your NIN (National Identity Number), International Passport, Voterâ€™s Card, or Driverâ€™s License. <strong>Note:</strong> The CAC is increasingly insisting on NIN for identity verification.</li>
         <li><strong>Passport Photograph:</strong> A clear, white-background digital passport photo.</li>
         <li><strong>Signature:</strong> A scanned copy of your signature on white paper.</li>
         <li><strong>Address:</strong> This can be your residential address if you are a sole proprietor. You do not need a rented office space to start.</li>
@@ -1144,8 +2713,8 @@ export const blogPosts: BlogPost[] = [
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">Cost (2025)</td>
-              <td class="border border-gray-300 p-2">Lower (approx. ₦20,000 - ₦30,000).</td>
-              <td class="border border-gray-300 p-2">Higher (approx. ₦50,000+ depending on shares).</td>
+              <td class="border border-gray-300 p-2">Lower (approx. â‚¦20,000 - â‚¦30,000).</td>
+              <td class="border border-gray-300 p-2">Higher (approx. â‚¦50,000+ depending on shares).</td>
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">Directors</td>
@@ -1161,12 +2730,12 @@ export const blogPosts: BlogPost[] = [
         </table>
       </div>
 
-      <p><strong>My Advice:</strong> If you are a freelancer or running a small local shop, start with a <strong>Business Name</strong>. It’s cheaper and requires less paperwork. If you plan to raise funding, bid for government contracts, or bring in partners, go straight for a <strong>Limited Company</strong>.</p>
+      <p><strong>My Advice:</strong> If you are a freelancer or running a small local shop, start with a <strong>Business Name</strong>. Itâ€™s cheaper and requires less paperwork. If you plan to raise funding, bid for government contracts, or bring in partners, go straight for a <strong>Limited Company</strong>.</p>
 
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">4. The Step-by-Step Registration Process (DIY Guide)</h2>
-      <p>Can you do this yourself? Yes. The CAC’s Company Registration Portal (CRP) is designed for public use. However, it requires patience and attention to detail.</p>
+      <p>Can you do this yourself? Yes. The CACâ€™s Company Registration Portal (CRP) is designed for public use. However, it requires patience and attention to detail.</p>
 
       <div class="my-8">
         <img src="https://images.unsplash.com/photo-1581091012184-5c1fd55091ac?auto=format&fit=crop&w=1400&q=80" alt="CAC online registration steps visualized on a laptop" class="w-full rounded-lg shadow-lg" />
@@ -1178,19 +2747,19 @@ export const blogPosts: BlogPost[] = [
       <ol>
         <li>Visit the <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">CAC Public Search</a>.</li>
         <li>Type your desired name.</li>
-        <li>If it returns "Not Found," that’s good news—it’s likely available.</li>
+        <li>If it returns "Not Found," thatâ€™s good newsâ€”itâ€™s likely available.</li>
       </ol>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 2: Create Your Account</h3>
       <p>Go to the <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">CAC Pre-Incorporation Portal</a>. Click "Register" and enter your details. You will need your NIN here. Once verified, you can log in.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 3: Name Reservation</h3>
-      <p>You don’t register immediately; you reserve the name first.</p>
+      <p>You donâ€™t register immediately; you reserve the name first.</p>
       <ul>
         <li>Select "New Name Reservation."</li>
         <li>Fill in your business type (e.g., Business Name).</li>
         <li>Enter your two name options.</li>
-        <li><strong>Pay the filing fee</strong> (approx. ₦500 - ₦1,000).</li>
+        <li><strong>Pay the filing fee</strong> (approx. â‚¦500 - â‚¦1,000).</li>
         <li>Wait 24-48 hours. You will receive an approval email with an "Availability Code."</li>
       </ul>
 
@@ -1233,23 +2802,23 @@ export const blogPosts: BlogPost[] = [
           <tbody>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">Name Reservation</td>
-              <td class="border border-gray-300 p-2">₦500 - ₦1,000</td>
-              <td class="border border-gray-300 p-2">₦2,000 - ₦5,000</td>
+              <td class="border border-gray-300 p-2">â‚¦500 - â‚¦1,000</td>
+              <td class="border border-gray-300 p-2">â‚¦2,000 - â‚¦5,000</td>
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">Business Name Reg</td>
-              <td class="border border-gray-300 p-2">₦10,000 - ₦15,000</td>
-              <td class="border border-gray-300 p-2">₦25,000 - ₦40,000</td>
+              <td class="border border-gray-300 p-2">â‚¦10,000 - â‚¦15,000</td>
+              <td class="border border-gray-300 p-2">â‚¦25,000 - â‚¦40,000</td>
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">Ltd Company (1M Shares)</td>
-              <td class="border border-gray-300 p-2">₦15,000 + Stamp Duty</td>
-              <td class="border border-gray-300 p-2">₦60,000 - ₦100,000</td>
+              <td class="border border-gray-300 p-2">â‚¦15,000 + Stamp Duty</td>
+              <td class="border border-gray-300 p-2">â‚¦60,000 - â‚¦100,000</td>
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-medium">NGO / Incorporated Trustee</td>
-              <td class="border border-gray-300 p-2">₦35,000</td>
-              <td class="border border-gray-300 p-2">₦120,000 - ₦200,000</td>
+              <td class="border border-gray-300 p-2">â‚¦35,000</td>
+              <td class="border border-gray-300 p-2">â‚¦120,000 - â‚¦200,000</td>
             </tr>
           </tbody>
         </table>
@@ -1259,8 +2828,8 @@ export const blogPosts: BlogPost[] = [
 
       <br />
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">6. Post-Incorporation Checklist: You’re Not Done Yet</h2>
-      <p>Getting your certificate is a milestone, but it’s not the finish line. To be fully operational, you must tackle these three tasks immediately:</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Post-Incorporation Checklist: Youâ€™re Not Done Yet</h2>
+      <p>Getting your certificate is a milestone, but itâ€™s not the finish line. To be fully operational, you must tackle these three tasks immediately:</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Get Your TIN (Tax Identification Number)</h3>
       <p>For Limited Companies, your TIN is now often generated automatically and printed on your CAC certificate. For Business Names, you may need to visit the nearest FIRS office or generate it online via the JTB (Joint Tax Board) website.</p>
@@ -1275,7 +2844,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">7. Common Mistakes to Avoid</h2>
       <ul>
-        <li><strong>Vague Business Nature:</strong> Don’t just write "General Merchandise." Be specific, e.g., "Sales of Computer Accessories and Repair Services."</li>
+        <li><strong>Vague Business Nature:</strong> Donâ€™t just write "General Merchandise." Be specific, e.g., "Sales of Computer Accessories and Repair Services."</li>
         <li><strong>Ignoring Annual Returns:</strong> This is the silent killer. You must file annual returns with the CAC every year (starting the year after registration). Failure to do so leads to hefty penalties and eventually, your company being "Delisted" (removed) from the register.</li>
         <li><strong>Losing Your Login Details:</strong> If you register yourself, guard your CRP username and password with your life. Retrieving them can be a bureaucratic nightmare.</li>
       </ul>
@@ -1385,7 +2954,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By Sarah Adebayo</strong> | <em>Updated: November 2025</em></p>
 
-      <p>Looking for <strong>profitable investment opportunities in Lagos, Nigeria</strong>? Lagos isn't just the economic powerhouse of Nigeria—it's one of Africa's fastest-growing megacities and a magnet for investors seeking high returns. With over 22 million residents, a GDP of $136 billion, and continuous infrastructural development, Lagos offers unparalleled opportunities for both local and diaspora investors in 2025.</p>
+      <p>Looking for <strong>profitable investment opportunities in Lagos, Nigeria</strong>? Lagos isn't just the economic powerhouse of Nigeriaâ€”it's one of Africa's fastest-growing megacities and a magnet for investors seeking high returns. With over 22 million residents, a GDP of $136 billion, and continuous infrastructural development, Lagos offers unparalleled opportunities for both local and diaspora investors in 2025.</p>
 
       <p>This comprehensive guide breaks down the <strong>best investments in Lagos</strong> across 10 high-growth sectors, complete with ROI data, entry points, and expert recommendations. Whether you're a seasoned investor or someone looking to diversify your portfolio, discover where smart money is heading in Nigeria's commercial capital.</p>
 
@@ -1425,7 +2994,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Logistics Tech:</strong> Last-mile delivery solutions for e-commerce.</li>
       </ul>
 
-      <p><strong>Entry Point:</strong> Angel investing in pre-seed startups (₦2M-₦10M) or buying equity in established companies.</p>
+      <p><strong>Entry Point:</strong> Angel investing in pre-seed startups (â‚¦2M-â‚¦10M) or buying equity in established companies.</p>
       <p><strong>ROI:</strong> High risk, but potential for 10-30x returns in 3-5 years.</p>
 
       <br />
@@ -1436,15 +3005,15 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Profitable Ventures</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Urban Farming:</strong> Hydroponics and vertical farms in Lekki and Ikoyi supply restaurants and hotels.</li>
-        <li><strong>Fish Farming:</strong> Catfish is in high demand. A small 500-fish farm can generate ₦500K monthly.</li>
-        <li><strong>Poultry:</strong> Eggs and chicken—consistent demand, fast turnaround.</li>
+        <li><strong>Fish Farming:</strong> Catfish is in high demand. A small 500-fish farm can generate â‚¦500K monthly.</li>
+        <li><strong>Poultry:</strong> Eggs and chickenâ€”consistent demand, fast turnaround.</li>
         <li><strong>Food Processing:</strong> Packaging garri, rice, or yam flour for retail.</li>
       </ul>
 
       <p><strong>ROI:</strong> 25-40% annually with proper management.</p>
 
       <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
-        <strong>Pro Tip:</strong> The Lagos State Government offers grants up to ₦10M for agribusiness through the Agrithon 2025 program.
+        <strong>Pro Tip:</strong> The Lagos State Government offers grants up to â‚¦10M for agribusiness through the Agrithon 2025 program.
       </blockquote>
 
       <br />
@@ -1503,8 +3072,8 @@ export const blogPosts: BlogPost[] = [
       <p>Lagos attracts millions of business travelers annually. The hotel and short-let market is booming.</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Budget Hotels:</strong> ₦15K-₦25K/night properties in Ikeja and Yaba.</li>
-        <li><strong>Airbnb/Short-Lets:</strong> 2-bedroom apartments in Lekki can generate ₦300K-₦600K monthly.</li>
+        <li><strong>Budget Hotels:</strong> â‚¦15K-â‚¦25K/night properties in Ikeja and Yaba.</li>
+        <li><strong>Airbnb/Short-Lets:</strong> 2-bedroom apartments in Lekki can generate â‚¦300K-â‚¦600K monthly.</li>
         <li><strong>Event Centers:</strong> High demand for weddings, conferences, and parties.</li>
       </ul>
 
@@ -1525,9 +3094,9 @@ export const blogPosts: BlogPost[] = [
       <p>Private schools, vocational training, and skill acquisition centers are in high demand.</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>International Schools:</strong> High fees (₦1M-₦5M/term), strong demand from expatriates and wealthy Nigerians.</li>
+        <li><strong>International Schools:</strong> High fees (â‚¦1M-â‚¦5M/term), strong demand from expatriates and wealthy Nigerians.</li>
         <li><strong>Coding Bootcamps:</strong> Teaching programming, data analysis, digital marketing.</li>
-        <li><strong>Daycare/Creche:</strong> Working parents need quality childcare (₦50K-₦150K/child monthly).</li>
+        <li><strong>Daycare/Creche:</strong> Working parents need quality childcare (â‚¦50K-â‚¦150K/child monthly).</li>
       </ul>
 
       <br />
@@ -1550,7 +3119,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions About Investing in Lagos</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the minimum amount needed to start investing in Lagos?</h3>
-      <p>You can start investing in Lagos with as little as <strong>₦2 million</strong> through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with ₦500,000-₦1,000,000.</p>
+      <p>You can start investing in Lagos with as little as <strong>â‚¦2 million</strong> through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with â‚¦500,000-â‚¦1,000,000.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which area in Lagos has the highest ROI for property investment in 2025?</h3>
       <p><strong>Ibeju-Lekki</strong> currently offers the highest appreciation potential with returns of 20-35% annually. This is driven by major infrastructure projects including the Lekki Deep Sea Port, Dangote Refinery, and the proposed Lekki International Airport. Other high-growth areas include Epe, Sangotedo, and Ajah along the Lekki-Epe corridor.</p>
@@ -1559,10 +3128,10 @@ export const blogPosts: BlogPost[] = [
       <p>Yes, Lagos is <strong>Africa's leading investment destination</strong>, accounting for 30% of Nigeria's GDP and attracting over $1.5 billion in venture capital annually. The city is home to 4 of Africa's 7 tech unicorns. The Lagos State Government offers investor protection programs, and sectors like real estate, PropTech, and fintech have established legal frameworks for foreign and diaspora investment.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What are the best sectors for passive income in Lagos?</h3>
-      <p>The best sectors for passive income include: <strong>Real Estate</strong> (short-let apartments generating ₦300K-₦600K monthly), <strong>REITs</strong> (Real Estate Investment Trusts with 7-8% annual yields), <strong>Agriculture</strong> (fish farming and poultry with managed services), and <strong>Renewable Energy</strong> (solar installation partnerships). These require minimal day-to-day involvement while generating consistent returns.</p>
+      <p>The best sectors for passive income include: <strong>Real Estate</strong> (short-let apartments generating â‚¦300K-â‚¦600K monthly), <strong>REITs</strong> (Real Estate Investment Trusts with 7-8% annual yields), <strong>Agriculture</strong> (fish farming and poultry with managed services), and <strong>Renewable Energy</strong> (solar installation partnerships). These require minimal day-to-day involvement while generating consistent returns.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How can I invest in Lagos tech startups and fintech companies?</h3>
-      <p>You can invest in Lagos tech startups through: <strong>Angel investing networks</strong> (₦2M-₦10M for pre-seed/seed rounds), <strong>venture capital funds</strong> focused on African tech, <strong>equity crowdfunding platforms</strong>, or by directly approaching startups in tech hubs like Yaba and Lekki. The Lagos tech ecosystem raised over $1.5 billion in 2024, with fintech, healthtech, edtech, and logistics tech showing the highest growth potential.</p>
+      <p>You can invest in Lagos tech startups through: <strong>Angel investing networks</strong> (â‚¦2M-â‚¦10M for pre-seed/seed rounds), <strong>venture capital funds</strong> focused on African tech, <strong>equity crowdfunding platforms</strong>, or by directly approaching startups in tech hubs like Yaba and Lekki. The Lagos tech ecosystem raised over $1.5 billion in 2024, with fintech, healthtech, edtech, and logistics tech showing the highest growth potential.</p>
     `,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 20, 2025",
@@ -1620,7 +3189,7 @@ export const blogPosts: BlogPost[] = [
           "name": "What is the minimum amount needed to start investing in Lagos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can start investing in Lagos with as little as ₦2 million through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with ₦500,000-₦1,000,000."
+            "text": "You can start investing in Lagos with as little as â‚¦2 million through real estate crowdfunding platforms, land purchases in developing areas like Epe and Sangotedo, or angel investing in pre-seed tech startups. Some agribusiness ventures like fish farming can begin with â‚¦500,000-â‚¦1,000,000."
           }
         }, {
           "@type": "Question",
@@ -1641,14 +3210,14 @@ export const blogPosts: BlogPost[] = [
           "name": "What are the best sectors for passive income in Lagos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The best sectors for passive income include Real Estate (short-let apartments generating ₦300K-₦600K monthly), REITs (Real Estate Investment Trusts with 7-8% annual yields), Agriculture (fish farming and poultry with managed services), and Renewable Energy (solar installation partnerships)."
+            "text": "The best sectors for passive income include Real Estate (short-let apartments generating â‚¦300K-â‚¦600K monthly), REITs (Real Estate Investment Trusts with 7-8% annual yields), Agriculture (fish farming and poultry with managed services), and Renewable Energy (solar installation partnerships)."
           }
         }, {
           "@type": "Question",
           "name": "How can I invest in Lagos tech startups and fintech companies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can invest in Lagos tech startups through Angel investing networks (₦2M-₦10M for pre-seed/seed rounds), venture capital funds focused on African tech, equity crowdfunding platforms, or by directly approaching startups in tech hubs like Yaba and Lekki."
+            "text": "You can invest in Lagos tech startups through Angel investing networks (â‚¦2M-â‚¦10M for pre-seed/seed rounds), venture capital funds focused on African tech, equity crowdfunding platforms, or by directly approaching startups in tech hubs like Yaba and Lekki."
           }
         }]
       }
@@ -1674,7 +3243,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Digital marketing</strong> isn't just for big brands with massive budgets anymore. Whether you run a <a href="/categories/shopping" class="text-green-600 hover:underline">fashion boutique in Lekki</a>, a <a href="/categories/restaurants" class="text-green-600 hover:underline">restaurant in Abuja</a>, or a <a href="/categories/technology" class="text-green-600 hover:underline">tech service in Port Harcourt</a>, strategic online marketing can multiply your revenue without requiring millions in ad spend.</p>
 
-      <p>In this guide, I'll walk you through 6 proven <strong>digital marketing strategies for small businesses</strong> that actually work in the Nigerian market—no fluff, no theory. Just actionable tactics you can start implementing today.</p>
+      <p>In this guide, I'll walk you through 6 proven <strong>digital marketing strategies for small businesses</strong> that actually work in the Nigerian marketâ€”no fluff, no theory. Just actionable tactics you can start implementing today.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1400&q=80" alt="Nigerian small business owner planning digital marketing on a laptop and phone" class="w-full rounded-lg shadow-lg" />
@@ -1686,8 +3255,8 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Why Digital Marketing is Non-Negotiable in 2025</h2>
       <p>Nigeria has over 150 million internet users, with most accessing the web via smartphones. Here's what this means for you:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Your customers are searching for you:</strong> "Best barber in Ikeja," "Phone repair near me," "Event planner Lagos"—these searches happen thousands of times daily.</li>
-        <li><strong>Cost-effective reach:</strong> A well-targeted Instagram ad can reach 10,000 people in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> for ₦5,000—far cheaper than billboards or radio.</li>
+        <li><strong>Your customers are searching for you:</strong> "Best barber in Ikeja," "Phone repair near me," "Event planner Lagos"â€”these searches happen thousands of times daily.</li>
+        <li><strong>Cost-effective reach:</strong> A well-targeted Instagram ad can reach 10,000 people in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> for â‚¦5,000â€”far cheaper than billboards or radio.</li>
         <li><strong>Competitive advantage:</strong> Most Nigerian SMEs still rely solely on word-of-mouth. Going digital puts you ahead.</li>
       </ul>
 
@@ -1802,7 +3371,7 @@ export const blogPosts: BlogPost[] = [
       <p>Organic reach is dying. If you want fast results, you need to pay to play. But the good news? You don't need millions.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Instagram & Facebook Ads</h3>
-      <p><strong>Budget:</strong> Start with ₦20,000-₦50,000 per month.</p>
+      <p><strong>Budget:</strong> Start with â‚¦20,000-â‚¦50,000 per month.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Target locally:</strong> Run ads only to people in your city/neighborhood.</li>
         <li><strong>Use video:</strong> Video ads get 3x better engagement than static images.</li>
@@ -1819,7 +3388,7 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Leverage Influencers (Micro > Macro)</h2>
-      <p>Forget paying ₦500k for a celebrity post. Micro-influencers (5k-50k followers) often deliver better ROI because their audience actually trusts them.</p>
+      <p>Forget paying â‚¦500k for a celebrity post. Micro-influencers (5k-50k followers) often deliver better ROI because their audience actually trusts them.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Find niche influencers:</strong> If you sell gym wear, partner with fitness coaches, not generic lifestyle influencers.</li>
         <li><strong>Negotiate smartly:</strong> Offer product exchange or commission-based deals instead of flat fees.</li>
@@ -1830,7 +3399,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes Nigerian Small Businesses Make</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li><strong>Being on every platform:</strong> It's better to dominate one platform than be mediocre on five.</li>
-        <li><strong>No clear CTA:</strong> Every post should tell people what to do next—"DM us," "Click link in bio," "Call now."</li>
+        <li><strong>No clear CTA:</strong> Every post should tell people what to do nextâ€”"DM us," "Click link in bio," "Call now."</li>
         <li><strong>Ignoring analytics:</strong> Check your Instagram Insights weekly. What content gets the most saves? More of that.</li>
         <li><strong>Expecting instant results:</strong> Digital marketing is a marathon, not a sprint. Give it 3-6 months.</li>
       </ol>
@@ -1838,7 +3407,7 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion: Start Today, Not Tomorrow</h2>
-      <p>You don't need a degree in marketing or a ₦10 million budget to win online. You need consistency, creativity, and a willingness to learn as you go.</p>
+      <p>You don't need a degree in marketing or a â‚¦10 million budget to win online. You need consistency, creativity, and a willingness to learn as you go.</p>
       <p><strong>Action steps for this week:</strong></p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li>Claim your Google Business Profile</li>
@@ -1917,7 +3486,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By Ngozi Uche</strong> | <em>Updated: November 2025</em></p>
 
-      <p>Tax compliance in Nigeria is often the difference between a business that scales and one that bleeds cash on penalties. If you run an SME, you juggle sales, staff, and operations—yet missing a single VAT filing or PAYE remittance can trigger fines, bank holds, or even audit headaches. This expert guide (10+ years working with Nigerian SMEs) shows you exactly how to stay compliant, protect your cash flow, and keep lenders and investors confident. Our focus keyword is <strong>tax compliance in Nigeria</strong>, and you'll see practical steps tailored to small businesses.</p>
+      <p>Tax compliance in Nigeria is often the difference between a business that scales and one that bleeds cash on penalties. If you run an SME, you juggle sales, staff, and operationsâ€”yet missing a single VAT filing or PAYE remittance can trigger fines, bank holds, or even audit headaches. This expert guide (10+ years working with Nigerian SMEs) shows you exactly how to stay compliant, protect your cash flow, and keep lenders and investors confident. Our focus keyword is <strong>tax compliance in Nigeria</strong>, and you'll see practical steps tailored to small businesses.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80" alt="Nigerian entrepreneur calculating taxes with a laptop and documents" class="w-full rounded-lg shadow-lg" />
@@ -1937,7 +3506,7 @@ export const blogPosts: BlogPost[] = [
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li><strong>CAC Incorporation:</strong> Required for TIN and bank accounts.</li>
         <li><strong>TIN (Tax Identification Number):</strong> Obtain from FIRS (often auto-generated on newer CAC certificates).</li>
-        <li><strong>VAT Registration:</strong> Mandatory when turnover exceeds ₦25m; voluntary registration is allowed and can help with input VAT claims.</li>
+        <li><strong>VAT Registration:</strong> Mandatory when turnover exceeds â‚¦25m; voluntary registration is allowed and can help with input VAT claims.</li>
         <li><strong>PAYE Setup:</strong> Register with your State Internal Revenue Service (SIRS) to remit employee PAYE.</li>
         <li><strong>WHT & Stamp Duty:</strong> No separate registration, but ensure your bank stamp duty and WHT obligations are understood.</li>
       </ol>
@@ -1945,7 +3514,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Know Your Core Taxes (What, When, How)</h2>
       <p>Here are the main taxes that affect SMEs and how to treat them.</p>
-      <h3 class="text-xl font-bold mt-6 mb-3">VAT (Value Added Tax) – 7.5%</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">VAT (Value Added Tax) â€“ 7.5%</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Charge VAT on vatable supplies; issue VAT-compliant invoices showing TIN and VAT number.</li>
         <li>File and pay monthly by the 21st of the following month via FIRS e-filing or approved banks.</li>
@@ -1954,7 +3523,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">CIT (Companies Income Tax)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Small companies (turnover ≤ ₦25m): 0% CIT; Medium (₦25m–₦100m): 20%; Large (>₦100m): 30%.</li>
+        <li>Small companies (turnover â‰¤ â‚¦25m): 0% CIT; Medium (â‚¦25mâ€“â‚¦100m): 20%; Large (>â‚¦100m): 30%.</li>
         <li>File annual returns within six months after financial year-end.</li>
         <li>Consider quarterly instalments to spread cash impact.</li>
       </ul>
@@ -1962,7 +3531,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">PIT/PAYE (Personal Income Tax for Employees)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Deduct PAYE monthly using the graduated PAYE rates; remit to the relevant SIRS (Lagos, FCT, etc.).</li>
-        <li>Typical remittance window: by 10th–15th of the following month (confirm your state rule).</li>
+        <li>Typical remittance window: by 10thâ€“15th of the following month (confirm your state rule).</li>
         <li>Issue pay slips and keep schedules; they are audit evidence.</li>
       </ul>
 
@@ -1970,7 +3539,7 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Deduct 5% (services) or 10% (rent, dividends) on qualifying payments.</li>
         <li>Remit monthly to FIRS or SIRS, depending on the transaction.</li>
-        <li>Collect and give WHT credit notes—vendors need them to offset their CIT/PIT.</li>
+        <li>Collect and give WHT credit notesâ€”vendors need them to offset their CIT/PIT.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Stamp Duty & Others</h3>
@@ -1998,7 +3567,7 @@ export const blogPosts: BlogPost[] = [
             </tr>
             <tr>
               <td class="border border-gray-300 p-2">PAYE</td>
-              <td class="border border-gray-300 p-2">10th–15th monthly (state-dependent)</td>
+              <td class="border border-gray-300 p-2">10thâ€“15th monthly (state-dependent)</td>
               <td class="border border-gray-300 p-2">Remit to SIRS with schedules</td>
             </tr>
             <tr>
@@ -2059,8 +3628,8 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Conclusion:</strong> Tax compliance in Nigeria does not have to drain your time. With the right setup, calendar, and documentation, you can avoid penalties, keep cash flowing, and earn trust with banks and enterprise customers. For expert help, find a vetted accountant or tax consultant on <a href="/categories/finance" class="text-green-600 hover:underline">9jaDirectory</a> and keep your business future-proof.</p>
 
       <h2 class="text-2xl font-bold mt-10 mb-4">FAQs</h2>
-      <p><strong>1) When must I register for VAT?</strong><br />Once your annual turnover exceeds ₦25m, registration is mandatory; you can also register voluntarily to claim input VAT.</p>
-      <p><strong>2) How often do I file VAT and PAYE?</strong><br />VAT is monthly by the 21st with FIRS; PAYE is monthly to your State IRS (often by the 10th–15th—confirm locally).</p>
+      <p><strong>1) When must I register for VAT?</strong><br />Once your annual turnover exceeds â‚¦25m, registration is mandatory; you can also register voluntarily to claim input VAT.</p>
+      <p><strong>2) How often do I file VAT and PAYE?</strong><br />VAT is monthly by the 21st with FIRS; PAYE is monthly to your State IRS (often by the 10thâ€“15thâ€”confirm locally).</p>
       <p><strong>3) What if I miss a deadline?</strong><br />File and pay immediately, expect penalties/interest, and keep proof of payment. Engage FIRS/SIRS early to resolve outstanding items.</p>
     `,
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80",
@@ -2159,7 +3728,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Google Workspace: All-in-One Collaboration</h3>
       <p><strong>Best for:</strong> Document collaboration, email, cloud storage</p>
-      <p>Gmail, Drive, Docs, Sheets, and Meet—all in one ecosystem. Real-time collaboration on documents is unmatched.</p>
+      <p>Gmail, Drive, Docs, Sheets, and Meetâ€”all in one ecosystem. Real-time collaboration on documents is unmatched.</p>
 
       <p><strong>Pricing:</strong> From $6/user/month</p>
 
@@ -2188,7 +3757,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Trello: Simple Kanban Boards</h3>
       <p><strong>Best for:</strong> Visual task tracking, smaller teams</p>
-      <p>Trello's drag-and-drop cards are perfect for visual thinkers. Move tasks from "To Do" → "In Progress" → "Done." The 2025 version includes AI-powered task recommendations.</p>
+      <p>Trello's drag-and-drop cards are perfect for visual thinkers. Move tasks from "To Do" â†’ "In Progress" â†’ "Done." The 2025 version includes AI-powered task recommendations.</p>
 
       <p><strong>Pricing:</strong> Free for basic use; Standard from $5/user/month</p>
 
@@ -2210,7 +3779,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Clockify: Unlimited Free Time Tracking</h3>
       <p><strong>Best for:</strong> Budget-conscious teams</p>
-      <p>Clockify offers UNLIMITED users and projects on the free plan—unheard of in this category. Track time, generate reports, and monitor billable hours.</p>
+      <p>Clockify offers UNLIMITED users and projects on the free planâ€”unheard of in this category. Track time, generate reports, and monitor billable hours.</p>
 
       <p><strong>Pricing:</strong> Free (yes, really); Plus plans from $3.99/user/month</p>
 
@@ -2250,7 +3819,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Automation:</strong> Zapier (Free tier)</li>
       </ol>
 
-      <p><strong>Total Cost:</strong> ~₦5,000-₦10,000/user/month (mostly from Google Workspace)</p>
+      <p><strong>Total Cost:</strong> ~â‚¦5,000-â‚¦10,000/user/month (mostly from Google Workspace)</p>
 
       <br />
 
@@ -2265,11 +3834,11 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Final Thoughts</h2>
-      <p>Remote work productivity isn't about working more hours—it's about working smarter with the right systems in place. These tools give your team clarity, reduce friction, and free up time for actual work.</p>
+      <p>Remote work productivity isn't about working more hoursâ€”it's about working smarter with the right systems in place. These tools give your team clarity, reduce friction, and free up time for actual work.</p>
 
       <p><strong>Action Steps:</strong></p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li>Audit your current tools—are you using too many or too few?</li>
+        <li>Audit your current toolsâ€”are you using too many or too few?</li>
         <li>Pick ONE tool from each category above</li>
         <li>Set up integrations between your tools</li>
         <li>Document your workflows and train your team</li>
@@ -2278,7 +3847,7 @@ export const blogPosts: BlogPost[] = [
       <p>Your team deserves systems that work as hard as they do. Start building yours today.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Need Help Setting This Up?</h2>
-      <p>If you don’t have an in-house IT team, you can still run a strong remote operation. The key is finding reliable vendors for setup, integrations, and support.</p>
+      <p>If you donâ€™t have an in-house IT team, you can still run a strong remote operation. The key is finding reliable vendors for setup, integrations, and support.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Developers & IT support:</strong> workspace setup, integrations, automations</li>
         <li><strong>Cybersecurity:</strong> access control, device policies, staff training</li>
@@ -2288,7 +3857,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Bonus: Make Your Business Easy to Find</h2>
       <p>Remote work is powerful, but customers still need to find you. Create a shareable business profile and collect reviews:</p>
-      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> (free). If your business is already listed, use the “Claim this Business” button to manage it.</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> (free). If your business is already listed, use the â€œClaim this Businessâ€ button to manage it.</p>
     `,
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 12, 2025",
@@ -2369,7 +3938,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Nigeria's <strong>agriculture sector</strong> is experiencing a renaissance. With over 200 million people to feed, government incentives for farmers, and growing export opportunities, there's never been a better time to start an <strong>agriculture business in Nigeria</strong>.</p>
 
-      <p>This isn't your grandfather's farming. Modern agribusiness combines traditional practices with technology, smart financing, and strategic marketing. Whether you have ₦100,000 or ₦10 million to invest, this comprehensive guide will show you exactly how to start, scale, and profit profitably from farming in 2025.</p>
+      <p>This isn't your grandfather's farming. Modern agribusiness combines traditional practices with technology, smart financing, and strategic marketing. Whether you have â‚¦100,000 or â‚¦10 million to invest, this comprehensive guide will show you exactly how to start, scale, and profit profitably from farming in 2025.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80" alt="Nigerian farmer harvesting fresh vegetables in an agricultural field - profitable farming business setup" class="w-full rounded-lg shadow-lg" />
@@ -2379,12 +3948,12 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class=\"text-2xl font-bold mt-8 mb-4\">Why Agriculture? The Numbers Don't Lie</h2>
-      <p>Agriculture contributes <strong>23% to Nigeria's GDP</strong> and employs over 36% of the workforce. But here's the opportunity: Nigeria still imports over <strong>$5 billion in food annually</strong>—food we can grow locally and profitably.</p>
+      <p>Agriculture contributes <strong>23% to Nigeria's GDP</strong> and employs over 36% of the workforce. But here's the opportunity: Nigeria still imports over <strong>$5 billion in food annually</strong>â€”food we can grow locally and profitably.</p>
 
       <ul class=\"list-disc pl-5 mt-2 mb-4\">
-        <li><strong>Consistent Demand:</strong> Nigerians need to eat daily. Your market is guaranteed—not seasonal or dependent on trends.</li>
+        <li><strong>Consistent Demand:</strong> Nigerians need to eat daily. Your market is guaranteedâ€”not seasonal or dependent on trends.</li>
         <li><strong>Government Support:</strong> CBN Anchor Borrowers Programme, NIRSAL, BOA, and state grants offer low-interest loans specifically for farmers.</li>
-        <li><strong>High ROI:</strong> Well-managed farms can return 30-60% annually—rivaling real estate and fintech investments.</li>
+        <li><strong>High ROI:</strong> Well-managed farms can return 30-60% annuallyâ€”rivaling real estate and fintech investments.</li>
         <li><strong>Multiple Income Streams:</strong> Sell fresh produce, process into value-added products, or supply wholesale to retailers and exporters.</li>
         <li><strong>Export Opportunities:</strong> Nigeria exports cassava, cocoa, and palm oil. Your farm could tap international markets.</li>
       </ul>
@@ -2399,49 +3968,49 @@ export const blogPosts: BlogPost[] = [
       <p>Not all farms are created equal. Some have faster turnaround times, others require less capital. Here's the complete breakdown with ROI, startup costs, and market demand:</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">1. Poultry Farming (Broilers & Layers) - Best for Beginners</h3>
-      <p><strong>Startup Cost:</strong> ₦200K - ₦1M (100-500 birds) | <strong>ROI:</strong> 40-60% per cycle | <strong>Turnaround:</strong> 6-8 weeks</p>
-      <p>Poultry is the most accessible agribusiness in Nigeria. Broilers mature in 6-8 weeks, layers start producing eggs at 18 weeks. Nigerians consume millions of eggs and chickens daily—both in homes and restaurants.</p>
+      <p><strong>Startup Cost:</strong> â‚¦200K - â‚¦1M (100-500 birds) | <strong>ROI:</strong> 40-60% per cycle | <strong>Turnaround:</strong> 6-8 weeks</p>
+      <p>Poultry is the most accessible agribusiness in Nigeria. Broilers mature in 6-8 weeks, layers start producing eggs at 18 weeks. Nigerians consume millions of eggs and chickens dailyâ€”both in homes and restaurants.</p>
       <p><strong>Pro Tip:</strong> Start small (100 birds), perfect your system, then scale. Partner with feed suppliers for credit terms.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">2. Fish Farming (Catfish & Tilapia) - Fastest Growing</h3>
-      <p><strong>Startup Cost:</strong> ₦300K - ₦2M | <strong>ROI:</strong> 30-50% per cycle (6 months) | <strong>Market:</strong> Growing 25% yearly</p>
-      <p>Catfish farming is one of the most profitable agribusinesses. A 500-fish pond can generate ₦500K-₦800K per cycle. Urban fish farming using tarpaulin ponds requires minimal space and zero land paperwork.</p>
+      <p><strong>Startup Cost:</strong> â‚¦300K - â‚¦2M | <strong>ROI:</strong> 30-50% per cycle (6 months) | <strong>Market:</strong> Growing 25% yearly</p>
+      <p>Catfish farming is one of the most profitable agribusinesses. A 500-fish pond can generate â‚¦500K-â‚¦800K per cycle. Urban fish farming using tarpaulin ponds requires minimal space and zero land paperwork.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">3. Snail Farming - Lowest Risk, Highest Margin</h3>
-      <p><strong>Startup Cost:</strong> ₦50K - ₦300K | <strong>ROI:</strong> 50-80% | <strong>Market:</strong> Export demand strong</p>
-      <p>Low-risk, low-maintenance operation. Snails reproduce rapidly and have high export demand to Europe (₦500-₦1,500 per kg). Can be done in your backyard with zero environmental permits needed.</p>
+      <p><strong>Startup Cost:</strong> â‚¦50K - â‚¦300K | <strong>ROI:</strong> 50-80% | <strong>Market:</strong> Export demand strong</p>
+      <p>Low-risk, low-maintenance operation. Snails reproduce rapidly and have high export demand to Europe (â‚¦500-â‚¦1,500 per kg). Can be done in your backyard with zero environmental permits needed.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">4. Vegetable Farming - Quickest Cash Flow</h3>
-      <p><strong>Startup Cost:</strong> ₦100K - ₦500K | <strong>ROI:</strong> 60-100% | <strong>Harvest:</strong> 6-12 weeks</p>
+      <p><strong>Startup Cost:</strong> â‚¦100K - â‚¦500K | <strong>ROI:</strong> 60-100% | <strong>Harvest:</strong> 6-12 weeks</p>
       <p>Fast-growing crops like ugu (fluted pumpkin), spinach, lettuce, and tomatoes have quick turnaround and strong restaurant demand. Perfect for urban farming or selling directly to hotels and eateries.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">5. Cassava Farming - Export Gold</h3>
-      <p><strong>Startup Cost:</strong> ₦200K - ₦1M per hectare | <strong>ROI:</strong> 35-50% | <strong>Export Markets:</strong> Europe, Asia, USA</p>
+      <p><strong>Startup Cost:</strong> â‚¦200K - â‚¦1M per hectare | <strong>ROI:</strong> 35-50% | <strong>Export Markets:</strong> Europe, Asia, USA</p>
       <p>Nigeria is the <strong>world's largest cassava producer</strong>. Process into garri, fufu, starch, or cassava flour for 3-5x margins. Strong export opportunities to Africa and beyond.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">6. Goat & Sheep Rearing - Festival Gold</h3>
-      <p><strong>Startup Cost:</strong> ₦300K - ₦1.5M | <strong>ROI:</strong> 40-70% | <strong>Peak Demand:</strong> Sallah, Christmas, Ileya</p>
-      <p>High seasonal demand during festivals. A pregnant goat costs ₦30K but sells for ₦80K-₦100K—2-3x profit! Low maintenance compared to cattle. Works well for smallholders.</p>
+      <p><strong>Startup Cost:</strong> â‚¦300K - â‚¦1.5M | <strong>ROI:</strong> 40-70% | <strong>Peak Demand:</strong> Sallah, Christmas, Ileya</p>
+      <p>High seasonal demand during festivals. A pregnant goat costs â‚¦30K but sells for â‚¦80K-â‚¦100Kâ€”2-3x profit! Low maintenance compared to cattle. Works well for smallholders.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">7. Rice Farming - Government Priority</h3>
-      <p><strong>Startup Cost:</strong> ₦500K - ₦3M per hectare | <strong>ROI:</strong> 30-45% | <strong>Government Support:</strong> CBN Anchor Borrowers Programme</p>
+      <p><strong>Startup Cost:</strong> â‚¦500K - â‚¦3M per hectare | <strong>ROI:</strong> 30-45% | <strong>Government Support:</strong> CBN Anchor Borrowers Programme</p>
       <p>Nigeria's most consumed staple with heavy government support. Mechanization and irrigation significantly boost yields. CBN specifically offers low-interest loans for rice farmers.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">8. Plantain Farming - Long-Term Passive Income</h3>
-      <p><strong>Startup Cost:</strong> ₦200K - ₦800K | <strong>ROI:</strong> 50-80% | <strong>Lifespan:</strong> 10+ years per plant</p>
+      <p><strong>Startup Cost:</strong> â‚¦200K - â‚¦800K | <strong>ROI:</strong> 50-80% | <strong>Lifespan:</strong> 10+ years per plant</p>
       <p>Plantain suckers produce for 10+ years. Growing demand for plantain chips and flour. Can intercrop with vegetables for extra income. Semi-passive once established.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">9. Maize Farming - Dual Harvest System</h3>
-      <p><strong>Startup Cost:</strong> ₦150K - ₦700K per hectare | <strong>ROI:</strong> 40-60% | <strong>Harvests/Year:</strong> 2 with irrigation</p>
+      <p><strong>Startup Cost:</strong> â‚¦150K - â‚¦700K per hectare | <strong>ROI:</strong> 40-60% | <strong>Harvests/Year:</strong> 2 with irrigation</p>
       <p>Fast-growing (3-4 months). Used for human consumption, poultry feed, and industrial processing. Two harvests possible per year with irrigation systems.</p>
 
       <h3 class=\"text-xl font-bold mt-6 mb-3\">10. Palm Oil Production - Premium Margins</h3>
-      <p><strong>Startup Cost:</strong> ₦1M - ₦5M | <strong>ROI:</strong> 40-70% | <strong>Products:</strong> Red oil, kernel oil, palm wine, wood</p>
+      <p><strong>Startup Cost:</strong> â‚¦1M - â‚¦5M | <strong>ROI:</strong> 40-70% | <strong>Products:</strong> Red oil, kernel oil, palm wine, wood</p>
       <p>Diverse income streams: red oil, kernel oil, palm wine, and timber. Strong local and export demand. Premium pricing for quality products.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1400&q=80" alt="Poultry farm with chickens and broilers raised in Nigeria for egg and meat production" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-600 mt-2">Poultry farming is the most accessible agribusiness for Nigerian entrepreneurs—fast returns in 6-8 weeks.</figcaption>
+        <figcaption class="text-sm text-gray-600 mt-2">Poultry farming is the most accessible agribusiness for Nigerian entrepreneursâ€”fast returns in 6-8 weeks.</figcaption>
       </figure>
 
       <br />
@@ -2451,7 +4020,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class=\"text-xl font-bold mt-6 mb-3\">Step 1: Choose Your Niche (Don't Try Everything)</h3>
       <p><strong>Why this matters:</strong> Trying multiple crops/animals at once leads to failure. Pick ONE business that aligns with your strengths.</p>
       <ul class=\"list-disc pl-5 mt-2 mb-4\">
-        <li>Your available capital (₦100K vs. ₦5M changes everything)</li>
+        <li>Your available capital (â‚¦100K vs. â‚¦5M changes everything)</li>
         <li>Available land or space in your location</li>
         <li>Local market demand (ask farmers already doing it)</li>
         <li>Your interest, skills, and willingness to learn</li>
@@ -2472,7 +4041,7 @@ export const blogPosts: BlogPost[] = [
       <ul class=\"list-disc pl-5 mt-2 mb-4\">
         <li><strong>Startup costs:</strong> Land, equipment, initial inputs, labor</li>
         <li><strong>Operational costs:</strong> Monthly feed, fertilizer, utilities, labor</li>
-        <li><strong>Revenue projections:</strong> Expected yields × market price</li>
+        <li><strong>Revenue projections:</strong> Expected yields Ã— market price</li>
         <li><strong>Marketing strategy:</strong> Who will buy? What's your distribution plan?</li>
         <li><strong>Break-even timeline:</strong> When will you recover your investment?</li>
       </ul>
@@ -2480,7 +4049,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class=\"text-xl font-bold mt-6 mb-3\">Step 4: Secure Land or Space (You Don't Need Much to Start)</h3>
       <p>Land access doesn't require ownership. Multiple options exist:</p>
       <ul class=\"list-disc pl-5 mt-2 mb-4\">
-        <li><strong>Lease land:</strong> ₦50K-₦200K yearly in rural areas</li>
+        <li><strong>Lease land:</strong> â‚¦50K-â‚¦200K yearly in rural areas</li>
         <li><strong>Urban farming:</strong> Rooftop gardens, containers, vertical farming (no land permit needed)</li>
         <li><strong>Backyard farming:</strong> Snails, small poultry, herbs in 100 sq. meters</li>
         <li><strong>Partner with landowners:</strong> Split profits in exchange for using their land</li>
@@ -2488,10 +4057,10 @@ export const blogPosts: BlogPost[] = [
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1464226184081-280282ae2e5b?auto=format&fit=crop&w=1400&q=80" alt="Small-scale fish farming using tarpaulin ponds in urban area Nigeria agribusiness setup" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-600 mt-2">Urban fish farming requires minimal land and no special permits—perfect for quick-start agribusiness.</figcaption>
+        <figcaption class="text-sm text-gray-600 mt-2">Urban fish farming requires minimal land and no special permitsâ€”perfect for quick-start agribusiness.</figcaption>
       </figure>
 
-      <h3 class=\"text-xl font-bold mt-6 mb-3\">Step 5: Get Government Funding (Access ₦50K-₦50M)</h3>
+      <h3 class=\"text-xl font-bold mt-6 mb-3\">Step 5: Get Government Funding (Access â‚¦50K-â‚¦50M)</h3>
       <p><strong>The Good News:</strong> The Nigerian government actively funds agriculture. You don't need collateral.</p>
 
       <table class="min-w-full border-collapse border border-gray-300 my-6 text-sm">
@@ -2506,25 +4075,25 @@ export const blogPosts: BlogPost[] = [
         <tbody>
           <tr>
             <td class="border border-gray-300 p-3 font-medium">CBN Anchor Borrowers</td>
-            <td class="border border-gray-300 p-3">₦100K-₦20M</td>
+            <td class="border border-gray-300 p-3">â‚¦100K-â‚¦20M</td>
             <td class="border border-gray-300 p-3">9% p.a.</td>
             <td class="border border-gray-300 p-3">Rice, maize, cotton farmers</td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-3 font-medium">NIRSAL</td>
-            <td class="border border-gray-300 p-3">₦500K-₦50M</td>
+            <td class="border border-gray-300 p-3">â‚¦500K-â‚¦50M</td>
             <td class="border border-gray-300 p-3">Up to 12% p.a.</td>
             <td class="border border-gray-300 p-3">All agricultural sectors</td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-3 font-medium">Bank of Agriculture (BOA)</td>
-            <td class="border border-gray-300 p-3">₦100K-₦30M</td>
+            <td class="border border-gray-300 p-3">â‚¦100K-â‚¦30M</td>
             <td class="border border-gray-300 p-3">9-14% p.a.</td>
             <td class="border border-gray-300 p-3">Registered agribusinesses</td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-3 font-medium">Lagos Agrithon 2025</td>
-            <td class="border border-gray-300 p-3">₦5M-₦10M grants</td>
+            <td class="border border-gray-300 p-3">â‚¦5M-â‚¦10M grants</td>
             <td class="border border-gray-300 p-3">No interest (grants)</td>
             <td class="border border-gray-300 p-3">Lagos-based agribusiness</td>
           </tr>
@@ -2536,9 +4105,9 @@ export const blogPosts: BlogPost[] = [
       <h3 class=\"text-xl font-bold mt-6 mb-3\">Step 6: Register Your Business (Unlock Government Contracts)</h3>
       <p>Registration opens doors to grants, bulk buyers, and government contracts:</p>
       <ul class=\"list-disc pl-5 mt-2 mb-4\">
-        <li>Register with <strong>CAC</strong> (Corporate Affairs Commission) - ₦10K-₦50K</li>
+        <li>Register with <strong>CAC</strong> (Corporate Affairs Commission) - â‚¦10K-â‚¦50K</li>
         <li>Get <strong>TIN</strong> (Tax Identification Number) from FIRS - Free</li>
-        <li>Join <strong>SMEDAN</strong> (Small & Medium Enterprises Development Agency) - ₦2,500</li>
+        <li>Join <strong>SMEDAN</strong> (Small & Medium Enterprises Development Agency) - â‚¦2,500</li>
         <li>Read our <a href=\"/blog/business-registration-nigeria-guide\" class=\"text-green-600 hover:underline\">Business Registration Guide</a> for step-by-step instructions</li>
       </ul>
 
@@ -2580,7 +4149,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class=\"text-2xl font-bold mt-8 mb-4\">Common Challenges & Proven Solutions</h2>
 
       <h3 class=\"text-lg font-semibold mt-4 mb-2\">1. Climate Change & Weather Unpredictability</h3>
-      <p><strong>Solution:</strong> Invest in irrigation systems (drip irrigation saves 60% water). Choose drought-resistant crop varieties. Diversify—don't depend on one crop.</p>
+      <p><strong>Solution:</strong> Invest in irrigation systems (drip irrigation saves 60% water). Choose drought-resistant crop varieties. Diversifyâ€”don't depend on one crop.</p>
 
       <h3 class=\"text-lg font-semibold mt-4 mb-2\">2. Pest & Disease Outbreaks</h3>
       <p><strong>Solution:</strong> Practice preventive care, use organic pesticides, quarantine sick animals immediately. Join farmer cooperatives that share disease alerts.</p>
@@ -2589,7 +4158,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Solution:</strong> Buy in bulk through cooperatives (20-30% cheaper). Negotiate payment plans with agro-dealers. Use government-subsidized inputs when available.</p>
 
       <h3 class=\"text-lg font-semibold mt-4 mb-2\">4. Poor Market Access & Low Prices</h3>
-      <p><strong>Solution:</strong> Bypass middlemen by selling directly. Join B2B supply networks. Process crops into value-added products (cassava → garri, flour).</p>
+      <p><strong>Solution:</strong> Bypass middlemen by selling directly. Join B2B supply networks. Process crops into value-added products (cassava â†’ garri, flour).</p>
 
       <h3 class=\"text-lg font-semibold mt-4 mb-2\">5. Limited Capital</h3>
       <p><strong>Solution:</strong> Start micro (100 birds, not 1,000). Use government loans + grants. Reinvest first-year profits. Partner with others via cooperatives.</p>
@@ -2597,7 +4166,7 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class=\"text-2xl font-bold mt-8 mb-4\">Key Takeaway: Agriculture Is Business, Not Charity</h2>
-      <p>Too many people approach farming emotionally and fail. Treat it like a business—track expenses meticulously, calculate ROI, market aggressively, and continuously improve processes.</p>
+      <p>Too many people approach farming emotionally and fail. Treat it like a businessâ€”track expenses meticulously, calculate ROI, market aggressively, and continuously improve processes.</p>
 
       <p><strong>Your 30-Day Action Plan:</strong></p>
       <ol class=\"list-decimal pl-5 mt-2 mb-4\">
@@ -2610,7 +4179,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Nigeria's food demand is growing at 2.5% yearly while production is flat. This gap = premium prices for smart farmers.</strong></p>
 
-      <p>Position yourself now. Your agribusiness in 2025 could be generating ₦500K-₦5M monthly by 2026. 🌾</p>
+      <p>Position yourself now. Your agribusiness in 2025 could be generating â‚¦500K-â‚¦5M monthly by 2026. ðŸŒ¾</p>
     `,
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80",
     date: "Nov 10, 2025",
@@ -2622,7 +4191,7 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Start a Profitable Agriculture Business in Nigeria (2025 Complete Guide): Poultry, Fish, Crops & More",
-        "description": "Start profitable agribusiness in Nigeria with ₦100K-₦10M. Complete guide on poultry farming, fish farming, crop production, government funding (CBN, NIRSAL, BOA), and step-by-step startup process.",
+        "description": "Start profitable agribusiness in Nigeria with â‚¦100K-â‚¦10M. Complete guide on poultry farming, fish farming, crop production, government funding (CBN, NIRSAL, BOA), and step-by-step startup process.",
         "image": [
           "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80",
           "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1400&q=80",
@@ -2654,10 +4223,10 @@ export const blogPosts: BlogPost[] = [
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the best agriculture business to start in Nigeria with ₦100K?",
+            "name": "What is the best agriculture business to start in Nigeria with â‚¦100K?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Snail farming is the best option with just ₦100K. It requires minimal space, no special permits, and offers 50-80% ROI. Vegetable farming is another option—you can start with ₦100K-₦200K and harvest in 6-12 weeks. Both have quick turnaround and strong local demand."
+              "text": "Snail farming is the best option with just â‚¦100K. It requires minimal space, no special permits, and offers 50-80% ROI. Vegetable farming is another optionâ€”you can start with â‚¦100K-â‚¦200K and harvest in 6-12 weeks. Both have quick turnaround and strong local demand."
             }
           },
           {
@@ -2665,7 +4234,7 @@ export const blogPosts: BlogPost[] = [
             "name": "How much can I make from poultry farming in Nigeria?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Starting with 100 broiler chickens (₦200K startup), you can generate ₦150K-₦250K profit per cycle (6-8 weeks). That's ₦1.8M-₦3M annually. Egg-laying hens offer steady income: 100 layers generate ₦40K-₦60K monthly from egg sales alone."
+              "text": "Starting with 100 broiler chickens (â‚¦200K startup), you can generate â‚¦150K-â‚¦250K profit per cycle (6-8 weeks). That's â‚¦1.8M-â‚¦3M annually. Egg-laying hens offer steady income: 100 layers generate â‚¦40K-â‚¦60K monthly from egg sales alone."
             }
           },
           {
@@ -2673,7 +4242,7 @@ export const blogPosts: BlogPost[] = [
             "name": "What government loans are available for farmers in Nigeria?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "CBN Anchor Borrowers Programme (9% interest, ₦100K-₦20M), NIRSAL (credit guarantees up to ₦50M), Bank of Agriculture BOA (9-14% interest), and Lagos Agrithon (₦5M-₦10M grants). Most require CAC registration and a business plan—no collateral needed for government schemes."
+              "text": "CBN Anchor Borrowers Programme (9% interest, â‚¦100K-â‚¦20M), NIRSAL (credit guarantees up to â‚¦50M), Bank of Agriculture BOA (9-14% interest), and Lagos Agrithon (â‚¦5M-â‚¦10M grants). Most require CAC registration and a business planâ€”no collateral needed for government schemes."
             }
           },
           {
@@ -2689,7 +4258,7 @@ export const blogPosts: BlogPost[] = [
             "name": "Do I need land to start an agribusiness in Nigeria?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Not necessarily. Urban farming works for vegetables, snails, and small poultry—you can use rooftops, containers, or backyards. For fish farming, use tarpaulin ponds. Traditional crops need land, which you can lease (₦50K-₦200K yearly in rural areas) or access via cooperatives."
+              "text": "Not necessarily. Urban farming works for vegetables, snails, and small poultryâ€”you can use rooftops, containers, or backyards. For fish farming, use tarpaulin ponds. Traditional crops need land, which you can lease (â‚¦50K-â‚¦200K yearly in rural areas) or access via cooperatives."
             }
           },
           {
@@ -2697,7 +4266,7 @@ export const blogPosts: BlogPost[] = [
             "name": "What is the ROI for fish farming in Nigeria?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A 500-fish catfish pond generates ₦500K-₦800K per cycle (6 months) with a ₦300K-₦500K startup cost. That's 30-50% ROI per cycle, or 60-100% annually. Tilapia offers similar returns. Urban fish farming with tarpaulin ponds requires even less capital (₦200K startup)."
+              "text": "A 500-fish catfish pond generates â‚¦500K-â‚¦800K per cycle (6 months) with a â‚¦300K-â‚¦500K startup cost. That's 30-50% ROI per cycle, or 60-100% annually. Tilapia offers similar returns. Urban fish farming with tarpaulin ponds requires even less capital (â‚¦200K startup)."
             }
           }
         ]
@@ -2803,7 +4372,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>By 9jaDirectory Finance Team</strong> | <em>Updated: November 2025</em> | <strong>Reading Time: 16 mins</strong></p>
 
       <blockquote class="border-l-4 border-green-600 pl-4 py-2 my-6 italic text-gray-700">
-        "In 2025, you can borrow ₦1 Million to ₦50 Million without a single piece of collateral. Get approved in 24 hours. No landed property needed. No certificate required. Just your bank statement and a good idea."
+        "In 2025, you can borrow â‚¦1 Million to â‚¦50 Million without a single piece of collateral. Get approved in 24 hours. No landed property needed. No certificate required. Just your bank statement and a good idea."
       </blockquote>
 
       <p>For decades, the biggest hurdle for Nigerian entrepreneurs has been the dreaded "C-word": <strong>Collateral</strong>. You have a brilliant business idea, a solid plan, and the drive to succeed, but you don't have a Certificate of Occupancy or a landed property in Lekki to secure a loan. In the past, this meant the end of the road. But in 2025, the narrative has changed.</p>
@@ -2812,10 +4381,10 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Key Numbers You Need to Know:</strong></p>
       <ul class="list-disc pl-5 my-4">
-        <li>₦50,000 - ₦50,000,000+ available (depending on business type)</li>
+        <li>â‚¦50,000 - â‚¦50,000,000+ available (depending on business type)</li>
         <li>24-72 hours to approval (Fintechs are fastest)</li>
         <li>5% - 30% monthly interest (avoid the highest tiers unless it's emergency working capital)</li>
-        <li>2025: Over ₦2 Trillion in SME loans available from CBN programs alone</li>
+        <li>2025: Over â‚¦2 Trillion in SME loans available from CBN programs alone</li>
       </ul>
 
       <p>This comprehensive guide will walk you through exactly how to secure a business loan in Nigeria without collateral in 2025, highlighting the best lenders, their requirements, success rates, hidden traps, and a step-by-step application process that dramatically improves your approval odds.</p>
@@ -2841,7 +4410,7 @@ export const blogPosts: BlogPost[] = [
       <p>We have categorized these into Fintechs (fast but higher interest) and Traditional/Government institutions (slower but cheaper).</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Carbon (formerly Paylater)</h3>
-      <p>Carbon remains a market leader for quick SME loans. They offer up to ₦1 Million for small businesses.</p>
+      <p>Carbon remains a market leader for quick SME loans. They offer up to â‚¦1 Million for small businesses.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Interest Rate:</strong> 5% - 15% monthly.</li>
         <li><strong>Speed:</strong> Disbursement within 24 hours.</li>
@@ -2849,7 +4418,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. Renmoney</h3>
-      <p>Renmoney focuses on salary earners and business owners. They can lend up to ₦6 Million without collateral if you have a verifiable income stream.</p>
+      <p>Renmoney focuses on salary earners and business owners. They can lend up to â‚¦6 Million without collateral if you have a verifiable income stream.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Tenor:</strong> Up to 24 months.</li>
         <li><strong>Best For:</strong> Established businesses looking to expand.</li>
@@ -2865,19 +4434,19 @@ export const blogPosts: BlogPost[] = [
       <p>The Government Enterprise and Empowerment Programme (GEEP) includes MarketMoni and TraderMoni.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Interest Rate:</strong> Zero interest (only a small administrative fee).</li>
-        <li><strong>Amount:</strong> ₦50,000 - ₦300,000.</li>
+        <li><strong>Amount:</strong> â‚¦50,000 - â‚¦300,000.</li>
         <li><strong>Best For:</strong> Micro-businesses and petty traders.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Stanbic IBTC EZ Cash</h3>
       <p>A traditional bank product that acts like a Fintech. If you have a Stanbic account, you can dial a USSD code to get instant loans based on your turnover.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Limit:</strong> Up to ₦5 Million (for business accounts).</li>
+        <li><strong>Limit:</strong> Up to â‚¦5 Million (for business accounts).</li>
         <li><strong>Tenor:</strong> 1 - 12 months.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">6. FairMoney</h3>
-      <p>Known for its aggressive marketing and speed. FairMoney offers loans up to ₦3 Million with a repayment period of up to 12 months.</p>
+      <p>Known for its aggressive marketing and speed. FairMoney offers loans up to â‚¦3 Million with a repayment period of up to 12 months.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">7. Lidya</h3>
       <p>Lidya is strictly B2B. They analyze your bank statements and invoices to offer credit. If you have unpaid invoices from reputable clients, Lidya is your best bet.</p>
@@ -2886,7 +4455,7 @@ export const blogPosts: BlogPost[] = [
       <p>The "Uber" of lending. Kiakia pairs individuals with money to lend with businesses that need it. It's a peer-to-peer platform.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">9. Access Bank Creative Sector Loan</h3>
-      <p>Part of the CBN's Creative Industry Financing Initiative (CIFI). If you are in Fashion, IT, Movie Production, or Music, you can access up to ₦500 Million.</p>
+      <p>Part of the CBN's Creative Industry Financing Initiative (CIFI). If you are in Fashion, IT, Movie Production, or Music, you can access up to â‚¦500 Million.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Interest Rate:</strong> Max 9% per annum (very cheap!).</li>
         <li><strong>Requirement:</strong> Detailed business plan.</li>
@@ -2898,16 +4467,16 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Interest Rates, Fees, and Hidden Costs</h2>
-      <p>Before you sign, compare APRs—not just flat monthly rates. Watch for management fees, insurance, and penalties.</p>
+      <p>Before you sign, compare APRsâ€”not just flat monthly rates. Watch for management fees, insurance, and penalties.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Fintechs:</strong> 3%–15% monthly; great for speed but expensive if rolled over.</li>
-        <li><strong>Banks/CBN schemes:</strong> 5%–9% annually but require fuller documentation.</li>
+        <li><strong>Fintechs:</strong> 3%â€“15% monthly; great for speed but expensive if rolled over.</li>
+        <li><strong>Banks/CBN schemes:</strong> 5%â€“9% annually but require fuller documentation.</li>
         <li><strong>Penalty clauses:</strong> Late fees, rollover fees, and GSI debits from other accounts.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Eligibility Checklist That Improves Approval Odds</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Consistent bank turnover (at least 3–6 months history).</li>
+        <li>Consistent bank turnover (at least 3â€“6 months history).</li>
         <li>CAC registration and TIN visible on invoices.</li>
         <li>Clean credit report (clear old app debts).</li>
         <li>Verifiable address and active phone/email (KYC).</li>
@@ -2916,7 +4485,7 @@ export const blogPosts: BlogPost[] = [
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80" alt="Business owner reviewing loan repayment schedule and fees" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-500 mt-2">Compare rates, fees, and tenors—borrow only what your cash flow can safely repay.</figcaption>
+        <figcaption class="text-sm text-gray-500 mt-2">Compare rates, fees, and tenorsâ€”borrow only what your cash flow can safely repay.</figcaption>
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Lender Comparison Table: Choose the Right Fit</h2>
@@ -2934,35 +4503,35 @@ export const blogPosts: BlogPost[] = [
           <tr>
             <td class="border border-gray-300 px-4 py-2"><strong>Carbon</strong></td>
             <td class="border border-gray-300 px-4 py-2">5-15% monthly</td>
-            <td class="border border-gray-300 px-4 py-2">₦1M</td>
+            <td class="border border-gray-300 px-4 py-2">â‚¦1M</td>
             <td class="border border-gray-300 px-4 py-2">24 hrs</td>
             <td class="border border-gray-300 px-4 py-2">Quick cash, POS agents</td>
           </tr>
           <tr class="bg-gray-50">
             <td class="border border-gray-300 px-4 py-2"><strong>Renmoney</strong></td>
             <td class="border border-gray-300 px-4 py-2">3-9% monthly</td>
-            <td class="border border-gray-300 px-4 py-2">₦6M</td>
+            <td class="border border-gray-300 px-4 py-2">â‚¦6M</td>
             <td class="border border-gray-300 px-4 py-2">3-5 days</td>
             <td class="border border-gray-300 px-4 py-2">Salary earners, established biz</td>
           </tr>
           <tr>
             <td class="border border-gray-300 px-4 py-2"><strong>Moniepoint</strong></td>
             <td class="border border-gray-300 px-4 py-2">18-24% p.a.</td>
-            <td class="border border-gray-300 px-4 py-2">₦10M</td>
+            <td class="border border-gray-300 px-4 py-2">â‚¦10M</td>
             <td class="border border-gray-300 px-4 py-2">24-48 hrs</td>
             <td class="border border-gray-300 px-4 py-2">High-volume traders, POS</td>
           </tr>
           <tr class="bg-gray-50">
             <td class="border border-gray-300 px-4 py-2"><strong>BOI GEEP</strong></td>
             <td class="border border-gray-300 px-4 py-2">0% (admin fee only)</td>
-            <td class="border border-gray-300 px-4 py-2">₦300K</td>
+            <td class="border border-gray-300 px-4 py-2">â‚¦300K</td>
             <td class="border border-gray-300 px-4 py-2">5-7 days</td>
             <td class="border border-gray-300 px-4 py-2">Micro-traders, very low capital</td>
           </tr>
           <tr>
             <td class="border border-gray-300 px-4 py-2"><strong>NIRSAL</strong></td>
             <td class="border border-gray-300 px-4 py-2">9-12% p.a.</td>
-            <td class="border border-gray-300 px-4 py-2">₦50M</td>
+            <td class="border border-gray-300 px-4 py-2">â‚¦50M</td>
             <td class="border border-gray-300 px-4 py-2">14-21 days</td>
             <td class="border border-gray-300 px-4 py-2">Agriculture, agribusiness</td>
           </tr>
@@ -2975,23 +4544,23 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Step 1: Get Your House in Order (2-3 Days)</h3>
       <p>Lenders want to see structure. Ensure you have:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>CAC Certificate:</strong> Even a Business Name registration is better than nothing. Cost: ₦5,000-₦15,000. Completes in 1 day.</li>
+        <li><strong>CAC Certificate:</strong> Even a Business Name registration is better than nothing. Cost: â‚¦5,000-â‚¦15,000. Completes in 1 day.</li>
         <li><strong>Corporate Bank Account:</strong> Stop using your personal savings account for business. Lenders use AI to flag mixed personal/business transactions as risky.</li>
-        <li><strong>Tax Identification Number (TIN):</strong> Mandatory for formal loans over ₦5M. Get it free from FIRS online in 30 minutes.</li>
+        <li><strong>Tax Identification Number (TIN):</strong> Mandatory for formal loans over â‚¦5M. Get it free from FIRS online in 30 minutes.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 2: Build a "Credit" Turnover (3-6 Months)</h3>
       <p>Lenders look at your <strong>Average Monthly Turnover (AMT)</strong>. This is the magic metric. If you make sales in cash, deposit that cash into the bank before spending it. This creates a digital record of your revenue. Examples:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Business depositing ₦500,000 monthly looks safer than one depositing ₦50,000.</li>
-        <li>6 months of ₦1M deposits = Loan approval odds increase by 85%.</li>
+        <li>Business depositing â‚¦500,000 monthly looks safer than one depositing â‚¦50,000.</li>
+        <li>6 months of â‚¦1M deposits = Loan approval odds increase by 85%.</li>
         <li>3 months of consistent deposits = Acceptable minimum for Fintechs.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 3: Clean Up Your Credit History (1-2 Weeks)</h3>
       <p>Download your credit report from <strong>CRC Credit Bureau</strong> or <strong>FirstCentral</strong> (search online, takes 10 minutes). Key actions:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>If you have an outstanding ₦2,000 loan on an old app, pay it off immediately. The GSI (Global Standing Instruction) policy means a default in one bank is visible to ALL lenders.</li>
+        <li>If you have an outstanding â‚¦2,000 loan on an old app, pay it off immediately. The GSI (Global Standing Instruction) policy means a default in one bank is visible to ALL lenders.</li>
         <li>Dispute any incorrect entries (typos, wrong amounts) within 5 days of receiving report.</li>
         <li>Aim for a credit score of 650+ for best approval odds.</li>
       </ul>
@@ -2999,9 +4568,9 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Step 4: Choose Your Lender (1 Day)</h3>
       <p>Use the comparison table above. Consider these factors:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Loan Size Needed:</strong> Micro-traders → BOI GEEP. High-volume traders → Moniepoint.</li>
+        <li><strong>Loan Size Needed:</strong> Micro-traders â†’ BOI GEEP. High-volume traders â†’ Moniepoint.</li>
         <li><strong>Speed Required:</strong> Emergency cash? Carbon (24 hours). Strategic expansion? Renmoney (3-5 days, lower interest).</li>
-        <li><strong>Interest Rate Sensitivity:</strong> Budget-conscious → NIRSAL/CBN (single-digit). Urgent cash → Carbon/FairMoney (higher but faster).</li>
+        <li><strong>Interest Rate Sensitivity:</strong> Budget-conscious â†’ NIRSAL/CBN (single-digit). Urgent cash â†’ Carbon/FairMoney (higher but faster).</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 5: Prepare Required Documents (2-3 Days)</h3>
@@ -3015,7 +4584,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 6: Apply (1 Hour)</h3>
-      <p>Most Fintechs: Download app → fill form → upload docs → submit. Traditional banks: Visit branch or submit via email. Pro tip: Apply during business hours (9 AM - 5 PM) to increase odds of same-day human review.</p>
+      <p>Most Fintechs: Download app â†’ fill form â†’ upload docs â†’ submit. Traditional banks: Visit branch or submit via email. Pro tip: Apply during business hours (9 AM - 5 PM) to increase odds of same-day human review.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 7: Verification & Underwriting (24-72 Hours)</h3>
       <p>Lenders analyze your application. They will:</p>
@@ -3035,7 +4604,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 9: Disbursement (24 Hours from Acceptance)</h3>
-      <p>Accept the offer → lender disbursess funds to your account. Money lands within 24 hours. Repayment clock usually starts 30 days after disbursement (read fine print!).</p>
+      <p>Accept the offer â†’ lender disbursess funds to your account. Money lands within 24 hours. Repayment clock usually starts 30 days after disbursement (read fine print!).</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1400&q=80" alt="Mobile banking app interface showing loan approval status, payment options, and fund disbursement dashboard" class="w-full rounded-lg shadow-lg" />
@@ -3044,26 +4613,26 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes That Get Loan Applications Rejected</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>❌ Mistake #1: Mixing Personal & Business Money:</strong> Lenders see ₦500K in your business account, but also see personal shopping expenses, transport fare, and salon bills. Red flag = automatic rejection. <strong>✅ Solution:</strong> Use separate accounts. Business account = business transactions only.</li>
-        <li><strong>❌ Mistake #2: Inconsistent Deposits:</strong> You deposit ₦10M one week, then ₦50K the next. Lenders think you're money laundering. <strong>✅ Solution:</strong> Show steady, consistent turnover. Even if lower, consistency beats volatility.</li>
-        <li><strong>❌ Mistake #3: Multiple Loan Applications in 30 Days:</strong> Each application triggers a credit inquiry. 5 applications = credit score drops 50-100 points. <strong>✅ Solution:</strong> Apply to ONE lender. Wait 14 days before trying another if rejected.</li>
-        <li><strong>❌ Mistake #4: Not Reading the Fine Print:</strong> You borrow at 15% monthly but didn't see the 5% management fee, 2% insurance, and ₦1,500 late payment fee. Effective rate = 25%+. <strong>✅ Solution:</strong> Ask for breakdown of ALL fees upfront. Get it in writing.</li>
-        <li><strong>❌ Mistake #5: Borrowing Without a Profit Plan:</strong> You borrow ₦2M but have no idea how to generate returns. You pay interest from personal savings. <strong>✅ Solution:</strong> Only borrow if you have a clear plan to generate 3x the interest cost.</li>
+        <li><strong>âŒ Mistake #1: Mixing Personal & Business Money:</strong> Lenders see â‚¦500K in your business account, but also see personal shopping expenses, transport fare, and salon bills. Red flag = automatic rejection. <strong>âœ… Solution:</strong> Use separate accounts. Business account = business transactions only.</li>
+        <li><strong>âŒ Mistake #2: Inconsistent Deposits:</strong> You deposit â‚¦10M one week, then â‚¦50K the next. Lenders think you're money laundering. <strong>âœ… Solution:</strong> Show steady, consistent turnover. Even if lower, consistency beats volatility.</li>
+        <li><strong>âŒ Mistake #3: Multiple Loan Applications in 30 Days:</strong> Each application triggers a credit inquiry. 5 applications = credit score drops 50-100 points. <strong>âœ… Solution:</strong> Apply to ONE lender. Wait 14 days before trying another if rejected.</li>
+        <li><strong>âŒ Mistake #4: Not Reading the Fine Print:</strong> You borrow at 15% monthly but didn't see the 5% management fee, 2% insurance, and â‚¦1,500 late payment fee. Effective rate = 25%+. <strong>âœ… Solution:</strong> Ask for breakdown of ALL fees upfront. Get it in writing.</li>
+        <li><strong>âŒ Mistake #5: Borrowing Without a Profit Plan:</strong> You borrow â‚¦2M but have no idea how to generate returns. You pay interest from personal savings. <strong>âœ… Solution:</strong> Only borrow if you have a clear plan to generate 3x the interest cost.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Risks and Red Flags: Avoid Predatory Lenders</h2>
       <p>While collateral-free loans are legitimate, some lenders are predatory. Here's how to avoid them:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>🚩 Red Flag #1 - High Interest Rates:</strong> Some loan apps charge 30% monthly. That is 360% per annum! Only take these for short-term emergencies (e.g., clearing goods from the port) where the profit margin covers the interest. If interest > your business margin, don't borrow.</li>
-        <li><strong>🚩 Red Flag #2 - Predatory Lenders:</strong> Avoid apps that ask for access to your contacts, photos, or social media. These are "loan sharks" that will harass your family if you default. Stick to <strong>CBN-licensed lenders</strong> only. Check CBN website for approved list.</li>
-        <li><strong>🚩 Red Flag #3 - Upfront Fees:</strong> Lenders ask for ₦50,000 "processing fee" before approving. Legitimate lenders deduct fees from disbursement. Never pay upfront.</li>
-        <li><strong>🚩 Red Flag #4 - Pressure Tactics:</strong> "You must accept today or offer expires." Real lenders give 24-48 hours to decide. Walk away from pressure.</li>
-        <li><strong>🚩 Red Flag #5 - Over-Leveraging:</strong> Lenders suggest you borrow ₦10M when you only need ₦2M. Or they encourage you to take another loan to repay the first one. This is a trap. Only borrow what you need and can afford to repay.</li>
+        <li><strong>ðŸš© Red Flag #1 - High Interest Rates:</strong> Some loan apps charge 30% monthly. That is 360% per annum! Only take these for short-term emergencies (e.g., clearing goods from the port) where the profit margin covers the interest. If interest > your business margin, don't borrow.</li>
+        <li><strong>ðŸš© Red Flag #2 - Predatory Lenders:</strong> Avoid apps that ask for access to your contacts, photos, or social media. These are "loan sharks" that will harass your family if you default. Stick to <strong>CBN-licensed lenders</strong> only. Check CBN website for approved list.</li>
+        <li><strong>ðŸš© Red Flag #3 - Upfront Fees:</strong> Lenders ask for â‚¦50,000 "processing fee" before approving. Legitimate lenders deduct fees from disbursement. Never pay upfront.</li>
+        <li><strong>ðŸš© Red Flag #4 - Pressure Tactics:</strong> "You must accept today or offer expires." Real lenders give 24-48 hours to decide. Walk away from pressure.</li>
+        <li><strong>ðŸš© Red Flag #5 - Over-Leveraging:</strong> Lenders suggest you borrow â‚¦10M when you only need â‚¦2M. Or they encourage you to take another loan to repay the first one. This is a trap. Only borrow what you need and can afford to repay.</li>
       </ul>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1611974886456-25d306a27850?auto=format&fit=crop&w=1400&q=80" alt="Businessman reviewing loan documents, comparing interest rates and terms from multiple lenders" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-500 mt-2">Always compare loan terms carefully—small differences in interest rates and fees add up to thousands in costs.</figcaption>
+        <figcaption class="text-sm text-gray-500 mt-2">Always compare loan terms carefullyâ€”small differences in interest rates and fees add up to thousands in costs.</figcaption>
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions (FAQ)</h2>
@@ -3072,16 +4641,16 @@ export const blogPosts: BlogPost[] = [
       <p><strong>A:</strong> Carbon or FairMoney (24 hours max). You apply in the morning, get approved by evening, money lands overnight. Catch: interest rate is higher (12-15% monthly). Use only for true emergencies. For stable businesses with slightly more time, Renmoney (3-5 days at lower rates).</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q2: Can traders (market traders, POS agents) get loans?</h3>
-      <p><strong>A:</strong> Absolutely. In fact, they're preferred applicants. Moniepoint, Carbon, and Opay specifically target traders. Banks see traders as lower risk because their transactions are rapid and recoverable via GSI. Pro tip: If you run a POS or use Moniepoint for business, your loan limit is often ₦500K-₦10M.</p>
+      <p><strong>A:</strong> Absolutely. In fact, they're preferred applicants. Moniepoint, Carbon, and Opay specifically target traders. Banks see traders as lower risk because their transactions are rapid and recoverable via GSI. Pro tip: If you run a POS or use Moniepoint for business, your loan limit is often â‚¦500K-â‚¦10M.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q3: What if I have bad credit or defaulted before?</h3>
       <p><strong>A:</strong> You can still get loans, but at higher rates or lower amounts. First, pay off any outstanding debt. Then wait 60-90 days before reapplying. Your credit score improves after you show 3 months of no defaults. Fintechs are more forgiving than traditional banks; they focus on current cash flow not past defaults.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q4: Can I negotiate the interest rate?</h3>
-      <p><strong>A:</strong> With Fintechs: Limited room. They use algorithms. With traditional banks: YES. If you have ₦5M+ monthly turnover and strong credit, ask for rate reduction. Banks often give 1-3% discount for high-value customers. Always ask—worst they say is no.</p>
+      <p><strong>A:</strong> With Fintechs: Limited room. They use algorithms. With traditional banks: YES. If you have â‚¦5M+ monthly turnover and strong credit, ask for rate reduction. Banks often give 1-3% discount for high-value customers. Always askâ€”worst they say is no.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q5: What's the difference between tenor and loan term?</h3>
-      <p><strong>A:</strong> They're the same thing. Tenor = how long you have to repay. 12-month tenor = 12 months to repay. Longer tenors = lower monthly payment but higher total interest. Example: ₦2M at 12% for 6 months = ₦240K interest. Same ₦2M at 12% for 12 months = ₦480K interest. Choose tenor based on your cash flow capacity.</p>
+      <p><strong>A:</strong> They're the same thing. Tenor = how long you have to repay. 12-month tenor = 12 months to repay. Longer tenors = lower monthly payment but higher total interest. Example: â‚¦2M at 12% for 6 months = â‚¦240K interest. Same â‚¦2M at 12% for 12 months = â‚¦480K interest. Choose tenor based on your cash flow capacity.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q6: Can I borrow from multiple lenders at the same time?</h3>
       <p><strong>A:</strong> Technically yes, but risky. Lenders check GSI (Global Standing Instruction). If you have 3 active loans and default, GSI pulls payment from any bank account you own. Banks see multiple loans as overleverage. Best practice: Complete one loan before taking another.</p>
@@ -3090,7 +4659,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>A:</strong> No. Loans are not income. You don't pay income tax on loan disbursement. However, interest paid IS tax-deductible for businesses (check with your accountant for documentation).</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q8: What happens if I can't repay on time?</h3>
-      <p><strong>A:</strong> Don't ignore it. Immediately contact your lender. Most offer grace periods (7-14 days) without penalty. Late payment fees typically range ₦500-₦5,000 depending on lender. If you miss 30+ days, your account goes to "default" and credit bureau is notified. This blocks future loans for 2+ years. Many lenders offer restructuring—lower monthly payment, extended tenor. Ask about it before missing payment.</p>
+      <p><strong>A:</strong> Don't ignore it. Immediately contact your lender. Most offer grace periods (7-14 days) without penalty. Late payment fees typically range â‚¦500-â‚¦5,000 depending on lender. If you miss 30+ days, your account goes to "default" and credit bureau is notified. This blocks future loans for 2+ years. Many lenders offer restructuringâ€”lower monthly payment, extended tenor. Ask about it before missing payment.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Q9: How long after paying off a loan can I borrow again?</h3>
       <p><strong>A:</strong> Immediately. In fact, successful loan repayment improves your credit score and increases your next loan limit by 20-50%. Most lenders automatically increase your limit after clean repayment. You can often tap it without re-applying.</p>
@@ -3101,7 +4670,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Need speed (24-48 hours)?</strong> Fintech.</li>
         <li><strong>Need low interest rate (under 10%)?</strong> Bank or CBN scheme.</li>
         <li><strong>Already have bank relationship?</strong> Try your bank first (they give loyalty discounts).</li>
-        <li><strong>Need large amount (₦10M+)?</strong> Traditional bank or NIRSAL.</li>
+        <li><strong>Need large amount (â‚¦10M+)?</strong> Traditional bank or NIRSAL.</li>
         <li><strong>Microtrader with minimal docs?</strong> Fintech (less paperwork).</li>
       </ul>
 
@@ -3112,9 +4681,9 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Week 1: Preparation (Days 1-7)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Day 1-2:</strong> If you don't have CAC, register Business Name online. Cost: ₦5,000. Time: 1 day.</li>
+        <li><strong>Day 1-2:</strong> If you don't have CAC, register Business Name online. Cost: â‚¦5,000. Time: 1 day.</li>
         <li><strong>Day 3:</strong> Open corporate bank account if you don't have one. Most banks: 15 minutes online.</li>
-        <li><strong>Day 4-5:</strong> Get TIN from FIRS online (₦0, 30 minutes).</li>
+        <li><strong>Day 4-5:</strong> Get TIN from FIRS online (â‚¦0, 30 minutes).</li>
         <li><strong>Day 6:</strong> Download last 3 months bank statements. Print them.</li>
         <li><strong>Day 7:</strong> Pull credit report from CRC or FirstCentral. Check for errors.</li>
       </ul>
@@ -3150,8 +4719,8 @@ export const blogPosts: BlogPost[] = [
 
       <p>Here's your immediate action plan:</p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li>Register your business (if not already done) - ₦5,000-₦15,000, 1 day</li>
-        <li>Open a corporate bank account - ₦0, 15 minutes</li>
+        <li>Register your business (if not already done) - â‚¦5,000-â‚¦15,000, 1 day</li>
+        <li>Open a corporate bank account - â‚¦0, 15 minutes</li>
         <li>Build 3-6 months of consistent bank deposits - Ongoing</li>
         <li>Clean up your credit history - 1-2 weeks</li>
         <li>Choose a lender from the comparison table above and apply - 1 hour</li>
@@ -3164,7 +4733,7 @@ export const blogPosts: BlogPost[] = [
         <li>Stay updated on new loan programs and grants. Subscribe to our <a href="/blog" class="text-green-600 hover:underline">Finance Blog</a>.</li>
       </ul>
 
-      <p class="mt-8 text-lg font-semibold text-green-700">💡 Pro Tip: Your business loan is not free money. Treat it as an investment. Borrow strategically. Repay religiously. Build credit. Your future self will thank you.</p>
+      <p class="mt-8 text-lg font-semibold text-green-700">ðŸ’¡ Pro Tip: Your business loan is not free money. Treat it as an investment. Borrow strategically. Repay religiously. Build credit. Your future self will thank you.</p>
     `,
     image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 30, 2025",
@@ -3190,7 +4759,7 @@ export const blogPosts: BlogPost[] = [
         },
         "datePublished": "2025-11-28",
         "dateModified": "2025-11-30",
-        "description": "Get ₦1M-₦50M business loans in 24 hours with ZERO collateral. Compare Carbon, Renmoney, Moniepoint, CBN loans & more. 2025 interest rates, fees, requirements, and pro tips for traders, retailers & entrepreneurs."
+        "description": "Get â‚¦1M-â‚¦50M business loans in 24 hours with ZERO collateral. Compare Carbon, Renmoney, Moniepoint, CBN loans & more. 2025 interest rates, fees, requirements, and pro tips for traders, retailers & entrepreneurs."
       },
       {
         "@type": "FAQPage",
@@ -3208,7 +4777,7 @@ export const blogPosts: BlogPost[] = [
             "name": "Can traders (market traders, POS agents) get collateral-free loans?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Absolutely. In fact, they're preferred applicants. Moniepoint, Carbon, and Opay specifically target traders. Banks see traders as lower risk because their transactions are rapid and recoverable via GSI. Pro tip: If you run a POS or use Moniepoint for business, your loan limit is often ₦500K-₦10M."
+              "text": "Absolutely. In fact, they're preferred applicants. Moniepoint, Carbon, and Opay specifically target traders. Banks see traders as lower risk because their transactions are rapid and recoverable via GSI. Pro tip: If you run a POS or use Moniepoint for business, your loan limit is often â‚¦500K-â‚¦10M."
             }
           },
           {
@@ -3224,7 +4793,7 @@ export const blogPosts: BlogPost[] = [
             "name": "Can I negotiate the interest rate on business loans?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "With Fintechs: Limited room. They use algorithms. With traditional banks: YES. If you have ₦5M+ monthly turnover and strong credit, ask for rate reduction. Banks often give 1-3% discount for high-value customers. Always ask—worst they say is no."
+              "text": "With Fintechs: Limited room. They use algorithms. With traditional banks: YES. If you have â‚¦5M+ monthly turnover and strong credit, ask for rate reduction. Banks often give 1-3% discount for high-value customers. Always askâ€”worst they say is no."
             }
           },
           {
@@ -3232,7 +4801,7 @@ export const blogPosts: BlogPost[] = [
             "name": "Is it better to borrow from a bank or fintech in 2025?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Depends on your priorities. Need speed (24-48 hours)? Fintech. Need low interest rate (under 10%)? Bank or CBN scheme. Already have bank relationship? Try your bank first. Need large amount (₦10M+)? Traditional bank or NIRSAL. Microtrader with minimal docs? Fintech."
+              "text": "Depends on your priorities. Need speed (24-48 hours)? Fintech. Need low interest rate (under 10%)? Bank or CBN scheme. Already have bank relationship? Try your bank first. Need large amount (â‚¦10M+)? Traditional bank or NIRSAL. Microtrader with minimal docs? Fintech."
             }
           },
           {
@@ -3264,7 +4833,7 @@ export const blogPosts: BlogPost[] = [
             "name": "What happens if I can't repay my loan on time?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Don't ignore it. Immediately contact your lender. Most offer grace periods (7-14 days) without penalty. Late fees range ₦500-₦5,000. If you miss 30+ days, account goes to default and credit bureau is notified, blocking future loans for 2+ years. Many lenders offer restructuring—lower monthly payment, extended tenor."
+              "text": "Don't ignore it. Immediately contact your lender. Most offer grace periods (7-14 days) without penalty. Late fees range â‚¦500-â‚¦5,000. If you miss 30+ days, account goes to default and credit bureau is notified, blocking future loans for 2+ years. Many lenders offer restructuringâ€”lower monthly payment, extended tenor."
             }
           },
           {
@@ -3290,7 +4859,7 @@ export const blogPosts: BlogPost[] = [
           {
             "@type": "HowToStep",
             "name": "Build a Credit Turnover",
-            "text": "Show consistent monthly deposits into your business account. Lenders look at Average Monthly Turnover (AMT). 6 months of ₦1M deposits = 85% approval odds. Minimum acceptable: 3 months consistent deposits."
+            "text": "Show consistent monthly deposits into your business account. Lenders look at Average Monthly Turnover (AMT). 6 months of â‚¦1M deposits = 85% approval odds. Minimum acceptable: 3 months consistent deposits."
           },
           {
             "@type": "HowToStep",
@@ -3300,7 +4869,7 @@ export const blogPosts: BlogPost[] = [
           {
             "@type": "HowToStep",
             "name": "Choose Your Lender",
-            "text": "Use comparison table to select ideal lender. Consider: loan size needed, speed required, interest rate. Micro-traders → BOI GEEP. High-volume traders → Moniepoint. Emergency cash → Carbon. Strategic expansion → Renmoney."
+            "text": "Use comparison table to select ideal lender. Consider: loan size needed, speed required, interest rate. Micro-traders â†’ BOI GEEP. High-volume traders â†’ Moniepoint. Emergency cash â†’ Carbon. Strategic expansion â†’ Renmoney."
           },
           {
             "@type": "HowToStep",
@@ -3310,7 +4879,7 @@ export const blogPosts: BlogPost[] = [
           {
             "@type": "HowToStep",
             "name": "Submit Application",
-            "text": "Most Fintechs: Download app → fill form → upload docs → submit (1 hour). Traditional banks: Visit branch or submit via email. Apply during business hours (9 AM - 5 PM) for same-day human review."
+            "text": "Most Fintechs: Download app â†’ fill form â†’ upload docs â†’ submit (1 hour). Traditional banks: Visit branch or submit via email. Apply during business hours (9 AM - 5 PM) for same-day human review."
           },
           {
             "@type": "HowToStep",
@@ -3357,7 +4926,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Grants Available in 2025</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Tony Elumelu Foundation (TEF) Entrepreneurship Programme</h3>
-      <p>The "Holy Grail" of African grants. TEF offers $5,000 (approx. ₦5M+) non-refundable seed capital, world-class business training, and mentorship.</p>
+      <p>The "Holy Grail" of African grants. TEF offers $5,000 (approx. â‚¦5M+) non-refundable seed capital, world-class business training, and mentorship.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Eligibility:</strong> Business must be 0-3 years old. Open to all Africans.</li>
         <li><strong>Application Window:</strong> Usually opens Jan 1st and closes March 31st.</li>
@@ -3368,7 +4937,7 @@ export const blogPosts: BlogPost[] = [
       <p>Targeted at aspiring entrepreneurs aged 18-35. It is a mix of training and funding. While primarily a loan scheme, it often has convertible grant components for top performers.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Presidential Conditional Grant Scheme (PCGS)</h3>
-      <p>A massive federal government initiative targeting nano businesses. It offers a flat grant of ₦50,000 to one million beneficiaries.</p>
+      <p>A massive federal government initiative targeting nano businesses. It offers a flat grant of â‚¦50,000 to one million beneficiaries.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Target:</strong> 70% women and youth.</li>
         <li><strong>Sectors:</strong> Traders, food vendors, ICT, artisans, and creatives.</li>
@@ -3385,14 +4954,14 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">5. Access Bank W Initiative (Womenpreneur Pitch-a-ton)</h3>
       <p>Access Bank's flagship program for women. It offers a Mini-MBA from the IFC and grant funding.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Prize:</strong> Up to ₦5 Million for winners.</li>
+        <li><strong>Prize:</strong> Up to â‚¦5 Million for winners.</li>
         <li><strong>Eligibility:</strong> 50% woman-owned business, operational for 1 year.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">6. Flourish Africa Grant</h3>
       <p>Founded by Folorunso Alakija, this grant supports female entrepreneurs.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Amount:</strong> Up to ₦3 Million.</li>
+        <li><strong>Amount:</strong> Up to â‚¦3 Million.</li>
         <li><strong>Requirement:</strong> Must be a female-owned business in Nigeria, registered with CAC.</li>
       </ul>
 
@@ -3400,17 +4969,17 @@ export const blogPosts: BlogPost[] = [
       <p>If you are in Lagos, this is for you. While primarily known for low-interest loans (9% per annum), they often have grant components for tech startups (Lagos Innovates) and women-led businesses.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">8. SMEDAN Conditional Grant Scheme (CGS)</h3>
-      <p>The Small and Medium Enterprises Development Agency of Nigeria (SMEDAN) releases grants for micro-businesses (barbers, tailors, artisans). It’s usually around ₦50,000 per beneficiary to boost working capital and formalization.</p>
+      <p>The Small and Medium Enterprises Development Agency of Nigeria (SMEDAN) releases grants for micro-businesses (barbers, tailors, artisans). Itâ€™s usually around â‚¦50,000 per beneficiary to boost working capital and formalization.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">9. GroWin (Growth Impact Investment)</h3>
       <p>Focused on businesses that can show social impact (creating jobs, helping the environment). They offer technical assistance and funding.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">10. Federal Govt Youth Economic Intervention (YEIDEP)</h3>
-      <p>A program offering grants from ₦50,000 to ₦500,000 for youth aged 18-35. It focuses on de-radicalization through economic empowerment.</p>
+      <p>A program offering grants from â‚¦50,000 to â‚¦500,000 for youth aged 18-35. It focuses on de-radicalization through economic empowerment.</p>
 
       <br />
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">How to Win a Grant (It’s a Competition!)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">How to Win a Grant (Itâ€™s a Competition!)</h2>
       <p>Applying is not enough. Thousands apply; only hundreds win. Here is how to stand out:</p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li><strong>Solve a Real Problem:</strong> Don't just say "I sell shoes." Say "I provide affordable, durable footwear for school children in rural areas." Grants love impact.</li>
@@ -3438,13 +5007,13 @@ export const blogPosts: BlogPost[] = [
         <li>Valid ID + BVN/NIN (as requested)</li>
         <li>Business bank account details</li>
         <li>Pitch deck or 1-page business summary</li>
-        <li>6–12 months bank statements (for bigger grants or later stages)</li>
+        <li>6â€“12 months bank statements (for bigger grants or later stages)</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Avoid Grant Scams (Protect Your Money)</h2>
       <p>Unfortunately, scammers copy real grant names. Use these rules to stay safe:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Do not pay</strong> to “get shortlisted” or to “unlock” a form.</li>
+        <li><strong>Do not pay</strong> to â€œget shortlistedâ€ or to â€œunlockâ€ a form.</li>
         <li><strong>Verify the source:</strong> confirm from the official website and official social accounts.</li>
         <li><strong>Be careful with agents:</strong> consultants can help, but your login and submission should remain under your control.</li>
       </ul>
@@ -3454,7 +5023,7 @@ export const blogPosts: BlogPost[] = [
       <p>Not always, but CAC registration dramatically increases your eligibility and credibility. Many programs require it at some stage (especially for larger amounts).</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Are grants taxed in Nigeria?</h3>
       <p>Tax treatment can depend on the grant type and business structure. Keep records and speak with a professional if the amount is significant.</p>
-      <h3 class="text-xl font-bold mt-6 mb-3">What if I don’t win any grant?</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">What if I donâ€™t win any grant?</h3>
       <p>Keep applying, but also build a plan around sales and cashflow. Many businesses scale faster using customers + reinvestment, then add grants/loans later.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
@@ -3660,20 +5229,20 @@ export const blogPosts: BlogPost[] = [
           <tbody>
             <tr class="hover:bg-gray-50">
               <td class="border border-gray-300 p-3 font-medium">Kuda</td>
-              <td class="border border-gray-300 p-3">₦50,000/day</td>
-              <td class="border border-gray-300 p-3">₦200,000/day</td>
-              <td class="border border-gray-300 p-3">Up to ₦5,000,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦50,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦200,000/day</td>
+              <td class="border border-gray-300 p-3">Up to â‚¦5,000,000/day</td>
             </tr>
             <tr class="hover:bg-gray-50">
               <td class="border border-gray-300 p-3 font-medium">OPay</td>
-              <td class="border border-gray-300 p-3">₦50,000/day</td>
-              <td class="border border-gray-300 p-3">₦200,000/day</td>
-              <td class="border border-gray-300 p-3">Up to ₦5,000,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦50,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦200,000/day</td>
+              <td class="border border-gray-300 p-3">Up to â‚¦5,000,000/day</td>
             </tr>
             <tr class="hover:bg-gray-50">
               <td class="border border-gray-300 p-3 font-medium">Moniepoint</td>
-              <td class="border border-gray-300 p-3">₦50,000/day</td>
-              <td class="border border-gray-300 p-3">₦200,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦50,000/day</td>
+              <td class="border border-gray-300 p-3">â‚¦200,000/day</td>
               <td class="border border-gray-300 p-3">Unlimited (merchant)</td>
             </tr>
             <tr class="hover:bg-gray-50">
@@ -3697,7 +5266,7 @@ export const blogPosts: BlogPost[] = [
         <h3 class="text-xl font-bold text-gray-900 mb-2">Build Business Credibility Fast</h3>
         <p class="text-gray-700 mb-4">Get your business featured on 300+ news outlets. Our press release packages help Nigerian SMEs build trust with "As Seen On" proof that wins customers and investors.</p>
         <a href="/press-release" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-          View Press Release Packages →
+          View Press Release Packages â†’
         </a>
       </div>
 
@@ -3821,7 +5390,7 @@ export const blogPosts: BlogPost[] = [
       <p>Moniepoint offers up to 15% annual interest on savings for eligible business accounts. Rates vary by account type, balance tier, and may change. OPay offers similar rates through OWealth. Always check the app for current rates before deciding.</p>
 
       <h3 class="text-lg font-semibold mt-4 mb-2">What are the transaction limits for Kuda business account?</h3>
-      <p>Kuda transaction limits depend on your KYC level. Tier 1 (basic) allows up to ₦50,000 daily transfers. Tier 2 allows up to ₦200,000 daily. Tier 3 (full KYC with valid ID and address proof) allows up to ₦5,000,000 daily transfers.</p>
+      <p>Kuda transaction limits depend on your KYC level. Tier 1 (basic) allows up to â‚¦50,000 daily transfers. Tier 2 allows up to â‚¦200,000 daily. Tier 3 (full KYC with valid ID and address proof) allows up to â‚¦5,000,000 daily transfers.</p>
 
       <h3 class="text-lg font-semibold mt-4 mb-2">How do I open a Kuda bank account - what are the requirements?</h3>
       <p>To open a Kuda account: 1) Download the Kuda app from App Store or Play Store, 2) Enter your phone number and BVN for verification, 3) Take a selfie for identity confirmation, 4) Add a valid ID (NIN, passport, or driver's license) to unlock higher transaction limits. Basic accounts can be opened in minutes with just your BVN.</p>
@@ -3854,7 +5423,7 @@ export const blogPosts: BlogPost[] = [
         <p class="text-gray-700 mb-4">Join thousands of Nigerian businesses getting discovered by local customers. Free listing available with verified badges and WhatsApp integration.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -3933,7 +5502,7 @@ export const blogPosts: BlogPost[] = [
             "name": "What are the transaction limits for Kuda business account?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Kuda transaction limits depend on your KYC level. Tier 1 (basic) allows up to ₦50,000 daily transfers. Tier 2 allows up to ₦200,000 daily. Tier 3 (full KYC with valid ID and address proof) allows up to ₦5,000,000 daily transfers."
+              "text": "Kuda transaction limits depend on your KYC level. Tier 1 (basic) allows up to â‚¦50,000 daily transfers. Tier 2 allows up to â‚¦200,000 daily. Tier 3 (full KYC with valid ID and address proof) allows up to â‚¦5,000,000 daily transfers."
             }
           },
           {
@@ -4006,7 +5575,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Walk down any street in Lagos, Kano, or Onitsha, and you will see a POS umbrella. It has become the de-facto banking system for the average Nigerian. But with so many agents already, is it still profitable to start a <strong>POS business in Nigeria</strong> in 2025?</p>
       <p>The short answer: <strong>Yes</strong>, but only if you are strategic. Cash is still king in Nigeria, and traditional banks are reducing their physical branches, not increasing them. This gap creates a permanent demand for POS agents who serve as "human ATMs."</p>
-      <p>However, the game has changed. In 2025, transaction fees have evolved, and the cost of entry has shifted. This guide gives you the real numbers—no fluff.</p>
+      <p>However, the game has changed. In 2025, transaction fees have evolved, and the cost of entry has shifted. This guide gives you the real numbersâ€”no fluff.</p>
 
       <br />
 
@@ -4018,7 +5587,7 @@ export const blogPosts: BlogPost[] = [
           <thead>
             <tr class="bg-gray-100">
               <th class="border border-gray-300 p-2 text-left">Item</th>
-              <th class="border border-gray-300 p-2 text-left">Estimated Cost (₦)</th>
+              <th class="border border-gray-300 p-2 text-left">Estimated Cost (â‚¦)</th>
               <th class="border border-gray-300 p-2 text-left">Notes</th>
             </tr>
           </thead>
@@ -4045,7 +5614,7 @@ export const blogPosts: BlogPost[] = [
             </tr>
             <tr>
               <td class="border border-gray-300 p-2 font-bold">TOTAL</td>
-              <td class="border border-gray-300 p-2 font-bold">₦140,000 - ₦315,000</td>
+              <td class="border border-gray-300 p-2 font-bold">â‚¦140,000 - â‚¦315,000</td>
               <td class="border border-gray-300 p-2"></td>
             </tr>
           </tbody>
@@ -4059,22 +5628,22 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Moniepoint</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Cost:</strong> ~₦21,500 (Caution Fee). You don't own the device; you return it if you stop.</li>
-        <li><strong>Charges:</strong> 0.5% for withdrawals below ₦20k. Flat ₦100 for above ₦20k. Transfers are ₦20 flat.</li>
-        <li><strong>Target:</strong> Strict daily target of ~₦80,000 transaction value.</li>
+        <li><strong>Cost:</strong> ~â‚¦21,500 (Caution Fee). You don't own the device; you return it if you stop.</li>
+        <li><strong>Charges:</strong> 0.5% for withdrawals below â‚¦20k. Flat â‚¦100 for above â‚¦20k. Transfers are â‚¦20 flat.</li>
+        <li><strong>Target:</strong> Strict daily target of ~â‚¦80,000 transaction value.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. OPay</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Cost:</strong> Mini POS (~₦10,000), Android POS (~₦50,000 - ₦60,000).</li>
+        <li><strong>Cost:</strong> Mini POS (~â‚¦10,000), Android POS (~â‚¦50,000 - â‚¦60,000).</li>
         <li><strong>Charges:</strong> Similar to Moniepoint, but they often have aggressive bonuses.</li>
         <li><strong>Ownership:</strong> You own the device if you buy the Android version.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. PalmPay</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Cost:</strong> ~₦40,000 (Traditional) or ₦60,000 (Android) for purchase.</li>
-        <li><strong>Charges:</strong> Very competitive. Often ₦10 for deposits.</li>
+        <li><strong>Cost:</strong> ~â‚¦40,000 (Traditional) or â‚¦60,000 (Android) for purchase.</li>
+        <li><strong>Charges:</strong> Very competitive. Often â‚¦10 for deposits.</li>
       </ul>
 
       <br />
@@ -4084,24 +5653,24 @@ export const blogPosts: BlogPost[] = [
       
       <h3 class="text-xl font-bold mt-6 mb-3">The Charges (What You Charge Customers)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Withdrawal (₦1,000 - ₦5,000): ₦100 charge.</li>
-        <li>Withdrawal (₦6,000 - ₦10,000): ₦200 charge.</li>
-        <li>Deposit: ₦100 charge.</li>
+        <li>Withdrawal (â‚¦1,000 - â‚¦5,000): â‚¦100 charge.</li>
+        <li>Withdrawal (â‚¦6,000 - â‚¦10,000): â‚¦200 charge.</li>
+        <li>Deposit: â‚¦100 charge.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">The Profit Calculation</h3>
-      <p>If a customer withdraws ₦5,000:</p>
+      <p>If a customer withdraws â‚¦5,000:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>You charge: ₦100.</li>
-        <li>Bank charges you (0.5%): ₦25.</li>
-        <li><strong>Your Profit: ₦75.</strong></li>
+        <li>You charge: â‚¦100.</li>
+        <li>Bank charges you (0.5%): â‚¦25.</li>
+        <li><strong>Your Profit: â‚¦75.</strong></li>
       </ul>
 
-      <p><strong>Scenario:</strong> If you do 30 transactions a day (mixed withdrawals and deposits) with an average profit of ₦80 per transaction:</p>
-      <p>30 x ₦80 = <strong>₦2,400 daily profit.</strong></p>
-      <p>₦2,400 x 26 days = <strong>₦62,400 monthly profit.</strong></p>
+      <p><strong>Scenario:</strong> If you do 30 transactions a day (mixed withdrawals and deposits) with an average profit of â‚¦80 per transaction:</p>
+      <p>30 x â‚¦80 = <strong>â‚¦2,400 daily profit.</strong></p>
+      <p>â‚¦2,400 x 26 days = <strong>â‚¦62,400 monthly profit.</strong></p>
 
-      <p>This is for a "slow" location. Busy locations (markets, bus stops) easily do 100+ transactions daily, pushing monthly profits to <strong>₦200,000+</strong>.</p>
+      <p>This is for a "slow" location. Busy locations (markets, bus stops) easily do 100+ transactions daily, pushing monthly profits to <strong>â‚¦200,000+</strong>.</p>
 
       <br />
 
@@ -4121,12 +5690,12 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Keep proof:</strong> print receipts where possible and screenshot transaction references.</li>
         <li><strong>Verify properly:</strong> do not rely on customer screenshots; check your POS/app history and your balance.</li>
         <li><strong>Set expectations:</strong> some reversals are instant; others can take hours or days depending on bank/network.</li>
-        <li><strong>Escalate fast:</strong> save your provider’s support contacts and report issues with the transaction reference.</li>
+        <li><strong>Escalate fast:</strong> save your providerâ€™s support contacts and report issues with the transaction reference.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Daily Operating Checklist</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Start day with enough cash + bank balance (float) for your area’s demand.</li>
+        <li>Start day with enough cash + bank balance (float) for your areaâ€™s demand.</li>
         <li>Record cash-in/cash-out and reversals (a notebook is enough).</li>
         <li>Close day by reconciling totals and setting aside profit separately from float.</li>
       </ul>
@@ -4146,8 +5715,8 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Fraud & Security Tips</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Never accept suspicious transfers or “overpayments”.</li>
-        <li>Confirm credited alerts properly—don’t rely on screenshots.</li>
+        <li>Never accept suspicious transfers or â€œoverpaymentsâ€.</li>
+        <li>Confirm credited alerts properlyâ€”donâ€™t rely on screenshots.</li>
         <li>Close earlier in high-risk areas and avoid keeping large cash overnight.</li>
         <li>Use a secure kiosk setup and stay visible (busy spots reduce risk).</li>
       </ul>
@@ -4160,8 +5729,8 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">List Your POS Location</h2>
-      <p>Many people search “POS near me” when there are no ATMs. You can get discovered by listing your location:</p>
-      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your POS business on 9jaDirectory</a> and select the most relevant category such as <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>. If your POS spot is already listed, use “Claim this Business” to manage it.</p>
+      <p>Many people search â€œPOS near meâ€ when there are no ATMs. You can get discovered by listing your location:</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your POS business on 9jaDirectory</a> and select the most relevant category such as <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>. If your POS spot is already listed, use â€œClaim this Businessâ€ to manage it.</p>
     `,
     image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80",
     date: "Nov 25, 2025",
@@ -4202,8 +5771,8 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By Chinyere Okeke</strong> | <em>Updated: November 2025</em></p>
 
-      <p>You've seen them on Instagram: "Pre-order this bag for ₦15,000!" Meanwhile, you know that same bag costs ₦45,000 in Balogun market. The secret? <strong>Mini Importation</strong>.</p>
-      <p>Mini importation is the business of buying small quantities of goods directly from manufacturers in China (and other countries) and selling them in Nigeria for a massive profit. In 2025, you don't need a container or millions of Naira. You can start with as little as ₦50,000.</p>
+      <p>You've seen them on Instagram: "Pre-order this bag for â‚¦15,000!" Meanwhile, you know that same bag costs â‚¦45,000 in Balogun market. The secret? <strong>Mini Importation</strong>.</p>
+      <p>Mini importation is the business of buying small quantities of goods directly from manufacturers in China (and other countries) and selling them in Nigeria for a massive profit. In 2025, you don't need a container or millions of Naira. You can start with as little as â‚¦50,000.</p>
       <p>This guide will show you exactly how to source, pay, and ship goods from China to your doorstep in Lagos, Abuja, or Port Harcourt.</p>
 
       <br />
@@ -4269,22 +5838,22 @@ export const blogPosts: BlogPost[] = [
       <br />
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-      <p>Mini importation is one of the few businesses you can start with ₦50,000 and flip to ₦200,000 in two months. The key is research. Don't rush to buy.</p>
+      <p>Mini importation is one of the few businesses you can start with â‚¦50,000 and flip to â‚¦200,000 in two months. The key is research. Don't rush to buy.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Calculate Your Landed Cost (So You Don’t Lose Money)</h2>
-      <p>“Cheap on 1688” is not the real cost. Always calculate landed cost:</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Calculate Your Landed Cost (So You Donâ€™t Lose Money)</h2>
+      <p>â€œCheap on 1688â€ is not the real cost. Always calculate landed cost:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Product cost</strong> + local shipping (China) + international shipping + clearing/fees + inland delivery = <strong>landed cost</strong></li>
         <li>Selling price = landed cost + profit margin</li>
       </ul>
-      <p>If you skip this, you’ll underprice and end up working for free.</p>
+      <p>If you skip this, youâ€™ll underprice and end up working for free.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Step 6: Avoid Scams (Supplier Vetting)</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Start with a small test order before bulk.</li>
         <li>Request real photos/videos of the exact item (not catalog pictures).</li>
-        <li>Use a procurement agent or platform support for payments if you’re using 1688.</li>
-        <li>Be careful with “too good to be true” deals and rushed payment pressure.</li>
+        <li>Use a procurement agent or platform support for payments if youâ€™re using 1688.</li>
+        <li>Be careful with â€œtoo good to be trueâ€ deals and rushed payment pressure.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Step 7: Sell Faster (Distribution Strategy)</h2>
@@ -4305,7 +5874,7 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Air cargo:</strong> faster delivery, best for small/light items and quick turnaround.</li>
         <li><strong>Sea freight (groupage):</strong> cheaper for bulky goods, but slower and needs better cashflow planning.</li>
-        <li><strong>Risk tip:</strong> start with air for your first 1–2 shipments until you understand timelines and demand.</li>
+        <li><strong>Risk tip:</strong> start with air for your first 1â€“2 shipments until you understand timelines and demand.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Supplier Vetting & Scam Prevention</h2>
@@ -4314,7 +5883,7 @@ export const blogPosts: BlogPost[] = [
         <li>Order samples first for anything you plan to scale.</li>
         <li>Ask for real photos/videos of the exact product (not catalog images).</li>
         <li>Use suppliers with transaction history and verified ratings.</li>
-        <li>Do not rush large payments because of “last stock” pressure.</li>
+        <li>Do not rush large payments because of â€œlast stockâ€ pressure.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
@@ -4325,7 +5894,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">List Your Business (Build Trust)</h2>
       <p>Trust is the biggest barrier in Nigeria. Create a profile customers can verify and share:</p>
-      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the “Claim this Business” button.</p>
+      <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the â€œClaim this Businessâ€ button.</p>
 
       <p>Explore categories like <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for suppliers and logistics partners.</p>
     `,
@@ -4385,14 +5954,14 @@ export const blogPosts: BlogPost[] = [
       <p>The star performer of 2025. With a Year-to-Date (YTD) return of over <strong>130%</strong>, it has crushed inflation.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Focus:</strong> Residential estates and commercial properties.</li>
-        <li><strong>Price:</strong> ~₦418 per unit (Nov 2025).</li>
+        <li><strong>Price:</strong> ~â‚¦418 per unit (Nov 2025).</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. UPDC REIT</h3>
       <p>Backed by UAC Property Development Company. They own prime assets like Victoria Mall Plaza.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Yield:</strong> Consistent dividend payer (approx. 7-8% yield).</li>
-        <li><strong>Price:</strong> ~₦6.60 per unit. Very affordable for beginners.</li>
+        <li><strong>Price:</strong> ~â‚¦6.60 per unit. Very affordable for beginners.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Union Homes REIT</h3>
@@ -4403,7 +5972,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">How to Invest</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
         <li><strong>Open a CSCS Account:</strong> You need a stockbroker (e.g., Meristem, Chapel Hill, Stanbic IBTC Stockbrokers).</li>
-        <li><strong>Fund Your Account:</strong> Transfer as little as ₦5,000.</li>
+        <li><strong>Fund Your Account:</strong> Transfer as little as â‚¦5,000.</li>
         <li><strong>Place an Order:</strong> Search for "SFSREIT" or "UPDCREIT" and buy.</li>
       </ol>
 
@@ -4444,7 +6013,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Dividends:</strong> periodic payouts funded by rental income (and sometimes asset sales).</li>
         <li><strong>Price growth:</strong> if the REIT improves assets, raises occupancy, or the market re-rates the unit price.</li>
       </ul>
-      <p>Some REITs pay steady dividends with slow price changes. Others are more volatile. Always check the history and don’t rely on one month’s performance.</p>
+      <p>Some REITs pay steady dividends with slow price changes. Others are more volatile. Always check the history and donâ€™t rely on one monthâ€™s performance.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Beginner Mistakes to Avoid</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
@@ -4454,7 +6023,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Portfolio Tip (Simple Allocation)</h2>
-      <p>If you’re new, consider starting small and spreading risk. Many investors keep REITs as a portion of their overall portfolio alongside cash, fixed income, and (optionally) stocks. The right mix depends on your risk tolerance and timeline.</p>
+      <p>If youâ€™re new, consider starting small and spreading risk. Many investors keep REITs as a portion of their overall portfolio alongside cash, fixed income, and (optionally) stocks. The right mix depends on your risk tolerance and timeline.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">Can I buy Nigerian REITs as a beginner?</h3>
@@ -4473,17 +6042,17 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (More)</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">How often do REITs pay dividends?</h3>
-      <p>It depends on the REIT’s policy and performance. Some pay periodically, others may pay less consistently. Always check dividend history and don’t assume future payouts will match the past.</p>
+      <p>It depends on the REITâ€™s policy and performance. Some pay periodically, others may pay less consistently. Always check dividend history and donâ€™t assume future payouts will match the past.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Can I lose money with REITs?</h3>
       <p>Yes. Unit prices can drop and dividends can reduce. REITs are investments, not guaranteed savings. Diversify and invest money you can hold long-term.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">What should I check before buying?</h3>
       <p>Assets owned, occupancy, dividend history, fees, and liquidity. If a REIT is hard to sell quickly, plan to hold it longer.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Quick Start (Beginner-Friendly)</h2>
-      <p>If you’re new, don’t overthink it. Start with a small amount, learn how the buy/sell process works with your broker, and focus on consistency over “timing the market”.</p>
+      <p>If youâ€™re new, donâ€™t overthink it. Start with a small amount, learn how the buy/sell process works with your broker, and focus on consistency over â€œtiming the marketâ€.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Buy a small position and track dividends and price movement.</li>
-        <li>Read the REIT’s reports when available (assets, occupancy, fees).</li>
+        <li>Read the REITâ€™s reports when available (assets, occupancy, fees).</li>
         <li>Hold long-term if your goal is income and stability.</li>
       </ul>
 
@@ -4494,8 +6063,8 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Risk Management</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Don’t buy only because the dividend looks high—check history and asset quality.</li>
-        <li>Diversify: don’t put all your money in one REIT or one asset class.</li>
+        <li>Donâ€™t buy only because the dividend looks highâ€”check history and asset quality.</li>
+        <li>Diversify: donâ€™t put all your money in one REIT or one asset class.</li>
         <li>Plan liquidity: if you may need cash soon, avoid positions that trade slowly.</li>
       </ul>
 
@@ -4530,7 +6099,7 @@ export const blogPosts: BlogPost[] = [
         "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
       "datePublished": "2025-11-22",
-      "description": "Want to invest in real estate with ₦50,000? REITs allow you to own a piece of premium property and earn dividends."
+      "description": "Want to invest in real estate with â‚¦50,000? REITs allow you to own a piece of premium property and earn dividends."
     })
   },
 
@@ -4542,7 +6111,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: November 2025</em></p>
 
       <p>With the Naira constantly fluctuating, earning in foreign currency (USD/GBP) is the best hedge against inflation. One of the most accessible ways to do this is through <strong>Foodstuff Export</strong>.</p>
-      <p>Nigerians in the Diaspora (UK, USA, Canada) are craving home food—Yam, Garri, Egusi, Palm Oil, and Dried Fish. The demand is massive. Here is how you can tap into it in 2025.</p>
+      <p>Nigerians in the Diaspora (UK, USA, Canada) are craving home foodâ€”Yam, Garri, Egusi, Palm Oil, and Dried Fish. The demand is massive. Here is how you can tap into it in 2025.</p>
 
       <br />
 
@@ -4552,7 +6121,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>CAC Registration:</strong> Limited Liability Company is preferred by foreign partners.</li>
         <li><strong>NEPC License:</strong> Register with the Nigerian Export Promotion Council.
           <ul class="list-disc pl-5 mt-1">
-            <li>Cost: ~₦13,500.</li>
+            <li>Cost: ~â‚¦13,500.</li>
             <li>Timeline: 24-48 hours (Online).</li>
           </ul>
         </li>
@@ -4596,7 +6165,7 @@ export const blogPosts: BlogPost[] = [
         <li>Keep batch records and supplier traceability where possible.</li>
       </ul>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Documentation (Don’t Skip This)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Documentation (Donâ€™t Skip This)</h2>
       <p>Exact documents vary by destination and product type, but common requirements include:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Proforma/commercial invoice</li>
@@ -4608,11 +6177,11 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Paid Safely</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Start with <strong>small orders</strong> and build trust.</li>
-        <li>Use deposits and clear payment terms (don’t ship on promises).</li>
+        <li>Use deposits and clear payment terms (donâ€™t ship on promises).</li>
         <li>Work with buyers who have references or established stores.</li>
       </ul>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Landed Cost (Don’t Guess)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Landed Cost (Donâ€™t Guess)</h2>
       <p>Export profit can disappear when you ignore landed cost. Your pricing should cover:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Product cost + processing/cleaning</li>
@@ -4721,7 +6290,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Solar power Nigeria pricing for businesses: 5kVA and 10kVA system costs, battery options, and top installers for 2025 with sizing tips.",
     content: `
       <p><strong>By 9jaDirectory Tech Team</strong> | <em>Updated: November 2025</em></p>
-      <p>With petrol hitting ₦1,200/liter and the grid collapsing weekly, running a business on a generator is financial suicide. In 2025, <strong>Solar Energy</strong> is not a luxury; it is a survival tool.</p>
+      <p>With petrol hitting â‚¦1,200/liter and the grid collapsing weekly, running a business on a generator is financial suicide. In 2025, <strong>Solar Energy</strong> is not a luxury; it is a survival tool.</p>
       <p>But how much does it really cost? And who can you trust to install it? We break down the market rates.</p>
       <br />
       <h2 class="text-2xl font-bold mt-8 mb-4">Cost Breakdown (2025 Market Estimates)</h2>
@@ -4729,16 +6298,16 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">The "Starter" Package (3.5kVA - 5kVA)</h3>
       <p>Suitable for: Barbershops, Pharmacies, Small Offices (Laptops, Fans, Lighting, 1 Fridge).</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Inverter (5kVA Hybrid):</strong> ₦400,000 - ₦800,000.</li>
-        <li><strong>Batteries (Lithium Ion - Recommended):</strong> ₦1.2M - ₦2.5M (Lasts 10 years).</li>
-        <li><strong>Batteries (Tubular / Gel - Cheaper):</strong> ₦300,000 each (Need 4 = ₦1.2M). Lasts 2-3 years.</li>
-        <li><strong>Solar Panels (4 - 6 units):</strong> ₦600,000.</li>
-        <li><strong>Total Estimated Cost:</strong> <strong>₦2.5 Million - ₦4 Million.</strong></li>
+        <li><strong>Inverter (5kVA Hybrid):</strong> â‚¦400,000 - â‚¦800,000.</li>
+        <li><strong>Batteries (Lithium Ion - Recommended):</strong> â‚¦1.2M - â‚¦2.5M (Lasts 10 years).</li>
+        <li><strong>Batteries (Tubular / Gel - Cheaper):</strong> â‚¦300,000 each (Need 4 = â‚¦1.2M). Lasts 2-3 years.</li>
+        <li><strong>Solar Panels (4 - 6 units):</strong> â‚¦600,000.</li>
+        <li><strong>Total Estimated Cost:</strong> <strong>â‚¦2.5 Million - â‚¦4 Million.</strong></li>
       </ul>
       <h3 class="text-xl font-bold mt-6 mb-3">The "Power User" Package (10kVA)</h3>
       <p>Suitable for: Supermarkets, Restaurants (Freezers), Tech Hubs (ACs).</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Total Estimated Cost:</strong> ₦6 Million - ₦10 Million.</li>
+        <li><strong>Total Estimated Cost:</strong> â‚¦6 Million - â‚¦10 Million.</li>
       </ul>
       <br />
       <h2 class="text-2xl font-bold mt-8 mb-4">Lithium vs. Tubular Batteries: The Truth</h2>
@@ -4750,7 +6319,7 @@ export const blogPosts: BlogPost[] = [
       <p>In 2025, Lithium is the only smart business choice.</p>
       <br />
       <h2 class="text-2xl font-bold mt-8 mb-4">Financing Options</h2>
-      <p>Can't pay ₦3M at once? Companies like <strong>SunKing</strong>, <strong>Imperium (Sterling Bank)</strong>, and <strong>Lumos</strong> offer "Lease-to-Own" models where you pay monthly.</p>
+      <p>Can't pay â‚¦3M at once? Companies like <strong>SunKing</strong>, <strong>Imperium (Sterling Bank)</strong>, and <strong>Lumos</strong> offer "Lease-to-Own" models where you pay monthly.</p>
       <br />
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>Solar is an asset. A generator is a liability. Make the switch.</p>
@@ -4776,17 +6345,17 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Maintenance Tips</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Clean panels regularly (dust reduces output).</li>
-        <li>Don’t overload the inverter—add capacity before expanding equipment.</li>
+        <li>Donâ€™t overload the inverterâ€”add capacity before expanding equipment.</li>
         <li>Keep ventilation around batteries and inverter to reduce heat damage.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">How to Size a Solar System (Simple Method)</h2>
-      <p>Most people overpay because they don’t calculate their load. A simple way to estimate:</p>
+      <p>Most people overpay because they donâ€™t calculate their load. A simple way to estimate:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>List appliances + their wattage (W)</li>
         <li>Estimate how many hours/day you use each</li>
-        <li>Total watt-hours (Wh) = watts × hours</li>
-        <li>Add a safety buffer (10–25%)</li>
+        <li>Total watt-hours (Wh) = watts Ã— hours</li>
+        <li>Add a safety buffer (10â€“25%)</li>
       </ul>
       <p>This helps you and the installer agree on a realistic inverter/battery setup for your home or business.</p>
 
@@ -4796,10 +6365,10 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Inverter quality:</strong> pure sine wave, hybrid inverters, and brand reliability matter.</li>
         <li><strong>Panel capacity:</strong> more panels = faster charging and longer runtime (but higher cost).</li>
         <li><strong>Installation quality:</strong> wiring, breakers, earthing, and proper mounting protect your investment.</li>
-        <li><strong>Warranty & support:</strong> cheap systems become expensive when there’s no after-sales support.</li>
+        <li><strong>Warranty & support:</strong> cheap systems become expensive when thereâ€™s no after-sales support.</li>
       </ul>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid “Fake Capacity”)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid â€œFake Capacityâ€)</h2>
       <p>Before paying a vendor, ask these questions:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>What exact brands/models are you installing? (Request model numbers.)</li>
@@ -4824,7 +6393,7 @@ export const blogPosts: BlogPost[] = [
       <p>Lithium often offers longer lifespan and better performance, but price varies widely. Compare warranty, cycle life, and after-sales support before deciding.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Payback vs Generator (Why Solar Can Be Cheaper Long-Term)</h2>
-      <p>Many businesses burn cash daily on fuel, repairs, and downtime. Solar can reduce recurring fuel spend and stabilize operations. The best approach is to compare monthly generator spend to a solar payment plan or upfront cost, then estimate payback over 12–36 months.</p>
+      <p>Many businesses burn cash daily on fuel, repairs, and downtime. Solar can reduce recurring fuel spend and stabilize operations. The best approach is to compare monthly generator spend to a solar payment plan or upfront cost, then estimate payback over 12â€“36 months.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">How do I maintain a solar system?</h3>
@@ -4839,7 +6408,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Build Visibility (If You Sell Solar)</h2>
-      <p>If you’re an installer or solar vendor, create a profile clients can verify and share:</p>
+      <p>If youâ€™re an installer or solar vendor, create a profile clients can verify and share:</p>
       <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your solar business on 9jaDirectory</a> and add photos, service areas, and contact details.</p>
       <h2 class="text-2xl font-bold mt-8 mb-4">Installer Checklist (Avoid Bad Jobs)</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
@@ -4897,31 +6466,31 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">1. Data Science & AI Engineering</h3>
       <p>With the AI boom, everyone wants to integrate ChatGPT or analyze data.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Average Salary:</strong> ₦600k - ₦1.5M / month (Junior - Mid).</li>
+        <li><strong>Average Salary:</strong> â‚¦600k - â‚¦1.5M / month (Junior - Mid).</li>
         <li><strong>Tools:</strong> Python, SQL, TensorFlow.</li>
       </ul>
       <h3 class="text-xl font-bold mt-6 mb-3">2. Cybersecurity</h3>
       <p>As digital fraud increases, banks and fintechs are paying premium for protection.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Average Salary:</strong> ₦500k - ₦2M / month.</li>
+        <li><strong>Average Salary:</strong> â‚¦500k - â‚¦2M / month.</li>
         <li><strong>Roles:</strong> Penetration Tester, SOC Analyst.</li>
       </ul>
       <h3 class="text-xl font-bold mt-6 mb-3">3. Cloud Computing (DevOps)</h3>
       <p>Helping companies move their servers to the cloud (AWS, Azure).</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Average Salary:</strong> ₦800k - ₦2.5M / month.</li>
+        <li><strong>Average Salary:</strong> â‚¦800k - â‚¦2.5M / month.</li>
         <li><strong>Difficulty:</strong> Hard, but very rewarding.</li>
       </ul>
       <h3 class="text-xl font-bold mt-6 mb-3">4. Product Design (UI / UX)</h3>
       <p>Designing the apps we use every day.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Average Salary:</strong> ₦300k - ₦1M / month.</li>
+        <li><strong>Average Salary:</strong> â‚¦300k - â‚¦1M / month.</li>
         <li><strong>Tools:</strong> Figma, Adobe XD.</li>
       </ul>
       <h3 class="text-xl font-bold mt-6 mb-3">5. Software Development (Backend / Frontend)</h3>
       <p>Still the king of tech jobs.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Average Salary:</strong> ₦400k - ₦1.5M / month.</li>
+        <li><strong>Average Salary:</strong> â‚¦400k - â‚¦1.5M / month.</li>
         <li><strong>Languages:</strong> JavaScript (React/Node), Rust, Go.</li>
       </ul>
       <br />
@@ -4949,7 +6518,7 @@ export const blogPosts: BlogPost[] = [
       <p>Quality assurance is underrated. Great testers help teams ship faster with fewer bugs.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Tools:</strong> Jira, Postman, Playwright/Cypress (for automation).</li>
-        <li><strong>Path:</strong> manual testing → automation → QA lead.</li>
+        <li><strong>Path:</strong> manual testing â†’ automation â†’ QA lead.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">8. Data Analytics (Business Intelligence)</h3>
@@ -4983,9 +6552,9 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">90-Day Roadmap (From Learning to Income)</h2>
       <p>If you want to earn from a digital skill, focus on speed to a simple portfolio:</p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li><strong>Days 1–30:</strong> learn basics + complete 3 small practice projects.</li>
-        <li><strong>Days 31–60:</strong> build 2 portfolio projects that solve real business problems.</li>
-        <li><strong>Days 61–90:</strong> outreach daily, get 1–2 paid clients, collect testimonials.</li>
+        <li><strong>Days 1â€“30:</strong> learn basics + complete 3 small practice projects.</li>
+        <li><strong>Days 31â€“60:</strong> build 2 portfolio projects that solve real business problems.</li>
+        <li><strong>Days 61â€“90:</strong> outreach daily, get 1â€“2 paid clients, collect testimonials.</li>
       </ol>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Portfolio Checklist (What Clients Want to See)</h2>
@@ -5001,23 +6570,23 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">How do I get clients with no experience?</h3>
-      <p>Build 2–3 portfolio projects for local businesses (even as demos), then reach out with a clear offer and proof. Your first goal is testimonials, not perfection.</p>
+      <p>Build 2â€“3 portfolio projects for local businesses (even as demos), then reach out with a clear offer and proof. Your first goal is testimonials, not perfection.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Should I learn many skills at once?</h3>
-      <p>No. Choose one skill for 60–90 days, get competent, then add supporting skills later. Depth beats scattered learning.</p>
+      <p>No. Choose one skill for 60â€“90 days, get competent, then add supporting skills later. Depth beats scattered learning.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Client Acquisition (3 Channels That Work)</h2>
       <p>Most people learn skills but never market them. Use a simple multi-channel approach:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Warm network:</strong> friends, classmates, church/mosque groups, and local business owners.</li>
         <li><strong>Partnerships:</strong> collaborate with agencies and vendors who already serve your target clients.</li>
-        <li><strong>Outbound:</strong> daily outreach to 5–10 businesses with a clear offer and one proof example.</li>
+        <li><strong>Outbound:</strong> daily outreach to 5â€“10 businesses with a clear offer and one proof example.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Simple Outreach Message</h3>
-      <p>“Hi [Name], I help [who] get [result] using [how]. I noticed [specific issue]. If you want, I can share 2 quick improvements and a price range.”</p>
+      <p>â€œHi [Name], I help [who] get [result] using [how]. I noticed [specific issue]. If you want, I can share 2 quick improvements and a price range.â€</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Pricing Tip</h3>
-      <p>Start with a “starter package” price you can deliver confidently, then move to higher fees when you have proof. Underpricing traps you with stressful clients and no time to improve.</p>
+      <p>Start with a â€œstarter packageâ€ price you can deliver confidently, then move to higher fees when you have proof. Underpricing traps you with stressful clients and no time to improve.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Tools & Learning Resources</h2>
       <p>Speed matters. Use simple resources and learn by building:</p>
@@ -5033,15 +6602,15 @@ export const blogPosts: BlogPost[] = [
       <p><a href="/add-business" class="text-green-600 hover:underline font-semibold">List your service on 9jaDirectory</a> under <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> or <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>.</p>
       <h2 class="text-2xl font-bold mt-8 mb-4">90-Day Plan (If You Want Results Fast)</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li><strong>Weeks 1–2:</strong> learn the basics and finish 2 tutorials end-to-end.</li>
-        <li><strong>Weeks 3–6:</strong> build 2 portfolio projects for Nigerian business use-cases.</li>
-        <li><strong>Weeks 7–12:</strong> do daily outreach, deliver 1–2 small paid jobs, and collect testimonials.</li>
+        <li><strong>Weeks 1â€“2:</strong> learn the basics and finish 2 tutorials end-to-end.</li>
+        <li><strong>Weeks 3â€“6:</strong> build 2 portfolio projects for Nigerian business use-cases.</li>
+        <li><strong>Weeks 7â€“12:</strong> do daily outreach, deliver 1â€“2 small paid jobs, and collect testimonials.</li>
       </ol>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
       <p>High-paying skills pay when you combine competence with marketing. Build proof, talk to real buyers, and improve with every project.</p>
       <h2 class="text-2xl font-bold mt-8 mb-4">Skill Selection Tip</h2>
-      <p>If you’re unsure where to start, pick a skill you can practice consistently: design for creatives, development for builders, data for analytical minds, marketing for communicators. Consistency beats the “perfect” choice.</p>
+      <p>If youâ€™re unsure where to start, pick a skill you can practice consistently: design for creatives, development for builders, data for analytical minds, marketing for communicators. Consistency beats the â€œperfectâ€ choice.</p>
     `,
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
     date: "Nov 19, 2025",
@@ -5082,41 +6651,41 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory E-commerce Team</strong> | <em>Updated: November 2025</em></p>
 
-      <p>Dropshipping is a simple business model: you market and sell a product, then a supplier fulfills the order. You don’t buy inventory upfront, so you can start lean—even as a student or full-time worker.</p>
+      <p>Dropshipping is a simple business model: you market and sell a product, then a supplier fulfills the order. You donâ€™t buy inventory upfront, so you can start leanâ€”even as a student or full-time worker.</p>
 
       <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-        <p class="text-sm text-green-900"><strong>Reality check:</strong> dropshipping is not “free money”. Your success depends on product selection, supplier reliability, customer trust, and delivery speed—especially in Nigeria where cash-on-delivery and logistics can make or break you.</p>
+        <p class="text-sm text-green-900"><strong>Reality check:</strong> dropshipping is not â€œfree moneyâ€. Your success depends on product selection, supplier reliability, customer trust, and delivery speedâ€”especially in Nigeria where cash-on-delivery and logistics can make or break you.</p>
       </div>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">What Dropshipping Is (and What It Isn’t)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">What Dropshipping Is (and What It Isnâ€™t)</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>It is:</strong> marketing + taking orders + coordinating fulfillment.</li>
-        <li><strong>It isn’t:</strong> a way to avoid customer service. Customers will still call <em>you</em> when delivery is late.</li>
-        <li><strong>It isn’t:</strong> a “no capital” business forever. You’ll need data, ads, and sometimes a small buffer for logistics.</li>
+        <li><strong>It isnâ€™t:</strong> a way to avoid customer service. Customers will still call <em>you</em> when delivery is late.</li>
+        <li><strong>It isnâ€™t:</strong> a â€œno capitalâ€ business forever. Youâ€™ll need data, ads, and sometimes a small buffer for logistics.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">How It Works (Simple Example)</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li>You find a supplier selling a shoe for <strong>₦5,000</strong>.</li>
-        <li>You list it on WhatsApp/Instagram for <strong>₦8,000</strong>.</li>
-        <li>A customer pays you <strong>₦8,000</strong> (or pays a deposit + delivery fee).</li>
-        <li>You pay the supplier <strong>₦5,000</strong>.</li>
+        <li>You find a supplier selling a shoe for <strong>â‚¦5,000</strong>.</li>
+        <li>You list it on WhatsApp/Instagram for <strong>â‚¦8,000</strong>.</li>
+        <li>A customer pays you <strong>â‚¦8,000</strong> (or pays a deposit + delivery fee).</li>
+        <li>You pay the supplier <strong>â‚¦5,000</strong>.</li>
         <li>The supplier ships it (or hands it to a dispatch rider).</li>
-        <li>You keep the margin (<strong>₦3,000</strong>) minus delivery/ads.</li>
+        <li>You keep the margin (<strong>â‚¦3,000</strong>) minus delivery/ads.</li>
       </ol>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: Start Dropshipping in 7 Days</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1) Pick a niche you can win</h3>
-      <p>Don’t sell “everything”. Choose a niche where you can post daily and build trust:</p>
+      <p>Donâ€™t sell â€œeverythingâ€. Choose a niche where you can post daily and build trust:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Phones & accessories, skincare, sneakers, kids items, hair products, kitchen gadgets.</li>
-        <li>Start with 1–2 categories, then expand after you understand demand.</li>
+        <li>Start with 1â€“2 categories, then expand after you understand demand.</li>
       </ul>
       <p>For inspiration, browse businesses in <a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2) Find reliable suppliers (local first)</h3>
-      <p>Your supplier is your “warehouse”. Aim for suppliers in your city/state so delivery is faster and returns are easier.</p>
+      <p>Your supplier is your â€œwarehouseâ€. Aim for suppliers in your city/state so delivery is faster and returns are easier.</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Ask for <strong>real pictures/videos</strong> and verify stock before you take payment.</li>
         <li>Negotiate a consistent price and agree on delivery timelines.</li>
@@ -5133,11 +6702,11 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">4) Define your order & delivery workflow</h3>
       <p>Make fulfillment predictable. A simple workflow:</p>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li>Customer orders → confirm size/color/address.</li>
-        <li>Confirm stock with supplier → reserve item.</li>
-        <li>Collect payment (or delivery fee + deposit) → send receipt.</li>
-        <li>Book dispatch → share tracking/call rider.</li>
-        <li>After delivery → request review + referral.</li>
+        <li>Customer orders â†’ confirm size/color/address.</li>
+        <li>Confirm stock with supplier â†’ reserve item.</li>
+        <li>Collect payment (or delivery fee + deposit) â†’ send receipt.</li>
+        <li>Book dispatch â†’ share tracking/call rider.</li>
+        <li>After delivery â†’ request review + referral.</li>
       </ol>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Fulfillment & Logistics (Nigeria)</h2>
@@ -5145,28 +6714,28 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Charge delivery upfront to reduce fake orders (especially for cash-on-delivery).</li>
         <li>Use riders/logistics companies from <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a> for same-day delivery.</li>
-        <li>Have a clear return policy (e.g., returns within 24–48 hours if unused).</li>
+        <li>Have a clear return policy (e.g., returns within 24â€“48 hours if unused).</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Pricing & Profit (Simple Formula)</h2>
-      <p>Use this formula to avoid “selling at a loss”:</p>
+      <p>Use this formula to avoid â€œselling at a lossâ€:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Selling price</strong> = supplier price + delivery + packaging + ad cost + profit margin.</li>
-        <li>Target <strong>20%–40%</strong> margin for fast-moving products, higher for unique products.</li>
+        <li>Target <strong>20%â€“40%</strong> margin for fast-moving products, higher for unique products.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Marketing That Works in 2025</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Short videos:</strong> unboxing, “before/after”, customer testimonials.</li>
+        <li><strong>Short videos:</strong> unboxing, â€œbefore/afterâ€, customer testimonials.</li>
         <li><strong>WhatsApp broadcast:</strong> weekly deals + restocks.</li>
         <li><strong>Micro-influencers:</strong> partner with creators in your niche.</li>
-        <li><strong>Local SEO:</strong> get found when people search “{product} near me”.</li>
+        <li><strong>Local SEO:</strong> get found when people search â€œ{product} near meâ€.</li>
       </ul>
-      <p>To build trust, create a public profile people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the “Claim this Business” button on the listing page.</p>
+      <p>To build trust, create a public profile people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory (free)</a>. If your business is already listed, search for it and use the â€œClaim this Businessâ€ button on the listing page.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes to Avoid</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Posting supplier photos without proof—customers want real videos.</li>
+        <li>Posting supplier photos without proofâ€”customers want real videos.</li>
         <li>Taking full payment before confirming stock.</li>
         <li>Undercharging and forgetting delivery/ads.</li>
         <li>Ignoring customer service and follow-up.</li>
@@ -5174,7 +6743,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
       <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC to start?</h3>
-      <p>You can start small without CAC, but once you’re consistent, registration helps with trust, business accounts, and payment integrations.</p>
+      <p>You can start small without CAC, but once youâ€™re consistent, registration helps with trust, business accounts, and payment integrations.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Is cash-on-delivery safe?</h3>
       <p>It can work, but reduce risk by collecting delivery fees upfront and confirming phone numbers before dispatch.</p>
       <h3 class="text-xl font-bold mt-6 mb-3">Where do I find suppliers?</h3>
@@ -5198,7 +6767,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Scaling to 100 Orders/Month (Simple System)</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4">
-        <li><strong>Week 1:</strong> pick 1 winning product and create 10–15 short videos showing it in use.</li>
+        <li><strong>Week 1:</strong> pick 1 winning product and create 10â€“15 short videos showing it in use.</li>
         <li><strong>Week 2:</strong> run small tests and track cost per WhatsApp inquiry.</li>
         <li><strong>Week 3:</strong> improve your offer (bundle, free delivery threshold, bonus item) and add testimonials.</li>
         <li><strong>Week 4:</strong> scale only what works, and build repeat buyers with broadcast lists and after-sales follow-up.</li>
@@ -5261,10 +6830,10 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">What to Look For in a Coworking Space (Lagos)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Power reliability:</strong> inverter + generator + backup plan.</li>
-      <li><strong>Internet:</strong> true fiber, not “shared router”. Ask about speed at peak hours.</li>
+      <li><strong>Internet:</strong> true fiber, not â€œshared routerâ€. Ask about speed at peak hours.</li>
       <li><strong>Noise level:</strong> open-plan vs quiet zones vs private offices.</li>
       <li><strong>Meeting rooms:</strong> booking rules, included hours, extra charges.</li>
-      <li><strong>Location:</strong> commute time matters—traffic can kill productivity.</li>
+      <li><strong>Location:</strong> commute time mattersâ€”traffic can kill productivity.</li>
       <li><strong>Community:</strong> events, founders, freelancers, partnerships.</li>
     </ul>
 
@@ -5272,21 +6841,21 @@ export const blogPosts: BlogPost[] = [
     <p>Most premium hubs cluster around these zones:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Ikeja/Maryland:</strong> mainland accessibility, corporate vibe.</li>
-      <li><strong>Yaba:</strong> “tech valley”, startup energy, frequent events.</li>
+      <li><strong>Yaba:</strong> â€œtech valleyâ€, startup energy, frequent events.</li>
       <li><strong>Lekki/VI:</strong> premium offices, agencies, consultants, proximity to clients.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Typical Pricing (2025 Ranges)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Day pass:</strong> ₦5,000–₦15,000/day (varies by location and access).</li>
-      <li><strong>Hot desk:</strong> ₦35,000–₦90,000/month.</li>
-      <li><strong>Dedicated desk:</strong> ₦60,000–₦150,000/month.</li>
-      <li><strong>Private office:</strong> ₦150,000–₦800,000+/month depending on size and location.</li>
+      <li><strong>Day pass:</strong> â‚¦5,000â€“â‚¦15,000/day (varies by location and access).</li>
+      <li><strong>Hot desk:</strong> â‚¦35,000â€“â‚¦90,000/month.</li>
+      <li><strong>Dedicated desk:</strong> â‚¦60,000â€“â‚¦150,000/month.</li>
+      <li><strong>Private office:</strong> â‚¦150,000â€“â‚¦800,000+/month depending on size and location.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose the Right Space (Fast Checklist)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li>Visit at peak hours (11am–3pm) to test noise and internet.</li>
+      <li>Visit at peak hours (11amâ€“3pm) to test noise and internet.</li>
       <li>Ask about backup power and how often outages happen.</li>
       <li>Confirm meeting room rules and printing costs.</li>
       <li>Check parking availability and security.</li>
@@ -5325,20 +6894,20 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Questions to Ask During a Tour</h2>
     <p>Do not buy a monthly plan without a tour (or at least a day pass). Ask these questions and get clear answers:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Internet:</strong> “What is the minimum guaranteed speed at 1pm?” and “Is there a backup ISP?”</li>
-      <li><strong>Power:</strong> “How many hours of generator per day?” and “Is there an inverter for switchover?”</li>
-      <li><strong>Access:</strong> “Is it 24/7 or fixed hours?” and “Are weekends included?”</li>
-      <li><strong>Meeting rooms:</strong> “How many hours are included per month?” and “What is the hourly rate after that?”</li>
+      <li><strong>Internet:</strong> â€œWhat is the minimum guaranteed speed at 1pm?â€ and â€œIs there a backup ISP?â€</li>
+      <li><strong>Power:</strong> â€œHow many hours of generator per day?â€ and â€œIs there an inverter for switchover?â€</li>
+      <li><strong>Access:</strong> â€œIs it 24/7 or fixed hours?â€ and â€œAre weekends included?â€</li>
+      <li><strong>Meeting rooms:</strong> â€œHow many hours are included per month?â€ and â€œWhat is the hourly rate after that?â€</li>
       <li><strong>Hidden fees:</strong> printing, guest passes, lockers, AC restrictions, late-night access.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Simple Scorecard (Pick the Best Option Fast)</h2>
-    <p>Rate each space from 1–5 on: <strong>Power</strong>, <strong>Internet</strong>, <strong>Noise</strong>, <strong>Location</strong>, <strong>Community</strong>, and <strong>Value</strong>. The best space is usually the one that scores highest on power + internet + commute time.</p>
+    <p>Rate each space from 1â€“5 on: <strong>Power</strong>, <strong>Internet</strong>, <strong>Noise</strong>, <strong>Location</strong>, <strong>Community</strong>, and <strong>Value</strong>. The best space is usually the one that scores highest on power + internet + commute time.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Save Money (Without Losing Quality)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Buy a day pass first, then negotiate monthly after 2–3 visits.</li>
-      <li>Ask for off-peak plans if you only need 2–3 days/week.</li>
+      <li>Buy a day pass first, then negotiate monthly after 2â€“3 visits.</li>
+      <li>Ask for off-peak plans if you only need 2â€“3 days/week.</li>
       <li>If you need meeting rooms, choose a plan that includes hours (pay-as-you-go gets expensive).</li>
       <li>Consider a 3-month payment plan if it comes with a discount.</li>
     </ul>
@@ -5349,7 +6918,7 @@ export const blogPosts: BlogPost[] = [
     <h3 class="text-xl font-bold mt-6 mb-3">Should I choose hot desk or dedicated desk?</h3>
     <p>Hot desk is cheaper and flexible. Dedicated desk makes sense if you go daily, need a fixed setup, or want to leave equipment safely.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Can I get clients from coworking spaces?</h3>
-    <p>Yes—especially if you attend community events and collaborate. Treat it like networking: be visible, helpful, and consistent.</p>
+    <p>Yesâ€”especially if you attend community events and collaborate. Treat it like networking: be visible, helpful, and consistent.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Remote Work Routine (Use Coworking Properly)</h2>
     <p>To get real value from coworking, plan your week:</p>
@@ -5419,15 +6988,15 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Networking events Lagos 2025: where to meet investors, how to network, and follow-up tips that convert for founders and SMEs.",
     content: `
     <p><strong>By 9jaDirectory Events</strong> | <em>Updated: November 2025</em></p>
-    <p>Lagos runs on relationships. You can have a great product, but partnerships, distribution, and funding often come from the people you meet. The good news: networking is a skill—and you can learn it.</p>
+    <p>Lagos runs on relationships. You can have a great product, but partnerships, distribution, and funding often come from the people you meet. The good news: networking is a skillâ€”and you can learn it.</p>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-      <p class="text-sm text-green-900"><strong>Goal:</strong> don’t “attend events”. Build a pipeline of relationships—customers, partners, mentors, and potential investors—then follow up consistently.</p>
+      <p class="text-sm text-green-900"><strong>Goal:</strong> donâ€™t â€œattend eventsâ€. Build a pipeline of relationshipsâ€”customers, partners, mentors, and potential investorsâ€”then follow up consistently.</p>
     </div>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Where to Find Networking Events in Lagos</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Coworking hubs:</strong> founders’ mixers, demo days, community meetups (check hubs in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>).</li>
+      <li><strong>Coworking hubs:</strong> foundersâ€™ mixers, demo days, community meetups (check hubs in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>).</li>
       <li><strong>Industry associations:</strong> chambers of commerce, trade groups, professional bodies.</li>
       <li><strong>Online calendars:</strong> Eventbrite, LinkedIn Events, X (Twitter) communities.</li>
       <li><strong>Universities & tech communities:</strong> product meetups, hackathons, career fairs.</li>
@@ -5443,24 +7012,24 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Network Like a Pro (Nigeria Edition)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li><strong>Arrive with a target:</strong> “I want 5 founder conversations + 2 potential partnerships.”</li>
-      <li><strong>Use a 1-sentence intro:</strong> “I help [who] get [result] using [how].”</li>
-      <li><strong>Ask better questions:</strong> “What’s your biggest challenge with X?”</li>
-      <li><strong>Capture contacts:</strong> save WhatsApp + LinkedIn; add a note (“met at Yaba meetup”).</li>
-      <li><strong>Follow up within 24–48 hours:</strong> send value (resource, intro, idea), not “How far?”</li>
+      <li><strong>Arrive with a target:</strong> â€œI want 5 founder conversations + 2 potential partnerships.â€</li>
+      <li><strong>Use a 1-sentence intro:</strong> â€œI help [who] get [result] using [how].â€</li>
+      <li><strong>Ask better questions:</strong> â€œWhatâ€™s your biggest challenge with X?â€</li>
+      <li><strong>Capture contacts:</strong> save WhatsApp + LinkedIn; add a note (â€œmet at Yaba meetupâ€).</li>
+      <li><strong>Follow up within 24â€“48 hours:</strong> send value (resource, intro, idea), not â€œHow far?â€</li>
     </ol>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Follow-up Templates (Copy & Paste)</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">1) Customer follow-up</h3>
-    <p>“Hi [Name], great meeting you at [Event]. You mentioned [problem]. Here’s a quick idea: [1–2 lines]. If you want, I can share a short plan on a 10-minute call this week.”</p>
+    <p>â€œHi [Name], great meeting you at [Event]. You mentioned [problem]. Hereâ€™s a quick idea: [1â€“2 lines]. If you want, I can share a short plan on a 10-minute call this week.â€</p>
     <h3 class="text-xl font-bold mt-6 mb-3">2) Partnership follow-up</h3>
-    <p>“Hi [Name], enjoyed our chat at [Event]. I think there’s a partnership opportunity: you do [X], we do [Y]. If you’re open, let’s explore a small pilot.”</p>
+    <p>â€œHi [Name], enjoyed our chat at [Event]. I think thereâ€™s a partnership opportunity: you do [X], we do [Y]. If youâ€™re open, letâ€™s explore a small pilot.â€</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Make It Easy for People to Remember You</h2>
-    <p>When someone asks “send your details”, don’t send a long voice note. Send a link people can share:</p>
+    <p>When someone asks â€œsend your detailsâ€, donâ€™t send a long voice note. Send a link people can share:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Create a public profile on 9jaDirectory: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business (free)</a>.</li>
-      <li>If your business is already listed, search for it and use the “Claim this Business” button to manage it.</li>
+      <li>If your business is already listed, search for it and use the â€œClaim this Businessâ€ button to manage it.</li>
       <li>Update your WhatsApp Business catalog and add a clear service description.</li>
     </ul>
 
@@ -5468,19 +7037,19 @@ export const blogPosts: BlogPost[] = [
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Set a goal:</strong> 5 quality conversations beats 50 shallow handshakes.</li>
       <li><strong>Prepare your intro:</strong> one sentence + one proof point (result, client type, metric).</li>
-      <li><strong>Prepare your “one-link” profile:</strong> a page you can share instantly (website or directory profile).</li>
+      <li><strong>Prepare your â€œone-linkâ€ profile:</strong> a page you can share instantly (website or directory profile).</li>
       <li><strong>Know your ask:</strong> partnership? customers? mentorship? hiring? investors? Decide before you arrive.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conversation Starters That Work in Lagos</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>“What are you building right now?”</li>
-      <li>“Who is your ideal customer?”</li>
-      <li>“What is the biggest bottleneck for growth this quarter?”</li>
-      <li>“What kind of partnerships are you open to?”</li>
+      <li>â€œWhat are you building right now?â€</li>
+      <li>â€œWho is your ideal customer?â€</li>
+      <li>â€œWhat is the biggest bottleneck for growth this quarter?â€</li>
+      <li>â€œWhat kind of partnerships are you open to?â€</li>
     </ul>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Investor Conversations (Be Ready, Don’t Beg)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Investor Conversations (Be Ready, Donâ€™t Beg)</h2>
     <p>If you want to meet investors, your job is not to pitch instantly. Your job is to qualify interest and book a follow-up. Have these ready:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>What you sell + your traction (revenue, users, pilots, partnerships).</li>
@@ -5489,7 +7058,7 @@ export const blogPosts: BlogPost[] = [
       <li>A short deck or 1-page summary you can send after the event.</li>
     </ul>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Follow-up Sequence (Day 1–7)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Follow-up Sequence (Day 1â€“7)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
       <li><strong>Day 1:</strong> send a message referencing what you discussed + one useful link/resource.</li>
       <li><strong>Day 3:</strong> propose a short call with 2 time options.</li>
@@ -5498,7 +7067,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">How many events should I attend monthly?</h3>
-    <p>Start with 2–4 events/month and focus on consistent follow-up. Your network grows from follow-up, not attendance.</p>
+    <p>Start with 2â€“4 events/month and focus on consistent follow-up. Your network grows from follow-up, not attendance.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">What should I bring?</h3>
     <p>A strong intro, a link to your profile/website, and a simple way to save contacts (WhatsApp + LinkedIn). Fancy business cards are optional.</p>
 
@@ -5516,13 +7085,13 @@ export const blogPosts: BlogPost[] = [
     <p>Start with context: ask what they do, what they are working on, or what brought them to the event. Keep it short, listen more than you talk, and end with a clear next step (swap contacts or book a quick call).</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Should I pitch immediately?</h3>
     <p>Not usually. First qualify interest: do they have the problem you solve and the budget to pay? If yes, book a follow-up and send your one-page summary after the event.</p>
-    <h3 class="text-xl font-bold mt-6 mb-3">What is the best follow-up if they don’t reply?</h3>
+    <h3 class="text-xl font-bold mt-6 mb-3">What is the best follow-up if they donâ€™t reply?</h3>
     <p>Send value, not pressure: a useful resource, a quick idea, or an introduction. Then ask one clear question and offer two time options for a short call.</p>
 
-    <p><strong>Event selection tip:</strong> pick events where your ideal customers and partners actually attend. If you sell B2B services, prioritize business breakfasts and industry associations. If you’re in tech, prioritize founder meetups and demo days.</p>
+    <p><strong>Event selection tip:</strong> pick events where your ideal customers and partners actually attend. If you sell B2B services, prioritize business breakfasts and industry associations. If youâ€™re in tech, prioritize founder meetups and demo days.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Related Categories to Explore</h2>
-    <p>If you’re looking for agencies, consultants, or service providers, browse <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
+    <p>If youâ€™re looking for agencies, consultants, or service providers, browse <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a> and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Follow-Up Message Template (Copy/Paste)</h2>
     <p>Keep your follow-up short and specific:</p>
     <p><em>"Hi [Name], great meeting you at [Event]. You mentioned [goal/problem]. Here are 2 quick ideas: [idea 1], [idea 2]. Want to jump on a 10-minute call this week? Tue or Thu?"</em></p>
@@ -5568,7 +7137,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "SCUML registration guide for DNFI businesses: requirements, steps, timelines, and common mistakes to avoid, plus documents you need.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
-    <p>Many Nigerian business owners only hear about SCUML when the bank asks for it during corporate account opening. If you operate in certain high-cash sectors, SCUML registration helps your business comply with anti–money laundering regulations.</p>
+    <p>Many Nigerian business owners only hear about SCUML when the bank asks for it during corporate account opening. If you operate in certain high-cash sectors, SCUML registration helps your business comply with antiâ€“money laundering regulations.</p>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
       <p class="text-sm text-green-900"><strong>What SCUML means:</strong> SCUML (Special Control Unit Against Money Laundering) is a compliance unit under the EFCC that regulates certain businesses called <strong>DNFIs</strong> (Designated Non-Financial Institutions).</p>
@@ -5584,7 +7153,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Law firms & accounting firms:</strong> specific cases where required.</li>
       <li><strong>NGOs and religious organizations:</strong> depending on structure and banking requirements.</li>
     </ul>
-    <p>If you’re unsure, ask your bank which documents they require for your sector and account type.</p>
+    <p>If youâ€™re unsure, ask your bank which documents they require for your sector and account type.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Why Banks Request SCUML</h2>
     <p>Banks are required to perform compliance checks. If your business fits a DNFI profile, the bank may ask for SCUML before fully activating your corporate account or certain services.</p>
@@ -5596,7 +7165,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Before You Apply (Prep Checklist)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>CAC registration:</strong> your business must be registered. If you haven’t registered, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
+      <li><strong>CAC registration:</strong> your business must be registered. If you havenâ€™t registered, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
       <li><strong>Business details:</strong> registered address, directors, and ownership information should be consistent everywhere.</li>
       <li><strong>TIN:</strong> many banks request your Tax Identification Number.</li>
       <li><strong>Clear scans:</strong> most delays happen because documents are blurry or incomplete.</li>
@@ -5606,7 +7175,7 @@ export const blogPosts: BlogPost[] = [
     <p>Registration is commonly advertised as free and handled online, but requirements can vary by business type. Prepare:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>CAC documents:</strong> certificate and relevant forms (BN / CAC 1.1 / status report).</li>
-      <li><strong>Valid ID:</strong> NIN slip, passport, driver’s license, or voter’s card (as accepted).</li>
+      <li><strong>Valid ID:</strong> NIN slip, passport, driverâ€™s license, or voterâ€™s card (as accepted).</li>
       <li><strong>BVN:</strong> BVN of directors/owners.</li>
       <li><strong>TIN:</strong> if available.</li>
       <li><strong>Address proof:</strong> may be requested (utility bill) depending on workflow.</li>
@@ -5616,7 +7185,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: How to Register on SCUML (2025)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
       <li>Visit the official portal: <a href="https://scuml.org" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">scuml.org</a>.</li>
-      <li>Select the appropriate DNFI category (choose carefully—wrong category causes delays).</li>
+      <li>Select the appropriate DNFI category (choose carefullyâ€”wrong category causes delays).</li>
       <li>Fill your business information exactly as it appears on CAC documents.</li>
       <li>Upload clear scans in the required format (PDF/JPG). Use good lighting and avoid cropped pages.</li>
       <li>Submit the application and keep a copy of your reference number.</li>
@@ -5631,14 +7200,14 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes That Cause Delays</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Blurry documents:</strong> unreadable scans get rejected.</li>
-      <li><strong>Name mismatch:</strong> directors’ names must match CAC + IDs.</li>
-      <li><strong>Wrong category:</strong> choosing “consultant” when you’re clearly “real estate” or “car dealer”.</li>
+      <li><strong>Name mismatch:</strong> directorsâ€™ names must match CAC + IDs.</li>
+      <li><strong>Wrong category:</strong> choosing â€œconsultantâ€ when youâ€™re clearly â€œreal estateâ€ or â€œcar dealerâ€.</li>
       <li><strong>Incomplete forms:</strong> missing address, phone, or ownership information.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Is SCUML required for every business?</h3>
-    <p>No. It’s typically required for DNFI categories and specific high-cash sectors. Your bank often guides you based on your business type.</p>
+    <p>No. Itâ€™s typically required for DNFI categories and specific high-cash sectors. Your bank often guides you based on your business type.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Can I apply without CAC registration?</h3>
     <p>Usually no. Most workflows require valid CAC documents for verification.</p>
 
@@ -5652,7 +7221,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Is SCUML registration free?</h3>
-    <p>It is commonly presented as free on official channels, but processes and requirements can change. Always verify from the official portal and avoid paying random “agents” who promise shortcuts.</p>
+    <p>It is commonly presented as free on official channels, but processes and requirements can change. Always verify from the official portal and avoid paying random â€œagentsâ€ who promise shortcuts.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Do all businesses need SCUML?</h3>
     <p>No. SCUML typically applies to DNFIs and certain high-cash sectors. If your bank requests it, confirm the exact DNFI category and apply early.</p>
 
@@ -5669,7 +7238,7 @@ export const blogPosts: BlogPost[] = [
     <p>Keep your compliance simple: invoices for large transactions, proof of payments, and consistent records. This helps when banks or regulators request clarification and reduces future account restrictions.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>SCUML is mainly about compliance and avoiding banking roadblocks. If you operate in a DNFI category, it’s worth doing early—before you need it urgently.</p>
+    <p>SCUML is mainly about compliance and avoiding banking roadblocks. If you operate in a DNFI category, itâ€™s worth doing earlyâ€”before you need it urgently.</p>
     <p>Need professional help? Find providers in <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>. To build trust online, <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a> (and claim your listing if it already exists).</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Quick Checklist (When Your Bank Requests SCUML)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
@@ -5725,7 +7294,7 @@ export const blogPosts: BlogPost[] = [
     <p>Registering your business with the Corporate Affairs Commission (CAC) is one of the fastest ways to increase trust, open a corporate bank account, accept payments more easily, and qualify for grants or loans. The CAC process is now largely online through its portals.</p>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-      <p class="text-sm text-green-900"><strong>Which should you register?</strong> If you’re starting small, a <strong>Business Name (BN)</strong> may be enough. If you want investors, bigger contracts, or strong liability protection, consider a <strong>Limited Liability Company (LTD)</strong>.</p>
+      <p class="text-sm text-green-900"><strong>Which should you register?</strong> If youâ€™re starting small, a <strong>Business Name (BN)</strong> may be enough. If you want investors, bigger contracts, or strong liability protection, consider a <strong>Limited Liability Company (LTD)</strong>.</p>
     </div>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 0: Choose Your Business Structure</h2>
@@ -5733,7 +7302,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Business Name (BN):</strong> simpler setup for sole proprietors and small businesses.</li>
       <li><strong>Limited Liability Company (LTD):</strong> better for scale, contracts, and partnerships; liability is limited to the company.</li>
     </ul>
-    <p>If you’re unsure, a quick chat with a professional can help—see <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
+    <p>If youâ€™re unsure, a quick chat with a professional can helpâ€”see <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Create Your CAC Account</h2>
     <p>Start from the official CAC portals. Create an account with a working email and phone number, because verification and updates often come through those channels.</p>
@@ -5743,13 +7312,13 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Name Reservation (Availability Check)</h2>
-    <p>Your name can be approved quickly or rejected if it’s too similar to an existing business. Tips that reduce rejection:</p>
+    <p>Your name can be approved quickly or rejected if itâ€™s too similar to an existing business. Tips that reduce rejection:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Prepare 2–3 alternatives (e.g., “Bright Homes Services”, “Bright Homes Ventures”, “Bright Homes Nigeria”).</li>
-      <li>Avoid restricted words unless you have approvals (e.g., “Bank”, “Federal”, “Government”).</li>
+      <li>Prepare 2â€“3 alternatives (e.g., â€œBright Homes Servicesâ€, â€œBright Homes Venturesâ€, â€œBright Homes Nigeriaâ€).</li>
+      <li>Avoid restricted words unless you have approvals (e.g., â€œBankâ€, â€œFederalâ€, â€œGovernmentâ€).</li>
       <li>Be specific and unique; generic names are more likely to clash.</li>
     </ul>
-    <p><strong>Cost/timeline:</strong> fees and timelines can change—confirm inside the CAC portal before payment.</p>
+    <p><strong>Cost/timeline:</strong> fees and timelines can changeâ€”confirm inside the CAC portal before payment.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Prepare Your Documents (Before You Start the Form)</h2>
     <p>Most delays happen because applicants start the process without documents ready. Prepare:</p>
@@ -5792,7 +7361,7 @@ export const blogPosts: BlogPost[] = [
       <li>Inconsistent names across CAC forms and IDs.</li>
       <li>Low-quality scans (cropped, blurry, or unreadable).</li>
       <li>Choosing the wrong structure for your goals.</li>
-      <li>Using generic business objects that don’t match your actual operations.</li>
+      <li>Using generic business objects that donâ€™t match your actual operations.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
@@ -5802,7 +7371,7 @@ export const blogPosts: BlogPost[] = [
     <p>Timelines vary based on name approval, documentation, and portal workflow. Plan for days to a few weeks, and avoid last-minute deadlines.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Costs & Timeline (What to Expect)</h2>
-    <p>Fees and timelines can change depending on CAC updates and your business type. As a general rule, Business Name registration is cheaper and faster than LTD. The biggest time-waster is usually name rejection or inconsistent documentation. Prepare 2–3 name options and keep your details consistent across all forms.</p>
+    <p>Fees and timelines can change depending on CAC updates and your business type. As a general rule, Business Name registration is cheaper and faster than LTD. The biggest time-waster is usually name rejection or inconsistent documentation. Prepare 2â€“3 name options and keep your details consistent across all forms.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Reasons Applications Get Rejected</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
@@ -5833,7 +7402,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your business on 9jaDirectory</a> and start collecting leads. If you find your business already listed, you can claim it from the listing page.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Name Reservation Tips</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Prepare 2–3 alternative names in case your first choice is unavailable.</li>
+      <li>Prepare 2â€“3 alternative names in case your first choice is unavailable.</li>
       <li>Avoid restricted words unless you already have approvals ready.</li>
       <li>Use a name that matches what customers already call you (brand consistency).</li>
     </ul>
@@ -5883,10 +7452,10 @@ export const blogPosts: BlogPost[] = [
     content: `
     <p><strong>By 9jaDirectory Fintech Team</strong> | <em>Updated: November 2025</em></p>
 
-    <p>In 2025, online payment is not optional. Customers want to pay with cards, bank transfers, USSD, and sometimes international cards—without stress. Your payment gateway affects your <strong>conversion rate</strong>, your <strong>cashflow</strong>, and your ability to scale.</p>
+    <p>In 2025, online payment is not optional. Customers want to pay with cards, bank transfers, USSD, and sometimes international cardsâ€”without stress. Your payment gateway affects your <strong>conversion rate</strong>, your <strong>cashflow</strong>, and your ability to scale.</p>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-      <p class="text-sm text-green-900"><strong>Important:</strong> fees and terms can change. Use this guide to choose a gateway, then confirm current pricing and settlement timelines on the provider’s official dashboard.</p>
+      <p class="text-sm text-green-900"><strong>Important:</strong> fees and terms can change. Use this guide to choose a gateway, then confirm current pricing and settlement timelines on the providerâ€™s official dashboard.</p>
     </div>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">What to Compare Before You Choose</h2>
@@ -5896,12 +7465,12 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Success rate:</strong> failed payments = lost sales.</li>
       <li><strong>Chargebacks & disputes:</strong> how disputes are handled and the documentation needed.</li>
       <li><strong>International payments:</strong> if you sell to Nigerians abroad or global customers.</li>
-      <li><strong>Developer experience:</strong> APIs, plugins, and webhooks—especially if you run an e-commerce store.</li>
+      <li><strong>Developer experience:</strong> APIs, plugins, and webhooksâ€”especially if you run an e-commerce store.</li>
       <li><strong>Extra tools:</strong> invoices, payment links, subscriptions, split payments, POS integration.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Paystack (Best for simplicity + reliability)</h2>
-    <p>Paystack is popular with startups and SMEs because it’s simple to set up, has strong documentation, and works well for most Nigerian use cases.</p>
+    <p>Paystack is popular with startups and SMEs because itâ€™s simple to set up, has strong documentation, and works well for most Nigerian use cases.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Best for:</strong> e-commerce, digital products, service businesses.</li>
       <li><strong>Strengths:</strong> solid developer tools, payment links, good reporting.</li>
@@ -5909,7 +7478,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Flutterwave (Best for cross-border payments)</h2>
-    <p>Flutterwave is built for businesses that want to sell across Africa and beyond. If you expect customers from multiple countries, it’s worth considering.</p>
+    <p>Flutterwave is built for businesses that want to sell across Africa and beyond. If you expect customers from multiple countries, itâ€™s worth considering.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Best for:</strong> cross-border commerce, multi-currency payments.</li>
       <li><strong>Strengths:</strong> broader regional coverage, multiple payment options.</li>
@@ -5973,7 +7542,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Redundancy (Never Depend on One Provider)</h2>
-    <p>Network downtime happens. Many serious businesses keep two options: a primary gateway and a backup (bank transfer or second gateway) so sales don’t stop.</p>
+    <p>Network downtime happens. Many serious businesses keep two options: a primary gateway and a backup (bank transfer or second gateway) so sales donâ€™t stop.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Should I integrate more than one payment gateway?</h3>
@@ -5999,10 +7568,10 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Transfer-heavy/high-ticket:</strong> consider Monnify and virtual accounts.</li>
     </ul>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Reconciliation (Don’t Lose Money)</h2>
-    <p>Reconcile payments weekly: match gateway transactions to orders, track failed payments, and follow up on chargebacks. This prevents “missing money” issues and helps you measure real conversion rates.</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Reconciliation (Donâ€™t Lose Money)</h2>
+    <p>Reconcile payments weekly: match gateway transactions to orders, track failed payments, and follow up on chargebacks. This prevents â€œmissing moneyâ€ issues and helps you measure real conversion rates.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Support (Don’t Ignore This)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Support (Donâ€™t Ignore This)</h2>
     <p>If a gateway fails during sales peak, you need fast support. Before scaling ads, test support responsiveness and keep a backup payment option for emergencies.</p>
 
     <p>Need a developer or fintech consultant? Explore <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a> and <a href="/categories/finance" class="text-green-600 hover:underline">Finance</a>.</p>
@@ -6073,7 +7642,7 @@ export const blogPosts: BlogPost[] = [
     content: `
     <p><strong>By 9jaDirectory Marketing</strong> | <em>Updated: November 2025</em></p>
 
-    <p>In 2025, social media is a full customer acquisition system—not “posting vibes”. The brands winning in Nigeria do three things well:</p>
+    <p>In 2025, social media is a full customer acquisition systemâ€”not â€œposting vibesâ€. The brands winning in Nigeria do three things well:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>They have an offer</strong> that solves a clear problem.</li>
       <li><strong>They create consistent content</strong> that builds trust.</li>
@@ -6081,23 +7650,23 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-      <p class="text-sm text-green-900"><strong>Quick win:</strong> turn your social profile into a “mini-landing page”: clear bio, price range or starting price, location (e.g., Lagos), WhatsApp button, and a link to your business profile.</p>
+      <p class="text-sm text-green-900"><strong>Quick win:</strong> turn your social profile into a â€œmini-landing pageâ€: clear bio, price range or starting price, location (e.g., Lagos), WhatsApp button, and a link to your business profile.</p>
     </div>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Pick Your Goal (Don’t Post Randomly)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Pick Your Goal (Donâ€™t Post Randomly)</h2>
     <p>Choose one primary goal for 30 days:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Sales:</strong> “20 paid orders per month”</li>
-      <li><strong>Leads:</strong> “50 WhatsApp inquiries per month”</li>
-      <li><strong>Bookings:</strong> “30 appointments per month”</li>
+      <li><strong>Sales:</strong> â€œ20 paid orders per monthâ€</li>
+      <li><strong>Leads:</strong> â€œ50 WhatsApp inquiries per monthâ€</li>
+      <li><strong>Bookings:</strong> â€œ30 appointments per monthâ€</li>
     </ul>
     <p>Your content, ads, and platform choice should match the goal.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Build a Content System (Pillars)</h2>
-    <p>Use 4–5 content pillars so you never run out of ideas:</p>
+    <p>Use 4â€“5 content pillars so you never run out of ideas:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Proof:</strong> reviews, before/after, results, testimonials.</li>
-      <li><strong>Process:</strong> behind-the-scenes, how it’s made, packing orders.</li>
+      <li><strong>Process:</strong> behind-the-scenes, how itâ€™s made, packing orders.</li>
       <li><strong>Education:</strong> tips, mistakes to avoid, mini-guides.</li>
       <li><strong>Offers:</strong> promos, bundles, limited slots.</li>
       <li><strong>Personality:</strong> founder story, values, community.</li>
@@ -6106,27 +7675,27 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Platform Playbook (Nigeria)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Instagram:</strong> strong for beauty, lifestyle, retail. Focus on Reels + Stories + WhatsApp clicks.</li>
-      <li><strong>TikTok:</strong> best for reach. Low production is okay—clarity and hooks matter.</li>
+      <li><strong>TikTok:</strong> best for reach. Low production is okayâ€”clarity and hooks matter.</li>
       <li><strong>Facebook:</strong> community groups and Marketplace still work for local sales.</li>
-      <li><strong>WhatsApp:</strong> the real “checkout page” in Nigeria—use Business catalog, labels, and broadcast lists.</li>
+      <li><strong>WhatsApp:</strong> the real â€œcheckout pageâ€ in Nigeriaâ€”use Business catalog, labels, and broadcast lists.</li>
       <li><strong>LinkedIn:</strong> B2B services, consulting, corporate clients.</li>
       <li><strong>X (Twitter):</strong> customer service, community, and thought leadership.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: The WhatsApp Funnel (Simple + Effective)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
-      <li>Content → “DM/WhatsApp for price”</li>
-      <li>WhatsApp auto-reply → ask 3 questions (budget, location, timeline)</li>
-      <li>Send 2–3 options + proof + delivery/payment policy</li>
-      <li>Close → payment → delivery → review request</li>
+      <li>Content â†’ â€œDM/WhatsApp for priceâ€</li>
+      <li>WhatsApp auto-reply â†’ ask 3 questions (budget, location, timeline)</li>
+      <li>Send 2â€“3 options + proof + delivery/payment policy</li>
+      <li>Close â†’ payment â†’ delivery â†’ review request</li>
     </ol>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Ads That Don’t Waste Money</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Ads That Donâ€™t Waste Money</h2>
     <p>Most ad failures come from bad offers and weak creatives. Start small:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Budget:</strong> ₦3,000–₦10,000/day to test.</li>
-      <li><strong>Creative:</strong> 15–30s video showing the product/service + result.</li>
-      <li><strong>Objective:</strong> messages (WhatsApp) or leads—avoid “boost post” for serious campaigns.</li>
+      <li><strong>Budget:</strong> â‚¦3,000â€“â‚¦10,000/day to test.</li>
+      <li><strong>Creative:</strong> 15â€“30s video showing the product/service + result.</li>
+      <li><strong>Objective:</strong> messages (WhatsApp) or leadsâ€”avoid â€œboost postâ€ for serious campaigns.</li>
       <li><strong>Retargeting:</strong> show proof + offer to people who engaged in the last 30 days.</li>
     </ul>
 
@@ -6145,15 +7714,15 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Day 3:</strong> customer review</li>
       <li><strong>Day 4:</strong> 3 common mistakes in your niche</li>
       <li><strong>Day 5:</strong> offer/bundle</li>
-      <li><strong>Day 6:</strong> FAQ video (“how long delivery takes”, “pricing”)</li>
+      <li><strong>Day 6:</strong> FAQ video (â€œhow long delivery takesâ€, â€œpricingâ€)</li>
       <li><strong>Day 7:</strong> results / before-after / recap</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Inconsistent posting (the algorithm rewards consistency).</li>
-      <li>No clear offer or price range (people don’t like guessing).</li>
-      <li>Slow replies (Nigeria moves fast—reply speed closes deals).</li>
+      <li>No clear offer or price range (people donâ€™t like guessing).</li>
+      <li>Slow replies (Nigeria moves fastâ€”reply speed closes deals).</li>
       <li>No proof (testimonials, delivery proof, reviews).</li>
     </ul>
 
@@ -6179,17 +7748,17 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Micro-Influencers (The Nigeria-Friendly Shortcut)</h2>
-    <p>Instead of paying one big influencer, test 3–10 micro-influencers in your city or niche. Look for creators with engaged comments, not just views. Give them a clear offer and a tracking code so you can measure results.</p>
+    <p>Instead of paying one big influencer, test 3â€“10 micro-influencers in your city or niche. Look for creators with engaged comments, not just views. Give them a clear offer and a tracking code so you can measure results.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Should I boost posts or run proper ads?</h3>
     <p>Boosting can work for awareness, but serious growth usually comes from campaigns optimized for messages/leads or conversions. Start small, test creatives, and track cost per lead.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">How many times should I post weekly?</h3>
-    <p>Start with 4–6 quality posts per week plus daily Stories/Status. Consistency matters more than perfection.</p>
+    <p>Start with 4â€“6 quality posts per week plus daily Stories/Status. Consistency matters more than perfection.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">What if my page has low followers?</h3>
     <p>Low followers is not a problem if you have a clear offer and strong proof. Combine content with targeted ads and partnerships to get leads quickly.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">WhatsApp Automation (Nigeria’s Real Funnel)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">WhatsApp Automation (Nigeriaâ€™s Real Funnel)</h2>
     <p>Most Nigerian customers buy on WhatsApp. Set up:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Quick replies for price, location, delivery, and payment</li>
@@ -6199,10 +7768,10 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Hooks That Work (For Reels/TikTok)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>“Stop doing this if you want better results…”</li>
-      <li>“3 mistakes Nigerians make when buying [product]…”</li>
-      <li>“If you’re in [city], this will save you money…”</li>
-      <li>“Before vs after: watch the transformation…”</li>
+      <li>â€œStop doing this if you want better resultsâ€¦â€</li>
+      <li>â€œ3 mistakes Nigerians make when buying [product]â€¦â€</li>
+      <li>â€œIf youâ€™re in [city], this will save you moneyâ€¦â€</li>
+      <li>â€œBefore vs after: watch the transformationâ€¦â€</li>
     </ul>
     <p>Strong hooks + proof + clear CTA (WhatsApp/book now) is a simple formula that works across many niches.</p>
 
@@ -6260,7 +7829,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "business-ideas-students-nigeria-2025",
     title: "Top 10 Business Ideas for Students in Nigeria (Low Capital 2025)",
-    excerpt: "10 realistic low-capital business ideas for Nigerian students in 2025—plus how to start, what to charge, and how to find customers without hurting your grades.",
+    excerpt: "10 realistic low-capital business ideas for Nigerian students in 2025â€”plus how to start, what to charge, and how to find customers without hurting your grades.",
     content: `
     <p><strong>By 9jaDirectory Careers</strong> | <em>Updated: November 2025</em></p>
 
@@ -6272,13 +7841,13 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
-      <p class="text-sm text-green-900"><strong>Student rule:</strong> pick one hustle for 60 days. Don’t jump from POS → crypto → perfumes every week.</p>
+      <p class="text-sm text-green-900"><strong>Student rule:</strong> pick one hustle for 60 days. Donâ€™t jump from POS â†’ crypto â†’ perfumes every week.</p>
     </div>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">1) POS Agent (Hostel Cash Point)</h2>
     <p>Every campus needs cash withdrawals and transfers. POS can work if you control fraud risk and cashflow.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦30,000–₦100,000 (float + setup depending on provider)</li>
+      <li><strong>Startup:</strong> â‚¦30,000â€“â‚¦100,000 (float + setup depending on provider)</li>
       <li><strong>How you earn:</strong> charges per withdrawal/transfer</li>
       <li><strong>Tip:</strong> keep records and set strict rules for credit.</li>
     </ul>
@@ -6286,31 +7855,31 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">2) Graphic Design / Canva Design</h2>
     <p>Campus events need flyers, logos, and banners. You can start with Canva on your phone and upgrade later.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦0–₦15,000 (data + Canva Pro optional)</li>
-      <li><strong>Pricing:</strong> ₦2,000–₦20,000 per design depending on complexity</li>
+      <li><strong>Startup:</strong> â‚¦0â€“â‚¦15,000 (data + Canva Pro optional)</li>
+      <li><strong>Pricing:</strong> â‚¦2,000â€“â‚¦20,000 per design depending on complexity</li>
       <li><strong>Where to find clients:</strong> fellowships, departments, student entrepreneurs.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">3) Tutoring (Academic + Exam Prep)</h2>
-    <p>If you’re strong in a “hard course”, you can tutor juniors. Results and consistency bring referrals fast.</p>
+    <p>If youâ€™re strong in a â€œhard courseâ€, you can tutor juniors. Results and consistency bring referrals fast.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦0</li>
-      <li><strong>Pricing:</strong> ₦2,000–₦10,000 per session or weekly bundles</li>
+      <li><strong>Startup:</strong> â‚¦0</li>
+      <li><strong>Pricing:</strong> â‚¦2,000â€“â‚¦10,000 per session or weekly bundles</li>
       <li><strong>Tip:</strong> run group tutorials for better hourly income.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">4) Social Media Management (For Small Shops)</h2>
-    <p>Many SMEs want Instagram/TikTok content but don’t have time. If you can shoot and edit short videos, you can manage pages.</p>
+    <p>Many SMEs want Instagram/TikTok content but donâ€™t have time. If you can shoot and edit short videos, you can manage pages.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦0–₦20,000 (data + basic tools)</li>
-      <li><strong>Pricing:</strong> ₦30,000–₦150,000/month depending on deliverables</li>
+      <li><strong>Startup:</strong> â‚¦0â€“â‚¦20,000 (data + basic tools)</li>
+      <li><strong>Pricing:</strong> â‚¦30,000â€“â‚¦150,000/month depending on deliverables</li>
       <li><strong>Where to start:</strong> nearby vendors, salons, campus businesses.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">5) Perfume Oils / Skincare Reselling</h2>
     <p>Small, portable products sell well on campus. Focus on quality and repeat buyers.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦10,000–₦50,000</li>
+      <li><strong>Startup:</strong> â‚¦10,000â€“â‚¦50,000</li>
       <li><strong>Tip:</strong> sample packs + referral discounts work well.</li>
     </ul>
 
@@ -6321,7 +7890,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">7) Laundry Pickup & Delivery (Hostel Service)</h2>
     <p>Offer pickup + delivery and partner with a local laundry or handle it yourself if you have capacity.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦5,000–₦30,000</li>
+      <li><strong>Startup:</strong> â‚¦5,000â€“â‚¦30,000</li>
       <li><strong>Pricing:</strong> per basket or per item</li>
     </ul>
 
@@ -6332,19 +7901,19 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">9) Event Photography / Videography</h2>
     <p>Campus events need coverage. If you have a good phone camera, you can start and upgrade later.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Startup:</strong> ₦0–₦50,000 (ring light, tripod)</li>
+      <li><strong>Startup:</strong> â‚¦0â€“â‚¦50,000 (ring light, tripod)</li>
       <li><strong>Tip:</strong> offer same-day highlights for premium pricing.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">10) Food / Snacks Delivery (Smart Execution)</h2>
-    <p>Don’t fight “big vendors”. Pick a niche: late-night delivery, healthy meals, or snacks for specific hostels.</p>
+    <p>Donâ€™t fight â€œbig vendorsâ€. Pick a niche: late-night delivery, healthy meals, or snacks for specific hostels.</p>
     <p>Explore <a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a> and learn packaging + consistency.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Customers Fast (Campus)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Post results daily (delivery proof, testimonials).</li>
       <li>Use WhatsApp broadcast lists + class groups (respect rules).</li>
-      <li>Offer referral rewards (₦200–₦500 discounts work).</li>
+      <li>Offer referral rewards (â‚¦200â€“â‚¦500 discounts work).</li>
       <li>Create a profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your hustle on 9jaDirectory</a>.</li>
     </ul>
 
@@ -6363,14 +7932,14 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Day 1:</strong> choose one idea and define your offer (what you sell + price).</li>
       <li><strong>Day 2:</strong> talk to 15 potential customers and ask what they really want.</li>
       <li><strong>Day 3:</strong> create a simple flyer/post and share in 3 relevant groups.</li>
-      <li><strong>Day 4:</strong> collect 5–10 inquiries and refine your message.</li>
+      <li><strong>Day 4:</strong> collect 5â€“10 inquiries and refine your message.</li>
       <li><strong>Day 5:</strong> get your first paid order (even small) to prove demand.</li>
       <li><strong>Day 6:</strong> document results (photos, proof, testimonial).</li>
-      <li><strong>Day 7:</strong> repeat what worked and drop what didn’t.</li>
+      <li><strong>Day 7:</strong> repeat what worked and drop what didnâ€™t.</li>
     </ol>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Time Management (So You Don’t Fail School)</h2>
-    <p>Make your hustle support your education, not destroy it. Block 1–2 hours daily for business tasks, keep one rest day, and automate where possible (WhatsApp quick replies, simple pricing, standard delivery days).</p>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Time Management (So You Donâ€™t Fail School)</h2>
+    <p>Make your hustle support your education, not destroy it. Block 1â€“2 hours daily for business tasks, keep one rest day, and automate where possible (WhatsApp quick replies, simple pricing, standard delivery days).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">What is the best business for a student with no capital?</h3>
@@ -6381,7 +7950,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Money Management (So Your Hustle Actually Pays)</h2>
     <p>Many student businesses fail because money is mixed up. Use two simple rules:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Separate float/capital from profit (don’t spend your stock money).</li>
+      <li>Separate float/capital from profit (donâ€™t spend your stock money).</li>
       <li>Track every expense for 30 days (data, transport, packaging, ads) so you know your real profit.</li>
     </ul>
     <p>Small discipline now builds skills that make you unstoppable after school.</p>
@@ -6390,11 +7959,11 @@ export const blogPosts: BlogPost[] = [
     <p>When money starts moving, scammers show up. Use simple protection: confirm transfers properly, avoid lending customers on credit, keep records, and never share OTPs or account logins. Build trust, but keep boundaries.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>Don’t wait until graduation to learn business. Start small, stay consistent, and build skills that pay you for life.</p>
+    <p>Donâ€™t wait until graduation to learn business. Start small, stay consistent, and build skills that pay you for life.</p>
     <p>Explore more opportunities in <a href="/categories/education" class="text-green-600 hover:underline">Education</a>, <a href="/categories/professional-services" class="text-green-600 hover:underline">Professional Services</a>, and <a href="/categories/technology" class="text-green-600 hover:underline">Technology</a>.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Time Management (School + Business)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Pick a hustle with predictable hours (evenings/weekends) so you don’t miss lectures.</li>
+      <li>Pick a hustle with predictable hours (evenings/weekends) so you donâ€™t miss lectures.</li>
       <li>Batch tasks: buy stock once, deliver twice, post content daily.</li>
       <li>Use pre-orders to avoid tying money down in unsold inventory.</li>
     </ul>
@@ -6440,7 +8009,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "NAFDAC registration for your product in 2025: requirements, NAPAMS portal steps, timelines, costs, and how to avoid delays.",
     content: `
     <p><strong>By 9jaDirectory Legal Team</strong> | <em>Updated: November 2025</em></p>
-    <p>If you manufacture or sell regulated products in Nigeria, NAFDAC registration is not optional—it’s a major trust signal and often required by distributors, supermarkets, and corporate buyers.</p>
+    <p>If you manufacture or sell regulated products in Nigeria, NAFDAC registration is not optionalâ€”itâ€™s a major trust signal and often required by distributors, supermarkets, and corporate buyers.</p>
 
     <div class="bg-green-50 border-l-4 border-green-600 p-4 my-6">
       <p class="text-sm text-green-900"><strong>Scope:</strong> This is a practical overview, not legal advice. Requirements can vary by product category. Always confirm current requirements on the official NAFDAC portal.</p>
@@ -6459,7 +8028,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Before You Apply (The Real Requirements)</h2>
     <p>Many applications fail because businesses apply too early. Make sure you have:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>CAC registration:</strong> you typically need a registered business. If you haven’t done CAC yet, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
+      <li><strong>CAC registration:</strong> you typically need a registered business. If you havenâ€™t done CAC yet, start here: <a href="/blog/cac-business-registration-nigeria-guide-2025" class="text-green-600 hover:underline">CAC registration guide</a>.</li>
       <li><strong>Production location:</strong> a verifiable factory/production address (even small scale needs clear processes).</li>
       <li><strong>Basic documentation:</strong> SOPs, quality control plan, and clear labeling.</li>
       <li><strong>Product consistency:</strong> same formulation, same packaging, consistent batch records.</li>
@@ -6506,10 +8075,10 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Facility gaps:</strong> no clear production process, hygiene issues, missing SOPs.</li>
     </ul>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">After You Get the NAFDAC Number (Don’t Stop There)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">After You Get the NAFDAC Number (Donâ€™t Stop There)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Use the number correctly on packaging and marketing materials.</li>
-      <li>Maintain batch records and quality control—this protects your brand.</li>
+      <li>Maintain batch records and quality controlâ€”this protects your brand.</li>
       <li>Build distribution: supermarkets, hotels, wholesalers, and online sales.</li>
     </ul>
 
@@ -6526,7 +8095,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Facility Readiness (What Inspectors Look For)</h2>
-    <p>You don’t need a massive factory to be compliant, but you do need a controlled process:</p>
+    <p>You donâ€™t need a massive factory to be compliant, but you do need a controlled process:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Clean production area with documented cleaning routines</li>
       <li>Basic SOPs for production, packaging, and quality checks</li>
@@ -6551,7 +8120,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Should I use an agent/consultant?</h3>
-    <p>Some businesses do it themselves successfully. Consultants can save time, but choose carefully: use someone with verifiable experience, keep your portal access, and avoid anyone promising “instant approval”.</p>
+    <p>Some businesses do it themselves successfully. Consultants can save time, but choose carefully: use someone with verifiable experience, keep your portal access, and avoid anyone promising â€œinstant approvalâ€.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Rejection/Delay Triggers</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
@@ -6562,7 +8131,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Practical Tip</h2>
-    <p>Create a simple compliance folder (digital + printed): CAC docs, SOPs, batch records, label versions, test results, and portal receipts. When you’re asked for clarification, fast responses reduce delays.</p>
+    <p>Create a simple compliance folder (digital + printed): CAC docs, SOPs, batch records, label versions, test results, and portal receipts. When youâ€™re asked for clarification, fast responses reduce delays.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Grow Visibility While You Wait</h2>
     <p>Even before approval, you can build your brand and customer base. Create a profile people can verify and share:</p>
@@ -6618,7 +8187,7 @@ export const blogPosts: BlogPost[] = [
     })
   },
 
-  // ✅ NEW: HOW TO START BLOGGING & CONTENT BUSINESS
+  // âœ… NEW: HOW TO START BLOGGING & CONTENT BUSINESS
   {
     slug: "how-to-start-blogging-content-business-nigeria-2025",
     title: "How to Start a Blogging Business in Nigeria (2025 Guide)",
@@ -6626,57 +8195,57 @@ export const blogPosts: BlogPost[] = [
     content: `
     <p><strong>By 9jaDirectory Business Team</strong> | <em>Updated: November 2025</em></p>
 
-    <p>You don't need ₦1 million to start a business. In Nigeria's digital economy, the most profitable businesses often require just a laptop and internet connection.</p>
+    <p>You don't need â‚¦1 million to start a business. In Nigeria's digital economy, the most profitable businesses often require just a laptop and internet connection.</p>
 
-    <p><strong>Blogging and content creation is one of them.</strong> In this guide, we show you exactly how to start a profitable blog in Nigeria—from zero to ₦100K+ monthly income.</p>
+    <p><strong>Blogging and content creation is one of them.</strong> In this guide, we show you exactly how to start a profitable blog in Nigeriaâ€”from zero to â‚¦100K+ monthly income.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Why Start a Blogging Business in Nigeria?</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>✅ <strong>Zero startup cost:</strong> Free blogging platforms exist.</li>
-      <li>✅ <strong>Passive income:</strong> Write once, earn forever through ads and sponsorships.</li>
-      <li>✅ <strong>Growing demand:</strong> Nigerian brands pay ₦20K-₦100K+ per article.</li>
-      <li>✅ <strong>Flexible schedule:</strong> Work from anywhere on your own terms.</li>
-      <li>✅ <strong>Scalable:</strong> Build a team as you grow.</li>
+      <li>âœ… <strong>Zero startup cost:</strong> Free blogging platforms exist.</li>
+      <li>âœ… <strong>Passive income:</strong> Write once, earn forever through ads and sponsorships.</li>
+      <li>âœ… <strong>Growing demand:</strong> Nigerian brands pay â‚¦20K-â‚¦100K+ per article.</li>
+      <li>âœ… <strong>Flexible schedule:</strong> Work from anywhere on your own terms.</li>
+      <li>âœ… <strong>Scalable:</strong> Build a team as you grow.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Choose Your Niche</h2>
     <p><strong>Your niche determines your income.</strong> Choose personal finance, career, health, tech, or parenting. Avoid crowded niches unless you have unique expertise.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Set Up Your Blog</h2>
-    <p><strong>WordPress.com (Recommended):</strong> ₦500/month, full control, own audience. <strong>Medium:</strong> Free, built-in audience, limited customization. <strong>Substack:</strong> Free, best for newsletters, email-first.</p>
+    <p><strong>WordPress.com (Recommended):</strong> â‚¦500/month, full control, own audience. <strong>Medium:</strong> Free, built-in audience, limited customization. <strong>Substack:</strong> Free, best for newsletters, email-first.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Create Your First 10 Articles</h2>
     <p>1,500-2,500 words each. Use Ubersuggest for keywords, ChatGPT for outlines, Grammarly for editing.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: Monetize Your Blog</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Google AdSense:</strong> ₦50K-₦200K/month (₦100-500 per 1,000 views)</li>
-      <li><strong>Affiliate Marketing:</strong> ₦20K-₦150K/month (10-40% commission)</li>
-      <li><strong>Sponsored Posts:</strong> ₦30K-₦200K per post</li>
-      <li><strong>Digital Products:</strong> ₦100K-₦1M+ (courses, templates, guides)</li>
-      <li><strong>Services & Consulting:</strong> ₦200K+ (blog = credibility)</li>
+      <li><strong>Google AdSense:</strong> â‚¦50K-â‚¦200K/month (â‚¦100-500 per 1,000 views)</li>
+      <li><strong>Affiliate Marketing:</strong> â‚¦20K-â‚¦150K/month (10-40% commission)</li>
+      <li><strong>Sponsored Posts:</strong> â‚¦30K-â‚¦200K per post</li>
+      <li><strong>Digital Products:</strong> â‚¦100K-â‚¦1M+ (courses, templates, guides)</li>
+      <li><strong>Services & Consulting:</strong> â‚¦200K+ (blog = credibility)</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 5: Grow Your Audience</h2>
     <p>Social media (10 mins/day), email newsletter, guest posts, SEO, online communities. Takes 6-12 months for real traffic.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Realistic Timeline</h2>
-    <p><strong>Months 1-3:</strong> 0-100/month traffic → ₦0. <strong>Months 4-6:</strong> 100-1K traffic → ₦500-₦5K. <strong>Months 7-12:</strong> 1K-10K traffic → ₦5K-₦50K. <strong>Year 2+:</strong> 50K+ traffic → ₦200K-₦1M+.</p>
+    <p><strong>Months 1-3:</strong> 0-100/month traffic â†’ â‚¦0. <strong>Months 4-6:</strong> 100-1K traffic â†’ â‚¦500-â‚¦5K. <strong>Months 7-12:</strong> 1K-10K traffic â†’ â‚¦5K-â‚¦50K. <strong>Year 2+:</strong> 50K+ traffic â†’ â‚¦200K-â‚¦1M+.</p>
 
     <p>Start today. The best time to plant a tree was 20 years ago. The second-best time is now.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Pick a Niche That Can Pay</h2>
-    <p>Most blogs fail because they write about “everything”. A profitable niche has:</p>
+    <p>Most blogs fail because they write about â€œeverythingâ€. A profitable niche has:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Clear audience:</strong> SMEs, students, professionals, or a specific industry.</li>
       <li><strong>Problems with money:</strong> people pay to solve them (finance, marketing, legal, tech).</li>
-      <li><strong>Low competition angle:</strong> “Nigeria-specific” or “state/city-specific”.</li>
+      <li><strong>Low competition angle:</strong> â€œNigeria-specificâ€ or â€œstate/city-specificâ€.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">SEO Basics (How Blogs Get Free Traffic)</h2>
-    <p>SEO is the difference between “posting” and “building an asset”. Start with:</p>
+    <p>SEO is the difference between â€œpostingâ€ and â€œbuilding an assetâ€. Start with:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Write topics people search for (“how to…”, “best…”, “cost of…”)</li>
+      <li>Write topics people search for (â€œhow toâ€¦â€, â€œbestâ€¦â€, â€œcost ofâ€¦â€)</li>
       <li>Use internal links between related posts</li>
       <li>Answer questions clearly with headings and FAQs</li>
       <li>Update old posts instead of always writing new ones</li>
@@ -6695,7 +8264,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">The 30-Day Plan (Simple & Effective)</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
       <li>Pick 1 niche and list 30 topic ideas.</li>
-      <li>Write 8 strong posts (2/week) that answer “how-to” questions.</li>
+      <li>Write 8 strong posts (2/week) that answer â€œhow-toâ€ questions.</li>
       <li>Create a lead magnet (checklist/template) and collect emails.</li>
       <li>Post short videos on TikTok/Instagram pointing to your posts.</li>
     </ol>
@@ -6703,10 +8272,10 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose Blog Topics That Rank in Nigeria</h2>
     <p>Most blogs fail because they write what they like, not what people search for. Use this method:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Start with “how to”, “cost of”, “best”, and “requirements” keywords.</li>
+      <li>Start with â€œhow toâ€, â€œcost ofâ€, â€œbestâ€, and â€œrequirementsâ€ keywords.</li>
       <li>Make it location-specific (Nigeria, Lagos, Abuja) to reduce competition.</li>
-      <li>Write one core post, then create 3–5 supporting posts that link back to it.</li>
-      <li>Update old posts every 2–3 months (Google rewards freshness).</li>
+      <li>Write one core post, then create 3â€“5 supporting posts that link back to it.</li>
+      <li>Update old posts every 2â€“3 months (Google rewards freshness).</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">On-Page SEO Checklist (Simple)</h2>
@@ -6723,7 +8292,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">How long before a blog makes money?</h3>
-    <p>Most blogs need 3–6 months of consistent publishing before meaningful traffic arrives. With a clear niche and SEO, some blogs start earning earlier through services and affiliate offers.</p>
+    <p>Most blogs need 3â€“6 months of consistent publishing before meaningful traffic arrives. With a clear niche and SEO, some blogs start earning earlier through services and affiliate offers.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Do I need to write long posts?</h3>
     <p>Write as long as needed to answer the question fully. Many competitive topics need depth (examples, steps, FAQs). Short posts can work for low-competition niches.</p>
 
@@ -6731,7 +8300,7 @@ export const blogPosts: BlogPost[] = [
     <p>Traffic can fluctuate, but an email list is an asset. Create a simple lead magnet (checklist, template, mini-guide) and collect emails. Then send 1 useful newsletter weekly and include a soft offer (service, affiliate link, product).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Repurpose Content (One Post, Many Channels)</h2>
-    <p>Turn each blog post into 5–10 short posts for TikTok/Instagram/X. Link back to the original article. This brings early traffic while SEO grows.</p>
+    <p>Turn each blog post into 5â€“10 short posts for TikTok/Instagram/X. Link back to the original article. This brings early traffic while SEO grows.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Tracking (Improve What Works)</h2>
     <p>Check which posts get traffic and which posts convert. Double down on topics that bring leads, affiliate clicks, and email signups. Small improvements compound over time.</p>
@@ -6746,8 +8315,8 @@ export const blogPosts: BlogPost[] = [
     <p>Choose topics where people are already searching and where you can add a Nigerian angle (prices, locations, regulations, step-by-step). A simple method:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Start with one niche (business, careers, local services, finance, etc.).</li>
-      <li>Write 10 posts that answer “how to”, “cost”, and “best” questions.</li>
-      <li>Interlink posts and update them every 3–6 months with new data.</li>
+      <li>Write 10 posts that answer â€œhow toâ€, â€œcostâ€, and â€œbestâ€ questions.</li>
+      <li>Interlink posts and update them every 3â€“6 months with new data.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
@@ -6786,7 +8355,7 @@ export const blogPosts: BlogPost[] = [
     })
   },
 
-  // ✅ NEW: HOW TO START AN E-COMMERCE BUSINESS
+  // âœ… NEW: HOW TO START AN E-COMMERCE BUSINESS
   {
     slug: "how-to-start-ecommerce-business-nigeria-2025",
     title: "How to Start an E-Commerce Business in Nigeria (2025): Complete Setup Guide",
@@ -6794,29 +8363,29 @@ export const blogPosts: BlogPost[] = [
     content: `
     <p><strong>By 9jaDirectory Commerce Team</strong> | <em>Updated: November 2025</em></p>
 
-    <p>Nigeria's e-commerce market is projected to reach $50B by 2026. Thousands of Nigerians are earning ₦500K-₦10M+ monthly selling online.</p>
+    <p>Nigeria's e-commerce market is projected to reach $50B by 2026. Thousands of Nigerians are earning â‚¦500K-â‚¦10M+ monthly selling online.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Phase 1: Planning (Week 1)</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">1. Choose Your Product</h3>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Dropshipping:</strong> Lowest startup (₦0), margins 20-40%</li>
-      <li><strong>Handmade/Artisanal:</strong> ₦50K-₦500K startup, margins 100-300%</li>
-      <li><strong>Digital Products:</strong> ₦10K-50K startup, unlimited scalability</li>
-      <li><strong>Food & Beverages:</strong> ₦100K-₦1M startup, high demand</li>
-      <li><strong>Personal Care:</strong> ₦200K-₦2M startup, high repeat rate</li>
+      <li><strong>Dropshipping:</strong> Lowest startup (â‚¦0), margins 20-40%</li>
+      <li><strong>Handmade/Artisanal:</strong> â‚¦50K-â‚¦500K startup, margins 100-300%</li>
+      <li><strong>Digital Products:</strong> â‚¦10K-50K startup, unlimited scalability</li>
+      <li><strong>Food & Beverages:</strong> â‚¦100K-â‚¦1M startup, high demand</li>
+      <li><strong>Personal Care:</strong> â‚¦200K-â‚¦2M startup, high repeat rate</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Phase 2: Technical Setup</h2>
-    <p><strong>Platforms:</strong> Shopify (₦5K-₦15K/month, professional), Local platforms (₦2K-₦5K/month, cheaper), Instagram/TikTok (free but limited).</p>
+    <p><strong>Platforms:</strong> Shopify (â‚¦5K-â‚¦15K/month, professional), Local platforms (â‚¦2K-â‚¦5K/month, cheaper), Instagram/TikTok (free but limited).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Phase 3: Getting First Sales</h2>
-    <p><strong>Marketing Budget (₦100K):</strong> 50% ads, 30% influencers, 20% content. Post quality photos, clear CTA, respond fast, offer first-time discount.</p>
+    <p><strong>Marketing Budget (â‚¦100K):</strong> 50% ads, 30% influencers, 20% content. Post quality photos, clear CTA, respond fast, offer first-time discount.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Phase 4: Scaling</h2>
-    <p>Once ₦500K in sales: increase ad spend, partner with micro-influencers, move to Shopify, hire help, negotiate better supplier prices.</p>
+    <p>Once â‚¦500K in sales: increase ad spend, partner with micro-influencers, move to Shopify, hire help, negotiate better supplier prices.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Real Income Example</h2>
-    <p><strong>Phone accessories:</strong> Product cost ₦2K, selling ₦5K, 60% margin. 20K clicks @ 2% conversion = 400 sales. Revenue ₦2M - COGS ₦800K - Ads ₦100K = <strong>₦1.1M profit/month</strong>.</p>
+    <p><strong>Phone accessories:</strong> Product cost â‚¦2K, selling â‚¦5K, 60% margin. 20K clicks @ 2% conversion = 400 sales. Revenue â‚¦2M - COGS â‚¦800K - Ads â‚¦100K = <strong>â‚¦1.1M profit/month</strong>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 7-Day Launch Plan</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -6825,12 +8394,12 @@ export const blogPosts: BlogPost[] = [
       <li>Day 4: Set up Instagram shop, take photos</li>
       <li>Day 5: Create 5 posts</li>
       <li>Day 6: Set up payment system</li>
-      <li>Day 7: Launch first ad (₦10K test)</li>
+      <li>Day 7: Launch first ad (â‚¦10K test)</li>
     </ol>
 
     <p>By Day 8, expect your first orders.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Payments: Don’t Lose Customers at Checkout</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Payments: Donâ€™t Lose Customers at Checkout</h2>
     <p>Nigerian customers will abandon your store if payment fails or looks suspicious. Choose a reliable payment flow early.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Offer bank transfer + card payments where possible.</li>
@@ -6843,13 +8412,13 @@ export const blogPosts: BlogPost[] = [
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Same-city delivery:</strong> partner with dispatch riders/logistics.</li>
       <li><strong>Nationwide shipping:</strong> use courier partners and clear return policies.</li>
-      <li><strong>Cash-on-delivery:</strong> risky—reduce fraud with delivery fee deposits.</li>
+      <li><strong>Cash-on-delivery:</strong> riskyâ€”reduce fraud with delivery fee deposits.</li>
     </ul>
     <p>Find logistics partners in <a href="/categories/transportation" class="text-green-600 hover:underline">Transportation</a>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Build Trust (How New Stores Win)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Use real photos/videos and show “delivery proof”.</li>
+      <li>Use real photos/videos and show â€œdelivery proofâ€.</li>
       <li>Display clear pricing and return policy.</li>
       <li>Collect reviews and repost customer feedback.</li>
       <li>Create a public profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your store on 9jaDirectory</a>.</li>
@@ -6864,7 +8433,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Selling “everything” instead of a niche.</li>
+      <li>Selling â€œeverythingâ€ instead of a niche.</li>
       <li>Ignoring delivery costs in pricing.</li>
       <li>Running ads without proof (reviews, testimonials, content).</li>
       <li>Slow replies (WhatsApp reply speed affects sales).</li>
@@ -6881,9 +8450,9 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Operations (The Boring Part That Makes Money)</h2>
-    <p>Most Nigerian e-commerce brands don’t fail because of bad design. They fail because of slow replies, unclear delivery, and messy inventory.</p>
+    <p>Most Nigerian e-commerce brands donâ€™t fail because of bad design. They fail because of slow replies, unclear delivery, and messy inventory.</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Inventory:</strong> track stock daily (even in a spreadsheet) so you don’t sell what you don’t have.</li>
+      <li><strong>Inventory:</strong> track stock daily (even in a spreadsheet) so you donâ€™t sell what you donâ€™t have.</li>
       <li><strong>Customer support:</strong> set WhatsApp quick replies for price, delivery timeline, and return policy.</li>
       <li><strong>Returns:</strong> define what is returnable, return window, and who pays delivery.</li>
       <li><strong>Packaging:</strong> pack like a professional (protect items, brand label, thank-you note).</li>
@@ -6919,7 +8488,7 @@ export const blogPosts: BlogPost[] = [
     <p>Track weekly: number of leads, conversion rate, average order value, refunds, and delivery time. Even a simple spreadsheet helps you see what is working and what is leaking profit.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>E-commerce is not about a perfect website—it’s about product demand, trust, and consistent fulfillment. Start small, track every order, and improve weekly.</p>
+    <p>E-commerce is not about a perfect websiteâ€”itâ€™s about product demand, trust, and consistent fulfillment. Start small, track every order, and improve weekly.</p>
     <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your online business on 9jaDirectory</a> so customers can find and verify you.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Return Policy (Build Trust)</h2>
     <p>Many shoppers fear scams. A simple return policy increases conversion. Define: return window, what is eligible, who pays delivery, and how refunds are processed. Keep it clear and visible.</p>
@@ -6960,19 +8529,19 @@ export const blogPosts: BlogPost[] = [
         "name": "9jaDirectory",
         "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
-      "description": "Launch your e-commerce store in Nigeria. Complete guide to products, platforms, payment solutions, and reaching first ₦500K in sales."
+      "description": "Launch your e-commerce store in Nigeria. Complete guide to products, platforms, payment solutions, and reaching first â‚¦500K in sales."
     })
   },
 
-  // ✅ NEW: CONSULTING BUSINESS - HIGH MARGIN SERVICE BUSINESS
+  // âœ… NEW: CONSULTING BUSINESS - HIGH MARGIN SERVICE BUSINESS
   {
     slug: "how-to-start-consulting-business-nigeria-2025",
-    title: "How to Start a Consulting Business in Nigeria (2025): ₦200K-₦2M Per Project",
+    title: "How to Start a Consulting Business in Nigeria (2025): â‚¦200K-â‚¦2M Per Project",
     excerpt: "How to start consulting business in Nigeria: pick a niche, price your service, and win high-value clients with a simple proposal process.",
     content: `
     <p><strong>By 9jaDirectory Professional Services Team</strong> | <em>Updated: November 2025</em></p>
 
-    <p>Consulting is the ultimate high-margin business. One engagement earns ₦500K-₦2M while spending 20-40 hours. That's ₦12.5K-₦50K per hour.</p>
+    <p>Consulting is the ultimate high-margin business. One engagement earns â‚¦500K-â‚¦2M while spending 20-40 hours. That's â‚¦12.5K-â‚¦50K per hour.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">What Makes a Good Consultant?</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -6982,16 +8551,16 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Profitable Niches</h2>
-    <p><strong>Best options:</strong> Business strategy (₦500K-₦2M), digital marketing (₦200K-₦1M), HR/recruitment (₦300K-₦800K), operations optimization (₦400K-₦1.5M), supply chain (₦500K-₦2M+).</p>
+    <p><strong>Best options:</strong> Business strategy (â‚¦500K-â‚¦2M), digital marketing (â‚¦200K-â‚¦1M), HR/recruitment (â‚¦300K-â‚¦800K), operations optimization (â‚¦400K-â‚¦1.5M), supply chain (â‚¦500K-â‚¦2M+).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Package Your Expertise</h2>
-    <p>Create 3 offerings: Quick Win (₦50K-₦200K), Core Service (₦300K-₦800K), Premium (₦1M-₦3M+).</p>
+    <p>Create 3 offerings: Quick Win (â‚¦50K-â‚¦200K), Core Service (â‚¦300K-â‚¦800K), Premium (â‚¦1M-â‚¦3M+).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Build Credibility</h2>
     <p>Get certifications, document case studies, write LinkedIn posts, create portfolio website, collect testimonials, speak on podcasts.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 3: Land First 3 Clients</h2>
-    <p><strong>Strategy 1: Warm outreach</strong> to 50 target companies (5-10% response). <strong>Strategy 2: Referral program</strong> (₦50K-₦100K bonus). <strong>Strategy 3: Content marketing</strong> (3-6 months, then passive).</p>
+    <p><strong>Strategy 1: Warm outreach</strong> to 50 target companies (5-10% response). <strong>Strategy 2: Referral program</strong> (â‚¦50K-â‚¦100K bonus). <strong>Strategy 3: Content marketing</strong> (3-6 months, then passive).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 4: The Consulting Process</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -7003,7 +8572,7 @@ export const blogPosts: BlogPost[] = [
     </ol>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Year 1 Projection</h2>
-    <p>Q1: 2 clients @ ₦300K = ₦600K. Q2: 4 clients @ ₦400K = ₦1.6M. Q3: 6 clients @ ₦500K = ₦3M. Q4: 8 clients @ ₦500K = ₦4M. <strong>Total Year 1: ₦9.2M from 20 clients</strong>.</p>
+    <p>Q1: 2 clients @ â‚¦300K = â‚¦600K. Q2: 4 clients @ â‚¦400K = â‚¦1.6M. Q3: 6 clients @ â‚¦500K = â‚¦3M. Q4: 8 clients @ â‚¦500K = â‚¦4M. <strong>Total Year 1: â‚¦9.2M from 20 clients</strong>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 30-Day Launch Plan</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -7044,7 +8613,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Protect Yourself (Contracts & Scope)</h2>
     <p>Scope creep can destroy your profit. Use a basic contract and clarify:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>What’s included vs excluded</li>
+      <li>Whatâ€™s included vs excluded</li>
       <li>How revisions work</li>
       <li>Payment schedule (e.g., 50% upfront)</li>
       <li>Confidentiality</li>
@@ -7052,7 +8621,7 @@ export const blogPosts: BlogPost[] = [
     <p>Need legal templates? Explore <a href="/categories/legal" class="text-green-600 hover:underline">Legal Services</a>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Get Found Without Begging (Visibility)</h2>
-    <p>Outbound works, but inbound is better. Build a simple “trust stack”:</p>
+    <p>Outbound works, but inbound is better. Build a simple â€œtrust stackâ€:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Weekly LinkedIn posts sharing insights and mini case studies</li>
       <li>One-page portfolio site with services and results</li>
@@ -7071,7 +8640,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Contracts & Payment Terms (Protect Your Profit)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Milestones:</strong> define deliverables and what “done” means.</li>
+      <li><strong>Milestones:</strong> define deliverables and what â€œdoneâ€ means.</li>
       <li><strong>Payment structure:</strong> common options are 50% upfront + 50% on delivery, or monthly retainer.</li>
       <li><strong>Scope boundaries:</strong> list what is included and what is not included (prevents scope creep).</li>
       <li><strong>Communication:</strong> set meeting frequency and response times.</li>
@@ -7081,15 +8650,15 @@ export const blogPosts: BlogPost[] = [
     <h3 class="text-xl font-bold mt-6 mb-3">Do I need certifications to be a consultant?</h3>
     <p>Not always. Proof beats certificates. If you can show case studies, results, and testimonials, you can sell. Certifications help when competing for corporate clients.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">How do I get my first client?</h3>
-    <p>Start with warm networks and partnerships: vendors, agencies, and professionals who already serve your target clients. Offer a small “quick win” package to build proof fast.</p>
+    <p>Start with warm networks and partnerships: vendors, agencies, and professionals who already serve your target clients. Offer a small â€œquick winâ€ package to build proof fast.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Common Mistakes (That Reduce Your Fees)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Selling “time” instead of outcomes:</strong> clients pay more for clear results than for hours.</li>
+      <li><strong>Selling â€œtimeâ€ instead of outcomes:</strong> clients pay more for clear results than for hours.</li>
       <li><strong>No proof:</strong> without case studies and testimonials, you compete on price.</li>
       <li><strong>Weak boundaries:</strong> unclear scope leads to endless revisions and low profit.</li>
       <li><strong>Talking to the wrong person:</strong> qualify the decision-maker early.</li>
-      <li><strong>Skipping follow-up:</strong> many deals close after 2–4 follow-ups, not the first call.</li>
+      <li><strong>Skipping follow-up:</strong> many deals close after 2â€“4 follow-ups, not the first call.</li>
     </ul>
     <p>Fix these and your consulting income becomes more predictable.</p>
 
@@ -7105,7 +8674,7 @@ export const blogPosts: BlogPost[] = [
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Client type:</strong> who you helped (industry, size).</li>
       <li><strong>Problem:</strong> what was broken and why it mattered.</li>
-      <li><strong>Process:</strong> what you did (3–5 bullets).</li>
+      <li><strong>Process:</strong> what you did (3â€“5 bullets).</li>
       <li><strong>Result:</strong> measurable outcome (revenue, cost saved, time saved).</li>
       <li><strong>Testimonial:</strong> one quote if available.</li>
     </ul>
@@ -7136,7 +8705,7 @@ export const blogPosts: BlogPost[] = [
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How to Start a Consulting Business in Nigeria (2025): ₦200K-₦2M Per Project",
+      "headline": "How to Start a Consulting Business in Nigeria (2025): â‚¦200K-â‚¦2M Per Project",
       "image": ["https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-27",
       "author": {
@@ -7149,28 +8718,28 @@ export const blogPosts: BlogPost[] = [
         "name": "9jaDirectory",
         "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" }
       },
-      "description": "Start a high-income consulting business in Nigeria. Find profitable niches and charge ₦200K-₦2M per project."
+      "description": "Start a high-income consulting business in Nigeria. Find profitable niches and charge â‚¦200K-â‚¦2M per project."
     })
   },
 
-  // ✅ NEW: HOW TO START IMPORT/EXPORT BUSINESS
+  // âœ… NEW: HOW TO START IMPORT/EXPORT BUSINESS
   {
     slug: "how-to-start-import-export-business-nigeria-2025",
-    title: "How to Start an Import/Export Business in Nigeria (2025): ₦5M-₦50M Potential",
-    excerpt: "Complete guide to starting import/export business in Nigeria. Learn regulations, customs, documentation, shipping, and how to make ₦2M-₦10M per shipment.",
+    title: "How to Start an Import/Export Business in Nigeria (2025): â‚¦5M-â‚¦50M Potential",
+    excerpt: "Complete guide to starting import/export business in Nigeria. Learn regulations, customs, documentation, shipping, and how to make â‚¦2M-â‚¦10M per shipment.",
     content: `
     <p><strong>By 9jaDirectory Trade Team</strong> | <em>Updated: November 2025</em></p>
 
-    <p>Import/export is Nigeria's hidden goldmine. One shipping container (20ft) costs ₦1M-₦2M to fill and sells for ₦3M-₦5M. That's ₦1M-₦3M profit per shipment.</p>
+    <p>Import/export is Nigeria's hidden goldmine. One shipping container (20ft) costs â‚¦1M-â‚¦2M to fill and sells for â‚¦3M-â‚¦5M. That's â‚¦1M-â‚¦3M profit per shipment.</p>
 
-    <p><strong>Do 4-6 shipments per year and earn ₦6M-₦18M. No employees needed.</strong></p>
+    <p><strong>Do 4-6 shipments per year and earn â‚¦6M-â‚¦18M. No employees needed.</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Why Import/Export?</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>✅ High margins: 100-300% typical</li>
-      <li>✅ Recurring revenue: Build long-term distributor relationships</li>
-      <li>✅ Scalable: Easy to handle multiple shipments</li>
-      <li>✅ Government support: Lots of incentives for traders</li>
+      <li>âœ… High margins: 100-300% typical</li>
+      <li>âœ… Recurring revenue: Build long-term distributor relationships</li>
+      <li>âœ… Scalable: Easy to handle multiple shipments</li>
+      <li>âœ… Government support: Lots of incentives for traders</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Best Products to Import</h2>
@@ -7178,15 +8747,15 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 1: Get Your Licenses & Registration</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>CAC registration (₦50K-₦100K, 2 weeks)</li>
+      <li>CAC registration (â‚¦50K-â‚¦100K, 2 weeks)</li>
       <li>TIN (Tax ID) from FIRS (free, same day)</li>
       <li>NCS registration (customs) (free, same day)</li>
       <li>Nigerian customs portal registration (CRMS) (free)</li>
     </ul>
-    <p><strong>Total cost:</strong> ₦50K-₦100K. <strong>Time:</strong> 1 week.</p>
+    <p><strong>Total cost:</strong> â‚¦50K-â‚¦100K. <strong>Time:</strong> 1 week.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Step 2: Secure Capital & Find Suppliers</h2>
-    <p><strong>Startup cost for 1 shipment:</strong> ₦2M-₦5M (product + shipping + customs + documentation).</p>
+    <p><strong>Startup cost for 1 shipment:</strong> â‚¦2M-â‚¦5M (product + shipping + customs + documentation).</p>
 
     <p><strong>Finding suppliers:</strong> Alibaba.com, Global Sources, trade shows in China/Turkey. Negotiate bulk discounts (50+ units = 30-40% off).</p>
 
@@ -7198,11 +8767,11 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Timeline:</strong> 2-4 weeks from order to delivery (with proper documentation).</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Real Example: Electronics Import</h2>
-    <p><strong>Buy 500 units in China:</strong> Cost ₦500K per unit = ₦250M total order. (Too much? Start smaller: 50 units = ₦25M investment.)</p>
+    <p><strong>Buy 500 units in China:</strong> Cost â‚¦500K per unit = â‚¦250M total order. (Too much? Start smaller: 50 units = â‚¦25M investment.)</p>
 
-    <p><strong>Shipping:</strong> ₦2M-₦3M. <strong>Customs/Duty:</strong> ₦5M. <strong>Documentation:</strong> ₦500K. <strong>Total cost:</strong> ₦32.5M.</p>
+    <p><strong>Shipping:</strong> â‚¦2M-â‚¦3M. <strong>Customs/Duty:</strong> â‚¦5M. <strong>Documentation:</strong> â‚¦500K. <strong>Total cost:</strong> â‚¦32.5M.</p>
 
-    <p><strong>Sell at ₦100K per unit = ₦50M revenue. Profit = ₦17.5M (54% margin!).</strong></p>
+    <p><strong>Sell at â‚¦100K per unit = â‚¦50M revenue. Profit = â‚¦17.5M (54% margin!).</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 90-Day Launch Plan</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -7213,14 +8782,14 @@ export const blogPosts: BlogPost[] = [
 
     <p>First shipment arrives by Month 4.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Import/Export 101: What You’re Really Doing</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Import/Export 101: What Youâ€™re Really Doing</h2>
     <p>Import/export is a logistics + compliance + sales business. Your profit comes from buying well, landing goods legally, and selling fast without currency risk destroying margins.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Choose the Right Product (3 Filters)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Demand:</strong> people already buy it regularly.</li>
-      <li><strong>Margin:</strong> after shipping and duties, there’s still profit.</li>
-      <li><strong>Compliance:</strong> avoid products with heavy regulation unless you’re ready.</li>
+      <li><strong>Margin:</strong> after shipping and duties, thereâ€™s still profit.</li>
+      <li><strong>Compliance:</strong> avoid products with heavy regulation unless youâ€™re ready.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Compliance Checklist (Nigeria)</h2>
@@ -7233,7 +8802,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Cost Your Shipment (Avoid Loss)</h2>
-    <p>Use “landed cost” so you don’t guess pricing:</p>
+    <p>Use â€œlanded costâ€ so you donâ€™t guess pricing:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Supplier cost + shipping + insurance + clearing + duties + inland logistics = landed cost</li>
       <li>Landed cost + your margin = selling price</li>
@@ -7248,7 +8817,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Selling Strategy (Before Goods Arrive)</h2>
-    <p>Don’t import and hope. Pre-sell or secure buyers early:</p>
+    <p>Donâ€™t import and hope. Pre-sell or secure buyers early:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Build a buyer list (wholesalers, retailers, corporate supply).</li>
       <li>Post samples and specs online (videos sell).</li>
@@ -7268,7 +8837,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
     <p>Ask your freight forwarder which option reduces risk for your product category and destination.</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">FX Risk (Don’t Let Profit Disappear)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">FX Risk (Donâ€™t Let Profit Disappear)</h2>
     <p>Currency moves can wipe out margin. Reduce risk by pre-selling to buyers, keeping a buffer, and updating prices when exchange rates move significantly.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
@@ -7293,10 +8862,10 @@ export const blogPosts: BlogPost[] = [
       <li>Have at least 3 serious buyers or pre-orders before you scale.</li>
       <li>Keep records of supplier chats, invoices, and receipts.</li>
     </ul>
-    <p>This checklist reduces delays, cashflow stress, and “surprise fees” that wipe out profit.</p>
+    <p>This checklist reduces delays, cashflow stress, and â€œsurprise feesâ€ that wipe out profit.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>Import/export can be profitable, but it’s not gambling. Win with accurate costing, compliance, supplier vetting, and pre-selling to buyers.</p>
+    <p>Import/export can be profitable, but itâ€™s not gambling. Win with accurate costing, compliance, supplier vetting, and pre-selling to buyers.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ (Final)</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">Do I need a clearing agent?</h3>
     <p>For your first shipments, an experienced clearing agent can save time and costly mistakes. Over time, learn the process so you can verify costs and avoid overcharging.</p>
@@ -7323,52 +8892,52 @@ export const blogPosts: BlogPost[] = [
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How to Start an Import/Export Business in Nigeria (2025): ₦5M-₦50M Potential",
+      "headline": "How to Start an Import/Export Business in Nigeria (2025): â‚¦5M-â‚¦50M Potential",
       "image": ["https://images.unsplash.com/photo-1453614512568-c4024d13c247?q=80&w=2070&auto=format&fit=crop"],
       "datePublished": "2025-11-26",
       "author": { "@type": "Organization", "name": "9jaDirectory Trade Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-      "description": "Start import/export business in Nigeria. Make ₦2M-₦10M per shipment. Complete guide to regulations, customs, documentation."
+      "description": "Start import/export business in Nigeria. Make â‚¦2M-â‚¦10M per shipment. Complete guide to regulations, customs, documentation."
     })
   },
 
-  // ✅ NEW: LOGISTICS & DELIVERY BUSINESS
+  // âœ… NEW: LOGISTICS & DELIVERY BUSINESS
   {
     slug: "how-to-start-logistics-delivery-business-nigeria-2025",
-    title: "How to Start a Logistics Business in Nigeria (2025): ₦500K-₦2M Monthly",
+    title: "How to Start a Logistics Business in Nigeria (2025): â‚¦500K-â‚¦2M Monthly",
     excerpt: "Logistics business Nigeria guide: startup costs, delivery model, client niches, and how to reach N500K-N2M monthly revenue.",
     content: `
     <p><strong>By 9jaDirectory Services Team</strong> | <em>Updated: November 2025</em></p>
 
     <p>Nigeria's logistics market is massive and fragmented. New, hungry delivery services are eating up traditional couriers' market share.</p>
 
-    <p><strong>You can too. Start with ₦500K and scale to ₦2M+/month in 6-12 months.</strong></p>
+    <p><strong>You can too. Start with â‚¦500K and scale to â‚¦2M+/month in 6-12 months.</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Why Start a Delivery Business?</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>✅ Huge demand: E-commerce, restaurants, SMEs all need reliable delivery</li>
-      <li>✅ Low barrier to entry: Start with just a bike or vehicle</li>
-      <li>✅ Recurring revenue: Sign contracts with businesses</li>
-      <li>✅ Scalable: Hire more riders as you grow</li>
+      <li>âœ… Huge demand: E-commerce, restaurants, SMEs all need reliable delivery</li>
+      <li>âœ… Low barrier to entry: Start with just a bike or vehicle</li>
+      <li>âœ… Recurring revenue: Sign contracts with businesses</li>
+      <li>âœ… Scalable: Hire more riders as you grow</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Business Model</h2>
     <p><strong>Pick your niche:</strong> Restaurant delivery, e-commerce logistics, B2B courier, or city-wide delivery. Focus beats diversification.</p>
 
-    <p><strong>Revenue model:</strong> Charge per delivery (₦1,000-₦5,000) or subscription (₦50K-₦200K/month for unlimited deliveries).</p>
+    <p><strong>Revenue model:</strong> Charge per delivery (â‚¦1,000-â‚¦5,000) or subscription (â‚¦50K-â‚¦200K/month for unlimited deliveries).</p>
 
-    <h2 class="text-2xl font-bold mt-8 mb-4">Startup Requirements (₦500K)</h2>
+    <h2 class="text-2xl font-bold mt-8 mb-4">Startup Requirements (â‚¦500K)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Motorcycle/Bike: ₦150K-₦250K</li>
-      <li>Insurance: ₦30K/year</li>
-      <li>Phone + basic app: ₦50K</li>
-      <li>Uniforms & branding: ₦50K</li>
-      <li>Working capital (first month): ₦150K</li>
-      <li><strong>Total: ₦480K-₦580K</strong></li>
+      <li>Motorcycle/Bike: â‚¦150K-â‚¦250K</li>
+      <li>Insurance: â‚¦30K/year</li>
+      <li>Phone + basic app: â‚¦50K</li>
+      <li>Uniforms & branding: â‚¦50K</li>
+      <li>Working capital (first month): â‚¦150K</li>
+      <li><strong>Total: â‚¦480K-â‚¦580K</strong></li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Revenue Example: Restaurant Delivery</h2>
-    <p>Partner with 5 restaurants. Each does 20 deliveries/day = 100 deliveries/day. At ₦2K per delivery = ₦200K/day = ₦4M/month (minus fuel ₦500K, other costs ₦500K) = <strong>₦3M profit</strong>.</p>
+    <p>Partner with 5 restaurants. Each does 20 deliveries/day = 100 deliveries/day. At â‚¦2K per delivery = â‚¦200K/day = â‚¦4M/month (minus fuel â‚¦500K, other costs â‚¦500K) = <strong>â‚¦3M profit</strong>.</p>
 
     <p>As your delivery volume becomes predictable, you can hire more riders, add routes, and move from one-off deliveries to monthly contracts.</p>
 
@@ -7379,10 +8948,10 @@ export const blogPosts: BlogPost[] = [
       <li>Week 5-8: Start taking deliveries, build reputation</li>
     </ol>
 
-    <p>First month: ₦500K-₦800K revenue.</p>
+    <p>First month: â‚¦500K-â‚¦800K revenue.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Choose a Niche (This Is How You Win)</h2>
-    <p>“Delivery” is broad. Niches help you price better and get repeat customers:</p>
+    <p>â€œDeliveryâ€ is broad. Niches help you price better and get repeat customers:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Food delivery (restaurants):</strong> short distances, high volume (<a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a>).</li>
       <li><strong>E-commerce last-mile:</strong> vendor pickups + customer deliveries (<a href="/categories/shopping" class="text-green-600 hover:underline">Shopping & Retail</a>).</li>
@@ -7393,7 +8962,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Pricing Strategy (Simple & Profitable)</h2>
     <p>Avoid random pricing. Create a clear rate card your clients understand:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Base fee:</strong> within a zone (e.g., “Ikeja to Ikeja”).</li>
+      <li><strong>Base fee:</strong> within a zone (e.g., â€œIkeja to Ikejaâ€).</li>
       <li><strong>Distance add-on:</strong> price increases after a certain km.</li>
       <li><strong>Weight/size add-on:</strong> larger parcels cost more.</li>
       <li><strong>Urgency:</strong> same-hour deliveries cost more than same-day.</li>
@@ -7415,7 +8984,7 @@ export const blogPosts: BlogPost[] = [
       <li>Verify addresses and phone numbers before dispatch.</li>
       <li>Use deposits/delivery fees upfront for cash-on-delivery orders.</li>
       <li>Train riders on item checks, signatures, and proof-of-delivery photos.</li>
-      <li>Don’t let one rider control cash without reporting.</li>
+      <li>Donâ€™t let one rider control cash without reporting.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">How to Get Your First 10 Business Clients</h2>
@@ -7510,21 +9079,21 @@ export const blogPosts: BlogPost[] = [
       "datePublished": "2025-11-25",
       "author": { "@type": "Organization", "name": "9jaDirectory Services Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-      "description": "Start logistics/delivery business in Nigeria. ₦500K startup. ₦500K-₦2M monthly revenue. Complete guide."
+      "description": "Start logistics/delivery business in Nigeria. â‚¦500K startup. â‚¦500K-â‚¦2M monthly revenue. Complete guide."
     })
   },
 
-  // ✅ NEW: BEAUTY & SALON BUSINESS
+  // âœ… NEW: BEAUTY & SALON BUSINESS
   {
     slug: "how-to-start-beauty-salon-business-nigeria-2025",
-    title: "How to Start a Beauty & Salon Business in Nigeria (2025): ₦300K-₦2M Startup",
-    excerpt: "Launch a profitable beauty or salon business in Nigeria. Comprehensive guide covering salon setup, services, pricing, marketing, and reaching ₦500K/month.",
+    title: "How to Start a Beauty & Salon Business in Nigeria (2025): â‚¦300K-â‚¦2M Startup",
+    excerpt: "Launch a profitable beauty or salon business in Nigeria. Comprehensive guide covering salon setup, services, pricing, marketing, and reaching â‚¦500K/month.",
     content: `
     <p><strong>By 9jaDirectory Beauty Team</strong> | <em>Updated: November 2025</em></p>
 
     <p>Beauty and personal care is recession-proof. Women spend on beauty even during hard times. It's one of Nigeria's most profitable service businesses.</p>
 
-    <p><strong>Startup: ₦300K-₦2M. Monthly revenue: ₦300K-₦500K+ if managed well.</strong></p>
+    <p><strong>Startup: â‚¦300K-â‚¦2M. Monthly revenue: â‚¦300K-â‚¦500K+ if managed well.</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Salon Service Ideas (Pick 1-3)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
@@ -7536,30 +9105,30 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Startup Costs Breakdown</h2>
-    <p><strong>Small salon (500 sq ft, 1-2 stations): ₦300K-₦500K</strong></p>
+    <p><strong>Small salon (500 sq ft, 1-2 stations): â‚¦300K-â‚¦500K</strong></p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Salon chairs & mirrors: ₦100K</li>
-      <li>Equipment (dryers, steamers, etc.): ₦80K</li>
-      <li>Products & supplies: ₦60K</li>
-      <li>Shop rent (first 3 months): ₦60K</li>
+      <li>Salon chairs & mirrors: â‚¦100K</li>
+      <li>Equipment (dryers, steamers, etc.): â‚¦80K</li>
+      <li>Products & supplies: â‚¦60K</li>
+      <li>Shop rent (first 3 months): â‚¦60K</li>
     </ul>
 
-    <p><strong>Medium salon (1,000 sq ft, 4-6 stations): ₦800K-₦1.5M</strong></p>
-    <p><strong>Upscale salon (2,000+ sq ft, 8+ stations): ₦2M+</strong></p>
+    <p><strong>Medium salon (1,000 sq ft, 4-6 stations): â‚¦800K-â‚¦1.5M</strong></p>
+    <p><strong>Upscale salon (2,000+ sq ft, 8+ stations): â‚¦2M+</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Service Pricing in Nigeria (2025)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Hair cut: ₦2K-₦5K</li>
-      <li>Hair coloring: ₦10K-₦30K</li>
-      <li>Braids (per hour): ₦5K-₦15K</li>
-      <li>Hair extensions: ₦15K-₦50K</li>
-      <li>Manicure: ₦3K-₦8K</li>
-      <li>Bridal makeup: ₦20K-₦100K</li>
-      <li>Facial: ₦5K-₦20K</li>
+      <li>Hair cut: â‚¦2K-â‚¦5K</li>
+      <li>Hair coloring: â‚¦10K-â‚¦30K</li>
+      <li>Braids (per hour): â‚¦5K-â‚¦15K</li>
+      <li>Hair extensions: â‚¦15K-â‚¦50K</li>
+      <li>Manicure: â‚¦3K-â‚¦8K</li>
+      <li>Bridal makeup: â‚¦20K-â‚¦100K</li>
+      <li>Facial: â‚¦5K-â‚¦20K</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Revenue Example (4-station salon)</h2>
-    <p>4 stylists, 5 clients each per day, ₦5K average per client = ₦100K/day. 25 working days = ₦2.5M/month. Minus salaries (₦600K), rent (₦100K), products (₦300K), utilities (₦100K) = <strong>₦1.4M profit</strong>.</p>
+    <p>4 stylists, 5 clients each per day, â‚¦5K average per client = â‚¦100K/day. 25 working days = â‚¦2.5M/month. Minus salaries (â‚¦600K), rent (â‚¦100K), products (â‚¦300K), utilities (â‚¦100K) = <strong>â‚¦1.4M profit</strong>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Your 30-Day Launch</h2>
     <ol class="list-decimal pl-5 mt-2 mb-4">
@@ -7575,19 +9144,19 @@ export const blogPosts: BlogPost[] = [
     <p>There are three models that work well in Nigeria. Pick one based on your budget and market:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Home service:</strong> low overhead, flexible (great for makeup, nails, braiding).</li>
-      <li><strong>Small studio:</strong> 1–2 stations; ideal for starting in Lagos or Abuja with limited budget.</li>
+      <li><strong>Small studio:</strong> 1â€“2 stations; ideal for starting in Lagos or Abuja with limited budget.</li>
       <li><strong>Full salon:</strong> multiple stations + staff; higher cost but scalable.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Location Tips (What Actually Matters)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Visibility:</strong> foot traffic beats “cheap rent” in most cases.</li>
-      <li><strong>Power:</strong> budget for inverter/generator—downtime kills revenue.</li>
+      <li><strong>Visibility:</strong> foot traffic beats â€œcheap rentâ€ in most cases.</li>
+      <li><strong>Power:</strong> budget for inverter/generatorâ€”downtime kills revenue.</li>
       <li><strong>Target market:</strong> price your services based on neighborhood spending power.</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Service Packaging (How to Increase Profit)</h2>
-    <p>Don’t sell “one service”. Create packages:</p>
+    <p>Donâ€™t sell â€œone serviceâ€. Create packages:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li><strong>Monthly hair care plan:</strong> wash + treatment + styling</li>
       <li><strong>Bridal bundle:</strong> trial + makeup + touch-ups</li>
@@ -7599,7 +9168,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Before/after videos:</strong> short Reels/TikToks convert better than flyers.</li>
       <li><strong>Reviews:</strong> ask every happy client for a review and referral.</li>
       <li><strong>WhatsApp bookings:</strong> use WhatsApp Business auto-replies for slots and prices.</li>
-      <li><strong>Local SEO:</strong> show up for “salon near me” searches.</li>
+      <li><strong>Local SEO:</strong> show up for â€œsalon near meâ€ searches.</li>
     </ul>
     <p>To build trust, create a profile page people can share: <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your salon on 9jaDirectory</a> (use <a href="/categories/beauty-spa" class="text-green-600 hover:underline">Beauty & Spa</a>).</p>
 
@@ -7640,7 +9209,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     <h3 class="text-xl font-bold mt-6 mb-3">How do I get customers in the first 30 days?</h3>
-    <p>Post transformations daily, run a limited “opening offer”, partner with nearby boutiques/vendors, and collect reviews. Consistency and proof beat expensive ads.</p>
+    <p>Post transformations daily, run a limited â€œopening offerâ€, partner with nearby boutiques/vendors, and collect reviews. Consistency and proof beat expensive ads.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">Should I start from home or rent a shop?</h3>
     <p>Starting from home reduces cost, but a shop increases walk-ins and trust. Start where you can deliver quality consistently, then expand when demand is steady.</p>
 
@@ -7657,7 +9226,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Marketing Checklist (Weekly)</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Post 3–5 transformations (before/after) weekly</li>
+      <li>Post 3â€“5 transformations (before/after) weekly</li>
       <li>Ask 5 customers for reviews monthly</li>
       <li>Run a small promo for slow days (weekday offers)</li>
       <li>Partner with nearby boutiques and makeup artists</li>
@@ -7703,25 +9272,25 @@ export const blogPosts: BlogPost[] = [
       "datePublished": "2025-11-24",
       "author": { "@type": "Organization", "name": "9jaDirectory Beauty Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-      "description": "Start a profitable beauty/salon business. ₦300K-₦2M startup. ₦500K+/month revenue."
+      "description": "Start a profitable beauty/salon business. â‚¦300K-â‚¦2M startup. â‚¦500K+/month revenue."
     })
   },
 
-  // ✅ NEW: FOOD PROCESSING & SNACKS BUSINESS
+  // âœ… NEW: FOOD PROCESSING & SNACKS BUSINESS
   {
     slug: "how-to-start-food-processing-snacks-business-nigeria-2025",
-    title: "How to Start a Food Processing & Snacks Business in Nigeria (2025): ₦500K-₦3M",
+    title: "How to Start a Food Processing & Snacks Business in Nigeria (2025): â‚¦500K-â‚¦3M",
     excerpt: "Food processing business Nigeria guide: snacks, plantain chips, and sauces with startup cost, licensing basics, and growth tips.",
     content: `
     <p><strong>By 9jaDirectory Food Business Team</strong> | <em>Updated: November 2025</em></p>
 
     <p>Nigerians spend billions on snacks yearly. If you can make good products and distribute well, you'll never run out of customers.</p>
 
-    <p><strong>Startup: ₦500K-₦3M. Revenue potential: ₦300K-₦5M/month (highly scalable).</strong></p>
+    <p><strong>Startup: â‚¦500K-â‚¦3M. Revenue potential: â‚¦300K-â‚¦5M/month (highly scalable).</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Popular Product Ideas</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li><strong>Plantain chips:</strong> Cheap to make, huge demand, ₦1K-₦3K per pack</li>
+      <li><strong>Plantain chips:</strong> Cheap to make, huge demand, â‚¦1K-â‚¦3K per pack</li>
       <li><strong>Puff puff/Chin chin:</strong> Simple recipe, high profit margins</li>
       <li><strong>Sauces & pepper mix:</strong> Low startup, long shelf life</li>
       <li><strong>Baked goods:</strong> Bread, cakes, pastries (needs baking skills)</li>
@@ -7730,18 +9299,18 @@ export const blogPosts: BlogPost[] = [
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Startup Costs: Plantain Chips Example</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Production equipment (fryer, grinder, slicer): ₦200K-₦400K</li>
-      <li>Packaging materials: ₦100K</li>
-      <li>Initial raw materials: ₦100K-₦200K</li>
-      <li>Licenses/permits (NAFDAC): ₦50K-₦100K</li>
-      <li>Working capital: ₦100K</li>
-      <li><strong>Total: ₦550K-₦800K</strong></li>
+      <li>Production equipment (fryer, grinder, slicer): â‚¦200K-â‚¦400K</li>
+      <li>Packaging materials: â‚¦100K</li>
+      <li>Initial raw materials: â‚¦100K-â‚¦200K</li>
+      <li>Licenses/permits (NAFDAC): â‚¦50K-â‚¦100K</li>
+      <li>Working capital: â‚¦100K</li>
+      <li><strong>Total: â‚¦550K-â‚¦800K</strong></li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Production Economics</h2>
-    <p><strong>Cost per pack (plantain chips, 100g):</strong> ₦150-₦200. <strong>Wholesale price:</strong> ₦500-₦700. <strong>Retail price:</strong> ₦1,000-₦1,200. <strong>Profit margin:</strong> 500-700%!</p>
+    <p><strong>Cost per pack (plantain chips, 100g):</strong> â‚¦150-â‚¦200. <strong>Wholesale price:</strong> â‚¦500-â‚¦700. <strong>Retail price:</strong> â‚¦1,000-â‚¦1,200. <strong>Profit margin:</strong> 500-700%!</p>
 
-    <p><strong>Daily production: 500 packs = ₦250K revenue - ₦75K cost = ₦175K profit/day.</strong></p>
+    <p><strong>Daily production: 500 packs = â‚¦250K revenue - â‚¦75K cost = â‚¦175K profit/day.</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Distribution Channels</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
@@ -7762,7 +9331,7 @@ export const blogPosts: BlogPost[] = [
       <li>Week 6-8: Build inventory, start selling</li>
     </ol>
 
-    <p>By Month 3, you can be doing ₦500K/month revenue.</p>
+    <p>By Month 3, you can be doing â‚¦500K/month revenue.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Quality Control (What Protects Your Brand)</h2>
     <p>Food businesses grow with repeat customers. That only happens when quality is consistent.</p>
@@ -7775,7 +9344,7 @@ export const blogPosts: BlogPost[] = [
     <h2 class="text-2xl font-bold mt-8 mb-4">Packaging & Branding Tips</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Clear label: brand name, net weight, ingredients, contact details, batch/expiry format.</li>
-      <li>Start with simple, clean packaging that looks “supermarket ready”.</li>
+      <li>Start with simple, clean packaging that looks â€œsupermarket readyâ€.</li>
       <li>Take professional product photos for online sales.</li>
     </ul>
 
@@ -7825,7 +9394,7 @@ export const blogPosts: BlogPost[] = [
     <p>Standardize production, use proper sealing/packaging, track batch dates, and store inventory in a cool, dry place. Quality control is cheaper than replacing bad stock.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Scaling (From 50 Packs to 5,000 Packs)</h2>
-    <p>Scale is less about “working harder” and more about systems:</p>
+    <p>Scale is less about â€œworking harderâ€ and more about systems:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Document your recipe/process so quality stays consistent.</li>
       <li>Buy inputs in bulk to reduce unit cost.</li>
@@ -7875,72 +9444,72 @@ export const blogPosts: BlogPost[] = [
       "datePublished": "2025-11-23",
       "author": { "@type": "Organization", "name": "9jaDirectory Food Business Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-      "description": "Start profitable food processing/snacks business. ₦500K-₦3M startup. ₦2M-₦5M monthly revenue potential."
+      "description": "Start profitable food processing/snacks business. â‚¦500K-â‚¦3M startup. â‚¦2M-â‚¦5M monthly revenue potential."
     })
   },
 
-  // ✅ NEW: AGRIBUSINESS & FARMING BUSINESS
+  // âœ… NEW: AGRIBUSINESS & FARMING BUSINESS
   {
     slug: "how-to-start-agribusiness-farming-nigeria-2025",
-    title: "How to Start an Agribusiness in Nigeria (2025): ₦1M-₦10M+ Annual Profit",
-    excerpt: "Complete guide to starting profitable agribusiness in Nigeria. Poultry, crop farming, fish farming, snail farming. ₦500K-₦5M startup. Scale to ₦5M-₦50M.",
+    title: "How to Start an Agribusiness in Nigeria (2025): â‚¦1M-â‚¦10M+ Annual Profit",
+    excerpt: "Complete guide to starting profitable agribusiness in Nigeria. Poultry, crop farming, fish farming, snail farming. â‚¦500K-â‚¦5M startup. Scale to â‚¦5M-â‚¦50M.",
     content: `
     <p><strong>By 9jaDirectory Agriculture Team</strong> | <em>Updated: November 2025</em></p>
 
     <p>Agriculture is Nigeria's backbone. With smart farming and business practices, you can turn land into significant income.</p>
 
-    <p><strong>Options exist for every budget: ₦100K-₦5M startup. Annual profit: ₦500K-₦50M+.</strong></p>
+    <p><strong>Options exist for every budget: â‚¦100K-â‚¦5M startup. Annual profit: â‚¦500K-â‚¦50M+.</strong></p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Best Agribusiness Ideas for Nigeria</h2>
 
     <p><strong>1. Poultry (Chicken) Farming</strong></p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Startup: ₦500K-₦2M (100-500 birds)</li>
-      <li>Revenue/year: ₦1M-₦5M (depending on scale)</li>
+      <li>Startup: â‚¦500K-â‚¦2M (100-500 birds)</li>
+      <li>Revenue/year: â‚¦1M-â‚¦5M (depending on scale)</li>
       <li>Demand: Very high (everyone eats chicken)</li>
       <li>Challenge: Disease management, consistent feed supply</li>
     </ul>
 
     <p><strong>2. Fish Farming</strong></p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Startup: ₦1M-₦3M (pond + fish fingerlings)</li>
-      <li>Revenue/year: ₦2M-₦8M (5,000-10,000 fish harvest twice yearly)</li>
+      <li>Startup: â‚¦1M-â‚¦3M (pond + fish fingerlings)</li>
+      <li>Revenue/year: â‚¦2M-â‚¦8M (5,000-10,000 fish harvest twice yearly)</li>
       <li>Demand: Growing (protein source, restaurants)</li>
       <li>Advantage: Low maintenance once established</li>
     </ul>
 
     <p><strong>3. Snail Farming</strong></p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Startup: ₦300K-₦800K</li>
-      <li>Revenue/year: ₦500K-₦2M</li>
+      <li>Startup: â‚¦300K-â‚¦800K</li>
+      <li>Revenue/year: â‚¦500K-â‚¦2M</li>
       <li>Demand: Niche but growing</li>
       <li>Advantage: Very profitable per unit</li>
     </ul>
 
     <p><strong>4. Crop Farming (Cassava, Maize, Vegetables)</strong></p>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Startup: ₦500K-₦3M (depends on land + equipment)</li>
-      <li>Revenue/year: ₦1M-₦5M</li>
+      <li>Startup: â‚¦500K-â‚¦3M (depends on land + equipment)</li>
+      <li>Revenue/year: â‚¦1M-â‚¦5M</li>
       <li>Best for: People with land already</li>
       <li>Scale option: Sell to processors, wholesalers</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Poultry Example: 500-Bird Farm</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>Startup investment: ₦1.5M (coop, equipment, birds)</li>
-      <li>Monthly expenses: ₦200K (feed, meds, labor)</li>
-      <li>Monthly revenue: ₦500K-₦750K (birds + eggs)</li>
-      <li>Monthly profit: ₦300K-₦550K</li>
-      <li><strong>Annual profit: ₦3.6M-₦6.6M (ROI 240-440%)</strong></li>
+      <li>Startup investment: â‚¦1.5M (coop, equipment, birds)</li>
+      <li>Monthly expenses: â‚¦200K (feed, meds, labor)</li>
+      <li>Monthly revenue: â‚¦500K-â‚¦750K (birds + eggs)</li>
+      <li>Monthly profit: â‚¦300K-â‚¦550K</li>
+      <li><strong>Annual profit: â‚¦3.6M-â‚¦6.6M (ROI 240-440%)</strong></li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Critical Success Factors</h2>
     <ul class="list-disc pl-5 mt-2 mb-4">
-      <li>✅ Secure land (own or lease, long-term)</li>
-      <li>✅ Quality breeding stock (not cheap, matters hugely)</li>
-      <li>✅ Good feed supply relationships (consistency is key)</li>
-      <li>✅ Disease prevention (sanitization, veterinary care)</li>
-      <li>✅ Market established BEFORE starting (avoid spoilage)</li>
+      <li>âœ… Secure land (own or lease, long-term)</li>
+      <li>âœ… Quality breeding stock (not cheap, matters hugely)</li>
+      <li>âœ… Good feed supply relationships (consistency is key)</li>
+      <li>âœ… Disease prevention (sanitization, veterinary care)</li>
+      <li>âœ… Market established BEFORE starting (avoid spoilage)</li>
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Funding Options</h2>
@@ -7979,7 +9548,7 @@ export const blogPosts: BlogPost[] = [
     <p>Explore demand in <a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants & Food</a> and <a href="/categories/hotels" class="text-green-600 hover:underline">Hotels</a>.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Records & Simple Farm Systems</h2>
-    <p>Record keeping is the difference between “I’m busy” and “I’m profitable”. Track:</p>
+    <p>Record keeping is the difference between â€œIâ€™m busyâ€ and â€œIâ€™m profitableâ€. Track:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>Feed purchases and consumption</li>
       <li>Mortality/disease incidents</li>
@@ -7999,7 +9568,7 @@ export const blogPosts: BlogPost[] = [
     <p>In 2025, farms that market online grow faster. Use:</p>
     <ul class="list-disc pl-5 mt-2 mb-4">
       <li>WhatsApp Business catalog for eggs, fish, chicken, produce.</li>
-      <li>Weekly updates to buyers (“fresh harvest available”).</li>
+      <li>Weekly updates to buyers (â€œfresh harvest availableâ€).</li>
       <li>Local listings so bulk buyers can find you.</li>
     </ul>
     <p><strong>Next step:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your farm on 9jaDirectory</a> under <a href="/categories/agriculture" class="text-green-600 hover:underline">Agriculture</a> so buyers can find and contact you.</p>
@@ -8024,7 +9593,7 @@ export const blogPosts: BlogPost[] = [
     <h3 class="text-xl font-bold mt-6 mb-3">Do I need land to start?</h3>
     <p>Not always. Fish farming (tarpaulin/pond) and small-scale poultry can start with rented space. Start with what you can control and scale into land later.</p>
     <h3 class="text-xl font-bold mt-6 mb-3">How soon can I make profit?</h3>
-    <p>It depends on the cycle. Broilers can be 6–8 weeks, while some crops take longer. Profit comes faster when buyers are secured early.</p>
+    <p>It depends on the cycle. Broilers can be 6â€“8 weeks, while some crops take longer. Profit comes faster when buyers are secured early.</p>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Funding Options (Grow Without Killing Cashflow)</h2>
     <p>Agribusiness often needs working capital for feed, inputs, and labor. Consider these options (based on your scale):</p>
@@ -8055,7 +9624,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
-    <p>Agribusiness can be profitable, but it rewards planning, consistency, and strong distribution. Start with a niche you can manage, secure buyers early, and scale with data—not emotion.</p>
+    <p>Agribusiness can be profitable, but it rewards planning, consistency, and strong distribution. Start with a niche you can manage, secure buyers early, and scale with dataâ€”not emotion.</p>
     <h2 class="text-2xl font-bold mt-8 mb-4">Next Step</h2>
     <p>Make it easy for buyers to find you. <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your farm or agribusiness on 9jaDirectory</a>, add photos, your location, and what you sell (price range and minimum order).</p>
 
@@ -8080,16 +9649,16 @@ export const blogPosts: BlogPost[] = [
     schema: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "How to Start an Agribusiness in Nigeria (2025): ₦1M-₦10M+ Annual Profit",
+      "headline": "How to Start an Agribusiness in Nigeria (2025): â‚¦1M-â‚¦10M+ Annual Profit",
       "image": ["https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80"],
       "datePublished": "2025-11-22",
       "author": { "@type": "Organization", "name": "9jaDirectory Agriculture Team", "url": "https://www.9jadirectory.org" },
       "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-      "description": "Start profitable agribusiness in Nigeria. Poultry, fishing, snail farming. ₦500K-₦5M startup. ₦1M-₦50M annual profit."
+      "description": "Start profitable agribusiness in Nigeria. Poultry, fishing, snail farming. â‚¦500K-â‚¦5M startup. â‚¦1M-â‚¦50M annual profit."
     })
   },
 
-  // ── CAC PUBLIC SEARCH ──────────────────────────────────────────────────────
+  // â”€â”€ CAC PUBLIC SEARCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "cac-public-search-verify-company-nigeria",
     title: "CAC Public Search: Verify Any Nigerian Company by Name or RC Number (2026)",
@@ -8097,33 +9666,33 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>Every week, Nigerians lose money to fake companies. A supplier collects payment and vanishes. A contractor takes a deposit and stops responding. A "registered" business turns out to be a name printed on a flyer with no backing. The tool to prevent most of these losses already exists and it is free — the <strong>CAC public search</strong> portal at the Corporate Affairs Commission.</p>
+      <p>Every week, Nigerians lose money to fake companies. A supplier collects payment and vanishes. A contractor takes a deposit and stops responding. A "registered" business turns out to be a name printed on a flyer with no backing. The tool to prevent most of these losses already exists and it is free â€” the <strong>CAC public search</strong> portal at the Corporate Affairs Commission.</p>
 
-      <p>Whether you are about to pay a vendor, sign a contract, hire a supplier, or invest in a business, spending five minutes on the CAC public search can save you five figures — or more. This guide walks you through exactly how to use it, what your results mean, what to watch for, and what to do when something looks off.</p>
+      <p>Whether you are about to pay a vendor, sign a contract, hire a supplier, or invest in a business, spending five minutes on the CAC public search can save you five figures â€” or more. This guide walks you through exactly how to use it, what your results mean, what to watch for, and what to do when something looks off.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop" alt="Nigerian business professional verifying a company on a laptop" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-500 mt-2">The CAC public search covers Business Names, Limited Companies, PLCs, Incorporated Trustees, and LLPs — search free at search.cac.gov.ng.</figcaption>
+        <figcaption class="text-sm text-gray-500 mt-2">The CAC public search covers Business Names, Limited Companies, PLCs, Incorporated Trustees, and LLPs â€” search free at search.cac.gov.ng.</figcaption>
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What Is the CAC Public Search?</h2>
-      <p>The CAC public search is a free online tool maintained by Nigeria's Corporate Affairs Commission — the government body responsible for registering and regulating all companies and business names in the country. It allows anyone to look up any registered Nigerian business using either the company's name or its RC number (Registration Certificate number).</p>
+      <p>The CAC public search is a free online tool maintained by Nigeria's Corporate Affairs Commission â€” the government body responsible for registering and regulating all companies and business names in the country. It allows anyone to look up any registered Nigerian business using either the company's name or its RC number (Registration Certificate number).</p>
 
       <p>The database covers all entities registered with CAC including:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Business Names</strong> — sole proprietorships and partnerships trading under a registered name</li>
-        <li><strong>Private Limited Companies (Ltd)</strong> — the most common corporate structure for Nigerian SMEs</li>
-        <li><strong>Public Limited Companies (PLC)</strong> — larger companies that can offer shares to the public</li>
-        <li><strong>Incorporated Trustees</strong> — NGOs, religious bodies, associations, and foundations</li>
-        <li><strong>Limited Liability Partnerships (LLP)</strong> — combining partnership flexibility with limited liability</li>
+        <li><strong>Business Names</strong> â€” sole proprietorships and partnerships trading under a registered name</li>
+        <li><strong>Private Limited Companies (Ltd)</strong> â€” the most common corporate structure for Nigerian SMEs</li>
+        <li><strong>Public Limited Companies (PLC)</strong> â€” larger companies that can offer shares to the public</li>
+        <li><strong>Incorporated Trustees</strong> â€” NGOs, religious bodies, associations, and foundations</li>
+        <li><strong>Limited Liability Partnerships (LLP)</strong> â€” combining partnership flexibility with limited liability</li>
       </ul>
 
       <p>If a business is genuinely registered in Nigeria, it will appear here. If it does not appear, treat that as a serious warning sign.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What Is an RC Number?</h2>
-      <p>Before you run a search, you need to understand the RC number — because it is the most reliable way to verify a specific company.</p>
+      <p>Before you run a search, you need to understand the RC number â€” because it is the most reliable way to verify a specific company.</p>
 
-      <p><strong>RC</strong> stands for <strong>Registration Certificate</strong>. When the CAC approves a company or business name, it assigns a unique RC number to that entity. Think of it as the business equivalent of a NIN — a permanent identifier that belongs to that registration alone.</p>
+      <p><strong>RC</strong> stands for <strong>Registration Certificate</strong>. When the CAC approves a company or business name, it assigns a unique RC number to that entity. Think of it as the business equivalent of a NIN â€” a permanent identifier that belongs to that registration alone.</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>For Business Names:</strong> the RC number appears on the Certificate of Registration issued by the CAC.</li>
@@ -8138,14 +9707,14 @@ export const blogPosts: BlogPost[] = [
       <p>Any legitimate Nigerian business will share its RC number without hesitation. If a vendor or contractor refuses to provide it, that alone is a red flag.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Step-by-Step: How to Use the CAC Public Search</h2>
-      <p>There are two ways to search — by company name and by RC number. Here is how to do both.</p>
+      <p>There are two ways to search â€” by company name and by RC number. Here is how to do both.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Option A: Search by Company Name</h3>
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
-        <li>Open your browser and go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> — the official CAC public search portal.</li>
+        <li>Open your browser and go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> â€” the official CAC public search portal.</li>
         <li>In the search box, type the business name exactly as it appears on the invoice, contract, or receipt you received.</li>
         <li>Click <strong>Search</strong> or press Enter.</li>
-        <li>Browse the results. Multiple businesses may have similar names — look carefully at the full registered name.</li>
+        <li>Browse the results. Multiple businesses may have similar names â€” look carefully at the full registered name.</li>
         <li>Click the matching result to view the full profile including registration type, status, registration date, and RC number.</li>
       </ol>
 
@@ -8153,9 +9722,9 @@ export const blogPosts: BlogPost[] = [
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
         <li>Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>.</li>
         <li>Select the <strong>"Search by RC Number"</strong> option (usually a tab or dropdown near the search bar).</li>
-        <li>Enter the RC number exactly as provided — including any letter prefix (RC, BN, or IT).</li>
+        <li>Enter the RC number exactly as provided â€” including any letter prefix (RC, BN, or IT).</li>
         <li>Click <strong>Search</strong>.</li>
-        <li>The result should display only one record — the exact entity registered under that number.</li>
+        <li>The result should display only one record â€” the exact entity registered under that number.</li>
       </ol>
 
       <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
@@ -8176,7 +9745,7 @@ export const blogPosts: BlogPost[] = [
           <tr><td class="border border-gray-300 p-3 font-semibold">Registered Name</td><td class="border border-gray-300 p-3">The exact legal name of the business as approved by CAC</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">RC Number</td><td class="border border-gray-300 p-3">The unique registration certificate number</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Entity Type</td><td class="border border-gray-300 p-3">Business Name, Private Company, PLC, Incorporated Trustees, etc.</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Status</td><td class="border border-gray-300 p-3">Active, Struck Off, or Dormant — the most critical field to check</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Status</td><td class="border border-gray-300 p-3">Active, Struck Off, or Dormant â€” the most critical field to check</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Registration Date</td><td class="border border-gray-300 p-3">When the entity was officially registered with CAC</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Address</td><td class="border border-gray-300 p-3">The registered office address on file with CAC</td></tr>
         </tbody>
@@ -8194,16 +9763,16 @@ export const blogPosts: BlogPost[] = [
       <p>A struck-off company has been removed from the CAC register, typically for failing to file annual returns for two or more years. Signing contracts with a struck-off company is legally risky and practically unenforceable.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. The registered address does not match</h3>
-      <p>If the address on the CAC record differs significantly from the address on the business card, invoice, or website — ask for an explanation. Companies are required to update their registered address with CAC within 14 days of any change.</p>
+      <p>If the address on the CAC record differs significantly from the address on the business card, invoice, or website â€” ask for an explanation. Companies are required to update their registered address with CAC within 14 days of any change.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">4. The name on the certificate does not match</h3>
       <p>Fraudsters sometimes present certificates for a different but similarly named company. Always compare the full registered name character by character. "Lagos Logistics Limited" and "Lagos Logistic Limited" are different registrations.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. A reluctance to share their RC number</h3>
-      <p>Any registered Nigerian business knows its RC number — it appears on the certificate, official letterhead, and bank documents. Hesitation, deflection, or an inability to provide this number quickly is a serious warning sign.</p>
+      <p>Any registered Nigerian business knows its RC number â€” it appears on the certificate, official letterhead, and bank documents. Hesitation, deflection, or an inability to provide this number quickly is a serious warning sign.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">6. Registration is very recent for a supposedly established business</h3>
-      <p>If a vendor claims 10 years of experience but their registration date is six months ago, press for an explanation. New registrations are fine for new businesses — but inconsistency with stated history warrants scrutiny.</p>
+      <p>If a vendor claims 10 years of experience but their registration date is six months ago, press for an explanation. New registrations are fine for new businesses â€” but inconsistency with stated history warrants scrutiny.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Limitations of CAC Public Search</h2>
       <p>The CAC public search is powerful but not a complete due diligence tool. Understand what it cannot tell you:</p>
@@ -8212,7 +9781,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>It does not show operational status:</strong> a company can be registered but not actively trading, or trading in a completely different sector.</li>
         <li><strong>It does not show financial health:</strong> CAC registration says nothing about whether a company pays its debts or has pending litigation.</li>
         <li><strong>It does not show court judgments:</strong> to check litigation history, search the Federal High Court or relevant State High Court records separately.</li>
-        <li><strong>Annual returns may be outdated:</strong> some companies are marked active but have not filed returns recently — a compliance issue in itself.</li>
+        <li><strong>Annual returns may be outdated:</strong> some companies are marked active but have not filed returns recently â€” a compliance issue in itself.</li>
       </ul>
 
       <p>For larger transactions, complement your CAC public search with additional checks: request audited accounts, run a credit bureau check, and ask for references from previous clients. For the full step-by-step registration process, see our guide on <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a>.</p>
@@ -8220,14 +9789,14 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">After You Verify: List Your Business for Others to Find</h2>
       <p>If you run a registered Nigerian business, the best thing you can do after verifying others is to make your own business easy to verify. Customers who find you online want proof you are legitimate before they call, WhatsApp, or walk in.</p>
 
-      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory's Business category</a> gives your verified business a public profile that appears in local search results across Nigeria — from <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> to <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a> to <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>. Add your CAC registration number, WhatsApp, photos, and services so customers can verify you instantly.</p>
+      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory's Business category</a> gives your verified business a public profile that appears in local search results across Nigeria â€” from <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a> to <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a> to <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>. Add your CAC registration number, WhatsApp, photos, and services so customers can verify you instantly.</p>
 
       <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">List Your Verified Business on 9jaDirectory</h3>
-        <p class="text-gray-700 mb-4">Join thousands of CAC-registered Nigerian businesses getting discovered by customers who are actively searching. Free listing available — add your RC number, photos, WhatsApp, and service area.</p>
+        <p class="text-gray-700 mb-4">Join thousands of CAC-registered Nigerian businesses getting discovered by customers who are actively searching. Free listing available â€” add your RC number, photos, WhatsApp, and service area.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -8247,7 +9816,7 @@ export const blogPosts: BlogPost[] = [
       <p>No. The CAC public search only accepts searches by company name or RC number. To find a business by phone number or location, use a business directory like 9jaDirectory. Once you find the business name there, you can then confirm it on the CAC portal.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between a Business Name and a Limited Company on the CAC search?</h3>
-      <p>A Business Name registration is simpler and cheaper — it registers a trading name for a sole proprietor or partnership but does not create a separate legal entity. The owner is personally liable for all debts. A Limited Company (Ltd) is a separate legal entity from its owners, providing limited liability protection. The "Entity Type" field in your search results will tell you which category applies.</p>
+      <p>A Business Name registration is simpler and cheaper â€” it registers a trading name for a sole proprietor or partnership but does not create a separate legal entity. The owner is personally liable for all debts. A Limited Company (Ltd) is a separate legal entity from its owners, providing limited liability protection. The "Entity Type" field in your search results will tell you which category applies.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How often is the CAC public search database updated?</h3>
       <p>New registrations and status changes typically appear within a few days to a few weeks of processing. If you registered recently and your business does not appear yet, check again after two to three weeks. For urgent verification during an active transaction, you can visit a CAC office directly to request a certified search result.</p>
@@ -8307,7 +9876,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── CAC NAME SEARCH ───────────────────────────────────────────────────────
+  // â”€â”€ CAC NAME SEARCH â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "cac-name-search-business-verification-nigeria",
     title: "CAC Name Search Nigeria: How to Check Business Names and Avoid Fraud (2026)",
@@ -8315,7 +9884,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>The CAC name search is one of the most used tools on the Corporate Affairs Commission website — and for good reason. Every month, thousands of Nigerians run name searches either to check if their chosen business name is available before registering, or to verify whether a company they are dealing with actually exists. Both are smart moves.</p>
+      <p>The CAC name search is one of the most used tools on the Corporate Affairs Commission website â€” and for good reason. Every month, thousands of Nigerians run name searches either to check if their chosen business name is available before registering, or to verify whether a company they are dealing with actually exists. Both are smart moves.</p>
 
       <p>This guide covers both use cases: how to search CAC for a name you want to register, and how to use the same search to verify any existing Nigerian business before you sign a contract, pay a deposit, or commit your money.</p>
 
@@ -8341,7 +9910,7 @@ export const blogPosts: BlogPost[] = [
         </tbody>
       </table>
 
-      <p>The tool is the same — the CAC public search portal — but your goal determines what you do with the results. Let us walk through both scenarios.</p>
+      <p>The tool is the same â€” the CAC public search portal â€” but your goal determines what you do with the results. Let us walk through both scenarios.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Use Case 1: Checking Name Availability Before Registration</h2>
       <p>The CAC will not register a business name that is identical or confusingly similar to an existing registration. Before you invest time preparing documents or paying fees, run a name search first. It takes two minutes and costs nothing.</p>
@@ -8351,7 +9920,7 @@ export const blogPosts: BlogPost[] = [
         <li>Visit <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> or go directly to <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> and use the name availability checker in the registration flow.</li>
         <li>Type your desired business name exactly as you plan to register it.</li>
         <li>Review all results that appear. Look for any name that is identical or very similar to yours.</li>
-        <li>If no close match appears, your name is likely available — but not guaranteed until you reserve it.</li>
+        <li>If no close match appears, your name is likely available â€” but not guaranteed until you reserve it.</li>
         <li>Prepare a second alternative name in case your first choice fails at the reservation stage.</li>
       </ol>
 
@@ -8364,7 +9933,7 @@ export const blogPosts: BlogPost[] = [
 
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>Is identical or deceptively similar to a registered business or company name</li>
-        <li>Contains restricted words without approval — including "Federal," "National," "Government," "State," "Municipal," "Chartered," "Bank," "Insurance," or "Trust"</li>
+        <li>Contains restricted words without approval â€” including "Federal," "National," "Government," "State," "Municipal," "Chartered," "Bank," "Insurance," or "Trust"</li>
         <li>Is offensive, vulgar, or contrary to public policy</li>
         <li>Implies a connection with the Nigerian government or royalty without evidence</li>
         <li>Contains foreign words without an English translation or explanation</li>
@@ -8378,7 +9947,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step-by-Step: Verifying a Business Before You Pay</h3>
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Get the full registered name:</strong> ask for the company's exact registered name and RC number — not just their trading name or brand name.</li>
+        <li><strong>Get the full registered name:</strong> ask for the company's exact registered name and RC number â€” not just their trading name or brand name.</li>
         <li><strong>Search by name first:</strong> go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> and enter the name. Confirm a match exists.</li>
         <li><strong>Cross-check the RC number:</strong> if the name matches, then search by the RC number they provided. The result should show the same entity name.</li>
         <li><strong>Check the status:</strong> confirm the status reads "Active." If it shows "Struck Off" or any other status, investigate further before proceeding.</li>
@@ -8395,7 +9964,7 @@ export const blogPosts: BlogPost[] = [
       <p>CAC's search engine is not perfect. A result may fail to appear due to a spelling variation in the database or a system delay after recent processing. If the search returns nothing but the company insists they are registered, ask them to produce the physical certificate with the RC number and search by that number instead.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Not checking entity type</h3>
-      <p>A search may return a result but it could be an Incorporated Trustee (IT) — a church or NGO — rather than the limited liability company the vendor claims to be. Check the entity type field carefully. An NGO operating as a for-profit contractor should raise questions.</p>
+      <p>A search may return a result but it could be an Incorporated Trustee (IT) â€” a church or NGO â€” rather than the limited liability company the vendor claims to be. Check the entity type field carefully. An NGO operating as a for-profit contractor should raise questions.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Stopping at the name search alone</h3>
       <p>For any high-value transaction, name search is a starting point, not a finish line. Combine it with a request for the actual CAC certificate, check if annual returns have been filed, and for very large sums, obtain a certified true copy of the company's filing from CAC directly.</p>
@@ -8412,7 +9981,7 @@ export const blogPosts: BlogPost[] = [
         <p class="text-gray-700 mb-4">Thousands of customers search 9jaDirectory every day for verified Nigerian businesses. List yours with your RC number, photos, WhatsApp link, and service area to get discovered immediately.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -8426,13 +9995,13 @@ export const blogPosts: BlogPost[] = [
       <p>Yes. Searching for a name on the CAC public portal at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> is completely free. You only pay when you move to the formal name reservation step inside the CAC pre-incorporation portal, which requires a government fee.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can two businesses have the same name in Nigeria?</h3>
-      <p>No. The CAC will not register a business name that is identical or confusingly similar to an existing registration. However, similar-sounding names can sometimes slip through. This is why verifying the exact RC number of a business — not just the name — is important before a major transaction.</p>
+      <p>No. The CAC will not register a business name that is identical or confusingly similar to an existing registration. However, similar-sounding names can sometimes slip through. This is why verifying the exact RC number of a business â€” not just the name â€” is important before a major transaction.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What happens if I reserve a name and do not complete registration?</h3>
       <p>CAC name reservation is valid for 60 days. If you do not complete your registration within that period, the reservation expires and the name becomes available for others to register. You can re-reserve the name but you will need to pay the reservation fee again.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I search for CAC-registered NGOs and churches?</h3>
-      <p>Yes. The CAC public search covers all entity types including Incorporated Trustees — the category under which NGOs, churches, mosques, associations, and foundations are registered. Their registration numbers are prefixed with "IT" rather than "RC." Search by the organisation name the same way you would for any other business.</p>
+      <p>Yes. The CAC public search covers all entity types including Incorporated Trustees â€” the category under which NGOs, churches, mosques, associations, and foundations are registered. Their registration numbers are prefixed with "IT" rather than "RC." Search by the organisation name the same way you would for any other business.</p>
     `,
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2070&auto=format&fit=crop",
     date: "Feb 18, 2026",
@@ -8471,7 +10040,7 @@ export const blogPosts: BlogPost[] = [
           { "@type": "Question", "name": "Is the CAC name search free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Searching for a name on the CAC public portal at search.cac.gov.ng is completely free. You only pay when you move to the formal name reservation step inside the CAC pre-incorporation portal." } },
           { "@type": "Question", "name": "Can two businesses have the same name in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "No. The CAC will not register a business name that is identical or confusingly similar to an existing registration. Always verify the RC number of a business, not just the name." } },
           { "@type": "Question", "name": "What happens if I reserve a name and do not complete registration?", "acceptedAnswer": { "@type": "Answer", "text": "CAC name reservation is valid for 60 days. If you do not complete registration within that period, the reservation expires and the name becomes available to others." } },
-          { "@type": "Question", "name": "Can I search for CAC-registered NGOs and churches?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC public search covers all entity types including Incorporated Trustees — NGOs, churches, and associations — whose registration numbers are prefixed with IT." } }
+          { "@type": "Question", "name": "Can I search for CAC-registered NGOs and churches?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC public search covers all entity types including Incorporated Trustees â€” NGOs, churches, and associations â€” whose registration numbers are prefixed with IT." } }
         ]
       },
       {
@@ -8486,7 +10055,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── COMPANY CODE NIGERIA ──────────────────────────────────────────────────
+  // â”€â”€ COMPANY CODE NIGERIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "company-code-nigeria-meaning-how-to-find",
     title: "Company Code in Nigeria: Full Meaning & How to Find Your RC Number (2026)",
@@ -8494,7 +10063,7 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>If you have ever filled in a form for a bank, a government portal, or a corporate client and been asked for your "company code," you may have wondered exactly what that means. In Nigeria, the term covers several different identifiers — and using the wrong one can cause delays, rejected applications, or failed verifications.</p>
+      <p>If you have ever filled in a form for a bank, a government portal, or a corporate client and been asked for your "company code," you may have wondered exactly what that means. In Nigeria, the term covers several different identifiers â€” and using the wrong one can cause delays, rejected applications, or failed verifications.</p>
 
       <p>This guide explains every Nigerian company code in plain English: what each one means, where it comes from, how to find yours, and how to verify any other company's code using the CAC public search tool.</p>
 
@@ -8504,7 +10073,7 @@ export const blogPosts: BlogPost[] = [
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What Is a Company Code in Nigeria?</h2>
-      <p>In everyday Nigerian business usage, "company code" most often refers to the <strong>RC number</strong> — the unique Registration Certificate number assigned by the Corporate Affairs Commission (CAC) when a business is registered. However, the full picture is slightly more complex. There are several official codes a Nigerian business may carry, depending on its structure.</p>
+      <p>In everyday Nigerian business usage, "company code" most often refers to the <strong>RC number</strong> â€” the unique Registration Certificate number assigned by the Corporate Affairs Commission (CAC) when a business is registered. However, the full picture is slightly more complex. There are several official codes a Nigerian business may carry, depending on its structure.</p>
 
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
         <thead>
@@ -8527,18 +10096,18 @@ export const blogPosts: BlogPost[] = [
       <p>When a bank, government portal, or corporate client asks for your "company code," they almost always mean your <strong>RC number</strong> (for limited companies) or <strong>BN number</strong> (for sole proprietors). These two are the most commonly requested.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">RC Number: The Primary Company Code in Nigeria</h2>
-      <p>The RC number is your company's unique fingerprint in Nigeria's official business register. It never changes, never expires, and is tied to your specific registration — not to the directors, shareholders, or any individual. Even if ownership changes completely, the RC number remains the same.</p>
+      <p>The RC number is your company's unique fingerprint in Nigeria's official business register. It never changes, never expires, and is tied to your specific registration â€” not to the directors, shareholders, or any individual. Even if ownership changes completely, the RC number remains the same.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What Your RC Number Looks Like</h3>
-      <p>An RC number for a limited company typically looks like: <strong>RC 1234567</strong> — the letters "RC" followed by a 6 or 7-digit number. Older registrations may have shorter numbers. Business names (sole proprietorships) registered with CAC carry a BN prefix: <strong>BN 123456</strong>.</p>
+      <p>An RC number for a limited company typically looks like: <strong>RC 1234567</strong> â€” the letters "RC" followed by a 6 or 7-digit number. Older registrations may have shorter numbers. Business names (sole proprietorships) registered with CAC carry a BN prefix: <strong>BN 123456</strong>.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Where to Find Your RC Number</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Certificate of Incorporation</strong> — it appears prominently on the certificate issued by CAC after successful registration</li>
-        <li><strong>CAC status report</strong> — downloadable from your account on <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a></li>
-        <li><strong>Company letterhead and invoices</strong> — reputable Nigerian companies print their RC number on all official documents</li>
-        <li><strong>Corporate bank account documents</strong> — banks require and record the RC number when opening business accounts</li>
-        <li><strong>CAC public search</strong> — if you know your registered name, search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> to retrieve the RC number</li>
+        <li><strong>Certificate of Incorporation</strong> â€” it appears prominently on the certificate issued by CAC after successful registration</li>
+        <li><strong>CAC status report</strong> â€” downloadable from your account on <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a></li>
+        <li><strong>Company letterhead and invoices</strong> â€” reputable Nigerian companies print their RC number on all official documents</li>
+        <li><strong>Corporate bank account documents</strong> â€” banks require and record the RC number when opening business accounts</li>
+        <li><strong>CAC public search</strong> â€” if you know your registered name, search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a> to retrieve the RC number</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">How to Verify a Company Code (RC Number) on CAC</h2>
@@ -8559,7 +10128,7 @@ export const blogPosts: BlogPost[] = [
       </blockquote>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Company Code Lists: What They Are and When They Matter</h2>
-      <p>Some industries and government databases maintain "company code lists" — internal reference numbers that identify businesses within a specific system. For example:</p>
+      <p>Some industries and government databases maintain "company code lists" â€” internal reference numbers that identify businesses within a specific system. For example:</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Central Bank of Nigeria (CBN):</strong> assigns bank codes (3-digit codes) that identify each licensed bank in Nigeria</li>
@@ -8574,14 +10143,14 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Make Your Company Code Visible to Customers</h2>
       <p>One practical reason to understand your company code is trust-building. Customers and corporate clients increasingly ask to see a company's RC number before transacting. Displaying your RC number on your website, invoices, and business directory listing signals transparency and professionalism.</p>
 
-      <p>When you list your business on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a>, you can include your CAC registration details alongside your WhatsApp number, service area, and photos — making it easy for clients in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, and beyond to verify you before they reach out. Read our guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> if you have not yet completed your CAC registration.</p>
+      <p>When you list your business on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a>, you can include your CAC registration details alongside your WhatsApp number, service area, and photos â€” making it easy for clients in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, and beyond to verify you before they reach out. Read our guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> if you have not yet completed your CAC registration.</p>
 
       <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Display Your Company Code Where Clients Can See It</h3>
-        <p class="text-gray-700 mb-4">List your business on 9jaDirectory with your RC number, services, and WhatsApp link. Customers searching for verified Nigerian businesses will find you — and trust you — faster.</p>
+        <p class="text-gray-700 mb-4">List your business on 9jaDirectory with your RC number, services, and WhatsApp link. Customers searching for verified Nigerian businesses will find you â€” and trust you â€” faster.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -8598,7 +10167,7 @@ export const blogPosts: BlogPost[] = [
       <p>No. The RC number is issued by the CAC and identifies a company in the business register. The TIN (Tax Identification Number) is issued by the Federal Inland Revenue Service (FIRS) and identifies a business for tax purposes. Both are required for operating a legitimate Nigerian business, but they come from different government agencies and serve different purposes.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What does a company code starting with "BN" mean?</h3>
-      <p>A BN prefix indicates a Business Name registration — a sole proprietorship or partnership registered under a business name. This is different from an RC (limited company) registration. Business Name owners are personally liable for all business debts, unlike directors of a limited company who have limited liability protection.</p>
+      <p>A BN prefix indicates a Business Name registration â€” a sole proprietorship or partnership registered under a business name. This is different from an RC (limited company) registration. Business Name owners are personally liable for all business debts, unlike directors of a limited company who have limited liability protection.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I find a company's RC number if I only have their name?</h3>
       <p>Yes. Go to <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>, search by the company name, and the RC number will appear in the search results alongside the registration status and entity type.</p>
@@ -8639,7 +10208,7 @@ export const blogPosts: BlogPost[] = [
         "mainEntity": [
           { "@type": "Question", "name": "What is an RC number in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "An RC number (Registration Certificate number) is the unique identifier assigned by the CAC to every registered Nigerian company. It appears on the Certificate of Incorporation and never changes." } },
           { "@type": "Question", "name": "Is the RC number the same as the TIN?", "acceptedAnswer": { "@type": "Answer", "text": "No. The RC number is issued by CAC and identifies a company in the business register. The TIN is issued by FIRS for tax purposes. Both are required for a legitimate Nigerian business but come from different agencies." } },
-          { "@type": "Question", "name": "What does a company code starting with BN mean?", "acceptedAnswer": { "@type": "Answer", "text": "A BN prefix indicates a Business Name registration — a sole proprietorship or partnership. Business Name owners are personally liable for all business debts, unlike directors of a limited company." } },
+          { "@type": "Question", "name": "What does a company code starting with BN mean?", "acceptedAnswer": { "@type": "Answer", "text": "A BN prefix indicates a Business Name registration â€” a sole proprietorship or partnership. Business Name owners are personally liable for all business debts, unlike directors of a limited company." } },
           { "@type": "Question", "name": "Can I find a company RC number if I only have their name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Go to search.cac.gov.ng, search by the company name, and the RC number will appear in the search results alongside registration status and entity type." } }
         ]
       },
@@ -8655,23 +10224,23 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── CAC PRE-INCORPORATION ─────────────────────────────────────────────────
+  // â”€â”€ CAC PRE-INCORPORATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "cac-pre-incorporation-guide-nigeria-2026",
     title: "CAC Pre-Incorporation Nigeria: Step-by-Step Guide (2026)",
-    excerpt: "CAC pre-incorporation 2026: register your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
+    excerpt: "CAC pre-incorporation 2026: register your business on pre.cac.gov.ng â€” name reservation, form filling, document upload, payment, and what to expect after submission.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>Every business registration in Nigeria begins in the same place: <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> — the Corporate Affairs Commission's pre-incorporation portal. Whether you are registering a business name, a private limited company, or an incorporated trustee, you must go through this portal first.</p>
+      <p>Every business registration in Nigeria begins in the same place: <a href="https://pre.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">pre.cac.gov.ng</a> â€” the Corporate Affairs Commission's pre-incorporation portal. Whether you are registering a business name, a private limited company, or an incorporated trustee, you must go through this portal first.</p>
 
-      <p>"Pre-incorporation" refers to all the steps that happen before your business is formally recognised as a legal entity. This includes creating your CAC account, reserving your business name, completing your registration forms, uploading documents, and paying the government fees. Once all of that is done, the CAC reviews your application and — if everything is in order — issues your certificate.</p>
+      <p>"Pre-incorporation" refers to all the steps that happen before your business is formally recognised as a legal entity. This includes creating your CAC account, reserving your business name, completing your registration forms, uploading documents, and paying the government fees. Once all of that is done, the CAC reviews your application and â€” if everything is in order â€” issues your certificate.</p>
 
       <p>This guide walks through every step of the CAC pre-incorporation process in plain language, covering what to prepare, common mistakes to avoid, and what happens after you submit.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Nigerian entrepreneur reviewing business registration documents and signing papers" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-500 mt-2">The CAC pre-incorporation portal is where every Nigerian business registration begins — and where most delays happen if you are not prepared.</figcaption>
+        <figcaption class="text-sm text-gray-500 mt-2">The CAC pre-incorporation portal is where every Nigerian business registration begins â€” and where most delays happen if you are not prepared.</figcaption>
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What Is the CAC Pre-Incorporation Portal?</h2>
@@ -8700,7 +10269,7 @@ export const blogPosts: BlogPost[] = [
           <tr><td class="border border-gray-300 p-3 font-semibold">Valid government ID</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Passport, driver's licence, voter's card, or national ID card</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Passport photograph</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Clear, white background, digital format (JPEG)</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Scanned signature</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Signature on white paper, scanned or photographed clearly</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Business address</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Can be residential — no rented office required to start</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Business address</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Can be residential â€” no rented office required to start</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Two proposed business names</td><td class="border border-gray-300 p-3">All registration types</td><td class="border border-gray-300 p-3">Primary choice and one alternative in case the first is taken</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Director / shareholder details</td><td class="border border-gray-300 p-3">Limited Companies only</td><td class="border border-gray-300 p-3">Full names, addresses, email, NIN, shareholding percentage</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Memorandum &amp; Articles of Association</td><td class="border border-gray-300 p-3">Limited Companies only</td><td class="border border-gray-300 p-3">CAC provides a template you can use; customise the objects clause</td></tr>
@@ -8729,7 +10298,7 @@ export const blogPosts: BlogPost[] = [
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
         <li>In your CAC dashboard, select <strong>New Application</strong> and choose your registration type (Business Name, Private Company, or Incorporated Trustees).</li>
         <li>Enter your proposed name in the name availability checker and click <strong>Check Availability</strong>.</li>
-        <li>If available, proceed to reserve the name. Pay the name reservation fee (the amount varies by entity type — check the current fee schedule on the portal).</li>
+        <li>If available, proceed to reserve the name. Pay the name reservation fee (the amount varies by entity type â€” check the current fee schedule on the portal).</li>
         <li>Name reservation is valid for <strong>60 days</strong>. You must complete registration within this window or the reservation expires.</li>
       </ol>
 
@@ -8745,39 +10314,39 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Step 5: Upload Your Documents</h3>
       <p>Upload scanned copies of all required documents. Common issues to avoid:</p>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li>Ensure scans are clear and not blurry — CAC reviewers reject unclear images</li>
+        <li>Ensure scans are clear and not blurry â€” CAC reviewers reject unclear images</li>
         <li>File sizes must be within the portal's limits (usually 200KB to 1MB per file)</li>
         <li>For passport photos, use a plain white background with a clear, front-facing image</li>
         <li>Signature images should be captured against white paper with no shadows</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 6: Pay the Registration Fee</h3>
-      <p>After completing the forms and uploading documents, the portal generates your Remita payment reference. Pay through Remita using a debit card, bank transfer, or internet banking. Keep your payment receipt — you will need the reference number if there are any issues with your application. Registration fees vary by entity type and share capital (for companies); check the current schedule on the portal as fees are updated periodically.</p>
+      <p>After completing the forms and uploading documents, the portal generates your Remita payment reference. Pay through Remita using a debit card, bank transfer, or internet banking. Keep your payment receipt â€” you will need the reference number if there are any issues with your application. Registration fees vary by entity type and share capital (for companies); check the current schedule on the portal as fees are updated periodically.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 7: Submit Your Application</h3>
-      <p>After payment, click <strong>Submit Application</strong>. You will receive a tracking number. Save this number — it is how you monitor your application's progress in the CAC system.</p>
+      <p>After payment, click <strong>Submit Application</strong>. You will receive a tracking number. Save this number â€” it is how you monitor your application's progress in the CAC system.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What Happens After You Submit</h2>
       <p>Once your application is submitted, the CAC pre-incorporation team reviews it. Here is what typically happens:</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Review (1–5 working days):</strong> the CAC team checks your documents and details for completeness and accuracy</li>
-        <li><strong>Query (if issues found):</strong> if there is a problem — a mismatch in details, unclear documents, or a name issue — you will receive a query via email or on your dashboard. You must respond and resubmit the corrected information</li>
+        <li><strong>Review (1â€“5 working days):</strong> the CAC team checks your documents and details for completeness and accuracy</li>
+        <li><strong>Query (if issues found):</strong> if there is a problem â€” a mismatch in details, unclear documents, or a name issue â€” you will receive a query via email or on your dashboard. You must respond and resubmit the corrected information</li>
         <li><strong>Approval:</strong> if everything is in order, the application is approved and your certificate is generated</li>
         <li><strong>Certificate download:</strong> download your Certificate of Registration (Business Name) or Certificate of Incorporation (Limited Company) directly from your CAC dashboard</li>
       </ul>
 
       <blockquote class="border-l-4 border-green-500 pl-4 italic my-4 bg-gray-50 p-4 rounded">
-        <strong>Typical timeline:</strong> A straightforward Business Name registration can be approved in 3–7 working days. Limited Company registrations typically take 7–14 working days. Delays are almost always caused by queries — which are caused by document issues or detail mismatches. Prepare carefully and you will avoid the common hold-ups.
+        <strong>Typical timeline:</strong> A straightforward Business Name registration can be approved in 3â€“7 working days. Limited Company registrations typically take 7â€“14 working days. Delays are almost always caused by queries â€” which are caused by document issues or detail mismatches. Prepare carefully and you will avoid the common hold-ups.
       </blockquote>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Common Pre-Incorporation Mistakes to Avoid</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Starting without both proposed names ready:</strong> if your first name fails, you will waste days waiting before you can proceed</li>
-        <li><strong>Using restricted words without approval:</strong> names containing "Federal," "National," "Bank," "Insurance," "Trust," or "Government" require special approval — using them without it will get your application queried</li>
-        <li><strong>Uploading blurry documents:</strong> this is the single biggest cause of CAC queries — always scan at minimum 300 DPI</li>
+        <li><strong>Using restricted words without approval:</strong> names containing "Federal," "National," "Bank," "Insurance," "Trust," or "Government" require special approval â€” using them without it will get your application queried</li>
+        <li><strong>Uploading blurry documents:</strong> this is the single biggest cause of CAC queries â€” always scan at minimum 300 DPI</li>
         <li><strong>Mismatched personal details:</strong> your name, date of birth, and NIN must be exactly consistent across all documents and the form</li>
-        <li><strong>Not logging out of the portal before the session expires:</strong> unsaved progress can be lost — fill each section and save before moving to the next</li>
+        <li><strong>Not logging out of the portal before the session expires:</strong> unsaved progress can be lost â€” fill each section and save before moving to the next</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">After Registration: Your Next Steps</h2>
@@ -8785,7 +10354,7 @@ export const blogPosts: BlogPost[] = [
 
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Open a corporate bank account:</strong> take your certificate, TIN (get one from FIRS), and directors' IDs to your preferred bank</li>
-        <li><strong>Get your Tax Identification Number (TIN):</strong> register with FIRS online at <a href="https://www.firs.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">firs.gov.ng</a> — this is required for the bank account and all government contracts</li>
+        <li><strong>Get your Tax Identification Number (TIN):</strong> register with FIRS online at <a href="https://www.firs.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">firs.gov.ng</a> â€” this is required for the bank account and all government contracts</li>
         <li><strong>Get your business online and discoverable:</strong> <a href="/add-business" class="text-green-600 hover:underline font-semibold">list your business on 9jaDirectory</a> so customers searching for what you offer can find and verify you immediately</li>
       </ol>
 
@@ -8793,10 +10362,10 @@ export const blogPosts: BlogPost[] = [
 
       <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Registered? Now Get Found by Customers</h3>
-        <p class="text-gray-700 mb-4">Thousands of Nigerians search 9jaDirectory daily for verified businesses. List yours with your CAC number, photos, WhatsApp, and service area — free to start.</p>
+        <p class="text-gray-700 mb-4">Thousands of Nigerians search 9jaDirectory daily for verified businesses. List yours with your CAC number, photos, WhatsApp, and service area â€” free to start.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -8807,16 +10376,16 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between pre-incorporation and post-incorporation?</h3>
-      <p>Pre-incorporation covers all steps before your business becomes a legal entity — creating your CAC account, reserving a name, filling forms, uploading documents, and paying fees. Post-incorporation refers to activities after your certificate is issued — filing annual returns, updating company details, and managing your registration on the post-incorporation portal at <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a>.</p>
+      <p>Pre-incorporation covers all steps before your business becomes a legal entity â€” creating your CAC account, reserving a name, filling forms, uploading documents, and paying fees. Post-incorporation refers to activities after your certificate is issued â€” filing annual returns, updating company details, and managing your registration on the post-incorporation portal at <a href="https://post.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">post.cac.gov.ng</a>.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I register a company on the CAC portal without a lawyer or agent?</h3>
-      <p>Yes. The CAC pre-incorporation portal is designed for direct use by business owners. You do not need a lawyer, accountant, or accredited agent to register a Business Name or a simple Private Limited Company. However, if your company structure is complex — multiple share classes, foreign directors, or a large Memorandum — professional help reduces the risk of queries and delays.</p>
+      <p>Yes. The CAC pre-incorporation portal is designed for direct use by business owners. You do not need a lawyer, accountant, or accredited agent to register a Business Name or a simple Private Limited Company. However, if your company structure is complex â€” multiple share classes, foreign directors, or a large Memorandum â€” professional help reduces the risk of queries and delays.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does CAC pre-incorporation registration cost in 2026?</h3>
-      <p>The fees are set by the CAC and are updated periodically. As of 2025/2026, Business Name registration costs approximately ₦10,000–₦15,000 in government fees (name reservation plus registration). Private Limited Company fees depend on share capital but typically range from ₦30,000 to ₦100,000 or more for higher share capital. Always check the current fee schedule on the portal before paying, as these amounts change.</p>
+      <p>The fees are set by the CAC and are updated periodically. As of 2025/2026, Business Name registration costs approximately â‚¦10,000â€“â‚¦15,000 in government fees (name reservation plus registration). Private Limited Company fees depend on share capital but typically range from â‚¦30,000 to â‚¦100,000 or more for higher share capital. Always check the current fee schedule on the portal before paying, as these amounts change.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What happens if my CAC pre-incorporation application is queried?</h3>
-      <p>A query means the CAC reviewer found an issue — a document is unclear, details are inconsistent, or a name is problematic. You will receive the query through your CAC dashboard or email. Log in, read the query notes carefully, correct the specific issues flagged, re-upload the corrected documents, and resubmit. Most queries can be resolved within one to three days if you address the exact points raised.</p>
+      <p>A query means the CAC reviewer found an issue â€” a document is unclear, details are inconsistent, or a name is problematic. You will receive the query through your CAC dashboard or email. Log in, read the query notes carefully, correct the specific issues flagged, re-upload the corrected documents, and resubmit. Most queries can be resolved within one to three days if you address the exact points raised.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I use a residential address for CAC registration?</h3>
       <p>Yes. You do not need a rented office space or commercial address to register a Business Name or Private Limited Company in Nigeria. A residential address is acceptable as the registered office address. You can update the address later through the post-incorporation portal if and when your business moves to commercial premises.</p>
@@ -8848,16 +10417,16 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-18",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng — name reservation, form filling, document upload, payment, and what to expect after submission.",
+        "description": "CAC pre-incorporation Nigeria 2026: complete guide to registering your business on pre.cac.gov.ng â€” name reservation, form filling, document upload, payment, and what to expect after submission.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/cac-pre-incorporation-guide-nigeria-2026" }
       },
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is the difference between pre-incorporation and post-incorporation?", "acceptedAnswer": { "@type": "Answer", "text": "Pre-incorporation covers all steps before your business becomes a legal entity — account creation, name reservation, forms, documents, and payment. Post-incorporation is managing your registration after your certificate is issued." } },
+          { "@type": "Question", "name": "What is the difference between pre-incorporation and post-incorporation?", "acceptedAnswer": { "@type": "Answer", "text": "Pre-incorporation covers all steps before your business becomes a legal entity â€” account creation, name reservation, forms, documents, and payment. Post-incorporation is managing your registration after your certificate is issued." } },
           { "@type": "Question", "name": "Can I register on the CAC portal without a lawyer or agent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The CAC pre-incorporation portal is designed for direct use by business owners. You do not need a lawyer or agent for a Business Name or simple Private Limited Company registration." } },
-          { "@type": "Question", "name": "How much does CAC pre-incorporation registration cost in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Business Name registration costs approximately ₦10,000–₦15,000 in government fees. Private Limited Company fees depend on share capital and typically range from ₦30,000 to ₦100,000+. Check the current fee schedule on the portal." } },
+          { "@type": "Question", "name": "How much does CAC pre-incorporation registration cost in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Business Name registration costs approximately â‚¦10,000â€“â‚¦15,000 in government fees. Private Limited Company fees depend on share capital and typically range from â‚¦30,000 to â‚¦100,000+. Check the current fee schedule on the portal." } },
           { "@type": "Question", "name": "What happens if my CAC application is queried?", "acceptedAnswer": { "@type": "Answer", "text": "Log in to your CAC dashboard, read the query notes, correct the specific issues flagged, re-upload corrected documents, and resubmit. Most queries are resolved within one to three days." } },
           { "@type": "Question", "name": "Can I use a residential address for CAC registration?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A residential address is acceptable as the registered office address for both Business Name and Private Limited Company registrations. You can update it later through the post-incorporation portal." } }
         ]
@@ -8874,7 +10443,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── HOW TO CHECK IF COMPANY IS REGISTERED ─────────────────────────────────
+  // â”€â”€ HOW TO CHECK IF COMPANY IS REGISTERED â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "how-to-check-if-company-is-registered-nigeria",
     title: "How to Check if a Company is Registered in Nigeria (2026 CAC Guide)",
@@ -8882,16 +10451,16 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>Before you pay a supplier, sign a partnership agreement, hire a contractor, or invest in a Nigerian business, you should verify that it is actually registered. This is not paranoia — it is standard due diligence. According to consumer protection agencies, business fraud and impersonation are among the most common financial crimes targeting Nigerian SMEs and individuals.</p>
+      <p>Before you pay a supplier, sign a partnership agreement, hire a contractor, or invest in a Nigerian business, you should verify that it is actually registered. This is not paranoia â€” it is standard due diligence. According to consumer protection agencies, business fraud and impersonation are among the most common financial crimes targeting Nigerian SMEs and individuals.</p>
 
-      <p>The good news: checking whether a company is registered in Nigeria is free, fast, and requires no legal expertise. You just need to know where to look and what to look for. This guide covers four verification methods — from the quickest free check to the most thorough official process — so you can choose the right level of scrutiny for the situation.</p>
+      <p>The good news: checking whether a company is registered in Nigeria is free, fast, and requires no legal expertise. You just need to know where to look and what to look for. This guide covers four verification methods â€” from the quickest free check to the most thorough official process â€” so you can choose the right level of scrutiny for the situation.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=2070&auto=format&fit=crop" alt="Business professional verifying a company registration on a laptop in Nigeria" class="w-full rounded-lg shadow-lg" />
         <figcaption class="text-sm text-gray-500 mt-2">Verifying a company's registration before transacting is one of the simplest protections against business fraud in Nigeria.</figcaption>
       </figure>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Method 1: CAC Public Search (Free — Best for Quick Checks)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 1: CAC Public Search (Free â€” Best for Quick Checks)</h2>
       <p>The fastest way to check if a company is registered in Nigeria is through the <strong>CAC public search portal</strong> at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>. This is the official database maintained by the Corporate Affairs Commission and covers all registered entities in Nigeria.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How to Run a CAC Public Search</h3>
@@ -8908,7 +10477,7 @@ export const blogPosts: BlogPost[] = [
 
       <p><strong>Best for:</strong> quick pre-transaction checks, verifying a vendor before payment, or confirming a name and RC number match.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Method 2: CAC Status Report (Free — Includes Filing History)</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 2: CAC Status Report (Free â€” Includes Filing History)</h2>
       <p>A CAC status report is a more detailed document showing a company's current registration status and some history. It is available for free download if you have a CAC account and the company's RC number.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How to Get a CAC Status Report</h3>
@@ -8925,8 +10494,8 @@ export const blogPosts: BlogPost[] = [
         <strong>Tip:</strong> If a company's directors listed on the status report do not match the person you are dealing with, ask for an explanation. Directors can change, but the change must be filed with CAC. If it has not been filed, that is a compliance issue worth noting.
       </blockquote>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">Method 3: Certified True Copy (Paid — Official Legal Proof)</h2>
-      <p>For high-value transactions — property purchases, major supply contracts, investment deals — a certified true copy of the company's CAC filing is the most legally robust form of verification. This is an official document issued and stamped by the CAC confirming the company's registration details.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">Method 3: Certified True Copy (Paid â€” Official Legal Proof)</h2>
+      <p>For high-value transactions â€” property purchases, major supply contracts, investment deals â€” a certified true copy of the company's CAC filing is the most legally robust form of verification. This is an official document issued and stamped by the CAC confirming the company's registration details.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How to Request a Certified True Copy</h3>
       <ul class="list-disc pl-5 mt-2 mb-4">
@@ -8941,10 +10510,10 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Method 4: Ask for Their Annual Returns Filing Proof</h2>
       <p>Beyond confirming registration, a serious due diligence check includes confirming that a company is actively maintaining its registration. Nigerian law requires all registered companies and business names to file annual returns with the CAC. Companies that have not filed are in default and can be struck off.</p>
 
-      <p>Ask the company to show you proof of their most recent annual return filing from their CAC dashboard. A company that hesitates to show this — or claims they "have not had time to file" — may have a struck-off or compliance-risk status that will not appear immediately on the public search.</p>
+      <p>Ask the company to show you proof of their most recent annual return filing from their CAC dashboard. A company that hesitates to show this â€” or claims they "have not had time to file" â€” may have a struck-off or compliance-risk status that will not appear immediately on the public search.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">What to Do If a Company Is Not Found</h2>
-      <p>If your CAC search returns no result for a company that claims to be registered, do not assume the worst immediately — but do proceed carefully:</p>
+      <p>If your CAC search returns no result for a company that claims to be registered, do not assume the worst immediately â€” but do proceed carefully:</p>
 
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li><strong>Try alternative name variations:</strong> the company may trade under a different name from their registered name. Ask for the exact registered name on their certificate.</li>
@@ -8966,8 +10535,8 @@ export const blogPosts: BlogPost[] = [
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3 font-semibold">NGOs / Associations</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Search by name on CAC public search — IT prefix on registration number</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Churches / Mosques</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Same as NGOs — search by organisation name</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">NGOs / Associations</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Search by name on CAC public search â€” IT prefix on registration number</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Churches / Mosques</td><td class="border border-gray-300 p-3">CAC (as Incorporated Trustees)</td><td class="border border-gray-300 p-3">Same as NGOs â€” search by organisation name</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Professional firms (law, accounting)</td><td class="border border-gray-300 p-3">CAC + Sector regulator (NBA, ICAN)</td><td class="border border-gray-300 p-3">Verify CAC registration AND confirm membership with the professional body</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Banks and fintechs</td><td class="border border-gray-300 p-3">CBN + CAC</td><td class="border border-gray-300 p-3">Check CBN's list of licensed institutions on <a href="https://www.cbn.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">cbn.gov.ng</a></td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">Insurance companies</td><td class="border border-gray-300 p-3">NAICOM + CAC</td><td class="border border-gray-300 p-3">Check NAICOM's register of licensed insurers</td></tr>
@@ -8977,16 +10546,16 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Make Your Own Business Easy to Verify</h2>
       <p>If you run a registered Nigerian business, every customer you deal with has the same due diligence question: "Can I trust this company?" The best answer is a transparent online presence where your CAC details, contact information, and services are publicly visible.</p>
 
-      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a> lets you display your RC number, WhatsApp number, photos, service area, and category alongside your business name — giving customers everything they need to verify and contact you without friction. Businesses in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>, and across Nigeria are already getting discovered this way.</p>
+      <p>Listing on <a href="/categories/business" class="text-green-600 hover:underline">9jaDirectory</a> lets you display your RC number, WhatsApp number, photos, service area, and category alongside your business name â€” giving customers everything they need to verify and contact you without friction. Businesses in <a href="/states/lagos" class="text-green-600 hover:underline">Lagos</a>, <a href="/states/abuja" class="text-green-600 hover:underline">Abuja</a>, <a href="/states/rivers" class="text-green-600 hover:underline">Port Harcourt</a>, and across Nigeria are already getting discovered this way.</p>
 
       <p>For the full registration process, read our guide to <a href="/blog/business-registration-nigeria-guide" class="text-green-600 hover:underline">business registration in Nigeria</a> and our <a href="/blog/cac-pre-incorporation-guide-nigeria-2026" class="text-green-600 hover:underline">CAC pre-incorporation step-by-step guide</a>.</p>
 
       <div class="my-8 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">List Your Verified Business on 9jaDirectory</h3>
-        <p class="text-gray-700 mb-4">Make it easy for customers to find and verify your business. Add your RC number, WhatsApp, photos, and service area — and start appearing in local searches across Nigeria today.</p>
+        <p class="text-gray-700 mb-4">Make it easy for customers to find and verify your business. Add your RC number, WhatsApp, photos, and service area â€” and start appearing in local searches across Nigeria today.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">
-            List Your Business Free →
+            List Your Business Free â†’
           </a>
           <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 text-gray-700 font-semibold hover:border-gray-400">
             See Premium Plans
@@ -8997,16 +10566,16 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is the CAC public search 100% reliable?</h3>
-      <p>The CAC public search is highly reliable for confirming whether a business is registered and checking its status. However, it is not infallible — very recent registrations may not yet appear, and the database may have minor delays after status changes. For critical transactions, combine the public search with a request for the physical certificate and, where necessary, a certified true copy from a CAC office.</p>
+      <p>The CAC public search is highly reliable for confirming whether a business is registered and checking its status. However, it is not infallible â€” very recent registrations may not yet appear, and the database may have minor delays after status changes. For critical transactions, combine the public search with a request for the physical certificate and, where necessary, a certified true copy from a CAC office.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can a company be registered but still be fraudulent?</h3>
-      <p>Yes. CAC registration confirms legal existence — it does not validate a company's honesty, financial health, or ability to deliver on promises. A registered company can still be operated fraudulently. Always combine CAC verification with other due diligence: check reviews, request references, speak to previous clients, and for large sums, engage a lawyer to conduct a more thorough background check.</p>
+      <p>Yes. CAC registration confirms legal existence â€” it does not validate a company's honesty, financial health, or ability to deliver on promises. A registered company can still be operated fraudulently. Always combine CAC verification with other due diligence: check reviews, request references, speak to previous clients, and for large sums, engage a lawyer to conduct a more thorough background check.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the fastest way to check if a Nigerian company is registered?</h3>
-      <p>The fastest method is the CAC public search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>. It is free, requires no login, and returns results in seconds. Search by the company name or by RC number — RC number searches are more precise since names can have near-identical variations.</p>
+      <p>The fastest method is the CAC public search at <a href="https://search.cac.gov.ng" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:underline">search.cac.gov.ng</a>. It is free, requires no login, and returns results in seconds. Search by the company name or by RC number â€” RC number searches are more precise since names can have near-identical variations.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I know if a company has been struck off by CAC?</h3>
-      <p>A struck-off status will appear in the "Status" field when you view the company's record on the CAC public search. The record will still exist in the database — the company just will not show as "Active." If a company that was previously active now shows as "Struck Off," it means they have not filed annual returns for two or more years and have been removed from the active register.</p>
+      <p>A struck-off status will appear in the "Status" field when you view the company's record on the CAC public search. The record will still exist in the database â€” the company just will not show as "Active." If a company that was previously active now shows as "Struck Off," it means they have not filed annual returns for two or more years and have been removed from the active register.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Do partnerships need to be registered with the CAC?</h3>
       <p>Yes. Partnerships operating under a business name in Nigeria must register that business name with the CAC. They receive a BN (Business Name) registration number. However, general partnerships not operating under a specific business name can technically exist without CAC registration, though they lose access to corporate bank accounts, contracts, and other benefits that come with formal registration.</p>
@@ -9047,7 +10616,7 @@ export const blogPosts: BlogPost[] = [
         "mainEntity": [
           { "@type": "Question", "name": "Is the CAC public search 100% reliable?", "acceptedAnswer": { "@type": "Answer", "text": "The CAC public search is highly reliable for confirming whether a business is registered. Very recent registrations may not yet appear. For critical transactions, combine the public search with the physical certificate and, where necessary, a certified true copy from a CAC office." } },
           { "@type": "Question", "name": "Can a company be registered but still be fraudulent?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. CAC registration confirms legal existence, not honesty or financial health. Always combine CAC verification with reviews, references, and for large sums, a lawyer conducting a thorough background check." } },
-          { "@type": "Question", "name": "What is the fastest way to check if a Nigerian company is registered?", "acceptedAnswer": { "@type": "Answer", "text": "The fastest method is the CAC public search at search.cac.gov.ng — it is free, requires no login, and returns results in seconds. RC number searches are more precise than name searches." } },
+          { "@type": "Question", "name": "What is the fastest way to check if a Nigerian company is registered?", "acceptedAnswer": { "@type": "Answer", "text": "The fastest method is the CAC public search at search.cac.gov.ng â€” it is free, requires no login, and returns results in seconds. RC number searches are more precise than name searches." } },
           { "@type": "Question", "name": "How do I know if a company has been struck off by CAC?", "acceptedAnswer": { "@type": "Answer", "text": "A struck-off status appears in the Status field when you view the company record on the CAC public search. It means the company has not filed annual returns for two or more years and has been removed from the active register." } },
           { "@type": "Question", "name": "Do partnerships need to be registered with the CAC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Partnerships operating under a business name must register that name with the CAC and receive a BN registration number. Without registration they lose access to corporate bank accounts, contracts, and other business benefits." } }
         ]
@@ -9069,9 +10638,9 @@ export const blogPosts: BlogPost[] = [
     title: "Top 10 Real Estate Companies in Abuja, Nigeria (2026 Guide)",
     excerpt: "Top 10 real estate companies in Abuja (2026): luxury and affordable developers, estate prices, key districts, and buyer tips for FCT property.",
     content: `
-      <p>Abuja is Nigeria's most structured property market. Unlike Lagos, it was purpose-built as the Federal Capital Territory — zoned roads, master-planned districts, and government-anchored demand from ministries, embassies, and international organisations. That structure makes it attractive for buyers and investors who want stable appreciation without Lagos's volatility.</p>
+      <p>Abuja is Nigeria's most structured property market. Unlike Lagos, it was purpose-built as the Federal Capital Territory â€” zoned roads, master-planned districts, and government-anchored demand from ministries, embassies, and international organisations. That structure makes it attractive for buyers and investors who want stable appreciation without Lagos's volatility.</p>
 
-      <p>But navigating Abuja's real estate market requires knowing the right companies to work with. There are hundreds of developers, agencies, and land sellers operating in the FCT — with widely different track records, land title quality, and after-sale support.</p>
+      <p>But navigating Abuja's real estate market requires knowing the right companies to work with. There are hundreds of developers, agencies, and land sellers operating in the FCT â€” with widely different track records, land title quality, and after-sale support.</p>
 
       <p>This guide cuts through the noise. We reviewed the most consistently cited and trusted names across Abuja's real estate landscape and ranked the top 10 companies you should know before buying, renting, or investing in FCT property in 2026.</p>
 
@@ -9087,7 +10656,7 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Planned city infrastructure:</strong> Abuja was designed from scratch in the 1980s. Roads, drainage, zoning, and green areas were built before residents arrived. This means fewer infrastructure surprises compared to Lagos's organic sprawl.</li>
         <li><strong>Government and diplomatic demand:</strong> All federal ministries, the Presidential Villa, foreign embassies, and major international organisations are based in Abuja. This creates persistent, high-quality rental demand that Lagos does not replicate.</li>
-        <li><strong>AGIS land governance:</strong> Land in FCT is managed by Abuja Geographic Information Systems (AGIS) under the FCTA. Title verification is more structured here than in most Nigerian states — Certificate of Occupancy (C of O) is the primary proof of ownership.</li>
+        <li><strong>AGIS land governance:</strong> Land in FCT is managed by Abuja Geographic Information Systems (AGIS) under the FCTA. Title verification is more structured here than in most Nigerian states â€” Certificate of Occupancy (C of O) is the primary proof of ownership.</li>
         <li><strong>Steady appreciation:</strong> Abuja properties appreciate 8-10% per year on average. Kado district recorded 39% year-on-year appreciation in 2025. It is a lower-risk, stable-income market compared to Lagos.</li>
         <li><strong>Growing population pressure:</strong> Abuja's population is expected to grow from 4+ million in 2024 to over 6 million by 2035, sustaining undersupply pressure particularly in central Phase 1 zones.</li>
       </ul>
@@ -9095,12 +10664,12 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">How We Selected These Companies</h2>
       <p>We assessed companies on the following criteria:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Completed project portfolio</strong> — number of delivered units, not just planned or announced projects</li>
-        <li><strong>FCDA-approved land and legal credentials</strong> — CAC registration, REDAN membership, AGIS-backed titles</li>
-        <li><strong>Years of operation in FCT</strong> — track record matters more than marketing claims</li>
-        <li><strong>Market reputation</strong> — consistent citation across independent news sources and industry reports</li>
-        <li><strong>Buyer support</strong> — payment plans, after-sale service, property management, resale assistance</li>
-        <li><strong>Segment coverage</strong> — companies serving different buyer types: affordable, mid-range, premium, and full-service agency</li>
+        <li><strong>Completed project portfolio</strong> â€” number of delivered units, not just planned or announced projects</li>
+        <li><strong>FCDA-approved land and legal credentials</strong> â€” CAC registration, REDAN membership, AGIS-backed titles</li>
+        <li><strong>Years of operation in FCT</strong> â€” track record matters more than marketing claims</li>
+        <li><strong>Market reputation</strong> â€” consistent citation across independent news sources and industry reports</li>
+        <li><strong>Buyer support</strong> â€” payment plans, after-sale service, property management, resale assistance</li>
+        <li><strong>Segment coverage</strong> â€” companies serving different buyer types: affordable, mid-range, premium, and full-service agency</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Quick Comparison: Top 10 Abuja Real Estate Companies</h2>
@@ -9129,29 +10698,29 @@ export const blogPosts: BlogPost[] = [
         </tbody>
       </table>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#1 — Cosgrove Investment Limited: Abuja's Smart Home Pioneer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#1 â€” Cosgrove Investment Limited: Abuja's Smart Home Pioneer</h2>
 
       <p><strong>Founded:</strong> 2017 &nbsp;|&nbsp; <strong>Segment:</strong> Luxury &nbsp;|&nbsp; <strong>Website:</strong> cosgroveafrica.com</p>
 
-      <p>Cosgrove Investment Limited is widely regarded as Abuja's most innovative luxury property developer. When the company launched Nigeria's first smart estate in Wuye in 2018, it redefined what residential development in the FCT could look like. Residents control lighting, temperature, security systems, and energy use from a smartphone or via voice command — all powered by integrated solar energy systems.</p>
+      <p>Cosgrove Investment Limited is widely regarded as Abuja's most innovative luxury property developer. When the company launched Nigeria's first smart estate in Wuye in 2018, it redefined what residential development in the FCT could look like. Residents control lighting, temperature, security systems, and energy use from a smartphone or via voice command â€” all powered by integrated solar energy systems.</p>
 
-      <p>Since then, Cosgrove has expanded across Abuja's prime districts. Their portfolio spans Wuye, Guzape, Mabushi, Katampe, Wuse 2, and Maitama — the city's most prestigious addresses. Notable projects include Cosgrove Smart Estate (Wuye, Mabushi, Guzape) and The Fourteen, a high-end luxury development that reflects the company's positioning at the very top of Abuja's residential market.</p>
+      <p>Since then, Cosgrove has expanded across Abuja's prime districts. Their portfolio spans Wuye, Guzape, Mabushi, Katampe, Wuse 2, and Maitama â€” the city's most prestigious addresses. Notable projects include Cosgrove Smart Estate (Wuye, Mabushi, Guzape) and The Fourteen, a high-end luxury development that reflects the company's positioning at the very top of Abuja's residential market.</p>
 
       <p>Cosgrove has earned public recognition from senior FCT officials for "making Nigeria proud in smart estate delivery." For buyers who want technology, premium infrastructure, and long-term capital appreciation in Abuja's most desirable zones, Cosgrove is the benchmark developer in the FCT.</p>
 
       <p><strong>Best for:</strong> Buyers seeking luxury smart homes, premium gated estates, and high-end capital appreciation in Phase 1 and Phase 2 Abuja districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#2 — <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I. Realent Global Resources</a>: The Best Real Estate Agency in Abuja</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#2 â€” <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I. Realent Global Resources</a>: The Best Real Estate Agency in Abuja</h2>
 
       <p><strong>Website:</strong> airealent.ng &nbsp;|&nbsp; <strong>Type:</strong> Full-Service Real Estate Agency &nbsp;|&nbsp; <strong>Coverage:</strong> All FCT Districts &nbsp;|&nbsp; <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 font-semibold hover:underline">View 9jaDirectory Listing &rarr;</a></p>
 
-      <p>If the developers on this list build and sell their own properties, <strong>A.I. Realent Global Resources stands in a category of its own — the best full-service real estate agency in Abuja</strong>. Rather than being tied to a single portfolio of estates, A.I. Realent works on behalf of buyers, sellers, investors, and tenants — providing independent, expert representation across every district and price point in the FCT.</p>
+      <p>If the developers on this list build and sell their own properties, <strong>A.I. Realent Global Resources stands in a category of its own â€” the best full-service real estate agency in Abuja</strong>. Rather than being tied to a single portfolio of estates, A.I. Realent works on behalf of buyers, sellers, investors, and tenants â€” providing independent, expert representation across every district and price point in the FCT.</p>
 
-      <p>This distinction is critical. When you approach a developer, they can only show you their own properties. When you work with A.I. Realent Global Resources, you get unbiased access to verified listings spanning the entire Abuja market — from Maitama luxury apartments and Guzape smart homes to Karsana mid-range plots and Lugbe affordable estates — without any developer bias influencing the advice you receive.</p>
+      <p>This distinction is critical. When you approach a developer, they can only show you their own properties. When you work with A.I. Realent Global Resources, you get unbiased access to verified listings spanning the entire Abuja market â€” from Maitama luxury apartments and Guzape smart homes to Karsana mid-range plots and Lugbe affordable estates â€” without any developer bias influencing the advice you receive.</p>
 
       <p>A.I. Realent's full-service offering covers every stage of the property journey:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Independent property search and advisory:</strong> Expert matching of client needs to verified listings across all FCT zones — drawing from multiple developers, private landlords, and investment portfolios, not just one company's estate</li>
+        <li><strong>Independent property search and advisory:</strong> Expert matching of client needs to verified listings across all FCT zones â€” drawing from multiple developers, private landlords, and investment portfolios, not just one company's estate</li>
         <li><strong>Land and title verification:</strong> AGIS searches, C of O checks, and comprehensive due diligence before any financial commitment</li>
         <li><strong>Investment advisory and ROI analysis:</strong> District-by-district return analysis, rental yield projections, and appreciation forecasting for serious property investors</li>
         <li><strong>Sales and lettings facilitation:</strong> Connecting verified buyers and quality tenants with the right properties at fair market value</li>
@@ -9160,48 +10729,48 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Property management:</strong> Ongoing management of residential and commercial properties on behalf of landlords and investors</li>
       </ul>
 
-      <p>What makes A.I. Realent Global Resources Abuja's best real estate agency is the combination of market-wide access, deep FCT expertise, and a genuinely client-first approach. Whether you are a first-time buyer navigating the Abuja market for the first time, an experienced investor building a property portfolio, or a Nigerian in the diaspora looking to secure FCT assets remotely — A.I. Realent provides the expertise, the verified listings, and the transaction security you need to buy with confidence.</p>
+      <p>What makes A.I. Realent Global Resources Abuja's best real estate agency is the combination of market-wide access, deep FCT expertise, and a genuinely client-first approach. Whether you are a first-time buyer navigating the Abuja market for the first time, an experienced investor building a property portfolio, or a Nigerian in the diaspora looking to secure FCT assets remotely â€” A.I. Realent provides the expertise, the verified listings, and the transaction security you need to buy with confidence.</p>
 
-      <p>In a market where developer-specific bias and title fraud are real risks, having an independent agency of A.I. Realent's calibre in your corner is not just convenient — it is one of the smartest decisions any Abuja property buyer can make.</p>
+      <p>In a market where developer-specific bias and title fraud are real risks, having an independent agency of A.I. Realent's calibre in your corner is not just convenient â€” it is one of the smartest decisions any Abuja property buyer can make.</p>
 
-      <p><strong>Best for:</strong> Any buyer, investor, or tenant who wants independent, unbiased market access across all of Abuja — not just one developer's portfolio. Essential for diaspora buyers and investors who need ROI-focused guidance across FCT districts.</p>
+      <p><strong>Best for:</strong> Any buyer, investor, or tenant who wants independent, unbiased market access across all of Abuja â€” not just one developer's portfolio. Essential for diaspora buyers and investors who need ROI-focused guidance across FCT districts.</p>
 
       <div class="my-6 rounded-xl border-2 border-green-200 bg-green-50 p-5">
         <p class="font-semibold text-gray-900">Find Verified Real Estate Agencies in Abuja on 9jaDirectory</p>
-        <p class="text-gray-700 mt-1 mb-3">Browse verified real estate companies and agents operating across FCT Abuja — including sales, lettings, property management, and investment advisory.</p>
+        <p class="text-gray-700 mt-1 mb-3">Browse verified real estate companies and agents operating across FCT Abuja â€” including sales, lettings, property management, and investment advisory.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">View A.I. Realent Listing &rarr;</a>
           <a href="/categories/real-estate/fct" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Browse All Abuja Real Estate &rarr;</a>
         </div>
       </div>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#3 — Urban Shelter Limited: 35 Years of Neighbourhood-Scale Development</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#3 â€” Urban Shelter Limited: 35 Years of Neighbourhood-Scale Development</h2>
 
       <p><strong>Founded:</strong> 1991 &nbsp;|&nbsp; <strong>Segment:</strong> All segments &nbsp;|&nbsp; <strong>Website:</strong> urbanshelternigeria.com</p>
 
       <p>Urban Shelter Limited is one of Abuja's oldest and most trusted property developers, with over three decades of operation in the FCT. The company's scale is genuinely remarkable: 5,000+ residential units, 7,000+ commercial units, 150km of internal road networks, and 200,000sqm of green and recreational areas across more than seven active construction sites simultaneously.</p>
 
-      <p>Urban Shelter did not just build houses — it built entire neighbourhoods. The company developed significant portions of Kado, Kubwa, and Katampe, transforming what were largely undeveloped areas into established residential districts. Current and recent projects span Durumi, Karimu, Gudu, Jabi, Life Camp, Dawaki, Lokogoma, Lugbe, and Kyami.</p>
+      <p>Urban Shelter did not just build houses â€” it built entire neighbourhoods. The company developed significant portions of Kado, Kubwa, and Katampe, transforming what were largely undeveloped areas into established residential districts. Current and recent projects span Durumi, Karimu, Gudu, Jabi, Life Camp, Dawaki, Lokogoma, Lugbe, and Kyami.</p>
 
-      <p>Notable projects include BellaVue Residences (Life Camp), The Waterfront along Jabi Lake — a mixed-use leisure destination anchored by the Jabi Lake area — The Hills (high-end residential in Guzape), and Promenade Estate (Lokogoma). For buyers who want a developer with a proven ability to deliver communities at scale, Urban Shelter is unmatched in the FCT.</p>
+      <p>Notable projects include BellaVue Residences (Life Camp), The Waterfront along Jabi Lake â€” a mixed-use leisure destination anchored by the Jabi Lake area â€” The Hills (high-end residential in Guzape), and Promenade Estate (Lokogoma). For buyers who want a developer with a proven ability to deliver communities at scale, Urban Shelter is unmatched in the FCT.</p>
 
       <p><strong>Best for:</strong> Buyers at any price point who want a long-established developer with a city-scale track record and active projects across multiple FCT districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#4 — Brains and Hammers: Nigeria's City Builders</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#4 â€” Brains and Hammers: Nigeria's City Builders</h2>
 
       <p><strong>Founded:</strong> 2006 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range to Premium &nbsp;|&nbsp; <strong>Website:</strong> brainsandhammers.com</p>
 
-      <p>Brains and Hammers has delivered more than 11,000 homes across Nigeria and is known for building at a scale that goes beyond individual estates — they build cities. Their flagship project, Brains and Hammers City in Life Camp, is a 72-hectare master-planned community of 3,500 homes with commercial zones, schools, and recreational facilities integrated into the development.</p>
+      <p>Brains and Hammers has delivered more than 11,000 homes across Nigeria and is known for building at a scale that goes beyond individual estates â€” they build cities. Their flagship project, Brains and Hammers City in Life Camp, is a 72-hectare master-planned community of 3,500 homes with commercial zones, schools, and recreational facilities integrated into the development.</p>
 
       <p>In Abuja, their projects are concentrated in Life Camp, Galadimawa, Apo, Gwarinpa, and the Airport Road corridor. Their Apo series (Apo I through V) and Galadimawa estates have each delivered hundreds of units. The company also operates in Lagos and Kano, giving it national credibility that smaller FCT-only developers cannot match.</p>
 
       <p><strong>Best for:</strong> Mid-range to premium buyers who want large, well-planned estate communities with strong infrastructure in established FCT growth corridors.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#5 — Adron Homes and Properties: Best for Affordable Housing and Flexible Payments</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#5 â€” Adron Homes and Properties: Best for Affordable Housing and Flexible Payments</h2>
 
       <p><strong>Founded:</strong> 2012 &nbsp;|&nbsp; <strong>Segment:</strong> Affordable &nbsp;|&nbsp; <strong>Website:</strong> adronhomesproperties.com</p>
 
-      <p>Adron Homes and Properties has made homeownership accessible to more than 100,000 Nigerians through a simple formula: affordable gated estate communities with flexible instalment payment plans suited to low-to-middle-income earners. In Abuja, their key projects are Emirate Park and Gardens (Kuje) and Treasure Park and Gardens — offering plots and homes in growing satellite towns at prices that major Phase 1 developers cannot match.</p>
+      <p>Adron Homes and Properties has made homeownership accessible to more than 100,000 Nigerians through a simple formula: affordable gated estate communities with flexible instalment payment plans suited to low-to-middle-income earners. In Abuja, their key projects are Emirate Park and Gardens (Kuje) and Treasure Park and Gardens â€” offering plots and homes in growing satellite towns at prices that major Phase 1 developers cannot match.</p>
 
       <p>With 60+ estates nationwide and payment plans stretching from 6 to 36 months, Adron is the leading developer for first-time buyers in Abuja who want a legitimate, affordable entry point into FCT property without locking up large capital upfront.</p>
 
@@ -9214,101 +10783,101 @@ export const blogPosts: BlogPost[] = [
         <div class="flex flex-wrap justify-center gap-3 mb-5">
           <div class="rounded-xl bg-white border border-gray-200 px-5 py-4 text-sm text-left min-w-[140px]">
             <div class="font-bold text-green-700 text-base mb-1">Standard</div>
-            <div class="text-2xl font-extrabold text-gray-900">₦50,000</div>
+            <div class="text-2xl font-extrabold text-gray-900">â‚¦50,000</div>
             <div class="text-gray-500 text-xs mt-1">per month</div>
             <ul class="mt-2 space-y-1 text-gray-600 text-xs">
-              <li>✓ Company profile included</li>
-              <li>✓ Verified badge</li>
-              <li>✓ Link to your listing</li>
+              <li>âœ“ Company profile included</li>
+              <li>âœ“ Verified badge</li>
+              <li>âœ“ Link to your listing</li>
             </ul>
           </div>
           <div class="rounded-xl bg-green-600 border border-green-600 px-5 py-4 text-sm text-white text-left min-w-[140px]">
             <div class="font-bold text-green-100 text-base mb-1">Premium</div>
-            <div class="text-2xl font-extrabold">₦120,000</div>
+            <div class="text-2xl font-extrabold">â‚¦120,000</div>
             <div class="text-green-200 text-xs mt-1">per month</div>
             <ul class="mt-2 space-y-1 text-green-100 text-xs">
-              <li>✓ Top sponsored position</li>
-              <li>✓ Featured in comparison table</li>
-              <li>✓ Logo + extended profile</li>
-              <li>✓ Priority renewal lock-in</li>
+              <li>âœ“ Top sponsored position</li>
+              <li>âœ“ Featured in comparison table</li>
+              <li>âœ“ Logo + extended profile</li>
+              <li>âœ“ Priority renewal lock-in</li>
             </ul>
           </div>
         </div>
         <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition-colors">Enquire About a Sponsored Slot &rarr;</a>
-        <p class="text-xs text-gray-400 mt-3">Sponsored positions are clearly labelled. Editorial positions #1–#5 are not available for purchase.</p>
+        <p class="text-xs text-gray-400 mt-3">Sponsored positions are clearly labelled. Editorial positions #1â€“#5 are not available for purchase.</p>
       </div>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#6 — Dantata Town Developers: Master-Planned Communities in the Kubwa Corridor</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#6 â€” Dantata Town Developers: Master-Planned Communities in the Kubwa Corridor</h2>
 
       <p><strong>Founded:</strong> 2011 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range to Premium &nbsp;|&nbsp; <strong>Website:</strong> dantatatown.com</p>
 
-      <p>Dantata Town Developers — a spin-off of the Dantata and Sawoe construction conglomerate — has delivered over 2,000 housing units in the FCT since 2011. Their flagship Dantata Housing Estate in Kubwa spans 57 hectares along Arab Road with over 1,000 units approximately 15km from Abuja's CBD. Beyond Kubwa, the company is active in Karsana South (Dantata Garden), Industrial Area 2 (The Residence by Dantata), and Gwarinpa (The District by Dantata).</p>
+      <p>Dantata Town Developers â€” a spin-off of the Dantata and Sawoe construction conglomerate â€” has delivered over 2,000 housing units in the FCT since 2011. Their flagship Dantata Housing Estate in Kubwa spans 57 hectares along Arab Road with over 1,000 units approximately 15km from Abuja's CBD. Beyond Kubwa, the company is active in Karsana South (Dantata Garden), Industrial Area 2 (The Residence by Dantata), and Gwarinpa (The District by Dantata).</p>
 
-      <p>Their product mix — 4-bedroom terrace duplexes, semi-detached and full detached duplexes, and apartments — covers the mid-range to premium segment with well-built, master-planned communities that are infrastructure-ready from day one.</p>
+      <p>Their product mix â€” 4-bedroom terrace duplexes, semi-detached and full detached duplexes, and apartments â€” covers the mid-range to premium segment with well-built, master-planned communities that are infrastructure-ready from day one.</p>
 
       <p><strong>Best for:</strong> Mid-range buyers who want master-planned communities with strong infrastructure in the Kubwa and Karsana growth corridors.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#7 — UPDC (UAC Property Development Company): Nigeria's Listed Luxury Developer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#7 â€” UPDC (UAC Property Development Company): Nigeria's Listed Luxury Developer</h2>
 
       <p><strong>Founded:</strong> Early 1990s &nbsp;|&nbsp; <strong>Segment:</strong> Luxury &nbsp;|&nbsp; <strong>Listed:</strong> Nigerian Exchange Group</p>
 
-      <p>UPDC is Nigeria's only publicly listed real estate developer, backed by UAC of Nigeria Plc. In Abuja, the company focuses on premium and luxury residential and commercial assets. Their FCT portfolio includes Salatu Royal Estate (Wuse II), Emerald Court (Apo), Metro City — an 11.17-hectare mixed-use community in Apo-Dutse with shopping, healthcare, and sports facilities — and the UAC Office Complex (24,000sqm of Grade A commercial space in Abuja).</p>
+      <p>UPDC is Nigeria's only publicly listed real estate developer, backed by UAC of Nigeria Plc. In Abuja, the company focuses on premium and luxury residential and commercial assets. Their FCT portfolio includes Salatu Royal Estate (Wuse II), Emerald Court (Apo), Metro City â€” an 11.17-hectare mixed-use community in Apo-Dutse with shopping, healthcare, and sports facilities â€” and the UAC Office Complex (24,000sqm of Grade A commercial space in Abuja).</p>
 
       <p>Being publicly listed means UPDC must meet higher standards of corporate governance, financial disclosure, and project delivery than any private developer. For buyers who want institutional-grade reliability at the luxury end of the Abuja market, UPDC is a strong and uniquely accountable choice.</p>
 
       <p><strong>Best for:</strong> Luxury buyers and commercial property investors who want the credibility of a publicly listed, institutionally backed developer in prime Abuja districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#8 — Bilaad Realty: Eco-Friendly and Sustainable Living in Abuja</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#8 â€” Bilaad Realty: Eco-Friendly and Sustainable Living in Abuja</h2>
 
       <p><strong>Segment:</strong> Eco-conscious / Mid-range &nbsp;|&nbsp; <strong>Website:</strong> bilaadnigeria.com</p>
 
-      <p>Bilaad Realty has carved out a distinctive niche in Abuja's real estate market: sustainable, eco-friendly residential communities with smart infrastructure built in from the ground up. Every Bilaad project includes fibre-optic connectivity, central gas supply, alternative power systems, and extensive green areas — not as premium extras, but as standard features.</p>
+      <p>Bilaad Realty has carved out a distinctive niche in Abuja's real estate market: sustainable, eco-friendly residential communities with smart infrastructure built in from the ground up. Every Bilaad project includes fibre-optic connectivity, central gas supply, alternative power systems, and extensive green areas â€” not as premium extras, but as standard features.</p>
 
       <p>Their portfolio spans nine active developments in FCT with island-themed community branding across Jabi, Life Camp, Utako, Mabuchi, Maitama, Asokoro, Guzape, Wuye, and Karsana. Bilaad was named among Nigeria's "Top Innovative Real Estate Brands to Watch" by Africa Housing News. With nearly 1,000 homes delivered across FCT, they have the track record to match the marketing.</p>
 
       <p><strong>Best for:</strong> Mid-range buyers who prioritise sustainability, modern infrastructure, and eco-friendly living across FCT's established residential districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#9 — Mshel Homes Limited: Land Banking and Emerging District Specialists</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#9 â€” Mshel Homes Limited: Land Banking and Emerging District Specialists</h2>
 
       <p><strong>Founded:</strong> 2018 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range + Land Banking &nbsp;|&nbsp; <strong>Website:</strong> mshelhomes.com</p>
 
-      <p>Mshel Homes was incorporated in 2018 and has quickly built a reputation as one of Abuja's most strategic land banking specialists. Their focus is on FCT's rapidly growing corridors — Asokoro, Apo, Airport Road, Guzape, Kyami, Lugbe, Kuje, Idu, and Kukwaba — identifying and developing plots in areas positioned for near-term appreciation before infrastructure fully catches up with demand.</p>
+      <p>Mshel Homes was incorporated in 2018 and has quickly built a reputation as one of Abuja's most strategic land banking specialists. Their focus is on FCT's rapidly growing corridors â€” Asokoro, Apo, Airport Road, Guzape, Kyami, Lugbe, Kuje, Idu, and Kukwaba â€” identifying and developing plots in areas positioned for near-term appreciation before infrastructure fully catches up with demand.</p>
 
       <p>Their flagship project, Mshel Horizon in Kukwaba, is a mixed-use estate combining residential plots, modern apartments, and planned commercial zones. Mshel also operates in Lagos, Kano, and Yola. For buyers who want affordable entry into an emerging FCT district with strong appreciation potential and clear title documentation, Mshel Homes is a credible and growing option.</p>
 
       <p><strong>Best for:</strong> Early-stage investors and land buyers who want to enter Abuja's growth corridors at affordable prices before values accelerate.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#10 — APDC (Abuja Property Development Company): The Government-Backed Developer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#10 â€” APDC (Abuja Property Development Company): The Government-Backed Developer</h2>
 
       <p><strong>Founded:</strong> 1994 &nbsp;|&nbsp; <strong>Segment:</strong> Affordable to Mid-range &nbsp;|&nbsp; <strong>Website:</strong> apdc.com.ng</p>
 
       <p>APDC is wholly owned by Abuja Investment Company Limited (AICL), which is 100% owned by the Federal Capital Territory Administration. This government ownership gives APDC a structural advantage that no private developer can replicate: its land allocations are FCTA-backed, its titles carry the highest level of institutional security in the FCT, and it is the primary delivery vehicle for government affordable housing programmes including the Federal Government's Renewed Hope Cities initiative.</p>
 
-      <p>APDC's current projects are concentrated in Karsana (APDC Homes) and Idogwari, Life Camp — offering affordable to mid-range residential units with AGIS-backed C of O titles. For buyers who prioritise land title security above all else, APDC's government ownership provides a level of assurance that no private developer can match.</p>
+      <p>APDC's current projects are concentrated in Karsana (APDC Homes) and Idogwari, Life Camp â€” offering affordable to mid-range residential units with AGIS-backed C of O titles. For buyers who prioritise land title security above all else, APDC's government ownership provides a level of assurance that no private developer can match.</p>
 
       <p><strong>Best for:</strong> Buyers who prioritise maximum land title security and prefer the backing of a government-owned developer, especially in the Karsana and Life Camp districts.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Key Abuja Districts: Where to Buy and Why</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 1 — Premium Stability (Highest Values)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 1 â€” Premium Stability (Highest Values)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Maitama:</strong> Nigeria's most prestigious residential address. Embassies, senior politicians, top professionals. Rental yield ~7%. Median home: over ₦1.5 billion. Very limited new supply.</li>
+        <li><strong>Maitama:</strong> Nigeria's most prestigious residential address. Embassies, senior politicians, top professionals. Rental yield ~7%. Median home: over â‚¦1.5 billion. Very limited new supply.</li>
         <li><strong>Asokoro:</strong> The Presidential Villa and the residences of former heads of state and senior ministers. Nigeria's most exclusive address.</li>
         <li><strong>Wuse II:</strong> Major business hub. Strong white-collar rental demand from corporate tenants. Blends premium residential with commercial Grade A office space.</li>
         <li><strong>Garki I and II:</strong> Government ministry proximity. Older established residential stock; well-suited for commercial property investment.</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 2 — Balanced Value (Growing Premium)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 2 â€” Balanced Value (Growing Premium)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Jabi:</strong> Fastest-growing commercial hub outside Phase 1. Jabi Lake Mall area, luxury apartments, strong demand from young professionals and expatriates.</li>
         <li><strong>Guzape:</strong> Emerging luxury district. Cosgrove, Urban Shelter, and UPDC all active here. Significant appreciation runway ahead.</li>
         <li><strong>Katampe and Mabushi:</strong> Rising professional residential zones. Active developer presence from Cosgrove and Bilaad.</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 3 and Emerging — Growth and Appreciation</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 3 and Emerging â€” Growth and Appreciation</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Gwarinpa:</strong> Africa's largest planned residential estate. Affordable entry point with growing amenities. Rental yield ~4.4%.</li>
-        <li><strong>Life Camp:</strong> Active corridor with major developer presence — Brains and Hammers City, Urban Shelter, Bilaad.</li>
+        <li><strong>Life Camp:</strong> Active corridor with major developer presence â€” Brains and Hammers City, Urban Shelter, Bilaad.</li>
         <li><strong>Kado:</strong> 39% year-on-year appreciation recorded in 2025. One of the most important emerging zones to watch in 2026.</li>
         <li><strong>Kubwa, Lugbe, Kuje:</strong> Satellite towns with affordable housing from Adron, Mshel, and Urban Shelter. Best for budget buyers and long-term land banking.</li>
       </ul>
@@ -9339,7 +10908,7 @@ export const blogPosts: BlogPost[] = [
       <p>Property fraud remains a serious risk in Nigeria. Before paying any amount to a developer or agent in Abuja, take these steps:</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Check CAC Registration</h3>
-      <p>Every legitimate real estate company must be registered with the Corporate Affairs Commission. Search the company's name or RC number at search.cac.gov.ng — it is free and takes seconds. An "Active" status is the baseline requirement.</p>
+      <p>Every legitimate real estate company must be registered with the Corporate Affairs Commission. Search the company's name or RC number at search.cac.gov.ng â€” it is free and takes seconds. An "Active" status is the baseline requirement.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. Verify REDAN Membership</h3>
       <p>The Real Estate Developers Association of Nigeria (REDAN) maintains a member register. Legitimate developers are typically REDAN-registered. Ask for the company's REDAN membership number and cross-check with the association directly.</p>
@@ -9351,17 +10920,17 @@ export const blogPosts: BlogPost[] = [
       <p>Never rely solely on brochures or social media renderings. Ask the developer for the physical addresses of their already-completed and occupied projects, visit them in person, and speak to residents directly. A developer with no completed and occupied FCT projects is a high-risk engagement.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Use an Independent Agency for Due Diligence</h3>
-      <p>Working with an independent real estate agency like A.I. Realent Global Resources provides a critical layer of buyer protection. An agency representing your interests — not the developer's — will verify titles, conduct market price comparisons, review payment terms, and flag red flags before you commit a single naira.</p>
+      <p>Working with an independent real estate agency like A.I. Realent Global Resources provides a critical layer of buyer protection. An agency representing your interests â€” not the developer's â€” will verify titles, conduct market price comparisons, review payment terms, and flag red flags before you commit a single naira.</p>
 
       <div class="my-10 rounded-2xl bg-gray-900 text-white p-8 text-center">
         <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-2">For Real Estate Companies</p>
         <h3 class="text-2xl font-bold mb-3">Get Your Company on This List</h3>
-        <p class="text-gray-300 mb-6 max-w-xl mx-auto">This guide is read by thousands of Abuja property buyers every month. A sponsored position puts your company in front of motivated, ready-to-buy audiences — with a verified profile, direct listing link, and a featured badge that builds trust before the first call.</p>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">This guide is read by thousands of Abuja property buyers every month. A sponsored position puts your company in front of motivated, ready-to-buy audiences â€” with a verified profile, direct listing link, and a featured badge that builds trust before the first call.</p>
         <div class="flex flex-wrap justify-center gap-3 mb-6 text-sm text-left">
-          <div class="bg-gray-800 rounded-xl px-4 py-3">✓ Reach buyers actively searching Abuja real estate</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">✓ Verified badge builds instant credibility</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">✓ Slots from ₦50,000/month — cancel anytime</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">✓ Limited slots available — first come, first served</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Reach buyers actively searching Abuja real estate</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Verified badge builds instant credibility</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Slots from â‚¦50,000/month â€” cancel anytime</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Limited slots available â€” first come, first served</div>
         </div>
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-white font-semibold hover:bg-green-400 transition-colors">Claim Your Sponsored Slot &rarr;</a>
@@ -9375,16 +10944,16 @@ export const blogPosts: BlogPost[] = [
       <p>For affordable land with flexible payment plans, Adron Homes and Properties is the most accessible option with plots in Kuje and Lugbe starting at accessible price points. Mshel Homes and APDC are also strong in the affordable-to-mid segment. Work with <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> to independently compare available plots across developers before committing.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can Nigerians in the diaspora buy property in Abuja?</h3>
-      <p>Yes. <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> provides dedicated diaspora buyer support — including remote property sourcing, virtual tours, verified title documentation review, and full transaction support — so you can secure FCT property from abroad without needing to travel back for every step of the process.</p>
+      <p>Yes. <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> provides dedicated diaspora buyer support â€” including remote property sourcing, virtual tours, verified title documentation review, and full transaction support â€” so you can secure FCT property from abroad without needing to travel back for every step of the process.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between C of O and Right of Occupancy in Abuja?</h3>
-      <p>A Certificate of Occupancy (C of O) is the primary legal document giving you the right to occupy and develop an FCT plot for up to 99 years. A Right of Occupancy (R of O) is a provisional document issued before a full C of O is granted — it provides some legal protection but is less secure. Always verify title type and current status through AGIS before any purchase commitment.</p>
+      <p>A Certificate of Occupancy (C of O) is the primary legal document giving you the right to occupy and develop an FCT plot for up to 99 years. A Right of Occupancy (R of O) is a provisional document issued before a full C of O is granted â€” it provides some legal protection but is less secure. Always verify title type and current status through AGIS before any purchase commitment.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is Abuja real estate a good investment in 2026?</h3>
-      <p>Yes — particularly in Phase 2 districts (Guzape, Jabi, Katampe) and high-appreciation emerging zones (Kado, Galadimawa). Abuja properties appreciate 8-10% annually on average, with rental yields of 4-7% depending on district. Government and diplomatic demand creates structural undersupply in established Phase 1 areas. Contact <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> for a current investment advisory specific to your budget and target district.</p>
+      <p>Yes â€” particularly in Phase 2 districts (Guzape, Jabi, Katampe) and high-appreciation emerging zones (Kado, Galadimawa). Abuja properties appreciate 8-10% annually on average, with rental yields of 4-7% depending on district. Government and diplomatic demand creates structural undersupply in established Phase 1 areas. Contact <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> for a current investment advisory specific to your budget and target district.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the safest way to pay for property in Abuja?</h3>
-      <p>Always pay through documented bank transfer to the company's verified corporate account — never cash to an individual. Insist on a formal receipt and a signed sale agreement before any payment clears. For transactions above N10 million, engage a property lawyer to independently review the sale agreement and verify the title before funds are released.</p>
+      <p>Always pay through documented bank transfer to the company's verified corporate account â€” never cash to an individual. Insist on a formal receipt and a signed sale agreement before any payment clears. For transactions above N10 million, engage a property lawyer to independently review the sale agreement and verify the title before funds are released.</p>
 
       <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Find Real Estate Companies in Abuja on 9jaDirectory</h3>
@@ -9429,7 +10998,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-21",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Comprehensive 2026 guide to the top 10 real estate companies in Abuja, Nigeria — covering developers, agencies, price ranges, key districts, and buyer verification tips.",
+        "description": "Comprehensive 2026 guide to the top 10 real estate companies in Abuja, Nigeria â€” covering developers, agencies, price ranges, key districts, and buyer verification tips.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-10-real-estate-companies-in-abuja" }
       },
       {
@@ -9477,21 +11046,21 @@ export const blogPosts: BlogPost[] = [
 
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Commercial centre of Nigeria:</strong> Lagos hosts 70%+ of Nigeria's corporate legal work, including listings on the Nigerian Exchange Group (NGX), major infrastructure project finance, and cross-border M&amp;A transactions for international clients.</li>
-        <li><strong>Largest NBA branch in Nigeria:</strong> The Nigerian Bar Association Lagos branch has over 15,000 registered members — the most of any state branch — reflecting the concentration of legal talent in the city.</li>
+        <li><strong>Largest NBA branch in Nigeria:</strong> The Nigerian Bar Association Lagos branch has over 15,000 registered members â€” the most of any state branch â€” reflecting the concentration of legal talent in the city.</li>
         <li><strong>International arbitration hub:</strong> The Lagos Court of Arbitration and the Lagos Multi-Door Courthouse make Lagos the preferred seat for resolving commercial disputes involving Nigerian parties under ICC, LCIA, and ICSID rules.</li>
-        <li><strong>Banking and finance centre:</strong> Victoria Island houses the head offices of Nigeria's largest commercial banks and major foreign financial institutions — all of which generate consistent demand for top-tier legal services.</li>
-        <li><strong>Regulatory complexity:</strong> Doing business in Lagos requires navigating CBN regulations, SEC requirements, NESREA environmental rules, labour law, state land law, and FIRS tax obligations — all specialisations where top Lagos firms excel.</li>
+        <li><strong>Banking and finance centre:</strong> Victoria Island houses the head offices of Nigeria's largest commercial banks and major foreign financial institutions â€” all of which generate consistent demand for top-tier legal services.</li>
+        <li><strong>Regulatory complexity:</strong> Doing business in Lagos requires navigating CBN regulations, SEC requirements, NESREA environmental rules, labour law, state land law, and FIRS tax obligations â€” all specialisations where top Lagos firms excel.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">How We Selected These Firms</h2>
       <p>We assessed firms on the following criteria:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Chambers Global and Legal 500 rankings</strong> — independent third-party recognition of firm quality across practice areas</li>
-        <li><strong>Senior Advocates of Nigeria (SAN) on the team</strong> — the highest rank attainable at the Nigerian Bar, conferring procedural advantages and signalling expertise</li>
-        <li><strong>Years in operation and track record</strong> — demonstrated consistency over time, not just recent marketing activity</li>
-        <li><strong>Practice area breadth and depth</strong> — firms covering multiple areas with dedicated specialist teams score higher</li>
-        <li><strong>International network and associations</strong> — membership in global law firm networks (ALN, Lex Mundi, IFLR) for cross-border capability</li>
-        <li><strong>Client calibre and industry coverage</strong> — firms regularly advising multinationals, financial institutions, and government agencies</li>
+        <li><strong>Chambers Global and Legal 500 rankings</strong> â€” independent third-party recognition of firm quality across practice areas</li>
+        <li><strong>Senior Advocates of Nigeria (SAN) on the team</strong> â€” the highest rank attainable at the Nigerian Bar, conferring procedural advantages and signalling expertise</li>
+        <li><strong>Years in operation and track record</strong> â€” demonstrated consistency over time, not just recent marketing activity</li>
+        <li><strong>Practice area breadth and depth</strong> â€” firms covering multiple areas with dedicated specialist teams score higher</li>
+        <li><strong>International network and associations</strong> â€” membership in global law firm networks (ALN, Lex Mundi, IFLR) for cross-border capability</li>
+        <li><strong>Client calibre and industry coverage</strong> â€” firms regularly advising multinationals, financial institutions, and government agencies</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Quick Comparison: Top 10 Law Firms in Lagos (2026)</h2>
@@ -9522,7 +11091,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="my-8 rounded-xl border-2 border-blue-200 bg-blue-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Is Your Law Firm on This List? Claim or Add Your Free 9jaDirectory Listing</h3>
-        <p class="text-gray-700 mb-3">If your law firm operates in Lagos — whether you are featured here or not — you can claim a free verified listing on 9jaDirectory today. Take control of your firm's online presence and connect with thousands of clients searching for legal services in Lagos every month.</p>
+        <p class="text-gray-700 mb-3">If your law firm operates in Lagos â€” whether you are featured here or not â€” you can claim a free verified listing on 9jaDirectory today. Take control of your firm's online presence and connect with thousands of clients searching for legal services in Lagos every month.</p>
         <ul class="list-disc pl-5 mb-4 space-y-1 text-gray-700 text-sm">
           <li>Manage your firm's description, practice areas, and contact details</li>
           <li>Receive a <strong>Verified Badge</strong> after our editorial review</li>
@@ -9614,7 +11183,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#6 &mdash; SPA Ajibade &amp; Co: Established Since 1967</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Founded:</strong> 1967 &nbsp;|&nbsp; <strong>Specialisation:</strong> Corporate/Commercial &nbsp;|&nbsp; <strong>Offices:</strong> Lagos, Ibadan, Abuja</p>
 
-      <p>SPA Ajibade &amp; Co is one of Nigeria's oldest continuously operating law firms, having provided corporate and commercial legal services since 1967. Its longevity is a testament to consistent quality — the firm has served clients through Nigeria's most turbulent economic periods while maintaining its position as a respected commercial legal adviser.</p>
+      <p>SPA Ajibade &amp; Co is one of Nigeria's oldest continuously operating law firms, having provided corporate and commercial legal services since 1967. Its longevity is a testament to consistent quality â€” the firm has served clients through Nigeria's most turbulent economic periods while maintaining its position as a respected commercial legal adviser.</p>
 
       <p>The firm is particularly known for its work in corporate law, international arbitration, energy, and financial advisory. It serves local and international partners across industries including banking, telecommunications, manufacturing, and oil and gas. With offices in Lagos, Ibadan, and Abuja, SPA Ajibade offers nationwide coverage for clients with multi-state operations.</p>
 
@@ -9641,7 +11210,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#9 &mdash; G. Elias &amp; Co: A Legacy of Commercial Excellence</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Specialisation:</strong> Commercial boutique &nbsp;|&nbsp; <strong>Location:</strong> Lagos</p>
 
-      <p>G. Elias &amp; Co is one of Nigeria's most respected commercial law firms — a boutique in structure but elite in calibre. The firm is known for its meticulous analytical approach, deep commercial expertise, and selective client base. It is consistently cited in Chambers Global and Legal 500 for its quality of legal work and client service.</p>
+      <p>G. Elias &amp; Co is one of Nigeria's most respected commercial law firms â€” a boutique in structure but elite in calibre. The firm is known for its meticulous analytical approach, deep commercial expertise, and selective client base. It is consistently cited in Chambers Global and Legal 500 for its quality of legal work and client service.</p>
 
       <p>The firm's core practice covers commercial transactions, dispute resolution, corporate advisory, and real estate. Its senior lawyers are well-known figures in the Nigerian legal community and are often engaged as expert witnesses or independent legal advisers on complex matters requiring specialist commercial opinion.</p>
 
@@ -9650,7 +11219,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#10 &mdash; PUNUKA Attorneys &amp; Solicitors: Commercial and IP Specialists</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Specialisation:</strong> Commercial, Intellectual Property &nbsp;|&nbsp; <strong>Location:</strong> Lagos</p>
 
-      <p>PUNUKA Attorneys &amp; Solicitors rounds out our Lagos top 10 with a strong focus on commercial transactions, intellectual property law, dispute resolution, and corporate services. The firm is particularly well-regarded for its IP practice — an increasingly important area as Nigeria's technology, media, and entertainment sectors grow rapidly — and serves both large corporations and ambitious SMEs.</p>
+      <p>PUNUKA Attorneys &amp; Solicitors rounds out our Lagos top 10 with a strong focus on commercial transactions, intellectual property law, dispute resolution, and corporate services. The firm is particularly well-regarded for its IP practice â€” an increasingly important area as Nigeria's technology, media, and entertainment sectors grow rapidly â€” and serves both large corporations and ambitious SMEs.</p>
 
       <p>PUNUKA takes an entrepreneurial approach to legal problems and is known for practical, commercially-minded advice. The firm regularly handles corporate restructurings, commercial contracts, real estate transactions, and employment matters for businesses across industries. It is a strong choice for startups and growing companies that want quality legal support without the premium pricing of the largest full-service firms.</p>
 
@@ -9674,7 +11243,7 @@ export const blogPosts: BlogPost[] = [
       <p>As Nigeria's digital economy expands, IP law (trademarks, copyrights, patents) and technology law (data protection under the NDPA, fintech regulation, e-commerce law) are growing rapidly. PUNUKA Attorneys and Udo Udoma &amp; Belo-Osagie are notable for IP expertise in Lagos.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Legal Fees in Lagos: What to Expect in 2026</h2>
-      <p>Legal fees in Nigeria are guided by the Legal Practitioners Remuneration Order (2023) but actual fees depend on complexity, firm seniority, and transaction value. The following ranges are indicative — always confirm directly with your chosen firm:</p>
+      <p>Legal fees in Nigeria are guided by the Legal Practitioners Remuneration Order (2023) but actual fees depend on complexity, firm seniority, and transaction value. The following ranges are indicative â€” always confirm directly with your chosen firm:</p>
 
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
         <thead>
@@ -9705,7 +11274,7 @@ export const blogPosts: BlogPost[] = [
       <p>If a firm claims to have Senior Advocates of Nigeria, verify this through the Legal Practitioners Privileges Committee (LPPC) or the Body of Senior Advocates of Nigeria (BOSAN). SAN status is the highest rank at the Nigerian Bar and confers significant procedural advantages in court proceedings.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Visit the Physical Office</h3>
-      <p>Legitimate law firms maintain physical offices. For top Lagos firms, offices are typically in Victoria Island, Ikoyi, Lagos Island, or the Marina. Be cautious of firms that communicate exclusively online without a verifiable physical address — a site visit confirms the firm is operational and allows you to assess professionalism firsthand.</p>
+      <p>Legitimate law firms maintain physical offices. For top Lagos firms, offices are typically in Victoria Island, Ikoyi, Lagos Island, or the Marina. Be cautious of firms that communicate exclusively online without a verifiable physical address â€” a site visit confirms the firm is operational and allows you to assess professionalism firsthand.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">4. Request a Formal Engagement Letter</h3>
       <p>Before paying anything, insist on a written engagement letter that specifies: the scope of work, who will handle your matter, the fee structure, the estimated timeline, and what disbursements are excluded from the quoted fee. A firm that refuses to provide this should not be engaged.</p>
@@ -9716,7 +11285,7 @@ export const blogPosts: BlogPost[] = [
       <div class="my-10 rounded-2xl bg-gray-900 text-white p-8 text-center">
         <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-2">9jaDirectory Legal Services</p>
         <h3 class="text-2xl font-bold mb-4">Find &amp; Compare Verified Law Firms in Lagos</h3>
-        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">9jaDirectory lists verified law firms and legal service providers across Lagos. Browse by practice area, read profiles, and contact the right firm for your matter — all in one place.</p>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">9jaDirectory lists verified law firms and legal service providers across Lagos. Browse by practice area, read profiles, and contact the right firm for your matter â€” all in one place.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 text-sm">
           <div class="bg-gray-800 rounded-xl px-4 py-3">Verified Listings</div>
           <div class="bg-gray-800 rounded-xl px-4 py-3">Practice Area Filter</div>
@@ -9748,7 +11317,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
         <h3 class="text-lg font-bold text-gray-900 mb-2">Find the Right Law Firm in Lagos on 9jaDirectory</h3>
-        <p class="text-gray-700 mb-4">9jaDirectory lists verified law firms and legal service providers across Lagos. Browse by practice area, read profiles, and contact firms directly — all in one place. Law firms can also claim or add their free listing to start connecting with clients today.</p>
+        <p class="text-gray-700 mb-4">9jaDirectory lists verified law firms and legal service providers across Lagos. Browse by practice area, read profiles, and contact firms directly â€” all in one place. Law firms can also claim or add their free listing to start connecting with clients today.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/categories/legal-services/lagos" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">Browse Lagos Law Firms &rarr;</a>
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Add Your Law Firm Free &rarr;</a>
@@ -9780,7 +11349,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-21",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Comprehensive 2026 guide to the top 10 law firms in Lagos, Nigeria — covering full-service commercial firms, specialist boutiques, SAN rankings, fees, and how to verify a law firm before engaging.",
+        "description": "Comprehensive 2026 guide to the top 10 law firms in Lagos, Nigeria â€” covering full-service commercial firms, specialist boutiques, SAN rankings, fees, and how to verify a law firm before engaging.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-10-law-firms-in-lagos" }
       },
       {
@@ -9788,7 +11357,7 @@ export const blogPosts: BlogPost[] = [
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "What is a Senior Advocate of Nigeria (SAN)?", "acceptedAnswer": { "@type": "Answer", "text": "A Senior Advocate of Nigeria (SAN) is the highest rank at the Nigerian Bar, appointed by the Legal Practitioners Privileges Committee based on at least 10 years of outstanding legal practice. SANs have procedural advantages in Nigerian courts including preferential calling of matters. Engaging a SAN costs significantly more but is often justified for high-value or strategically important matters." } },
-          { "@type": "Question", "name": "How much do top law firms charge in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Top-tier law firms in Lagos typically charge between ₦500,000 and ₦10,000,000+ for complex commercial mandates. For simpler matters such as document drafting, company registration, or property conveyancing, fees range from ₦30,000 to ₦500,000. Always request a written engagement letter specifying the fee structure before committing." } },
+          { "@type": "Question", "name": "How much do top law firms charge in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Top-tier law firms in Lagos typically charge between â‚¦500,000 and â‚¦10,000,000+ for complex commercial mandates. For simpler matters such as document drafting, company registration, or property conveyancing, fees range from â‚¦30,000 to â‚¦500,000. Always request a written engagement letter specifying the fee structure before committing." } },
           { "@type": "Question", "name": "Which Lagos law firm is best for property matters?", "acceptedAnswer": { "@type": "Answer", "text": "For property and real estate legal matters in Lagos, Aluko & Oyebode, G. Elias & Co, and PUNUKA Attorneys are frequently cited. Look for firms with dedicated real estate practices experienced in Lagos State land law, the Land Use Act, and Governor's Consent requirements." } },
           { "@type": "Question", "name": "Can startups afford top law firms in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Most top-tier Lagos firms have minimum engagement thresholds challenging for early-stage startups. PUNUKA Attorneys and SPA Ajibade are known for working with growing businesses at more accessible fee levels. Consider boutique firms for routine matters and top-tier firms for high-stakes work." } },
           { "@type": "Question", "name": "How do I find a verified law firm in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Define your legal need first, then check Chambers Global and Legal 500 rankings. Ask for referrals from trusted business partners. Verify the firm's NBA standing, confirm their physical office address, and insist on a formal written engagement letter before paying any fees. Browse 9jaDirectory for verified Lagos law firm listings." } }
@@ -9811,7 +11380,7 @@ export const blogPosts: BlogPost[] = [
     title: "Top 10 Law Firms in Abuja (FCT), Nigeria (2026 Guide)",
     excerpt: "Top 10 law firms in Abuja FCT (2026): government specialists and commercial firms ranked by SAN status, practice areas, fees, and client reviews.",
     content: `
-      <p>Abuja is Nigeria's seat of power. As the Federal Capital Territory, it houses every arm of government, all federal regulatory agencies, the Supreme Court, the Court of Appeal, the Federal High Court, foreign embassies, and the African Union's Economic Community of West African States (ECOWAS) institutions. This concentration of governmental and regulatory authority makes Abuja unique — and makes choosing the right law firm here critically important.</p>
+      <p>Abuja is Nigeria's seat of power. As the Federal Capital Territory, it houses every arm of government, all federal regulatory agencies, the Supreme Court, the Court of Appeal, the Federal High Court, foreign embassies, and the African Union's Economic Community of West African States (ECOWAS) institutions. This concentration of governmental and regulatory authority makes Abuja unique â€” and makes choosing the right law firm here critically important.</p>
 
       <p>Unlike Lagos, where corporate transactions and commercial disputes dominate, Abuja's legal market is shaped by government contracts, regulatory advisory, election petition litigation, public procurement law, and the intersection of business with government policy. The best law firms in Abuja have deep knowledge of the Nigerian regulatory environment, established relationships within federal institutions, and the ability to navigate both the commercial and governmental dimensions of legal matters.</p>
 
@@ -9830,19 +11399,19 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Seat of federal government:</strong> All federal ministries, departments, and agencies (MDAs) are headquartered in Abuja. Matters involving government contracts, public procurement, regulatory licensing, and policy compliance require counsel with FCT presence and federal government experience.</li>
         <li><strong>Apex court jurisdiction:</strong> The Supreme Court of Nigeria, Court of Appeal, Federal High Court, and National Industrial Court all sit in Abuja. Firms handling appeals before these courts maintain strong Abuja offices regardless of where they are headquartered.</li>
         <li><strong>Election petition expertise:</strong> Election petition tribunals sit in Abuja for presidential and National Assembly matters. Several top Abuja firms have carved out specialisations in this high-stakes, time-sensitive area of Nigerian law.</li>
-        <li><strong>International organisation presence:</strong> ECOWAS institutions, UN agencies, the African Development Bank (AfDB) representative office, and multiple foreign embassies are based in Abuja — generating demand for international law expertise and treaty-related advisory.</li>
+        <li><strong>International organisation presence:</strong> ECOWAS institutions, UN agencies, the African Development Bank (AfDB) representative office, and multiple foreign embassies are based in Abuja â€” generating demand for international law expertise and treaty-related advisory.</li>
         <li><strong>FCT land law complexity:</strong> Land in Abuja is managed by AGIS (Abuja Geographic Information Systems) under the FCTA. All FCT property transactions require specialist knowledge of AGIS procedures, C of O issuance, and FCDA approval processes distinct from state land law elsewhere in Nigeria.</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">How We Selected These Firms</h2>
       <p>We assessed Abuja law firms on the following criteria:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>SAN presence and seniority</strong> — number and calibre of Senior Advocates of Nigeria on the team, including founding partner SAN status</li>
-        <li><strong>Government and regulatory track record</strong> — demonstrated experience advising federal government agencies, state government bodies, and international organisations</li>
-        <li><strong>Years in operation in FCT</strong> — long-standing Abuja presence signals deep institutional relationships and local knowledge</li>
-        <li><strong>Chambers Global and Legal 500 recognition</strong> — independent third-party ranking of firm quality</li>
-        <li><strong>Client calibre</strong> — firms regularly advising blue-chip corporations, multinationals, UN bodies, and government agencies score higher</li>
-        <li><strong>Specialisation breadth</strong> — firms with dedicated practice groups for government advisory, energy, real estate, and dispute resolution</li>
+        <li><strong>SAN presence and seniority</strong> â€” number and calibre of Senior Advocates of Nigeria on the team, including founding partner SAN status</li>
+        <li><strong>Government and regulatory track record</strong> â€” demonstrated experience advising federal government agencies, state government bodies, and international organisations</li>
+        <li><strong>Years in operation in FCT</strong> â€” long-standing Abuja presence signals deep institutional relationships and local knowledge</li>
+        <li><strong>Chambers Global and Legal 500 recognition</strong> â€” independent third-party ranking of firm quality</li>
+        <li><strong>Client calibre</strong> â€” firms regularly advising blue-chip corporations, multinationals, UN bodies, and government agencies score higher</li>
+        <li><strong>Specialisation breadth</strong> â€” firms with dedicated practice groups for government advisory, energy, real estate, and dispute resolution</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Quick Comparison: Top 10 Law Firms in Abuja (2026)</h2>
@@ -9873,7 +11442,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="my-8 rounded-xl border-2 border-blue-200 bg-blue-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Is Your Law Firm on This List? Claim or Add Your Free 9jaDirectory Listing</h3>
-        <p class="text-gray-700 mb-3">If your law firm operates in Abuja — whether featured here or not — you can claim a free verified listing on 9jaDirectory today. Take control of your firm's online presence and connect with thousands of clients searching for legal services in the FCT every month.</p>
+        <p class="text-gray-700 mb-3">If your law firm operates in Abuja â€” whether featured here or not â€” you can claim a free verified listing on 9jaDirectory today. Take control of your firm's online presence and connect with thousands of clients searching for legal services in the FCT every month.</p>
         <ul class="list-disc pl-5 mb-4 space-y-1 text-gray-700 text-sm">
           <li>Manage your firm's practice areas, team, and contact details</li>
           <li>Receive a <strong>Verified Badge</strong> after our editorial review process</li>
@@ -9889,7 +11458,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#1 &mdash; Afe Babalola &amp; Co: Seven SANs, Six Decades of Excellence</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Founded:</strong> 1965 &nbsp;|&nbsp; <strong>Specialisation:</strong> Full-service, International Arbitration &nbsp;|&nbsp; <strong>Location:</strong> Maitama, Abuja</p>
 
-      <p>Afe Babalola &amp; Co stands in a class of its own in the Abuja legal market. Founded in 1965 by Aare Afe Babalola SAN — one of Nigeria's most celebrated legal minds — the firm holds the distinction of having seven Senior Advocates of Nigeria among its team, the highest number of SANs in any single Nigerian law firm. This is not merely a credential: it reflects decades of accumulated legal excellence across practice areas that include international arbitration, oil and gas, maritime law, election petition litigation, and corporate commercial advisory.</p>
+      <p>Afe Babalola &amp; Co stands in a class of its own in the Abuja legal market. Founded in 1965 by Aare Afe Babalola SAN â€” one of Nigeria's most celebrated legal minds â€” the firm holds the distinction of having seven Senior Advocates of Nigeria among its team, the highest number of SANs in any single Nigerian law firm. This is not merely a credential: it reflects decades of accumulated legal excellence across practice areas that include international arbitration, oil and gas, maritime law, election petition litigation, and corporate commercial advisory.</p>
 
       <p>The firm has secured landmark victories in some of Nigeria's most high-profile cases, including multi-million dollar ICSID arbitration wins and landmark Supreme Court decisions. Its Maitama office serves government agencies, multinational corporations, international organisations, and high-net-worth individuals requiring the highest calibre of legal representation Nigeria can provide.</p>
 
@@ -9898,7 +11467,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#2 &mdash; DIKKO &amp; MAHMOUD: Founded by Former State Attorneys General</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Founded:</strong> 1993 &nbsp;|&nbsp; <strong>Specialisation:</strong> Corporate, Government Advisory &nbsp;|&nbsp; <strong>Location:</strong> Wuse 2, Abuja</p>
 
-      <p>DIKKO &amp; MAHMOUD (D&amp;M) carries unique institutional credibility: both of its founding partners served as state Attorneys General before establishing the firm in 1993. This governmental background translates into deep understanding of public law, regulatory frameworks, government contract structures, and the mechanics of how federal and state agencies operate — knowledge that is invaluable for clients navigating the Nigerian government landscape.</p>
+      <p>DIKKO &amp; MAHMOUD (D&amp;M) carries unique institutional credibility: both of its founding partners served as state Attorneys General before establishing the firm in 1993. This governmental background translates into deep understanding of public law, regulatory frameworks, government contract structures, and the mechanics of how federal and state agencies operate â€” knowledge that is invaluable for clients navigating the Nigerian government landscape.</p>
 
       <p>The firm's practice covers corporate services, government advisory, capital markets, energy and natural resources, dispute resolution, and banking law. A.B. Mahmoud, SAN leads the firm with authority across multiple sectors, advising blue-chip companies, government institutions, and high-net-worth individuals. DIKKO &amp; MAHMOUD is particularly well-positioned for matters at the intersection of business and government policy.</p>
 
@@ -9918,7 +11487,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>AELEX's Abuja office, led by Lawrence Fubara Anga SAN, serves a distinctive clientele that includes multinational corporations, foreign embassies, international development finance institutions, and large domestic businesses with federal government dealings. As the largest full-service law firm in West Africa, AELEX brings considerable resources and specialist depth to its Abuja practice.</p>
 
-      <p>The firm's Abuja office handles banking and capital markets, energy and natural resources, intellectual property, telecommunications, real estate, and dispute resolution. Its unique position — serving both multinational corporate clients and diplomatic missions — makes it particularly valuable for cross-border matters, treaty-related advisory, and transactions requiring simultaneous knowledge of Nigerian law and international commercial standards.</p>
+      <p>The firm's Abuja office handles banking and capital markets, energy and natural resources, intellectual property, telecommunications, real estate, and dispute resolution. Its unique position â€” serving both multinational corporate clients and diplomatic missions â€” makes it particularly valuable for cross-border matters, treaty-related advisory, and transactions requiring simultaneous knowledge of Nigerian law and international commercial standards.</p>
 
       <p><strong>Best for:</strong> Multinational corporate matters, embassy and diplomatic advisory, energy regulatory compliance, banking law, and pan-African commercial transactions requiring Abuja-based counsel.</p>
 
@@ -9965,7 +11534,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#6 &mdash; Y.C. Maikyau &amp; Co: Led by the Current NBA President</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Specialisation:</strong> Corporate, Energy Finance, Real Estate &nbsp;|&nbsp; <strong>Location:</strong> Wuse Zone 1, Abuja &nbsp;|&nbsp; <strong>Lead Partner:</strong> Yakubu Chonoko Maikyau, OON, SAN</p>
 
-      <p>Y.C. Maikyau &amp; Co is led by Yakubu Chonoko Maikyau OON SAN, who currently serves as President of the Nigerian Bar Association (NBA) — the most senior elected position in the Nigerian legal profession. This leadership position underscores the firm's standing in the Nigerian legal community and reflects its senior partner's exceptional professional credentials and peer recognition.</p>
+      <p>Y.C. Maikyau &amp; Co is led by Yakubu Chonoko Maikyau OON SAN, who currently serves as President of the Nigerian Bar Association (NBA) â€” the most senior elected position in the Nigerian legal profession. This leadership position underscores the firm's standing in the Nigerian legal community and reflects its senior partner's exceptional professional credentials and peer recognition.</p>
 
       <p>The firm specialises in corporate law, energy finance, employment and labour law, and real estate. Its Wuse Zone 1 office serves corporate clients, financial institutions, and government-affiliated entities. The firm's work in energy finance is particularly noteworthy given Nigeria's power sector reforms under the Electricity Act 2023, where expert advisory on energy transactions and regulatory compliance is increasingly in demand.</p>
 
@@ -9992,7 +11561,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#9 &mdash; D.D. Dodo &amp; Co: Thirty Years of Energy and Telecoms Expertise</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Specialisation:</strong> Energy, Telecoms, Arbitration, Complex Litigation &nbsp;|&nbsp; <strong>Location:</strong> Wuse II, Abuja &nbsp;|&nbsp; <strong>Lead:</strong> D.D. Dodo, SAN &nbsp;|&nbsp; <strong>Offices:</strong> Abuja, Lagos, Kano, Jos</p>
 
-      <p>D.D. Dodo &amp; Co brings over three decades of FCT legal practice to its clients, led by D.D. Dodo SAN. With offices in Abuja, Lagos, Kano, and Jos, the firm offers genuine nationwide coverage and is particularly recognised for its work in the energy sector, telecommunications law, complex litigation, and arbitration — three areas that are growing rapidly in importance as Nigeria's infrastructure and digital economy expand.</p>
+      <p>D.D. Dodo &amp; Co brings over three decades of FCT legal practice to its clients, led by D.D. Dodo SAN. With offices in Abuja, Lagos, Kano, and Jos, the firm offers genuine nationwide coverage and is particularly recognised for its work in the energy sector, telecommunications law, complex litigation, and arbitration â€” three areas that are growing rapidly in importance as Nigeria's infrastructure and digital economy expand.</p>
 
       <p>The firm's long institutional history in Abuja has produced a team of experienced practitioners with deep knowledge of federal regulatory agencies including the Nigerian Communications Commission (NCC), the Nigerian Electricity Regulatory Commission (NERC), and the Nigerian Upstream Petroleum Regulatory Commission (NUPRC). It also runs a strong professional development programme for junior lawyers.</p>
 
@@ -10001,7 +11570,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">#10 &mdash; Tawo E. Tawo &amp; Co: Property, Immigration, and Family Law</h2>
       <p class="text-sm text-gray-500 mb-4"><strong>Registered:</strong> 1989 &nbsp;|&nbsp; <strong>Specialisation:</strong> Property Law, Immigration, Banking, Family &nbsp;|&nbsp; <strong>Location:</strong> Garki II, Abuja &nbsp;|&nbsp; <strong>Lead:</strong> Tawo Eja Tawo, SAN</p>
 
-      <p>Tawo E. Tawo SAN &amp; Co rounds out our Abuja top 10 with a practice built on three pillars that are essential to individuals and businesses in the FCT: property law, immigration, and family law — supplemented by banking, insurance, and general commercial advisory. Founded in 1989 and led by Tawo Eja Tawo SAN (a qualified arbitrator and notary public), the firm has over 30 years of post-call experience serving clients across Abuja and Port Harcourt.</p>
+      <p>Tawo E. Tawo SAN &amp; Co rounds out our Abuja top 10 with a practice built on three pillars that are essential to individuals and businesses in the FCT: property law, immigration, and family law â€” supplemented by banking, insurance, and general commercial advisory. Founded in 1989 and led by Tawo Eja Tawo SAN (a qualified arbitrator and notary public), the firm has over 30 years of post-call experience serving clients across Abuja and Port Harcourt.</p>
 
       <p>For property matters in the FCT specifically, the firm's expertise in AGIS procedures, C of O verification, FCDA approval processes, and FCT land law makes it a valuable choice for individuals buying, selling, or leasing property in Abuja. The firm's immigration practice serves expatriates, NGOs, embassies, and businesses needing CERPAC, work permits, and immigration compliance support.</p>
 
@@ -10022,7 +11591,7 @@ export const blogPosts: BlogPost[] = [
       <p>Abuja-based firms handle arbitrations under ICSID (for investor-state disputes), ICC, LCIA, and the Lagos Court of Arbitration rules. Afe Babalola &amp; Co has won significant ICSID awards for Nigerian clients. Alliance Law Firm and J-K Gadzama LLP also handle complex arbitrations involving government or quasi-government parties.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Immigration &amp; Expatriate Services</h3>
-      <p>With Abuja hosting dozens of foreign embassies, UN agencies, and multinational company regional offices, immigration law — including CERPAC applications, STR visas, and work permit compliance — is a significant practice area. Tawo E. Tawo &amp; Co and AELEX Abuja have strong immigration practices serving both corporate and individual clients.</p>
+      <p>With Abuja hosting dozens of foreign embassies, UN agencies, and multinational company regional offices, immigration law â€” including CERPAC applications, STR visas, and work permit compliance â€” is a significant practice area. Tawo E. Tawo &amp; Co and AELEX Abuja have strong immigration practices serving both corporate and individual clients.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Legal Fees in Abuja: What to Expect in 2026</h2>
       <p>Legal fees in the FCT follow the same Legal Practitioners Remuneration Order (2023) as the rest of Nigeria, but rates for government-facing and regulatory matters tend to be higher given the complexity involved:</p>
@@ -10053,7 +11622,7 @@ export const blogPosts: BlogPost[] = [
       <p>Verify the lawyer is enrolled with the Nigerian Bar Association. For Senior Advocates, confirm SAN status through the Legal Practitioners Privileges Committee (LPPC) or the Body of Senior Advocates of Nigeria (BOSAN). Having a SAN represent you in Abuja's federal courts provides significant procedural advantages and signals the seriousness of your legal position.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. Visit the Physical Office in Abuja</h3>
-      <p>Top Abuja law firms are typically located in Maitama, Wuse 2, Wuse Zone 1, the Central Business District, Garki, or Wuye. A site visit confirms the firm is operational and gives you a first impression of its professionalism and resources. For government-facing matters, confirm the firm has relevant FCT relationships and experience — not just a registered address.</p>
+      <p>Top Abuja law firms are typically located in Maitama, Wuse 2, Wuse Zone 1, the Central Business District, Garki, or Wuye. A site visit confirms the firm is operational and gives you a first impression of its professionalism and resources. For government-facing matters, confirm the firm has relevant FCT relationships and experience â€” not just a registered address.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Ask About Government Experience Specifically</h3>
       <p>In Abuja, relevant experience means more than general corporate law credentials. Ask specifically: Has the firm handled matters before the ministry or agency relevant to your case? Have they advised on similar regulatory licence applications or government contracts? Do they have established relationships with the relevant regulatory body? The best Abuja firms can answer these questions with specific examples.</p>
@@ -10067,7 +11636,7 @@ export const blogPosts: BlogPost[] = [
       <div class="my-10 rounded-2xl bg-gray-900 text-white p-8 text-center">
         <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-2">9jaDirectory Legal Services</p>
         <h3 class="text-2xl font-bold mb-4">Find &amp; Compare Verified Law Firms in Abuja (FCT)</h3>
-        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">9jaDirectory lists verified law firms and legal service providers across Abuja — from government regulatory specialists to full-service commercial firms. Browse, compare, and contact the right firm for your FCT legal matter.</p>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">9jaDirectory lists verified law firms and legal service providers across Abuja â€” from government regulatory specialists to full-service commercial firms. Browse, compare, and contact the right firm for your FCT legal matter.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 text-sm">
           <div class="bg-gray-800 rounded-xl px-4 py-3">Verified Listings</div>
           <div class="bg-gray-800 rounded-xl px-4 py-3">SAN-Led Firms</div>
@@ -10083,16 +11652,16 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What makes a law firm in Abuja different from one in Lagos?</h3>
-      <p>Abuja law firms specialise in the intersection of law and government. While Lagos firms dominate commercial transactions, capital markets, and corporate M&amp;A, Abuja firms excel in government contract advisory, regulatory licence applications, election petition litigation, federal court appellate work, and matters involving UN and ECOWAS bodies. The best Abuja firms have deep relationships within federal agencies and understand how government decisions are made — knowledge that is invaluable for any client whose matter touches the Nigerian state.</p>
+      <p>Abuja law firms specialise in the intersection of law and government. While Lagos firms dominate commercial transactions, capital markets, and corporate M&amp;A, Abuja firms excel in government contract advisory, regulatory licence applications, election petition litigation, federal court appellate work, and matters involving UN and ECOWAS bodies. The best Abuja firms have deep relationships within federal agencies and understand how government decisions are made â€” knowledge that is invaluable for any client whose matter touches the Nigerian state.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much do law firms in Abuja charge?</h3>
       <p>Fees vary significantly by matter type and firm seniority. FCT property conveyancing typically costs 5-10% of property value including AGIS and legal fees. Government advisory retainers range from &#8358;300,000 to &#8358;2,000,000+ per month. Complex litigation or election petition work with a SAN can run from &#8358;5,000,000 upwards. Always request a written engagement letter before committing to any firm, and confirm whether disbursements (government filing fees, AGIS charges) are included in the quoted fee.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which Abuja law firm is best for FCT property transactions?</h3>
-      <p>For property law in the FCT, Tawo E. Tawo &amp; Co and Y.C. Maikyau &amp; Co are particularly well-regarded for their expertise in AGIS procedures, C of O verification, and FCT-specific conveyancing. For high-value property transactions — particularly commercial or mixed-use developments — DIKKO &amp; MAHMOUD and Afe Babalola &amp; Co also have strong real estate capability combined with government advisory expertise relevant to FCDA approvals. Browse <a href="/categories/legal-services/fct" class="text-green-600 hover:underline">verified legal services in Abuja on 9jaDirectory</a> to compare firms near your property location.</p>
+      <p>For property law in the FCT, Tawo E. Tawo &amp; Co and Y.C. Maikyau &amp; Co are particularly well-regarded for their expertise in AGIS procedures, C of O verification, and FCT-specific conveyancing. For high-value property transactions â€” particularly commercial or mixed-use developments â€” DIKKO &amp; MAHMOUD and Afe Babalola &amp; Co also have strong real estate capability combined with government advisory expertise relevant to FCDA approvals. Browse <a href="/categories/legal-services/fct" class="text-green-600 hover:underline">verified legal services in Abuja on 9jaDirectory</a> to compare firms near your property location.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I hire an Abuja law firm for matters in other Nigerian states?</h3>
-      <p>Yes. Several top Abuja firms maintain offices in Lagos, Port Harcourt, Kano, and other states — including D.D. Dodo &amp; Co (Lagos, Kano, Jos), AELEX (Lagos, Port Harcourt), Tawo E. Tawo &amp; Co (Port Harcourt), and Alliance Law Firm (Lagos, Port Harcourt). For purely federal matters (Supreme Court, Court of Appeal, federal regulatory agencies), an Abuja firm may actually be preferable even if the underlying business is in another state.</p>
+      <p>Yes. Several top Abuja firms maintain offices in Lagos, Port Harcourt, Kano, and other states â€” including D.D. Dodo &amp; Co (Lagos, Kano, Jos), AELEX (Lagos, Port Harcourt), Tawo E. Tawo &amp; Co (Port Harcourt), and Alliance Law Firm (Lagos, Port Harcourt). For purely federal matters (Supreme Court, Court of Appeal, federal regulatory agencies), an Abuja firm may actually be preferable even if the underlying business is in another state.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I find a law firm in Abuja for government contract advisory?</h3>
       <p>Start with firms that have explicit government advisory practices: DIKKO &amp; MAHMOUD, J-K Gadzama LLP, and Afe Babalola &amp; Co are among the strongest for this. Ask specifically about their experience with the relevant ministry or agency, their understanding of the Public Procurement Act, and their SAN team's government-facing track record. For a comprehensive listing of verified law firms and legal service providers in Abuja, browse <a href="/categories/legal-services/fct" class="text-green-600 hover:underline">legal services in Abuja (FCT) on 9jaDirectory</a>.</p>
@@ -10131,17 +11700,17 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-21",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Comprehensive 2026 guide to the top 10 law firms in Abuja FCT, Nigeria — covering government advisory specialists, SAN-led firms, practice areas, fees, FCT property law, and how to verify a law firm before engaging.",
+        "description": "Comprehensive 2026 guide to the top 10 law firms in Abuja FCT, Nigeria â€” covering government advisory specialists, SAN-led firms, practice areas, fees, FCT property law, and how to verify a law firm before engaging.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-10-law-firms-in-abuja" }
       },
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What makes a law firm in Abuja different from one in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Abuja law firms specialise in government advisory, regulatory licence applications, election petition litigation, federal court appellate work, and matters involving UN and ECOWAS bodies. Lagos firms dominate commercial transactions and capital markets. The best Abuja firms have deep relationships within federal agencies and understand how government decisions are made — invaluable for any matter touching the Nigerian state." } },
-          { "@type": "Question", "name": "How much do law firms in Abuja charge?", "acceptedAnswer": { "@type": "Answer", "text": "FCT property conveyancing typically costs 5-10% of property value including AGIS and legal fees. Government advisory retainers range from ₦300,000 to ₦2,000,000+ per month. Complex litigation or election petition work with a SAN can run from ₦5,000,000 upwards. Always request a written engagement letter before committing." } },
+          { "@type": "Question", "name": "What makes a law firm in Abuja different from one in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Abuja law firms specialise in government advisory, regulatory licence applications, election petition litigation, federal court appellate work, and matters involving UN and ECOWAS bodies. Lagos firms dominate commercial transactions and capital markets. The best Abuja firms have deep relationships within federal agencies and understand how government decisions are made â€” invaluable for any matter touching the Nigerian state." } },
+          { "@type": "Question", "name": "How much do law firms in Abuja charge?", "acceptedAnswer": { "@type": "Answer", "text": "FCT property conveyancing typically costs 5-10% of property value including AGIS and legal fees. Government advisory retainers range from â‚¦300,000 to â‚¦2,000,000+ per month. Complex litigation or election petition work with a SAN can run from â‚¦5,000,000 upwards. Always request a written engagement letter before committing." } },
           { "@type": "Question", "name": "Which Abuja law firm is best for FCT property transactions?", "acceptedAnswer": { "@type": "Answer", "text": "For FCT property law, Tawo E. Tawo & Co and Y.C. Maikyau & Co are particularly well-regarded for their expertise in AGIS procedures, C of O verification, and FCT-specific conveyancing. For high-value commercial property transactions, DIKKO & MAHMOUD and Afe Babalola & Co also have strong real estate capability combined with FCDA advisory expertise." } },
-          { "@type": "Question", "name": "Can I hire an Abuja law firm for matters in other Nigerian states?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Several top Abuja firms maintain offices in Lagos, Port Harcourt, Kano, and other states — including D.D. Dodo & Co (Lagos, Kano, Jos), AELEX (Lagos, Port Harcourt), and Alliance Law Firm (Lagos, Port Harcourt). For purely federal matters before the Supreme Court, Court of Appeal, or federal regulatory agencies, an Abuja firm may be preferable even if the underlying business is in another state." } },
+          { "@type": "Question", "name": "Can I hire an Abuja law firm for matters in other Nigerian states?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Several top Abuja firms maintain offices in Lagos, Port Harcourt, Kano, and other states â€” including D.D. Dodo & Co (Lagos, Kano, Jos), AELEX (Lagos, Port Harcourt), and Alliance Law Firm (Lagos, Port Harcourt). For purely federal matters before the Supreme Court, Court of Appeal, or federal regulatory agencies, an Abuja firm may be preferable even if the underlying business is in another state." } },
           { "@type": "Question", "name": "How do I find a law firm in Abuja for government contract advisory?", "acceptedAnswer": { "@type": "Answer", "text": "Start with firms that have explicit government advisory practices: DIKKO & MAHMOUD, J-K Gadzama LLP, and Afe Babalola & Co are among the strongest. Ask specifically about their experience with the relevant ministry or agency, their understanding of the Public Procurement Act, and their SAN team's government-facing track record." } }
         ]
       },
@@ -10166,7 +11735,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Nigeria's food delivery industry is one of the fastest-growing sectors in Africa. The market hit <strong>US$1.4 billion in 2025</strong> and is projected to reach <strong>US$3.07 billion by 2027</strong>, driven by Lagos and Abuja's expanding middle class, smartphone penetration, and a culture that takes food seriously.</p>
 
-      <p>If you have been thinking about starting a food delivery business in Nigeria, this is the most practical guide available. We cover every step — from choosing your business model and registering with the CAC, to partnering with Chowdeck and calculating your monthly profit. No fluff, no generic advice.</p>
+      <p>If you have been thinking about starting a food delivery business in Nigeria, this is the most practical guide available. We cover every step â€” from choosing your business model and registering with the CAC, to partnering with Chowdeck and calculating your monthly profit. No fluff, no generic advice.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop" alt="How to start a food delivery business in Nigeria 2026" class="w-full rounded-lg shadow-lg" loading="lazy" />
@@ -10177,9 +11746,9 @@ export const blogPosts: BlogPost[] = [
         <p class="font-semibold text-green-800">Quick Facts for 2026</p>
         <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
           <li>Market size: US$1.4B+ and growing at 18%+ annually</li>
-          <li>Minimum startup capital: ₦150,000 (aggregator model)</li>
-          <li>Typical net profit per delivery: ₦500–₦1,500</li>
-          <li>CAC registration cost: ₦25,000–₦50,000 (business name)</li>
+          <li>Minimum startup capital: â‚¦150,000 (aggregator model)</li>
+          <li>Typical net profit per delivery: â‚¦500â€“â‚¦1,500</li>
+          <li>CAC registration cost: â‚¦25,000â€“â‚¦50,000 (business name)</li>
           <li>Top cities: Lagos, Abuja, Port Harcourt, Ibadan</li>
           <li>Biggest platforms: Chowdeck, Glovo, HeyFood, Jumia Food</li>
         </ul>
@@ -10205,33 +11774,33 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Model A: Restaurant + Delivery (Full Vertical)</h3>
       <p>You cook the food and deliver it. Maximum profit per order but highest setup cost. You need a kitchen, NAFDAC registration, equipment, and riders. Best for chefs, caterers, and existing food businesses expanding into delivery.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Startup capital:</strong> ₦800,000 – ₦5,000,000+</li>
-        <li><strong>Profit margin:</strong> 25–45% per order</li>
+        <li><strong>Startup capital:</strong> â‚¦800,000 â€“ â‚¦5,000,000+</li>
+        <li><strong>Profit margin:</strong> 25â€“45% per order</li>
         <li><strong>Example:</strong> Home-cook using Chowdeck + WhatsApp orders</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Model B: Delivery-Only / Dark Kitchen</h3>
       <p>You cook specifically for delivery, no dine-in. Lower rent than a restaurant, but still needs a registered kitchen and food prep space. Growing fast in Lagos because it cuts overhead by 60%+.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Startup capital:</strong> ₦400,000 – ₦2,000,000</li>
-        <li><strong>Profit margin:</strong> 20–35% per order</li>
+        <li><strong>Startup capital:</strong> â‚¦400,000 â€“ â‚¦2,000,000</li>
+        <li><strong>Profit margin:</strong> 20â€“35% per order</li>
         <li><strong>Example:</strong> Cloud kitchen operating 3 meal brands from one kitchen</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Model C: Aggregator / Logistics Only</h3>
-      <p>You provide the delivery service — restaurants and individuals pay you to move food. No cooking required. The lowest-capital entry point. You are essentially a dispatch company. This is how many successful Lagos dispatch riders started.</p>
+      <p>You provide the delivery service â€” restaurants and individuals pay you to move food. No cooking required. The lowest-capital entry point. You are essentially a dispatch company. This is how many successful Lagos dispatch riders started.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Startup capital:</strong> ₦150,000 – ₦800,000</li>
-        <li><strong>Profit margin:</strong> ₦500–₦2,000 per delivery</li>
-        <li><strong>Example:</strong> Small dispatch team serving 5–10 restaurants in a neighbourhood</li>
+        <li><strong>Startup capital:</strong> â‚¦150,000 â€“ â‚¦800,000</li>
+        <li><strong>Profit margin:</strong> â‚¦500â€“â‚¦2,000 per delivery</li>
+        <li><strong>Example:</strong> Small dispatch team serving 5â€“10 restaurants in a neighbourhood</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Model D: Platform Partnership (Gig Model)</h3>
       <p>Sign up as a delivery partner on Chowdeck, Glovo, or HeyFood and complete deliveries for their platform customers. Zero cooking, minimal setup. Best for starting with little capital while learning the market before building your own brand.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Startup capital:</strong> ₦50,000 – ₦200,000 (bike, smartphone, protective gear)</li>
-        <li><strong>Earnings:</strong> ₦300–₦700 per delivery + surge bonuses</li>
-        <li><strong>Example:</strong> Chowdeck or Glovo courier earning ₦60,000–₦120,000/month</li>
+        <li><strong>Startup capital:</strong> â‚¦50,000 â€“ â‚¦200,000 (bike, smartphone, protective gear)</li>
+        <li><strong>Earnings:</strong> â‚¦300â€“â‚¦700 per delivery + surge bonuses</li>
+        <li><strong>Example:</strong> Chowdeck or Glovo courier earning â‚¦60,000â€“â‚¦120,000/month</li>
       </ul>
 
       <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
@@ -10244,10 +11813,10 @@ export const blogPosts: BlogPost[] = [
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Restaurant + Delivery</td><td class="border border-gray-300 p-3">₦800,000+</td><td class="border border-gray-300 p-3">High</td><td class="border border-gray-300 p-3">Chefs, existing caterers</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Dark Kitchen</td><td class="border border-gray-300 p-3">₦400,000+</td><td class="border border-gray-300 p-3">Medium-High</td><td class="border border-gray-300 p-3">Experienced cooks, lean operators</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Logistics Only</td><td class="border border-gray-300 p-3">₦150,000+</td><td class="border border-gray-300 p-3">Medium</td><td class="border border-gray-300 p-3">Entrepreneurs, small teams</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Platform Gig</td><td class="border border-gray-300 p-3">₦50,000+</td><td class="border border-gray-300 p-3">Low</td><td class="border border-gray-300 p-3">Individuals, first-timers</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Restaurant + Delivery</td><td class="border border-gray-300 p-3">â‚¦800,000+</td><td class="border border-gray-300 p-3">High</td><td class="border border-gray-300 p-3">Chefs, existing caterers</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Dark Kitchen</td><td class="border border-gray-300 p-3">â‚¦400,000+</td><td class="border border-gray-300 p-3">Medium-High</td><td class="border border-gray-300 p-3">Experienced cooks, lean operators</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Logistics Only</td><td class="border border-gray-300 p-3">â‚¦150,000+</td><td class="border border-gray-300 p-3">Medium</td><td class="border border-gray-300 p-3">Entrepreneurs, small teams</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Platform Gig</td><td class="border border-gray-300 p-3">â‚¦50,000+</td><td class="border border-gray-300 p-3">Low</td><td class="border border-gray-300 p-3">Individuals, first-timers</td></tr>
         </tbody>
       </table>
 
@@ -10258,16 +11827,16 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Step 1: Register with the CAC</h3>
       <p>The <strong>Corporate Affairs Commission (CAC)</strong> is your first stop. You have two options:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Business Name Registration:</strong> For sole traders and small operations. Cost: approximately ₦10,000 – ₦25,000. Faster (3–7 days online via cac.gov.ng).</li>
-        <li><strong>Private Limited Company (Ltd):</strong> For serious businesses seeking investors, contracts, or bank accounts. Cost: ₦50,000 – ₦150,000 including legal fees. Required if you want to raise funding or partner with large corporates.</li>
+        <li><strong>Business Name Registration:</strong> For sole traders and small operations. Cost: approximately â‚¦10,000 â€“ â‚¦25,000. Faster (3â€“7 days online via cac.gov.ng).</li>
+        <li><strong>Private Limited Company (Ltd):</strong> For serious businesses seeking investors, contracts, or bank accounts. Cost: â‚¦50,000 â€“ â‚¦150,000 including legal fees. Required if you want to raise funding or partner with large corporates.</li>
       </ul>
       <p>You will need: a valid means of ID (NIN, passport, or driver's licence), a business address, your proposed business name, and a statement of business objectives.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Step 2: NAFDAC Registration (If You Cook)</h3>
       <p>If your model involves preparing and selling food (Models A and B), you need <strong>NAFDAC (National Agency for Food and Drug Administration and Control)</strong> registration. This applies to any packaged food or drink you sell commercially.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Product registration fee:</strong> ₦50,000 – ₦200,000 per product category</li>
-        <li><strong>Timeline:</strong> 3–6 months for full registration</li>
+        <li><strong>Product registration fee:</strong> â‚¦50,000 â€“ â‚¦200,000 per product category</li>
+        <li><strong>Timeline:</strong> 3â€“6 months for full registration</li>
         <li><strong>Kitchen inspection:</strong> NAFDAC will inspect your preparation facility</li>
         <li><strong>Tip:</strong> Start with a NAFDAC-registered commissary or shared kitchen to reduce cost while awaiting your own registration</li>
       </ul>
@@ -10275,14 +11844,14 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Step 3: Other Permits</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>State Ministry of Health:</strong> Food handler's certificate and premises permit for your kitchen</li>
-        <li><strong>Local Government levy:</strong> Signage and business premises levy (₦10,000–₦50,000 annually, varies by LGA)</li>
+        <li><strong>Local Government levy:</strong> Signage and business premises levy (â‚¦10,000â€“â‚¦50,000 annually, varies by LGA)</li>
         <li><strong>Vehicle particulars:</strong> If using motorcycles or vans, ensure all are road-worthy and riders are licensed</li>
         <li><strong>FIRS Tax Identification Number (TIN):</strong> Required for all registered businesses; free to obtain at firs.gov.ng</li>
       </ul>
 
       <div class="my-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
         <p class="font-semibold text-blue-800 mb-1">Pro Tip</p>
-        <p class="text-blue-900 text-sm">Use a CAC-accredited agent to speed up your registration. Many complete business name registrations within 48 hours for ₦25,000–₦40,000 all-in. Search <a href="/categories/legal" class="text-green-600 hover:underline">legal services in your state</a> on 9jaDirectory to find one near you.</p>
+        <p class="text-blue-900 text-sm">Use a CAC-accredited agent to speed up your registration. Many complete business name registrations within 48 hours for â‚¦25,000â€“â‚¦40,000 all-in. Search <a href="/categories/legal" class="text-green-600 hover:underline">legal services in your state</a> on 9jaDirectory to find one near you.</p>
       </div>
 
       <h2 id="startup-costs" class="text-2xl font-bold mt-10 mb-4">3. Startup Costs in Naira (2026)</h2>
@@ -10294,18 +11863,18 @@ export const blogPosts: BlogPost[] = [
         <thead>
           <tr class="bg-gray-100">
             <th class="border border-gray-300 p-3 text-left">Item</th>
-            <th class="border border-gray-300 p-3 text-left">Cost (₦)</th>
+            <th class="border border-gray-300 p-3 text-left">Cost (â‚¦)</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3">Used dispatch motorcycle (Honda CG 125 or Bajaj)</td><td class="border border-gray-300 p-3">₦350,000 – ₦600,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Helmet, protective gear, delivery box</td><td class="border border-gray-300 p-3">₦35,000 – ₦60,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Android smartphone (for apps)</td><td class="border border-gray-300 p-3">₦60,000 – ₦120,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">CAC business name registration</td><td class="border border-gray-300 p-3">₦25,000 – ₦40,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Branded T-shirts and packaging (100 units)</td><td class="border border-gray-300 p-3">₦30,000 – ₦60,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">First month fuel budget</td><td class="border border-gray-300 p-3">₦40,000 – ₦80,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Data subscription (3 months)</td><td class="border border-gray-300 p-3">₦15,000 – ₦25,000</td></tr>
-          <tr class="bg-green-50 font-semibold"><td class="border border-gray-300 p-3">Total Estimate</td><td class="border border-gray-300 p-3">₦555,000 – ₦985,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Used dispatch motorcycle (Honda CG 125 or Bajaj)</td><td class="border border-gray-300 p-3">â‚¦350,000 â€“ â‚¦600,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Helmet, protective gear, delivery box</td><td class="border border-gray-300 p-3">â‚¦35,000 â€“ â‚¦60,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Android smartphone (for apps)</td><td class="border border-gray-300 p-3">â‚¦60,000 â€“ â‚¦120,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">CAC business name registration</td><td class="border border-gray-300 p-3">â‚¦25,000 â€“ â‚¦40,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Branded T-shirts and packaging (100 units)</td><td class="border border-gray-300 p-3">â‚¦30,000 â€“ â‚¦60,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">First month fuel budget</td><td class="border border-gray-300 p-3">â‚¦40,000 â€“ â‚¦80,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Data subscription (3 months)</td><td class="border border-gray-300 p-3">â‚¦15,000 â€“ â‚¦25,000</td></tr>
+          <tr class="bg-green-50 font-semibold"><td class="border border-gray-300 p-3">Total Estimate</td><td class="border border-gray-300 p-3">â‚¦555,000 â€“ â‚¦985,000</td></tr>
         </tbody>
       </table>
 
@@ -10314,19 +11883,19 @@ export const blogPosts: BlogPost[] = [
         <thead>
           <tr class="bg-gray-100">
             <th class="border border-gray-300 p-3 text-left">Item</th>
-            <th class="border border-gray-300 p-3 text-left">Cost (₦)</th>
+            <th class="border border-gray-300 p-3 text-left">Cost (â‚¦)</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3">Commercial gas cooker (2–4 burner)</td><td class="border border-gray-300 p-3">₦80,000 – ₦200,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Refrigerator (200–300L chest freezer)</td><td class="border border-gray-300 p-3">₦150,000 – ₦300,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Food packaging (containers, bags, labels)</td><td class="border border-gray-300 p-3">₦50,000 – ₦80,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">CAC registration + NAFDAC permit</td><td class="border border-gray-300 p-3">₦80,000 – ₦250,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Kitchen rent deposit (shared or home)</td><td class="border border-gray-300 p-3">₦50,000 – ₦200,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">First month ingredients/stock</td><td class="border border-gray-300 p-3">₦100,000 – ₦200,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Dispatch arrangement (outsourced riders)</td><td class="border border-gray-300 p-3">₦50,000 – ₦100,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Marketing (Instagram, WhatsApp ads)</td><td class="border border-gray-300 p-3">₦30,000 – ₦80,000</td></tr>
-          <tr class="bg-green-50 font-semibold"><td class="border border-gray-300 p-3">Total Estimate</td><td class="border border-gray-300 p-3">₦590,000 – ₦1,410,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Commercial gas cooker (2â€“4 burner)</td><td class="border border-gray-300 p-3">â‚¦80,000 â€“ â‚¦200,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Refrigerator (200â€“300L chest freezer)</td><td class="border border-gray-300 p-3">â‚¦150,000 â€“ â‚¦300,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Food packaging (containers, bags, labels)</td><td class="border border-gray-300 p-3">â‚¦50,000 â€“ â‚¦80,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">CAC registration + NAFDAC permit</td><td class="border border-gray-300 p-3">â‚¦80,000 â€“ â‚¦250,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Kitchen rent deposit (shared or home)</td><td class="border border-gray-300 p-3">â‚¦50,000 â€“ â‚¦200,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">First month ingredients/stock</td><td class="border border-gray-300 p-3">â‚¦100,000 â€“ â‚¦200,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Dispatch arrangement (outsourced riders)</td><td class="border border-gray-300 p-3">â‚¦50,000 â€“ â‚¦100,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Marketing (Instagram, WhatsApp ads)</td><td class="border border-gray-300 p-3">â‚¦30,000 â€“ â‚¦80,000</td></tr>
+          <tr class="bg-green-50 font-semibold"><td class="border border-gray-300 p-3">Total Estimate</td><td class="border border-gray-300 p-3">â‚¦590,000 â€“ â‚¦1,410,000</td></tr>
         </tbody>
       </table>
 
@@ -10334,44 +11903,44 @@ export const blogPosts: BlogPost[] = [
 
       <p>Partnering with the right platform gives you instant access to thousands of hungry customers. Here is a detailed breakdown of what each platform offers restaurants and vendors in 2026.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">1. Chowdeck — Nigeria's Leading Platform</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Chowdeck â€” Nigeria's Leading Platform</h3>
       <p>Chowdeck is currently Nigeria's fastest-growing food delivery platform, with strong traction in Lagos, Abuja, and Port Harcourt. Founded by Nigerians and backed by international investors, Chowdeck offers a vendor-friendly dashboard, real-time order tracking, and a growing customer base.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Commission:</strong> 15–20% per order (varies by agreement)</li>
+        <li><strong>Commission:</strong> 15â€“20% per order (varies by agreement)</li>
         <li><strong>Cities:</strong> Lagos, Abuja, Port Harcourt, Ibadan, Enugu</li>
         <li><strong>Onboarding:</strong> Business registration + CAC + bank account + food photos</li>
         <li><strong>Settlement:</strong> Weekly payouts to your account</li>
         <li><strong>Best for:</strong> Restaurants, cloud kitchens, caterers wanting premium customers</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">2. Glovo — International Platform with Strong Lagos Presence</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Glovo â€” International Platform with Strong Lagos Presence</h3>
       <p>Glovo is a Spanish-origin delivery super-app operating strongly in Lagos and Abuja. Beyond food, it also delivers groceries and retail items, meaning your restaurant could be seen by Glovo's entire customer base, not just food seekers.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Commission:</strong> 25–30% per order</li>
+        <li><strong>Commission:</strong> 25â€“30% per order</li>
         <li><strong>Cities:</strong> Lagos, Abuja (limited to select zones)</li>
         <li><strong>Onboarding:</strong> More requirements than local platforms; expects professional packaging and consistent availability</li>
         <li><strong>Best for:</strong> Established restaurants wanting international brand association</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">3. HeyFood — Fastest Growing in Northern &amp; Eastern Nigeria</h3>
-      <p>HeyFood is a Nigerian-owned platform expanding aggressively in cities under-served by Lagos-centric platforms. It is particularly strong in Ibadan, Abuja, Enugu, Owerri, and Kano — making it ideal for businesses outside Lagos.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">3. HeyFood â€” Fastest Growing in Northern &amp; Eastern Nigeria</h3>
+      <p>HeyFood is a Nigerian-owned platform expanding aggressively in cities under-served by Lagos-centric platforms. It is particularly strong in Ibadan, Abuja, Enugu, Owerri, and Kano â€” making it ideal for businesses outside Lagos.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Commission:</strong> 15–20% per order</li>
+        <li><strong>Commission:</strong> 15â€“20% per order</li>
         <li><strong>Cities:</strong> Ibadan, Abuja, Enugu, Owerri, Kano, Ilorin, and growing</li>
         <li><strong>Onboarding:</strong> Simpler process; local support teams</li>
         <li><strong>Best for:</strong> Businesses in mid-tier Nigerian cities wanting delivery without Lagos competition</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">4. Jumia Food — High Traffic, High Competition</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Jumia Food â€” High Traffic, High Competition</h3>
       <p>Jumia Food (operated by Jumia Technologies) benefits from the wider Jumia customer base in Nigeria. However, vendor competition is intense, and margins can be tight. Better suited as a secondary channel rather than your primary platform.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Commission:</strong> 20–28% per order</li>
+        <li><strong>Commission:</strong> 20â€“28% per order</li>
         <li><strong>Cities:</strong> Lagos, Abuja, Kano, Port Harcourt and more</li>
         <li><strong>Best for:</strong> Restaurants already on other platforms seeking additional order volume</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. WhatsApp + Social Media Direct Orders</h3>
-      <p>Do not underestimate direct-to-customer channels. Thousands of Nigerian food businesses earn more from WhatsApp Business, Instagram DMs, and Telegram groups than from aggregator platforms — with zero commission. This works especially well in estate communities, office parks, and university towns where you can build a loyal repeat customer base.</p>
+      <p>Do not underestimate direct-to-customer channels. Thousands of Nigerian food businesses earn more from WhatsApp Business, Instagram DMs, and Telegram groups than from aggregator platforms â€” with zero commission. This works especially well in estate communities, office parks, and university towns where you can build a loyal repeat customer base.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
         <li><strong>Commission:</strong> 0%</li>
         <li><strong>Tools:</strong> WhatsApp Business, Instagram Business, Flutterwave/Paystack for payment</li>
@@ -10388,10 +11957,10 @@ export const blogPosts: BlogPost[] = [
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Chowdeck</td><td class="border border-gray-300 p-3">15–20%</td><td class="border border-gray-300 p-3">Lagos, Abuja, PH</td><td class="border border-gray-300 p-3">Primary channel</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Glovo</td><td class="border border-gray-300 p-3">25–30%</td><td class="border border-gray-300 p-3">Lagos, Abuja</td><td class="border border-gray-300 p-3">Premium restaurants</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">HeyFood</td><td class="border border-gray-300 p-3">15–20%</td><td class="border border-gray-300 p-3">Ibadan, Enugu, Kano</td><td class="border border-gray-300 p-3">Mid-tier cities</td></tr>
-          <tr><td class="border border-gray-300 p-3 font-semibold">Jumia Food</td><td class="border border-gray-300 p-3">20–28%</td><td class="border border-gray-300 p-3">Lagos, Abuja, Kano</td><td class="border border-gray-300 p-3">Volume secondary channel</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Chowdeck</td><td class="border border-gray-300 p-3">15â€“20%</td><td class="border border-gray-300 p-3">Lagos, Abuja, PH</td><td class="border border-gray-300 p-3">Primary channel</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Glovo</td><td class="border border-gray-300 p-3">25â€“30%</td><td class="border border-gray-300 p-3">Lagos, Abuja</td><td class="border border-gray-300 p-3">Premium restaurants</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">HeyFood</td><td class="border border-gray-300 p-3">15â€“20%</td><td class="border border-gray-300 p-3">Ibadan, Enugu, Kano</td><td class="border border-gray-300 p-3">Mid-tier cities</td></tr>
+          <tr><td class="border border-gray-300 p-3 font-semibold">Jumia Food</td><td class="border border-gray-300 p-3">20â€“28%</td><td class="border border-gray-300 p-3">Lagos, Abuja, Kano</td><td class="border border-gray-300 p-3">Volume secondary channel</td></tr>
           <tr><td class="border border-gray-300 p-3 font-semibold">WhatsApp Direct</td><td class="border border-gray-300 p-3">0%</td><td class="border border-gray-300 p-3">Anywhere</td><td class="border border-gray-300 p-3">Repeat customers, estates</td></tr>
         </tbody>
       </table>
@@ -10401,23 +11970,23 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Hiring and Managing Riders</h3>
       <p>Your delivery speed is your brand. In Nigeria's competitive food delivery space, a late or cold delivery loses customers permanently. Here is how to structure your rider operation:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>In-house riders:</strong> Pay ₦40,000–₦80,000/month per rider. You bear fuel, maintenance, and management costs. Better for high-volume, quality-focused operations.</li>
-        <li><strong>Outsourced dispatch:</strong> Pay per delivery (₦500–₦1,500 per trip). Lower fixed cost, but less control over delivery experience. Services like Kwik Delivery and Sendbox offer this.</li>
+        <li><strong>In-house riders:</strong> Pay â‚¦40,000â€“â‚¦80,000/month per rider. You bear fuel, maintenance, and management costs. Better for high-volume, quality-focused operations.</li>
+        <li><strong>Outsourced dispatch:</strong> Pay per delivery (â‚¦500â€“â‚¦1,500 per trip). Lower fixed cost, but less control over delivery experience. Services like Kwik Delivery and Sendbox offer this.</li>
         <li><strong>Platform riders:</strong> If you list on Chowdeck or Glovo, they handle delivery. You focus purely on food prep. Easiest option but highest commission cost.</li>
       </ul>
-      <p>Regardless of model, set a clear SLA: meals should be picked up within 10 minutes of being ready and delivered within 30–45 minutes in urban areas.</p>
+      <p>Regardless of model, set a clear SLA: meals should be picked up within 10 minutes of being ready and delivered within 30â€“45 minutes in urban areas.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Payment Infrastructure</h3>
       <p>Nigerian customers increasingly prefer cashless payments. Integrate at least one of these:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Paystack or Flutterwave</strong> — for website and app orders</li>
-        <li><strong>WhatsApp Business</strong> with bank transfer confirmation — for direct orders</li>
-        <li><strong>POS machine</strong> — for on-delivery card payment (₦30,000–₦60,000 to get started)</li>
-        <li><strong>USSD transfer</strong> — for customers without internet access</li>
+        <li><strong>Paystack or Flutterwave</strong> â€” for website and app orders</li>
+        <li><strong>WhatsApp Business</strong> with bank transfer confirmation â€” for direct orders</li>
+        <li><strong>POS machine</strong> â€” for on-delivery card payment (â‚¦30,000â€“â‚¦60,000 to get started)</li>
+        <li><strong>USSD transfer</strong> â€” for customers without internet access</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Packaging</h3>
-      <p>Packaging is your silent salesperson. In 2026, Nigerian food delivery customers judge quality heavily by packaging before they even taste the food. Budget at least ₦150–₦400 per order for packaging. Branded boxes and eco-friendly containers can increase perceived value significantly. Source wholesale from Alaba, Computer Village area markets in Lagos, or wholesale suppliers in Onitsha for the best prices.</p>
+      <p>Packaging is your silent salesperson. In 2026, Nigerian food delivery customers judge quality heavily by packaging before they even taste the food. Budget at least â‚¦150â€“â‚¦400 per order for packaging. Branded boxes and eco-friendly containers can increase perceived value significantly. Source wholesale from Alaba, Computer Village area markets in Lagos, or wholesale suppliers in Onitsha for the best prices.</p>
 
       <h2 id="logistics" class="text-2xl font-bold mt-10 mb-4">6. Lagos &amp; Abuja Logistics Realities</h2>
 
@@ -10426,48 +11995,48 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">Lagos: The Traffic Problem</h3>
       <p>Lagos traffic is the single biggest threat to your delivery SLA. Key operational realities:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Zone your coverage area tightly.</strong> Operating within a 3–5km radius beats trying to deliver city-wide. A focused area means consistent delivery times and happier customers.</li>
-        <li><strong>Peak hours are brutal:</strong> 7–10am and 4–8pm. Either avoid long-distance deliveries during these windows or charge a surge fee.</li>
+        <li><strong>Zone your coverage area tightly.</strong> Operating within a 3â€“5km radius beats trying to deliver city-wide. A focused area means consistent delivery times and happier customers.</li>
+        <li><strong>Peak hours are brutal:</strong> 7â€“10am and 4â€“8pm. Either avoid long-distance deliveries during these windows or charge a surge fee.</li>
         <li><strong>Motorcycle restrictions:</strong> Certain Lagos expressways restrict okadas. Know your zone's restrictions before deploying riders.</li>
-        <li><strong>Use dispatch tricycles (keke napep) for short distances</strong> in areas with motorcycle restrictions — cost-effective and restriction-friendly.</li>
+        <li><strong>Use dispatch tricycles (keke napep) for short distances</strong> in areas with motorcycle restrictions â€” cost-effective and restriction-friendly.</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Abuja: Wider Geography, Less Traffic</h3>
-      <p>Abuja's road planning is more structured, but distances between districts are significant. Coverage zones should be district-based: Wuse 2, Maitama, Garki, Gwarinpa, and Jabi each have distinct customer profiles and eating habits. Fuel costs per delivery are higher in Abuja due to distance. Factor ₦800–₦1,500 fuel per day per rider depending on zone coverage.</p>
+      <p>Abuja's road planning is more structured, but distances between districts are significant. Coverage zones should be district-based: Wuse 2, Maitama, Garki, Gwarinpa, and Jabi each have distinct customer profiles and eating habits. Fuel costs per delivery are higher in Abuja due to distance. Factor â‚¦800â€“â‚¦1,500 fuel per day per rider depending on zone coverage.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Fuel Cost Planning (2026 Reality)</h3>
-      <p>Since the fuel subsidy removal, petrol costs have stabilised around ₦1,100–₦1,300/litre in Lagos and Abuja. A dispatch motorcycle uses approximately 1.5–2 litres per 30km. Budget ₦5,000–₦8,000 per rider per week in fuel alone. This is a real cost that most early plans underestimate.</p>
+      <p>Since the fuel subsidy removal, petrol costs have stabilised around â‚¦1,100â€“â‚¦1,300/litre in Lagos and Abuja. A dispatch motorcycle uses approximately 1.5â€“2 litres per 30km. Budget â‚¦5,000â€“â‚¦8,000 per rider per week in fuel alone. This is a real cost that most early plans underestimate.</p>
 
       <h2 id="profit" class="text-2xl font-bold mt-10 mb-4">7. Profit Calculator: What You Can Realistically Earn</h2>
 
-      <p>Here is a realistic monthly projection for a small food delivery operation in Lagos (logistics-only model, 2 riders, serving 3–5 restaurant clients):</p>
+      <p>Here is a realistic monthly projection for a small food delivery operation in Lagos (logistics-only model, 2 riders, serving 3â€“5 restaurant clients):</p>
 
       <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
         <thead>
           <tr class="bg-gray-100">
             <th class="border border-gray-300 p-3 text-left">Item</th>
-            <th class="border border-gray-300 p-3 text-left">Monthly Amount (₦)</th>
+            <th class="border border-gray-300 p-3 text-left">Monthly Amount (â‚¦)</th>
           </tr>
         </thead>
         <tbody>
           <tr class="font-semibold bg-green-50"><td class="border border-gray-300 p-3" colspan="2">REVENUE</td></tr>
-          <tr><td class="border border-gray-300 p-3">10 deliveries/day × 2 riders × 26 working days × ₦800 avg fee</td><td class="border border-gray-300 p-3">₦416,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Weekend surge orders bonus (estimate)</td><td class="border border-gray-300 p-3">₦40,000</td></tr>
-          <tr class="font-semibold"><td class="border border-gray-300 p-3">Gross Revenue</td><td class="border border-gray-300 p-3">₦456,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">10 deliveries/day Ã— 2 riders Ã— 26 working days Ã— â‚¦800 avg fee</td><td class="border border-gray-300 p-3">â‚¦416,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Weekend surge orders bonus (estimate)</td><td class="border border-gray-300 p-3">â‚¦40,000</td></tr>
+          <tr class="font-semibold"><td class="border border-gray-300 p-3">Gross Revenue</td><td class="border border-gray-300 p-3">â‚¦456,000</td></tr>
           <tr class="font-semibold bg-red-50"><td class="border border-gray-300 p-3" colspan="2">EXPENSES</td></tr>
-          <tr><td class="border border-gray-300 p-3">2 rider salaries (₦55,000 each)</td><td class="border border-gray-300 p-3">₦110,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Fuel (₦6,500/rider/week × 4 weeks × 2)</td><td class="border border-gray-300 p-3">₦52,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Bike maintenance &amp; tyres</td><td class="border border-gray-300 p-3">₦20,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Data subscriptions (2 lines)</td><td class="border border-gray-300 p-3">₦8,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Packaging materials</td><td class="border border-gray-300 p-3">₦10,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Marketing (WhatsApp ads, Instagram)</td><td class="border border-gray-300 p-3">₦15,000</td></tr>
-          <tr><td class="border border-gray-300 p-3">Miscellaneous / emergency buffer</td><td class="border border-gray-300 p-3">₦15,000</td></tr>
-          <tr class="font-semibold"><td class="border border-gray-300 p-3">Total Expenses</td><td class="border border-gray-300 p-3">₦230,000</td></tr>
-          <tr class="font-bold bg-green-100"><td class="border border-gray-300 p-3">NET MONTHLY PROFIT</td><td class="border border-gray-300 p-3">₦226,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">2 rider salaries (â‚¦55,000 each)</td><td class="border border-gray-300 p-3">â‚¦110,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Fuel (â‚¦6,500/rider/week Ã— 4 weeks Ã— 2)</td><td class="border border-gray-300 p-3">â‚¦52,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Bike maintenance &amp; tyres</td><td class="border border-gray-300 p-3">â‚¦20,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Data subscriptions (2 lines)</td><td class="border border-gray-300 p-3">â‚¦8,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Packaging materials</td><td class="border border-gray-300 p-3">â‚¦10,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Marketing (WhatsApp ads, Instagram)</td><td class="border border-gray-300 p-3">â‚¦15,000</td></tr>
+          <tr><td class="border border-gray-300 p-3">Miscellaneous / emergency buffer</td><td class="border border-gray-300 p-3">â‚¦15,000</td></tr>
+          <tr class="font-semibold"><td class="border border-gray-300 p-3">Total Expenses</td><td class="border border-gray-300 p-3">â‚¦230,000</td></tr>
+          <tr class="font-bold bg-green-100"><td class="border border-gray-300 p-3">NET MONTHLY PROFIT</td><td class="border border-gray-300 p-3">â‚¦226,000</td></tr>
         </tbody>
       </table>
 
-      <p>Scale to 4 riders with 15 deliveries each per day, and net monthly profit can reach <strong>₦500,000–₦700,000</strong>. The key variable is delivery volume — every extra order with a fixed cost base goes nearly straight to profit.</p>
+      <p>Scale to 4 riders with 15 deliveries each per day, and net monthly profit can reach <strong>â‚¦500,000â€“â‚¦700,000</strong>. The key variable is delivery volume â€” every extra order with a fixed cost base goes nearly straight to profit.</p>
 
       <div class="my-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
         <p class="font-semibold text-yellow-800 mb-1">Important Note</p>
@@ -10477,10 +12046,10 @@ export const blogPosts: BlogPost[] = [
       <h2 id="marketing" class="text-2xl font-bold mt-10 mb-4">8. Marketing Your Food Delivery Business</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">WhatsApp Business (Free &amp; Most Effective)</h3>
-      <p>Set up a WhatsApp Business profile with your menu, business hours, and location. Use broadcast lists to send daily menu updates to 200+ contacts. Create a catalogue with photos and prices. For a delivery-only operation, WhatsApp can generate 50–70% of orders at zero commission cost.</p>
+      <p>Set up a WhatsApp Business profile with your menu, business hours, and location. Use broadcast lists to send daily menu updates to 200+ contacts. Create a catalogue with photos and prices. For a delivery-only operation, WhatsApp can generate 50â€“70% of orders at zero commission cost.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Instagram &amp; TikTok</h3>
-      <p>Nigerian food content performs exceptionally well on Instagram and TikTok. Post cooking videos, behind-the-scenes kitchen content, and customer reactions. Targeted Instagram ads starting from ₦5,000/week can generate significant order volume in your coverage zone. Food reels consistently outperform static images — invest in decent lighting and a phone tripod (₦8,000–₦15,000).</p>
+      <p>Nigerian food content performs exceptionally well on Instagram and TikTok. Post cooking videos, behind-the-scenes kitchen content, and customer reactions. Targeted Instagram ads starting from â‚¦5,000/week can generate significant order volume in your coverage zone. Food reels consistently outperform static images â€” invest in decent lighting and a phone tripod (â‚¦8,000â€“â‚¦15,000).</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Google Business Profile (Free, Long-Term ROI)</h3>
       <p>Create a free Google Business Profile for your delivery service. This puts you on Google Maps when people search "food delivery near me" in your area. Include your operating hours, menu link, photos, and phone number. Businesses with verified profiles get significantly more calls and orders from local search.</p>
@@ -10490,12 +12059,12 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1">
         <li><a href="/categories/restaurants" class="text-green-600 hover:underline">Restaurants &amp; Food businesses in Nigeria</a></li>
         <li><a href="/categories/transportation" class="text-green-600 hover:underline">Transportation &amp; Delivery services</a></li>
-        <li><a href="/listings/food-concepts-plc" class="text-green-600 hover:underline">Food Concepts PLC (Chicken Republic)</a> — Nigeria's largest QSR, a benchmark for scale</li>
-        <li><a href="/listings/circa-lagos" class="text-green-600 hover:underline">Circa Lagos</a> — premium dining with delivery, a strong model reference</li>
+        <li><a href="/listings/food-concepts-plc" class="text-green-600 hover:underline">Food Concepts PLC (Chicken Republic)</a> â€” Nigeria's largest QSR, a benchmark for scale</li>
+        <li><a href="/listings/circa-lagos" class="text-green-600 hover:underline">Circa Lagos</a> â€” premium dining with delivery, a strong model reference</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Estate &amp; Corporate Partnerships</h3>
-      <p>Approach estate management companies, office parks, hospitals, and schools within your delivery zone. A contract to supply daily lunch for 50 office workers at ₦2,500/meal is worth ₦125,000/day — more predictable and profitable than aggregator orders. Start by approaching one corporate client per week.</p>
+      <p>Approach estate management companies, office parks, hospitals, and schools within your delivery zone. A contract to supply daily lunch for 50 office workers at â‚¦2,500/meal is worth â‚¦125,000/day â€” more predictable and profitable than aggregator orders. Start by approaching one corporate client per week.</p>
 
       <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Own a Food Delivery or Restaurant Business?</h3>
@@ -10513,16 +12082,16 @@ export const blogPosts: BlogPost[] = [
       <h2 id="faq" class="text-2xl font-bold mt-10 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does it cost to start a food delivery business in Nigeria?</h3>
-      <p>It depends on your model. A gig delivery (partnering with Chowdeck or Glovo as a courier) can start from ₦50,000–₦200,000 for a bike, smartphone, and gear. A logistics-only business (your own dispatch service) needs ₦555,000–₦985,000. A dark kitchen (cook and deliver) requires ₦590,000–₦1,410,000. A full restaurant with delivery is ₦800,000–₦5,000,000+.</p>
+      <p>It depends on your model. A gig delivery (partnering with Chowdeck or Glovo as a courier) can start from â‚¦50,000â€“â‚¦200,000 for a bike, smartphone, and gear. A logistics-only business (your own dispatch service) needs â‚¦555,000â€“â‚¦985,000. A dark kitchen (cook and deliver) requires â‚¦590,000â€“â‚¦1,410,000. A full restaurant with delivery is â‚¦800,000â€“â‚¦5,000,000+.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is food delivery business profitable in Nigeria?</h3>
-      <p>Yes, when operated efficiently. A 2-rider logistics business in Lagos can net ₦200,000–₦280,000 monthly. Scaling to 4–6 riders pushes net profit above ₦500,000/month. The key is tight zone management, consistent delivery times, and minimising commission payments through a mix of direct (WhatsApp) and platform orders.</p>
+      <p>Yes, when operated efficiently. A 2-rider logistics business in Lagos can net â‚¦200,000â€“â‚¦280,000 monthly. Scaling to 4â€“6 riders pushes net profit above â‚¦500,000/month. The key is tight zone management, consistent delivery times, and minimising commission payments through a mix of direct (WhatsApp) and platform orders.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Do I need NAFDAC registration to start food delivery in Nigeria?</h3>
-      <p>Yes, if you are preparing and selling food commercially. NAFDAC registration is required for any food product sold to the public. If you are logistics-only (delivering other people's food), you do not need NAFDAC registration — only CAC business registration. If you cook and deliver, you need both CAC and NAFDAC.</p>
+      <p>Yes, if you are preparing and selling food commercially. NAFDAC registration is required for any food product sold to the public. If you are logistics-only (delivering other people's food), you do not need NAFDAC registration â€” only CAC business registration. If you cook and deliver, you need both CAC and NAFDAC.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which food delivery platform is best in Nigeria?</h3>
-      <p>Chowdeck is currently the most vendor-friendly platform in Nigeria with the best commission structure (15–20%) and fastest growth. For mid-tier cities outside Lagos, HeyFood is the better choice. For maximum customer reach, list on multiple platforms simultaneously but use WhatsApp Business for direct orders to avoid commission on repeat customers.</p>
+      <p>Chowdeck is currently the most vendor-friendly platform in Nigeria with the best commission structure (15â€“20%) and fastest growth. For mid-tier cities outside Lagos, HeyFood is the better choice. For maximum customer reach, list on multiple platforms simultaneously but use WhatsApp Business for direct orders to avoid commission on repeat customers.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I get my first customers for food delivery?</h3>
       <p>Start hyperlocal. Offer free delivery to residents within 1km of your location for the first two weeks. Post in your estate or neighbourhood WhatsApp groups. Ask the first 10 customers to send a voice note or screenshot review. Word-of-mouth from satisfied customers in a tight community is the most efficient marketing channel for a new food delivery business in Nigeria.</p>
@@ -10534,7 +12103,7 @@ export const blogPosts: BlogPost[] = [
       <p>Consistently top-selling delivery foods in Nigeria include: jollof rice and protein combos, pounded yam and egusi/ofe onugbu, grilled chicken and chips, small chops for events, shawarma and burgers, and rice bowls with various proteins. Meal-plan subscriptions (weekly or monthly pre-paid orders) are growing fast among Lagos office workers as a premium offer with predictable revenue.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I compete with Chowdeck and Jumia Food?</h3>
-      <p>You do not compete head-on with platforms — you use them. The smart play is to list on Chowdeck for discovery, then convert one-time platform customers into direct WhatsApp regulars where you keep 100% of revenue. Offer a loyalty incentive: "Order 5 times directly via WhatsApp and get one free." Building a 200-person repeat customer base is worth more than ranking on any platform.</p>
+      <p>You do not compete head-on with platforms â€” you use them. The smart play is to list on Chowdeck for discovery, then convert one-time platform customers into direct WhatsApp regulars where you keep 100% of revenue. Offer a loyalty incentive: "Order 5 times directly via WhatsApp and get one free." Building a 200-person repeat customer base is worth more than ranking on any platform.</p>
     `,
     image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=2071&auto=format&fit=crop",
     date: "Feb 23, 2026",
@@ -10575,7 +12144,7 @@ export const blogPosts: BlogPost[] = [
         "estimatedCost": { "@type": "MonetaryAmount", "currency": "NGN", "value": "150000" },
         "step": [
           { "@type": "HowToStep", "position": 1, "name": "Choose your business model", "text": "Decide between restaurant+delivery, dark kitchen, logistics-only, or platform gig model based on your capital and goals." },
-          { "@type": "HowToStep", "position": 2, "name": "Register with CAC", "text": "Register your business name or company with the Corporate Affairs Commission at cac.gov.ng. Cost: ₦25,000–₦50,000." },
+          { "@type": "HowToStep", "position": 2, "name": "Register with CAC", "text": "Register your business name or company with the Corporate Affairs Commission at cac.gov.ng. Cost: â‚¦25,000â€“â‚¦50,000." },
           { "@type": "HowToStep", "position": 3, "name": "Obtain NAFDAC registration if cooking", "text": "Apply for NAFDAC product registration if you are preparing food commercially. Arrange kitchen inspection and product registration." },
           { "@type": "HowToStep", "position": 4, "name": "Set up your delivery operation", "text": "Acquire motorcycles or arrange rider partnerships. Set up payment systems (Paystack, Flutterwave, or POS). Define your coverage zone." },
           { "@type": "HowToStep", "position": 5, "name": "Partner with delivery platforms", "text": "Onboard your business on Chowdeck, HeyFood, or Glovo. Also set up WhatsApp Business for direct zero-commission orders." },
@@ -10586,10 +12155,10 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "How much does it cost to start a food delivery business in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Startup costs depend on your model: gig delivery from ₦50,000–₦200,000; logistics-only from ₦555,000–₦985,000; dark kitchen from ₦590,000–₦1,410,000; full restaurant with delivery from ₦800,000–₦5,000,000+." } },
-          { "@type": "Question", "name": "Is food delivery business profitable in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A 2-rider logistics business in Lagos can net ₦200,000–₦280,000 monthly. Scaling to 4–6 riders pushes net profit above ₦500,000 per month." } },
+          { "@type": "Question", "name": "How much does it cost to start a food delivery business in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Startup costs depend on your model: gig delivery from â‚¦50,000â€“â‚¦200,000; logistics-only from â‚¦555,000â€“â‚¦985,000; dark kitchen from â‚¦590,000â€“â‚¦1,410,000; full restaurant with delivery from â‚¦800,000â€“â‚¦5,000,000+." } },
+          { "@type": "Question", "name": "Is food delivery business profitable in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A 2-rider logistics business in Lagos can net â‚¦200,000â€“â‚¦280,000 monthly. Scaling to 4â€“6 riders pushes net profit above â‚¦500,000 per month." } },
           { "@type": "Question", "name": "Do I need NAFDAC registration to start food delivery in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you prepare and sell food commercially. If you are logistics-only, only CAC registration is required." } },
-          { "@type": "Question", "name": "Which food delivery platform is best in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Chowdeck is currently the most vendor-friendly with 15–20% commission and fastest growth. For cities outside Lagos, HeyFood is the better choice." } },
+          { "@type": "Question", "name": "Which food delivery platform is best in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Chowdeck is currently the most vendor-friendly with 15â€“20% commission and fastest growth. For cities outside Lagos, HeyFood is the better choice." } },
           { "@type": "Question", "name": "Can I start a food delivery business from home in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A home-based dark kitchen is a legitimate model. You need CAC registration, NAFDAC product registration, and state Ministry of Health food safety compliance." } },
           { "@type": "Question", "name": "What food sells best for delivery in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top-selling delivery foods include jollof rice and protein combos, pounded yam and soup, grilled chicken and chips, small chops, shawarma and burgers, and meal-plan subscriptions for office workers." } },
           { "@type": "Question", "name": "How do I get my first customers for food delivery in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Start hyperlocal. Offer free delivery within 1km for the first two weeks. Post in estate and neighbourhood WhatsApp groups. Ask early customers for reviews." } },
@@ -10615,17 +12184,17 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
-      <p>Whether you are building a new house, renovating a property, or managing a construction project in Nigeria, choosing the right plumbing materials determines the long-term integrity of your water supply and drainage systems. With countless brands flooding Nigerian markets — many of substandard quality — knowing which plumbing materials companies are reliable can save you significant cost and stress.</p>
+      <p>Whether you are building a new house, renovating a property, or managing a construction project in Nigeria, choosing the right plumbing materials determines the long-term integrity of your water supply and drainage systems. With countless brands flooding Nigerian markets â€” many of substandard quality â€” knowing which plumbing materials companies are reliable can save you significant cost and stress.</p>
 
       <p>This guide covers the best plumbing materials brands and suppliers in Nigeria in 2026, including pricing, where to buy, and what to watch out for when sourcing in Nigerian markets.</p>
 
       <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
         <p class="font-semibold text-green-800">Key Facts for 2026</p>
         <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
-          <li>Nigeria's construction industry grows at 4.5%+ annually — demand for plumbing materials is rising</li>
+          <li>Nigeria's construction industry grows at 4.5%+ annually â€” demand for plumbing materials is rising</li>
           <li>PVC pipes remain the dominant choice (70%+ of installations) due to cost and durability</li>
           <li>Top markets: Ojota (Lagos), Alaba (Lagos), Utako market (Abuja), Onitsha main market</li>
-          <li>Counterfeit pipes are a major problem — always buy from verified suppliers or direct from manufacturers</li>
+          <li>Counterfeit pipes are a major problem â€” always buy from verified suppliers or direct from manufacturers</li>
         </ul>
       </div>
 
@@ -10633,11 +12202,11 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. PVC Pipes &amp; Fittings</h3>
       <p>The most widely used plumbing material in Nigeria. PVC (polyvinyl chloride) pipes are lightweight, corrosion-resistant, affordable, and easy to install. Used for cold water supply, drainage, sewage, and underground water lines. Available in pressure ratings from Class B (light-duty) to Class E (high-pressure systems).</p>
-      <p><strong>Typical 2026 prices in Lagos:</strong> ½-inch PVC pipe (3m) from ₦2,500–₦4,500 | 1-inch pipe from ₦4,000–₦7,000 | 4-inch drainage pipe from ₦8,000–₦15,000.</p>
+      <p><strong>Typical 2026 prices in Lagos:</strong> Â½-inch PVC pipe (3m) from â‚¦2,500â€“â‚¦4,500 | 1-inch pipe from â‚¦4,000â€“â‚¦7,000 | 4-inch drainage pipe from â‚¦8,000â€“â‚¦15,000.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. PPR Pipes (Polypropylene Random Copolymer)</h3>
-      <p>The premium alternative to PVC for hot and cold water supply inside buildings. PPR pipes can handle temperatures up to 95°C, making them ideal for hot water plumbing, boiler systems, and underfloor heating. More expensive than PVC but significantly longer-lasting (50+ year lifespan). Increasingly popular in high-end residential and commercial construction in Lagos and Abuja.</p>
-      <p><strong>Typical 2026 prices:</strong> 20mm PPR pipe (4m) from ₦6,000–₦12,000 depending on brand and wall thickness.</p>
+      <p>The premium alternative to PVC for hot and cold water supply inside buildings. PPR pipes can handle temperatures up to 95Â°C, making them ideal for hot water plumbing, boiler systems, and underfloor heating. More expensive than PVC but significantly longer-lasting (50+ year lifespan). Increasingly popular in high-end residential and commercial construction in Lagos and Abuja.</p>
+      <p><strong>Typical 2026 prices:</strong> 20mm PPR pipe (4m) from â‚¦6,000â€“â‚¦12,000 depending on brand and wall thickness.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. HDPE Pipes (High-Density Polyethylene)</h3>
       <p>Used for underground water mains, borehole connections, and industrial water distribution. HDPE pipes are flexible, highly durable (50+ years), and chemical-resistant. Common in borehole installations and estate water distribution systems across Nigeria.</p>
@@ -10646,7 +12215,7 @@ export const blogPosts: BlogPost[] = [
       <p>Less common in new construction but still used for industrial applications and in older Nigerian buildings. Heavy and durable but susceptible to rust and corrosion. Being replaced by PVC and PPR in most residential applications.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Copper Pipes</h3>
-      <p>The gold standard for plumbing in developed markets — antibacterial, extremely durable, and excellent for hot water. However, the high cost (₦15,000–₦50,000 per metre depending on diameter) and risk of theft make copper pipes uncommon in Nigerian residential projects. Primarily used in high-end hotels, embassies, and premium commercial buildings.</p>
+      <p>The gold standard for plumbing in developed markets â€” antibacterial, extremely durable, and excellent for hot water. However, the high cost (â‚¦15,000â€“â‚¦50,000 per metre depending on diameter) and risk of theft make copper pipes uncommon in Nigerian residential projects. Primarily used in high-end hotels, embassies, and premium commercial buildings.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">6. Sanitary Wares &amp; Fittings</h3>
       <p>Includes toilets, washbasins, bathtubs, shower trays, taps, valves, water heaters, and cisterns. Brands available in Nigeria range from budget imports to premium European and Asian brands.</p>
@@ -10676,25 +12245,25 @@ export const blogPosts: BlogPost[] = [
       <p>WAVIN is a leading global piping systems brand with strong distribution in Nigeria. Their product range includes hot and cold water systems, underfloor heating, drainage solutions, and sewer systems. WAVIN's PPR and HDPE pipes are the preferred choice for mid-to-high-end construction projects. Available through authorised distributors in Lagos, Abuja, Port Harcourt, and Kano.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Best for:</strong> PPR hot water systems, HDPE borehole connections, drainage</li>
-        <li><strong>Price range:</strong> Premium — 20–40% above local PVC brands</li>
+        <li><strong>Price range:</strong> Premium â€” 20â€“40% above local PVC brands</li>
         <li><strong>Why choose:</strong> Certified to international standards, 50-year lifespan warranty on some products</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Georg Fischer (GF) Piping Systems</h3>
       <p>GF Piping Systems (Swiss brand) is the market leader for industrial-grade piping in Nigeria. Used in oil and gas facilities, chemical plants, hospitals, and large commercial developments. GF's PP-H, PVDF, and ABS piping systems handle aggressive chemicals and high-pressure applications. Available through specialist distributors in Lagos and Port Harcourt.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">6. Rinnai Nigeria — Water Heaters</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Rinnai Nigeria â€” Water Heaters</h3>
       <p>Rinnai (Japanese brand) is the most trusted name for gas and electric water heaters in Nigeria. Their instant water heaters, storage tanks, and solar water heater systems are widely used in Nigerian homes and hotels. Rinnai products are sold through plumbing merchants and dedicated showrooms in Lagos and Abuja.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Products:</strong> Gas water heaters, electric water heaters, solar systems</li>
-        <li><strong>Price range:</strong> ₦80,000–₦350,000 depending on capacity</li>
+        <li><strong>Price range:</strong> â‚¦80,000â€“â‚¦350,000 depending on capacity</li>
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">7. Ideal Standard (Sanitaryware)</h3>
       <p>Ideal Standard is one of the most popular premium sanitary ware brands in Nigeria. Their toilets, washbasins, bathtubs, and bathroom accessories are available in authorised showrooms across Lagos, Abuja, and Port Harcourt. Popular for mid-to-high-end residential developments and hotel fit-outs.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">8. Grohe Nigeria (Taps &amp; Fittings)</h3>
-      <p>Grohe (German brand) is the premium tap and fitting brand of choice for high-end Nigerian construction. Their kitchen and bathroom taps, shower systems, and flush systems are available through authorised dealers in Lagos and Abuja. Price range: ₦25,000–₦250,000+ per unit.</p>
+      <p>Grohe (German brand) is the premium tap and fitting brand of choice for high-end Nigerian construction. Their kitchen and bathroom taps, shower systems, and flush systems are available through authorised dealers in Lagos and Abuja. Price range: â‚¦25,000â€“â‚¦250,000+ per unit.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">9. Geberit (Concealed Cisterns)</h3>
       <p>The Swiss market leader for concealed cistern systems and wall-hung toilet frames. Geberit products are increasingly popular in Nigerian luxury apartment developments and hotels. Available through premium bathroom showrooms in Victoria Island and Lekki, Lagos.</p>
@@ -10719,7 +12288,7 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">Other Cities</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-1 text-sm">
-        <li><strong>Onitsha Main Market:</strong> Nigeria's largest market — excellent for wholesale plumbing materials</li>
+        <li><strong>Onitsha Main Market:</strong> Nigeria's largest market â€” excellent for wholesale plumbing materials</li>
         <li><strong>Port Harcourt:</strong> Rumuola Road and Elekahia markets</li>
         <li><strong>Kano:</strong> Sabon Gari market and Yankaba markets</li>
       </ul>
@@ -10749,16 +12318,16 @@ export const blogPosts: BlogPost[] = [
       <p>For locally-manufactured PVC pipes, Pamo Industries and Nikalit are the most trusted with SON certification. For premium PPR hot and cold water systems, WAVIN is the market leader. For industrial applications, Georg Fischer (GF) Piping Systems is the top choice.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between PVC and PPR pipes?</h3>
-      <p>PVC pipes are used for cold water supply and drainage — affordable and widely available. PPR pipes handle both hot and cold water up to 95°C, are more durable, and are the better choice for indoor hot water plumbing systems.</p>
+      <p>PVC pipes are used for cold water supply and drainage â€” affordable and widely available. PPR pipes handle both hot and cold water up to 95Â°C, are more durable, and are the better choice for indoor hot water plumbing systems.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much do plumbing materials cost in Nigeria in 2026?</h3>
-      <p>A standard ½-inch PVC pipe (3m) costs ₦2,500–₦4,500 in Lagos markets. PPR 20mm pipes (4m) cost ₦6,000–₦12,000. Premium brands carry a 20–50% premium over local brands.</p>
+      <p>A standard Â½-inch PVC pipe (3m) costs â‚¦2,500â€“â‚¦4,500 in Lagos markets. PPR 20mm pipes (4m) cost â‚¦6,000â€“â‚¦12,000. Premium brands carry a 20â€“50% premium over local brands.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Where is the cheapest place to buy plumbing materials in Nigeria?</h3>
       <p>Onitsha Main Market consistently offers the lowest wholesale prices. In Lagos, Ojota Building Materials Market is best for competitive pricing. Buying directly from manufacturers like Pamo or Nikalit eliminates distributor markups for large projects.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How do I identify fake PVC pipes in Nigeria?</h3>
-      <p>Check for the SON certification mark stamped on the pipe. Genuine pipes have uniform wall thickness and batch numbers. Always buy from manufacturer-authorised distributors and avoid prices 30–40% below market rate.</p>
+      <p>Check for the SON certification mark stamped on the pipe. Genuine pipes have uniform wall thickness and batch numbers. Always buy from manufacturer-authorised distributors and avoid prices 30â€“40% below market rate.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -10826,16 +12395,16 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-plastic-manufacturing-companies-nigeria",
     title: "Top 15 Best Plastic Manufacturing Companies in Nigeria (2026)",
-    excerpt: "Top 15 plastic manufacturing companies in Nigeria (2026): household, packaging, industrial, furniture, and pipes — with profiles, products, and contacts.",
+    excerpt: "Top 15 plastic manufacturing companies in Nigeria (2026): household, packaging, industrial, furniture, and pipes â€” with profiles, products, and contacts.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
       <p>Nigeria's plastic manufacturing industry is one of the most active in Sub-Saharan Africa. From household items to industrial packaging, plastic products are essential to virtually every sector of the Nigerian economy. The industry generates billions of naira annually and employs hundreds of thousands of workers across production, distribution, and retail.</p>
 
-      <p>This guide profiles the <strong>top 15 plastic manufacturing companies in Nigeria</strong> — covering what they produce, where they operate, and what makes each one stand out.</p>
+      <p>This guide profiles the <strong>top 15 plastic manufacturing companies in Nigeria</strong> â€” covering what they produce, where they operate, and what makes each one stand out.</p>
 
       <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-        <p class="font-semibold text-green-800">Nigeria Plastics Industry — 2026 Overview</p>
+        <p class="font-semibold text-green-800">Nigeria Plastics Industry â€” 2026 Overview</p>
         <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
           <li>Industry worth: estimated US$2.5 billion annually</li>
           <li>Major hubs: Lagos, Onitsha, Aba, Kano</li>
@@ -10863,7 +12432,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Rida National Plastics</h3>
-      <p>Established in 1957, Rida National Plastics is one of Nigeria's oldest and most respected plastic manufacturers. With over 65 years of proven manufacturing history, Rida is best known for their iconic plastic chairs — with over 18 million sold across Nigeria and West Africa.</p>
+      <p>Established in 1957, Rida National Plastics is one of Nigeria's oldest and most respected plastic manufacturers. With over 65 years of proven manufacturing history, Rida is best known for their iconic plastic chairs â€” with over 18 million sold across Nigeria and West Africa.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Products:</strong> Plastic chairs, tables, household storage, outdoor furniture</li>
         <li><strong>Location:</strong> Lagos</li>
@@ -10880,7 +12449,7 @@ export const blogPosts: BlogPost[] = [
       <h3 class="text-xl font-bold mt-6 mb-3">5. Techblow Nigeria Ltd</h3>
       <p>Techblow specialises in blow moulding technology, producing hollow plastic products including jerry cans, water storage tanks, and industrial containers. Their blow-moulded containers are widely used across Nigeria for water storage, fuel storage, and industrial liquid packaging.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
-        <li><strong>Products:</strong> Jerry cans, water tanks, industrial containers (5L–1,000L+)</li>
+        <li><strong>Products:</strong> Jerry cans, water tanks, industrial containers (5Lâ€“1,000L+)</li>
         <li><strong>Technology:</strong> Blow moulding</li>
       </ul>
 
@@ -10920,7 +12489,7 @@ export const blogPosts: BlogPost[] = [
       <p>Stocorp is a growing plastic manufacturer focusing on packaging solutions for Nigeria's food, pharmaceutical, and cosmetics industries. They offer both stock packaging and custom-designed solutions with competitive lead times.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">15. NBO Plastics</h3>
-      <p>Part of the NBO Group, NBO Plastics produces water storage tanks, crates, and industrial containers. Their water tanks (500L–10,000L capacity) are widely used in Nigerian homes and businesses for borehole and overhead water storage.</p>
+      <p>Part of the NBO Group, NBO Plastics produces water storage tanks, crates, and industrial containers. Their water tanks (500Lâ€“10,000L capacity) are widely used in Nigerian homes and businesses for borehole and overhead water storage.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Key Plastic Manufacturing Hubs in Nigeria</h2>
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
@@ -10951,7 +12520,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Who is the largest plastic manufacturer in Nigeria?</h3>
-      <p>Dana Plast, Sunplast (Sun Group), and Rida National Plastics are among the largest by production volume. Chi Limited operates one of the largest integrated plastic packaging operations in the country. The industry is fragmented — no single company dominates all segments.</p>
+      <p>Dana Plast, Sunplast (Sun Group), and Rida National Plastics are among the largest by production volume. Chi Limited operates one of the largest integrated plastic packaging operations in the country. The industry is fragmented â€” no single company dominates all segments.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Are Nigerian plastic products SON certified?</h3>
       <p>The best Nigerian plastic manufacturers hold SON (Standards Organisation of Nigeria) certification. Companies like Pamo Industries and Geeta Plastic (ISO 9001:2015) maintain quality certifications. Always confirm SON certification when purchasing for regulated applications.</p>
@@ -10960,7 +12529,7 @@ export const blogPosts: BlogPost[] = [
       <p>Nigerian manufacturers produce: PVC pipes and fittings, HDPE containers and tanks, injection-moulded household items, blow-moulded jerry cans and drums, PET bottles for beverages, flexible polythene packaging, furniture, and industrial plastic components.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I order custom plastic products from Nigerian manufacturers?</h3>
-      <p>Yes. Companies like Dana Plast, Geeta Plastic, and Sonnex Packaging offer custom moulding and packaging solutions. Minimum order quantities (MOQs) vary — typically 1,000–10,000 units for injection-moulded parts. Contact manufacturers directly for quotes.</p>
+      <p>Yes. Companies like Dana Plast, Geeta Plastic, and Sonnex Packaging offer custom moulding and packaging solutions. Minimum order quantities (MOQs) vary â€” typically 1,000â€“10,000 units for injection-moulded parts. Contact manufacturers directly for quotes.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -10999,7 +12568,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Top 15 plastic manufacturing companies in Nigeria 2026 — household plastics, packaging, industrial containers, pipes, and furniture manufacturers.",
+        "description": "Top 15 plastic manufacturing companies in Nigeria 2026 â€” household plastics, packaging, industrial containers, pipes, and furniture manufacturers.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-plastic-manufacturing-companies-nigeria" }
       },
       {
@@ -11049,16 +12618,16 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-food-processing-companies-nigeria",
     title: "Top 15 Best Food Processing Companies in Nigeria (2026)",
-    excerpt: "Top 15 food processing companies in Nigeria (2026): Nestle, Dangote, Flour Mills, Indomie, BUA Foods and more — with profiles, products, and industry insights.",
+    excerpt: "Top 15 food processing companies in Nigeria (2026): Nestle, Dangote, Flour Mills, Indomie, BUA Foods and more â€” with profiles, products, and industry insights.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
       <p>Nigeria's food processing industry is one of the most dynamic sectors of the economy, driven by a population of 220 million+ people, rapid urbanisation, and growing demand for packaged and processed food. The sector spans flour milling, sugar refining, vegetable oil processing, beverage manufacturing, noodle production, dairy, confectionery, and more.</p>
 
-      <p>This guide profiles the <strong>top 15 food processing companies in Nigeria</strong> — the brands behind the foods millions of Nigerians eat every day.</p>
+      <p>This guide profiles the <strong>top 15 food processing companies in Nigeria</strong> â€” the brands behind the foods millions of Nigerians eat every day.</p>
 
       <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-        <p class="font-semibold text-green-800">Nigeria Food Processing Industry — 2026</p>
+        <p class="font-semibold text-green-800">Nigeria Food Processing Industry â€” 2026</p>
         <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
           <li>Industry contribution: ~5% of Nigeria's GDP</li>
           <li>Key sub-sectors: flour milling, sugar, beverages, dairy, noodles, edible oil</li>
@@ -11085,7 +12654,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">3. Dufil Prima Foods PLC (Indomie)</h3>
-      <p>Dufil Prima Foods is the manufacturer of Indomie Instant Noodles — Nigeria's best-selling noodle brand. A joint venture between the Tolaram Group and partners, Dufil operates multiple production plants across Nigeria and exports Indomie to over 70 countries. Nigeria consumes approximately 4.5 billion packs of instant noodles annually.</p>
+      <p>Dufil Prima Foods is the manufacturer of Indomie Instant Noodles â€” Nigeria's best-selling noodle brand. A joint venture between the Tolaram Group and partners, Dufil operates multiple production plants across Nigeria and exports Indomie to over 70 countries. Nigeria consumes approximately 4.5 billion packs of instant noodles annually.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Key brands:</strong> Indomie, Minimie (chinchin, noodles), Power Oil</li>
         <li><strong>Plants:</strong> Lagos, Ota (Ogun), Kaduna</li>
@@ -11127,7 +12696,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">9. FrieslandCampina WAMCO Nigeria PLC</h3>
-      <p>The maker of Peak Milk — Nigeria's most iconic evaporated milk brand. Part of FrieslandCampina (Dutch cooperative), WAMCO has been producing in Nigeria since 1954.</p>
+      <p>The maker of Peak Milk â€” Nigeria's most iconic evaporated milk brand. Part of FrieslandCampina (Dutch cooperative), WAMCO has been producing in Nigeria since 1954.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Key brands:</strong> Peak Milk, Three Crowns, Peak Choco</li>
         <li><strong>Headquarters:</strong> Lagos | <strong>NGX Listed:</strong> Yes | <strong>Founded in Nigeria:</strong> 1954</li>
@@ -11137,7 +12706,7 @@ export const blogPosts: BlogPost[] = [
       <p>One of Nigeria's top flour milling companies, recently acquired by Flour Mills of Nigeria PLC, consolidating Nigeria's flour milling market. Products include bread flour, semolina, bran, and animal feed.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">11. UAC Foods (UAC of Nigeria PLC)</h3>
-      <p>UAC of Nigeria's foods division operates some of Nigeria's most recognisable snack brands. They are the parent company of Gala sausage roll — Nigeria's best-selling snack food, sold at every major highway and petrol station in the country.</p>
+      <p>UAC of Nigeria's foods division operates some of Nigeria's most recognisable snack brands. They are the parent company of Gala sausage roll â€” Nigeria's best-selling snack food, sold at every major highway and petrol station in the country.</p>
       <ul class="list-disc pl-5 mt-2 mb-4 text-sm space-y-1">
         <li><strong>Key brands:</strong> Gala (sausage roll), Supreme Ice Cream, Funtime</li>
         <li><strong>Fun fact:</strong> Gala sausage rolls sold at 10,000+ points across Nigeria daily</li>
@@ -11165,7 +12734,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
 
       <h3 class="text-xl font-bold mt-6 mb-3">15. Primus Foods Nigeria</h3>
-      <p>Primus Foods is a growing Nigerian food processing company producing edible oils, tomato paste, seasoning, and canned foods — focused on import substitution and mass market supply.</p>
+      <p>Primus Foods is a growing Nigerian food processing company producing edible oils, tomato paste, seasoning, and canned foods â€” focused on import substitution and mass market supply.</p>
 
       <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
         <thead>
@@ -11210,7 +12779,7 @@ export const blogPosts: BlogPost[] = [
       <p>NAFDAC (National Agency for Food and Drug Administration and Control) is the primary regulator. All food products sold commercially in Nigeria must be NAFDAC-registered. The Standards Organisation of Nigeria (SON) also sets quality standards. Companies must comply with NAFDAC labelling, ingredient, and safety requirements before commercial sale.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What food products does Nigeria produce most of?</h3>
-      <p>Nigeria's food processing sector is strongest in: flour and semolina, instant noodles (one of the world's largest markets), sugar, palm oil, dairy products, beverages, seasoning and condiments, and packaged rice. Nigeria is also the world's largest cassava producer — driving a fast-growing starch processing industry.</p>
+      <p>Nigeria's food processing sector is strongest in: flour and semolina, instant noodles (one of the world's largest markets), sugar, palm oil, dairy products, beverages, seasoning and condiments, and packaged rice. Nigeria is also the world's largest cassava producer â€” driving a fast-growing starch processing industry.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -11249,7 +12818,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Top 15 food processing companies in Nigeria 2026 — Nestle, Flour Mills, Dufil (Indomie), Dangote Sugar, BUA Foods, Chi Limited, Cadbury, Peak Milk and more.",
+        "description": "Top 15 food processing companies in Nigeria 2026 â€” Nestle, Flour Mills, Dufil (Indomie), Dangote Sugar, BUA Foods, Chi Limited, Cadbury, Peak Milk and more.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-food-processing-companies-nigeria" }
       },
       {
@@ -11303,12 +12872,12 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 23, 2026</em></p>
 
-      <p>Nigeria is one of Africa's largest telecommunications markets, with over <strong>230 million active SIM connections</strong> and one of the continent's fastest-growing mobile data user bases. The Nigerian Communications Commission (NCC) regulates the sector, which contributes approximately 14–16% to Nigeria's GDP.</p>
+      <p>Nigeria is one of Africa's largest telecommunications markets, with over <strong>230 million active SIM connections</strong> and one of the continent's fastest-growing mobile data user bases. The Nigerian Communications Commission (NCC) regulates the sector, which contributes approximately 14â€“16% to Nigeria's GDP.</p>
 
       <p>Whether you want the best network for calls, the fastest 4G data in Lagos, or the most affordable data plans, this guide breaks down every major telecom in Nigeria so you can make the right choice.</p>
 
       <div class="my-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-        <p class="font-semibold text-green-800">Nigeria Telecom Industry — 2026 Snapshot</p>
+        <p class="font-semibold text-green-800">Nigeria Telecom Industry â€” 2026 Snapshot</p>
         <ul class="list-disc pl-5 mt-2 text-green-900 space-y-1 text-sm">
           <li>Active SIM subscriptions: 230M+ (NCC data)</li>
           <li>Mobile internet subscribers: 145M+</li>
@@ -11321,8 +12890,8 @@ export const blogPosts: BlogPost[] = [
 
       <h2 class="text-2xl font-bold mt-8 mb-4">The Big Four: Nigeria's Major Telecom Networks</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">1. MTN Nigeria — Market Leader</h3>
-      <p>MTN Nigeria is the country's largest mobile network operator, commanding approximately <strong>40–42% market share</strong> by subscribers. Listed on the Nigerian Stock Exchange (NGX) since 2019, MTN Nigeria is also one of the most valuable companies on the exchange. Their network covers 99% of Nigeria's population and they were the first to commercially launch 5G in Nigeria.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">1. MTN Nigeria â€” Market Leader</h3>
+      <p>MTN Nigeria is the country's largest mobile network operator, commanding approximately <strong>40â€“42% market share</strong> by subscribers. Listed on the Nigerian Stock Exchange (NGX) since 2019, MTN Nigeria is also one of the most valuable companies on the exchange. Their network covers 99% of Nigeria's population and they were the first to commercially launch 5G in Nigeria.</p>
 
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
         <tbody>
@@ -11338,7 +12907,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>MTN Strengths:</strong> Best nationwide coverage (especially rural areas), most stable 4G speeds in Lagos and Abuja, largest agent and service centre network, MoMo mobile money integration, Xtratime credit advance feature.</p>
       <p><strong>MTN Weaknesses:</strong> Generally the most expensive network; customer service queues at service centres can be long.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">2. Airtel Nigeria — Strong Challenger</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Airtel Nigeria â€” Strong Challenger</h3>
       <p>Airtel Nigeria is the second-largest mobile operator, a subsidiary of Bharti Airtel Limited (India/Africa). With approximately <strong>55M+ subscribers</strong>, Airtel competes directly with MTN on price and data value. Known for aggressive data bundle promotions and consistent network quality in major cities.</p>
 
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
@@ -11354,7 +12923,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Airtel Strengths:</strong> Often the best data speed in urban areas; competitive data bundle pricing; Airtel Money (mobile financial services); strong international roaming; popular night bundles.</p>
       <p><strong>Airtel Weaknesses:</strong> Coverage gaps in rural areas and some northern states; customer service resolution times can be slower.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">3. Glo (Globacom) — Nigeria's Own Network</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Glo (Globacom) â€” Nigeria's Own Network</h3>
       <p>Globacom (Glo) is Nigeria's only indigenous telecoms company, founded in 2003 by business magnate Mike Adenuga. Despite being third in subscriber numbers, Glo has invested heavily in network infrastructure including the Glo-1 submarine cable connecting Nigeria to the UK. Popular for competitive call rates and strong brand loyalty.</p>
 
       <table class="w-full border-collapse border border-gray-300 my-4 text-sm">
@@ -11383,7 +12952,7 @@ export const blogPosts: BlogPost[] = [
       </table>
 
       <p><strong>9mobile Strengths:</strong> Strong data speeds in Lagos and Abuja where 4G is well-deployed; less congested network due to smaller subscriber base; good customer service reputation.</p>
-      <p><strong>9mobile Weaknesses:</strong> Smallest coverage area — struggles in rural areas and northern states; fewest service centres.</p>
+      <p><strong>9mobile Weaknesses:</strong> Smallest coverage area â€” struggles in rural areas and northern states; fewest service centres.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Head-to-Head Comparison (2026)</h2>
       <table class="w-full border-collapse border border-gray-300 my-6 text-sm">
@@ -11397,12 +12966,12 @@ export const blogPosts: BlogPost[] = [
           </tr>
         </thead>
         <tbody>
-          <tr><td class="border border-gray-300 p-3">National Coverage</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td></tr>
-          <tr><td class="border border-gray-300 p-3">4G Speed (Urban)</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
-          <tr><td class="border border-gray-300 p-3">Data Value</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
-          <tr><td class="border border-gray-300 p-3">Call Rates</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td></tr>
-          <tr><td class="border border-gray-300 p-3">5G Availability</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★</td><td class="border border-gray-300 p-3 text-center">★</td></tr>
-          <tr><td class="border border-gray-300 p-3">Rural Coverage</td><td class="border border-gray-300 p-3 text-center">★★★★★</td><td class="border border-gray-300 p-3 text-center">★★★★</td><td class="border border-gray-300 p-3 text-center">★★★</td><td class="border border-gray-300 p-3 text-center">★★</td></tr>
+          <tr><td class="border border-gray-300 p-3">National Coverage</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td></tr>
+          <tr><td class="border border-gray-300 p-3">4G Speed (Urban)</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td></tr>
+          <tr><td class="border border-gray-300 p-3">Data Value</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td></tr>
+          <tr><td class="border border-gray-300 p-3">Call Rates</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td></tr>
+          <tr><td class="border border-gray-300 p-3">5G Availability</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…</td></tr>
+          <tr><td class="border border-gray-300 p-3">Rural Coverage</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…â˜…</td><td class="border border-gray-300 p-3 text-center">â˜…â˜…</td></tr>
         </tbody>
       </table>
 
@@ -11413,7 +12982,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>If you want the cheapest calls and data:</strong> Glo consistently offers the most aggressive pricing.</li>
         <li><strong>If you need a corporate or business line:</strong> MTN Business and Airtel Business have the most comprehensive enterprise offerings.</li>
         <li><strong>If you live in northern Nigeria:</strong> MTN has the strongest presence in Kano, Kaduna, Sokoto, and the northeast.</li>
-        <li><strong>Pro tip: Use two SIMs</strong> — most Nigerians carry two lines for redundancy. A common combination is MTN (coverage) + Glo or Airtel (data value).</li>
+        <li><strong>Pro tip: Use two SIMs</strong> â€” most Nigerians carry two lines for redundancy. A common combination is MTN (coverage) + Glo or Airtel (data value).</li>
       </ul>
 
       <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
@@ -11482,7 +13051,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Compare the best telecom companies in Nigeria 2026 — MTN, Airtel, Glo, and 9mobile. Coverage, data plans, 5G, call rates, and which network is best for you.",
+        "description": "Compare the best telecom companies in Nigeria 2026 â€” MTN, Airtel, Glo, and 9mobile. Coverage, data plans, 5G, call rates, and which network is best for you.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-telecommunication-companies-nigeria" }
       },
       {
@@ -11509,7 +13078,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── BEST SOLAR COMPANIES NIGERIA ───────────────────────────────────────────
+  // â”€â”€ BEST SOLAR COMPANIES NIGERIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-solar-companies-nigeria-2026",
     title: "Best Solar Panel Installation Companies in Nigeria (2026)",
@@ -11517,9 +13086,9 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>NEPA never came. It never will. With Nigeria generating roughly 4,000MW for a population of over 220 million people, the average Nigerian household or business runs on generators for 8 to 20 hours a day. The cost is brutal — diesel at ₦1,600+ per litre, maintenance, noise, fumes, and the constant uncertainty of running out of fuel mid-operation.</p>
+      <p>NEPA never came. It never will. With Nigeria generating roughly 4,000MW for a population of over 220 million people, the average Nigerian household or business runs on generators for 8 to 20 hours a day. The cost is brutal â€” diesel at â‚¦1,600+ per litre, maintenance, noise, fumes, and the constant uncertainty of running out of fuel mid-operation.</p>
 
-      <p>Solar is no longer a luxury. For thousands of Nigerian homes, SMEs, schools, and factories, it is the most practical decision they have made in years. This guide covers the <strong>best solar panel installation companies in Nigeria in 2026</strong> — what they offer, who they serve, and what their systems cost.</p>
+      <p>Solar is no longer a luxury. For thousands of Nigerian homes, SMEs, schools, and factories, it is the most practical decision they have made in years. This guide covers the <strong>best solar panel installation companies in Nigeria in 2026</strong> â€” what they offer, who they serve, and what their systems cost.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=2070&auto=format&fit=crop" alt="Solar panels installed on a rooftop in Nigeria" class="w-full rounded-lg shadow-lg" />
@@ -11535,75 +13104,75 @@ export const blogPosts: BlogPost[] = [
             <tr>
               <th class="border border-gray-200 px-4 py-3 text-left font-semibold">System Size</th>
               <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Typical Use</th>
-              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Cost Range (₦)</th>
+              <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Cost Range (â‚¦)</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">1–2 kVA</td><td class="border border-gray-200 px-4 py-3">Lights, fans, TV, laptop</td><td class="border border-gray-200 px-4 py-3 font-medium">₦850,000 – ₦1.2M</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">3–4 kVA</td><td class="border border-gray-200 px-4 py-3">Fridge, water pump, small AC</td><td class="border border-gray-200 px-4 py-3 font-medium">₦2M – ₦3M</td></tr>
-            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">5 kVA+</td><td class="border border-gray-200 px-4 py-3">Full home backup / office</td><td class="border border-gray-200 px-4 py-3 font-medium">₦2M – ₦5M+</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Commercial 10–50 kVA</td><td class="border border-gray-200 px-4 py-3">Factory, school, hotel</td><td class="border border-gray-200 px-4 py-3 font-medium">₦7M – ₦50M+</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">1â€“2 kVA</td><td class="border border-gray-200 px-4 py-3">Lights, fans, TV, laptop</td><td class="border border-gray-200 px-4 py-3 font-medium">â‚¦850,000 â€“ â‚¦1.2M</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">3â€“4 kVA</td><td class="border border-gray-200 px-4 py-3">Fridge, water pump, small AC</td><td class="border border-gray-200 px-4 py-3 font-medium">â‚¦2M â€“ â‚¦3M</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">5 kVA+</td><td class="border border-gray-200 px-4 py-3">Full home backup / office</td><td class="border border-gray-200 px-4 py-3 font-medium">â‚¦2M â€“ â‚¦5M+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Commercial 10â€“50 kVA</td><td class="border border-gray-200 px-4 py-3">Factory, school, hotel</td><td class="border border-gray-200 px-4 py-3 font-medium">â‚¦7M â€“ â‚¦50M+</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">The 12 Best Solar Installation Companies in Nigeria (2026)</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">1. Arnergy Solar — Best for SMEs</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Arnergy Solar â€” Best for SMEs</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
-      <p>Arnergy is one of Nigeria's most recognised solar brands. Founded around 2014, it focuses on commercial, industrial, and SME clients who need reliable hybrid solar systems with remote monitoring capabilities. Their flexible payment options including Pay-As-You-Go models make solar accessible without a large upfront capital outlay — a major advantage for growing businesses.</p>
+      <p>Arnergy is one of Nigeria's most recognised solar brands. Founded around 2014, it focuses on commercial, industrial, and SME clients who need reliable hybrid solar systems with remote monitoring capabilities. Their flexible payment options including Pay-As-You-Go models make solar accessible without a large upfront capital outlay â€” a major advantage for growing businesses.</p>
       <p><strong>Best for:</strong> SMEs, offices, and commercial properties.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">2. Daystar Power Group — Best for C&I Clients</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">2. Daystar Power Group â€” Best for C&I Clients</h3>
       <p><strong>Location:</strong> Lagos (operations in Nigeria, Ghana, Togo, Senegal)</p>
-      <p>Daystar Power is the most heavily funded solar company operating in Nigeria, having raised over $62 million from international development finance institutions including IFC, DEG, and SunFunder. Their Power-as-a-Service model is tailored to Commercial and Industrial (C&I) clients — businesses that consume large amounts of power and pay crippling diesel costs. Daystar designs, finances, installs, and operates the system; you pay per kWh consumed.</p>
+      <p>Daystar Power is the most heavily funded solar company operating in Nigeria, having raised over $62 million from international development finance institutions including IFC, DEG, and SunFunder. Their Power-as-a-Service model is tailored to Commercial and Industrial (C&I) clients â€” businesses that consume large amounts of power and pay crippling diesel costs. Daystar designs, finances, installs, and operates the system; you pay per kWh consumed.</p>
       <p><strong>Best for:</strong> Factories, manufacturing plants, large commercial estates.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">3. Rensource Energy — Best C&I Power-as-a-Service</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Rensource Energy â€” Best C&I Power-as-a-Service</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
-      <p>Founded in 2016 by Olajuwon Ademola, Rensource raised a $20M Series A and serves the Commercial and Industrial segment with a Power-as-a-Service model. They design, finance, install, and operate solar systems on client premises — clients pay per unit of electricity consumed. Rensource has expanded into Ghana and other African markets.</p>
+      <p>Founded in 2016 by Olajuwon Ademola, Rensource raised a $20M Series A and serves the Commercial and Industrial segment with a Power-as-a-Service model. They design, finance, install, and operate solar systems on client premises â€” clients pay per unit of electricity consumed. Rensource has expanded into Ghana and other African markets.</p>
       <p><strong>Best for:</strong> Businesses with high electricity bills looking to eliminate generator dependency long-term.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">4. GVE Projects (Green Village Electricity) — Best for Communities & Off-Grid</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">4. GVE Projects (Green Village Electricity) â€” Best for Communities & Off-Grid</h3>
       <p><strong>Location:</strong> Port Harcourt (HQ), Abuja office at 22A Suez Crescent, Wuse Zone 4</p>
       <p>GVE is Nigeria's leader in solar mini-grids and rural electrification. Founded in 2009 by Ifeanyi B. Orajaka, GVE has partnered with the World Bank, the Rural Electrification Agency (REA), and IEEE Smart Village to power off-grid Nigerian communities with their proprietary G-Vend smart metering system. They also serve commercial rooftop installations and publish detailed solar pricing guides.</p>
       <p><strong>Best for:</strong> Community developers, real estate developers, and businesses in off-grid locations.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">5. Auxano Solar — Nigeria's Indigenous Panel Maker</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Auxano Solar â€” Nigeria's Indigenous Panel Maker</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
       <p>Founded in 2014, Auxano Solar is the first indigenous solar panel assembler and manufacturer in Nigeria, with panels certified by the Standards Organization of Nigeria (SON). Backed by a $1.5M investment from USADF and Shell's "All On" fund, Auxano provides full residential and commercial installations using their own SON-certified panels and international brands.</p>
       <p><strong>Best for:</strong> Nigerians who prefer a locally-made, certified solar panel option.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">6. Lumos Nigeria — Best Pay-As-You-Go for Homes</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Lumos Nigeria â€” Best Pay-As-You-Go for Homes</h3>
       <p><strong>Model:</strong> Pay-As-You-Go solar home systems via MTN Nigeria partnership</p>
-      <p>Lumos partners with MTN Nigeria to distribute solar home systems to rural and semi-urban households. The model requires roughly $50 down and ~$0.50/day via MTN mobile money, with ownership transferring after 3–5 years of payments. Lumos has deployed over 88,000 solar home systems in Nigeria and received $90M+ in funding.</p>
+      <p>Lumos partners with MTN Nigeria to distribute solar home systems to rural and semi-urban households. The model requires roughly $50 down and ~$0.50/day via MTN mobile money, with ownership transferring after 3â€“5 years of payments. Lumos has deployed over 88,000 solar home systems in Nigeria and received $90M+ in funding.</p>
       <p><strong>Best for:</strong> Rural homes and small shops without access to grid power.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">7. BBOXX Nigeria — Solar for Southwest Nigeria</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">7. BBOXX Nigeria â€” Solar for Southwest Nigeria</h3>
       <p><strong>Coverage:</strong> Lagos, Ogun, Oyo, Ondo, Osun, Ekiti states</p>
       <p>UK-based BBOXX entered Nigeria with their first shop in Ijebu Ode, Ogun State, targeting off-grid and partially-connected communities across southwest Nigeria through flexible Pay-As-You-Go solar home systems.</p>
       <p><strong>Best for:</strong> Rural and peri-urban homes in southwest Nigeria.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">8. Wavetra Energy — Best for Training & Residential</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Wavetra Energy â€” Best for Training & Residential</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
-      <p>Wavetra Energy provides residential, commercial, and industrial solar solutions, and also runs a Solar Academy — one of the few companies in Nigeria that trains solar technicians while also installing systems.</p>
+      <p>Wavetra Energy provides residential, commercial, and industrial solar solutions, and also runs a Solar Academy â€” one of the few companies in Nigeria that trains solar technicians while also installing systems.</p>
       <p><strong>Best for:</strong> Residential clients who want a reliable installer with long-term support.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">9. Rubitec Solar — Bespoke Solutions</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Rubitec Solar â€” Bespoke Solutions</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
       <p>Rubitec specialises in custom-designed solar solutions including solar water pumps, solar-powered refrigeration systems, and unique commercial requirements.</p>
       <p><strong>Best for:</strong> Businesses with unique power needs such as cold storage or water pumping.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">10. SolarKobo — Best for Product Research</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">10. SolarKobo â€” Best for Product Research</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
-      <p>SolarKobo positions itself as the consumer's guide to solar in Nigeria — offering product comparisons, reviews, and educational content about panels, inverters, and batteries at competitive prices.</p>
+      <p>SolarKobo positions itself as the consumer's guide to solar in Nigeria â€” offering product comparisons, reviews, and educational content about panels, inverters, and batteries at competitive prices.</p>
       <p><strong>Best for:</strong> DIY solar buyers who want to compare equipment before installation.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">11. Suluway (Sulu Expert Solutions) — Best Budget Residential</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">11. Suluway (Sulu Expert Solutions) â€” Best Budget Residential</h3>
       <p>A fast-growing company known for affordable residential solar packages with long-term support. Popular among homeowners in Lagos and southwest Nigeria.</p>
       <p><strong>Best for:</strong> Homeowners on a tight budget who want reliable, affordable solar.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">12. Gennex Technologies — Industrial Solar Engineering</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">12. Gennex Technologies â€” Industrial Solar Engineering</h3>
       <p><strong>Location:</strong> Lagos, Nigeria</p>
       <p>Gennex provides full solar engineering and installation services focused on industrial and commercial clients requiring precision system design.</p>
       <p><strong>Best for:</strong> Industrial facilities and large commercial properties requiring custom-engineered solar solutions.</p>
@@ -11611,7 +13180,7 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">How to Choose a Solar Company in Nigeria</h2>
       <ol class="list-decimal pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Check their track record.</strong> Ask for photos and contacts of past installations.</li>
-        <li><strong>Confirm they use certified equipment.</strong> Ask for panel and inverter brands — verify panels are SON-certified or from reputable international manufacturers.</li>
+        <li><strong>Confirm they use certified equipment.</strong> Ask for panel and inverter brands â€” verify panels are SON-certified or from reputable international manufacturers.</li>
         <li><strong>Get multiple quotes.</strong> Get at least 3 quotes for the same system specification before deciding.</li>
         <li><strong>Ask about warranties.</strong> Panels: 25-year performance warranty. Inverters: 5 years. Batteries: varies by chemistry.</li>
         <li><strong>Confirm after-sales support.</strong> Who do you call when the system underperforms?</li>
@@ -11620,7 +13189,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your solar company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for solar installation companies every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for solar installation companies every month on 9jaDirectory. List your business for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Solar Business Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -11630,19 +13199,19 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does solar installation cost in Nigeria in 2026?</h3>
-      <p>A small 1–2 kVA system for basic home use costs between ₦850,000 and ₦1.2 million. A mid-range 3–4 kVA system costs ₦2–3 million. A full 5 kVA+ home backup system costs ₦2–5 million. Commercial systems start from ₦7 million. Prices fluctuate with the Naira exchange rate.</p>
+      <p>A small 1â€“2 kVA system for basic home use costs between â‚¦850,000 and â‚¦1.2 million. A mid-range 3â€“4 kVA system costs â‚¦2â€“3 million. A full 5 kVA+ home backup system costs â‚¦2â€“5 million. Commercial systems start from â‚¦7 million. Prices fluctuate with the Naira exchange rate.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which solar panel brand is best in Nigeria?</h3>
       <p>Jinko Solar is consistently rated the most popular brand in Nigeria for residential and commercial use. Canadian Solar and Longi Solar are also highly regarded. For a locally certified option, Auxano Solar makes SON-certified panels assembled in Nigeria.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is solar worth it in Nigeria?</h3>
-      <p>Yes. A generator consuming 5 litres of diesel per day at ₦1,600/litre costs ₦2.4 million per year in fuel alone. A ₦3 million solar system with proper sizing can eliminate that cost and pays for itself in 3–5 years.</p>
+      <p>Yes. A generator consuming 5 litres of diesel per day at â‚¦1,600/litre costs â‚¦2.4 million per year in fuel alone. A â‚¦3 million solar system with proper sizing can eliminate that cost and pays for itself in 3â€“5 years.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between hybrid solar and off-grid solar in Nigeria?</h3>
       <p>A hybrid system connects to the grid (when available) and solar, switching intelligently while storing excess energy in batteries. An off-grid system operates entirely independently of the grid. Most urban Nigerian installations are hybrid; rural and community installations are typically off-grid.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How long do solar panels last in Nigeria?</h3>
-      <p>Quality solar panels carry 25-year performance warranties and can last 30+ years. Inverters typically last 5–10 years. Lithium batteries last 10–15 years; lead-acid batteries need replacement every 2–5 years.</p>
+      <p>Quality solar panels carry 25-year performance warranties and can last 30+ years. Inverters typically last 5â€“10 years. Lithium batteries last 10â€“15 years; lead-acid batteries need replacement every 2â€“5 years.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -11684,7 +13253,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "The 12 best solar panel installation companies in Nigeria in 2026 — Arnergy, Daystar Power, Rensource, GVE, Auxano, Lumos and more. Includes prices, services, and how to choose.",
+        "description": "The 12 best solar panel installation companies in Nigeria in 2026 â€” Arnergy, Daystar Power, Rensource, GVE, Auxano, Lumos and more. Includes prices, services, and how to choose.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-solar-companies-nigeria-2026" }
       },
       {
@@ -11711,10 +13280,10 @@ export const blogPosts: BlogPost[] = [
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "How much does solar installation cost in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "A 1–2 kVA system costs ₦850,000–₦1.2M. A 3–4 kVA system costs ₦2–3M. A 5 kVA+ system costs ₦2–5M+. Commercial systems start from ₦7M." } },
+          { "@type": "Question", "name": "How much does solar installation cost in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "A 1â€“2 kVA system costs â‚¦850,000â€“â‚¦1.2M. A 3â€“4 kVA system costs â‚¦2â€“3M. A 5 kVA+ system costs â‚¦2â€“5M+. Commercial systems start from â‚¦7M." } },
           { "@type": "Question", "name": "Which solar panel brand is best in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Jinko Solar is the most popular brand. Canadian Solar and Longi Solar are also highly rated. Auxano makes SON-certified panels assembled locally in Nigeria." } },
-          { "@type": "Question", "name": "Is solar worth it in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A generator consuming 5 litres of diesel per day costs ₦2.4M/year in fuel alone. A ₦3M solar system pays for itself in 3–5 years." } },
-          { "@type": "Question", "name": "How long do solar panels last in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Quality panels carry 25-year warranties and last 30+ years. Inverters last 5–10 years. Lithium batteries last 10–15 years; lead-acid batteries need replacement every 2–5 years." } }
+          { "@type": "Question", "name": "Is solar worth it in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A generator consuming 5 litres of diesel per day costs â‚¦2.4M/year in fuel alone. A â‚¦3M solar system pays for itself in 3â€“5 years." } },
+          { "@type": "Question", "name": "How long do solar panels last in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Quality panels carry 25-year warranties and last 30+ years. Inverters last 5â€“10 years. Lithium batteries last 10â€“15 years; lead-acid batteries need replacement every 2â€“5 years." } }
         ]
       },
       {
@@ -11729,7 +13298,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── BEST SECURITY COMPANIES NIGERIA ────────────────────────────────────────
+  // â”€â”€ BEST SECURITY COMPANIES NIGERIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-security-companies-nigeria-2026",
     title: "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
@@ -11739,7 +13308,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Security is not optional in Nigeria. From residential estates in Lekki to corporate head offices in Victoria Island, every property owner and business operator faces the same challenge: finding a licensed, reliable security company they can trust.</p>
 
-      <p>The private security industry in Nigeria is regulated by the <strong>Nigerian Security and Civil Defence Corps (NSCDC)</strong>, which licenses and supervises all private security outfits. Only NSCDC-licensed companies are legally permitted to provide guarding services. This guide covers the <strong>top 10 security companies in Nigeria in 2026</strong> — what they offer, where they operate, and what makes each one stand out.</p>
+      <p>The private security industry in Nigeria is regulated by the <strong>Nigerian Security and Civil Defence Corps (NSCDC)</strong>, which licenses and supervises all private security outfits. Only NSCDC-licensed companies are legally permitted to provide guarding services. This guide covers the <strong>top 10 security companies in Nigeria in 2026</strong> â€” what they offer, where they operate, and what makes each one stand out.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop" alt="Professional security guard at a corporate building in Lagos Nigeria" class="w-full rounded-lg shadow-lg" />
@@ -11751,59 +13320,59 @@ export const blogPosts: BlogPost[] = [
         <li>All private security companies must hold a valid <strong>NSCDC licence</strong></li>
         <li>Private security guards are <strong>not legally permitted to carry firearms</strong></li>
         <li>Armed escort services require attachment of <strong>Nigerian Mobile Police Force (MOPOL)</strong> officers</li>
-        <li>Category A licences (3,000+ guards): ₦3 million; Category B (up to 3,000 guards): ₦2.5 million</li>
+        <li>Category A licences (3,000+ guards): â‚¦3 million; Category B (up to 3,000 guards): â‚¦2.5 million</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Security Companies in Nigeria (2026)</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">1. Halogen Group — Nigeria's Largest Indigenous Security Firm</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Halogen Group â€” Nigeria's Largest Indigenous Security Firm</h3>
       <p><strong>Headquarters:</strong> Ikeja, Lagos | <strong>Branches:</strong> Abuja, Port Harcourt, all major cities</p>
-      <p>Founded in July 1992 by Biodun Shobanjo, Halogen Group is the first indigenous private security company in Nigeria and remains the largest, with over 18,000 staff across 6 subsidiaries. Their services extend far beyond manned guarding — including cybersecurity, risk advisory, secured mobility (armed escorts with MOPOL), identity management, background checks, emergency response, and MEDEVAC services.</p>
+      <p>Founded in July 1992 by Biodun Shobanjo, Halogen Group is the first indigenous private security company in Nigeria and remains the largest, with over 18,000 staff across 6 subsidiaries. Their services extend far beyond manned guarding â€” including cybersecurity, risk advisory, secured mobility (armed escorts with MOPOL), identity management, background checks, emergency response, and MEDEVAC services.</p>
       <p><strong>Best for:</strong> Large enterprises needing comprehensive, integrated security across multiple sites nationwide.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">2. G4S Nigeria — International Standards, Local Operations</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">2. G4S Nigeria â€” International Standards, Local Operations</h3>
       <p><strong>Coverage:</strong> Lagos, Abuja, Port Harcourt, and major Nigerian cities</p>
       <p>G4S Nigeria (now part of Allied Universal globally) is one of the world's most recognised security brands in Nigeria. Their AssetGuard manned security product is used by major corporations, and they offer technology-integrated security including CCTV design, access control, alarm monitoring, executive protection, vehicle tracking, and maritime security.</p>
       <p><strong>Best for:</strong> Multinationals and large corporations requiring international-standard security protocols.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">3. Kings Guards Nigeria Limited — Abuja's Leading Security Firm</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">3. Kings Guards Nigeria Limited â€” Abuja's Leading Security Firm</h3>
       <p><strong>Headquarters:</strong> Abuja, FCT | <strong>Founded:</strong> 1992</p>
       <p>Kings Guards is one of the most prominent security companies in Abuja, offering uniformed and plainclothes guards, VIP and executive protection, maritime security, armored vehicle services, special investigations, and K9 (security dog) units. Affiliated with ALPSPN and the Nigerian Institute of Industrial Security.</p>
       <p><strong>Best for:</strong> Government bodies, diplomatic missions, and businesses in Abuja and the FCT.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">4. Damon Guards Nigeria — Widest National Coverage</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">4. Damon Guards Nigeria â€” Widest National Coverage</h3>
       <p><strong>Founded:</strong> 1993 | <strong>Offices:</strong> Abuja, Lagos, Port Harcourt, Kaduna, Uyo, Maiduguri, Akure, Jos, Ado Ekiti</p>
       <p>With a presence in more Nigerian cities than almost any other security company, Damon Guards is one of the largest security organisations in Nigeria by geographic reach. For businesses with operations spread across multiple states, Damon's nationwide footprint is a major advantage.</p>
       <p><strong>Best for:</strong> Multi-location businesses needing a single security provider across multiple states.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">5. Synergy Guards Nigeria — International-Backed Service</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Synergy Guards Nigeria â€” International-Backed Service</h3>
       <p><strong>Parent:</strong> Subsidiary of Synergy Guards UK</p>
       <p>Synergy Guards brings UK parent company standards to Nigerian operations. Their services include key management, mobile patrol, alarm response, security training, equipment supply, event security, and CCTV supply, installation, and remote monitoring.</p>
       <p><strong>Best for:</strong> Businesses seeking UK-compliant security management standards in Nigeria.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">6. Laser Security Limited — Abuja Specialist</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Laser Security Limited â€” Abuja Specialist</h3>
       <p><strong>Location:</strong> 5 Yaounde Street, Wuse Zone 6, FCT, Abuja</p>
       <p>Laser Security is one of the most cited security companies for the FCT, combining trained personnel with technology integration and access control. They publish regular security advisory content for their clients and are a top choice for Abuja-based businesses.</p>
       <p><strong>Best for:</strong> Abuja-based businesses, estates, and residential properties.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">7. Proton Security Services Ltd — Nationwide Reliability</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Proton Security Services Ltd â€” Nationwide Reliability</h3>
       <p><strong>Location:</strong> 10 Jibowu Street, Yaba, Lagos | <strong>Coverage:</strong> All 36 states</p>
       <p>Proton Security operates across all 36 states in Nigeria, offering manned guard services, armed escort and VIP protection, electronic security systems, and special events security. Their nationwide reach with consistent service delivery makes them practical for businesses in multiple locations.</p>
       <p><strong>Best for:</strong> Businesses requiring nationwide guard deployment with consistent standards.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">8. Mantra Operations — Armed Escort Specialists</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Mantra Operations â€” Armed Escort Specialists</h3>
       <p><strong>Location:</strong> Lagos | <strong>Also registered in the United Kingdom</strong></p>
-      <p>Mantra Operations specialises in armed escort and executive protection. Their teams include trained escort commanders, defensively-trained drivers, and MOPOL officers — the legal framework for armed security in Nigeria. Used by high-net-worth individuals, corporate executives, and expatriates in high-risk environments.</p>
+      <p>Mantra Operations specialises in armed escort and executive protection. Their teams include trained escort commanders, defensively-trained drivers, and MOPOL officers â€” the legal framework for armed security in Nigeria. Used by high-net-worth individuals, corporate executives, and expatriates in high-risk environments.</p>
       <p><strong>Best for:</strong> VIPs and executives requiring armed escorts or close protection.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">9. Eliezer Security Group — 20+ Years Experience</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Eliezer Security Group â€” 20+ Years Experience</h3>
       <p><strong>Experience:</strong> Over 20 years in the Nigerian security industry</p>
-      <p>Eliezer Security Group specialises in bespoke security planning — detailed threat assessment followed by a customised security plan for each client. Over two decades, they have built a client base that values tailored service over volume.</p>
+      <p>Eliezer Security Group specialises in bespoke security planning â€” detailed threat assessment followed by a customised security plan for each client. Over two decades, they have built a client base that values tailored service over volume.</p>
       <p><strong>Best for:</strong> Clients who need a customised security plan rather than standard guard posting.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">10. Control Risks Nigeria — High-End Risk Consultancy</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Control Risks Nigeria â€” High-End Risk Consultancy</h3>
       <p><strong>Parent:</strong> Control Risks Group (UK-headquartered global risk consultancy)</p>
-      <p>Control Risks operates at the premium end — not manned guarding, but crisis management, intelligence, executive protection, and security risk consulting for multinationals and international NGOs in Nigeria.</p>
+      <p>Control Risks operates at the premium end â€” not manned guarding, but crisis management, intelligence, executive protection, and security risk consulting for multinationals and international NGOs in Nigeria.</p>
       <p><strong>Best for:</strong> Multinational corporations, oil and gas operators, and NGOs in complex operating environments.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Types of Security Services in Nigeria</h2>
@@ -11828,7 +13397,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your security company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for NSCDC-licensed security companies every month on 9jaDirectory. List your company for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for NSCDC-licensed security companies every month on 9jaDirectory. List your company for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -11844,7 +13413,7 @@ export const blogPosts: BlogPost[] = [
       <p>No. Private security guards are not permitted to carry firearms in Nigeria. Armed escort services require the attachment of Nigerian Mobile Police Force (MOPOL) officers. Any company claiming their guards are independently armed is operating illegally.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much do security companies charge in Nigeria?</h3>
-      <p>The average security guard earns ₦350,000–₦650,000 per year. Corporate clients negotiate annual contracts. Pricing depends on number of guards, training level, and risk profile. Always request quotes from at least 3 NSCDC-licensed companies before deciding.</p>
+      <p>The average security guard earns â‚¦350,000â€“â‚¦650,000 per year. Corporate clients negotiate annual contracts. Pricing depends on number of guards, training level, and risk profile. Always request quotes from at least 3 NSCDC-licensed companies before deciding.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the best security company for a residential estate in Lagos?</h3>
       <p>Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. For smaller properties, Proton Security and Eliezer Security Group are well-regarded. Always verify NSCDC licensing.</p>
@@ -11888,7 +13457,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Top 10 best security companies in Nigeria 2026 — Halogen, G4S, Kings Guards, Damon Guards, Proton, and more. NSCDC licensed firms across Lagos, Abuja and Port Harcourt.",
+        "description": "Top 10 best security companies in Nigeria 2026 â€” Halogen, G4S, Kings Guards, Damon Guards, Proton, and more. NSCDC licensed firms across Lagos, Abuja and Port Harcourt.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-security-companies-nigeria-2026" }
       },
       {
@@ -11914,7 +13483,7 @@ export const blogPosts: BlogPost[] = [
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "How do I verify a security company is licensed in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Ask any company to present their current NSCDC licence certificate, or verify directly with the NSCDC regional office in your state." } },
-          { "@type": "Question", "name": "Can private security guards in Nigeria carry guns?", "acceptedAnswer": { "@type": "Answer", "text": "No. Private guards cannot carry firearms. Armed escorts require MOPOL attachment — the legal framework for armed security in Nigeria." } },
+          { "@type": "Question", "name": "Can private security guards in Nigeria carry guns?", "acceptedAnswer": { "@type": "Answer", "text": "No. Private guards cannot carry firearms. Armed escorts require MOPOL attachment â€” the legal framework for armed security in Nigeria." } },
           { "@type": "Question", "name": "How much do security companies charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on number of guards, training, and risk profile. Get at least 3 quotes from NSCDC-licensed companies before deciding." } },
           { "@type": "Question", "name": "What is the best security company for a residential estate in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. Always verify NSCDC licensing." } }
         ]
@@ -11931,84 +13500,84 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ── BEST INSURANCE COMPANIES NIGERIA ───────────────────────────────────────
+  // â”€â”€ BEST INSURANCE COMPANIES NIGERIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-insurance-companies-nigeria-2026",
     title: "Best Insurance Companies in Nigeria (2026): Motor, Health & Life",
-    excerpt: "Compare the best insurance companies in Nigeria for 2026 — Leadway, AIICO, AXA Mansard, NEM, Custodian, and more. Motor insurance prices, health plans, and what NAICOM approval means.",
+    excerpt: "Compare the best insurance companies in Nigeria for 2026 â€” Leadway, AIICO, AXA Mansard, NEM, Custodian, and more. Motor insurance prices, health plans, and what NAICOM approval means.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
-      <p>Nigeria's insurance sector is one of the fastest-growing financial services industries on the continent. With gross premiums written surpassing ₦735 billion in 2024 — a 61.4% year-on-year increase — Nigerian insurers are finally getting the traction that the market size has always suggested was possible.</p>
+      <p>Nigeria's insurance sector is one of the fastest-growing financial services industries on the continent. With gross premiums written surpassing â‚¦735 billion in 2024 â€” a 61.4% year-on-year increase â€” Nigerian insurers are finally getting the traction that the market size has always suggested was possible.</p>
 
-      <p>Whether you are looking for the <strong>best car insurance in Nigeria</strong>, a health plan for your family, or a life cover policy, this guide breaks down the <strong>best insurance companies in Nigeria in 2026</strong> — what they cover, what they charge, and how they compare.</p>
+      <p>Whether you are looking for the <strong>best car insurance in Nigeria</strong>, a health plan for your family, or a life cover policy, this guide breaks down the <strong>best insurance companies in Nigeria in 2026</strong> â€” what they cover, what they charge, and how they compare.</p>
 
       <figure class="my-6">
         <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop" alt="Insurance policy documents and financial planning in Nigeria" class="w-full rounded-lg shadow-lg" />
-        <figcaption class="text-sm text-gray-500 mt-2">Nigeria's insurance industry reached ₦735 billion in gross premiums in 2024, growing 61.4% year-on-year.</figcaption>
+        <figcaption class="text-sm text-gray-500 mt-2">Nigeria's insurance industry reached â‚¦735 billion in gross premiums in 2024, growing 61.4% year-on-year.</figcaption>
       </figure>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Key Insurance Facts for Nigeria (2026)</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
-        <li><strong>Regulator:</strong> NAICOM (National Insurance Commission) — all legitimate insurers must be NAICOM-licensed</li>
+        <li><strong>Regulator:</strong> NAICOM (National Insurance Commission) â€” all legitimate insurers must be NAICOM-licensed</li>
         <li><strong>Third-party motor insurance is compulsory</strong> for all vehicles in Nigeria under the Insurance Act</li>
-        <li><strong>Third-party insurance cost:</strong> approximately ₦15,000 per year</li>
-        <li><strong>Comprehensive motor insurance:</strong> typically 3%–5% of the vehicle's current market value per year</li>
+        <li><strong>Third-party insurance cost:</strong> approximately â‚¦15,000 per year</li>
+        <li><strong>Comprehensive motor insurance:</strong> typically 3%â€“5% of the vehicle's current market value per year</li>
         <li><strong>Nigeria has 50+ NAICOM-licensed insurers</strong> across life, general, and composite categories</li>
-        <li><strong>Total industry assets:</strong> ₦2.04 trillion (top 18 insurers, June 2025)</li>
+        <li><strong>Total industry assets:</strong> â‚¦2.04 trillion (top 18 insurers, June 2025)</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Insurance Companies in Nigeria (2026)</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">1. Leadway Assurance — Nigeria's Largest Insurer</h3>
-      <p><strong>Founded:</strong> 1970 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> ₦799 billion</p>
-      <p>Leadway Assurance is the largest insurance company in Nigeria by total assets. They generated ₦173.2 billion in insurance revenue in 2024 while paying out ₦117 billion in claims. Their digital-first transformation has driven 200% growth in revenue from digital channels. Leadway is widely regarded as Nigeria's most financially solid insurer with the strongest claims-paying record.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">1. Leadway Assurance â€” Nigeria's Largest Insurer</h3>
+      <p><strong>Founded:</strong> 1970 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> â‚¦799 billion</p>
+      <p>Leadway Assurance is the largest insurance company in Nigeria by total assets. They generated â‚¦173.2 billion in insurance revenue in 2024 while paying out â‚¦117 billion in claims. Their digital-first transformation has driven 200% growth in revenue from digital channels. Leadway is widely regarded as Nigeria's most financially solid insurer with the strongest claims-paying record.</p>
       <p><strong>Products:</strong> Life assurance, general insurance (motor, fire, marine, engineering), health management, pension, investment services.</p>
       <p><strong>Best for:</strong> Individuals and businesses that want the most established, financially strongest Nigerian insurer.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">2. AIICO Insurance Plc — Nigeria's Oldest Major Insurer</h3>
-      <p><strong>Founded:</strong> 1963 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> ₦456.2 billion</p>
-      <p>Founded in 1963, AIICO is Nigeria's oldest major insurer. With 3,000+ agents nationwide, AIICO generated ₦156.1 billion in gross premiums in 2024 — a 45.54% year-on-year increase. Their comprehensive product range spans life, general, health, pensions, and asset management.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">2. AIICO Insurance Plc â€” Nigeria's Oldest Major Insurer</h3>
+      <p><strong>Founded:</strong> 1963 | <strong>Type:</strong> Composite | <strong>Total Assets:</strong> â‚¦456.2 billion</p>
+      <p>Founded in 1963, AIICO is Nigeria's oldest major insurer. With 3,000+ agents nationwide, AIICO generated â‚¦156.1 billion in gross premiums in 2024 â€” a 45.54% year-on-year increase. Their comprehensive product range spans life, general, health, pensions, and asset management.</p>
       <p><strong>Best for:</strong> Individuals looking for the widest product range and the most accessible distribution network.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">3. AXA Mansard Insurance Plc — International Backing</h3>
-      <p><strong>Founded:</strong> 1989 | <strong>Parent:</strong> AXA Group (France) | <strong>2024 Gross Premium:</strong> ₦138.5 billion</p>
-      <p>AXA Mansard became part of the global AXA Group in 2014. Their life insurance starts from ₦10,000/month, comprehensive motor insurance can be spread over up to 10 monthly instalments, and their HMO arm offers corporate and individual health plans. AXA Mansard has one of the strongest digital presences of any Nigerian insurer.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">3. AXA Mansard Insurance Plc â€” International Backing</h3>
+      <p><strong>Founded:</strong> 1989 | <strong>Parent:</strong> AXA Group (France) | <strong>2024 Gross Premium:</strong> â‚¦138.5 billion</p>
+      <p>AXA Mansard became part of the global AXA Group in 2014. Their life insurance starts from â‚¦10,000/month, comprehensive motor insurance can be spread over up to 10 monthly instalments, and their HMO arm offers corporate and individual health plans. AXA Mansard has one of the strongest digital presences of any Nigerian insurer.</p>
       <p><strong>Best for:</strong> Customers who want international brand assurance and accessible digital insurance products.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">4. NEM Insurance Plc — Nigeria's Motor Insurance Leader</h3>
-      <p><strong>Market Position:</strong> No. 1 in motor insurance since 2015 | <strong>2024 Motor Premium:</strong> ₦25.79 billion</p>
-      <p>NEM Insurance has been Nigeria's dominant motor insurance underwriter for nearly a decade. In 2024, NEM wrote ₦25.79 billion in motor premiums — almost double the closest competitor. Beyond motor, NEM covers fire, burglary, marine, engineering, aviation, and oil and gas.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">4. NEM Insurance Plc â€” Nigeria's Motor Insurance Leader</h3>
+      <p><strong>Market Position:</strong> No. 1 in motor insurance since 2015 | <strong>2024 Motor Premium:</strong> â‚¦25.79 billion</p>
+      <p>NEM Insurance has been Nigeria's dominant motor insurance underwriter for nearly a decade. In 2024, NEM wrote â‚¦25.79 billion in motor premiums â€” almost double the closest competitor. Beyond motor, NEM covers fire, burglary, marine, engineering, aviation, and oil and gas.</p>
       <p><strong>Best for:</strong> Motor vehicle owners, fleet operators, and logistics businesses.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">5. Custodian Investment Plc — Second Largest by Assets</h3>
-      <p><strong>Total Assets:</strong> ₦456.3 billion | <strong>H1 2025 Revenue:</strong> ₦124.28 billion</p>
-      <p>Custodian and Allied Assurance is among the largest listed insurers in Nigeria. What distinguishes Custodian is the synergy between their insurance and asset management arms — policyholder funds are professionally managed to generate better returns. They ranked 4th in motor insurance in 2024 with ₦10.48 billion in motor premium.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">5. Custodian Investment Plc â€” Second Largest by Assets</h3>
+      <p><strong>Total Assets:</strong> â‚¦456.3 billion | <strong>H1 2025 Revenue:</strong> â‚¦124.28 billion</p>
+      <p>Custodian and Allied Assurance is among the largest listed insurers in Nigeria. What distinguishes Custodian is the synergy between their insurance and asset management arms â€” policyholder funds are professionally managed to generate better returns. They ranked 4th in motor insurance in 2024 with â‚¦10.48 billion in motor premium.</p>
       <p><strong>Best for:</strong> Businesses and high-net-worth individuals who want insurance combined with strong investment management.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">6. Mutual Benefits Assurance Plc — Largest Retail Network</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">6. Mutual Benefits Assurance Plc â€” Largest Retail Network</h3>
       <p><strong>Founded:</strong> 1995 | <strong>Branches:</strong> 250+ nationwide</p>
-      <p>Mutual Benefits has the largest retail insurance distribution network in Nigeria. They wrote ₦14.21 billion in motor insurance in 2024 (2nd in the market). Their microinsurance arm and affordable product range make them the most accessible insurer for ordinary Nigerians — including children's education plans, travel insurance, and group life assurance for SMEs.</p>
+      <p>Mutual Benefits has the largest retail insurance distribution network in Nigeria. They wrote â‚¦14.21 billion in motor insurance in 2024 (2nd in the market). Their microinsurance arm and affordable product range make them the most accessible insurer for ordinary Nigerians â€” including children's education plans, travel insurance, and group life assurance for SMEs.</p>
       <p><strong>Best for:</strong> SMEs, self-employed individuals, and families seeking affordable multi-product insurance coverage.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">7. Coronation Insurance Plc — Nigeria's Oldest Insurer</h3>
-      <p><strong>Founded:</strong> 1958 | <strong>Total Assets:</strong> ₦100.07 billion</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">7. Coronation Insurance Plc â€” Nigeria's Oldest Insurer</h3>
+      <p><strong>Founded:</strong> 1958 | <strong>Total Assets:</strong> â‚¦100.07 billion</p>
       <p>Founded in 1958, Coronation Insurance is one of the oldest insurers in Nigeria. Their long institutional track record and product mix covering fire, special perils, goods-in-transit, all-risk, and life insurance make them a strong choice for complex or non-standard risks.</p>
       <p><strong>Best for:</strong> Businesses with complex insurance requirements seeking an established underwriter.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">8. Consolidated Hallmark Holdings Plc — Growing Composite</h3>
-      <p><strong>2024 Gross Premium:</strong> ₦29.7 billion | <strong>2024 Claims Paid:</strong> ₦9.06 billion</p>
-      <p>Restructured in 2023, Consolidated Hallmark now covers general insurance, microinsurance, HMO health insurance, and financial services under a single holding structure — allowing clients to bundle multiple coverage types within one group.</p>
+      <h3 class="text-xl font-bold mt-6 mb-3">8. Consolidated Hallmark Holdings Plc â€” Growing Composite</h3>
+      <p><strong>2024 Gross Premium:</strong> â‚¦29.7 billion | <strong>2024 Claims Paid:</strong> â‚¦9.06 billion</p>
+      <p>Restructured in 2023, Consolidated Hallmark now covers general insurance, microinsurance, HMO health insurance, and financial services under a single holding structure â€” allowing clients to bundle multiple coverage types within one group.</p>
       <p><strong>Best for:</strong> Businesses wanting general insurance, health, and microinsurance from a single provider group.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">9. Zenith General Insurance — Bank-Backed Stability</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">9. Zenith General Insurance â€” Bank-Backed Stability</h3>
       <p><strong>Parent:</strong> Zenith Bank Plc</p>
-      <p>Zenith General Insurance benefits from the financial strength of Zenith Bank — one of Nigeria's largest banks. Bank-backed insurers provide an additional layer of financial security. Zenith General covers motor, fire, marine, aviation, and liability, ranking in the top 10 motor insurance underwriters in Nigeria.</p>
+      <p>Zenith General Insurance benefits from the financial strength of Zenith Bank â€” one of Nigeria's largest banks. Bank-backed insurers provide an additional layer of financial security. Zenith General covers motor, fire, marine, aviation, and liability, ranking in the top 10 motor insurance underwriters in Nigeria.</p>
       <p><strong>Best for:</strong> Zenith Bank customers and businesses seeking bank-backed financial strength behind their policies.</p>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">10. Hygeia HMO — Nigeria's Best Health Insurance</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">10. Hygeia HMO â€” Nigeria's Best Health Insurance</h3>
       <p><strong>Type:</strong> Health Maintenance Organisation | <strong>Network:</strong> 2,000+ hospital facilities</p>
-      <p>For health insurance, Hygeia HMO is Nigeria's oldest and most established HMO — operating for over 30 years with a network of 2,000+ accredited hospital facilities nationwide. For affordable options, Reliance HMO offers plans from ₦3,500/month with telemedicine services.</p>
+      <p>For health insurance, Hygeia HMO is Nigeria's oldest and most established HMO â€” operating for over 30 years with a network of 2,000+ accredited hospital facilities nationwide. For affordable options, Reliance HMO offers plans from â‚¦3,500/month with telemedicine services.</p>
       <p><strong>Best for:</strong> Businesses seeking group health insurance and individuals wanting Nigeria's widest hospital network.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Motor Insurance Prices in Nigeria (2026)</h2>
@@ -12022,8 +13591,8 @@ export const blogPosts: BlogPost[] = [
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Third-Party (Mandatory)</td><td class="border border-gray-200 px-4 py-3">Damage to third parties only</td><td class="border border-gray-200 px-4 py-3 font-medium">~₦15,000</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Comprehensive</td><td class="border border-gray-200 px-4 py-3">Third-party + own damage, theft, fire</td><td class="border border-gray-200 px-4 py-3 font-medium">3%–5% of vehicle value</td></tr>
+            <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Third-Party (Mandatory)</td><td class="border border-gray-200 px-4 py-3">Damage to third parties only</td><td class="border border-gray-200 px-4 py-3 font-medium">~â‚¦15,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-200 px-4 py-3">Comprehensive</td><td class="border border-gray-200 px-4 py-3">Third-party + own damage, theft, fire</td><td class="border border-gray-200 px-4 py-3 font-medium">3%â€“5% of vehicle value</td></tr>
             <tr class="bg-white"><td class="border border-gray-200 px-4 py-3">Fleet (10+ vehicles)</td><td class="border border-gray-200 px-4 py-3">Corporate fleet with negotiated rates</td><td class="border border-gray-200 px-4 py-3 font-medium">Custom (contact insurer)</td></tr>
           </tbody>
         </table>
@@ -12031,7 +13600,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your insurance company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for NAICOM-licensed insurance companies every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for NAICOM-licensed insurance companies every month on 9jaDirectory. List your business for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Insurance Business Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -12041,19 +13610,19 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">Frequently Asked Questions</h2>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Which insurance company is best in Nigeria in 2026?</h3>
-      <p>Leadway Assurance is rated best overall for financial strength (₦799B in assets) and claims payment (₦117B paid in 2024). AXA Mansard is best for digital and customer service. NEM Insurance is best for motor. Hygeia HMO is best for health insurance. The right choice depends on your specific needs.</p>
+      <p>Leadway Assurance is rated best overall for financial strength (â‚¦799B in assets) and claims payment (â‚¦117B paid in 2024). AXA Mansard is best for digital and customer service. NEM Insurance is best for motor. Hygeia HMO is best for health insurance. The right choice depends on your specific needs.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is car insurance compulsory in Nigeria?</h3>
-      <p>Yes. Third-party motor insurance is compulsory under the Nigerian Insurance Act. Third-party insurance costs approximately ₦15,000 per year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng — fake insurance certificates are common in Nigeria.</p>
+      <p>Yes. Third-party motor insurance is compulsory under the Nigerian Insurance Act. Third-party insurance costs approximately â‚¦15,000 per year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng â€” fake insurance certificates are common in Nigeria.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much is comprehensive car insurance in Nigeria?</h3>
-      <p>Comprehensive motor insurance typically costs 3%–5% of the vehicle's current market value per year. For a car worth ₦5 million, that is ₦150,000–₦250,000 per year. AXA Mansard allows comprehensive motor premium to be spread over up to 10 monthly instalments.</p>
+      <p>Comprehensive motor insurance typically costs 3%â€“5% of the vehicle's current market value per year. For a car worth â‚¦5 million, that is â‚¦150,000â€“â‚¦250,000 per year. AXA Mansard allows comprehensive motor premium to be spread over up to 10 monthly instalments.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How can I check if an insurance company is NAICOM-licensed?</h3>
-      <p>Visit naicom.gov.ng for the list of licensed insurance companies. Verify insurance certificates at ask.naicom.gov.ng. Always check NAICOM licensing before purchasing any policy — counterfeit insurance certificates are a significant problem in Nigeria, particularly for motor insurance.</p>
+      <p>Visit naicom.gov.ng for the list of licensed insurance companies. Verify insurance certificates at ask.naicom.gov.ng. Always check NAICOM licensing before purchasing any policy â€” counterfeit insurance certificates are a significant problem in Nigeria, particularly for motor insurance.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What health insurance plans are available in Nigeria?</h3>
-      <p>Health insurance in Nigeria is provided through HMOs licensed by NHIS. Top HMOs include Hygeia HMO (widest hospital network, 2,000+ facilities), Reliance HMO (most affordable, from ₦3,500/month), and AXA Mansard HMO. Individual plans typically cost ₦20,000–₦60,000 per year.</p>
+      <p>Health insurance in Nigeria is provided through HMOs licensed by NHIS. Top HMOs include Hygeia HMO (widest hospital network, 2,000+ facilities), Reliance HMO (most affordable, from â‚¦3,500/month), and AXA Mansard HMO. Individual plans typically cost â‚¦20,000â€“â‚¦60,000 per year.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -12095,7 +13664,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-23",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Compare the best insurance companies in Nigeria 2026 — Leadway, AIICO, AXA Mansard, NEM, Custodian, Mutual Benefits, and more. Motor, health, and life insurance prices explained.",
+        "description": "Compare the best insurance companies in Nigeria 2026 â€” Leadway, AIICO, AXA Mansard, NEM, Custodian, Mutual Benefits, and more. Motor, health, and life insurance prices explained.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-insurance-companies-nigeria-2026" }
       },
       {
@@ -12121,10 +13690,10 @@ export const blogPosts: BlogPost[] = [
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Which insurance company is best in Nigeria in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Leadway Assurance is best overall for financial strength. AXA Mansard is best for digital/customer service. NEM Insurance is best for motor. Hygeia HMO is best for health insurance." } },
-          { "@type": "Question", "name": "Is car insurance compulsory in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Third-party motor insurance is compulsory and costs ~₦15,000/year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng." } },
-          { "@type": "Question", "name": "How much is comprehensive car insurance in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Comprehensive insurance costs 3%–5% of the vehicle's value per year. For a ₦5M car, that is ₦150,000–₦250,000/year. AXA Mansard allows payment in monthly instalments." } },
+          { "@type": "Question", "name": "Is car insurance compulsory in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Third-party motor insurance is compulsory and costs ~â‚¦15,000/year. Driving without it is a criminal offence. Verify certificates at ask.naicom.gov.ng." } },
+          { "@type": "Question", "name": "How much is comprehensive car insurance in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Comprehensive insurance costs 3%â€“5% of the vehicle's value per year. For a â‚¦5M car, that is â‚¦150,000â€“â‚¦250,000/year. AXA Mansard allows payment in monthly instalments." } },
           { "@type": "Question", "name": "How can I check if an insurance company is NAICOM-licensed?", "acceptedAnswer": { "@type": "Answer", "text": "Visit naicom.gov.ng for the list of licensed insurers. Verify certificates at ask.naicom.gov.ng." } },
-          { "@type": "Question", "name": "What health insurance plans are available in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top HMOs include Hygeia HMO (widest network), Reliance HMO (from ₦3,500/month), and AXA Mansard HMO. Plans cost ₦20,000–₦60,000/year." } }
+          { "@type": "Question", "name": "What health insurance plans are available in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top HMOs include Hygeia HMO (widest network), Reliance HMO (from â‚¦3,500/month), and AXA Mansard HMO. Plans cost â‚¦20,000â€“â‚¦60,000/year." } }
         ]
       },
       {
@@ -12139,7 +13708,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ─── TOP LAW FIRMS IN NIGERIA 2026 ───────────────────────────────────────
+  // â”€â”€â”€ TOP LAW FIRMS IN NIGERIA 2026 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "top-law-firms-nigeria-2026",
     title: "Top 10 Law Firms in Nigeria (2026): Corporate, Litigation & Commercial",
@@ -12147,29 +13716,29 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
 
-      <p>Nigeria has over 80,000 registered lawyers and hundreds of law firms — but only a handful consistently handle the country's most complex transactions, landmark court cases, and cross-border deals. Whether you need a firm for a corporate acquisition, a land dispute, a regulatory matter, or an oil and gas contract, choosing the right law firm in Nigeria matters enormously.</p>
+      <p>Nigeria has over 80,000 registered lawyers and hundreds of law firms â€” but only a handful consistently handle the country's most complex transactions, landmark court cases, and cross-border deals. Whether you need a firm for a corporate acquisition, a land dispute, a regulatory matter, or an oil and gas contract, choosing the right law firm in Nigeria matters enormously.</p>
 
       <p>This guide ranks the top 10 law firms in Nigeria based on deal volume, client base, practice area strength, Bar recognition, and international partnerships.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-3">Top Law Firms in Nigeria at a Glance</h3>
         <ul class="space-y-1 text-green-800">
-          <li><strong>#1 Udo Udoma & Belo-Osagie</strong> — Best overall, largest corporate practice</li>
-          <li><strong>#2 Aluko & Oyebode</strong> — Top for M&A and banking law</li>
-          <li><strong>#3 Banwo & Ighodalo</strong> — Leading capital markets and regulatory firm</li>
-          <li><strong>#4 Aelex</strong> — Best for oil & gas and energy law</li>
-          <li><strong>#5 G. Elias & Co.</strong> — Strongest litigation practice</li>
-          <li><strong>#6 Templars</strong> — Fast-growing, strong in fintech and telecoms</li>
-          <li><strong>#7 Olaniwun Ajayi LP</strong> — Top for project finance and infrastructure</li>
-          <li><strong>#8 Jackson Etti & Edu</strong> — Best for employment and labour law</li>
-          <li><strong>#9 Streamsowers & Köhn</strong> — Leading dispute resolution firm</li>
-          <li><strong>#10 Perchstone & Graeys</strong> — Strong real estate and property law</li>
+          <li><strong>#1 Udo Udoma & Belo-Osagie</strong> â€” Best overall, largest corporate practice</li>
+          <li><strong>#2 Aluko & Oyebode</strong> â€” Top for M&A and banking law</li>
+          <li><strong>#3 Banwo & Ighodalo</strong> â€” Leading capital markets and regulatory firm</li>
+          <li><strong>#4 Aelex</strong> â€” Best for oil & gas and energy law</li>
+          <li><strong>#5 G. Elias & Co.</strong> â€” Strongest litigation practice</li>
+          <li><strong>#6 Templars</strong> â€” Fast-growing, strong in fintech and telecoms</li>
+          <li><strong>#7 Olaniwun Ajayi LP</strong> â€” Top for project finance and infrastructure</li>
+          <li><strong>#8 Jackson Etti & Edu</strong> â€” Best for employment and labour law</li>
+          <li><strong>#9 Streamsowers & KÃ¶hn</strong> â€” Leading dispute resolution firm</li>
+          <li><strong>#10 Perchstone & Graeys</strong> â€” Strong real estate and property law</li>
         </ul>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">1. Udo Udoma & Belo-Osagie (UUBO)</h2>
       <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop" alt="Top law firms in Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
-      <p>Udo Udoma & Belo-Osagie — known as UUBO — is widely regarded as Nigeria's premier full-service law firm. With offices in Lagos and Abuja, UUBO handles the country's largest corporate transactions, including mergers and acquisitions, privatisations, capital markets offerings, and project finance deals. The firm has been involved in virtually every major privatisation in Nigeria and consistently tops the league tables for deal value. UUBO advises major multinationals, Nigerian conglomerates, government institutions, and multilateral agencies.</p>
+      <p>Udo Udoma & Belo-Osagie â€” known as UUBO â€” is widely regarded as Nigeria's premier full-service law firm. With offices in Lagos and Abuja, UUBO handles the country's largest corporate transactions, including mergers and acquisitions, privatisations, capital markets offerings, and project finance deals. The firm has been involved in virtually every major privatisation in Nigeria and consistently tops the league tables for deal value. UUBO advises major multinationals, Nigerian conglomerates, government institutions, and multilateral agencies.</p>
       <p><strong>Best for:</strong> Corporate law, M&A, privatisation, capital markets, project finance</p>
       <p><strong>Offices:</strong> Lagos, Abuja</p>
       <p><strong>Website:</strong> uubo.org</p>
@@ -12211,13 +13780,13 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> olaniwunajayi.net</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">8. Jackson Etti & Edu</h2>
-      <p>Jackson Etti & Edu (JEE) is recognised as Nigeria's leading firm for employment and labour law, advising Nigeria's largest employers — including multinationals, banks, and manufacturing companies — on HR compliance, termination disputes, and industrial relations. JEE also has strong practices in corporate advisory, real estate, and dispute resolution. The firm is a member of Ius Laboris, the world's largest employment law network, giving clients access to employment law expertise in over 40 countries.</p>
+      <p>Jackson Etti & Edu (JEE) is recognised as Nigeria's leading firm for employment and labour law, advising Nigeria's largest employers â€” including multinationals, banks, and manufacturing companies â€” on HR compliance, termination disputes, and industrial relations. JEE also has strong practices in corporate advisory, real estate, and dispute resolution. The firm is a member of Ius Laboris, the world's largest employment law network, giving clients access to employment law expertise in over 40 countries.</p>
       <p><strong>Best for:</strong> Employment & labour law, HR compliance, corporate advisory, real estate</p>
       <p><strong>Offices:</strong> Lagos, Abuja</p>
       <p><strong>Website:</strong> jee.com.ng</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">9. Streamsowers & Köhn</h2>
-      <p>Streamsowers & Köhn is a highly regarded Nigerian law firm with one of the strongest dispute resolution practices in the country. The firm represents clients in complex commercial arbitration, investment treaty disputes, and high-value commercial litigation. Streamsowers & Köhn also advises on energy law, corporate transactions, and banking. The firm's arbitration team regularly appears before the ICC, LCIA, and ICSID, making it a first choice for cross-border dispute resolution in Nigeria.</p>
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Streamsowers & KÃ¶hn</h2>
+      <p>Streamsowers & KÃ¶hn is a highly regarded Nigerian law firm with one of the strongest dispute resolution practices in the country. The firm represents clients in complex commercial arbitration, investment treaty disputes, and high-value commercial litigation. Streamsowers & KÃ¶hn also advises on energy law, corporate transactions, and banking. The firm's arbitration team regularly appears before the ICC, LCIA, and ICSID, making it a first choice for cross-border dispute resolution in Nigeria.</p>
       <p><strong>Best for:</strong> International arbitration, commercial litigation, investment disputes, energy</p>
       <p><strong>Offices:</strong> Lagos</p>
       <p><strong>Website:</strong> sklaw.com.ng</p>
@@ -12245,7 +13814,7 @@ export const blogPosts: BlogPost[] = [
             <tr><td class="border border-gray-300 p-3">Fintech or banking regulation</td><td class="border border-gray-300 p-3">Templars</td></tr>
             <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Infrastructure or power project</td><td class="border border-gray-300 p-3">Olaniwun Ajayi LP</td></tr>
             <tr><td class="border border-gray-300 p-3">Staff termination or HR compliance</td><td class="border border-gray-300 p-3">Jackson Etti & Edu</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">International arbitration</td><td class="border border-gray-300 p-3">Streamsowers & Köhn</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">International arbitration</td><td class="border border-gray-300 p-3">Streamsowers & KÃ¶hn</td></tr>
             <tr><td class="border border-gray-300 p-3">Land purchase or property development</td><td class="border border-gray-300 p-3">Perchstone & Graeys</td></tr>
           </tbody>
         </table>
@@ -12253,7 +13822,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your law firm not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for lawyers and law firms every month on 9jaDirectory. List your firm for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for lawyers and law firms every month on 9jaDirectory. List your firm for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Law Firm Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -12266,13 +13835,13 @@ export const blogPosts: BlogPost[] = [
       <p>Udo Udoma & Belo-Osagie (UUBO) is widely regarded as Nigeria's largest full-service law firm by deal volume and corporate practice size. Aluko & Oyebode is also frequently cited as one of the largest firms by headcount. Both firms have been at the centre of Nigeria's most significant transactions for decades.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much do lawyers charge in Nigeria?</h3>
-      <p>Legal fees in Nigeria vary significantly by firm size and matter type. Top-tier firms typically charge between ₦150,000 and ₦500,000 per hour for senior partner time. Transaction-based fees on major deals can run into tens of millions of naira. For smaller matters — contracts, property, employment — boutique firms and sole practitioners charge ₦50,000 to ₦300,000 for standard work.</p>
+      <p>Legal fees in Nigeria vary significantly by firm size and matter type. Top-tier firms typically charge between â‚¦150,000 and â‚¦500,000 per hour for senior partner time. Transaction-based fees on major deals can run into tens of millions of naira. For smaller matters â€” contracts, property, employment â€” boutique firms and sole practitioners charge â‚¦50,000 to â‚¦300,000 for standard work.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Are Nigerian law firms ranked internationally?</h3>
       <p>Yes. Several Nigerian law firms are ranked by Chambers & Partners, Legal 500, IFLR1000, and Who's Who Legal. UUBO, Aluko & Oyebode, Aelex, Templars, and Banwo & Ighodalo consistently appear in international legal rankings for their corporate, energy, and banking practices.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can a foreign company use a Nigerian law firm?</h3>
-      <p>Yes. All the firms listed here regularly advise international clients on Nigerian law matters. Most have experience with cross-border transactions and can coordinate with foreign counsel. For international arbitration, firms like Streamsowers & Köhn appear before ICC and ICSID tribunals on behalf of both Nigerian and foreign parties.</p>
+      <p>Yes. All the firms listed here regularly advise international clients on Nigerian law matters. Most have experience with cross-border transactions and can coordinate with foreign counsel. For international arbitration, firms like Streamsowers & KÃ¶hn appear before ICC and ICSID tribunals on behalf of both Nigerian and foreign parties.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -12312,7 +13881,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-24",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Discover the top 10 law firms in Nigeria for 2026 — ranked by practice area, deal volume, and client base. From UUBO to Aelex and Templars.",
+        "description": "Discover the top 10 law firms in Nigeria for 2026 â€” ranked by practice area, deal volume, and client base. From UUBO to Aelex and Templars.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-law-firms-nigeria-2026" }
       },
       {
@@ -12329,7 +13898,7 @@ export const blogPosts: BlogPost[] = [
           { "@type": "ListItem", "position": 6, "name": "Templars", "url": "https://www.templars-law.com" },
           { "@type": "ListItem", "position": 7, "name": "Olaniwun Ajayi LP", "url": "https://www.olaniwunajayi.net" },
           { "@type": "ListItem", "position": 8, "name": "Jackson Etti & Edu", "url": "https://www.jee.com.ng" },
-          { "@type": "ListItem", "position": 9, "name": "Streamsowers & Köhn", "url": "https://www.sklaw.com.ng" },
+          { "@type": "ListItem", "position": 9, "name": "Streamsowers & KÃ¶hn", "url": "https://www.sklaw.com.ng" },
           { "@type": "ListItem", "position": 10, "name": "Perchstone & Graeys", "url": "https://www.perchstoneandgraeys.com" }
         ]
       },
@@ -12338,9 +13907,9 @@ export const blogPosts: BlogPost[] = [
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Which is the biggest law firm in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Udo Udoma & Belo-Osagie (UUBO) is widely regarded as Nigeria's largest full-service law firm by deal volume. Aluko & Oyebode is also among the largest by headcount." } },
-          { "@type": "Question", "name": "How much do lawyers charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top-tier firms charge ₦150,000–₦500,000 per hour for senior partner time. Boutique firms charge ₦50,000–₦300,000 for standard matters." } },
+          { "@type": "Question", "name": "How much do lawyers charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Top-tier firms charge â‚¦150,000â€“â‚¦500,000 per hour for senior partner time. Boutique firms charge â‚¦50,000â€“â‚¦300,000 for standard matters." } },
           { "@type": "Question", "name": "Are Nigerian law firms ranked internationally?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. UUBO, Aluko & Oyebode, Aelex, Templars, and Banwo & Ighodalo are consistently ranked by Chambers & Partners, Legal 500, and IFLR1000." } },
-          { "@type": "Question", "name": "Can a foreign company use a Nigerian law firm?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All listed firms regularly advise international clients on Nigerian law and cross-border transactions. Streamsowers & Köhn handles ICC and ICSID arbitrations." } }
+          { "@type": "Question", "name": "Can a foreign company use a Nigerian law firm?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All listed firms regularly advise international clients on Nigerian law and cross-border transactions. Streamsowers & KÃ¶hn handles ICC and ICSID arbitrations." } }
         ]
       },
       {
@@ -12355,7 +13924,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ─── BEST PRIVATE HOSPITALS IN NIGERIA 2026 ──────────────────────────────
+  // â”€â”€â”€ BEST PRIVATE HOSPITALS IN NIGERIA 2026 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-private-hospitals-nigeria-2026",
     title: "Best Private Hospitals in Nigeria (2026): Lagos, Abuja & Port Harcourt",
@@ -12365,27 +13934,27 @@ export const blogPosts: BlogPost[] = [
 
       <p>Private healthcare in Nigeria has improved significantly over the past decade, with a number of hospitals now offering world-class diagnostics, specialist care, and surgical facilities that have reduced the need for medical tourism abroad. Choosing the right private hospital in Nigeria can be the difference between receiving timely, quality care and experiencing unnecessary delays.</p>
 
-      <p>This guide covers the best private hospitals in Nigeria across Lagos, Abuja, and Port Harcourt — ranked on specialist availability, diagnostic equipment, emergency care, patient experience, and accreditation status.</p>
+      <p>This guide covers the best private hospitals in Nigeria across Lagos, Abuja, and Port Harcourt â€” ranked on specialist availability, diagnostic equipment, emergency care, patient experience, and accreditation status.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-3">Best Private Hospitals in Nigeria at a Glance</h3>
         <ul class="space-y-1 text-green-800">
-          <li><strong>#1 Evercare Hospital Lagos</strong> — Best overall, most advanced equipment</li>
-          <li><strong>#2 Eko Hospital</strong> — Best multi-specialist hospital in Lagos</li>
-          <li><strong>#3 Reddington Hospital</strong> — Best for cardiac & neuro care</li>
-          <li><strong>#4 Lagoon Hospitals</strong> — Best hospital group (3 Lagos locations)</li>
-          <li><strong>#5 St. Nicholas Hospital</strong> — Oldest private hospital in Nigeria</li>
-          <li><strong>#6 Cedarcrest Hospitals</strong> — Best private hospital in Abuja</li>
-          <li><strong>#7 Nisa Premier Hospital</strong> — Best for obstetrics & fertility in Abuja</li>
-          <li><strong>#8 Meridian Hospital</strong> — Strong diagnostic and oncology centre</li>
-          <li><strong>#9 Lily Hospitals</strong> — Best hospital outside Lagos/Abuja</li>
-          <li><strong>#10 Clina-Lancet Laboratories</strong> — Best diagnostic and pathology lab</li>
+          <li><strong>#1 Evercare Hospital Lagos</strong> â€” Best overall, most advanced equipment</li>
+          <li><strong>#2 Eko Hospital</strong> â€” Best multi-specialist hospital in Lagos</li>
+          <li><strong>#3 Reddington Hospital</strong> â€” Best for cardiac & neuro care</li>
+          <li><strong>#4 Lagoon Hospitals</strong> â€” Best hospital group (3 Lagos locations)</li>
+          <li><strong>#5 St. Nicholas Hospital</strong> â€” Oldest private hospital in Nigeria</li>
+          <li><strong>#6 Cedarcrest Hospitals</strong> â€” Best private hospital in Abuja</li>
+          <li><strong>#7 Nisa Premier Hospital</strong> â€” Best for obstetrics & fertility in Abuja</li>
+          <li><strong>#8 Meridian Hospital</strong> â€” Strong diagnostic and oncology centre</li>
+          <li><strong>#9 Lily Hospitals</strong> â€” Best hospital outside Lagos/Abuja</li>
+          <li><strong>#10 Clina-Lancet Laboratories</strong> â€” Best diagnostic and pathology lab</li>
         </ul>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">1. Evercare Hospital Lagos</h2>
       <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2070&auto=format&fit=crop" alt="Best private hospitals in Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
-      <p>Evercare Hospital Lagos (formerly known as Lakeside Medical Centre before its transformation) is Nigeria's most advanced private hospital, backed by the Evercare Group — a global healthcare platform operating across Africa and South Asia. Located in Lekki, Lagos, the hospital features over 165 beds, 7 operating theatres, a cardiac catheterisation lab, a neuro-surgical suite, an oncology centre with radiation therapy, a NICU, and a full-service diagnostics department. Evercare Hospital offers JCI accreditation-level standards of care and is the first choice for Nigerians who would otherwise travel abroad for complex procedures.</p>
+      <p>Evercare Hospital Lagos (formerly known as Lakeside Medical Centre before its transformation) is Nigeria's most advanced private hospital, backed by the Evercare Group â€” a global healthcare platform operating across Africa and South Asia. Located in Lekki, Lagos, the hospital features over 165 beds, 7 operating theatres, a cardiac catheterisation lab, a neuro-surgical suite, an oncology centre with radiation therapy, a NICU, and a full-service diagnostics department. Evercare Hospital offers JCI accreditation-level standards of care and is the first choice for Nigerians who would otherwise travel abroad for complex procedures.</p>
       <p><strong>Best for:</strong> Cardiac surgery, neurosurgery, oncology, orthopaedics, complex diagnostics</p>
       <p><strong>Location:</strong> Admiralty Way, Lekki Phase 1, Lagos</p>
       <p><strong>Website:</strong> evercarehealth.com/hospital-lagos</p>
@@ -12427,7 +13996,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> nisahospital.com</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">8. Meridian Hospital (Lagos)</h2>
-      <p>Meridian Hospital is a specialist private hospital in Lagos with particular strength in oncology (cancer treatment), diagnostic imaging, and endoscopy. The hospital houses a linear accelerator for radiation therapy — one of very few in Nigeria — making it a critical facility for cancer patients. Meridian also provides gastroenterology, nephrology, cardiology, and general surgery services. The hospital has a reputation for accurate diagnostics and works closely with several Lagos HMOs.</p>
+      <p>Meridian Hospital is a specialist private hospital in Lagos with particular strength in oncology (cancer treatment), diagnostic imaging, and endoscopy. The hospital houses a linear accelerator for radiation therapy â€” one of very few in Nigeria â€” making it a critical facility for cancer patients. Meridian also provides gastroenterology, nephrology, cardiology, and general surgery services. The hospital has a reputation for accurate diagnostics and works closely with several Lagos HMOs.</p>
       <p><strong>Best for:</strong> Cancer treatment, radiation therapy, oncology, diagnostic imaging</p>
       <p><strong>Location:</strong> Lekki, Lagos</p>
       <p><strong>Website:</strong> meridianhospitalnigeria.com</p>
@@ -12439,7 +14008,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> lilyhospitals.com</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">10. Clina-Lancet Laboratories</h2>
-      <p>Clina-Lancet is Nigeria's leading diagnostic and pathology laboratory group, affiliated with Lancet Laboratories — one of Africa's largest diagnostic networks. With locations in Lagos, Abuja, and Port Harcourt, Clina-Lancet offers the widest range of diagnostic tests available in Nigeria, including advanced genomic testing, histopathology, molecular diagnostics, and all standard blood and imaging tests. Results are available online and can be compared against international reference ranges. Many top Nigerian specialists send their complex diagnostic cases to Clina-Lancet.</p>
+      <p>Clina-Lancet is Nigeria's leading diagnostic and pathology laboratory group, affiliated with Lancet Laboratories â€” one of Africa's largest diagnostic networks. With locations in Lagos, Abuja, and Port Harcourt, Clina-Lancet offers the widest range of diagnostic tests available in Nigeria, including advanced genomic testing, histopathology, molecular diagnostics, and all standard blood and imaging tests. Results are available online and can be compared against international reference ranges. Many top Nigerian specialists send their complex diagnostic cases to Clina-Lancet.</p>
       <p><strong>Best for:</strong> Diagnostics, pathology, genomic testing, pre-travel blood tests, second opinion labs</p>
       <p><strong>Locations:</strong> Lagos, Abuja, Port Harcourt</p>
       <p><strong>Website:</strong> clinalancet.com</p>
@@ -12454,19 +14023,19 @@ export const blogPosts: BlogPost[] = [
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-gray-300 p-3">Specialist outpatient consultation</td><td class="border border-gray-300 p-3">₦15,000 – ₦80,000</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Executive health check (full)</td><td class="border border-gray-300 p-3">₦150,000 – ₦500,000</td></tr>
-            <tr><td class="border border-gray-300 p-3">Standard surgical admission (3 days)</td><td class="border border-gray-300 p-3">₦500,000 – ₦2,000,000</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cardiac catheterisation</td><td class="border border-gray-300 p-3">₦1,500,000 – ₦4,000,000</td></tr>
-            <tr><td class="border border-gray-300 p-3">IVF cycle (one attempt)</td><td class="border border-gray-300 p-3">₦1,200,000 – ₦3,000,000</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">MRI scan</td><td class="border border-gray-300 p-3">₦80,000 – ₦250,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">Specialist outpatient consultation</td><td class="border border-gray-300 p-3">â‚¦15,000 â€“ â‚¦80,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Executive health check (full)</td><td class="border border-gray-300 p-3">â‚¦150,000 â€“ â‚¦500,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">Standard surgical admission (3 days)</td><td class="border border-gray-300 p-3">â‚¦500,000 â€“ â‚¦2,000,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cardiac catheterisation</td><td class="border border-gray-300 p-3">â‚¦1,500,000 â€“ â‚¦4,000,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">IVF cycle (one attempt)</td><td class="border border-gray-300 p-3">â‚¦1,200,000 â€“ â‚¦3,000,000</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">MRI scan</td><td class="border border-gray-300 p-3">â‚¦80,000 â€“ â‚¦250,000</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your hospital or clinic not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for hospitals, specialists, and clinics every month on 9jaDirectory. List your facility for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for hospitals, specialists, and clinics every month on 9jaDirectory. List your facility for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Hospital Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -12482,10 +14051,10 @@ export const blogPosts: BlogPost[] = [
       <p>Cedarcrest Hospitals is consistently rated the best private hospital in Abuja, followed by Nisa Premier Hospital (especially for IVF and women's health) and Garki Hospital (public but high-quality). For specialist diagnostics, Clina-Lancet Laboratories has a strong Abuja location.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Do Nigerian private hospitals accept HMO?</h3>
-      <p>Yes. Most top private hospitals in Nigeria accept major HMOs including Hygeia HMO, AXA Mansard HMO, Reliance HMO, and Clearline HMO. Always confirm your HMO panel status before booking, as not all hospitals accept all HMOs — and HMO coverage may not include all specialist services.</p>
+      <p>Yes. Most top private hospitals in Nigeria accept major HMOs including Hygeia HMO, AXA Mansard HMO, Reliance HMO, and Clearline HMO. Always confirm your HMO panel status before booking, as not all hospitals accept all HMOs â€” and HMO coverage may not include all specialist services.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does a private hospital consultation cost in Nigeria?</h3>
-      <p>A specialist outpatient consultation at a top private hospital in Nigeria typically costs ₦15,000 to ₦80,000 depending on the doctor's seniority and the hospital. An executive health check costs ₦150,000 to ₦500,000. HMO-covered patients typically pay only a co-payment of ₦1,000 to ₦5,000.</p>
+      <p>A specialist outpatient consultation at a top private hospital in Nigeria typically costs â‚¦15,000 to â‚¦80,000 depending on the doctor's seniority and the hospital. An executive health check costs â‚¦150,000 to â‚¦500,000. HMO-covered patients typically pay only a co-payment of â‚¦1,000 to â‚¦5,000.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -12525,7 +14094,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-24",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Best private hospitals in Nigeria 2026 — Evercare Hospital, Eko Hospital, Reddington, Lagoon, Cedarcrest Abuja. Costs, specialists, and HMO coverage explained.",
+        "description": "Best private hospitals in Nigeria 2026 â€” Evercare Hospital, Eko Hospital, Reddington, Lagoon, Cedarcrest Abuja. Costs, specialists, and HMO coverage explained.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-private-hospitals-nigeria-2026" }
       },
       {
@@ -12553,7 +14122,7 @@ export const blogPosts: BlogPost[] = [
           { "@type": "Question", "name": "Which is the best private hospital in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Evercare Hospital Lagos is rated best overall. Reddington Hospital leads for cardiac and neurological care. Cedarcrest Hospitals is best in Abuja." } },
           { "@type": "Question", "name": "Which private hospital is best in Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "Cedarcrest Hospitals is consistently rated the best private hospital in Abuja, followed by Nisa Premier Hospital for IVF and women's health." } },
           { "@type": "Question", "name": "Do Nigerian private hospitals accept HMO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most top hospitals accept major HMOs including Hygeia, AXA Mansard, Reliance, and Clearline HMO. Confirm panel status before booking." } },
-          { "@type": "Question", "name": "How much does a private hospital consultation cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Specialist consultations cost ₦15,000–₦80,000. Executive health checks cost ₦150,000–₦500,000. HMO patients typically pay a co-payment of ₦1,000–₦5,000." } }
+          { "@type": "Question", "name": "How much does a private hospital consultation cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Specialist consultations cost â‚¦15,000â€“â‚¦80,000. Executive health checks cost â‚¦150,000â€“â‚¦500,000. HMO patients typically pay a co-payment of â‚¦1,000â€“â‚¦5,000." } }
         ]
       },
       {
@@ -12568,7 +14137,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ─── BEST REAL ESTATE COMPANIES IN NIGERIA 2026 ──────────────────────────
+  // â”€â”€â”€ BEST REAL ESTATE COMPANIES IN NIGERIA 2026 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-real-estate-companies-nigeria-2026",
     title: "Best Real Estate Companies in Nigeria (2026): Buy, Sell & Invest",
@@ -12578,21 +14147,21 @@ export const blogPosts: BlogPost[] = [
 
       <p>Nigeria's real estate market is one of the most active in sub-Saharan Africa, driven by rapid urbanisation, a growing middle class, and a chronic housing deficit estimated at 17 million units. Whether you are buying your first home, investing in rental property, or developing land, choosing the right real estate company in Nigeria can save you millions of naira and years of legal headache.</p>
 
-      <p>This guide ranks the best real estate companies in Nigeria for 2026 — covering property developers, estate agencies, and property investment platforms.</p>
+      <p>This guide ranks the best real estate companies in Nigeria for 2026 â€” covering property developers, estate agencies, and property investment platforms.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-3">Top Real Estate Companies in Nigeria at a Glance</h3>
         <ul class="space-y-1 text-green-800">
-          <li><strong>#1 Mixta Africa</strong> — Best large-scale developer, affordable housing</li>
-          <li><strong>#2 Brains & Hammers</strong> — Best for Abuja property development</li>
-          <li><strong>#3 RevolutionPlus Property</strong> — Best for flexible payment plans</li>
-          <li><strong>#4 Fine & Country Nigeria</strong> — Best luxury property agency</li>
-          <li><strong>#5 Landwey Investment</strong> — Best land banking & investment</li>
-          <li><strong>#6 UPDC (UAC Property)</strong> — Best established developer, Lagos</li>
-          <li><strong>#7 Jide Taiwo & Co.</strong> — Most trusted estate agency since 1980</li>
-          <li><strong>#8 PropertyMart</strong> — Best online property marketplace Nigeria</li>
-          <li><strong>#9 Purple Real Estate</strong> — Best for Lagos upmarket rentals</li>
-          <li><strong>#10 Cappa & D'Alberto</strong> — Best construction & development firm</li>
+          <li><strong>#1 Mixta Africa</strong> â€” Best large-scale developer, affordable housing</li>
+          <li><strong>#2 Brains & Hammers</strong> â€” Best for Abuja property development</li>
+          <li><strong>#3 RevolutionPlus Property</strong> â€” Best for flexible payment plans</li>
+          <li><strong>#4 Fine & Country Nigeria</strong> â€” Best luxury property agency</li>
+          <li><strong>#5 Landwey Investment</strong> â€” Best land banking & investment</li>
+          <li><strong>#6 UPDC (UAC Property)</strong> â€” Best established developer, Lagos</li>
+          <li><strong>#7 Jide Taiwo & Co.</strong> â€” Most trusted estate agency since 1980</li>
+          <li><strong>#8 PropertyMart</strong> â€” Best online property marketplace Nigeria</li>
+          <li><strong>#9 Purple Real Estate</strong> â€” Best for Lagos upmarket rentals</li>
+          <li><strong>#10 Cappa & D'Alberto</strong> â€” Best construction & development firm</li>
         </ul>
       </div>
 
@@ -12614,12 +14183,12 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> revolutionplus.com.ng</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">4. Fine & Country Nigeria</h2>
-      <p>Fine & Country Nigeria is the local affiliate of Fine & Country International — one of the world's leading luxury real estate brands. In Nigeria, Fine & Country specialises in the sale, rental, and management of premium residential and commercial properties in Lagos, Abuja, and Port Harcourt. The company is the agency of choice for Nigeria's high-net-worth individuals, expatriates, and institutional investors seeking luxury homes, office spaces, and retail properties. Fine & Country Nigeria also provides property management and investment advisory services.</p>
+      <p>Fine & Country Nigeria is the local affiliate of Fine & Country International â€” one of the world's leading luxury real estate brands. In Nigeria, Fine & Country specialises in the sale, rental, and management of premium residential and commercial properties in Lagos, Abuja, and Port Harcourt. The company is the agency of choice for Nigeria's high-net-worth individuals, expatriates, and institutional investors seeking luxury homes, office spaces, and retail properties. Fine & Country Nigeria also provides property management and investment advisory services.</p>
       <p><strong>Best for:</strong> Luxury property sales & rentals, expatriate housing, commercial real estate</p>
       <p><strong>Website:</strong> fineandcountry.com/ng</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">5. Landwey Investment</h2>
-      <p>Landwey Investment is Nigeria's leading land-banking and real estate investment company, offering plots of land in high-growth corridors around Lagos — particularly the Ibeju-Lekki axis and Epe area, near the Dangote Refinery and Lekki Free Trade Zone. The company markets land as an investment vehicle for Nigerians who want to hedge against inflation. Landwey offers flexible monthly payment plans, clear title documentation (Deed of Assignment, Governor's Consent), and has sold land to over 50,000 customers across Nigeria and the diaspora.</p>
+      <p>Landwey Investment is Nigeria's leading land-banking and real estate investment company, offering plots of land in high-growth corridors around Lagos â€” particularly the Ibeju-Lekki axis and Epe area, near the Dangote Refinery and Lekki Free Trade Zone. The company markets land as an investment vehicle for Nigerians who want to hedge against inflation. Landwey offers flexible monthly payment plans, clear title documentation (Deed of Assignment, Governor's Consent), and has sold land to over 50,000 customers across Nigeria and the diaspora.</p>
       <p><strong>Best for:</strong> Land investment, Ibeju-Lekki corridor, diaspora buyers, flexible payments</p>
       <p><strong>Website:</strong> landwey.com.ng</p>
 
@@ -12661,7 +14230,7 @@ export const blogPosts: BlogPost[] = [
             <tr><td class="border border-gray-300 p-3">No land title document shown</td><td class="border border-gray-300 p-3">Demand Certificate of Occupancy or Deed of Assignment before paying</td></tr>
             <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Price far below market rate</td><td class="border border-gray-300 p-3">Verify comparable sales on PropertyMart before proceeding</td></tr>
             <tr><td class="border border-gray-300 p-3">No physical office or registered company</td><td class="border border-gray-300 p-3">Search the CAC register at search.cac.gov.ng</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Agent rushes you to pay immediately</td><td class="border border-gray-300 p-3">Involve a solicitor and request 48–72 hours to do due diligence</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Agent rushes you to pay immediately</td><td class="border border-gray-300 p-3">Involve a solicitor and request 48â€“72 hours to do due diligence</td></tr>
             <tr><td class="border border-gray-300 p-3">Same property shown by multiple agents</td><td class="border border-gray-300 p-3">Check land registry records and confirm with your solicitor</td></tr>
           </tbody>
         </table>
@@ -12669,7 +14238,7 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your real estate company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for property developers, agents, and valuers every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for property developers, agents, and valuers every month on 9jaDirectory. List your business for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Real Estate Business Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -12688,7 +14257,7 @@ export const blogPosts: BlogPost[] = [
       <p>Victoria Island, Ikoyi, and Banana Island remain the most prestigious and highest-value areas. Lekki Phase 1 offers high rental yield for investors. The Ibeju-Lekki corridor (Dangote Refinery area) offers the highest capital appreciation potential at more affordable entry prices. In Abuja, Maitama, Asokoro, and Guzape are the most sought-after areas.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can I get a mortgage in Nigeria?</h3>
-      <p>Yes. The Federal Mortgage Bank of Nigeria (FMBN) offers the National Housing Fund (NHF) loan at 6% interest for contributors. Commercial banks offer mortgage loans at 18–22% per annum. The Lagos State Mortgage Board also offers subsidised mortgages to Lagos residents. Mortgage penetration in Nigeria remains low (less than 1% of GDP), so most property purchases are cash-based.</p>
+      <p>Yes. The Federal Mortgage Bank of Nigeria (FMBN) offers the National Housing Fund (NHF) loan at 6% interest for contributors. Commercial banks offer mortgage loans at 18â€“22% per annum. The Lagos State Mortgage Board also offers subsidised mortgages to Lagos residents. Mortgage penetration in Nigeria remains low (less than 1% of GDP), so most property purchases are cash-based.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -12728,7 +14297,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-24",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Best real estate companies in Nigeria 2026 — Mixta Africa, Brains & Hammers, RevolutionPlus, Fine & Country, Landwey. How to buy property safely in Nigeria.",
+        "description": "Best real estate companies in Nigeria 2026 â€” Mixta Africa, Brains & Hammers, RevolutionPlus, Fine & Country, Landwey. How to buy property safely in Nigeria.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-real-estate-companies-nigeria-2026" }
       },
       {
@@ -12771,7 +14340,7 @@ export const blogPosts: BlogPost[] = [
     ])
   },
 
-  // ─── BEST IT COMPANIES IN LAGOS 2026 ─────────────────────────────────────
+  // â”€â”€â”€ BEST IT COMPANIES IN LAGOS 2026 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   {
     slug: "best-it-companies-lagos-2026",
     title: "Best IT & Technology Companies in Lagos, Nigeria (2026)",
@@ -12779,13 +14348,13 @@ export const blogPosts: BlogPost[] = [
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: Feb 2026</em></p>
 
-      <p>Lagos is the technology hub of Africa — home to more tech startups, developers, and IT service companies than any other city on the continent. From global giants like Interswitch to world-class talent exporters like Andela, the Lagos tech ecosystem has matured rapidly. Whether you need software development, IT infrastructure, cybersecurity, or enterprise systems, the right IT company in Lagos can transform your business.</p>
+      <p>Lagos is the technology hub of Africa â€” home to more tech startups, developers, and IT service companies than any other city on the continent. From global giants like Interswitch to world-class talent exporters like Andela, the Lagos tech ecosystem has matured rapidly. Whether you need software development, IT infrastructure, cybersecurity, or enterprise systems, the right IT company in Lagos can transform your business.</p>
 
       <p>This guide ranks the best IT and technology companies in Lagos and Nigeria for 2026, covering software, fintech infrastructure, enterprise IT, and managed services.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your IT company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerian businesses search for IT companies, software developers, and tech consultants every month on 9jaDirectory. List your business for free — or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerian businesses search for IT companies, software developers, and tech consultants every month on 9jaDirectory. List your business for free â€” or contact us to claim a featured spot at the top of this list.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your IT Company Free &rarr;</a>
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
@@ -12795,29 +14364,29 @@ export const blogPosts: BlogPost[] = [
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-3">Top IT Companies in Lagos at a Glance</h3>
         <ul class="space-y-1 text-green-800">
-          <li><strong>#1 Interswitch Group</strong> — Nigeria's leading payments & fintech infrastructure company</li>
-          <li><strong>#2 SystemSpecs (Remita)</strong> — Best for enterprise payments & government systems</li>
-          <li><strong>#3 Inlaks Computers</strong> — Best for IT infrastructure & banking technology</li>
-          <li><strong>#4 Andela</strong> — Best tech talent platform for software developers</li>
-          <li><strong>#5 Softcom</strong> — Best for digital transformation & enterprise software</li>
-          <li><strong>#6 eProcess International</strong> — Best for IT outsourcing & managed services</li>
-          <li><strong>#7 Computer Warehouse Group (CWG)</strong> — Best for enterprise IT solutions</li>
-          <li><strong>#8 Chams Plc</strong> — Best for identity management & biometrics</li>
-          <li><strong>#9 MainOne (Equinix)</strong> — Best for internet connectivity & data centres</li>
-          <li><strong>#10 Precise Financial Systems</strong> — Best for banking software & core banking</li>
-          <li><strong>Featured: <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I Realent Global Resources</a></strong> — Best PropTech & AI-powered real estate platform in Nigeria</li>
+          <li><strong>#1 Interswitch Group</strong> â€” Nigeria's leading payments & fintech infrastructure company</li>
+          <li><strong>#2 SystemSpecs (Remita)</strong> â€” Best for enterprise payments & government systems</li>
+          <li><strong>#3 Inlaks Computers</strong> â€” Best for IT infrastructure & banking technology</li>
+          <li><strong>#4 Andela</strong> â€” Best tech talent platform for software developers</li>
+          <li><strong>#5 Softcom</strong> â€” Best for digital transformation & enterprise software</li>
+          <li><strong>#6 eProcess International</strong> â€” Best for IT outsourcing & managed services</li>
+          <li><strong>#7 Computer Warehouse Group (CWG)</strong> â€” Best for enterprise IT solutions</li>
+          <li><strong>#8 Chams Plc</strong> â€” Best for identity management & biometrics</li>
+          <li><strong>#9 MainOne (Equinix)</strong> â€” Best for internet connectivity & data centres</li>
+          <li><strong>#10 Precise Financial Systems</strong> â€” Best for banking software & core banking</li>
+          <li><strong>Featured: <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I Realent Global Resources</a></strong> â€” Best PropTech & AI-powered real estate platform in Nigeria</li>
         </ul>
       </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">1. Interswitch Group</h2>
       <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" alt="Best IT companies Lagos Nigeria 2026" class="w-full rounded-lg shadow-lg mb-6" />
-      <p>Interswitch Group is Nigeria's most valuable technology company and Africa's first homegrown fintech unicorn, valued at over $1 billion. Founded in 2002 by Mitchell Elias Elegbe and headquartered in Lagos, Interswitch operates Nigeria's largest payment switching infrastructure — processing billions of transactions annually across its Quickteller, Verve card, and NIBSS-connected networks. The company serves Nigeria's banks, government agencies, telecoms, and retail sector. Interswitch also owns Paycode, a global payment platform, and has expanded across East and Southern Africa. Visa acquired a 20% stake in Interswitch in 2019.</p>
+      <p>Interswitch Group is Nigeria's most valuable technology company and Africa's first homegrown fintech unicorn, valued at over $1 billion. Founded in 2002 by Mitchell Elias Elegbe and headquartered in Lagos, Interswitch operates Nigeria's largest payment switching infrastructure â€” processing billions of transactions annually across its Quickteller, Verve card, and NIBSS-connected networks. The company serves Nigeria's banks, government agencies, telecoms, and retail sector. Interswitch also owns Paycode, a global payment platform, and has expanded across East and Southern Africa. Visa acquired a 20% stake in Interswitch in 2019.</p>
       <p><strong>Best for:</strong> Payment switching, fintech infrastructure, card processing, digital payments</p>
       <p><strong>Location:</strong> Plot 1261A, Bishops Court, Off Adeola Hopewell Street, Victoria Island, Lagos</p>
       <p><strong>Website:</strong> interswitchgroup.com</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">2. SystemSpecs (Remita)</h2>
-      <p>SystemSpecs is a Nigerian technology company best known for developing Remita — the payment platform powering the Nigerian federal government's Treasury Single Account (TSA) system. Remita processes trillions of naira in government payments annually and is used by all federal ministries, agencies, and parastatals, as well as thousands of private sector organisations. SystemSpecs also develops HumanManager — Nigeria's leading HR and payroll software — and provides digital banking solutions. Founded in 1992 and headquartered in Lagos, SystemSpecs is one of Nigeria's most strategically important technology companies.</p>
+      <p>SystemSpecs is a Nigerian technology company best known for developing Remita â€” the payment platform powering the Nigerian federal government's Treasury Single Account (TSA) system. Remita processes trillions of naira in government payments annually and is used by all federal ministries, agencies, and parastatals, as well as thousands of private sector organisations. SystemSpecs also develops HumanManager â€” Nigeria's leading HR and payroll software â€” and provides digital banking solutions. Founded in 1992 and headquartered in Lagos, SystemSpecs is one of Nigeria's most strategically important technology companies.</p>
       <p><strong>Best for:</strong> Government payment systems, HR software, payroll, enterprise payments</p>
       <p><strong>Location:</strong> 26 Keffi Street, Off Awolowo Road, SW Ikoyi, Lagos</p>
       <p><strong>Website:</strong> systemspecs.com.ng</p>
@@ -12829,13 +14398,13 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> inlaks.com</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">4. Andela</h2>
-      <p>Andela is a global technology platform that connects companies with senior software engineers from across Africa. Founded in Lagos in 2014 by Jeremy Johnson, Iyinoluwa Aboyeji, and others, Andela has trained and placed thousands of African software developers with companies including Google, Microsoft, GitHub, and leading US startups. The company operates a competitive talent selection process — historically accepting less than 1% of applicants — ensuring clients access only top-tier engineering talent. Andela went fully remote in 2020 and now operates a distributed model across Africa, with its roots firmly in Lagos.</p>
+      <p>Andela is a global technology platform that connects companies with senior software engineers from across Africa. Founded in Lagos in 2014 by Jeremy Johnson, Iyinoluwa Aboyeji, and others, Andela has trained and placed thousands of African software developers with companies including Google, Microsoft, GitHub, and leading US startups. The company operates a competitive talent selection process â€” historically accepting less than 1% of applicants â€” ensuring clients access only top-tier engineering talent. Andela went fully remote in 2020 and now operates a distributed model across Africa, with its roots firmly in Lagos.</p>
       <p><strong>Best for:</strong> Senior software engineer hiring, remote tech talent, Africa-based developers</p>
       <p><strong>Location:</strong> 6 Uke Street, Garki, Abuja (HQ); originally founded in Lagos</p>
       <p><strong>Website:</strong> andela.com</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">5. Softcom</h2>
-      <p>Softcom is a Nigerian technology company specialising in digital transformation, enterprise software development, and data analytics for large organisations. The company is best known for Eyowo — a digital banking and payments product — and for building custom technology solutions for Nigerian banks, telecoms, government agencies, and multinationals. Softcom also provides cloud computing, systems integration, and cybersecurity services. Founded in 1996 and headquartered in Lagos, Softcom has over 25 years of enterprise IT experience and a strong reputation for complex, mission-critical software delivery.</p>
+      <p>Softcom is a Nigerian technology company specialising in digital transformation, enterprise software development, and data analytics for large organisations. The company is best known for Eyowo â€” a digital banking and payments product â€” and for building custom technology solutions for Nigerian banks, telecoms, government agencies, and multinationals. Softcom also provides cloud computing, systems integration, and cybersecurity services. Founded in 1996 and headquartered in Lagos, Softcom has over 25 years of enterprise IT experience and a strong reputation for complex, mission-critical software delivery.</p>
       <p><strong>Best for:</strong> Digital transformation, custom software, data analytics, enterprise systems</p>
       <p><strong>Location:</strong> 42 Saka Tinubu Street, Victoria Island, Lagos</p>
       <p><strong>Website:</strong> softcom.ng</p>
@@ -12871,12 +14440,12 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Website:</strong> precisefinancial.net</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Featured: A.I Realent Global Resources</h2>
-      <p>A.I Realent Global Resources is Nigeria's standout PropTech company — combining artificial intelligence, digital-first processes, and deep local market expertise to deliver real estate services that are faster, more transparent, and more accessible than traditional property agencies. Operating across Abuja and Lagos, A.I Realent uses technology to streamline property search, title verification, and transaction management for buyers, sellers, landlords, and tenants. The company provides diaspora buyer support (remote property sourcing, virtual tours, verified title documentation review), investment advisory, and property management — all powered by digital tools that remove the friction and risk typical of Nigerian real estate transactions.</p>
+      <p>A.I Realent Global Resources is Nigeria's standout PropTech company â€” combining artificial intelligence, digital-first processes, and deep local market expertise to deliver real estate services that are faster, more transparent, and more accessible than traditional property agencies. Operating across Abuja and Lagos, A.I Realent uses technology to streamline property search, title verification, and transaction management for buyers, sellers, landlords, and tenants. The company provides diaspora buyer support (remote property sourcing, virtual tours, verified title documentation review), investment advisory, and property management â€” all powered by digital tools that remove the friction and risk typical of Nigerian real estate transactions.</p>
       <p><strong>Best for:</strong> AI-powered property search, diaspora buyers, investment advisory, PropTech solutions</p>
       <p><strong>Location:</strong> Abuja, FCT</p>
       <p><strong>Website:</strong> airealent.ng &nbsp;|&nbsp; <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-600 hover:underline font-semibold">View Full Listing on 9jaDirectory &rarr;</a></p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">IT Services Cost Guide — Nigeria 2026</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">IT Services Cost Guide â€” Nigeria 2026</h2>
       <div class="overflow-x-auto my-6">
         <table class="w-full border-collapse border border-gray-300 text-sm">
           <thead class="bg-gray-50">
@@ -12886,12 +14455,12 @@ export const blogPosts: BlogPost[] = [
             </tr>
           </thead>
           <tbody>
-            <tr><td class="border border-gray-300 p-3">Custom web application development</td><td class="border border-gray-300 p-3">₦2,000,000 – ₦20,000,000+</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Mobile app development (iOS or Android)</td><td class="border border-gray-300 p-3">₦3,000,000 – ₦25,000,000+</td></tr>
-            <tr><td class="border border-gray-300 p-3">IT infrastructure managed services (monthly)</td><td class="border border-gray-300 p-3">₦500,000 – ₦5,000,000/month</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cybersecurity audit</td><td class="border border-gray-300 p-3">₦1,500,000 – ₦8,000,000</td></tr>
-            <tr><td class="border border-gray-300 p-3">ERP implementation (SAP/Oracle)</td><td class="border border-gray-300 p-3">₦20,000,000 – ₦200,000,000+</td></tr>
-            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Senior Nigerian developer (monthly contract)</td><td class="border border-gray-300 p-3">₦800,000 – ₦3,000,000/month</td></tr>
+            <tr><td class="border border-gray-300 p-3">Custom web application development</td><td class="border border-gray-300 p-3">â‚¦2,000,000 â€“ â‚¦20,000,000+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Mobile app development (iOS or Android)</td><td class="border border-gray-300 p-3">â‚¦3,000,000 â€“ â‚¦25,000,000+</td></tr>
+            <tr><td class="border border-gray-300 p-3">IT infrastructure managed services (monthly)</td><td class="border border-gray-300 p-3">â‚¦500,000 â€“ â‚¦5,000,000/month</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Cybersecurity audit</td><td class="border border-gray-300 p-3">â‚¦1,500,000 â€“ â‚¦8,000,000</td></tr>
+            <tr><td class="border border-gray-300 p-3">ERP implementation (SAP/Oracle)</td><td class="border border-gray-300 p-3">â‚¦20,000,000 â€“ â‚¦200,000,000+</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Senior Nigerian developer (monthly contract)</td><td class="border border-gray-300 p-3">â‚¦800,000 â€“ â‚¦3,000,000/month</td></tr>
           </tbody>
         </table>
       </div>
@@ -12902,7 +14471,7 @@ export const blogPosts: BlogPost[] = [
       <p>Interswitch Group is Nigeria's largest and most valuable technology company, with a valuation exceeding $1 billion and Visa as a strategic investor. Interswitch processes the majority of Nigeria's electronic payment transactions through its switching infrastructure. SystemSpecs (Remita) is the most strategically critical IT company, powering the federal government's Treasury Single Account.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">How much does software development cost in Nigeria?</h3>
-      <p>A custom web application costs ₦2 million to ₦20 million depending on complexity. A mobile app (iOS or Android) costs ₦3 million to ₦25 million. Senior Nigerian developers on monthly contracts cost ₦800,000 to ₦3 million per month. Rates vary significantly between Lagos-based agencies and freelancers.</p>
+      <p>A custom web application costs â‚¦2 million to â‚¦20 million depending on complexity. A mobile app (iOS or Android) costs â‚¦3 million to â‚¦25 million. Senior Nigerian developers on monthly contracts cost â‚¦800,000 to â‚¦3 million per month. Rates vary significantly between Lagos-based agencies and freelancers.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is Lagos a good place to hire software developers?</h3>
       <p>Yes. Lagos has Africa's largest concentration of software developers, with a rapidly growing pool of skilled engineers in JavaScript, Python, Java, and mobile development. Andela, Ingressive For Good, and platforms like Turing.com and Toptal have helped Lagos developers build international careers. Average developer quality and cost competitiveness make Lagos one of the best cities in the world for tech hiring.</p>
@@ -12948,7 +14517,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-24",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Best IT and technology companies in Lagos Nigeria 2026 — Interswitch, SystemSpecs, Inlaks, Andela, Softcom, CWG. IT costs, developer rates, and enterprise tech guide.",
+        "description": "Best IT and technology companies in Lagos Nigeria 2026 â€” Interswitch, SystemSpecs, Inlaks, Andela, Softcom, CWG. IT costs, developer rates, and enterprise tech guide.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-it-companies-lagos-2026" }
       },
       {
@@ -12975,7 +14544,7 @@ export const blogPosts: BlogPost[] = [
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Which is the biggest IT company in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Interswitch Group is Nigeria's largest IT company with a $1B+ valuation and Visa as investor. SystemSpecs (Remita) powers the federal government's TSA payment system." } },
-          { "@type": "Question", "name": "How much does software development cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Custom web apps cost ₦2M–₦20M. Mobile apps cost ₦3M–₦25M. Senior developers on monthly contracts cost ₦800,000–₦3M/month." } },
+          { "@type": "Question", "name": "How much does software development cost in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Custom web apps cost â‚¦2Mâ€“â‚¦20M. Mobile apps cost â‚¦3Mâ€“â‚¦25M. Senior developers on monthly contracts cost â‚¦800,000â€“â‚¦3M/month." } },
           { "@type": "Question", "name": "Is Lagos a good place to hire software developers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lagos has Africa's largest developer pool. Andela and platforms like Turing have helped Lagos developers build international careers. Quality and cost-competitiveness are both strong." } },
           { "@type": "Question", "name": "Which Nigerian IT company is listed on the stock exchange?", "acceptedAnswer": { "@type": "Answer", "text": "NGX-listed IT companies include Computer Warehouse Group (CWG), Chams Plc, and e-Tranzact International. Interswitch remains privately held." } }
         ]

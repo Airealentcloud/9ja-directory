@@ -1,0 +1,25 @@
+<svg width="1400" height="788" viewBox="0 0 1400 788" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Lagos real estate companies guide</title>
+  <desc id="desc">Black Nigerian property adviser helping a client compare Lagos neighborhoods, listings, and verification details.</desc>
+  <rect width="1400" height="788" fill="#EFF6FF"/>
+  <rect x="74" y="72" width="1252" height="640" rx="42" fill="#FFFFFF"/>
+  <path d="M154 612H1246" stroke="#BFDBFE" stroke-width="18" stroke-linecap="round"/>
+  <rect x="204" y="214" width="110" height="386" rx="16" fill="#93C5FD"/>
+  <rect x="344" y="148" width="128" height="452" rx="16" fill="#60A5FA"/>
+  <rect x="506" y="256" width="116" height="344" rx="16" fill="#BFDBFE"/>
+  <rect x="938" y="202" width="142" height="398" rx="16" fill="#60A5FA"/>
+  <rect x="1112" y="278" width="120" height="322" rx="16" fill="#93C5FD"/>
+  <path d="M702 598C746 515 815 515 858 598" stroke="#16A34A" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="704" cy="342" r="58" fill="#6B3F2A"/>
+  <path d="M642 321C654 271 707 245 755 272C782 287 795 313 790 341C754 338 728 323 700 292C682 314 663 324 642 321Z" fill="#111827"/>
+  <path d="M596 610C606 498 645 432 704 432C763 432 802 498 812 610H596Z" fill="#16A34A"/>
+  <circle cx="920" cy="360" r="54" fill="#5B341F"/>
+  <path d="M864 342C873 296 922 268 968 290C997 303 1010 328 1006 352C972 350 947 335 920 306C903 328 884 341 864 342Z" fill="#111827"/>
+  <path d="M828 610C838 506 870 448 920 448C970 448 1002 506 1012 610H828Z" fill="#0F766E"/>
+  <rect x="478" y="374" width="344" height="190" rx="22" fill="#F8FAFC" stroke="#2563EB" stroke-width="6"/>
+  <rect x="514" y="416" width="216" height="18" rx="9" fill="#2563EB"/>
+  <rect x="514" y="464" width="266" height="14" rx="7" fill="#93C5FD"/>
+  <rect x="514" y="506" width="238" height="14" rx="7" fill="#93C5FD"/>
+  <path d="M752 414L773 435L811 397" stroke="#16A34A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="492" y="136" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="42" font-weight="700">Lagos Real Estate Company Guide</text>
+</svg>
