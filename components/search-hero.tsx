@@ -46,10 +46,10 @@ export default function SearchHero({ states }: { states: State[] }) {
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-                    Discover Local Businesses Across Nigeria
+                    Nigeria Business Directory for Verified Local Businesses
                 </h1>
-                <p className="text-xl md:text-2xl mb-10 text-green-50 drop-shadow-md">
-                    Connect with trusted services in your area
+                <p className="text-xl md:text-2xl mb-10 text-green-50 drop-shadow-md max-w-4xl mx-auto">
+                    Find businesses, services, companies, and professionals across Lagos, Abuja, Port Harcourt, Kano, Ibadan, and all Nigerian states.
                 </p>
 
                 <div className="max-w-4xl mx-auto">

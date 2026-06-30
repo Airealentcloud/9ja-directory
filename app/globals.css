@@ -29,3 +29,20 @@ body {
     text-wrap: balance;
   }
 }
+
+.blog-article img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.blog-article table {
+  display: table;
+  width: 100%;
+}
+
+.blog-article .overflow-x-auto table {
+  min-width: 720px;
+}
