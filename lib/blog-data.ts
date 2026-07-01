@@ -15,6 +15,282 @@
 export const blogPosts: BlogPost[] = [
 
   {
+    slug: "how-to-start-real-estate-business-nigeria",
+    title: "How to Start a Real Estate Business in Nigeria",
+    excerpt: "Learn how to start a real estate business in Nigeria, choose a profitable model, register properly, find clients, build trust, and list your agency online.",
+    keywords: [
+      "how to start real estate business in Nigeria",
+      "real estate business in Nigeria",
+      "start real estate agency Nigeria",
+      "real estate agent business Nigeria",
+      "property business Nigeria",
+      "real estate company registration Nigeria",
+      "how to get real estate clients Nigeria",
+      "list real estate company Nigeria",
+      "real estate business ideas Nigeria",
+      "real estate marketing Nigeria"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: July 2026</em></p>
+
+      <p>Real estate is one of Nigeria's most active business sectors, but it is also one of the easiest places to lose trust. Buyers worry about fake agents, bad titles, duplicated land sales, hidden fees, and people who disappear after payment. That is why starting a real estate business in Nigeria requires more than posting property flyers on WhatsApp. You need a clear model, legal structure, verified contacts, property knowledge, and a way for clients to trust you before they send money.</p>
+
+      <p>This guide explains <strong>how to start a real estate business in Nigeria</strong> as an agent, property marketer, small agency, developer, property manager, or real estate service provider. It is written for beginners who want a practical path and for existing agents who want to look more professional online.</p>
+
+      <figure class="my-6">
+        <img src="/images/blog/abuja-real-estate-companies.svg" alt="Nigerian real estate consultant reviewing property documents with a client" class="w-full rounded-lg shadow-lg" />
+        <figcaption class="text-sm text-gray-500 mt-2">A successful real estate business in Nigeria depends on trust, documentation, client education, and visible proof.</figcaption>
+      </figure>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-green-700 mb-2">For real estate agents and companies</p>
+        <h2 class="text-2xl font-bold text-green-950 mb-3">Want buyers to find your real estate business?</h2>
+        <p class="text-green-900 mb-4">Create a 9jaDirectory profile with your office address, service areas, property types, website, phone number, WhatsApp, photos, and verification details. A complete profile helps buyers confirm your company before they call.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Real Estate Business</a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-green-300 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">See Listing Plans</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Choose the Real Estate Business Model That Fits You</h2>
+      <p>Real estate is not one business. It is a group of related opportunities. Before you spend money on branding or adverts, decide the part of the market you want to enter.</p>
+
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300 text-sm">
+          <thead>
+            <tr class="bg-green-50">
+              <th class="border border-gray-300 p-3 text-left">Model</th>
+              <th class="border border-gray-300 p-3 text-left">How It Works</th>
+              <th class="border border-gray-300 p-3 text-left">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3">Real estate agency</td><td class="border border-gray-300 p-3">Connect buyers, tenants, sellers, and landlords for commission.</td><td class="border border-gray-300 p-3">Beginners with sales and networking skills.</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Property marketing</td><td class="border border-gray-300 p-3">Promote developer projects, estates, land, houses, and apartments.</td><td class="border border-gray-300 p-3">Content creators, salespeople, and digital marketers.</td></tr>
+            <tr><td class="border border-gray-300 p-3">Property management</td><td class="border border-gray-300 p-3">Manage rent collection, maintenance, inspections, and tenant issues.</td><td class="border border-gray-300 p-3">People with operations and customer-service skills.</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3">Real estate development</td><td class="border border-gray-300 p-3">Acquire land, build, sell, lease, or manage completed projects.</td><td class="border border-gray-300 p-3">Investors with capital, partnerships, and legal support.</td></tr>
+            <tr><td class="border border-gray-300 p-3">Short-let or rental business</td><td class="border border-gray-300 p-3">Lease or manage furnished apartments for daily, weekly, or monthly stays.</td><td class="border border-gray-300 p-3">Operators in Lagos, Abuja, Port Harcourt, and tourist/business areas.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>If you are starting with little capital, agency and property marketing are usually easier than development. You can begin by working with credible developers, landlords, or property companies, then earn commissions from closed transactions. If you have access to capital, you can consider land banking, joint ventures, small developments, or short-let operations.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Learn the Market Before You Sell Anything</h2>
+      <p>A weak real estate agent only repeats what the seller says. A serious professional understands the market enough to guide buyers. Study property types, title documents, location advantages, flood risks, access roads, estate rules, government layouts, pricing, and buyer concerns.</p>
+
+      <p>Start with one market instead of trying to sell everywhere. For example:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Lagos:</strong> Lekki, Ajah, Ibeju-Lekki, Epe, Ikorodu, Ikeja, Yaba, Surulere, Sangotedo, Victoria Island, and Ikoyi.</li>
+        <li><strong>Abuja:</strong> Gwarinpa, Lugbe, Lokogoma, Kubwa, Jahi, Guzape, Wuse, Maitama, Asokoro, Katampe, and Karsana.</li>
+        <li><strong>Port Harcourt:</strong> GRA, Peter Odili Road, Rumuola, Trans Amadi, Woji, and fast-growing surrounding areas.</li>
+      </ul>
+
+      <p>Know the difference between land, houses, commercial property, rentals, short-let apartments, and off-plan developments. Buyers will ask hard questions. If your answers are vague, they will move to a more trusted agent.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. Register the Business and Build Legal Trust</h2>
+      <p>If you want to build a serious <strong>real estate business in Nigeria</strong>, register your business with the Corporate Affairs Commission. You can start as a business name, but a limited liability company may look more professional for agency, development, property management, or investment partnerships.</p>
+
+      <p>You should also prepare basic business assets:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>CAC certificate or business registration documents.</li>
+        <li>Business bank account.</li>
+        <li>Official phone number and WhatsApp Business profile.</li>
+        <li>Business email address and website or directory profile.</li>
+        <li>Commission agreement or agency agreement templates.</li>
+        <li>Receipt and invoice process.</li>
+        <li>Clear policy for inspection fees, agency fees, and refunds.</li>
+      </ul>
+
+      <p>Depending on your state and business model, also check relevant professional or state-level requirements. Lagos property professionals should understand LASRERA expectations. Estate surveyors and valuers operate under professional rules. Developers should use lawyers, surveyors, architects, engineers, and town-planning professionals where required. Do not present yourself as licensed for services you are not qualified to provide.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Understand Property Documents and Verification</h2>
+      <p>Trust is the real currency in Nigerian real estate. Before marketing any property, ask for documentation and know what each document means. Common property documents include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Certificate of Occupancy (C of O).</li>
+        <li>Governor's Consent.</li>
+        <li>Deed of Assignment.</li>
+        <li>Survey plan.</li>
+        <li>Registered title documents.</li>
+        <li>Approved building plan where applicable.</li>
+        <li>Estate allocation letter and receipts.</li>
+      </ul>
+
+      <p>Do not tell buyers a property is verified if you have not checked it. Encourage clients to use an independent lawyer and do land registry checks. For Abuja properties, buyers often ask about AGIS verification. For Lagos properties, buyers may ask about excision, Gazette, Governor's Consent, LASRERA awareness, land-use restrictions, and whether the land is under government acquisition.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Decide Your Startup Budget</h2>
+      <p>The amount needed depends on the business model. You can start as an agent with low capital, but you still need money for transport, internet, branding, content, property inspections, and lead generation. A small agency may need office space, staff, website, CRM, signage, camera/phone equipment, and professional support.</p>
+
+      <p>A realistic starter budget may include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Business registration and basic legal setup.</li>
+        <li>Brand identity, logo, and simple website or landing page.</li>
+        <li>Professional photos and videos for property listings.</li>
+        <li>Transportation for site inspections.</li>
+        <li>Phone, data, WhatsApp Business, and CRM tools.</li>
+        <li>Directory listing, Google Business Profile, and local SEO setup.</li>
+        <li>Paid ads budget if you already have verified offers and a follow-up system.</li>
+      </ul>
+
+      <p>Do not spend heavily on ads before your proof is ready. First build a clean profile, verified contact details, real photos, property information, testimonials, and a response process. Then promote.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Find Properties You Can Market Honestly</h2>
+      <p>Your first inventory may come from developers, landlords, property owners, other agents, or real estate companies. Be careful. If you market bad properties, your brand suffers even if you did not create the problem.</p>
+
+      <p>Before promoting any property, confirm:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>The owner or developer has authority to sell or lease.</li>
+        <li>The location and coordinates are accurate.</li>
+        <li>The price, payment plan, and extra fees are clear.</li>
+        <li>Documents are available for lawyer review.</li>
+        <li>The commission structure is agreed in writing.</li>
+        <li>Inspection process, closing process, and payment account are clearly stated.</li>
+      </ul>
+
+      <p>If you are working with another agent, agree on commission sharing before the client appears. Many real estate disputes start because agents only discuss commission after a deal is nearly closed.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Build Online Visibility and Trust</h2>
+      <p>Many buyers now search online before calling an agent. They want to see if you are real, active, and traceable. This is where your digital presence matters.</p>
+
+      <p>Set up these channels properly:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Google Business Profile:</strong> add your business name, category, address or service area, phone, photos, and opening hours.</li>
+        <li><strong>9jaDirectory listing:</strong> create a complete profile under <a href="/categories/real-estate" class="text-green-600 hover:underline font-semibold">Real Estate</a> with your services, city, photos, and contact details.</li>
+        <li><strong>Website or landing page:</strong> show your listings, service areas, documents checklist, and contact form.</li>
+        <li><strong>Social media:</strong> use Instagram, TikTok, Facebook, LinkedIn, and YouTube for property tours and educational content.</li>
+        <li><strong>WhatsApp Business:</strong> add catalogues, quick replies, labels, and a professional greeting message.</li>
+      </ul>
+
+      <div class="bg-gray-900 rounded-xl p-6 my-8 text-white">
+        <h2 class="text-2xl font-bold mb-3">Make Your Real Estate Business Easier to Verify</h2>
+        <p class="text-gray-200 mb-4">A complete 9jaDirectory profile gives buyers another place to confirm your business name, category, city, phone number, and services before they call.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-500 px-5 py-3 font-semibold text-white hover:bg-green-600">Add Real Estate Business</a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-gray-500 bg-transparent px-5 py-3 font-semibold text-gray-100 hover:border-gray-300">View Paid Listing Options</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Learn How to Get Real Estate Clients</h2>
+      <p>When people ask <strong>how to start real estate business in Nigeria</strong>, they often focus on registration and forget the main problem: clients. Without leads, you have no business.</p>
+
+      <p>Use a practical client-acquisition system:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Educational content:</strong> publish posts about documents, location reviews, price ranges, red flags, inspection tips, and buying mistakes.</li>
+        <li><strong>Property videos:</strong> show real tours, access roads, estate facilities, room sizes, neighborhood details, and honest pros and cons.</li>
+        <li><strong>Directory visibility:</strong> list your business where buyers search for real estate companies and agents.</li>
+        <li><strong>Referrals:</strong> ask satisfied buyers, landlords, developers, and lawyers to refer clients.</li>
+        <li><strong>Partnerships:</strong> build relationships with lawyers, surveyors, mortgage brokers, architects, relocation consultants, and construction firms.</li>
+        <li><strong>Email and WhatsApp follow-up:</strong> keep leads organized and follow up with useful property options, not spam.</li>
+      </ul>
+
+      <p>Your goal is to become the agent or company that gives clear answers. People buy from professionals who reduce fear.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Avoid Common Mistakes</h2>
+      <p>Real estate can produce strong income, but careless mistakes can damage your name quickly. Avoid these errors:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li>Marketing properties without confirming documents.</li>
+        <li>Using fake scarcity such as "last plot" when it is not true.</li>
+        <li>Copying other agents' photos without permission.</li>
+        <li>Collecting money into personal accounts without proper records.</li>
+        <li>Promising guaranteed returns you cannot prove.</li>
+        <li>Ignoring legal agreements for commission and partnerships.</li>
+        <li>Running ads before you have a proper sales and follow-up process.</li>
+        <li>Hiding extra charges from buyers or tenants.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Create a Simple Launch Plan</h2>
+      <p>Here is a simple 30-day plan to launch properly:</p>
+      <ol class="list-decimal pl-5 mt-2 mb-4">
+        <li><strong>Days 1-5:</strong> choose your business model, service area, niche, and target customers.</li>
+        <li><strong>Days 6-10:</strong> register your business, open a business account, create templates, and set up official contacts.</li>
+        <li><strong>Days 11-15:</strong> build your online profile, Google Business Profile, 9jaDirectory listing, and social pages.</li>
+        <li><strong>Days 16-20:</strong> secure your first verified property inventory and document your inspection process.</li>
+        <li><strong>Days 21-25:</strong> publish educational content and property videos that answer buyer questions.</li>
+        <li><strong>Days 26-30:</strong> start outreach, collect leads, follow up, and improve your profile based on questions clients ask.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>Learning <strong>how to start a real estate business in Nigeria</strong> is not only about joining a profitable industry. It is about building trust in a market where buyers are careful for good reasons. Choose a clear model, register properly, understand documents, verify properties, build online proof, and create a lead system that brings serious clients.</p>
+
+      <p>If you are ready to look more professional, start with your public profile. <a href="/add-business" class="text-green-600 hover:underline font-semibold">List your real estate business on 9jaDirectory</a>, add your service areas, upload real photos, and make it easier for clients to verify and contact you.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I start a real estate business in Nigeria without money?</h3>
+      <p>You can start as a property marketer or agent with low capital, but not with zero effort. You still need transport, data, phone, sales training, verified property access, and a way to build trust. Development, property management, and short-let businesses usually need more capital.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Do I need CAC registration to become a real estate agent?</h3>
+      <p>You can learn and work under an existing company before registering your own business, but CAC registration is important if you want to operate professionally, open a business bank account, sign agreements, and build long-term trust.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the best real estate business model for beginners?</h3>
+      <p>Agency and property marketing are usually the easiest entry points because they require less capital than development. The key is to work with credible property owners or developers and avoid marketing anything you have not verified.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do real estate businesses get clients in Nigeria?</h3>
+      <p>They get clients through referrals, Google searches, social media, property videos, partnerships, WhatsApp follow-up, Google Business Profile, and trusted directory listings. A complete 9jaDirectory profile can support your visibility and trust signals.</p>
+    `,
+    image: "/images/blog/abuja-real-estate-companies.svg",
+    date: "Jul 1, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Real Estate",
+    readTime: "13 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How to Start a Real Estate Business in Nigeria",
+        "description": "Learn how to start a real estate business in Nigeria, choose a profitable model, register properly, find clients, build trust, and list your agency online.",
+        "image": "https://www.9jadirectory.org/images/blog/abuja-real-estate-companies.svg",
+        "datePublished": "2026-07-01",
+        "dateModified": "2026-07-01",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        },
+        "keywords": "how to start real estate business in Nigeria, real estate business in Nigeria, start real estate agency Nigeria, property business Nigeria",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.9jadirectory.org/blog/how-to-start-real-estate-business-nigeria"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Start a Real Estate Business in Nigeria",
+        "description": "A practical process for starting a real estate business in Nigeria.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Choose a model", "text": "Choose between agency, property marketing, management, development, short-let, or another real estate business model." },
+          { "@type": "HowToStep", "position": 2, "name": "Study the market", "text": "Understand your target city, property types, prices, title documents, and buyer concerns." },
+          { "@type": "HowToStep", "position": 3, "name": "Register and set up", "text": "Register with CAC where appropriate, open a business account, and prepare official contact channels and agreements." },
+          { "@type": "HowToStep", "position": 4, "name": "Verify property inventory", "text": "Work only with property owners, developers, or agents who can provide clear documents and agreed commission terms." },
+          { "@type": "HowToStep", "position": 5, "name": "Build visibility", "text": "Create a website or directory profile, Google Business Profile, and social media pages with real proof and contact details." },
+          { "@type": "HowToStep", "position": 6, "name": "Get clients", "text": "Use referrals, content, videos, partnerships, directory listings, and follow-up systems to convert leads." }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Can I start a real estate business in Nigeria without money?", "acceptedAnswer": { "@type": "Answer", "text": "You can start as a property marketer or agent with low capital, but you still need transport, data, phone, sales training, verified property access, and a way to build trust." } },
+          { "@type": "Question", "name": "Do I need CAC registration to become a real estate agent?", "acceptedAnswer": { "@type": "Answer", "text": "CAC registration is important if you want to operate professionally, open a business bank account, sign agreements, and build long-term trust." } },
+          { "@type": "Question", "name": "What is the best real estate business model for beginners?", "acceptedAnswer": { "@type": "Answer", "text": "Agency and property marketing are usually the easiest entry points because they require less capital than development." } },
+          { "@type": "Question", "name": "How do real estate businesses get clients in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "They get clients through referrals, Google searches, social media, property videos, partnerships, WhatsApp follow-up, Google Business Profile, and trusted directory listings." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "How to Start a Real Estate Business in Nigeria", "item": "https://www.9jadirectory.org/blog/how-to-start-real-estate-business-nigeria" }
+        ]
+      }
+    ])
+  },
+
+  {
     slug: "local-seo-nigerian-small-businesses-rank-city",
     title: "Local SEO for Nigerian Small Businesses: How to Rank in Your City",
     excerpt: "Learn how Nigerian small businesses can rank for city searches, improve Google Business Profile visibility, build trusted citations, and turn local search traffic into customers.",
