@@ -38,7 +38,7 @@ export default function AdminListingsPage() {
     const [rejectionReason, setRejectionReason] = useState('')
     const [searchQuery, setSearchQuery] = useState('')
     const [statusFilter, setStatusFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('pending')
-    const [paymentFilter, setPaymentFilter] = useState<'all' | 'success' | 'pending' | 'failed' | 'abandoned' | 'none'>('success')
+    const [paymentFilter, setPaymentFilter] = useState<'all' | 'success' | 'pending' | 'failed' | 'abandoned' | 'none'>('all')
     const [processingId, setProcessingId] = useState<string | null>(null)
     const supabase = createClient()
 
@@ -367,6 +367,12 @@ export default function AdminListingsPage() {
         rejected: listings.filter(l => l.status === 'rejected').length,
     }
 
+    const paymentStats = {
+        paid: listings.filter(l => (l.payment_status || 'none') === 'success').length,
+        pending: listings.filter(l => (l.payment_status || 'none') === 'pending').length,
+        noPayment: listings.filter(l => (l.payment_status || 'none') === 'none').length,
+    }
+
     return (
         <div>
             <div className="flex justify-between items-center mb-6">
@@ -426,6 +432,9 @@ export default function AdminListingsPage() {
                         <option value="failed">Failed</option>
                         <option value="none">No payment started</option>
                     </select>
+                    <span className="text-xs text-gray-500">
+                        Paid {paymentStats.paid} • Payment pending {paymentStats.pending} • No linked payment {paymentStats.noPayment}
+                    </span>
                 </div>
             </div>
 
