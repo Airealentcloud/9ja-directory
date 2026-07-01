@@ -6,22 +6,8 @@ import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCus
 import { SITE_URL } from '@/lib/seo/site-url'
 
 // Helper to check if user is admin
-// Helper to check if user is admin
 async function checkAdmin() {
     const supabase = await createClient()
-
-    // Use the secure RPC function to check admin status
-    // This avoids RLS recursion issues
-    const { data: isAdmin, error } = await supabase.rpc('is_admin')
-
-    if (!error) {
-        if (!isAdmin) {
-            throw new Error('Unauthorized: Admin access required')
-        }
-        return supabase
-    }
-
-    console.warn('RPC admin check failed, falling back to profile role check:', error)
 
     const {
         data: { user },

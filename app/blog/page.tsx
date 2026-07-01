@@ -5,6 +5,11 @@ import type { Metadata } from 'next';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org';
 
+function getPostTime(date: string) {
+    const time = Date.parse(date);
+    return Number.isNaN(time) ? 0 : time;
+}
+
 export const metadata: Metadata = {
     title: 'Business Blog & Guides | 9jaDirectory',
     description: 'Latest insights, guides, and news about business in Nigeria. Learn how to grow, find services, and make smarter decisions with 9jaDirectory.',
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
-    const sortedPosts = [...blogPosts].reverse();
+    const sortedPosts = [...blogPosts].sort((a, b) => getPostTime(b.date) - getPostTime(a.date));
     const featuredPost = sortedPosts[0];
     const recentPosts = sortedPosts.slice(1);
 
@@ -73,7 +78,7 @@ export default function BlogIndexPage() {
                 url: `${siteUrl}/logo.png`,
             },
         },
-        blogPost: blogPosts.slice(0, 20).map((post) => ({
+        blogPost: sortedPosts.slice(0, 20).map((post) => ({
             '@type': 'BlogPosting',
             headline: post.title,
             description: post.excerpt,
