@@ -18,11 +18,17 @@ export default async function AdminDashboardPage() {
         .from('listings')
         .select('*', { count: 'exact', head: true })
 
+    const { count: paidLeadCount } = await supabase
+        .from('payment_leads')
+        .select('*', { count: 'exact', head: true })
+        .eq('status', 'success')
+        .is('listing_id', null)
+
     return (
         <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Admin Dashboard</h2>
 
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 {/* Pending Approvals - Clickable and Prominent */}
                 <Link href="/admin/listings" className="block">
                     <div className="bg-gradient-to-br from-yellow-50 to-orange-50 overflow-hidden shadow-lg rounded-lg border-2 border-yellow-400 hover:shadow-xl transition-shadow cursor-pointer">
@@ -44,6 +50,27 @@ export default async function AdminDashboardPage() {
                                 <div className="flex-shrink-0">
                                     <svg className="h-12 w-12 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link href="/admin/payment-leads" className="block">
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-50 overflow-hidden shadow-lg rounded-lg border-2 border-green-400 hover:shadow-xl transition-shadow cursor-pointer">
+                        <div className="px-4 py-5 sm:p-6">
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <dt className="text-sm font-medium text-gray-700 truncate">Paid Leads</dt>
+                                    <dd className="mt-1 text-4xl font-bold text-green-600">{paidLeadCount || 0}</dd>
+                                    <p className="mt-2 text-sm text-green-700 font-medium">
+                                        Check unlinked payments →
+                                    </p>
+                                </div>
+                                <div className="flex-shrink-0">
+                                    <svg className="h-12 w-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a5 5 0 00-10 0v2M5 9h14l-1 11H6L5 9zm7 4v3" />
                                     </svg>
                                 </div>
                             </div>

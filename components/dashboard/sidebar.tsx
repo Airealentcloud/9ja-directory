@@ -133,6 +133,16 @@ export default function Sidebar({ isAdmin, isOpen = true, onClose }: SidebarProp
                                 Manage Listings
                             </Link>
                             <Link
+                                href="/admin/payment-leads"
+                                onClick={handleLinkClick}
+                                className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/payment-leads')
+                                    ? 'bg-purple-50 text-purple-700'
+                                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                    }`}
+                            >
+                                Paid Leads
+                            </Link>
+                            <Link
                                 href="/admin/reviews"
                                 onClick={handleLinkClick}
                                 className={`flex items-center px-4 py-2 text-sm font-medium rounded-md ${isActive('/admin/reviews')
