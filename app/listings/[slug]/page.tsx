@@ -51,6 +51,15 @@ interface ListingData {
   [key: string]: unknown
 }
 
+interface ReviewData {
+  id?: string
+  rating: number
+  title?: string | null
+  comment?: string | null
+  reviewer_name?: string | null
+  created_at?: string | null
+}
+
 // Helper to avoid long waits if Supabase is slow
 async function withTimeout<T>(thenable: PromiseLike<T>, ms = 5000): Promise<T> {
   return Promise.race([
@@ -59,6 +68,20 @@ async function withTimeout<T>(thenable: PromiseLike<T>, ms = 5000): Promise<T> {
       setTimeout(() => reject(new Error('Request timed out')), ms)
     ),
   ])
+}
+
+function formatReviewDate(date?: string | null) {
+  if (!date) return ''
+
+  return new Intl.DateTimeFormat('en-NG', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date(date))
+}
+
+function getReviewerInitial(name?: string | null) {
+  return name?.trim().charAt(0).toUpperCase() || 'C'
 }
 
 // FIXED VERSION - Recreated to resolve persistent syntax error
@@ -110,12 +133,12 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const websiteUrl = listing.website_url || listing.website || ''
 
   // Fetch reviews for this listing
-  let reviews: Array<{ rating: number; id?: string; comment?: string; created_at?: string }> = []
+  let reviews: ReviewData[] = []
   try {
-    const reviewResult = await withTimeout<{ data: Array<{ rating: number }> | null; error: unknown }>(
+    const reviewResult = await withTimeout<{ data: ReviewData[] | null; error: unknown }>(
       supabase
         .from('reviews')
-        .select('*')
+        .select('id, rating, title, comment, reviewer_name, created_at')
         .eq('listing_id', listing.id)
         .eq('status', 'approved')
         .order('created_at', { ascending: false })
@@ -131,6 +154,11 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   const averageRating = reviews && reviews.length > 0
     ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
     : undefined
+  const roundedAverageRating = averageRating ? Math.round(averageRating) : 0
+  const ratingDistribution = [5, 4, 3, 2, 1].map((rating) => ({
+    rating,
+    count: reviews.filter((review) => review.rating === rating).length,
+  }))
 
   // Check auth status and claim permission for ClaimButton
   const { data: { user } } = await supabase.auth.getUser()
@@ -354,7 +382,7 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                         {[1, 2, 3, 4, 5].map((star) => (
                           <svg
                             key={star}
-                            className={`w-5 h-5 ${star <= 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+                            className={`w-5 h-5 ${star <= roundedAverageRating ? 'text-yellow-400' : 'text-gray-300'}`}
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -362,7 +390,11 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
                           </svg>
                         ))}
                       </div>
-                      <span className="text-gray-600 text-sm">4.0 (12 reviews)</span>
+                      <span className="text-gray-600 text-sm">
+                        {reviews.length > 0
+                          ? `${averageRating?.toFixed(1)} (${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'})`
+                          : 'No reviews yet'}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -461,105 +493,102 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">Customer Reviews</h2>
 
-                {/* Review Summary */}
-                <div className="border-b pb-6 mb-6">
-                  <div className="flex items-center gap-8">
-                    <div className="text-center">
-                      <div className="text-5xl font-bold text-gray-900">4.0</div>
-                      <div className="flex items-center justify-center mt-2">
-                        {[1, 2, 3, 4, 5].map((star) => (
-                          <svg
-                            key={star}
-                            className={`w-5 h-5 ${star <= 4 ? 'text-yellow-400' : 'text-gray-300'}`}
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
+                {reviews.length > 0 ? (
+                  <>
+                    {/* Review Summary */}
+                    <div className="border-b pb-6 mb-6">
+                      <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+                        <div className="text-center sm:w-36">
+                          <div className="text-5xl font-bold text-gray-900">{averageRating?.toFixed(1)}</div>
+                          <div className="flex items-center justify-center mt-2">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <svg
+                                key={star}
+                                className={`w-5 h-5 ${star <= roundedAverageRating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                            ))}
+                          </div>
+                          <p className="text-gray-600 text-sm mt-1">
+                            {reviews.length} {reviews.length === 1 ? 'review' : 'reviews'}
+                          </p>
+                        </div>
+                        <div className="flex-1">
+                          {ratingDistribution.map(({ rating, count }) => (
+                            <div key={rating} className="flex items-center gap-2 mb-1">
+                              <span className="text-sm text-gray-600 w-3">{rating}</span>
+                              <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div
+                                  className="h-full bg-yellow-400"
+                                  style={{ width: `${(count / reviews.length) * 100}%` }}
+                                />
+                              </div>
+                              <span className="w-6 text-right text-xs text-gray-500">{count}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <p className="text-gray-600 text-sm mt-1">12 reviews</p>
                     </div>
-                    <div className="flex-1">
-                      {[5, 4, 3, 2, 1].map((rating) => (
-                        <div key={rating} className="flex items-center gap-2 mb-1">
-                          <span className="text-sm text-gray-600 w-3">{rating}</span>
-                          <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                          <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                              className="h-full bg-yellow-400"
-                              style={{ width: rating === 5 ? '50%' : rating === 4 ? '40%' : '10%' }}
-                            />
+
+                    {/* Approved Reviews */}
+                    <div className="space-y-6">
+                      {reviews.map((review, index) => (
+                        <div key={review.id || `${review.created_at}-${index}`} className="border-b pb-6 last:border-b-0 last:pb-0">
+                          <div className="flex items-start gap-4">
+                            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-xl font-semibold text-green-600">
+                                {getReviewerInitial(review.reviewer_name)}
+                              </span>
+                            </div>
+                            <div className="flex-1">
+                              <div className="mb-2">
+                                <h4 className="font-semibold text-gray-900">
+                                  {review.reviewer_name || 'Customer'}
+                                </h4>
+                                <div className="flex flex-wrap items-center gap-2">
+                                  <div className="flex">
+                                    {[1, 2, 3, 4, 5].map((star) => (
+                                      <svg
+                                        key={star}
+                                        className={`w-4 h-4 ${star <= review.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                      >
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                      </svg>
+                                    ))}
+                                  </div>
+                                  {review.created_at && (
+                                    <span className="text-gray-500 text-sm">{formatReviewDate(review.created_at)}</span>
+                                  )}
+                                </div>
+                              </div>
+                              {review.title && (
+                                <h5 className="font-medium text-gray-900 mb-1">{review.title}</h5>
+                              )}
+                              {review.comment && (
+                                <p className="text-gray-700">{review.comment}</p>
+                              )}
+                            </div>
                           </div>
                         </div>
                       ))}
                     </div>
+                  </>
+                ) : (
+                  <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-6 text-center">
+                    <p className="font-medium text-gray-900">No customer reviews yet.</p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      Reviews will appear here only after a real customer submits one and it is approved.
+                    </p>
                   </div>
-                </div>
-
-                {/* Sample Reviews */}
-                <div className="space-y-6">
-                  <div className="border-b pb-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-xl font-semibold text-green-600">A</span>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <div>
-                            <h4 className="font-semibold text-gray-900">Adebayo O.</h4>
-                            <div className="flex items-center gap-2">
-                              <div className="flex">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                  <svg key={star} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                  </svg>
-                                ))}
-                              </div>
-                              <span className="text-gray-500 text-sm">2 weeks ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          Excellent service and very professional staff. Highly recommended for anyone looking for quality accommodation in Lagos.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pb-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-xl font-semibold text-blue-600">C</span>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <div>
-                            <h4 className="font-semibold text-gray-900">Chiamaka N.</h4>
-                            <div className="flex items-center gap-2">
-                              <div className="flex">
-                                {[1, 2, 3, 4].map((star) => (
-                                  <svg key={star} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                  </svg>
-                                ))}
-                                <svg className="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                              </div>
-                              <span className="text-gray-500 text-sm">1 month ago</span>
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          Good location and friendly staff. The facilities are clean and well-maintained.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                )}
 
                 {/* Write Review Button */}
                 <div className="mt-6 pt-6 border-t">
