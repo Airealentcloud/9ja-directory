@@ -1,11 +1,9 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
-import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
 import { SITE_URL } from '@/lib/seo/site-url'
-import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 
 // Helper to check if user is admin
 async function checkAdmin() {
@@ -57,14 +55,16 @@ function shouldUseLegalCategory(input: string) {
 }
 
 export async function createListingFromPaymentLeadServer(formData: FormData) {
-    await checkAdmin()
+    const supabase = await checkAdmin()
+
+    const {
+        data: { user: adminUser },
+    } = await supabase.auth.getUser()
 
     const leadId = String(formData.get('lead_id') || '').trim()
     if (!leadId) {
         return { error: { message: 'Payment lead ID is required.' } }
     }
-
-    const supabase = createAdminClient()
 
     const { data: lead, error: leadError } = await supabase
         .from('payment_leads')
@@ -91,43 +91,9 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
 
     const businessName = String(lead.business_name || '').trim() || email.split('@')[0] || 'Business Listing'
     const phone = String(lead.phone || '').trim() || null
-
-    const { data: existingUsers } = await supabase.auth.admin.listUsers()
-    let userId = existingUsers?.users?.find((user) => user.email?.toLowerCase() === email)?.id || lead.user_id || null
-
+    const userId = lead.user_id || adminUser?.id
     if (!userId) {
-        const temporaryPassword = `9ja-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`
-        const { data: createdUser, error: createUserError } = await supabase.auth.admin.createUser({
-            email,
-            password: temporaryPassword,
-            email_confirm: true,
-            user_metadata: {
-                full_name: businessName,
-                phone: phone || '',
-            },
-        })
-
-        if (createUserError || !createdUser?.user) {
-            return { error: { message: createUserError?.message || 'Could not create customer account.' } }
-        }
-
-        userId = createdUser.user.id
-    }
-
-    const { error: profileError } = await supabase
-        .from('profiles')
-        .upsert(
-            {
-                id: userId,
-                email,
-                full_name: businessName,
-                phone,
-            },
-            { onConflict: 'id' }
-        )
-
-    if (profileError) {
-        return { error: { message: profileError.message } }
+        return { error: { message: 'Could not identify an account to attach this listing to.' } }
     }
 
     let categoryId: string | null = null
@@ -148,7 +114,7 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
             user_id: userId,
             business_name: businessName,
             slug: buildSlug(businessName),
-            description: 'Paid listing created from admin payment verification. Please review and complete the business details before approval.',
+            description: 'Premium paid listing created from payment verification. Please review and complete the business details before approval.',
             phone,
             email,
             category_id: categoryId,
@@ -193,24 +159,18 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
             plan: lead.plan,
             amount: lead.amount,
             currency: lead.currency,
-            status: 'pending',
-            paid_at: lead.paid_at,
+            status: 'success',
+            paid_at: lead.paid_at || new Date().toISOString(),
             metadata: {
                 source: 'admin_paid_lead_conversion',
                 payment_lead_id: lead.id,
+                customer_email: email,
             },
         })
 
         if (paymentInsertError) {
             return { error: { message: paymentInsertError.message } }
         }
-
-        await fulfillPaystackSuccess({
-            reference: lead.reference,
-            amountKobo: lead.amount,
-            currency: lead.currency,
-            paidAt: lead.paid_at || null,
-        })
     }
 
     const { error: leadUpdateError } = await supabase
