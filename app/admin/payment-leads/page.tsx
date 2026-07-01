@@ -1,5 +1,11 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
+import { createListingFromPaymentLeadServer } from '@/app/actions/admin'
+
+async function createListingFormAction(formData: FormData) {
+  'use server'
+  await createListingFromPaymentLeadServer(formData)
+}
 
 type PaymentLead = {
   id: string
@@ -138,6 +144,17 @@ export default async function AdminPaymentLeadsPage() {
                           <p className="mt-2 max-w-xs text-xs text-gray-500">
                             Create or find the listing, then connect this payment reference before approval.
                           </p>
+                          {lead.status === 'success' && (
+                            <form action={createListingFormAction} className="mt-3">
+                              <input type="hidden" name="lead_id" value={lead.id} />
+                              <button
+                                type="submit"
+                                className="inline-flex rounded-md bg-green-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-green-700"
+                              >
+                                Create pending listing
+                              </button>
+                            </form>
+                          )}
                         </div>
                       )}
                     </td>

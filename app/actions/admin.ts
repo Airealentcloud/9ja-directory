@@ -1,9 +1,11 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 
 // Helper to check if user is admin
 async function checkAdmin() {
@@ -35,6 +37,199 @@ async function checkAdmin() {
     }
 
     return supabase
+}
+
+function buildSlug(name: string) {
+    const base = name
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)+/g, '')
+        .slice(0, 70)
+
+    return `${base || 'business-listing'}-${Math.random().toString(36).slice(2, 7)}`
+}
+
+function shouldUseLegalCategory(input: string) {
+    const value = input.toLowerCase()
+    return ['law', 'legal', 'lawfirm', 'law firm', 'solicitor', 'attorney', 'barrister'].some((term) =>
+        value.includes(term)
+    )
+}
+
+export async function createListingFromPaymentLeadServer(formData: FormData) {
+    await checkAdmin()
+
+    const leadId = String(formData.get('lead_id') || '').trim()
+    if (!leadId) {
+        return { error: { message: 'Payment lead ID is required.' } }
+    }
+
+    const supabase = createAdminClient()
+
+    const { data: lead, error: leadError } = await supabase
+        .from('payment_leads')
+        .select('id, user_id, listing_id, email, phone, business_name, plan, amount, currency, reference, status, paid_at')
+        .eq('id', leadId)
+        .maybeSingle()
+
+    if (leadError || !lead) {
+        return { error: { message: leadError?.message || 'Payment lead not found.' } }
+    }
+
+    if (lead.listing_id) {
+        return { data: { listing_id: lead.listing_id, message: 'This payment lead already has a listing.' } }
+    }
+
+    if (lead.status !== 'success') {
+        return { error: { message: 'Only successful paid leads can be converted to listings.' } }
+    }
+
+    const email = String(lead.email || '').trim().toLowerCase()
+    if (!email) {
+        return { error: { message: 'The paid lead has no email address.' } }
+    }
+
+    const businessName = String(lead.business_name || '').trim() || email.split('@')[0] || 'Business Listing'
+    const phone = String(lead.phone || '').trim() || null
+
+    const { data: existingUsers } = await supabase.auth.admin.listUsers()
+    let userId = existingUsers?.users?.find((user) => user.email?.toLowerCase() === email)?.id || lead.user_id || null
+
+    if (!userId) {
+        const temporaryPassword = `9ja-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`
+        const { data: createdUser, error: createUserError } = await supabase.auth.admin.createUser({
+            email,
+            password: temporaryPassword,
+            email_confirm: true,
+            user_metadata: {
+                full_name: businessName,
+                phone: phone || '',
+            },
+        })
+
+        if (createUserError || !createdUser?.user) {
+            return { error: { message: createUserError?.message || 'Could not create customer account.' } }
+        }
+
+        userId = createdUser.user.id
+    }
+
+    const { error: profileError } = await supabase
+        .from('profiles')
+        .upsert(
+            {
+                id: userId,
+                email,
+                full_name: businessName,
+                phone,
+            },
+            { onConflict: 'id' }
+        )
+
+    if (profileError) {
+        return { error: { message: profileError.message } }
+    }
+
+    let categoryId: string | null = null
+    if (shouldUseLegalCategory(`${businessName} ${email}`)) {
+        const { data: legalCategory } = await supabase
+            .from('categories')
+            .select('id')
+            .or('name.ilike.%legal%,slug.ilike.%legal%,name.ilike.%law%,slug.ilike.%law%')
+            .limit(1)
+            .maybeSingle()
+
+        categoryId = legalCategory?.id || null
+    }
+
+    const { data: listing, error: listingError } = await supabase
+        .from('listings')
+        .insert({
+            user_id: userId,
+            business_name: businessName,
+            slug: buildSlug(businessName),
+            description: 'Paid listing created from admin payment verification. Please review and complete the business details before approval.',
+            phone,
+            email,
+            category_id: categoryId,
+            status: 'pending',
+        })
+        .select('id')
+        .single()
+
+    if (listingError || !listing) {
+        return { error: { message: listingError?.message || 'Could not create pending listing.' } }
+    }
+
+    const { data: existingPayment } = await supabase
+        .from('payments')
+        .select('id')
+        .eq('reference', lead.reference)
+        .maybeSingle()
+
+    if (existingPayment?.id) {
+        const { error: paymentUpdateError } = await supabase
+            .from('payments')
+            .update({
+                user_id: userId,
+                listing_id: listing.id,
+                plan: lead.plan,
+                amount: lead.amount,
+                currency: lead.currency,
+                status: 'success',
+                paid_at: lead.paid_at || new Date().toISOString(),
+            })
+            .eq('id', existingPayment.id)
+
+        if (paymentUpdateError) {
+            return { error: { message: paymentUpdateError.message } }
+        }
+    } else {
+        const { error: paymentInsertError } = await supabase.from('payments').insert({
+            user_id: userId,
+            listing_id: listing.id,
+            provider: 'paystack',
+            reference: lead.reference,
+            plan: lead.plan,
+            amount: lead.amount,
+            currency: lead.currency,
+            status: 'pending',
+            paid_at: lead.paid_at,
+            metadata: {
+                source: 'admin_paid_lead_conversion',
+                payment_lead_id: lead.id,
+            },
+        })
+
+        if (paymentInsertError) {
+            return { error: { message: paymentInsertError.message } }
+        }
+
+        await fulfillPaystackSuccess({
+            reference: lead.reference,
+            amountKobo: lead.amount,
+            currency: lead.currency,
+            paidAt: lead.paid_at || null,
+        })
+    }
+
+    const { error: leadUpdateError } = await supabase
+        .from('payment_leads')
+        .update({
+            user_id: userId,
+            listing_id: listing.id,
+        })
+        .eq('id', lead.id)
+
+    if (leadUpdateError) {
+        return { error: { message: leadUpdateError.message } }
+    }
+
+    revalidatePath('/admin/payment-leads')
+    revalidatePath('/admin/listings')
+    revalidatePath('/admin/dashboard')
+
+    return { data: { listing_id: listing.id } }
 }
 
 // --- Review Actions ---
