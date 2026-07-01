@@ -122,6 +122,7 @@ export default async function AdminPaymentLeadsPage({
                 <tr>
                   <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Customer</th>
                   <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Payment</th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Account</th>
                   <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Reference</th>
                   <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Listing link</th>
                   <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Date</th>
@@ -141,6 +142,25 @@ export default async function AdminPaymentLeadsPage({
                       <span className={`mt-2 inline-flex rounded-full px-2 py-1 text-xs font-semibold ${statusClass(lead.status)}`}>
                         {lead.status}
                       </span>
+                    </td>
+                    <td className="px-4 py-4 align-top">
+                      {lead.user_id ? (
+                        <div>
+                          <span className="inline-flex rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-800">
+                            Registered
+                          </span>
+                          <div className="mt-2 text-xs text-gray-500">{lead.user_id}</div>
+                        </div>
+                      ) : (
+                        <div>
+                          <span className="inline-flex rounded-full bg-red-100 px-2 py-1 text-xs font-semibold text-red-800">
+                            Not registered
+                          </span>
+                          <p className="mt-2 max-w-xs text-xs text-gray-500">
+                            The customer paid but did not finish account/listing setup.
+                          </p>
+                        </div>
+                      )}
                     </td>
                     <td className="px-4 py-4 align-top">
                       <code className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700">{lead.reference}</code>
