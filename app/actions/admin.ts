@@ -57,10 +57,6 @@ function shouldUseLegalCategory(input: string) {
 export async function createListingFromPaymentLeadServer(formData: FormData) {
     const supabase = await checkAdmin()
 
-    const {
-        data: { user: adminUser },
-    } = await supabase.auth.getUser()
-
     const leadId = String(formData.get('lead_id') || '').trim()
     if (!leadId) {
         return { error: { message: 'Payment lead ID is required.' } }
@@ -91,9 +87,15 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
 
     const businessName = String(lead.business_name || '').trim() || email.split('@')[0] || 'Business Listing'
     const phone = String(lead.phone || '').trim() || null
-    const userId = lead.user_id || adminUser?.id
+    const { data: customerProfile } = await supabase
+        .from('profiles')
+        .select('id')
+        .ilike('email', email)
+        .maybeSingle()
+
+    const userId = customerProfile?.id || lead.user_id
     if (!userId) {
-        return { error: { message: 'Could not identify an account to attach this listing to.' } }
+        return { error: { message: `No registered user profile found for ${email}. Ask the customer to finish signup, then try again.` } }
     }
 
     let categoryId: string | null = null
@@ -190,6 +192,75 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
     revalidatePath('/admin/dashboard')
 
     return { data: { listing_id: listing.id } }
+}
+
+export async function repairPaymentLeadOwnerServer(formData: FormData) {
+    const supabase = await checkAdmin()
+
+    const leadId = String(formData.get('lead_id') || '').trim()
+    if (!leadId) {
+        return { error: { message: 'Payment lead ID is required.' } }
+    }
+
+    const { data: lead, error: leadError } = await supabase
+        .from('payment_leads')
+        .select('id, user_id, listing_id, email, reference')
+        .eq('id', leadId)
+        .maybeSingle()
+
+    if (leadError || !lead) {
+        return { error: { message: leadError?.message || 'Payment lead not found.' } }
+    }
+
+    const email = String(lead.email || '').trim().toLowerCase()
+    if (!email) {
+        return { error: { message: 'The paid lead has no email address.' } }
+    }
+
+    const { data: customerProfile, error: profileError } = await supabase
+        .from('profiles')
+        .select('id, email')
+        .ilike('email', email)
+        .maybeSingle()
+
+    if (profileError || !customerProfile?.id) {
+        return { error: { message: profileError?.message || `No registered user profile found for ${email}.` } }
+    }
+
+    if (lead.listing_id) {
+        const { error: listingError } = await supabase
+            .from('listings')
+            .update({ user_id: customerProfile.id })
+            .eq('id', lead.listing_id)
+
+        if (listingError) {
+            return { error: { message: listingError.message } }
+        }
+    }
+
+    const { error: paymentError } = await supabase
+        .from('payments')
+        .update({ user_id: customerProfile.id })
+        .eq('reference', lead.reference)
+
+    if (paymentError) {
+        return { error: { message: paymentError.message } }
+    }
+
+    const { error: leadUpdateError } = await supabase
+        .from('payment_leads')
+        .update({ user_id: customerProfile.id })
+        .eq('id', lead.id)
+
+    if (leadUpdateError) {
+        return { error: { message: leadUpdateError.message } }
+    }
+
+    revalidatePath('/admin/payment-leads')
+    revalidatePath('/admin/listings')
+    revalidatePath('/admin/dashboard')
+
+    return { data: { user_id: customerProfile.id } }
 }
 
 // --- Review Actions ---

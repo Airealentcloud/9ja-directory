@@ -1,11 +1,21 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
-import { createListingFromPaymentLeadServer } from '@/app/actions/admin'
+import { createListingFromPaymentLeadServer, repairPaymentLeadOwnerServer } from '@/app/actions/admin'
 import { redirect } from 'next/navigation'
 
 async function createListingFormAction(formData: FormData) {
   'use server'
   const result = await createListingFromPaymentLeadServer(formData)
+  if (result?.error?.message) {
+    redirect(`/admin/payment-leads?error=${encodeURIComponent(result.error.message)}`)
+  }
+
+  redirect('/admin/listings')
+}
+
+async function repairOwnerFormAction(formData: FormData) {
+  'use server'
+  const result = await repairPaymentLeadOwnerServer(formData)
   if (result?.error?.message) {
     redirect(`/admin/payment-leads?error=${encodeURIComponent(result.error.message)}`)
   }
@@ -172,6 +182,15 @@ export default async function AdminPaymentLeadsPage({
                             Linked
                           </span>
                           <div className="mt-2 text-xs text-gray-500">{lead.listing_id}</div>
+                          <form action={repairOwnerFormAction} className="mt-3">
+                            <input type="hidden" name="lead_id" value={lead.id} />
+                            <button
+                              type="submit"
+                              className="inline-flex rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700"
+                            >
+                              Fix owner
+                            </button>
+                          </form>
                         </div>
                       ) : (
                         <div>
