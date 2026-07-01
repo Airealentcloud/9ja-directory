@@ -10145,9 +10145,9 @@ export const blogPosts: BlogPost[] = [
     title: "Top 10 Real Estate Companies in Abuja, Nigeria (2026 Guide)",
     excerpt: "Top 10 real estate companies in Abuja (2026): luxury and affordable developers, estate prices, key districts, and buyer tips for FCT property.",
     content: `
-      <p>Abuja is Nigeria's most structured property market. Unlike Lagos, it was purpose-built as the Federal Capital Territory â€” zoned roads, master-planned districts, and government-anchored demand from ministries, embassies, and international organisations. That structure makes it attractive for buyers and investors who want stable appreciation without Lagos's volatility.</p>
+      <p>Abuja is Nigeria's most structured property market. Unlike Lagos, it was purpose-built as the Federal Capital Territory - zoned roads, master-planned districts, and government-anchored demand from ministries, embassies, and international organisations. That structure makes it attractive for buyers and investors who want stable appreciation without Lagos's volatility.</p>
 
-      <p>But navigating Abuja's real estate market requires knowing the right companies to work with. There are hundreds of developers, agencies, and land sellers operating in the FCT â€” with widely different track records, land title quality, and after-sale support.</p>
+      <p>But navigating Abuja's real estate market requires knowing the right companies to work with. There are hundreds of developers, agencies, and land sellers operating in the FCT - with widely different track records, land title quality, and after-sale support.</p>
 
       <p>This guide cuts through the noise. We reviewed the most consistently cited and trusted names across Abuja's real estate landscape and ranked the top 10 companies you should know before buying, renting, or investing in FCT property in 2026.</p>
 
@@ -10163,7 +10163,7 @@ export const blogPosts: BlogPost[] = [
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Planned city infrastructure:</strong> Abuja was designed from scratch in the 1980s. Roads, drainage, zoning, and green areas were built before residents arrived. This means fewer infrastructure surprises compared to Lagos's organic sprawl.</li>
         <li><strong>Government and diplomatic demand:</strong> All federal ministries, the Presidential Villa, foreign embassies, and major international organisations are based in Abuja. This creates persistent, high-quality rental demand that Lagos does not replicate.</li>
-        <li><strong>AGIS land governance:</strong> Land in FCT is managed by Abuja Geographic Information Systems (AGIS) under the FCTA. Title verification is more structured here than in most Nigerian states â€” Certificate of Occupancy (C of O) is the primary proof of ownership.</li>
+        <li><strong>AGIS land governance:</strong> Land in FCT is managed by Abuja Geographic Information Systems (AGIS) under the FCTA. Title verification is more structured here than in most Nigerian states - Certificate of Occupancy (C of O) is the primary proof of ownership.</li>
         <li><strong>Steady appreciation:</strong> Abuja properties appreciate 8-10% per year on average. Kado district recorded 39% year-on-year appreciation in 2025. It is a lower-risk, stable-income market compared to Lagos.</li>
         <li><strong>Growing population pressure:</strong> Abuja's population is expected to grow from 4+ million in 2024 to over 6 million by 2035, sustaining undersupply pressure particularly in central Phase 1 zones.</li>
       </ul>
@@ -10171,12 +10171,12 @@ export const blogPosts: BlogPost[] = [
       <h2 class="text-2xl font-bold mt-8 mb-4">How We Selected These Companies</h2>
       <p>We assessed companies on the following criteria:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Completed project portfolio</strong> â€” number of delivered units, not just planned or announced projects</li>
-        <li><strong>FCDA-approved land and legal credentials</strong> â€” CAC registration, REDAN membership, AGIS-backed titles</li>
-        <li><strong>Years of operation in FCT</strong> â€” track record matters more than marketing claims</li>
-        <li><strong>Market reputation</strong> â€” consistent citation across independent news sources and industry reports</li>
-        <li><strong>Buyer support</strong> â€” payment plans, after-sale service, property management, resale assistance</li>
-        <li><strong>Segment coverage</strong> â€” companies serving different buyer types: affordable, mid-range, premium, and full-service agency</li>
+        <li><strong>Completed project portfolio</strong> - number of delivered units, not just planned or announced projects</li>
+        <li><strong>FCDA-approved land and legal credentials</strong> - CAC registration, REDAN membership, AGIS-backed titles</li>
+        <li><strong>Years of operation in FCT</strong> - track record matters more than marketing claims</li>
+        <li><strong>Market reputation</strong> - consistent citation across independent news sources and industry reports</li>
+        <li><strong>Buyer support</strong> - payment plans, after-sale service, property management, resale assistance</li>
+        <li><strong>Segment coverage</strong> - companies serving different buyer types: affordable, mid-range, premium, and full-service agency</li>
       </ul>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Quick Comparison: Top 10 Abuja Real Estate Companies</h2>
@@ -10205,29 +10205,29 @@ export const blogPosts: BlogPost[] = [
         </tbody>
       </table>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#1 â€” Cosgrove Investment Limited: Abuja's Smart Home Pioneer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#1 - Cosgrove Investment Limited: Abuja's Smart Home Pioneer</h2>
 
       <p><strong>Founded:</strong> 2017 &nbsp;|&nbsp; <strong>Segment:</strong> Luxury &nbsp;|&nbsp; <strong>Website:</strong> cosgroveafrica.com</p>
 
-      <p>Cosgrove Investment Limited is widely regarded as Abuja's most innovative luxury property developer. When the company launched Nigeria's first smart estate in Wuye in 2018, it redefined what residential development in the FCT could look like. Residents control lighting, temperature, security systems, and energy use from a smartphone or via voice command â€” all powered by integrated solar energy systems.</p>
+      <p>Cosgrove Investment Limited is widely regarded as Abuja's most innovative luxury property developer. When the company launched Nigeria's first smart estate in Wuye in 2018, it redefined what residential development in the FCT could look like. Residents control lighting, temperature, security systems, and energy use from a smartphone or via voice command - all powered by integrated solar energy systems.</p>
 
-      <p>Since then, Cosgrove has expanded across Abuja's prime districts. Their portfolio spans Wuye, Guzape, Mabushi, Katampe, Wuse 2, and Maitama â€” the city's most prestigious addresses. Notable projects include Cosgrove Smart Estate (Wuye, Mabushi, Guzape) and The Fourteen, a high-end luxury development that reflects the company's positioning at the very top of Abuja's residential market.</p>
+      <p>Since then, Cosgrove has expanded across Abuja's prime districts. Their portfolio spans Wuye, Guzape, Mabushi, Katampe, Wuse 2, and Maitama - the city's most prestigious addresses. Notable projects include Cosgrove Smart Estate (Wuye, Mabushi, Guzape) and The Fourteen, a high-end luxury development that reflects the company's positioning at the very top of Abuja's residential market.</p>
 
       <p>Cosgrove has earned public recognition from senior FCT officials for "making Nigeria proud in smart estate delivery." For buyers who want technology, premium infrastructure, and long-term capital appreciation in Abuja's most desirable zones, Cosgrove is the benchmark developer in the FCT.</p>
 
       <p><strong>Best for:</strong> Buyers seeking luxury smart homes, premium gated estates, and high-end capital appreciation in Phase 1 and Phase 2 Abuja districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#2 â€” <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I. Realent Global Resources</a>: The Best Real Estate Agency in Abuja</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#2 - <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline">A.I. Realent Global Resources</a>: The Best Real Estate Agency in Abuja</h2>
 
       <p><strong>Website:</strong> airealent.ng &nbsp;|&nbsp; <strong>Type:</strong> Full-Service Real Estate Agency &nbsp;|&nbsp; <strong>Coverage:</strong> All FCT Districts &nbsp;|&nbsp; <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 font-semibold hover:underline">View 9jaDirectory Listing &rarr;</a></p>
 
-      <p>If the developers on this list build and sell their own properties, <strong>A.I. Realent Global Resources stands in a category of its own â€” the best full-service real estate agency in Abuja</strong>. Rather than being tied to a single portfolio of estates, A.I. Realent works on behalf of buyers, sellers, investors, and tenants â€” providing independent, expert representation across every district and price point in the FCT.</p>
+      <p>If the developers on this list build and sell their own properties, <strong>A.I. Realent Global Resources stands in a category of its own - the best full-service real estate agency in Abuja</strong>. Rather than being tied to a single portfolio of estates, A.I. Realent works on behalf of buyers, sellers, investors, and tenants - providing independent, expert representation across every district and price point in the FCT.</p>
 
-      <p>This distinction is critical. When you approach a developer, they can only show you their own properties. When you work with A.I. Realent Global Resources, you get unbiased access to verified listings spanning the entire Abuja market â€” from Maitama luxury apartments and Guzape smart homes to Karsana mid-range plots and Lugbe affordable estates â€” without any developer bias influencing the advice you receive.</p>
+      <p>This distinction is critical. When you approach a developer, they can only show you their own properties. When you work with A.I. Realent Global Resources, you get unbiased access to verified listings spanning the entire Abuja market - from Maitama luxury apartments and Guzape smart homes to Karsana mid-range plots and Lugbe affordable estates - without any developer bias influencing the advice you receive.</p>
 
       <p>A.I. Realent's full-service offering covers every stage of the property journey:</p>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Independent property search and advisory:</strong> Expert matching of client needs to verified listings across all FCT zones â€” drawing from multiple developers, private landlords, and investment portfolios, not just one company's estate</li>
+        <li><strong>Independent property search and advisory:</strong> Expert matching of client needs to verified listings across all FCT zones - drawing from multiple developers, private landlords, and investment portfolios, not just one company's estate</li>
         <li><strong>Land and title verification:</strong> AGIS searches, C of O checks, and comprehensive due diligence before any financial commitment</li>
         <li><strong>Investment advisory and ROI analysis:</strong> District-by-district return analysis, rental yield projections, and appreciation forecasting for serious property investors</li>
         <li><strong>Sales and lettings facilitation:</strong> Connecting verified buyers and quality tenants with the right properties at fair market value</li>
@@ -10236,48 +10236,48 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Property management:</strong> Ongoing management of residential and commercial properties on behalf of landlords and investors</li>
       </ul>
 
-      <p>What makes A.I. Realent Global Resources Abuja's best real estate agency is the combination of market-wide access, deep FCT expertise, and a genuinely client-first approach. Whether you are a first-time buyer navigating the Abuja market for the first time, an experienced investor building a property portfolio, or a Nigerian in the diaspora looking to secure FCT assets remotely â€” A.I. Realent provides the expertise, the verified listings, and the transaction security you need to buy with confidence.</p>
+      <p>What makes A.I. Realent Global Resources Abuja's best real estate agency is the combination of market-wide access, deep FCT expertise, and a genuinely client-first approach. Whether you are a first-time buyer navigating the Abuja market for the first time, an experienced investor building a property portfolio, or a Nigerian in the diaspora looking to secure FCT assets remotely - A.I. Realent provides the expertise, the verified listings, and the transaction security you need to buy with confidence.</p>
 
-      <p>In a market where developer-specific bias and title fraud are real risks, having an independent agency of A.I. Realent's calibre in your corner is not just convenient â€” it is one of the smartest decisions any Abuja property buyer can make.</p>
+      <p>In a market where developer-specific bias and title fraud are real risks, having an independent agency of A.I. Realent's calibre in your corner is not just convenient - it is one of the smartest decisions any Abuja property buyer can make.</p>
 
-      <p><strong>Best for:</strong> Any buyer, investor, or tenant who wants independent, unbiased market access across all of Abuja â€” not just one developer's portfolio. Essential for diaspora buyers and investors who need ROI-focused guidance across FCT districts.</p>
+      <p><strong>Best for:</strong> Any buyer, investor, or tenant who wants independent, unbiased market access across all of Abuja - not just one developer's portfolio. Essential for diaspora buyers and investors who need ROI-focused guidance across FCT districts.</p>
 
       <div class="my-6 rounded-xl border-2 border-green-200 bg-green-50 p-5">
         <p class="font-semibold text-gray-900">Find Verified Real Estate Agencies in Abuja on 9jaDirectory</p>
-        <p class="text-gray-700 mt-1 mb-3">Browse verified real estate companies and agents operating across FCT Abuja â€” including sales, lettings, property management, and investment advisory.</p>
+        <p class="text-gray-700 mt-1 mb-3">Browse verified real estate companies and agents operating across FCT Abuja - including sales, lettings, property management, and investment advisory.</p>
         <div class="flex flex-wrap gap-3">
           <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700">View A.I. Realent Listing &rarr;</a>
           <a href="/categories/real-estate/fct" class="inline-flex items-center gap-2 rounded-lg border border-green-200 bg-white px-5 py-3 text-green-700 font-semibold hover:border-green-300">Browse All Abuja Real Estate &rarr;</a>
         </div>
       </div>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#3 â€” Urban Shelter Limited: 35 Years of Neighbourhood-Scale Development</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#3 - Urban Shelter Limited: 35 Years of Neighbourhood-Scale Development</h2>
 
       <p><strong>Founded:</strong> 1991 &nbsp;|&nbsp; <strong>Segment:</strong> All segments &nbsp;|&nbsp; <strong>Website:</strong> urbanshelternigeria.com</p>
 
       <p>Urban Shelter Limited is one of Abuja's oldest and most trusted property developers, with over three decades of operation in the FCT. The company's scale is genuinely remarkable: 5,000+ residential units, 7,000+ commercial units, 150km of internal road networks, and 200,000sqm of green and recreational areas across more than seven active construction sites simultaneously.</p>
 
-      <p>Urban Shelter did not just build houses â€” it built entire neighbourhoods. The company developed significant portions of Kado, Kubwa, and Katampe, transforming what were largely undeveloped areas into established residential districts. Current and recent projects span Durumi, Karimu, Gudu, Jabi, Life Camp, Dawaki, Lokogoma, Lugbe, and Kyami.</p>
+      <p>Urban Shelter did not just build houses - it built entire neighbourhoods. The company developed significant portions of Kado, Kubwa, and Katampe, transforming what were largely undeveloped areas into established residential districts. Current and recent projects span Durumi, Karimu, Gudu, Jabi, Life Camp, Dawaki, Lokogoma, Lugbe, and Kyami.</p>
 
-      <p>Notable projects include BellaVue Residences (Life Camp), The Waterfront along Jabi Lake â€” a mixed-use leisure destination anchored by the Jabi Lake area â€” The Hills (high-end residential in Guzape), and Promenade Estate (Lokogoma). For buyers who want a developer with a proven ability to deliver communities at scale, Urban Shelter is unmatched in the FCT.</p>
+      <p>Notable projects include BellaVue Residences (Life Camp), The Waterfront along Jabi Lake - a mixed-use leisure destination anchored by the Jabi Lake area - The Hills (high-end residential in Guzape), and Promenade Estate (Lokogoma). For buyers who want a developer with a proven ability to deliver communities at scale, Urban Shelter is unmatched in the FCT.</p>
 
       <p><strong>Best for:</strong> Buyers at any price point who want a long-established developer with a city-scale track record and active projects across multiple FCT districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#4 â€” Brains and Hammers: Nigeria's City Builders</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#4 - Brains and Hammers: Nigeria's City Builders</h2>
 
       <p><strong>Founded:</strong> 2006 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range to Premium &nbsp;|&nbsp; <strong>Website:</strong> brainsandhammers.com</p>
 
-      <p>Brains and Hammers has delivered more than 11,000 homes across Nigeria and is known for building at a scale that goes beyond individual estates â€” they build cities. Their flagship project, Brains and Hammers City in Life Camp, is a 72-hectare master-planned community of 3,500 homes with commercial zones, schools, and recreational facilities integrated into the development.</p>
+      <p>Brains and Hammers has delivered more than 11,000 homes across Nigeria and is known for building at a scale that goes beyond individual estates - they build cities. Their flagship project, Brains and Hammers City in Life Camp, is a 72-hectare master-planned community of 3,500 homes with commercial zones, schools, and recreational facilities integrated into the development.</p>
 
       <p>In Abuja, their projects are concentrated in Life Camp, Galadimawa, Apo, Gwarinpa, and the Airport Road corridor. Their Apo series (Apo I through V) and Galadimawa estates have each delivered hundreds of units. The company also operates in Lagos and Kano, giving it national credibility that smaller FCT-only developers cannot match.</p>
 
       <p><strong>Best for:</strong> Mid-range to premium buyers who want large, well-planned estate communities with strong infrastructure in established FCT growth corridors.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#5 â€” Adron Homes and Properties: Best for Affordable Housing and Flexible Payments</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#5 - Adron Homes and Properties: Best for Affordable Housing and Flexible Payments</h2>
 
       <p><strong>Founded:</strong> 2012 &nbsp;|&nbsp; <strong>Segment:</strong> Affordable &nbsp;|&nbsp; <strong>Website:</strong> adronhomesproperties.com</p>
 
-      <p>Adron Homes and Properties has made homeownership accessible to more than 100,000 Nigerians through a simple formula: affordable gated estate communities with flexible instalment payment plans suited to low-to-middle-income earners. In Abuja, their key projects are Emirate Park and Gardens (Kuje) and Treasure Park and Gardens â€” offering plots and homes in growing satellite towns at prices that major Phase 1 developers cannot match.</p>
+      <p>Adron Homes and Properties has made homeownership accessible to more than 100,000 Nigerians through a simple formula: affordable gated estate communities with flexible instalment payment plans suited to low-to-middle-income earners. In Abuja, their key projects are Emirate Park and Gardens (Kuje) and Treasure Park and Gardens - offering plots and homes in growing satellite towns at prices that major Phase 1 developers cannot match.</p>
 
       <p>With 60+ estates nationwide and payment plans stretching from 6 to 36 months, Adron is the leading developer for first-time buyers in Abuja who want a legitimate, affordable entry point into FCT property without locking up large capital upfront.</p>
 
@@ -10290,101 +10290,101 @@ export const blogPosts: BlogPost[] = [
         <div class="flex flex-wrap justify-center gap-3 mb-5">
           <div class="rounded-xl bg-white border border-gray-200 px-5 py-4 text-sm text-left min-w-[140px]">
             <div class="font-bold text-green-700 text-base mb-1">Standard</div>
-            <div class="text-2xl font-extrabold text-gray-900">â‚¦50,000</div>
+            <div class="text-2xl font-extrabold text-gray-900">&#8358;50,000</div>
             <div class="text-gray-500 text-xs mt-1">per month</div>
             <ul class="mt-2 space-y-1 text-gray-600 text-xs">
-              <li>âœ“ Company profile included</li>
-              <li>âœ“ Verified badge</li>
-              <li>âœ“ Link to your listing</li>
+              <li>&#10003; Company profile included</li>
+              <li>&#10003; Verified badge</li>
+              <li>&#10003; Link to your listing</li>
             </ul>
           </div>
           <div class="rounded-xl bg-green-600 border border-green-600 px-5 py-4 text-sm text-white text-left min-w-[140px]">
             <div class="font-bold text-green-100 text-base mb-1">Premium</div>
-            <div class="text-2xl font-extrabold">â‚¦120,000</div>
+            <div class="text-2xl font-extrabold">&#8358;120,000</div>
             <div class="text-green-200 text-xs mt-1">per month</div>
             <ul class="mt-2 space-y-1 text-green-100 text-xs">
-              <li>âœ“ Top sponsored position</li>
-              <li>âœ“ Featured in comparison table</li>
-              <li>âœ“ Logo + extended profile</li>
-              <li>âœ“ Priority renewal lock-in</li>
+              <li>&#10003; Top sponsored position</li>
+              <li>&#10003; Featured in comparison table</li>
+              <li>&#10003; Logo + extended profile</li>
+              <li>&#10003; Priority renewal lock-in</li>
             </ul>
           </div>
         </div>
         <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition-colors">Enquire About a Sponsored Slot &rarr;</a>
-        <p class="text-xs text-gray-400 mt-3">Sponsored positions are clearly labelled. Editorial positions #1â€“#5 are not available for purchase.</p>
+        <p class="text-xs text-gray-400 mt-3">Sponsored positions are clearly labelled. Editorial positions #1-#5 are not available for purchase.</p>
       </div>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#6 â€” Dantata Town Developers: Master-Planned Communities in the Kubwa Corridor</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#6 - Dantata Town Developers: Master-Planned Communities in the Kubwa Corridor</h2>
 
       <p><strong>Founded:</strong> 2011 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range to Premium &nbsp;|&nbsp; <strong>Website:</strong> dantatatown.com</p>
 
-      <p>Dantata Town Developers â€” a spin-off of the Dantata and Sawoe construction conglomerate â€” has delivered over 2,000 housing units in the FCT since 2011. Their flagship Dantata Housing Estate in Kubwa spans 57 hectares along Arab Road with over 1,000 units approximately 15km from Abuja's CBD. Beyond Kubwa, the company is active in Karsana South (Dantata Garden), Industrial Area 2 (The Residence by Dantata), and Gwarinpa (The District by Dantata).</p>
+      <p>Dantata Town Developers - a spin-off of the Dantata and Sawoe construction conglomerate - has delivered over 2,000 housing units in the FCT since 2011. Their flagship Dantata Housing Estate in Kubwa spans 57 hectares along Arab Road with over 1,000 units approximately 15km from Abuja's CBD. Beyond Kubwa, the company is active in Karsana South (Dantata Garden), Industrial Area 2 (The Residence by Dantata), and Gwarinpa (The District by Dantata).</p>
 
-      <p>Their product mix â€” 4-bedroom terrace duplexes, semi-detached and full detached duplexes, and apartments â€” covers the mid-range to premium segment with well-built, master-planned communities that are infrastructure-ready from day one.</p>
+      <p>Their product mix - 4-bedroom terrace duplexes, semi-detached and full detached duplexes, and apartments - covers the mid-range to premium segment with well-built, master-planned communities that are infrastructure-ready from day one.</p>
 
       <p><strong>Best for:</strong> Mid-range buyers who want master-planned communities with strong infrastructure in the Kubwa and Karsana growth corridors.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#7 â€” UPDC (UAC Property Development Company): Nigeria's Listed Luxury Developer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#7 - UPDC (UAC Property Development Company): Nigeria's Listed Luxury Developer</h2>
 
       <p><strong>Founded:</strong> Early 1990s &nbsp;|&nbsp; <strong>Segment:</strong> Luxury &nbsp;|&nbsp; <strong>Listed:</strong> Nigerian Exchange Group</p>
 
-      <p>UPDC is Nigeria's only publicly listed real estate developer, backed by UAC of Nigeria Plc. In Abuja, the company focuses on premium and luxury residential and commercial assets. Their FCT portfolio includes Salatu Royal Estate (Wuse II), Emerald Court (Apo), Metro City â€” an 11.17-hectare mixed-use community in Apo-Dutse with shopping, healthcare, and sports facilities â€” and the UAC Office Complex (24,000sqm of Grade A commercial space in Abuja).</p>
+      <p>UPDC is Nigeria's only publicly listed real estate developer, backed by UAC of Nigeria Plc. In Abuja, the company focuses on premium and luxury residential and commercial assets. Their FCT portfolio includes Salatu Royal Estate (Wuse II), Emerald Court (Apo), Metro City - an 11.17-hectare mixed-use community in Apo-Dutse with shopping, healthcare, and sports facilities - and the UAC Office Complex (24,000sqm of Grade A commercial space in Abuja).</p>
 
       <p>Being publicly listed means UPDC must meet higher standards of corporate governance, financial disclosure, and project delivery than any private developer. For buyers who want institutional-grade reliability at the luxury end of the Abuja market, UPDC is a strong and uniquely accountable choice.</p>
 
       <p><strong>Best for:</strong> Luxury buyers and commercial property investors who want the credibility of a publicly listed, institutionally backed developer in prime Abuja districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#8 â€” Bilaad Realty: Eco-Friendly and Sustainable Living in Abuja</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#8 - Bilaad Realty: Eco-Friendly and Sustainable Living in Abuja</h2>
 
       <p><strong>Segment:</strong> Eco-conscious / Mid-range &nbsp;|&nbsp; <strong>Website:</strong> bilaadnigeria.com</p>
 
-      <p>Bilaad Realty has carved out a distinctive niche in Abuja's real estate market: sustainable, eco-friendly residential communities with smart infrastructure built in from the ground up. Every Bilaad project includes fibre-optic connectivity, central gas supply, alternative power systems, and extensive green areas â€” not as premium extras, but as standard features.</p>
+      <p>Bilaad Realty has carved out a distinctive niche in Abuja's real estate market: sustainable, eco-friendly residential communities with smart infrastructure built in from the ground up. Every Bilaad project includes fibre-optic connectivity, central gas supply, alternative power systems, and extensive green areas - not as premium extras, but as standard features.</p>
 
       <p>Their portfolio spans nine active developments in FCT with island-themed community branding across Jabi, Life Camp, Utako, Mabuchi, Maitama, Asokoro, Guzape, Wuye, and Karsana. Bilaad was named among Nigeria's "Top Innovative Real Estate Brands to Watch" by Africa Housing News. With nearly 1,000 homes delivered across FCT, they have the track record to match the marketing.</p>
 
       <p><strong>Best for:</strong> Mid-range buyers who prioritise sustainability, modern infrastructure, and eco-friendly living across FCT's established residential districts.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#9 â€” Mshel Homes Limited: Land Banking and Emerging District Specialists</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#9 - Mshel Homes Limited: Land Banking and Emerging District Specialists</h2>
 
       <p><strong>Founded:</strong> 2018 &nbsp;|&nbsp; <strong>Segment:</strong> Mid-range + Land Banking &nbsp;|&nbsp; <strong>Website:</strong> mshelhomes.com</p>
 
-      <p>Mshel Homes was incorporated in 2018 and has quickly built a reputation as one of Abuja's most strategic land banking specialists. Their focus is on FCT's rapidly growing corridors â€” Asokoro, Apo, Airport Road, Guzape, Kyami, Lugbe, Kuje, Idu, and Kukwaba â€” identifying and developing plots in areas positioned for near-term appreciation before infrastructure fully catches up with demand.</p>
+      <p>Mshel Homes was incorporated in 2018 and has quickly built a reputation as one of Abuja's most strategic land banking specialists. Their focus is on FCT's rapidly growing corridors - Asokoro, Apo, Airport Road, Guzape, Kyami, Lugbe, Kuje, Idu, and Kukwaba - identifying and developing plots in areas positioned for near-term appreciation before infrastructure fully catches up with demand.</p>
 
       <p>Their flagship project, Mshel Horizon in Kukwaba, is a mixed-use estate combining residential plots, modern apartments, and planned commercial zones. Mshel also operates in Lagos, Kano, and Yola. For buyers who want affordable entry into an emerging FCT district with strong appreciation potential and clear title documentation, Mshel Homes is a credible and growing option.</p>
 
       <p><strong>Best for:</strong> Early-stage investors and land buyers who want to enter Abuja's growth corridors at affordable prices before values accelerate.</p>
 
-      <h2 class="text-2xl font-bold mt-8 mb-4">#10 â€” APDC (Abuja Property Development Company): The Government-Backed Developer</h2>
+      <h2 class="text-2xl font-bold mt-8 mb-4">#10 - APDC (Abuja Property Development Company): The Government-Backed Developer</h2>
 
       <p><strong>Founded:</strong> 1994 &nbsp;|&nbsp; <strong>Segment:</strong> Affordable to Mid-range &nbsp;|&nbsp; <strong>Website:</strong> apdc.com.ng</p>
 
       <p>APDC is wholly owned by Abuja Investment Company Limited (AICL), which is 100% owned by the Federal Capital Territory Administration. This government ownership gives APDC a structural advantage that no private developer can replicate: its land allocations are FCTA-backed, its titles carry the highest level of institutional security in the FCT, and it is the primary delivery vehicle for government affordable housing programmes including the Federal Government's Renewed Hope Cities initiative.</p>
 
-      <p>APDC's current projects are concentrated in Karsana (APDC Homes) and Idogwari, Life Camp â€” offering affordable to mid-range residential units with AGIS-backed C of O titles. For buyers who prioritise land title security above all else, APDC's government ownership provides a level of assurance that no private developer can match.</p>
+      <p>APDC's current projects are concentrated in Karsana (APDC Homes) and Idogwari, Life Camp - offering affordable to mid-range residential units with AGIS-backed C of O titles. For buyers who prioritise land title security above all else, APDC's government ownership provides a level of assurance that no private developer can match.</p>
 
       <p><strong>Best for:</strong> Buyers who prioritise maximum land title security and prefer the backing of a government-owned developer, especially in the Karsana and Life Camp districts.</p>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Key Abuja Districts: Where to Buy and Why</h2>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 1 â€” Premium Stability (Highest Values)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 1 - Premium Stability (Highest Values)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
-        <li><strong>Maitama:</strong> Nigeria's most prestigious residential address. Embassies, senior politicians, top professionals. Rental yield ~7%. Median home: over â‚¦1.5 billion. Very limited new supply.</li>
+        <li><strong>Maitama:</strong> Nigeria's most prestigious residential address. Embassies, senior politicians, top professionals. Rental yield ~7%. Median home: over &#8358;1.5 billion. Very limited new supply.</li>
         <li><strong>Asokoro:</strong> The Presidential Villa and the residences of former heads of state and senior ministers. Nigeria's most exclusive address.</li>
         <li><strong>Wuse II:</strong> Major business hub. Strong white-collar rental demand from corporate tenants. Blends premium residential with commercial Grade A office space.</li>
         <li><strong>Garki I and II:</strong> Government ministry proximity. Older established residential stock; well-suited for commercial property investment.</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 2 â€” Balanced Value (Growing Premium)</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 2 - Balanced Value (Growing Premium)</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Jabi:</strong> Fastest-growing commercial hub outside Phase 1. Jabi Lake Mall area, luxury apartments, strong demand from young professionals and expatriates.</li>
         <li><strong>Guzape:</strong> Emerging luxury district. Cosgrove, Urban Shelter, and UPDC all active here. Significant appreciation runway ahead.</li>
         <li><strong>Katampe and Mabushi:</strong> Rising professional residential zones. Active developer presence from Cosgrove and Bilaad.</li>
       </ul>
 
-      <h3 class="text-xl font-bold mt-6 mb-3">Phase 3 and Emerging â€” Growth and Appreciation</h3>
+      <h3 class="text-xl font-bold mt-6 mb-3">Phase 3 and Emerging - Growth and Appreciation</h3>
       <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
         <li><strong>Gwarinpa:</strong> Africa's largest planned residential estate. Affordable entry point with growing amenities. Rental yield ~4.4%.</li>
-        <li><strong>Life Camp:</strong> Active corridor with major developer presence â€” Brains and Hammers City, Urban Shelter, Bilaad.</li>
+        <li><strong>Life Camp:</strong> Active corridor with major developer presence - Brains and Hammers City, Urban Shelter, Bilaad.</li>
         <li><strong>Kado:</strong> 39% year-on-year appreciation recorded in 2025. One of the most important emerging zones to watch in 2026.</li>
         <li><strong>Kubwa, Lugbe, Kuje:</strong> Satellite towns with affordable housing from Adron, Mshel, and Urban Shelter. Best for budget buyers and long-term land banking.</li>
       </ul>
@@ -10415,7 +10415,7 @@ export const blogPosts: BlogPost[] = [
       <p>Property fraud remains a serious risk in Nigeria. Before paying any amount to a developer or agent in Abuja, take these steps:</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">1. Check CAC Registration</h3>
-      <p>Every legitimate real estate company must be registered with the Corporate Affairs Commission. Search the company's name or RC number at search.cac.gov.ng â€” it is free and takes seconds. An "Active" status is the baseline requirement.</p>
+      <p>Every legitimate real estate company must be registered with the Corporate Affairs Commission. Search the company's name or RC number at search.cac.gov.ng - it is free and takes seconds. An "Active" status is the baseline requirement.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">2. Verify REDAN Membership</h3>
       <p>The Real Estate Developers Association of Nigeria (REDAN) maintains a member register. Legitimate developers are typically REDAN-registered. Ask for the company's REDAN membership number and cross-check with the association directly.</p>
@@ -10427,17 +10427,17 @@ export const blogPosts: BlogPost[] = [
       <p>Never rely solely on brochures or social media renderings. Ask the developer for the physical addresses of their already-completed and occupied projects, visit them in person, and speak to residents directly. A developer with no completed and occupied FCT projects is a high-risk engagement.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">5. Use an Independent Agency for Due Diligence</h3>
-      <p>Working with an independent real estate agency like A.I. Realent Global Resources provides a critical layer of buyer protection. An agency representing your interests â€” not the developer's â€” will verify titles, conduct market price comparisons, review payment terms, and flag red flags before you commit a single naira.</p>
+      <p>Working with an independent real estate agency like A.I. Realent Global Resources provides a critical layer of buyer protection. An agency representing your interests - not the developer's - will verify titles, conduct market price comparisons, review payment terms, and flag red flags before you commit a single naira.</p>
 
       <div class="my-10 rounded-2xl bg-gray-900 text-white p-8 text-center">
         <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-2">For Real Estate Companies</p>
         <h3 class="text-2xl font-bold mb-3">Get Your Company on This List</h3>
-        <p class="text-gray-300 mb-6 max-w-xl mx-auto">This guide is read by thousands of Abuja property buyers every month. A sponsored position puts your company in front of motivated, ready-to-buy audiences â€” with a verified profile, direct listing link, and a featured badge that builds trust before the first call.</p>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">This guide is read by thousands of Abuja property buyers every month. A sponsored position puts your company in front of motivated, ready-to-buy audiences - with a verified profile, direct listing link, and a featured badge that builds trust before the first call.</p>
         <div class="flex flex-wrap justify-center gap-3 mb-6 text-sm text-left">
-          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Reach buyers actively searching Abuja real estate</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Verified badge builds instant credibility</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Slots from â‚¦50,000/month â€” cancel anytime</div>
-          <div class="bg-gray-800 rounded-xl px-4 py-3">âœ“ Limited slots available â€” first come, first served</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">&#10003; Reach buyers actively searching Abuja real estate</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">&#10003; Verified badge builds instant credibility</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">&#10003; Slots from &#8358;50,000/month - cancel anytime</div>
+          <div class="bg-gray-800 rounded-xl px-4 py-3">&#10003; Limited slots available - first come, first served</div>
         </div>
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/contact" class="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-white font-semibold hover:bg-green-400 transition-colors">Claim Your Sponsored Slot &rarr;</a>
@@ -10451,16 +10451,16 @@ export const blogPosts: BlogPost[] = [
       <p>For affordable land with flexible payment plans, Adron Homes and Properties is the most accessible option with plots in Kuje and Lugbe starting at accessible price points. Mshel Homes and APDC are also strong in the affordable-to-mid segment. Work with <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> to independently compare available plots across developers before committing.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Can Nigerians in the diaspora buy property in Abuja?</h3>
-      <p>Yes. <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> provides dedicated diaspora buyer support â€” including remote property sourcing, virtual tours, verified title documentation review, and full transaction support â€” so you can secure FCT property from abroad without needing to travel back for every step of the process.</p>
+      <p>Yes. <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> provides dedicated diaspora buyer support - including remote property sourcing, virtual tours, verified title documentation review, and full transaction support - so you can secure FCT property from abroad without needing to travel back for every step of the process.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the difference between C of O and Right of Occupancy in Abuja?</h3>
-      <p>A Certificate of Occupancy (C of O) is the primary legal document giving you the right to occupy and develop an FCT plot for up to 99 years. A Right of Occupancy (R of O) is a provisional document issued before a full C of O is granted â€” it provides some legal protection but is less secure. Always verify title type and current status through AGIS before any purchase commitment.</p>
+      <p>A Certificate of Occupancy (C of O) is the primary legal document giving you the right to occupy and develop an FCT plot for up to 99 years. A Right of Occupancy (R of O) is a provisional document issued before a full C of O is granted - it provides some legal protection but is less secure. Always verify title type and current status through AGIS before any purchase commitment.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">Is Abuja real estate a good investment in 2026?</h3>
-      <p>Yes â€” particularly in Phase 2 districts (Guzape, Jabi, Katampe) and high-appreciation emerging zones (Kado, Galadimawa). Abuja properties appreciate 8-10% annually on average, with rental yields of 4-7% depending on district. Government and diplomatic demand creates structural undersupply in established Phase 1 areas. Contact <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> for a current investment advisory specific to your budget and target district.</p>
+      <p>Yes - particularly in Phase 2 districts (Guzape, Jabi, Katampe) and high-appreciation emerging zones (Kado, Galadimawa). Abuja properties appreciate 8-10% annually on average, with rental yields of 4-7% depending on district. Government and diplomatic demand creates structural undersupply in established Phase 1 areas. Contact <a href="/listings/a-i-realent-global-resources-ltd-kwv2h" class="text-green-700 hover:underline font-semibold">A.I. Realent Global Resources</a> for a current investment advisory specific to your budget and target district.</p>
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the safest way to pay for property in Abuja?</h3>
-      <p>Always pay through documented bank transfer to the company's verified corporate account â€” never cash to an individual. Insist on a formal receipt and a signed sale agreement before any payment clears. For transactions above N10 million, engage a property lawyer to independently review the sale agreement and verify the title before funds are released.</p>
+      <p>Always pay through documented bank transfer to the company's verified corporate account - never cash to an individual. Insist on a formal receipt and a signed sale agreement before any payment clears. For transactions above N10 million, engage a property lawyer to independently review the sale agreement and verify the title before funds are released.</p>
 
       <div class="my-8 rounded-xl border-2 border-green-200 bg-green-50 p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2">Find Real Estate Companies in Abuja on 9jaDirectory</h3>
@@ -10505,7 +10505,7 @@ export const blogPosts: BlogPost[] = [
         "dateModified": "2026-02-21",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team", "url": "https://www.9jadirectory.org" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Comprehensive 2026 guide to the top 10 real estate companies in Abuja, Nigeria â€” covering developers, agencies, price ranges, key districts, and buyer verification tips.",
+        "description": "Comprehensive 2026 guide to the top 10 real estate companies in Abuja, Nigeria - covering developers, agencies, price ranges, key districts, and buyer verification tips.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/top-10-real-estate-companies-in-abuja" }
       },
       {
