@@ -12533,7 +12533,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "best-security-companies-nigeria-2026",
     title: "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
-    excerpt: "Top 10 security companies in Nigeria (2026): licensed firms in Lagos, Abuja, and Port Harcourt offering manned guards, CCTV, and armed escorts.",
+    excerpt: "Compare top security companies in Nigeria for 2026, including licensed firms in Lagos, Abuja, and Port Harcourt, plus how security companies can get listed.",
     content: `
       <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Published: February 2026</em></p>
 
@@ -12546,6 +12546,16 @@ export const blogPosts: BlogPost[] = [
         <figcaption class="text-sm text-gray-500 mt-2">Nigeria's private security sector employs hundreds of thousands of licensed guards across the country.</figcaption>
       </figure>
 
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-green-700 mb-2">For security company owners</p>
+        <h2 class="text-2xl font-bold text-green-950 mb-3">Want clients to find your security company on 9jaDirectory?</h2>
+        <p class="text-green-900 mb-4">If you run an NSCDC-licensed security company in Nigeria, create a complete business listing with your office address, service areas, guard services, CCTV or access-control services, phone number, website, photos, and verification details. A strong listing helps customers compare your company when they search for security companies in Lagos, Abuja, Port Harcourt, and other Nigerian cities.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">Submit Your Security Company &rarr;</a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-green-300 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">See Listing Plans</a>
+        </div>
+      </div>
+
       <h2 class="text-2xl font-bold mt-8 mb-4">Important: Nigeria's Security Licensing Rules</h2>
       <ul class="list-disc pl-5 mt-2 mb-4">
         <li>All private security companies must hold a valid <strong>NSCDC licence</strong></li>
@@ -12553,6 +12563,18 @@ export const blogPosts: BlogPost[] = [
         <li>Armed escort services require attachment of <strong>Nigerian Mobile Police Force (MOPOL)</strong> officers</li>
         <li>Category A licences (3,000+ guards): â‚¦3 million; Category B (up to 3,000 guards): â‚¦2.5 million</li>
       </ul>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+        <h2 class="text-2xl font-bold text-blue-950 mb-3">How We Selected These Security Companies</h2>
+        <p class="text-blue-950 mb-3">This list is editorial. We considered public business presence, Nigerian operating history, NSCDC licensing signals, city coverage, service range, corporate visibility, specialist services, and the usefulness of each company for customers comparing security providers.</p>
+        <ul class="list-disc pl-5 text-blue-950 space-y-2">
+          <li><strong>Licensing and compliance signals:</strong> NSCDC licence information, legal operating structure, and whether the company presents itself as a legitimate private security outfit.</li>
+          <li><strong>Service coverage:</strong> manned guards, event security, estate security, CCTV, access control, executive protection, mobile patrol, or MOPOL-supported escort services where applicable.</li>
+          <li><strong>Location strength:</strong> visibility in Lagos, Abuja, Port Harcourt, and other commercial cities where customers actively search.</li>
+          <li><strong>Trust signals:</strong> company history, public contact details, website quality, client sectors, and profile completeness.</li>
+        </ul>
+        <p class="text-sm text-blue-900 mt-4"><strong>Editorial disclosure:</strong> Businesses can submit or upgrade a listing on 9jaDirectory, but payment does not automatically guarantee a ranking position in this article. Paid and free submissions may be reviewed for future updates if they provide enough verifiable information.</p>
+      </div>
 
       <h2 class="text-2xl font-bold mt-8 mb-4">Top 10 Security Companies in Nigeria (2026)</h2>
 
@@ -12628,10 +12650,31 @@ export const blogPosts: BlogPost[] = [
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-8">
         <h3 class="text-lg font-bold text-green-900 mb-2">Is your security company not on this list?</h3>
-        <p class="text-green-800 mb-4">Thousands of Nigerians search for NSCDC-licensed security companies every month on 9jaDirectory. List your company for free â€” or contact us to claim a featured spot at the top of this list.</p>
+        <p class="text-green-800 mb-4">Thousands of Nigerians search for NSCDC-licensed security companies every month on 9jaDirectory. Submit your company so customers can see your services, location, phone number, photos, website, and verification details. Premium listings can add stronger visibility features, but editorial ranking is reviewed separately.</p>
         <div class="flex flex-wrap gap-3">
-          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company Free &rarr;</a>
-          <a href="/contact" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Get the #1 Spot on This List &rarr;</a>
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Security Company &rarr;</a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border-2 border-green-600 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">Compare Listing Plans &rarr;</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How Security Companies Can Get More Clients from Directory Search</h2>
+      <p>People searching for <strong>security companies in Nigeria</strong> usually want proof before they call. A weak profile with only a business name and phone number may not be enough for estate managers, schools, factories, churches, hotels, banks, or corporate offices comparing providers.</p>
+      <p>To improve your chances of getting enquiries, your 9jaDirectory profile should include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4">
+        <li><strong>Real business name and office address:</strong> use the same details on your website, Google Business Profile, CAC records, and other directories.</li>
+        <li><strong>Service categories:</strong> manned guarding, estate security, school security, event security, CCTV installation, access control, mobile patrol, executive protection, or risk consulting.</li>
+        <li><strong>City and service areas:</strong> mention Lagos, Abuja, Port Harcourt, Ibadan, Kano, Enugu, or the exact states where you deploy guards.</li>
+        <li><strong>Compliance proof:</strong> state that clients should verify your NSCDC licence and include any relevant professional memberships or training signals.</li>
+        <li><strong>Photos and trust signals:</strong> upload office photos, uniformed-team photos, patrol vehicles, control-room photos, CCTV project images, or branded equipment where appropriate.</li>
+        <li><strong>Fast contact options:</strong> add phone, WhatsApp, email, and website so serious customers can reach you quickly.</li>
+      </ul>
+
+      <div class="bg-gray-900 rounded-xl p-6 my-8 text-white">
+        <h2 class="text-2xl font-bold mb-3">Get Your Security Company Listed</h2>
+        <p class="text-gray-200 mb-4">A complete 9jaDirectory profile can help your security company appear where Nigerian customers are already comparing providers. Add your company, choose the right plan, and keep your details updated so customers know how to contact you.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-500 px-5 py-3 font-semibold text-white hover:bg-green-600">Add Security Company</a>
+          <a href="/categories/security-services" class="inline-flex items-center gap-2 rounded-lg border border-gray-500 bg-transparent px-5 py-3 font-semibold text-gray-100 hover:border-gray-300">Browse Security Services</a>
         </div>
       </div>
 
@@ -12648,6 +12691,9 @@ export const blogPosts: BlogPost[] = [
 
       <h3 class="text-xl font-bold mt-6 mb-3">What is the best security company for a residential estate in Lagos?</h3>
       <p>Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. For smaller properties, Proton Security and Eliezer Security Group are well-regarded. Always verify NSCDC licensing.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How can my security company be listed on 9jaDirectory?</h3>
+      <p>You can submit your security company through the <a href="/add-business" class="text-green-600 hover:underline font-semibold">Add Business</a> page. Include your services, city coverage, contact details, photos, and verification information. You can also review <a href="/pricing" class="text-green-600 hover:underline font-semibold">9jaDirectory listing plans</a> if you want stronger visibility features.</p>
 
       <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-10">
         <h3 class="text-lg font-bold text-green-800 mb-4">Related Industry Guides</h3>
@@ -12674,6 +12720,10 @@ export const blogPosts: BlogPost[] = [
       "CCTV installation company lagos",
       "security company abuja nigeria",
       "armed escort services nigeria",
+      "list security company in nigeria",
+      "add security company to business directory",
+      "security company listing nigeria",
+      "security services directory nigeria",
       "halogen security nigeria",
       "G4S nigeria",
       "NSCDC licensed security company",
@@ -12685,10 +12735,10 @@ export const blogPosts: BlogPost[] = [
         "headline": "Top 10 Security Companies in Nigeria (2026): Lagos, Abuja & Beyond",
         "image": ["https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2070&auto=format&fit=crop"],
         "datePublished": "2026-02-23",
-        "dateModified": "2026-02-23",
+        "dateModified": "2026-07-01",
         "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
         "publisher": { "@type": "Organization", "name": "9jaDirectory", "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.svg" } },
-        "description": "Top 10 best security companies in Nigeria 2026 â€” Halogen, G4S, Kings Guards, Damon Guards, Proton, and more. NSCDC licensed firms across Lagos, Abuja and Port Harcourt.",
+        "description": "Compare top security companies in Nigeria for 2026, including licensed firms in Lagos, Abuja, and Port Harcourt, plus how security companies can get listed.",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.9jadirectory.org/blog/best-security-companies-nigeria-2026" }
       },
       {
@@ -12716,7 +12766,8 @@ export const blogPosts: BlogPost[] = [
           { "@type": "Question", "name": "How do I verify a security company is licensed in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Ask any company to present their current NSCDC licence certificate, or verify directly with the NSCDC regional office in your state." } },
           { "@type": "Question", "name": "Can private security guards in Nigeria carry guns?", "acceptedAnswer": { "@type": "Answer", "text": "No. Private guards cannot carry firearms. Armed escorts require MOPOL attachment â€” the legal framework for armed security in Nigeria." } },
           { "@type": "Question", "name": "How much do security companies charge in Nigeria?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on number of guards, training, and risk profile. Get at least 3 quotes from NSCDC-licensed companies before deciding." } },
-          { "@type": "Question", "name": "What is the best security company for a residential estate in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. Always verify NSCDC licensing." } }
+          { "@type": "Question", "name": "What is the best security company for a residential estate in Lagos?", "acceptedAnswer": { "@type": "Answer", "text": "Halogen Group and Damon Guards are widely deployed in large Lagos estates. Chogon Guards specialises in Lekki and Ajah. Always verify NSCDC licensing." } },
+          { "@type": "Question", "name": "How can my security company be listed on 9jaDirectory?", "acceptedAnswer": { "@type": "Answer", "text": "Submit your security company through the Add Business page with your services, city coverage, contact details, photos, and verification information. You can also review 9jaDirectory listing plans for stronger visibility features." } }
         ]
       },
       {
