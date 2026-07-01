@@ -1,10 +1,16 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { createListingFromPaymentLeadServer } from '@/app/actions/admin'
+import { redirect } from 'next/navigation'
 
 async function createListingFormAction(formData: FormData) {
   'use server'
-  await createListingFromPaymentLeadServer(formData)
+  const result = await createListingFromPaymentLeadServer(formData)
+  if (result?.error?.message) {
+    redirect(`/admin/payment-leads?error=${encodeURIComponent(result.error.message)}`)
+  }
+
+  redirect('/admin/listings')
 }
 
 type PaymentLead = {
@@ -46,8 +52,13 @@ function statusClass(status: PaymentLead['status']) {
   return 'bg-orange-100 text-orange-800'
 }
 
-export default async function AdminPaymentLeadsPage() {
+export default async function AdminPaymentLeadsPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ error?: string }>
+}) {
   const supabase = await createClient()
+  const params = searchParams ? await searchParams : {}
 
   const { data, error } = await supabase
     .from('payment_leads')
@@ -73,6 +84,12 @@ export default async function AdminPaymentLeadsPage() {
           Manage Listings
         </Link>
       </div>
+
+      {params.error && (
+        <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+          {params.error}
+        </div>
+      )}
 
       <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
