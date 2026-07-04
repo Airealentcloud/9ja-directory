@@ -414,6 +414,117 @@ export async function rejectClaim(claimId: string, reason?: string) {
 
 // --- Listing Actions ---
 
+function normalizeEmail(value?: string | null) {
+    return String(value || '').trim().toLowerCase()
+}
+
+function newerPayment(existing: any, next: any) {
+    if (!existing) return next
+    const existingTime = new Date(existing.created_at || existing.paid_at || 0).getTime()
+    const nextTime = new Date(next.created_at || next.paid_at || 0).getTime()
+    return nextTime > existingTime ? next : existing
+}
+
+async function findSuccessfulPaymentForListing(supabase: any, listing: any, profile?: { email?: string } | null) {
+    const { data: linkedPayment } = await supabase
+        .from('payments')
+        .select('id, listing_id, user_id, status, reference, plan, amount, currency, created_at, paid_at')
+        .eq('listing_id', listing.id)
+        .order('created_at', { ascending: false })
+        .limit(1)
+        .maybeSingle()
+
+    if (linkedPayment?.status === 'success') {
+        return { payment: linkedPayment, source: 'payments' }
+    }
+
+    const possibleEmails = Array.from(
+        new Set([normalizeEmail(listing.email), normalizeEmail(profile?.email)].filter(Boolean))
+    )
+
+    if (possibleEmails.length === 0) {
+        return { payment: null, source: null }
+    }
+
+    const { data: leadRows, error: leadError } = await supabase
+        .from('payment_leads')
+        .select('id, user_id, listing_id, email, phone, business_name, plan, amount, currency, reference, status, paid_at, created_at')
+        .in('email', possibleEmails)
+        .eq('status', 'success')
+        .order('created_at', { ascending: false })
+
+    if (leadError) {
+        console.warn('Error matching listing to payment lead:', leadError)
+    }
+
+    const lead = (leadRows || []).find((row: any) => !row.listing_id || row.listing_id === listing.id)
+    if (!lead) {
+        return { payment: null, source: null }
+    }
+
+    const userId = listing.user_id || lead.user_id
+    if (!userId) {
+        return { payment: null, source: null }
+    }
+
+    const { data: existingPayment } = await supabase
+        .from('payments')
+        .select('id')
+        .eq('reference', lead.reference)
+        .maybeSingle()
+
+    if (existingPayment?.id) {
+        const { data: updatedPayment, error: updateError } = await supabase
+            .from('payments')
+            .update({
+                user_id: userId,
+                listing_id: listing.id,
+                status: 'success',
+                paid_at: lead.paid_at || new Date().toISOString(),
+            })
+            .eq('id', existingPayment.id)
+            .select('id, listing_id, user_id, status, reference, plan, amount, currency, created_at, paid_at')
+            .single()
+
+        if (updateError) {
+            console.warn('Error linking existing payment to listing:', updateError)
+        } else {
+            await supabase.from('payment_leads').update({ user_id: userId, listing_id: listing.id }).eq('id', lead.id)
+            return { payment: updatedPayment, source: 'payment_leads' }
+        }
+    } else {
+        const { data: insertedPayment, error: insertError } = await supabase
+            .from('payments')
+            .insert({
+                user_id: userId,
+                listing_id: listing.id,
+                provider: 'paystack',
+                reference: lead.reference,
+                plan: lead.plan,
+                amount: lead.amount,
+                currency: lead.currency || 'NGN',
+                status: 'success',
+                paid_at: lead.paid_at || new Date().toISOString(),
+                metadata: {
+                    source: 'admin_email_match',
+                    payment_lead_id: lead.id,
+                    customer_email: lead.email,
+                },
+            })
+            .select('id, listing_id, user_id, status, reference, plan, amount, currency, created_at, paid_at')
+            .single()
+
+        if (insertError) {
+            console.warn('Error creating linked payment from payment lead:', insertError)
+        } else {
+            await supabase.from('payment_leads').update({ user_id: userId, listing_id: listing.id }).eq('id', lead.id)
+            return { payment: insertedPayment, source: 'payment_leads' }
+        }
+    }
+
+    return { payment: null, source: null }
+}
+
 export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 'rejected' = 'all') {
     const supabase = await checkAdmin()
 
@@ -505,19 +616,52 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         }
     }
 
+    let paymentLeadsByEmail: Record<string, any> = {}
+    const listingEmails = Array.from(
+        new Set(
+            listings
+                .flatMap((listing: any) => [
+                    normalizeEmail(listing.email),
+                    normalizeEmail(listing.user_id ? profilesMap[listing.user_id]?.email : null),
+                ])
+                .filter(Boolean)
+        )
+    )
+
+    if (listingEmails.length > 0) {
+        const { data: leadRows, error: leadError } = await supabase
+            .from('payment_leads')
+            .select('email, status, reference, created_at, paid_at, listing_id')
+            .in('email', listingEmails)
+            .eq('status', 'success')
+
+        if (leadError) {
+            console.warn('Error fetching payment leads for admin listings:', leadError)
+        } else {
+            ;(leadRows || []).forEach((lead: any) => {
+                const email = normalizeEmail(lead.email)
+                paymentLeadsByEmail[email] = newerPayment(paymentLeadsByEmail[email], lead)
+            })
+        }
+    }
+
     const normalized = listings.map((listing: any) => {
         const payment = listing.id ? paymentsMap[listing.id] : null
         const category = listing.category_id ? categoriesMap[listing.category_id] : null
         const profile = listing.user_id ? profilesMap[listing.user_id] : null
+        const leadPayment =
+            payment ||
+            paymentLeadsByEmail[normalizeEmail(listing.email)] ||
+            paymentLeadsByEmail[normalizeEmail(profile?.email)]
 
         return {
             ...listing,
             categories: category || undefined,
             profiles: profile || undefined,
-            payment_status: payment?.status ?? 'none',
-            payment_reference: payment?.reference ?? null,
-            payment_created_at: payment?.created_at ?? null,
-            payment_paid_at: payment?.paid_at ?? null,
+            payment_status: leadPayment?.status ?? 'none',
+            payment_reference: leadPayment?.reference ?? null,
+            payment_created_at: leadPayment?.created_at ?? null,
+            payment_paid_at: leadPayment?.paid_at ?? null,
         }
     })
 
@@ -531,7 +675,7 @@ export async function approveListingServer(id: string) {
     // Get listing with owner details before approving
     const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select('id, business_name, slug, user_id')
+        .select('id, business_name, slug, user_id, email')
         .eq('id', id)
         .single()
 
@@ -554,13 +698,7 @@ export async function approveListingServer(id: string) {
         }
     }
 
-    const { data: latestPayment } = await supabase
-        .from('payments')
-        .select('status, reference, created_at')
-        .eq('listing_id', id)
-        .order('created_at', { ascending: false })
-        .limit(1)
-        .maybeSingle()
+    const { payment: latestPayment } = await findSuccessfulPaymentForListing(supabase, listing, profile)
 
     if (!latestPayment || latestPayment.status !== 'success') {
         return { error: { message: 'Payment not completed for this listing.' } }
