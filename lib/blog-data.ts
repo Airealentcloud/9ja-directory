@@ -15,6 +15,304 @@
 export const blogPosts: BlogPost[] = [
 
   {
+    slug: "best-construction-companies-abuja",
+    title: "Best Construction Companies in Abuja (2026 Guide)",
+    excerpt: "Compare the best construction companies in Abuja for residential, commercial, road, and civil engineering projects. See top firms, selection tips, and verified contractors.",
+    keywords: [
+      "best construction company in Abuja",
+      "construction companies in Abuja",
+      "top construction companies in Abuja",
+      "building contractors in Abuja",
+      "construction company Abuja",
+      "civil engineering companies in Abuja",
+      "road construction companies in Abuja",
+      "residential construction company in Abuja",
+      "commercial construction companies in Abuja",
+      "Abuja building contractors"
+    ],
+    content: `
+      <p><strong>By 9jaDirectory Editorial Team</strong> | <em>Updated: July 2026</em></p>
+
+      <p>Choosing a construction company in Abuja is not a small decision. A good contractor can turn a design into a safe, durable building. A weak contractor can create delays, inflated costs, structural defects, legal stress, and years of regret. Whether you are building a family home in Gwarinpa, a commercial plaza in Wuse, an estate in Lugbe, a road project, or an institutional facility, the company you hire matters.</p>
+
+      <p>This guide reviews the <strong>best construction companies in Abuja</strong> for different project needs, including building construction, road works, civil engineering, commercial projects, residential developments, and project management. It also explains how to compare contractors, what documents to request, and what red flags to avoid before paying any construction firm.</p>
+
+      <p>For construction companies, suppliers, engineers, project managers, and building contractors that want clients to find them, this article also explains how to improve visibility through a complete <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory business listing</a>.</p>
+
+      <figure class="my-6">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80" alt="Construction site in Abuja with engineers reviewing building plans" class="w-full rounded-lg shadow-lg" loading="lazy" decoding="async" />
+        <figcaption class="text-sm text-gray-500 mt-2">The best construction companies in Abuja combine engineering competence, site discipline, transparent costing, and verifiable project delivery.</figcaption>
+      </figure>
+
+      <div class="rounded-xl border border-green-200 bg-green-50 p-6 my-8">
+        <p class="text-sm font-semibold uppercase tracking-wide text-green-700 mb-2">For Abuja contractors</p>
+        <h2 class="text-2xl font-bold text-green-950 mb-3">Want project owners to find your construction company?</h2>
+        <p class="text-green-900 mb-4">Create a 9jaDirectory profile with your company name, services, Abuja office location, phone number, project photos, website, and verification details. A complete listing helps property owners and developers confirm your business before they call.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">List Your Construction Company</a>
+          <a href="/pricing" class="inline-flex items-center gap-2 rounded-lg border border-green-300 bg-white px-5 py-3 font-semibold text-green-700 hover:bg-green-50">See Listing Plans</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How We Selected These Abuja Construction Companies</h2>
+      <p>This is an editorial guide, not a paid ranking. We considered companies with visible Abuja relevance, public project history, service scope, reputation, and evidence of construction or engineering work in Nigeria. We also looked at whether a company appears suited for residential buildings, commercial construction, roads, infrastructure, civil engineering, or large public-sector work.</p>
+
+      <p>Our selection criteria included:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Abuja presence:</strong> office location, projects, or active work connected to FCT Abuja.</li>
+        <li><strong>Project portfolio:</strong> roads, bridges, public buildings, estates, commercial buildings, private homes, or infrastructure delivery.</li>
+        <li><strong>Experience:</strong> years of operation, technical depth, equipment capacity, and project management structure.</li>
+        <li><strong>Credibility:</strong> traceable business information, public reputation, official website, and visible client or project references.</li>
+        <li><strong>Service fit:</strong> whether the firm is better for large infrastructure, private building construction, design-build work, or specialist contracting.</li>
+      </ul>
+
+      <p><strong>Disclosure:</strong> construction companies can list on 9jaDirectory, but paid listing does not automatically change editorial ranking. Sponsored placements should be clearly labelled where used.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Quick Comparison: Top Construction Companies in Abuja</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="min-w-full border border-gray-300 text-sm">
+          <thead>
+            <tr class="bg-green-50">
+              <th class="border border-gray-300 p-3 text-left">Company</th>
+              <th class="border border-gray-300 p-3 text-left">Best For</th>
+              <th class="border border-gray-300 p-3 text-left">Core Strength</th>
+              <th class="border border-gray-300 p-3 text-left">Project Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 p-3 font-semibold">Julius Berger Nigeria Plc</td><td class="border border-gray-300 p-3">Major infrastructure and complex buildings</td><td class="border border-gray-300 p-3">Engineering depth and national track record</td><td class="border border-gray-300 p-3">Infrastructure, buildings, industrial</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3 font-semibold">Dantata & Sawoe</td><td class="border border-gray-300 p-3">Roads, bridges, civil works</td><td class="border border-gray-300 p-3">Long civil engineering history</td><td class="border border-gray-300 p-3">Civil and infrastructure</td></tr>
+            <tr><td class="border border-gray-300 p-3 font-semibold">CCECC Nigeria</td><td class="border border-gray-300 p-3">Rail, transport, large public works</td><td class="border border-gray-300 p-3">Heavy infrastructure execution</td><td class="border border-gray-300 p-3">Rail, roads, transport</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3 font-semibold">Setraco Nigeria Limited</td><td class="border border-gray-300 p-3">Roads, bridges, precast, infrastructure</td><td class="border border-gray-300 p-3">Road construction and engineering operations</td><td class="border border-gray-300 p-3">Roads, bridges, buildings</td></tr>
+            <tr><td class="border border-gray-300 p-3 font-semibold">Arab Contractors Nigeria</td><td class="border border-gray-300 p-3">Institutional and road projects</td><td class="border border-gray-300 p-3">Regional construction experience</td><td class="border border-gray-300 p-3">Roads, buildings, public works</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3 font-semibold">Dutum Construction</td><td class="border border-gray-300 p-3">Private building and civil projects</td><td class="border border-gray-300 p-3">Design, construction, project delivery</td><td class="border border-gray-300 p-3">Residential, commercial, civil</td></tr>
+            <tr><td class="border border-gray-300 p-3 font-semibold">Reynolds Construction Company</td><td class="border border-gray-300 p-3">Large engineering and infrastructure</td><td class="border border-gray-300 p-3">Heavy construction experience</td><td class="border border-gray-300 p-3">Roads, civil engineering</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3 font-semibold">Gilmor Engineering</td><td class="border border-gray-300 p-3">Infrastructure and urban projects</td><td class="border border-gray-300 p-3">Engineering and project management</td><td class="border border-gray-300 p-3">Roads, infrastructure</td></tr>
+            <tr><td class="border border-gray-300 p-3 font-semibold">Spitze Construction Limited</td><td class="border border-gray-300 p-3">Residential and commercial buildings</td><td class="border border-gray-300 p-3">Design, automation, project management</td><td class="border border-gray-300 p-3">Buildings and private projects</td></tr>
+            <tr class="bg-gray-50"><td class="border border-gray-300 p-3 font-semibold">Bustra Construction Ltd</td><td class="border border-gray-300 p-3">Residential and commercial developments</td><td class="border border-gray-300 p-3">Private-sector building delivery</td><td class="border border-gray-300 p-3">Buildings, estates, commercial</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">1. Julius Berger Nigeria Plc</h2>
+      <p>Julius Berger is one of the most recognised names in Nigeria's construction industry and has a strong connection to Abuja's development. The company is known for integrated construction solutions across buildings, infrastructure, industrial projects, road systems, bridges, and complex engineering works. For clients who need a contractor with deep technical capacity, large equipment resources, and a long national record, Julius Berger is often the first name considered.</p>
+
+      <p>In Abuja, Julius Berger is associated with major public and institutional projects. The company is not usually the most accessible option for small private jobs, but for complex public, commercial, industrial, or large-scale infrastructure projects, it remains one of the strongest construction brands in the country.</p>
+
+      <p><strong>Best for:</strong> major infrastructure, institutional buildings, roads, bridges, industrial projects, and complex engineering assignments.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">2. Dantata & Sawoe Construction Company</h2>
+      <p>Dantata & Sawoe is another major construction company with long experience in civil and infrastructural projects in Nigeria. The company has built a reputation around roads, bridges, highways, water treatment works, township roads, and large civil engineering assignments. Its own public company materials describe more than 40 years of experience and several hundred kilometres of highways and township roads.</p>
+
+      <p>For Abuja clients, Dantata & Sawoe is more relevant to civil engineering and public infrastructure than ordinary house construction. Developers, agencies, and institutions looking for large-scale technical execution may find the company more suitable than a smaller private building contractor.</p>
+
+      <p><strong>Best for:</strong> roads, bridges, highways, water infrastructure, and civil engineering projects.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">3. CCECC Nigeria</h2>
+      <p>CCECC Nigeria is widely known for large infrastructure and transport-related projects. In Nigeria, the company is strongly associated with rail, road, airport, and major public infrastructure work. Abuja search results and business profiles connect CCECC with FCT presence, including airport-road and transport infrastructure references.</p>
+
+      <p>CCECC is not the typical choice for a small duplex or private renovation. It is better understood as a large infrastructure contractor with capacity for projects that require government-level procurement, engineering coordination, and heavy equipment deployment.</p>
+
+      <p><strong>Best for:</strong> rail projects, transport infrastructure, major road works, and large public-sector construction.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">4. Setraco Nigeria Limited</h2>
+      <p>Setraco is a major civil engineering and construction company with Abuja headquarters and a long presence in road and bridge construction. Its official contact information places it in Kado District, Abuja, and its public materials highlight operations involving precast concrete, infrastructure, residential, and commercial construction sectors.</p>
+
+      <p>Setraco is especially relevant when the project involves roads, bridges, concrete works, precast elements, and large civil engineering requirements. For private clients, it may be more suited to substantial developments than small individual house builds.</p>
+
+      <p><strong>Best for:</strong> road construction, bridges, precast concrete, infrastructure, and large civil works.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">5. Arab Contractors Nigeria</h2>
+      <p>Arab Contractors has Nigerian project references that include Abuja-related works such as regional offices, institutional buildings, district infrastructure, and road projects. It is known more as a civil engineering and public works contractor than as a small residential builder.</p>
+
+      <p>For clients comparing Abuja construction companies, Arab Contractors belongs in the infrastructure and institutional category. It may be worth considering for projects where road works, public buildings, civil structures, or large organised construction delivery are required.</p>
+
+      <p><strong>Best for:</strong> institutional buildings, road works, public infrastructure, and civil engineering projects.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">6. Dutum Construction Company</h2>
+      <p>Dutum has published heavily around Abuja construction topics and positions itself as a construction and engineering company serving both private and institutional clients. The company appears in several Abuja construction-company lists and is often presented as a strong option for building projects, project delivery, and civil works.</p>
+
+      <p>One thing to note is that some articles ranking Dutum are published by Dutum itself, so buyers should treat those rankings as marketing material and still verify projects, client references, and contract details. Even so, Dutum is visible in the Abuja construction conversation and is a relevant company to compare.</p>
+
+      <p><strong>Best for:</strong> private building projects, construction management, civil projects, and clients comparing modern Nigerian contractors.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">7. Reynolds Construction Company Nigeria</h2>
+      <p>Reynolds Construction Company, often called RCC, is frequently mentioned among Nigeria's major infrastructure and civil engineering firms. It has a long history in road construction, bridges, and heavy civil projects. In Abuja-focused construction lists, RCC usually appears as one of the companies involved in the wider development of the capital and national infrastructure.</p>
+
+      <p>For Abuja project owners, RCC is more suitable for infrastructure and engineering-heavy assignments than small-scale building works. If your project involves roads, earthworks, drainage, bridges, or large civil structures, RCC is a name to include in due diligence.</p>
+
+      <p><strong>Best for:</strong> roads, bridges, drainage, earthworks, and large civil engineering projects.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">8. Gilmor Engineering</h2>
+      <p>Gilmor Engineering is commonly mentioned in Abuja construction and infrastructure discussions. The company is associated with engineering, infrastructure development, roads, and urban works. For clients looking beyond the most famous legacy contractors, Gilmor is one of the names that appears in Abuja-focused construction comparisons.</p>
+
+      <p>As with any contractor, clients should verify recent projects, current equipment capacity, professional registrations, safety processes, and the specific team that will manage the job. The company may be more relevant for infrastructure and organised engineering works than informal small contracts.</p>
+
+      <p><strong>Best for:</strong> infrastructure, engineering works, roads, and urban development projects.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">9. Spitze Construction Limited</h2>
+      <p>Spitze Construction Limited presents itself as an Abuja construction company focused on residential and commercial buildings, design, automation, project management, consultation, and construction services. This makes it more relevant to private property owners, developers, and businesses that need buildings rather than heavy infrastructure.</p>
+
+      <p>For people searching for a <strong>construction company in Abuja</strong> to handle homes, office spaces, retail buildings, or institutional projects, Spitze may be closer to the practical private-client need than the heavy infrastructure firms above. Before hiring, request completed project photos, site visits, references, structural drawings, professional team details, and a clear bill of quantities.</p>
+
+      <p><strong>Best for:</strong> residential construction, commercial buildings, design-build support, and project management.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">10. Bustra Construction Ltd</h2>
+      <p>Bustra Construction Ltd describes itself as a construction and property development company focused on high-quality residential estates, commercial developments, and infrastructure projects. It is a useful example of the kind of private-sector contractor that may fit clients who need building delivery, property development support, or commercial construction rather than federal-scale infrastructure.</p>
+
+      <p>Because smaller and mid-sized contractors can vary widely in capacity, clients should ask for proof of completed projects, active site visits, company registration details, professional team information, and evidence of financial and site-management discipline.</p>
+
+      <p><strong>Best for:</strong> residential developments, commercial buildings, private-sector construction, and estate-related projects.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Best Construction Company in Abuja by Project Type</h2>
+      <p>There is no single best contractor for every construction job. The best choice depends on the type of project, budget, risk level, timeline, design complexity, and required approvals.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>Best for major infrastructure:</strong> Julius Berger, CCECC, Setraco, Dantata & Sawoe, RCC.</li>
+        <li><strong>Best for road and bridge projects:</strong> Setraco, Dantata & Sawoe, RCC, Julius Berger, Arab Contractors.</li>
+        <li><strong>Best for private residential buildings:</strong> Spitze Construction, Bustra Construction, Dutum, and other verified Abuja building contractors.</li>
+        <li><strong>Best for commercial buildings:</strong> Julius Berger for large-scale projects; Spitze, Bustra, Dutum, and similar contractors for private commercial builds.</li>
+        <li><strong>Best for design-build support:</strong> firms that combine architectural design, structural engineering, costing, approvals support, and site management.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">How Much Does It Cost to Hire a Construction Company in Abuja?</h2>
+      <p>Construction cost in Abuja depends on location, soil condition, building type, design complexity, material choices, finishing level, labour availability, exchange rates, and contractor scope. A simple residential build in a satellite district will not cost the same as a luxury home in Maitama, Asokoro, Guzape, or Wuse 2.</p>
+
+      <p>Key cost factors include:</p>
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li>soil test and foundation requirements</li>
+        <li>architectural and structural design</li>
+        <li>bill of quantities and material specifications</li>
+        <li>reinforcement, cement, blocks, steel, roofing, doors, windows, electrical, and plumbing</li>
+        <li>site access, security, water, power, and logistics</li>
+        <li>approval fees, professional fees, and supervision</li>
+        <li>finishing level, imported materials, smart-home systems, and landscaping</li>
+      </ul>
+
+      <p>Do not choose a contractor only because the quote is cheap. A low quote can become expensive if the contractor underestimates materials, cuts structural corners, abandons the site, or keeps requesting variations that were not properly discussed.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Checklist Before You Hire a Building Contractor in Abuja</h2>
+      <p>Before signing a construction agreement, request evidence. A serious contractor should be willing to document their capacity and explain how the project will be delivered.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li><strong>CAC registration:</strong> confirm the company name and registration details.</li>
+        <li><strong>Project portfolio:</strong> ask for completed projects similar to yours.</li>
+        <li><strong>Site visit:</strong> inspect at least one completed or ongoing project if possible.</li>
+        <li><strong>Professional team:</strong> confirm architects, structural engineers, quantity surveyors, site engineers, and supervisors.</li>
+        <li><strong>Bill of quantities:</strong> insist on itemised costing, not vague lump sums.</li>
+        <li><strong>Contract agreement:</strong> include timeline, scope, milestones, payment schedule, variations, penalties, and dispute resolution.</li>
+        <li><strong>Insurance and safety:</strong> ask about worker safety, site risk, and liability management.</li>
+        <li><strong>References:</strong> speak with past clients before making large payments.</li>
+      </ul>
+
+      <div class="rounded-xl border border-gray-200 bg-gray-50 p-6 my-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-3">Find or List Construction Companies in Abuja</h2>
+        <p class="text-gray-700 mb-4">9jaDirectory helps people compare Nigerian businesses by category, location, contact details, and business information. If you run a construction company, building-material supply business, engineering firm, or project-management service in Abuja, list your company so clients can find and verify you.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/categories/construction" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-3 font-semibold text-gray-800 hover:bg-gray-100">Browse Construction Listings</a>
+          <a href="/add-business" class="inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-3 font-semibold text-white hover:bg-green-700">Add Your Construction Business</a>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Red Flags to Avoid Before Paying a Contractor</h2>
+      <p>Many construction disputes begin before work starts. Watch for warning signs that a contractor may not be ready for your project.</p>
+
+      <ul class="list-disc pl-5 mt-2 mb-4 space-y-2">
+        <li>No written contract or unclear scope of work.</li>
+        <li>Pressure to pay a large mobilisation fee immediately.</li>
+        <li>No verifiable project history or unwillingness to show past sites.</li>
+        <li>No clear engineer, architect, or project manager attached to the job.</li>
+        <li>Vague material specifications such as "standard finishing" without details.</li>
+        <li>No formal payment milestones tied to measurable progress.</li>
+        <li>Unclear responsibility for approvals, drawings, testing, and inspections.</li>
+        <li>Bad communication before payment. It usually gets worse after payment.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Conclusion</h2>
+      <p>The <strong>best construction companies in Abuja</strong> are not all competing for the same type of project. Julius Berger, CCECC, Setraco, Dantata & Sawoe, RCC, and Arab Contractors are stronger for major infrastructure and civil engineering work. Firms such as Spitze, Bustra, Dutum, and other verified Abuja contractors may be more practical for private residential, commercial, and project-management needs.</p>
+
+      <p>Before you pay any company, check its records, ask for proof, visit projects, compare quotes, and use a written contract. If you run a construction business in Abuja, create a complete profile on <a href="/add-business" class="text-green-600 hover:underline font-semibold">9jaDirectory</a> so clients can find your services, confirm your contact details, and reach you with confidence.</p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">FAQs</h2>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">What is the best construction company in Abuja?</h3>
+      <p>For large infrastructure and complex projects, Julius Berger is one of the strongest names in Abuja. For roads and bridges, Setraco, Dantata & Sawoe, RCC, and Arab Contractors are also relevant. For private residential or commercial buildings, compare verified local contractors based on project history and service fit.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">How do I choose a reliable building contractor in Abuja?</h3>
+      <p>Check CAC registration, completed projects, client references, professional team, bill of quantities, safety process, written contract, and payment milestones. Visit a completed or active site before making a major payment.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Do construction companies in Abuja handle architectural design?</h3>
+      <p>Some construction companies offer design-build services, project management, structural engineering coordination, and architectural support. Others only build from approved drawings. Always confirm the scope before signing.</p>
+
+      <h3 class="text-xl font-bold mt-6 mb-3">Can I list my construction company on 9jaDirectory?</h3>
+      <p>Yes. Construction companies, building contractors, civil engineering firms, material suppliers, and project managers can create a 9jaDirectory listing with business details, service areas, photos, website, and contact information.</p>
+    `,
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
+    date: "Jul 6, 2026",
+    author: "9jaDirectory Editorial Team",
+    category: "Construction",
+    readTime: "14 min read",
+    schema: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Construction Companies in Abuja (2026 Guide)",
+        "description": "Compare the best construction companies in Abuja for residential, commercial, road, and civil engineering projects. See top firms, selection tips, and verified contractors.",
+        "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80",
+        "datePublished": "2026-07-06",
+        "dateModified": "2026-07-06",
+        "author": { "@type": "Organization", "name": "9jaDirectory Editorial Team" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "9jaDirectory",
+          "logo": { "@type": "ImageObject", "url": "https://www.9jadirectory.org/logo.png" }
+        },
+        "keywords": "best construction company in Abuja, construction companies in Abuja, building contractors in Abuja, civil engineering companies in Abuja",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.9jadirectory.org/blog/best-construction-companies-abuja"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Best Construction Companies in Abuja",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Julius Berger Nigeria Plc" },
+          { "@type": "ListItem", "position": 2, "name": "Dantata & Sawoe Construction Company" },
+          { "@type": "ListItem", "position": 3, "name": "CCECC Nigeria" },
+          { "@type": "ListItem", "position": 4, "name": "Setraco Nigeria Limited" },
+          { "@type": "ListItem", "position": 5, "name": "Arab Contractors Nigeria" },
+          { "@type": "ListItem", "position": 6, "name": "Dutum Construction Company" },
+          { "@type": "ListItem", "position": 7, "name": "Reynolds Construction Company Nigeria" },
+          { "@type": "ListItem", "position": 8, "name": "Gilmor Engineering" },
+          { "@type": "ListItem", "position": 9, "name": "Spitze Construction Limited" },
+          { "@type": "ListItem", "position": 10, "name": "Bustra Construction Ltd" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the best construction company in Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "For large infrastructure and complex projects, Julius Berger is one of the strongest names in Abuja. For roads and bridges, Setraco, Dantata & Sawoe, RCC, and Arab Contractors are also relevant." } },
+          { "@type": "Question", "name": "How do I choose a reliable building contractor in Abuja?", "acceptedAnswer": { "@type": "Answer", "text": "Check CAC registration, completed projects, client references, professional team, bill of quantities, safety process, written contract, and payment milestones." } },
+          { "@type": "Question", "name": "Do construction companies in Abuja handle architectural design?", "acceptedAnswer": { "@type": "Answer", "text": "Some construction companies offer design-build services, project management, structural engineering coordination, and architectural support. Others only build from approved drawings." } },
+          { "@type": "Question", "name": "Can I list my construction company on 9jaDirectory?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Construction companies, building contractors, civil engineering firms, material suppliers, and project managers can create a 9jaDirectory listing." } }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.9jadirectory.org" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.9jadirectory.org/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Best Construction Companies in Abuja", "item": "https://www.9jadirectory.org/blog/best-construction-companies-abuja" }
+        ]
+      }
+    ])
+  },
+
+  {
     slug: "how-to-start-real-estate-business-nigeria",
     title: "How to Start a Real Estate Business in Nigeria",
     excerpt: "Learn how to start a real estate business in Nigeria, choose a profitable model, register properly, find clients, build trust, and list your agency online.",
