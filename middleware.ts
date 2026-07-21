@@ -2,6 +2,13 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 import { SITE_URL } from '@/lib/seo/site-url'
 
+function withDeploymentHeaders(response: NextResponse) {
+  if (process.env.DEPLOYMENT_ENV === 'staging') {
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+  }
+  return response
+}
+
 export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname
   const isAmpersandPath = requestPath === '/&' || requestPath === '/%26'
@@ -15,20 +22,20 @@ export async function middleware(request: NextRequest) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.host = canonicalHost
     redirectUrl.protocol = 'https:'
-    return NextResponse.redirect(redirectUrl, 308)
+    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308))
   }
 
   // Only redirect malformed ampersand paths
   if (isAmpersandPath) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = '/'
-    return NextResponse.redirect(redirectUrl, 308)
+    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308))
   }
 
   if (!isProtectedRoute && !isAdminRoute) {
-    return NextResponse.next({
+    return withDeploymentHeaders(NextResponse.next({
       request,
-    })
+    }))
   }
 
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -66,7 +73,7 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   if ((isProtectedRoute || isAdminRoute) && !user) {
-    return NextResponse.redirect(new URL('/login', request.url))
+    return withDeploymentHeaders(NextResponse.redirect(new URL('/login', request.url)))
   }
 
   // 3. Check for admin role if accessing admin routes
@@ -78,11 +85,11 @@ export async function middleware(request: NextRequest) {
       .single()
 
     if (profile?.role !== 'admin') {
-      return NextResponse.redirect(new URL('/dashboard', request.url))
+      return withDeploymentHeaders(NextResponse.redirect(new URL('/dashboard', request.url)))
     }
   }
 
-  return response
+  return withDeploymentHeaders(response)
 }
 
 export const config = {

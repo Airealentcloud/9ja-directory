@@ -12,7 +12,11 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report",
-    "adsense:audit": "node scripts/adsense-content-audit.mjs"
+    "adsense:audit": "node scripts/adsense-content-audit.mjs",
+    "cf:build": "opennextjs-cloudflare build && node scripts/prepare-cloudflare-staging.mjs",
+    "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",
+    "cf:deploy:staging": "npm run cf:build && wrangler deploy",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "keywords": [],
   "author": "",
@@ -36,9 +40,11 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.1",
     "@playwright/test": "^1.56.1",
     "@types/dotenv": "^6.1.1",
     "dotenv": "^17.2.3",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "wrangler": "^4.112.0"
   }
 }
