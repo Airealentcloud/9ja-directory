@@ -194,6 +194,87 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
     return { data: { listing_id: listing.id } }
 }
 
+/**
+ * Repairs a successful payment created by the signed-in checkout flow before a
+ * listing was attached. These payments are legitimate, but cannot be approved
+ * until they point to a pending listing.
+ */
+export async function createListingFromUnlinkedPaymentServer(formData: FormData) {
+    const supabase = await checkAdmin()
+
+    const paymentId = String(formData.get('payment_id') || '').trim()
+    const businessName = String(formData.get('business_name') || '').trim()
+
+    if (!paymentId || !businessName) {
+        return { error: { message: 'Payment and business name are required.' } }
+    }
+
+    const { data: payment, error: paymentError } = await supabase
+        .from('payments')
+        .select('id, user_id, listing_id, reference, plan, amount, currency, status, paid_at')
+        .eq('id', paymentId)
+        .maybeSingle()
+
+    if (paymentError || !payment) {
+        return { error: { message: paymentError?.message || 'Payment record not found.' } }
+    }
+
+    if (payment.status !== 'success') {
+        return { error: { message: 'Only successful payments can be converted to a listing.' } }
+    }
+
+    if (payment.listing_id) {
+        return { error: { message: 'This payment is already linked to a listing.' } }
+    }
+
+    if (!payment.user_id) {
+        return { error: { message: 'This payment is not linked to a customer account.' } }
+    }
+
+    const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('email, phone')
+        .eq('id', payment.user_id)
+        .maybeSingle()
+
+    if (profileError || !profile?.email) {
+        return { error: { message: profileError?.message || 'Customer profile or email was not found.' } }
+    }
+
+    const { data: listing, error: listingError } = await supabase
+        .from('listings')
+        .insert({
+            user_id: payment.user_id,
+            business_name: businessName,
+            slug: buildSlug(businessName),
+            description: `${payment.plan === 'basic' ? 'Basic' : 'Paid'} listing created from a verified payment. Please review and complete the business details before approval.`,
+            phone: profile.phone || null,
+            email: normalizeEmail(profile.email),
+            status: 'pending',
+        })
+        .select('id')
+        .single()
+
+    if (listingError || !listing) {
+        return { error: { message: listingError?.message || 'Could not create a pending listing.' } }
+    }
+
+    const { error: linkError } = await supabase
+        .from('payments')
+        .update({ listing_id: listing.id, status: 'success', paid_at: payment.paid_at || new Date().toISOString() })
+        .eq('id', payment.id)
+
+    if (linkError) {
+        return { error: { message: linkError.message } }
+    }
+
+    revalidatePath('/admin/payment-leads')
+    revalidatePath('/admin/listings')
+    revalidatePath('/admin/dashboard')
+
+    return { data: { listing_id: listing.id, reference: payment.reference } }
+}
+
 export async function repairPaymentLeadOwnerServer(formData: FormData) {
     const supabase = await checkAdmin()
 

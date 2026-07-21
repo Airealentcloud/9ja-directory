@@ -47,6 +47,16 @@ export async function POST(request: NextRequest) {
             )
         }
 
+        // A payment must be connected to an existing listing or a complete new
+        // listing form. Without either, a real payment would have no listing
+        // for the admin to review and approve.
+        if (!listing_id && !listing_data) {
+            return NextResponse.json(
+                { error: 'Add or select a business listing before making payment.' },
+                { status: 400 }
+            )
+        }
+
         // Validate listing data if provided (for new listings during checkout)
         if (listing_data) {
             if (!listing_data.business_name?.trim()) {

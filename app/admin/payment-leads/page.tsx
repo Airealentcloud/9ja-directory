@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
-import { createListingFromPaymentLeadServer, repairPaymentLeadOwnerServer } from '@/app/actions/admin'
+import {
+  createListingFromPaymentLeadServer,
+  createListingFromUnlinkedPaymentServer,
+  repairPaymentLeadOwnerServer,
+} from '@/app/actions/admin'
 import { redirect } from 'next/navigation'
 
 async function createListingFormAction(formData: FormData) {
@@ -23,6 +27,16 @@ async function repairOwnerFormAction(formData: FormData) {
   redirect('/admin/listings')
 }
 
+async function createUnlinkedPaymentListingFormAction(formData: FormData) {
+  'use server'
+  const result = await createListingFromUnlinkedPaymentServer(formData)
+  if (result?.error?.message) {
+    redirect(`/admin/payment-leads?error=${encodeURIComponent(result.error.message)}`)
+  }
+
+  redirect('/admin/listings')
+}
+
 type PaymentLead = {
   id: string
   user_id: string | null
@@ -37,6 +51,19 @@ type PaymentLead = {
   status: 'pending' | 'success' | 'failed' | 'abandoned'
   paid_at: string | null
   created_at: string
+}
+
+type UnlinkedPayment = {
+  id: string
+  user_id: string | null
+  reference: string
+  plan: string
+  amount: number
+  currency: string
+  status: 'success'
+  paid_at: string | null
+  created_at: string
+  profiles?: { email?: string | null; full_name?: string | null; phone?: string | null } | null
 }
 
 function formatAmount(amount: number, currency: string) {
@@ -76,7 +103,30 @@ export default async function AdminPaymentLeadsPage({
     .order('created_at', { ascending: false })
 
   const leads = (data || []) as PaymentLead[]
-  const paidUnlinked = leads.filter((lead) => lead.status === 'success' && !lead.listing_id).length
+  const { data: unlinkedPaymentData, error: unlinkedPaymentError } = await supabase
+    .from('payments')
+    .select('id, user_id, reference, plan, amount, currency, status, paid_at, created_at')
+    .eq('status', 'success')
+    .is('listing_id', null)
+    .order('created_at', { ascending: false })
+
+  const unlinkedPayments = (unlinkedPaymentData || []) as UnlinkedPayment[]
+  const paymentUserIds = Array.from(new Set(unlinkedPayments.map((payment) => payment.user_id).filter(Boolean))) as string[]
+  const { data: paymentProfiles, error: paymentProfilesError } = paymentUserIds.length
+    ? await supabase
+        .from('profiles')
+        .select('id, email, full_name, phone')
+        .in('id', paymentUserIds)
+    : { data: [], error: null }
+
+  const profilesById = new Map((paymentProfiles || []).map((profile) => [profile.id, profile]))
+  unlinkedPayments.forEach((payment) => {
+    payment.profiles = payment.user_id ? profilesById.get(payment.user_id) || null : null
+  })
+
+  const paidUnlinked =
+    leads.filter((lead) => lead.status === 'success' && !lead.listing_id).length + unlinkedPayments.length
+  const loadError = error || unlinkedPaymentError || paymentProfilesError
 
   return (
     <div>
@@ -104,7 +154,7 @@ export default async function AdminPaymentLeadsPage({
       <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
           <p className="text-sm text-gray-500">Total leads</p>
-          <p className="mt-1 text-3xl font-bold text-gray-900">{leads.length}</p>
+          <p className="mt-1 text-3xl font-bold text-gray-900">{leads.length + unlinkedPayments.length}</p>
         </div>
         <div className="rounded-lg border border-green-200 bg-green-50 p-4 shadow-sm">
           <p className="text-sm text-green-700">Paid but not linked</p>
@@ -116,16 +166,68 @@ export default async function AdminPaymentLeadsPage({
         </div>
       </div>
 
-      {error ? (
+      {loadError ? (
         <div className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          Could not load payment leads: {error.message}
+          Could not load paid records: {loadError.message}
         </div>
-      ) : leads.length === 0 ? (
+      ) : leads.length === 0 && unlinkedPayments.length === 0 ? (
         <div className="rounded-lg border border-gray-200 bg-white p-8 text-center text-gray-500 shadow-sm">
           No payment leads found yet.
         </div>
       ) : (
-        <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+        <div className="space-y-6">
+          {unlinkedPayments.length > 0 && (
+          <div className="overflow-hidden rounded-lg border border-amber-200 bg-white shadow-sm">
+            <div className="border-b border-amber-200 bg-amber-50 px-4 py-3">
+              <h3 className="font-semibold text-amber-950">Paid payments awaiting a listing</h3>
+              <p className="mt-1 text-sm text-amber-800">
+                These are verified payments from a signed-in customer. Create the pending listing using the business name from the payment receipt, then review it in Manage Listings.
+              </p>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Customer</th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Payment</th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Reference</th>
+                    <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">Create listing</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  {unlinkedPayments.map((payment) => {
+                    const suggestedName = payment.profiles?.full_name || payment.profiles?.email?.split('@')[0] || ''
+                    return (
+                      <tr key={payment.id}>
+                        <td className="px-4 py-4 align-top">
+                          <div className="font-medium text-gray-900">{payment.profiles?.full_name || 'Registered customer'}</div>
+                          <div className="mt-1 text-sm text-gray-600">{payment.profiles?.email || 'Customer email unavailable'}</div>
+                          {payment.profiles?.phone && <div className="mt-1 text-sm text-gray-500">{payment.profiles.phone}</div>}
+                        </td>
+                        <td className="px-4 py-4 align-top">
+                          <div className="font-medium text-gray-900">{formatAmount(payment.amount, payment.currency)}</div>
+                          <div className="mt-1 text-sm uppercase text-gray-500">{payment.plan}</div>
+                          <div className="mt-2 text-xs text-gray-500">Paid: {formatDate(payment.paid_at)}</div>
+                        </td>
+                        <td className="px-4 py-4 align-top"><code className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700">{payment.reference}</code></td>
+                        <td className="px-4 py-4 align-top">
+                          <form action={createUnlinkedPaymentListingFormAction} className="flex min-w-64 flex-col gap-2">
+                            <input type="hidden" name="payment_id" value={payment.id} />
+                            <label className="text-xs font-medium text-gray-700" htmlFor={`business-${payment.id}`}>Business name on receipt</label>
+                            <input id={`business-${payment.id}`} name="business_name" required defaultValue={suggestedName} className="rounded-md border border-gray-300 px-3 py-2 text-sm" />
+                            <button type="submit" className="inline-flex w-fit rounded-md bg-green-600 px-3 py-2 text-xs font-semibold text-white hover:bg-green-700">Create pending listing</button>
+                          </form>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          )}
+
+          {leads.length > 0 && <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
@@ -223,6 +325,7 @@ export default async function AdminPaymentLeadsPage({
               </tbody>
             </table>
           </div>
+          </div>}
         </div>
       )}
     </div>
