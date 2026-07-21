@@ -18,8 +18,8 @@ export default async function AdminDashboardPage() {
         .from('listings')
         .select('*', { count: 'exact', head: true })
 
-    const { count: paidLeadCount } = await supabase
-        .from('payment_leads')
+    const { count: unlinkedPaymentCount } = await supabase
+        .from('payments')
         .select('*', { count: 'exact', head: true })
         .eq('status', 'success')
         .is('listing_id', null)
@@ -57,15 +57,15 @@ export default async function AdminDashboardPage() {
                     </div>
                 </Link>
 
-                <Link href="/admin/payment-leads" className="block">
+                <Link href="/admin/listings" className="block">
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 overflow-hidden shadow-lg rounded-lg border-2 border-green-400 hover:shadow-xl transition-shadow cursor-pointer">
                         <div className="px-4 py-5 sm:p-6">
                             <div className="flex items-center justify-between">
                                 <div>
-                                    <dt className="text-sm font-medium text-gray-700 truncate">Paid Leads</dt>
-                                    <dd className="mt-1 text-4xl font-bold text-green-600">{paidLeadCount || 0}</dd>
+                                    <dt className="text-sm font-medium text-gray-700 truncate">Payments Needing Link</dt>
+                                    <dd className="mt-1 text-4xl font-bold text-green-600">{unlinkedPaymentCount || 0}</dd>
                                     <p className="mt-2 text-sm text-green-700 font-medium">
-                                        Check unlinked payments →
+                                        Resolve in Manage Listings →
                                     </p>
                                 </div>
                                 <div className="flex-shrink-0">

@@ -3,7 +3,13 @@
 import { createClient } from '@/lib/supabase/client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { getAdminListings, approveListingServer, rejectListingServer } from '@/app/actions/admin'
+import {
+    getAdminListings,
+    getUnlinkedSuccessfulPaymentsServer,
+    linkPaymentToExistingListingServer,
+    approveListingServer,
+    rejectListingServer,
+} from '@/app/actions/admin'
 
 type Listing = {
     id: string
@@ -30,6 +36,26 @@ type Listing = {
     }
 }
 
+type UnlinkedPayment = {
+    id: string
+    user_id: string
+    reference: string
+    plan: string
+    amount: number
+    currency: string
+    paid_at?: string | null
+    profile?: {
+        email?: string | null
+        full_name?: string | null
+    } | null
+    candidate_listings: Array<{
+        id: string
+        business_name: string
+        status: string
+        created_at: string
+    }>
+}
+
 export default function AdminListingsPage() {
     const [listings, setListings] = useState<Listing[]>([])
     const [filteredListings, setFilteredListings] = useState<Listing[]>([])
@@ -40,10 +66,29 @@ export default function AdminListingsPage() {
     const [statusFilter, setStatusFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('pending')
     const [paymentFilter, setPaymentFilter] = useState<'all' | 'success' | 'pending' | 'failed' | 'abandoned' | 'none'>('all')
     const [processingId, setProcessingId] = useState<string | null>(null)
+    const [unlinkedPayments, setUnlinkedPayments] = useState<UnlinkedPayment[]>([])
+    const [selectedListingByPayment, setSelectedListingByPayment] = useState<Record<string, string>>({})
     const supabase = createClient()
 
     const fetchListings = async () => {
         setLoading(true)
+
+        try {
+            const unlinked = await getUnlinkedSuccessfulPaymentsServer() as UnlinkedPayment[]
+            setUnlinkedPayments(unlinked)
+            setSelectedListingByPayment((current) => {
+                const next = { ...current }
+                unlinked.forEach((payment) => {
+                    if (!next[payment.id] && payment.candidate_listings.length === 1) {
+                        next[payment.id] = payment.candidate_listings[0].id
+                    }
+                })
+                return next
+            })
+        } catch (error) {
+            console.error('Could not load unlinked successful payments:', error)
+            setUnlinkedPayments([])
+        }
 
         // 1. Try server-side fetch first (bypasses RLS if service key exists)
         try {
@@ -367,6 +412,30 @@ export default function AdminListingsPage() {
         rejected: listings.filter(l => l.status === 'rejected').length,
     }
 
+    const handleLinkPayment = async (payment: UnlinkedPayment) => {
+        const listingId = selectedListingByPayment[payment.id]
+        if (!listingId) {
+            alert('Select the customer\'s pending listing first.')
+            return
+        }
+
+        setProcessingId(payment.id)
+        try {
+            const result = await linkPaymentToExistingListingServer(payment.id, listingId)
+            if (result?.error?.message) {
+                alert(result.error.message)
+                return
+            }
+
+            alert(`Payment linked to ${result.data?.business_name || 'the pending listing'}. You can now review and approve it.`)
+            await fetchListings()
+        } catch (error) {
+            alert(error instanceof Error ? error.message : 'Could not link payment to listing.')
+        } finally {
+            setProcessingId(null)
+        }
+    }
+
     const paymentStats = {
         paid: listings.filter(l => (l.payment_status || 'none') === 'success').length,
         pending: listings.filter(l => (l.payment_status || 'none') === 'pending').length,
@@ -384,6 +453,67 @@ export default function AdminListingsPage() {
                     ← Back to Admin Dashboard
                 </Link>
             </div>
+
+            {unlinkedPayments.length > 0 && (
+                <section className="mb-6 overflow-hidden rounded-lg border border-amber-300 bg-amber-50 shadow-sm">
+                    <div className="border-b border-amber-200 px-4 py-3 sm:px-6">
+                        <h3 className="font-semibold text-amber-950">Successful payments needing a listing link</h3>
+                        <p className="mt-1 text-sm text-amber-800">
+                            Link a payment only to a pending listing submitted by the same customer. Payments with no submitted listing cannot be approved yet.
+                        </p>
+                    </div>
+                    <div className="divide-y divide-amber-200">
+                        {unlinkedPayments.map((payment) => {
+                            const selectedListingId = selectedListingByPayment[payment.id] || ''
+                            const isProcessing = processingId === payment.id
+                            return (
+                                <div key={payment.id} className="grid gap-4 px-4 py-4 sm:grid-cols-[1fr_1fr_auto] sm:items-end sm:px-6">
+                                    <div>
+                                        <p className="font-medium text-gray-900">{payment.profile?.full_name || 'Registered customer'}</p>
+                                        <p className="text-sm text-gray-700">{payment.profile?.email || 'Email unavailable'}</p>
+                                        <p className="mt-1 text-xs text-gray-500">Reference: {payment.reference}</p>
+                                        <p className="text-xs text-gray-500">
+                                            {new Intl.NumberFormat('en-NG', { style: 'currency', currency: payment.currency || 'NGN', maximumFractionDigits: 0 }).format(payment.amount / 100)} · {payment.plan.toUpperCase()}
+                                        </p>
+                                    </div>
+
+                                    {payment.candidate_listings.length > 0 ? (
+                                        <div>
+                                            <label className="mb-1 block text-xs font-medium text-gray-700" htmlFor={`listing-${payment.id}`}>
+                                                Customer's unpaid pending listing
+                                            </label>
+                                            <select
+                                                id={`listing-${payment.id}`}
+                                                value={selectedListingId}
+                                                onChange={(event) => setSelectedListingByPayment((current) => ({ ...current, [payment.id]: event.target.value }))}
+                                                className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                                            >
+                                                <option value="">Select listing</option>
+                                                {payment.candidate_listings.map((candidate) => (
+                                                    <option key={candidate.id} value={candidate.id}>{candidate.business_name}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    ) : (
+                                        <div className="rounded-md border border-red-200 bg-white px-3 py-2 text-sm text-red-700">
+                                            No pending business listing was submitted. Ask this customer to sign in and complete the listing form before approval.
+                                        </div>
+                                    )}
+
+                                    <button
+                                        type="button"
+                                        onClick={() => handleLinkPayment(payment)}
+                                        disabled={!selectedListingId || isProcessing}
+                                        className="rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+                                    >
+                                        {isProcessing ? 'Linking...' : 'Link payment'}
+                                    </button>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </section>
+            )}
 
             {/* Search and Filters */}
             <div className="mb-6 space-y-4">

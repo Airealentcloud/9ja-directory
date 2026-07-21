@@ -277,6 +277,131 @@ export async function createListingFromUnlinkedPaymentServer(formData: FormData)
     return { data: { listing_id: listing.id, reference: payment.reference } }
 }
 
+export async function getUnlinkedSuccessfulPaymentsServer() {
+    const supabase = await checkAdmin()
+
+    const { data: paymentRows, error: paymentError } = await supabase
+        .from('payments')
+        .select('id, user_id, reference, plan, amount, currency, status, paid_at, created_at')
+        .eq('status', 'success')
+        .is('listing_id', null)
+        .order('created_at', { ascending: false })
+
+    if (paymentError) throw paymentError
+
+    const payments = paymentRows || []
+    const userIds = Array.from(new Set(payments.map((payment: any) => payment.user_id).filter(Boolean)))
+
+    if (userIds.length === 0) return []
+
+    const [{ data: profiles, error: profileError }, { data: pendingListings, error: listingError }] =
+        await Promise.all([
+            supabase.from('profiles').select('id, email, full_name').in('id', userIds),
+            supabase
+                .from('listings')
+                .select('id, user_id, business_name, status, created_at')
+                .in('user_id', userIds)
+                .eq('status', 'pending')
+                .order('created_at', { ascending: false }),
+        ])
+
+    if (profileError) throw profileError
+    if (listingError) throw listingError
+
+    const candidateIds = (pendingListings || []).map((listing: any) => listing.id)
+    let alreadyPaidListingIds = new Set<string>()
+
+    if (candidateIds.length > 0) {
+        const { data: linkedPayments, error: linkedPaymentError } = await supabase
+            .from('payments')
+            .select('listing_id')
+            .in('listing_id', candidateIds)
+            .eq('status', 'success')
+
+        if (linkedPaymentError) throw linkedPaymentError
+        alreadyPaidListingIds = new Set(
+            (linkedPayments || []).map((payment: any) => payment.listing_id).filter(Boolean)
+        )
+    }
+
+    const profilesById = new Map((profiles || []).map((profile: any) => [profile.id, profile]))
+
+    return payments.map((payment: any) => ({
+        ...payment,
+        profile: profilesById.get(payment.user_id) || null,
+        candidate_listings: (pendingListings || []).filter(
+            (listing: any) => listing.user_id === payment.user_id && !alreadyPaidListingIds.has(listing.id)
+        ),
+    }))
+}
+
+export async function linkPaymentToExistingListingServer(paymentId: string, listingId: string) {
+    const supabase = await checkAdmin()
+
+    const { data: payment, error: paymentError } = await supabase
+        .from('payments')
+        .select('id, user_id, listing_id, reference, status')
+        .eq('id', paymentId)
+        .maybeSingle()
+
+    if (paymentError || !payment) {
+        return { error: { message: paymentError?.message || 'Payment record not found.' } }
+    }
+
+    if (payment.status !== 'success' || payment.listing_id) {
+        return { error: { message: 'This payment is not an unlinked successful payment.' } }
+    }
+
+    const { data: listing, error: listingError } = await supabase
+        .from('listings')
+        .select('id, user_id, status, business_name')
+        .eq('id', listingId)
+        .maybeSingle()
+
+    if (listingError || !listing) {
+        return { error: { message: listingError?.message || 'Pending listing not found.' } }
+    }
+
+    if (listing.user_id !== payment.user_id || listing.status !== 'pending') {
+        return { error: { message: 'The listing does not belong to this paying customer.' } }
+    }
+
+    const { data: existingListingPayment } = await supabase
+        .from('payments')
+        .select('id')
+        .eq('listing_id', listing.id)
+        .eq('status', 'success')
+        .maybeSingle()
+
+    if (existingListingPayment?.id) {
+        return { error: { message: 'This listing already has a successful payment.' } }
+    }
+
+    const { data: linkedPayment, error: linkError } = await supabase
+        .from('payments')
+        .update({ listing_id: listing.id })
+        .eq('id', payment.id)
+        .is('listing_id', null)
+        .select('id')
+        .maybeSingle()
+
+    if (linkError) return { error: { message: linkError.message } }
+    if (!linkedPayment?.id) {
+        return { error: { message: 'This payment was already linked elsewhere. Refresh and check again.' } }
+    }
+
+    revalidatePath('/admin/listings')
+    revalidatePath('/admin/dashboard')
+
+    return {
+        data: {
+            listing_id: listing.id,
+            business_name: listing.business_name,
+            reference: payment.reference,
+        },
+    }
+}
+
 export async function repairPaymentLeadOwnerServer(formData: FormData) {
     const supabase = await checkAdmin()
 
@@ -758,12 +883,29 @@ export async function approveListingServer(id: string) {
     // Get listing with owner details before approving
     const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select('id, business_name, slug, user_id, email')
+        .select('id, business_name, slug, user_id, email, description, phone, category_id, state_id, city')
         .eq('id', id)
         .single()
 
     if (listingError) {
         return { error: listingError }
+    }
+
+    const missingFields = [
+        !listing.business_name && 'business name',
+        !listing.description && 'description',
+        !listing.phone && 'phone number',
+        !listing.category_id && 'category',
+        !listing.state_id && 'state',
+        !listing.city && 'city',
+    ].filter(Boolean)
+
+    if (missingFields.length > 0) {
+        return {
+            error: {
+                message: `Complete the listing before approval. Missing: ${missingFields.join(', ')}.`,
+            },
+        }
     }
 
     let profile: { email?: string; full_name?: string } | null = null
