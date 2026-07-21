@@ -1,13 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { createClient as createSupabaseClient } from '@supabase/supabase-js'
+import { createClient as createServerClient } from '@/lib/supabase/server'
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 // Use service role key for admin operations (bypasses RLS)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
 
 const supabaseAdmin = (supabaseUrl && supabaseServiceKey)
-  ? createClient(supabaseUrl, supabaseServiceKey)
+  ? createSupabaseClient(supabaseUrl, supabaseServiceKey)
   : null as any
+
+async function requireAdmin() {
+  const supabase = await createServerClient()
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) return false
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .maybeSingle()
+
+  return profile?.role === 'admin'
+}
 
 interface BusinessData {
   business_name: string
@@ -20,12 +38,19 @@ interface BusinessData {
 
 export async function POST(request: NextRequest) {
   try {
+    if (!(await requireAdmin())) {
+      return NextResponse.json(
+        { error: 'Unauthorized' },
+        { status: 401, headers: { 'Cache-Control': 'private, no-store' } }
+      )
+    }
+
     const body = await request.json()
     const { businesses, dryRun = false } = body as { businesses: BusinessData[], dryRun?: boolean }
 
-    if (!businesses || !Array.isArray(businesses)) {
+    if (!businesses || !Array.isArray(businesses) || businesses.length > 1000) {
       return NextResponse.json(
-        { error: 'Invalid request. Expected array of businesses.' },
+        { error: 'Invalid request. Expected no more than 1,000 businesses.' },
         { status: 400 }
       )
     }
@@ -242,19 +267,15 @@ function getCategoryIcon(categoryName: string): string {
   return iconMap[key] || '🏢'
 }
 
-// GET endpoint to check API status
-export async function GET(request: NextRequest) {
-  return NextResponse.json({
-    status: 'active',
-    endpoint: '/api/admin/import-listings',
-    methods: ['POST'],
-    description: 'Import business listings from CSV data',
-    usage: {
-      method: 'POST',
-      body: {
-        businesses: 'Array of business objects',
-        dryRun: 'Boolean (optional) - test without inserting data'
-      }
+export async function GET() {
+  return NextResponse.json(
+    { error: 'Method not allowed' },
+    {
+      status: 405,
+      headers: {
+        Allow: 'POST',
+        'Cache-Control': 'private, no-store',
+      },
     }
-  })
+  )
 }

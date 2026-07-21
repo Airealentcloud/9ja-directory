@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
-import { getPlanBoost, calculateFeatureBonus, type SearchableListing } from '@/lib/search/scoring'
+import { getActiveListingPlan, getPlanBoost, calculateFeatureBonus, type SearchableListing } from '@/lib/search/scoring'
 
 interface RelatedListingsProps {
   listingId: string
@@ -27,8 +27,7 @@ interface Listing {
   featured_until?: string | null
   average_rating?: number | null
   categories?: { name?: string } | { name?: string }[]
-  // Supabase returns profiles as array when using foreign key
-  profiles?: { subscription_plan?: string | null }[] | { subscription_plan?: string | null } | null
+  plan_tier?: string | null
   _score?: number
   _isPremium?: boolean
   _isLifetime?: boolean
@@ -56,11 +55,7 @@ export default function RelatedListings({
         const scoreListings = (listings: Listing[]): Listing[] => {
           return listings
             .map(listing => {
-              // Handle profiles being either array or object
-              const profileData = Array.isArray(listing.profiles)
-                ? listing.profiles[0]
-                : listing.profiles
-              const plan = profileData?.subscription_plan
+              const plan = getActiveListingPlan(listing as unknown as SearchableListing)
               const planBoost = getPlanBoost(plan)
               const featureBonus = calculateFeatureBonus(listing as unknown as SearchableListing)
               const score = Math.round((50 + featureBonus) * planBoost)
@@ -90,8 +85,7 @@ export default function RelatedListings({
         const { data: sameCategoryData } = await supabase
           .from('listings')
           .select(`
-            id, slug, business_name, city, logo_url, images, verified, featured, featured_until, average_rating,
-            profiles!listings_user_id_fkey(subscription_plan)
+            id, slug, business_name, city, logo_url, images, verified, featured, featured_until, average_rating
           `)
           .eq('category_id', categoryId)
           .neq('id', listingId)
@@ -107,8 +101,7 @@ export default function RelatedListings({
           .from('listings')
           .select(`
             id, slug, business_name, city, logo_url, images, verified, featured, featured_until, average_rating,
-            categories(name),
-            profiles!listings_user_id_fkey(subscription_plan)
+            categories(name)
           `)
           .eq('city', city)
           .neq('category_id', categoryId)
@@ -187,7 +180,7 @@ export default function RelatedListings({
                     <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">Featured</span>
                   )}
                   {listing._isLifetime && !listing._isFeatured && (
-                    <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Top Rated</span>
+                    <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Priority</span>
                   )}
                   {listing._isPremium && !listing._isLifetime && !listing._isFeatured && (
                     <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-green-100 text-green-700 rounded-full">Premium</span>
@@ -259,7 +252,7 @@ export default function RelatedListings({
                     <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">Featured</span>
                   )}
                   {listing._isLifetime && !listing._isFeatured && (
-                    <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Top Rated</span>
+                    <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-purple-100 text-purple-700 rounded-full">Priority</span>
                   )}
                   {listing._isPremium && !listing._isLifetime && !listing._isFeatured && (
                     <span className="absolute top-2 right-2 px-2 py-0.5 text-xs font-semibold bg-green-100 text-green-700 rounded-full">Premium</span>

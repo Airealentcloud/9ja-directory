@@ -1,6 +1,12 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPaymentPlan } from '@/lib/payments/plans'
 import { getPlanById as getSubscriptionPlanById, type PlanId } from '@/lib/pricing'
+import {
+  PLAN_LIMITS,
+  canCreateAnotherListing,
+  getMissingListingFields,
+  sanitizeListingForPlan,
+} from '@/lib/entitlements'
 
 type PaymentStatus = 'pending' | 'success' | 'failed' | 'abandoned'
 
@@ -15,40 +21,63 @@ type PaymentRow = {
   status: PaymentStatus
   paid_at: string | null
   metadata?: {
-    listing_data?: string
+    listing_data?: string | Record<string, unknown>
     [key: string]: unknown
   } | null
 }
 
-type ListingData = {
-  business_name: string
-  category_id: string
-  description: string
-  phone: string
-  email?: string
-  website_url?: string
-  whatsapp_number?: string
-  address?: string
-  state_id: string
-  city: string
+const PLAN_RANK: Record<PlanId, number> = {
+  basic: 1,
+  premium: 2,
+  lifetime: 3,
 }
 
 function generateSlug(businessName: string): string {
-  return businessName
+  return `${businessName
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)+/g, '') + '-' + Math.random().toString(36).substring(2, 7)
+    .replace(/(^-|-$)+/g, '')
+    .slice(0, 70) || 'business-listing'}-${Math.random().toString(36).substring(2, 7)}`
 }
 
-function getMissingColumnName(message?: string | null) {
-  if (!message) return null
-  const schemaCacheMatch = message.match(/Could not find the '([^']+)' column/i)
-  if (schemaCacheMatch?.[1]) return schemaCacheMatch[1]
-
-  const relationMatch = message.match(/column \"([^\"]+)\" of relation/i)
-  if (relationMatch?.[1]) return relationMatch[1]
-
+function parseListingData(value: unknown) {
+  if (!value) return null
+  if (typeof value === 'string') {
+    try {
+      return JSON.parse(value) as Record<string, unknown>
+    } catch {
+      throw new Error('Paid listing data is invalid and could not be restored.')
+    }
+  }
+  if (typeof value === 'object') return value as Record<string, unknown>
   return null
+}
+
+function chooseHigherPlan(
+  currentProfile: {
+    subscription_plan?: unknown
+    subscription_status?: unknown
+    subscription_expires_at?: unknown
+  },
+  purchasedPlan: PlanId,
+  now: Date
+): PlanId {
+  const currentPlan = currentProfile.subscription_plan
+  const expiryValue = currentProfile.subscription_expires_at
+  const expiry = typeof expiryValue === 'string' ? new Date(expiryValue) : null
+  const currentPlanIsActive =
+    currentProfile.subscription_status === 'active' &&
+    (!expiry || (!Number.isNaN(expiry.getTime()) && expiry > now))
+
+  if (
+    currentPlanIsActive &&
+    typeof currentPlan === 'string' &&
+    currentPlan in PLAN_RANK &&
+    PLAN_RANK[currentPlan as PlanId] > PLAN_RANK[purchasedPlan]
+  ) {
+    return currentPlan as PlanId
+  }
+  return purchasedPlan
 }
 
 export async function fulfillPaystackSuccess(input: {
@@ -70,195 +99,266 @@ export async function fulfillPaystackSuccess(input: {
   }
 
   const payment = paymentRaw as PaymentRow
+  const paymentPlan = getPaymentPlan(payment.plan)
+  if (!paymentPlan) throw new Error(`Unknown payment plan: ${payment.plan}`)
 
-  if (payment.amount !== input.amountKobo || payment.currency !== input.currency) {
-    throw new Error('Payment amount/currency mismatch')
+  if (
+    payment.amount !== input.amountKobo ||
+    payment.currency !== input.currency ||
+    paymentPlan.amountKobo !== input.amountKobo ||
+    paymentPlan.currency !== input.currency
+  ) {
+    throw new Error('Payment amount/currency does not match the selected plan')
   }
 
   if (payment.status !== 'success') {
     const { error: updateError } = await supabase
       .from('payments')
-      .update({
-        status: 'success',
-        paid_at: input.paidAt ?? new Date().toISOString(),
-      })
+      .update({ status: 'success', paid_at: input.paidAt ?? new Date().toISOString() })
       .eq('id', payment.id)
-
     if (updateError) throw updateError
   }
 
+  if (paymentPlan.planType === 'test') {
+    return { paymentId: payment.id, listingId: payment.listing_id, listingSlug: null }
+  }
+
+  if (paymentPlan.planType === 'featured') {
+    if (!payment.listing_id || !paymentPlan.featuredDays) {
+      throw new Error('Featured payment is not linked to a listing')
+    }
+
+    const featuredUntil = new Date(
+      Date.now() + paymentPlan.featuredDays * 24 * 60 * 60 * 1000
+    ).toISOString()
+    const { data: listing, error: featureError } = await supabase
+      .from('listings')
+      .update({ featured: true, featured_until: featuredUntil })
+      .eq('id', payment.listing_id)
+      .eq('user_id', payment.user_id)
+      .select('id, slug')
+      .single()
+
+    if (featureError || !listing) {
+      throw new Error(featureError?.message || 'Could not feature the paid listing')
+    }
+    return { paymentId: payment.id, listingId: listing.id, listingSlug: listing.slug }
+  }
+
+  const purchasedPlan = getSubscriptionPlanById(payment.plan as PlanId)
+  if (!purchasedPlan) throw new Error(`Invalid subscription plan: ${payment.plan}`)
+
+  const { data: existingProfile, error: profileSelectError } = await supabase
+    .from('profiles')
+    .select('id, subscription_plan, subscription_status, subscription_expires_at')
+    .eq('id', payment.user_id)
+    .single()
+
+  if (profileSelectError || !existingProfile) {
+    throw new Error(profileSelectError?.message || 'Customer profile is missing')
+  }
+
+  const now = new Date()
+  const effectivePlanId = chooseHigherPlan(existingProfile, purchasedPlan.id, now)
+  const effectivePlan = getSubscriptionPlanById(effectivePlanId)
+  if (!effectivePlan) throw new Error('Could not resolve the active subscription plan')
+
+  const periodEnd = new Date(now)
+  periodEnd.setFullYear(periodEnd.getFullYear() + 100)
+
+  const { error: subscriptionError } = await supabase
+    .from('subscriptions')
+    .upsert(
+      {
+        user_id: payment.user_id,
+        plan: effectivePlan.id,
+        status: 'active',
+        amount: payment.amount,
+        currency: payment.currency,
+        interval: effectivePlan.interval,
+        current_period_start: now.toISOString(),
+        current_period_end: periodEnd.toISOString(),
+      },
+      { onConflict: 'user_id' }
+    )
+
+  if (subscriptionError) throw new Error(`Could not activate subscription: ${subscriptionError.message}`)
+
+  const limits = PLAN_LIMITS[effectivePlanId]
+  const { data: updatedProfile, error: profileError } = await supabase
+    .from('profiles')
+    .update({
+      subscription_plan: effectivePlanId,
+      subscription_status: 'active',
+      subscription_expires_at: periodEnd.toISOString(),
+      can_add_listings: true,
+      can_claim_listings: limits.canClaimListings,
+      can_feature_listings: limits.canBuyFeaturedPlacement || limits.hasFeaturedHomepage,
+      featured_posts_remaining: 0,
+    })
+    .eq('id', payment.user_id)
+    .select('id')
+    .single()
+
+  if (profileError || !updatedProfile) {
+    throw new Error(profileError?.message || 'Could not apply account entitlements')
+  }
+
+  // A paid tier belongs to the account, not only to the listing attached to the
+  // checkout. Keep every active listing's public tier and approval benefits aligned.
+  const { error: tierSyncError } = await supabase
+    .from('listings')
+    .update({ plan_tier: effectivePlanId })
+    .eq('user_id', payment.user_id)
+    .in('status', ['pending', 'approved'])
+  if (tierSyncError) throw new Error(`Could not synchronize listing tiers: ${tierSyncError.message}`)
+
+  const approvedFlags: Record<string, unknown> = {
+    plan_tier: effectivePlanId,
+    verified: limits.hasVerifiedBadge,
+  }
+  if (effectivePlanId === 'basic') {
+    approvedFlags.featured = false
+    approvedFlags.featured_until = null
+  } else if (effectivePlanId === 'lifetime') {
+    approvedFlags.featured = true
+    approvedFlags.featured_until = periodEnd.toISOString()
+  }
+
+  const { error: approvalBenefitError } = await supabase
+    .from('listings')
+    .update(approvedFlags)
+    .eq('user_id', payment.user_id)
+    .eq('status', 'approved')
+  if (approvalBenefitError) {
+    throw new Error(`Could not synchronize approved listing benefits: ${approvalBenefitError.message}`)
+  }
+
+  let listingId = payment.listing_id
   let listingSlug: string | null = null
 
-  const plan = getPaymentPlan(payment.plan)
-  if (plan?.featuredDays && payment.listing_id) {
-    const featuredUntil = new Date(Date.now() + plan.featuredDays * 24 * 60 * 60 * 1000).toISOString()
-    let updatePayload: Record<string, unknown> = { featured: true, featured_until: featuredUntil }
+  if (!listingId && payment.metadata?.listing_data) {
+    const rawListing = parseListingData(payment.metadata.listing_data)
+    if (!rawListing) throw new Error('Paid listing data is missing')
 
-    const attemptUpdate = async () =>
-      supabase.from('listings').update(updatePayload).eq('id', payment.listing_id as string)
-
-    let { error: listingError } = await attemptUpdate()
-    if (listingError) {
-      const missingColumn = getMissingColumnName((listingError as { message?: string }).message)
-      if (missingColumn === 'featured_until') {
-        updatePayload = { featured: true }
-        ;({ error: listingError } = await attemptUpdate())
-      }
-      if (listingError) throw listingError
+    const missingFields = getMissingListingFields(rawListing)
+    if (missingFields.length > 0) {
+      throw new Error(`Paid listing is missing: ${missingFields.join(', ')}`)
     }
 
-    const { data: listingData } = await supabase
+    const sanitized = sanitizeListingForPlan(effectivePlanId, rawListing)
+    if (sanitized.errors.length > 0) throw new Error(sanitized.errors.join(' '))
+
+    const { count, error: countError } = await supabase
       .from('listings')
-      .select('slug')
-      .eq('id', payment.listing_id)
-      .maybeSingle()
+      .select('id', { count: 'exact', head: true })
+      .eq('user_id', payment.user_id)
+      .in('status', ['pending', 'approved'])
 
-    listingSlug = (listingData as { slug?: string } | null)?.slug ?? null
-  }
-
-  try {
-    const subscriptionPlan = getSubscriptionPlanById(payment.plan as PlanId)
-    if (subscriptionPlan) {
-      const now = new Date()
-      const periodEnd = new Date(now)
-
-      // All plans are one-time payments with lifetime access
-      // Set expiry far in the future (100 years)
-      periodEnd.setFullYear(periodEnd.getFullYear() + 100)
-
-      const { data: existingSub, error: subSelectError } = await supabase
-        .from('subscriptions')
-        .select('id')
-        .eq('user_id', payment.user_id)
-        .maybeSingle()
-
-      if (subSelectError) {
-        console.error('Subscription select error:', subSelectError)
-      } else if (existingSub?.id) {
-        const { error: subUpdateError } = await supabase
-          .from('subscriptions')
-          .update({
-            plan: subscriptionPlan.id,
-            status: 'active',
-            amount: payment.amount,
-            currency: payment.currency,
-            interval: subscriptionPlan.interval,
-            current_period_start: now.toISOString(),
-            current_period_end: periodEnd.toISOString(),
-          })
-          .eq('id', existingSub.id)
-
-        if (subUpdateError) console.error('Subscription update error:', subUpdateError)
-      } else {
-        const { error: subInsertError } = await supabase.from('subscriptions').insert({
-          user_id: payment.user_id,
-          plan: subscriptionPlan.id,
-          status: 'active',
-          amount: payment.amount,
-          currency: payment.currency,
-          interval: subscriptionPlan.interval,
-          current_period_start: now.toISOString(),
-          current_period_end: periodEnd.toISOString(),
-        })
-
-        if (subInsertError) console.error('Subscription insert error:', subInsertError)
-      }
-
-      // Set permissions based on plan (basic, premium, lifetime)
-      const isPremiumOrHigher = subscriptionPlan.id === 'premium' || subscriptionPlan.id === 'lifetime'
-      const isLifetime = subscriptionPlan.id === 'lifetime'
-
-      const profileUpdate: Record<string, unknown> = {
-        subscription_plan: subscriptionPlan.id,
-        subscription_status: 'active',
-        subscription_expires_at: periodEnd.toISOString(),
-        can_add_listings: true,
-        can_claim_listings: isPremiumOrHigher,
-        can_feature_listings: isPremiumOrHigher,
-        featured_posts_remaining: isLifetime ? 2 : 0,
-      }
-
-      const { error: profileError } = await supabase
-        .from('profiles')
-        .update(profileUpdate)
-        .eq('id', payment.user_id)
-
-      if (profileError) console.error('Profile subscription update error:', profileError)
-
-      if (payment.listing_id && isLifetime) {
-        const featuredUntil = periodEnd.toISOString()
-        let updatePayload: Record<string, unknown> = { featured: true, featured_until: featuredUntil }
-
-        const attemptUpdate = async () =>
-          supabase.from('listings').update(updatePayload).eq('id', payment.listing_id as string)
-
-        let { error: listingError } = await attemptUpdate()
-        if (listingError) {
-          const missingColumn = getMissingColumnName((listingError as { message?: string }).message)
-          if (missingColumn === 'featured_until') {
-            updatePayload = { featured: true }
-            ;({ error: listingError } = await attemptUpdate())
-          }
-          if (listingError) console.error('Premium listing feature update error:', listingError)
-        }
-      }
+    if (countError) throw new Error(`Could not check listing allowance: ${countError.message}`)
+    if (!canCreateAnotherListing(effectivePlanId, count || 0)) {
+      throw new Error(`The ${effectivePlanId} listing allowance has already been used.`)
     }
-  } catch (err) {
-    console.error('Subscription fulfillment error:', err)
-  }
 
-  // Create listing from metadata if present (new checkout flow)
-  let createdListingId: string | null = null
-  if (payment.metadata?.listing_data && !payment.listing_id) {
-    try {
-      const listingData: ListingData = JSON.parse(payment.metadata.listing_data as string)
+    const listingData = sanitized.value
+    const { data: newListing, error: listingError } = await supabase
+      .from('listings')
+      .insert({
+        ...listingData,
+        user_id: payment.user_id,
+        business_name: String(listingData.business_name).trim(),
+        slug: generateSlug(String(listingData.business_name)),
+        status: 'pending',
+        verified: false,
+        featured: false,
+        featured_until: null,
+      })
+      .select('id, slug')
+      .single()
 
-      if (listingData.business_name) {
-        const slug = generateSlug(listingData.business_name)
-
-        const { data: newListing, error: listingError } = await supabase
-          .from('listings')
-          .insert({
-            user_id: payment.user_id,
-            business_name: listingData.business_name,
-            slug,
-            description: listingData.description,
-            category_id: listingData.category_id,
-            phone: listingData.phone,
-            email: listingData.email || '',
-            website_url: listingData.website_url || '',
-            whatsapp_number: listingData.whatsapp_number || '',
-            address: listingData.address || '',
-            state_id: listingData.state_id,
-            city: listingData.city,
-            status: 'pending', // Requires admin approval
-          })
-          .select('id, slug')
-          .single()
-
-        if (listingError) {
-          console.error('Error creating listing from payment:', listingError)
-        } else if (newListing) {
-          createdListingId = newListing.id
-          listingSlug = newListing.slug
-
-          // Update payment record with the new listing_id
-          await supabase
-            .from('payments')
-            .update({ listing_id: newListing.id })
-            .eq('id', payment.id)
-
-          console.log('Listing created from payment:', newListing.id)
-        }
-      }
-    } catch (parseErr) {
-      console.error('Error parsing listing data from payment metadata:', parseErr)
+    if (listingError || !newListing) {
+      throw new Error(listingError?.message || 'Could not create the paid listing')
     }
+
+    listingId = newListing.id
+    listingSlug = newListing.slug
+    const { error: linkError } = await supabase
+      .from('payments')
+      .update({ listing_id: newListing.id })
+      .eq('id', payment.id)
+    if (linkError) throw new Error(`Could not link payment to listing: ${linkError.message}`)
   }
 
-  return {
-    paymentId: payment.id,
-    listingId: createdListingId || payment.listing_id,
-    listingSlug
+  if (listingId) {
+    const { data: listing, error: listingSelectError } = await supabase
+      .from('listings')
+      .select('id, slug, status, user_id, description, images, website_url, website, opening_hours, business_hours, facebook_url, instagram_url, twitter_url, linkedin_url, year_established, established_year, employee_count, employee_count_range, keywords, featured, featured_until')
+      .eq('id', listingId)
+      .eq('user_id', payment.user_id)
+      .single()
+
+    if (listingSelectError || !listing) {
+      throw new Error(listingSelectError?.message || 'Paid listing does not belong to this customer')
+    }
+
+    listingSlug = listing.slug
+    const normalized = sanitizeListingForPlan(effectivePlanId, {
+      description: listing.description,
+      images: listing.images,
+      website_url: listing.website_url,
+      website: listing.website,
+      opening_hours: listing.opening_hours,
+      business_hours: listing.business_hours,
+      facebook_url: listing.facebook_url,
+      instagram_url: listing.instagram_url,
+      twitter_url: listing.twitter_url,
+      linkedin_url: listing.linkedin_url,
+      year_established: listing.year_established,
+      established_year: listing.established_year,
+      employee_count: listing.employee_count,
+      employee_count_range: listing.employee_count_range,
+      keywords: listing.keywords,
+    }).value
+    const existingDescription = typeof listing.description === 'string' ? listing.description.trim() : ''
+    const cappedDescription = limits.maxDescriptionLength === -1
+      ? existingDescription
+      : existingDescription.slice(0, limits.maxDescriptionLength)
+
+    const planFlags: Record<string, unknown> = {
+      description: cappedDescription,
+      images: normalized.images,
+      website_url: normalized.website_url,
+      website: normalized.website,
+      opening_hours: normalized.opening_hours,
+      business_hours: normalized.business_hours,
+      facebook_url: normalized.facebook_url,
+      instagram_url: normalized.instagram_url,
+      twitter_url: normalized.twitter_url,
+      linkedin_url: normalized.linkedin_url,
+      year_established: normalized.year_established,
+      established_year: normalized.established_year,
+      employee_count: normalized.employee_count,
+      employee_count_range: normalized.employee_count_range,
+      keywords: normalized.keywords,
+      verified: listing.status === 'approved' && limits.hasVerifiedBadge,
+    }
+    const hasActiveFeaturedAddOn = Boolean(
+      effectivePlanId === 'premium' &&
+      listing.featured &&
+      listing.featured_until &&
+      new Date(listing.featured_until) > now
+    )
+    planFlags.featured = limits.hasFeaturedHomepage || hasActiveFeaturedAddOn
+    planFlags.featured_until = limits.hasFeaturedHomepage
+      ? periodEnd.toISOString()
+      : (hasActiveFeaturedAddOn ? listing.featured_until : null)
+
+    const { error: flagError } = await supabase
+      .from('listings')
+      .update(planFlags)
+      .eq('id', listingId)
+    if (flagError) throw new Error(`Could not apply listing entitlements: ${flagError.message}`)
   }
+
+  return { paymentId: payment.id, listingId, listingSlug }
 }

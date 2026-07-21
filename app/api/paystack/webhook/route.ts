@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createHmac, timingSafeEqual } from 'crypto'
 import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { getPlanById, nairaToKobo } from '@/lib/pricing'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -16,7 +17,6 @@ export async function POST(request: NextRequest) {
   try {
     const signature = request.headers.get('x-paystack-signature')
     const secret = getPaystackSecretKey()
-
     const rawBody = await request.text()
 
     if (!signature) {
@@ -37,48 +37,76 @@ export async function POST(request: NextRequest) {
       data?: { reference?: string; status?: string; amount?: number; currency?: string; paid_at?: string }
     }
 
-    if (payload.event === 'charge.success' && payload.data?.reference) {
-      const supabase = createAdminClient()
-      const reference = payload.data.reference
-
-      const { data: paymentRow } = await supabase
-        .from('payments')
-        .select('id')
-        .eq('reference', reference)
-        .maybeSingle()
-
-      if (paymentRow?.id) {
-        await fulfillPaystackSuccess({
-          reference,
-          amountKobo: payload.data.amount ?? 0,
-          currency: payload.data.currency ?? 'NGN',
-          paidAt: payload.data.paid_at ?? null,
-        })
-      } else {
-        const leadUpdate: Record<string, unknown> = {
-          status: 'success',
-          paid_at: payload.data.paid_at ?? null,
-          currency: payload.data.currency ?? 'NGN',
-        }
-        if (typeof payload.data.amount === 'number') {
-          leadUpdate.amount = payload.data.amount
-        }
-
-        const { error: leadError } = await supabase
-          .from('payment_leads')
-          .update(leadUpdate)
-          .eq('reference', reference)
-
-        if (leadError) {
-          console.error('Failed to update payment lead:', leadError)
-        }
-      }
+    if (payload.event !== 'charge.success' || !payload.data?.reference) {
+      return NextResponse.json({ received: true })
     }
 
-    return NextResponse.json({ received: true })
-  } catch (err) {
+    const reference = payload.data.reference
+    const amountKobo = payload.data.amount ?? 0
+    const currency = payload.data.currency ?? 'NGN'
+    const supabase = createAdminClient()
+
+    const { data: paymentRow, error: paymentError } = await supabase
+      .from('payments')
+      .select('id')
+      .eq('reference', reference)
+      .maybeSingle()
+
+    if (paymentError) throw paymentError
+
+    if (paymentRow?.id) {
+      await fulfillPaystackSuccess({
+        reference,
+        amountKobo,
+        currency,
+        paidAt: payload.data.paid_at ?? null,
+      })
+      return NextResponse.json({ received: true })
+    }
+
+    const { data: lead, error: leadLookupError } = await supabase
+      .from('payment_leads')
+      .select('id, plan, amount, currency')
+      .eq('reference', reference)
+      .maybeSingle()
+
+    if (leadLookupError) throw leadLookupError
+    if (!lead) {
+      console.error('Paystack webhook reference was not found locally:', reference)
+      return NextResponse.json({ received: true, linked: false })
+    }
+
+    const plan = getPlanById(lead.plan)
+    const officialAmount = plan ? nairaToKobo(plan.price) : null
+    if (
+      !plan ||
+      officialAmount === null ||
+      lead.amount !== officialAmount ||
+      lead.currency !== 'NGN' ||
+      amountKobo !== officialAmount ||
+      currency !== 'NGN'
+    ) {
+      console.error('Rejected mismatched Paystack lead payment:', {
+        reference,
+        storedPlan: lead.plan,
+        storedAmount: lead.amount,
+        paidAmount: amountKobo,
+        paidCurrency: currency,
+      })
+      return NextResponse.json({ received: true, linked: false })
+    }
+
+    const { error: leadUpdateError } = await supabase
+      .from('payment_leads')
+      .update({ status: 'success', paid_at: payload.data.paid_at ?? null })
+      .eq('id', lead.id)
+
+    if (leadUpdateError) throw leadUpdateError
+    return NextResponse.json({ received: true, linked: true })
+  } catch (error) {
+    console.error('Paystack webhook processing error:', error)
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : 'Webhook processing error' },
+      { error: error instanceof Error ? error.message : 'Webhook processing error' },
       { status: 500 }
     )
   }

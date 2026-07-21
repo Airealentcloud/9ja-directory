@@ -7,14 +7,14 @@ const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
     title: 'Business Listing Pricing Plans | 9jaDirectory Nigeria',
-    description: 'List your Nigerian business from free to premium. Choose a plan with photos, verified badge, featured placement & priority support. No hidden fees.',
+    description: 'List your Nigerian business from ₦5,000. Compare Basic, Premium and Lifetime limits, verification, analytics and featured placement.',
     keywords: ['business listing Nigeria', 'list business Nigeria', 'Nigerian directory pricing', 'advertise business Nigeria', 'business registration Nigeria directory'],
     alternates: {
         canonical: `${siteUrl}/pricing`,
     },
     openGraph: {
         title: 'Business Listing Pricing Plans | 9jaDirectory Nigeria',
-        description: 'List your Nigerian business from free to premium. Photos, verified badge, featured placement & priority support.',
+        description: 'Compare one-time Basic, Premium and Lifetime business-listing plans for Nigeria.',
         url: `${siteUrl}/pricing`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Business Listing Pricing Plans | 9jaDirectory',
-        description: 'List your Nigerian business from free to premium. No hidden fees.',
+        description: 'Compare one-time Nigerian business-listing plans. No hidden fees.',
         images: ['/opengraph-image'],
     },
 }
@@ -45,7 +45,7 @@ export default function PricingPage() {
                     Simple, Transparent Pricing
                 </h1>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Choose the plan that works best for your business. No hidden fees.
+                    Choose the exact features your business needs. Every plan is a one-time payment with clearly separated limits.
                 </p>
             </div>
 
@@ -72,7 +72,7 @@ export default function PricingPage() {
                             Can I upgrade my plan later?
                         </h3>
                         <p className="text-gray-600">
-                            Yes! You can upgrade your plan at any time. The difference will be prorated.
+                            Yes. You can purchase a higher tier at any time. Contact support before paying if you need help confirming how an earlier payment will be handled; upgrades are not automatically prorated.
                         </p>
                     </div>
 
@@ -81,16 +81,16 @@ export default function PricingPage() {
                             Is there a refund policy?
                         </h3>
                         <p className="text-gray-600">
-                            We offer a 7-day money-back guarantee if you're not satisfied with your plan.
+                            Except where required by law, listing fees are non-refundable once review or publishing work begins. Contact support promptly about duplicate or failed charges.
                         </p>
                     </div>
 
                     <div className="bg-white rounded-lg shadow-md p-6">
                         <h3 className="font-semibold text-gray-900 mb-2">
-                            How do I cancel my subscription?
+                            Will I be charged again?
                         </h3>
                         <p className="text-gray-600">
-                            You can cancel your subscription anytime from your dashboard. Your access will continue until the end of your billing period.
+                            No. Basic, Premium and Lifetime are one-time payments, not recurring subscriptions. There is no monthly billing to cancel.
                         </p>
                     </div>
                 </div>

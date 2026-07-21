@@ -2,7 +2,11 @@ import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import ListingForm from '@/components/listings/listing-form'
-import { getPlanLimits, type PlanId } from '@/lib/pricing'
+import {
+    canCreateAnotherListing,
+    getAccountPlanLimits,
+    resolveAccountPlan,
+} from '@/lib/entitlements'
 
 export const metadata: Metadata = {
     title: 'Add Your Business | 9jaDirectory',
@@ -13,37 +17,45 @@ export default async function AddBusinessPage() {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
-    if (!user) {
-        redirect('/login?next=/add-business')
-    }
+    if (!user) redirect('/login?next=/add-business')
 
     const { data: profile, error: profileError } = await supabase
         .from('profiles')
-        .select('can_add_listings, subscription_plan')
+        .select('role, subscription_plan, subscription_status, subscription_expires_at')
         .eq('id', user.id)
         .maybeSingle()
 
     if (profileError) {
-        const message = (profileError as { message?: string }).message || ''
-        if (message.includes('can_add_listings')) {
-            throw new Error(
-                "Database is missing required column 'can_add_listings' on profiles. Run `migrations/008_subscriptions_and_profile_permissions.sql` in Supabase SQL Editor."
-            )
+        throw new Error(`Failed to check listing permissions: ${profileError.message}`)
+    }
+
+    const userPlan = resolveAccountPlan({
+        role: profile?.role,
+        subscriptionPlan: profile?.subscription_plan,
+        subscriptionStatus: profile?.subscription_status,
+        subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+
+    if (userPlan === 'free') redirect('/pricing')
+
+    const planLimits = getAccountPlanLimits(userPlan)
+    if (profile?.role !== 'admin' && planLimits.maxListings !== -1) {
+        const { count, error: countError } = await supabase
+            .from('listings')
+            .select('id', { count: 'exact', head: true })
+            .eq('user_id', user.id)
+            .in('status', ['pending', 'approved'])
+
+        if (countError) throw new Error(`Failed to check listing allowance: ${countError.message}`)
+        if (!canCreateAnotherListing(userPlan, count || 0)) {
+            redirect('/pricing?reason=listing-limit')
         }
-        throw new Error(`Failed to check listing permissions: ${message || 'Unknown error'}`)
     }
 
-    if (!profile?.can_add_listings) {
-        redirect('/pricing')
-    }
-
-    // Get the user's plan and limits
-    const userPlan = (profile?.subscription_plan as PlanId) || 'basic'
-    const planLimits = getPlanLimits(userPlan)
-
-    // Fetch data for form
-    const { data: categories } = await supabase.from('categories').select('id, name').order('name')
-    const { data: states } = await supabase.from('states').select('id, name').order('name')
+    const [{ data: categories }, { data: states }] = await Promise.all([
+        supabase.from('categories').select('id, name').order('name'),
+        supabase.from('states').select('id, name').order('name'),
+    ])
 
     return (
         <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">

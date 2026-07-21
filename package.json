@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "playwright test",
+    "test:unit": "node --test --test-isolation=none tests/unit/*.test.mjs",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report",
@@ -16,7 +17,8 @@
     "cf:build": "opennextjs-cloudflare build && node scripts/prepare-cloudflare-staging.mjs",
     "cf:preview": "npm run cf:build && opennextjs-cloudflare preview",
     "cf:deploy:staging": "npm run cf:build && wrangler deploy",
-    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "cf:smoke": "node scripts/cloudflare-smoke-test.mjs"
   },
   "keywords": [],
   "author": "",

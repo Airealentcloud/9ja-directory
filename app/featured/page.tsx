@@ -5,14 +5,24 @@ import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
+export const revalidate = 300
+
+function getListingImage(listing: { logo_url?: string | null; images?: unknown }) {
+    if (listing.logo_url) return listing.logo_url
+    if (Array.isArray(listing.images)) {
+        return listing.images.find((image): image is string => typeof image === 'string' && image.length > 0) || null
+    }
+    return null
+}
+
 export const metadata: Metadata = {
     title: 'Featured Businesses in Nigeria | 9jaDirectory',
-    description: 'Discover top-rated and featured businesses across Nigeria. Handpicked selections of trusted services and providers in your area.',
+    description: 'Browse current paid featured placements and eligible Lifetime business listings across Nigeria on 9jaDirectory.',
     keywords: [
         'featured businesses Nigeria',
-        'top rated businesses Nigeria',
-        'best services Nigeria',
-        'verified businesses Nigeria',
+        'promoted businesses Nigeria',
+        'business advertising Nigeria',
+        'Lifetime listings Nigeria',
         '9jaDirectory featured',
     ],
     alternates: {
@@ -20,7 +30,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: 'Featured Businesses in Nigeria | 9jaDirectory',
-        description: 'Discover top-rated and featured businesses across Nigeria.',
+        description: 'Browse current promoted and featured business listings across Nigeria.',
         url: `${siteUrl}/featured`,
         siteName: '9jaDirectory',
         locale: 'en_NG',
@@ -37,7 +47,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Featured Businesses | 9jaDirectory',
-        description: 'Discover top-rated and featured businesses across Nigeria.',
+        description: 'Browse current promoted and featured business listings across Nigeria.',
         images: ['/opengraph-image'],
     },
 }
@@ -45,7 +55,8 @@ export const metadata: Metadata = {
 export default async function FeaturedPage() {
     const supabase = createPublicClient()
 
-    // Fetch featured listings
+    // Featured is a paid placement flag, not an editorial ranking or endorsement.
+    const nowIso = new Date().toISOString()
     const { data: listings } = await supabase
         .from('listings')
         .select(`
@@ -53,7 +64,8 @@ export default async function FeaturedPage() {
       business_name,
       slug,
       description,
-      image_url,
+      logo_url,
+      images,
       categories (
         name,
         slug,
@@ -66,6 +78,7 @@ export default async function FeaturedPage() {
     `)
         .eq('status', 'approved')
         .eq('featured', true)
+        .gt('featured_until', nowIso)
         .order('created_at', { ascending: false })
         .limit(20)
 
@@ -81,7 +94,7 @@ export default async function FeaturedPage() {
     const itemListSchema = {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        name: 'Featured Businesses in Nigeria',
+        name: 'Promoted Businesses in Nigeria',
         url: `${siteUrl}/featured`,
         numberOfItems: listings?.length || 0,
         itemListElement: (listings || []).slice(0, 20).map((listing: any, index: number) => ({
@@ -106,7 +119,7 @@ export default async function FeaturedPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl font-bold mb-4">Featured Businesses</h1>
                     <p className="text-xl text-yellow-100 max-w-2xl mx-auto">
-                        Discover our handpicked selection of top-rated businesses and services across Nigeria
+                        Browse paid promotional placements and eligible Lifetime listings. Featured does not mean editorial endorsement.
                     </p>
                 </div>
             </section>
@@ -121,10 +134,10 @@ export default async function FeaturedPage() {
                                 className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group flex flex-col h-full"
                             >
                                 <div className="h-48 bg-gray-200 relative overflow-hidden">
-                                    {listing.image_url ? (
+                                    {getListingImage(listing) ? (
                                         <img
-                                            src={listing.image_url}
-                                            alt={listing.business_name}
+                                            src={getListingImage(listing) || '/logo.svg'}
+                                            alt={listing.business_name + " promoted business in Nigeria"}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                                         />
                                     ) : (
@@ -133,7 +146,7 @@ export default async function FeaturedPage() {
                                         </div>
                                     )}
                                     <div className="absolute top-2 right-2 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm flex items-center">
-                                        <span className="mr-1">⭐</span> Featured
+                                        <span className="mr-1">★</span> Promoted
                                     </div>
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col">
@@ -170,8 +183,8 @@ export default async function FeaturedPage() {
                 ) : (
                     <div className="text-center py-12 bg-white rounded-lg shadow-sm">
                         <div className="text-6xl mb-4">🌟</div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">No Featured Listings Yet</h3>
-                        <p className="text-gray-600">Check back soon for our top picks!</p>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">No Current Promotions</h3>
+                        <p className="text-gray-600">There are no active paid placements at the moment.</p>
                     </div>
                 )}
             </section>

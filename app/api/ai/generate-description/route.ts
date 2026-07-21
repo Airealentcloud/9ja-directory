@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import Anthropic from '@anthropic-ai/sdk'
-import { getPlanLimits, type PlanId } from '@/lib/pricing'
+import { getAccountPlanLimits, resolveAccountPlan, type AccountPlanId } from '@/lib/entitlements'
 
 // Rate limit: requests per day per user
-const DAILY_LIMIT_BY_PLAN: Record<PlanId, number> = {
+const DAILY_LIMIT_BY_PLAN: Record<AccountPlanId, number> = {
+    free: 0,
     basic: 0,      // Basic plan doesn't have AI
     premium: 10,   // 10 generations per day
     lifetime: 50,  // 50 generations per day
@@ -36,15 +37,20 @@ export async function POST(request: NextRequest) {
         // Get user's plan
         const { data: profile } = await supabase
             .from('profiles')
-            .select('subscription_plan')
+            .select('role, subscription_plan, subscription_status, subscription_expires_at')
             .eq('id', user.id)
             .single()
 
-        const userPlan = (profile?.subscription_plan as PlanId) || 'basic'
-        const planLimits = getPlanLimits(userPlan)
+        const userPlan = resolveAccountPlan({
+            role: profile?.role,
+            subscriptionPlan: profile?.subscription_plan,
+            subscriptionStatus: profile?.subscription_status,
+            subscriptionExpiresAt: profile?.subscription_expires_at,
+        })
+        const planLimits = getAccountPlanLimits(userPlan)
 
         // Check if plan has AI description feature
-        if (!planLimits?.hasAiDescription) {
+        if (!planLimits.hasAiDescription) {
             return NextResponse.json(
                 {
                     error: 'AI Description Writer is not available on your plan',

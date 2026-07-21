@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
+import { getAccountPlanLimits, resolveAccountPlan } from '@/lib/entitlements'
 
 export async function submitClaim(formData: FormData) {
     const supabase = await createClient()
@@ -15,11 +16,18 @@ export async function submitClaim(formData: FormData) {
     // Check claim permission (Premium/Lifetime only)
     const { data: profile } = await supabase
         .from('profiles')
-        .select('can_claim_listings')
+        .select('role, subscription_plan, subscription_status, subscription_expires_at')
         .eq('id', user.id)
         .maybeSingle()
 
-    if (!profile?.can_claim_listings) {
+    const accountPlan = resolveAccountPlan({
+        role: profile?.role,
+        subscriptionPlan: profile?.subscription_plan,
+        subscriptionStatus: profile?.subscription_status,
+        subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+
+    if (!getAccountPlanLimits(accountPlan).canClaimListings) {
         throw new Error('Claiming is available on Premium and Lifetime plans. Please upgrade at /pricing to claim this listing.')
     }
 

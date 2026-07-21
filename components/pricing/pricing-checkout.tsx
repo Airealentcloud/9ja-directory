@@ -73,12 +73,11 @@ export default function PricingCheckout({ className }: PricingCheckoutProps) {
                                 {/* Price Section */}
                                 <div className="text-center mb-2">
                                     <span className="text-4xl font-bold text-gray-900">
-                                        {plan.priceFormatted.replace('₦', '')}
+                                        {plan.priceFormatted}
                                     </span>
-                                    <span className="text-lg text-gray-500 ml-1">NGN</span>
                                     {plan.originalPriceFormatted && (
                                         <span className="text-lg text-gray-400 line-through ml-2">
-                                            {plan.originalPriceFormatted.replace('₦', '')}NGN
+                                            {plan.originalPriceFormatted}
                                         </span>
                                     )}
                                 </div>
@@ -116,7 +115,7 @@ export default function PricingCheckout({ className }: PricingCheckoutProps) {
                                     </p>
 
                                     <ul className="space-y-3">
-                                        {plan.features.slice(0, 10).map((feature, index) => (
+                                        {plan.features.map((feature, index) => (
                                             <li key={index} className="flex items-start text-sm">
                                                 <svg
                                                     className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0"
@@ -133,12 +132,6 @@ export default function PricingCheckout({ className }: PricingCheckoutProps) {
                                             </li>
                                         ))}
                                     </ul>
-
-                                    {plan.features.length > 10 && (
-                                        <p className="text-sm text-green-600 mt-4 font-medium">
-                                            + {plan.features.length - 10} more features
-                                        </p>
-                                    )}
                                 </div>
 
                                 {/* Limits Summary */}
@@ -154,12 +147,12 @@ export default function PricingCheckout({ className }: PricingCheckoutProps) {
                                         <span className="font-semibold text-gray-900">{plan.limits.maxPhotos}</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-gray-500">Categories</span>
+                                        <span className="text-gray-500">Primary category</span>
                                         <span className="font-semibold text-gray-900">{plan.limits.maxCategories}</span>
                                     </div>
                                     <div className="flex justify-between text-sm">
-                                        <span className="text-gray-500">Keywords</span>
-                                        <span className="font-semibold text-gray-900">{plan.limits.maxKeywords}</span>
+                                        <span className="text-gray-500">Description</span>
+                                        <span className="font-semibold text-gray-900">{plan.limits.maxDescriptionLength === -1 ? 'Unlimited' : plan.limits.maxDescriptionLength + ' characters'}</span>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +168,7 @@ export default function PricingCheckout({ className }: PricingCheckoutProps) {
                         <span className="text-gray-300">|</span>
                         <span className="text-gray-400 text-sm">256-bit SSL Encryption</span>
                         <span className="text-gray-300">|</span>
-                        <span className="text-gray-400 text-sm">7-day Money Back</span>
+                        <span className="text-gray-400 text-sm">One-time Payment</span>
                     </div>
                 </div>
             </div>

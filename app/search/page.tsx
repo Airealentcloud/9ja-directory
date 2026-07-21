@@ -41,10 +41,10 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   
   // ✅ DYNAMIC DESCRIPTION WITH CALL-TO-ACTION
   const description = query && stateSlug
-    ? `Find verified ${query} businesses in ${stateName}. Browse ratings, contact details, and customer reviews on 9jaDirectory. Trusted Nigerian business directory.`
+    ? `Find approved ${query} business listings in ${stateName}. Compare available contact details, ratings and reviews on 9jaDirectory.`
     : query
-      ? `Search results for "${query}" across Nigeria. Discover verified businesses with ratings and reviews on 9jaDirectory. Nigeria's most trusted business directory.`
-      : `Search verified businesses across Nigeria on 9jaDirectory. Filter by location, category, and ratings. Trusted by millions of Nigerians.`
+      ? `Search results for "${query}" across Nigeria. Browse approved listings and look for a Verified badge where shown.`
+      : `Search approved business listings across Nigeria on 9jaDirectory. Filter by location, category and ratings.`
   
   // ✅ DYNAMIC KEYWORDS
   const keywords = query && stateSlug
@@ -96,19 +96,19 @@ function generateFAQSchema(query: string, stateName: string) {
   const faqs = [
     {
       question: `Where can I find ${query} in ${stateName}?`,
-      answer: `9jaDirectory has verified listings for ${query} in ${stateName}. Search our directory to find trusted businesses with ratings, contact information, and customer reviews.`,
+      answer: `9jaDirectory has approved listings for ${query} in ${stateName}. Compare available contact details, ratings and reviews, and look for a Verified badge where shown.`,
     },
     {
       question: `Are ${query} results on 9jaDirectory verified?`,
-      answer: `Yes, all businesses on 9jaDirectory are verified with active contact information and customer reviews. Each listing is reviewed before being published.`,
+      answer: `No. Public listings are reviewed before publication, while only eligible Premium and Lifetime listings display a Verified badge after approval.`,
     },
     {
       question: `How do I contact ${query} on 9jaDirectory?`,
-      answer: `Each business listing includes phone numbers, email addresses, and direct messaging options. You can reach businesses directly through our platform.`,
+      answer: `Listings show the contact methods supplied by the business, which may include phone, email, WhatsApp or a website.`,
     },
     {
       question: `Can I read reviews for ${query} on 9jaDirectory?`,
-      answer: `Yes, each business has customer reviews and ratings. You can read authentic reviews from other users to help make your decision.`,
+      answer: `Reviews and ratings appear where customers have submitted them and the reviews have passed moderation.`,
     },
     {
       question: `What is 9jaDirectory?`,
@@ -167,12 +167,11 @@ export default async function SearchPage({
         ? `Showing results for "${query}"`
         : `Showing businesses in ${stateName}`
 
-    // Build the search query with profile data for plan-based scoring
+    // Build the search query; public plan_tier avoids exposing private profiles
     let searchQuery = supabase
         .from('listings')
         .select(`
             *,
-            profiles!listings_user_id_fkey(subscription_plan),
             categories(id, name, slug),
             states(id, name, slug)
         `)
@@ -327,19 +326,19 @@ export default async function SearchPage({
                             {[
                               {
                                 q: `Where can I find ${query || 'businesses'} in ${stateName}?`,
-                                a: `9jaDirectory has verified listings for ${query || 'businesses'} in ${stateName}. Search our directory to find trusted businesses with ratings, contact information, and customer reviews.`,
+                                a: `9jaDirectory has approved listings for ${query || 'businesses'} in ${stateName}. Compare available contact details, ratings and reviews, and look for a Verified badge where shown.`,
                               },
                               {
                                 q: 'Are all businesses on 9jaDirectory verified?',
-                                a: 'Yes, all businesses on 9jaDirectory are verified with active contact information and customer reviews. Each listing is reviewed before being published.',
+                                a: 'No. Public listings are reviewed before publication, while only eligible Premium and Lifetime listings display a Verified badge after approval.',
                               },
                               {
                                 q: 'How do I contact a business on 9jaDirectory?',
-                                a: 'Each business listing includes phone numbers, email addresses, and direct messaging options. You can reach businesses directly through our platform.',
+                                a: 'Listings show the contact methods supplied by the business, which may include phone, email, WhatsApp or a website.',
                               },
                               {
                                 q: 'Can I read reviews before contacting a business?',
-                                a: 'Yes, each business has customer reviews and ratings. You can read authentic reviews from other users to help make your decision.',
+                                a: 'Reviews and ratings appear where customers have submitted them and the reviews have passed moderation.',
                               },
                             ].map((item, idx) => (
                               <div key={idx} className="border-l-4 border-green-600 pl-4 py-4">

@@ -1,7 +1,7 @@
 // Search scoring and ranking system for enhanced search results
 // This provides weighted scoring for relevance + premium plan boosting
 
-import { type PlanId } from '@/lib/pricing'
+import { resolveAccountPlan, resolvePublicListingPlan, type AccountPlanId } from '@/lib/entitlements'
 
 export interface SearchableListing {
     id: string
@@ -17,13 +17,17 @@ export interface SearchableListing {
     verified?: boolean
     featured?: boolean
     featured_until?: string | null
+    plan_tier?: string | null
     average_rating?: number | null
     review_count?: number | null
     user_id?: string
     created_at?: string
     // Profile info for plan-based boosting
     profiles?: {
+        role?: string | null
         subscription_plan?: string | null
+        subscription_status?: string | null
+        subscription_expires_at?: string | null
     } | null
     categories?: {
         id: string
@@ -133,6 +137,34 @@ export function getPlanBoost(plan: string | null | undefined): number {
     }
 }
 
+export function getActiveProfilePlan(profile: SearchableListing['profiles']): AccountPlanId {
+    return resolveAccountPlan({
+        role: profile?.role,
+        subscriptionPlan: profile?.subscription_plan,
+        subscriptionStatus: profile?.subscription_status,
+        subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+}
+
+/**
+ * Resolve the public ranking tier without requiring public access to private profiles.
+ * The protected plan_tier column is canonical; flags keep rollback builds useful.
+ */
+export function getActiveListingPlan(listing: SearchableListing, now = new Date()): AccountPlanId {
+    if (listing.plan_tier) {
+        return resolvePublicListingPlan({ planTier: listing.plan_tier }, now)
+    }
+
+    const profilePlan = getActiveProfilePlan(listing.profiles)
+    if (profilePlan !== 'free') return profilePlan
+
+    return resolvePublicListingPlan({
+        verified: listing.verified,
+        featured: listing.featured,
+        featuredUntil: listing.featured_until,
+    }, now)
+}
+
 /**
  * Calculate feature bonus score
  */
@@ -189,7 +221,7 @@ export function calculateTotalScore(
 ): ScoredListing {
     const relevanceScore = calculateRelevanceScore(listing, query)
     const featureBonus = calculateFeatureBonus(listing)
-    const plan = listing.profiles?.subscription_plan
+    const plan = getActiveListingPlan(listing)
     const planBoost = getPlanBoost(plan)
 
     // Total score = (relevance + features) * plan multiplier
@@ -280,11 +312,10 @@ export function findSimilarListings(
         // Add feature bonus
         similarityScore += calculateFeatureBonus(listing)
 
-        // Apply plan boost
-        const planBoost = getPlanBoost(listing.profiles?.subscription_plan)
+        // Apply only an active paid-plan boost
+        const plan = getActiveListingPlan(listing)
+        const planBoost = getPlanBoost(plan)
         similarityScore = Math.round(similarityScore * planBoost)
-
-        const plan = listing.profiles?.subscription_plan
         const isFeatured = listing.featured && listing.featured_until
             ? new Date(listing.featured_until) > new Date()
             : false
@@ -328,7 +359,7 @@ export function getListingBadge(listing: ScoredListing): {
     }
     if (listing._isLifetime) {
         return {
-            text: 'Top Rated',
+            text: 'Priority',
             color: 'text-purple-700',
             bgColor: 'bg-purple-100',
         }

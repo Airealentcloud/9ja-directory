@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { startFeaturedPayment } from '@/app/actions/payments'
-import { formatNairaFromKobo, PAYMENT_PLANS } from '@/lib/payments/plans'
+import { formatNairaFromKobo, getFeaturedPlans } from '@/lib/payments/plans'
 
 export default function PromoteListing({
   listingId,
@@ -11,19 +11,20 @@ export default function PromoteListing({
   listingId: string
   businessName: string
 }) {
-  const plans = useMemo(() => Object.values(PAYMENT_PLANS), [])
-  const [selectedPlanId, setSelectedPlanId] = useState(plans[0]?.id ?? 'featured_30d')
+  const plans = useMemo(() => getFeaturedPlans(), [])
+  const [selectedPlanId, setSelectedPlanId] = useState(plans[0]?.id ?? '')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const selectedPlan = PAYMENT_PLANS[selectedPlanId]
+  const selectedPlan = plans.find(plan => plan.id === selectedPlanId)
 
   const onPay = async () => {
+    if (!selectedPlan) return
     setLoading(true)
     setError(null)
     try {
-      const { authorizationUrl } = await startFeaturedPayment({ listingId, planId: selectedPlanId })
-      window.location.href = authorizationUrl
+      const { authorizationUrl } = await startFeaturedPayment({ listingId, planId: selectedPlan.id })
+      window.location.assign(authorizationUrl)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Payment initialization failed')
       setLoading(false)
@@ -33,15 +34,15 @@ export default function PromoteListing({
   return (
     <div className="space-y-6">
       {error && (
-        <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+        <div className="rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
           {error}
         </div>
       )}
 
       <div className="rounded-lg border border-gray-200 bg-white p-4">
-        <h2 className="text-base font-semibold text-gray-900">Choose a plan</h2>
+        <h2 className="text-base font-semibold text-gray-900">Choose a featured add-on</h2>
         <p className="mt-1 text-sm text-gray-600">
-          Featured listings appear higher in results and get a highlighted badge.
+          Featured add-ons are optional Premium upgrades. They do not change your account tier.
         </p>
 
         <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -52,7 +53,8 @@ export default function PromoteListing({
                 key={plan.id}
                 type="button"
                 onClick={() => setSelectedPlanId(plan.id)}
-                className={`text-left rounded-lg border p-4 transition-colors ${
+                aria-pressed={active}
+                className={`rounded-lg border p-4 text-left transition-colors ${
                   active ? 'border-green-600 bg-green-50' : 'border-gray-200 hover:border-gray-300'
                 }`}
               >
@@ -74,7 +76,7 @@ export default function PromoteListing({
       <div className="rounded-lg border border-gray-200 bg-white p-4">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <div className="text-sm text-gray-600">Upgrading:</div>
+            <div className="text-sm text-gray-600">Promoting:</div>
             <div className="font-semibold text-gray-900">{businessName}</div>
           </div>
           <button
@@ -83,7 +85,7 @@ export default function PromoteListing({
             onClick={onPay}
             className="inline-flex items-center justify-center rounded-md bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 disabled:opacity-50"
           >
-            {loading ? 'Redirecting…' : `Pay with Paystack (${formatNairaFromKobo(selectedPlan.amountKobo)})`}
+            {loading ? 'Redirecting...' : selectedPlan ? `Pay with Paystack (${formatNairaFromKobo(selectedPlan.amountKobo)})` : 'Unavailable'}
           </button>
         </div>
 
@@ -94,4 +96,3 @@ export default function PromoteListing({
     </div>
   )
 }
-

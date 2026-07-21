@@ -30,6 +30,7 @@ const defaultLimits: PlanLimits = {
     hasYearEstablished: false,
     hasEmployeeCount: false,
     hasHighlightedBadge: false,
+    hasVerifiedBadge: false,
     hasTopSearchPlacement: false,
     hasFeaturedHomepage: false,
     hasReviewReply: false,
@@ -37,6 +38,8 @@ const defaultLimits: PlanLimits = {
     hasAiReviewInsights: false,
     hasAnalytics: false,
     hasPrioritySupport: false,
+    canClaimListings: false,
+    canBuyFeaturedPlacement: false,
 }
 
 export default function ListingForm({
@@ -183,7 +186,7 @@ export default function ListingForm({
                         href="/pricing"
                         className="mt-2 inline-flex items-center text-sm font-medium text-amber-700 hover:text-amber-900"
                     >
-                        Upgrade your plan →
+                        Upgrade your plan &rarr;
                     </Link>
                 </div>
             </div>
@@ -345,7 +348,7 @@ export default function ListingForm({
                                             onClick={() => setImages(images.filter((_, i) => i !== idx))}
                                             className="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
                                         >
-                                            ×
+                                            &times;
                                         </button>
                                     </div>
                                 ))}

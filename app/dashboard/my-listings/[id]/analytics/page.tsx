@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect, notFound } from 'next/navigation'
 import Link from 'next/link'
 import ReviewInsights from '@/components/reviews/review-insights'
-import { getPlanLimits, type PlanId } from '@/lib/pricing'
+import { getAccountPlanLimits, resolveAccountPlan } from '@/lib/entitlements'
 
 export default async function ListingAnalyticsPage({
     params,
@@ -21,21 +21,27 @@ export default async function ListingAnalyticsPage({
     // Get user's profile and plan
     const { data: profile } = await supabase
         .from('profiles')
-        .select('subscription_plan')
+        .select('role, subscription_plan, subscription_status, subscription_expires_at')
         .eq('id', user.id)
         .single()
 
-    const userPlan = (profile?.subscription_plan as PlanId) || 'basic'
-    const planLimits = getPlanLimits(userPlan) || {
-        hasAiReviewInsights: false,
-        hasAnalytics: false,
+    const userPlan = resolveAccountPlan({
+        role: profile?.role,
+        subscriptionPlan: profile?.subscription_plan,
+        subscriptionStatus: profile?.subscription_status,
+        subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+    const planLimits = getAccountPlanLimits(userPlan)
+
+    if (!planLimits.hasAnalytics) {
+        redirect('/pricing?reason=analytics')
     }
 
     // Fetch the listing
     const { data: listing, error } = await supabase
         .from('listings')
         .select(`
-            id, business_name, slug, status, created_at, views_count,
+            id, business_name, slug, status, created_at, view_count,
             categories(name)
         `)
         .eq('id', id)
@@ -78,7 +84,7 @@ export default async function ListingAnalyticsPage({
                         <h1 className="text-2xl font-bold text-gray-900">{listing.business_name}</h1>
                         <p className="text-gray-500 mt-1">
                             {/* @ts-ignore */}
-                            {listing.categories?.name || 'Uncategorized'} • Added {new Date(listing.created_at).toLocaleDateString()}
+                            {listing.categories?.name || 'Uncategorized'} | Added {new Date(listing.created_at).toLocaleDateString()}
                         </p>
                     </div>
                     <div className="flex items-center gap-3">
@@ -87,7 +93,7 @@ export default async function ListingAnalyticsPage({
                             target="_blank"
                             className="text-sm text-green-600 hover:text-green-700"
                         >
-                            View public listing →
+                            View public listing &rarr;
                         </Link>
                         <Link
                             href={`/dashboard/my-listings/${id}/edit`}

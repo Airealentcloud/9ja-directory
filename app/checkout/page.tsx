@@ -72,6 +72,10 @@ export default function CheckoutPage() {
             setError('Business description is required')
             return false
         }
+        if (selectedPlan && selectedPlan.limits.maxDescriptionLength !== -1 && description.trim().length > selectedPlan.limits.maxDescriptionLength) {
+            setError('The selected plan allows a maximum description length of ' + selectedPlan.limits.maxDescriptionLength + ' characters.')
+            return false
+        }
         if (!phone.trim()) {
             setError('Phone number is required')
             return false
@@ -107,7 +111,7 @@ export default function CheckoutPage() {
                 description: description.trim(),
                 phone: phone.trim(),
                 email: email.trim(),
-                website_url: website.trim(),
+                website_url: selectedPlan.limits.hasWebsiteUrl ? website.trim() : '',
                 whatsapp_number: whatsapp.trim(),
                 address: address.trim(),
                 state_id: stateId,
@@ -232,9 +236,15 @@ export default function CheckoutPage() {
                                         value={description}
                                         onChange={(e) => setDescription(e.target.value)}
                                         rows={4}
+                                        maxLength={selectedPlan.limits.maxDescriptionLength === -1 ? undefined : selectedPlan.limits.maxDescriptionLength}
                                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                                         placeholder="Describe your business, services, and what makes you unique"
                                     />
+                                    <p className="mt-1 text-xs text-gray-500">
+                                        {selectedPlan.limits.maxDescriptionLength === -1
+                                            ? description.length + ' characters — no plan limit'
+                                            : description.length + '/' + selectedPlan.limits.maxDescriptionLength + ' characters'}
+                                    </p>
                                 </div>
 
                                 {/* Phone and WhatsApp */}
@@ -284,15 +294,16 @@ export default function CheckoutPage() {
                                     </div>
                                     <div>
                                         <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-1">
-                                            Website (optional)
+                                            Website (Premium and Lifetime only)
                                         </label>
                                         <input
                                             type="url"
                                             id="website"
                                             value={website}
+                                            disabled={!selectedPlan.limits.hasWebsiteUrl}
                                             onChange={(e) => setWebsite(e.target.value)}
-                                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                                            placeholder="https://yourbusiness.com"
+                                            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 disabled:bg-amber-50 disabled:text-amber-700"
+                                            placeholder={selectedPlan.limits.hasWebsiteUrl ? "https://yourbusiness.com" : "Upgrade to Premium to display your website"}
                                         />
                                     </div>
                                 </div>
@@ -361,7 +372,7 @@ export default function CheckoutPage() {
                                     </div>
                                     <div className="text-right">
                                         <p className="text-xl font-bold text-gray-900">{selectedPlan.priceFormatted}</p>
-                                        <p className="text-sm text-gray-500">/{selectedPlan.intervalLabel}</p>
+                                        <p className="text-sm text-gray-500">{selectedPlan.intervalLabel}</p>
                                     </div>
                                 </div>
                             </div>

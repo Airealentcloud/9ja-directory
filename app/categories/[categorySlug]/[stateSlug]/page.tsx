@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 
 import { SITE_URL } from '@/lib/seo/site-url'
 import { createPublicClient } from '@/lib/supabase/public'
@@ -11,6 +10,24 @@ import {
 } from '@/lib/seo/listing-quality'
 
 const siteUrl = SITE_URL
+
+function getListingImage(listing: { logo_url?: unknown; images?: unknown }): string | null {
+  if (typeof listing.logo_url === 'string' && listing.logo_url.trim()) {
+    return listing.logo_url.trim()
+  }
+
+  let images = listing.images
+  if (typeof images === 'string') {
+    try {
+      images = JSON.parse(images)
+    } catch {
+      images = []
+    }
+  }
+
+  if (!Array.isArray(images)) return null
+  return images.find((image): image is string => typeof image === 'string' && image.trim().length > 0) || null
+}
 
 function buildMetaTitle(primaryTitle: string): string {
   const brandedTitle = `${primaryTitle} | 9jaDirectory`
@@ -53,8 +70,8 @@ export async function generateMetadata({
     ? buildMetaTitle(`Real Estate Companies in ${stateDisplayName}`)
     : buildMetaTitle(`${categoryName} in ${stateDisplayName}`)
   const description = isRealEstate
-    ? `Find verified real estate companies, agencies, and developers in ${stateLongName}. Compare listings, contact details, and locations on 9jaDirectory.`
-    : `Find verified ${categoryName.toLowerCase()} in ${stateLongName}. Compare listings, contact details, and locations on 9jaDirectory.`
+    ? `Find approved real estate companies, agencies, and developers in ${stateLongName}. Compare listings, contact details, locations, and Verified badges where shown.`
+    : `Find approved ${categoryName.toLowerCase()} in ${stateLongName}. Compare listings, contact details, locations, and Verified badges where shown.`
 
   const keywords = isRealEstate
     ? [
@@ -186,7 +203,7 @@ export default async function CategoryStateListingPage({
   // We try a richer sort first; on error we fall back to the safe sort.
   let { data: listings, count: totalCount, error: listingsError } = await supabase
     .from('listings')
-    .select('id, business_name, slug, description, tagline, logo_url, address, phone, verified, average_rating, image_url, city', { count: 'exact' })
+    .select('id, business_name, slug, description, tagline, logo_url, images, address, phone, verified, average_rating, city', { count: 'exact' })
     .eq('category_id', category.id)
     .eq('state_id', state.id)
     .eq('status', 'approved')
@@ -198,7 +215,7 @@ export default async function CategoryStateListingPage({
   if (listingsError) {
     const fallback = await supabase
       .from('listings')
-      .select('id, business_name, slug, description, tagline, logo_url, address, phone, verified', { count: 'exact' })
+      .select('id, business_name, slug, description, tagline, logo_url, images, address, phone, verified', { count: 'exact' })
       .eq('category_id', category.id)
       .eq('state_id', state.id)
       .eq('status', 'approved')
@@ -224,22 +241,27 @@ export default async function CategoryStateListingPage({
     '@type': 'CollectionPage',
     '@id': `${siteUrl}/categories/${categorySlug}/${stateSlug}#page`,
     name: `Best ${categoryLabel} in ${stateDisplayName}`,
-    description: `Directory of verified ${categoryLabelLower} in ${stateLongName}`,
+    description: `Directory of approved ${categoryLabelLower} in ${stateLongName}`,
     url: `${siteUrl}/categories/${categorySlug}/${stateSlug}`,
     image: `${siteUrl}/opengraph-image`,
-    dateModified: new Date().toISOString(),
     publisher: {
       '@type': 'Organization',
       name: '9jaDirectory',
       url: siteUrl,
     },
     mainEntity: {
-      '@type': 'LocalBusiness',
-      areaServed: {
-        '@type': 'State',
-        name: stateDisplayName,
-        addressCountry: 'NG',
-      },
+      '@type': 'ItemList',
+      numberOfItems: listings?.length || 0,
+      itemListElement: (listings || []).map((listing, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'LocalBusiness',
+          name: listing.business_name,
+          url: `${siteUrl}/listings/${listing.slug}`,
+          ...(listing.city ? { address: { '@type': 'PostalAddress', addressLocality: listing.city, addressCountry: 'NG' } } : {}),
+        },
+      })),
     },
   }
 
@@ -298,7 +320,7 @@ export default async function CategoryStateListingPage({
                   Best {categoryLabel} in {stateDisplayName}
                 </h1>
                 <p className="text-green-100 mt-2">
-                  Discover verified {categoryLabelLower} with real ratings & reviews
+                  Browse approved listings, customer ratings where available, and Verified badges where shown
                 </p>
               </div>
             </div>
@@ -310,7 +332,7 @@ export default async function CategoryStateListingPage({
           <div className="bg-white rounded-lg shadow-lg p-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-600">{totalCount}</div>
-              <div className="text-sm text-gray-600 mt-1">Verified {categoryLabel}</div>
+              <div className="text-sm text-gray-600 mt-1">Approved {categoryLabel}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-500">{avgRating}</div>
@@ -322,7 +344,7 @@ export default async function CategoryStateListingPage({
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-purple-600">100%</div>
-              <div className="text-sm text-gray-600 mt-1">Authentic</div>
+              <div className="text-sm text-gray-600 mt-1">Free to Browse</div>
             </div>
           </div>
         </section>
@@ -333,10 +355,10 @@ export default async function CategoryStateListingPage({
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div>
                   <p className="text-sm uppercase tracking-wide text-green-600 font-semibold">
-                    Top Rated in {stateDisplayName}
+                    Directory Highlight in {stateDisplayName}
                   </p>
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
-                    Best Real Estate Company in {stateDisplayName}
+                    Explore a Real Estate Company in {stateDisplayName}
                   </h2>
                   <p className="text-gray-700 mt-3">
                     {topListing.business_name}
@@ -375,32 +397,32 @@ export default async function CategoryStateListingPage({
               Looking for the Best {categoryLabel} in {stateDisplayName}?
             </h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              9jaDirectory has curated a comprehensive list of verified {categoryLabelLower} across {stateLongName}. 
-              Whether you are looking for highly-rated establishments, affordable options, or specialty services, 
-              you will find what you need in our directory of {totalCount}+ {categoryLabelLower}.
+              Browse {totalCount} approved {categoryLabelLower} across {stateLongName}. Compare the information
+              supplied by each business, check ratings where reviews are available, and look for a Verified badge
+              where shown before deciding which provider fits your needs.
             </p>
-            
+
             <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">✅ Why Choose These {categoryLabel}?</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
-                <span>All businesses are verified with active contact information</span>
+                <span>Approved listings are grouped by business category and location</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
-                <span>Real customer reviews and ratings from verified users</span>
+                <span>Verified badges are shown only on eligible approved listings</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
-                <span>Complete operating hours and detailed location information</span>
+                <span>Customer ratings appear where moderated reviews are available</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
-                <span>Direct contact and secure messaging capabilities</span>
+                <span>Available contact methods are supplied by each business</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
-                <span>Regular updates and fresh listings added daily</span>
+                <span>Business owners can submit updates to their listing details</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-green-600 font-bold">✓</span>
@@ -415,7 +437,7 @@ export default async function CategoryStateListingPage({
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
             Browse {totalCount} {categoryLabel} in {stateDisplayName}
           </h2>
-          
+
           {listingsError ? (
             <div className="text-center py-12 bg-white rounded-lg">
               <p className="text-gray-500 text-base">
@@ -439,7 +461,9 @@ export default async function CategoryStateListingPage({
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {listings.map((listing) => (
+              {listings.map((listing) => {
+                const imageUrl = getListingImage(listing)
+                return (
                 <Link
                   key={listing.id}
                   href={`/listings/${listing.slug}`}
@@ -448,9 +472,9 @@ export default async function CategoryStateListingPage({
                 >
                   {/* Image */}
                   <div className="h-48 bg-gray-200 relative overflow-hidden">
-                    {listing.image_url ? (
+                    {imageUrl ? (
                       <img
-                        src={listing.image_url}
+                        src={imageUrl}
                         alt={listing.business_name}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -471,7 +495,7 @@ export default async function CategoryStateListingPage({
                     <h3 className="font-bold text-lg text-gray-900 group-hover:text-green-600 transition-colors line-clamp-2 mb-2">
                       {listing.business_name}
                     </h3>
-                    
+
                     <p className="text-sm text-gray-600 mb-2 flex items-center">
                       <span className="mr-1">📍</span>
                       {listing.city}
@@ -495,7 +519,8 @@ export default async function CategoryStateListingPage({
                     )}
                   </div>
                 </Link>
-              ))}
+                )
+              })}
             </div>
           )}
         </section>
@@ -506,28 +531,28 @@ export default async function CategoryStateListingPage({
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
               Frequently Asked Questions About {categoryLabel} in {stateDisplayName}
             </h2>
-            
+
             <div className="space-y-6">
               {[
                 {
                   q: `Where can I find the best ${categoryLabelLower} in ${stateDisplayName}?`,
-                  a: `9jaDirectory has a comprehensive list of verified ${categoryLabelLower} in ${stateDisplayName}. Simply browse the listings above, sorted by rating and popularity.`,
+                  a: `Browse approved ${categoryLabelLower} in ${stateDisplayName} above and compare their supplied details, ratings where available, and Verified badges where shown.`,
                 },
                 {
                   q: `How are ${categoryLabelLower} rated on 9jaDirectory?`,
-                  a: `All ${categoryLabelLower} are rated on a 5-star scale by real customers. Ratings are based on verified reviews from actual users who have used their services.`,
+                  a: `Listings show a 5-star customer rating only where moderated reviews are available. Some businesses may not have reviews yet.`,
                 },
                 {
                   q: `Can I contact ${categoryLabelLower} directly through 9jaDirectory?`,
-                  a: `Yes! Each listing includes phone numbers, email addresses, and direct messaging options. You can reach out to businesses directly to inquire about their services and pricing.`,
+                  a: `Listings display the contact methods supplied by the business, which may include phone, email, WhatsApp, address, or a website.`,
                 },
                 {
                   q: `Are all ${categoryLabelLower} on this list verified?`,
-                  a: `Yes, all businesses are verified with active contact information and operating details. We ensure only legitimate, verified businesses appear in our directory.`,
+                  a: `No. Every public listing is reviewed before publication, but only eligible Premium and Lifetime listings display a Verified badge after approval.`,
                 },
                 {
                   q: `How often is the ${categoryLabelLower} directory updated?`,
-                  a: `Our directory is updated daily with new listings and ratings. We regularly verify business information to ensure accuracy and relevance.`,
+                  a: `New listings and owner-submitted updates appear after moderation. Contact details are supplied by each business, so confirm important details directly before paying or visiting.`,
                 },
               ].map((item, idx) => (
                 <div key={idx} className="border-l-4 border-green-600 pl-4 py-4">

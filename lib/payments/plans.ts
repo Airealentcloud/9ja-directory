@@ -1,4 +1,4 @@
-import { PlanId } from '@/lib/pricing'
+import { PRICING_PLANS, nairaToKobo, type PlanId } from '@/lib/pricing'
 
 export type PaymentPlan = {
   id: string
@@ -7,45 +7,32 @@ export type PaymentPlan = {
   amountKobo: number
   currency: 'NGN'
   planType: 'subscription' | 'featured' | 'test'
-  subscriptionPlanId?: PlanId // Links to pricing.ts plan
+  subscriptionPlanId?: PlanId
   featuredDays?: number
 }
 
+const subscriptionPlans = Object.fromEntries(
+  PRICING_PLANS.map((plan) => [
+    plan.id,
+    {
+      id: plan.id,
+      name: plan.name,
+      description: `${plan.description}. ${plan.features.slice(0, 3).join(', ')}.`,
+      amountKobo: nairaToKobo(plan.price),
+      currency: 'NGN' as const,
+      planType: 'subscription' as const,
+      subscriptionPlanId: plan.id,
+    },
+  ])
+) as Record<PlanId, PaymentPlan>
+
 export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
-  // Main subscription plans
-  basic: {
-    id: 'basic',
-    name: 'BASIC',
-    description: 'Perfect for small businesses getting started. 1 listing, 4 photos, basic features.',
-    amountKobo: 500000, // ₦5,000
-    currency: 'NGN',
-    planType: 'subscription',
-    subscriptionPlanId: 'basic',
-  },
-  premium: {
-    id: 'premium',
-    name: 'PREMIUM',
-    description: 'Great for growing businesses. 5 listings, 15 photos, social links, AI features.',
-    amountKobo: 1000000, // ₦10,000
-    currency: 'NGN',
-    planType: 'subscription',
-    subscriptionPlanId: 'premium',
-  },
-  lifetime: {
-    id: 'lifetime',
-    name: 'LIFETIME',
-    description: 'Maximum visibility. Unlimited listings, 100 photos, all features, never pay again.',
-    amountKobo: 3000000, // ₦30,000
-    currency: 'NGN',
-    planType: 'subscription',
-    subscriptionPlanId: 'lifetime',
-  },
-  // Featured listing add-ons (optional upgrades)
+  ...subscriptionPlans,
   featured_30d: {
     id: 'featured_30d',
     name: 'Featured Listing (30 days)',
-    description: 'Top placement on category pages + Featured badge for 30 days.',
-    amountKobo: 1500000, // ₦15,000
+    description: 'Sponsored placement on category pages plus a Featured badge for 30 days.',
+    amountKobo: 1500000,
     currency: 'NGN',
     planType: 'featured',
     featuredDays: 30,
@@ -53,18 +40,17 @@ export const PAYMENT_PLANS: Record<string, PaymentPlan> = {
   featured_90d: {
     id: 'featured_90d',
     name: 'Featured Listing (90 days)',
-    description: 'Top placement on category pages + Featured badge for 90 days.',
-    amountKobo: 3500000, // ₦35,000
+    description: 'Sponsored placement on category pages plus a Featured badge for 90 days.',
+    amountKobo: 3500000,
     currency: 'NGN',
     planType: 'featured',
     featuredDays: 90,
   },
-  // Test payment (for testing)
   test_payment: {
     id: 'test_payment',
     name: 'Test Payment',
-    description: 'Simple test to verify Paystack integration is working.',
-    amountKobo: 200000, // ₦2,000
+    description: 'Internal payment-integration test. It grants no listing entitlement.',
+    amountKobo: 200000,
     currency: 'NGN',
     planType: 'test',
   },

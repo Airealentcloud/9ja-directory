@@ -10,6 +10,17 @@ import { createPublicClient } from '@/lib/supabase/public'
 
 const siteUrl = SITE_URL
 
+export const revalidate = 300
+
+function getListingImage(listing: { logo_url?: string | null; images?: unknown }) {
+  if (listing.logo_url) return listing.logo_url
+  if (Array.isArray(listing.images)) {
+    const firstImage = listing.images.find((image): image is string => typeof image === 'string' && image.length > 0)
+    return firstImage || null
+  }
+  return null
+}
+
 export const metadata: Metadata = {
   title: 'Nigeria Business Directory | Business Directory in Nigeria',
   description: 'Find businesses in Nigeria by category, city, and state. Browse trusted Nigerian companies or list your business on 9jaDirectory from ₦5,000.',
@@ -60,16 +71,17 @@ export default async function Home() {
   // Fetch featured/promoted listings (businesses that paid for promotion)
   const { data: promotedListings } = await supabase
     .from('listings')
-    .select('id, business_name, slug, category_id, categories(name), state_id, states(name), image_url, description, featured')
+    .select('id, business_name, slug, category_id, categories(name), state_id, states(name), logo_url, images, description, featured')
     .eq('status', 'approved')
     .eq('featured', true)
+    .gt('featured_until', new Date().toISOString())
     .order('created_at', { ascending: false })
     .limit(6)
 
   // Fetch recently added listings (newest first)
   const { data: recentListings } = await supabase
     .from('listings')
-    .select('id, business_name, slug, category_id, categories(name), state_id, states(name), image_url, description, featured, created_at')
+    .select('id, business_name, slug, category_id, categories(name), state_id, states(name), logo_url, images, description, featured, created_at')
     .eq('status', 'approved')
     .order('created_at', { ascending: false })
     .limit(8)
@@ -143,7 +155,7 @@ export default async function Home() {
         name: 'What is 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '9jaDirectory is Nigeria\'s leading online business directory that helps customers find verified businesses and services across all 36 states and the FCT. We connect millions of Nigerians with trusted local businesses in categories like restaurants, real estate, healthcare, technology, and more.',
+          text: '9jaDirectory is a Nigerian business directory that helps customers find approved business listings across all 36 states and the FCT. A Verified badge identifies eligible Premium and Lifetime listings that passed review.',
         },
       },
       {
@@ -151,7 +163,7 @@ export default async function Home() {
         name: 'How do I list my business on 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Listing your business is simple: Choose a plan that fits your needs, fill in your business details including name, category, location, and contact information, complete the payment, and your listing will be live after a quick review. Premium plans include featured placement and enhanced visibility.',
+          text: 'Listing your business is simple: Choose a plan that fits your needs, fill in your business details including name, category, location, and contact information, complete the payment, and your listing will be live after a quick review. Premium includes verified profiles, richer business details and analytics; Lifetime includes homepage placement and priority visibility.',
         },
       },
       {
@@ -219,9 +231,9 @@ export default async function Home() {
               and helps business owners reach new customers throughout Nigeria.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              <strong>Business owners:</strong> List your company today and get discovered by millions of Nigerians
-              searching for products and services like yours. Our affordable plans include premium features like
-              featured listings, enhanced visibility, and analytics to help grow your business.
+              <strong>Business owners:</strong> List your company today so customers searching across Nigeria can
+              discover it. Basic provides a standard directory listing, Premium adds verification and analytics,
+              and Lifetime includes homepage placement and priority visibility.
             </p>
           </div>
         </section>
@@ -259,11 +271,11 @@ export default async function Home() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-center gap-2 mb-4">
                 <span className="text-2xl" aria-hidden="true">⭐</span>
-                <h2 className="text-3xl font-bold text-center">Featured Nigerian Businesses</h2>
+                <h2 className="text-3xl font-bold text-center">Promoted Nigerian Businesses</h2>
                 <span className="text-2xl" aria-hidden="true">⭐</span>
               </div>
               <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Top-rated businesses trusted by thousands of customers across Nigeria
+                Paid promotional placements and eligible Lifetime listings. Promotion is not an editorial endorsement.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {promotedListings.map((listing) => (
@@ -273,9 +285,9 @@ export default async function Home() {
                     className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group border-2 border-amber-300"
                   >
                     <div className="h-48 bg-gray-200 relative overflow-hidden">
-                      {listing.image_url ? (
+                      {getListingImage(listing) ? (
                         <Image
-                          src={listing.image_url}
+                          src={getListingImage(listing) || '/logo.svg'}
                           alt={`${listing.business_name} - Business in Nigeria`}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -340,9 +352,9 @@ export default async function Home() {
                     className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden group"
                   >
                     <div className="h-40 bg-gray-200 relative overflow-hidden">
-                      {listing.image_url ? (
+                      {getListingImage(listing) ? (
                         <Image
-                          src={listing.image_url}
+                          src={getListingImage(listing) || '/logo.svg'}
                           alt={`${listing.business_name} - Business in Nigeria`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -451,60 +463,11 @@ export default async function Home() {
             <div className="text-5xl mb-4">🔍</div>
             <h2 className="text-3xl font-bold mb-4">Need Help Finding Something?</h2>
             <p className="text-xl mb-8 text-blue-100">
-              Search thousands of verified Nigerian businesses by name, category, or location
+              Search approved Nigerian business listings by name, category or location
             </p>
             <Link href="/search" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
               Search Businesses
             </Link>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-4">What Our Users Say</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Hear from business owners and customers who trust 9jaDirectory
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Listing my restaurant on 9jaDirectory increased our visibility significantly. We now get more customers every week!&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">CO</div>
-                <div>
-                  <div className="font-semibold">Chioma Okafor</div>
-                  <div className="text-sm text-gray-500">Restaurant Owner, Lagos</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;I found a reliable plumber in my area within minutes. The directory is easy to use and has accurate contact information.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">TA</div>
-                <div>
-                  <div className="font-semibold">Tunde Adebayo</div>
-                  <div className="text-sm text-gray-500">Customer, Abuja</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Best platform for discovering local services. The categories are well-organized and the search is very fast.&rdquo;
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">AN</div>
-                <div>
-                  <div className="font-semibold">Amaka Nwosu</div>
-                  <div className="text-sm text-gray-500">Business Consultant, Port Harcourt</div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -527,16 +490,16 @@ export default async function Home() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md text-center">
                 <div className="text-5xl mb-4">🔄</div>
-                <h3 className="text-xl font-bold mb-2">Always Up-to-Date</h3>
+                <h3 className="text-xl font-bold mb-2">Nationwide Browsing</h3>
                 <p className="text-gray-600">
-                  Regularly updated listings with accurate contact information
+                  Browse approved listings across Nigeria and contact businesses using the details they provide
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md text-center">
                 <div className="text-5xl mb-4">⭐</div>
-                <h3 className="text-xl font-bold mb-2">Verified Reviews</h3>
+                <h3 className="text-xl font-bold mb-2">Moderated Reviews</h3>
                 <p className="text-gray-600">
-                  Real reviews from real customers to help you decide
+                  Submitted reviews are held for moderation before they are published
                 </p>
               </div>
             </div>
@@ -556,9 +519,9 @@ export default async function Home() {
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="font-bold text-lg text-gray-900 mb-2">What is 9jaDirectory?</h3>
                 <p className="text-gray-700">
-                  9jaDirectory is Nigeria&apos;s leading online business directory that helps customers find verified
-                  businesses and services across all 36 states and the FCT. We connect millions of Nigerians with
-                  trusted local businesses in categories like restaurants, real estate, healthcare, technology, and more.
+                  9jaDirectory is a Nigerian business directory that helps customers find approved business
+                  listings across all 36 states and the FCT. A Verified badge identifies eligible Premium and
+                  Lifetime listings that passed review.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
@@ -566,7 +529,7 @@ export default async function Home() {
                 <p className="text-gray-700">
                   Listing your business is simple: Choose a plan that fits your needs, fill in your business details
                   including name, category, location, and contact information, complete the payment, and your listing
-                  will be live after a quick review. Premium plans include featured placement and enhanced visibility.
+                  will be live after a quick review. Premium includes verified profiles, richer business details and analytics; Lifetime includes homepage placement and priority visibility.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
@@ -581,8 +544,8 @@ export default async function Home() {
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Which Nigerian states does 9jaDirectory cover?</h3>
                 <p className="text-gray-700">
                   9jaDirectory covers all 36 Nigerian states plus the Federal Capital Territory (FCT). Whether
-                  you&apos;re looking for businesses in Lagos, Abuja, Kano, Rivers, or any other state, you&apos;ll find
-                  verified listings in our directory.
+                  you&apos;re looking for businesses in Lagos, Abuja, Kano, Rivers, or any other state, you can browse
+                  approved listings and use the Verified badge where shown as an additional trust signal.
                 </p>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">

@@ -9,11 +9,85 @@ function withDeploymentHeaders(response: NextResponse) {
   return response
 }
 
+const STAGING_LOCKED_PAGE_PREFIXES = [
+  '/login',
+  '/signup',
+  '/auth',
+  '/checkout',
+  '/add-business',
+  '/dashboard',
+  '/admin',
+  '/payment',
+  '/paystack',
+  '/listing-created',
+  '/test-payment',
+  '/debug',
+  '/test-db',
+  '/stats',
+]
+
+const STAGING_LOCKED_API_PREFIXES = [
+  '/api/admin',
+  '/api/ai',
+  '/api/cron',
+  '/api/newsletter',
+  '/api/notifications',
+  '/api/payments',
+  '/api/paystack',
+  '/api/press-release',
+  '/api/send-emails',
+]
+
+function isStagingLockedRequest(request: NextRequest) {
+  if (
+    process.env.DEPLOYMENT_ENV !== 'staging' ||
+    process.env.STAGING_MUTATIONS_ENABLED === 'true'
+  ) {
+    return false
+  }
+
+  const path = request.nextUrl.pathname
+  const isMutation = !['GET', 'HEAD', 'OPTIONS'].includes(request.method)
+  const isLockedPage = STAGING_LOCKED_PAGE_PREFIXES.some(prefix => path.startsWith(prefix))
+  const isClaimPage = /^\/listings\/[^/]+\/claim(?:\/|$)/.test(path)
+  const isLockedApi = STAGING_LOCKED_API_PREFIXES.some(prefix => path.startsWith(prefix))
+
+  return isMutation || isLockedPage || isClaimPage || isLockedApi
+}
+
+function stagingLockedResponse(request: NextRequest) {
+  const headers = {
+    'Cache-Control': 'private, no-store',
+    'Retry-After': '3600',
+  }
+
+  if (request.nextUrl.pathname.startsWith('/api/')) {
+    return withDeploymentHeaders(NextResponse.json(
+      { error: 'Interactive staging routes are disabled until test services are configured.' },
+      { status: 503, headers }
+    ))
+  }
+
+  return withDeploymentHeaders(new NextResponse(
+    'This staging page is temporarily disabled while test authentication and payments are configured.',
+    { status: 503, headers }
+  ))
+}
+
 export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname
+
+  if (isStagingLockedRequest(request)) {
+    return stagingLockedResponse(request)
+  }
   const isAmpersandPath = requestPath === '/&' || requestPath === '/%26'
   const isProtectedRoute = requestPath.startsWith('/add-business') || requestPath.startsWith('/dashboard')
-  const isAdminRoute = requestPath.startsWith('/admin')
+  const isAdminRoute =
+    requestPath.startsWith('/admin') ||
+    requestPath.startsWith('/test-payment') ||
+    requestPath.startsWith('/debug') ||
+    requestPath.startsWith('/test-db') ||
+    requestPath.startsWith('/stats')
   const canonicalHost = new URL(SITE_URL).host
   const requestHost = request.headers.get('host')
 

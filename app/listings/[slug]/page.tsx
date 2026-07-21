@@ -9,6 +9,7 @@ import ClaimButton from '@/components/listings/claim-button'
 import RelatedListings from '@/components/related-listings'
 import { SITE_URL } from '@/lib/seo/site-url'
 import { isIndexableListing } from '@/lib/seo/listing-quality'
+import { getAccountPlanLimits, resolveAccountPlan } from '@/lib/entitlements'
 import {
   generateLocalBusinessSchema,
   generateBreadcrumbSchema,
@@ -166,10 +167,16 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
   if (user) {
     const { data: profile } = await supabase
       .from('profiles')
-      .select('can_claim_listings')
+      .select('role, subscription_plan, subscription_status, subscription_expires_at')
       .eq('id', user.id)
       .maybeSingle()
-    canClaim = profile?.can_claim_listings ?? false
+    const accountPlan = resolveAccountPlan({
+      role: profile?.role,
+      subscriptionPlan: profile?.subscription_plan,
+      subscriptionStatus: profile?.subscription_status,
+      subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+    canClaim = getAccountPlanLimits(accountPlan).canClaimListings
   }
 
   // Check if this is a real estate listing

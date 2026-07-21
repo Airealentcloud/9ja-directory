@@ -32,9 +32,8 @@ export default function SimilarBusinesses({
                     .from('listings')
                     .select(`
                         id, slug, business_name, description, city, state_id, category_id,
-                        logo_url, image_url, images, verified, featured, featured_until,
+                        logo_url, images, verified, featured, featured_until,
                         average_rating, review_count, created_at, user_id,
-                        profiles!listings_user_id_fkey(subscription_plan),
                         categories(id, name, slug),
                         states(id, name, slug)
                     `)
@@ -102,7 +101,7 @@ export default function SimilarBusinesses({
                     href={`/search?category=${categoryId}`}
                     className="text-green-600 hover:text-green-700 text-sm font-medium"
                 >
-                    View all {categoryName} →
+                    View all {categoryName} &rarr;
                 </Link>
             </div>
 
@@ -136,7 +135,7 @@ export default function SimilarBusinesses({
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center text-gray-400 text-2xl">
-                                        {listing.business_name?.[0] || '🏢'}
+                                        {listing.business_name?.[0] || 'B'}
                                     </div>
                                 )}
 

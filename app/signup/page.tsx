@@ -52,17 +52,14 @@ export default function SignupPage() {
                 return
             }
 
-            if (password.length < 6) {
-                setError('Password should be at least 6 characters.')
+            if (password.length < 8) {
+                setError('Password should be at least 8 characters.')
                 setLoading(false)
                 return
             }
 
-            // Use runtime URL for local development, configured URL for production
-            const runtimeBaseUrl = window.location.origin.replace(/\/$/, '')
-            const configuredBaseUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '')
-            const isLocalhost = runtimeBaseUrl.includes('localhost') || runtimeBaseUrl.includes('127.0.0.1')
-            const baseUrl = isLocalhost ? runtimeBaseUrl : (configuredBaseUrl || runtimeBaseUrl)
+            // Keep confirmation on the host where signup started (production, staging, or localhost).
+            const baseUrl = window.location.origin.replace(/\/$/, '')
 
             // Include plan in the callback URL
             const callbackUrl = planId
@@ -83,15 +80,6 @@ export default function SignupPage() {
 
             if (error) throw error
 
-            // Notify admin of new signup (fire and forget)
-            fetch('/api/notifications', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    type: 'new_signup',
-                    data: { email, fullName, plan: planId }
-                })
-            }).catch(console.error)
 
             setSuccess(true)
         } catch (err: any) {
@@ -105,7 +93,7 @@ export default function SignupPage() {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-md text-center">
-                    <div className="text-green-500 text-5xl mb-4">✓</div>
+                    <div className="text-green-600 text-2xl font-bold mb-4" aria-hidden="true">OK</div>
                     <h1 className="text-3xl font-extrabold text-gray-900">Check your email</h1>
                     <p className="mt-2 text-gray-600">
                         We've sent a confirmation link to <strong>{email}</strong>.

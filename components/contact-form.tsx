@@ -46,10 +46,10 @@ export default function ContactForm() {
     if (success) {
         return (
             <div className="bg-white rounded-lg shadow-md p-8 text-center">
-                <div className="text-green-500 text-5xl mb-4">✓</div>
+                <div className="text-green-600 text-2xl font-bold mb-4" aria-hidden="true">OK</div>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Message Sent!</h2>
                 <p className="text-gray-600 mb-6">
-                    Thank you for contacting us. We'll get back to you within 24 hours.
+                    Thank you for contacting us. We'll respond as soon as possible.
                 </p>
                 <button
                     onClick={() => setSuccess(false)}

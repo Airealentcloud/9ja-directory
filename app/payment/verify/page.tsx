@@ -10,8 +10,10 @@ interface PaymentResult {
     amount?: number
     reference?: string
     plan_id?: string
+    listing_id?: string | null
     paid_at?: string
     requires_account?: boolean
+    link_error?: string | null
     lead?: {
         email?: string | null
         business_name?: string | null
@@ -32,6 +34,7 @@ export default function PaymentVerifyPage() {
     const [password, setPassword] = useState('')
     const [creatingAccount, setCreatingAccount] = useState(false)
     const [accountError, setAccountError] = useState<string | null>(null)
+    const [confirmationSent, setConfirmationSent] = useState(false)
 
     useEffect(() => {
         if (!reference) {
@@ -54,8 +57,10 @@ export default function PaymentVerifyPage() {
                     amount: data.data.amount,
                     reference: data.data.reference,
                     plan_id: data.data.plan_id,
+                    listing_id: data.data.listing_id,
                     paid_at: data.data.paid_at,
                     requires_account: data.data.requires_account,
+                    link_error: data.data.link_error,
                     lead: data.data.lead,
                 })
             } catch (err) {
@@ -67,6 +72,12 @@ export default function PaymentVerifyPage() {
 
         verifyPayment()
     }, [reference])
+
+    useEffect(() => {
+        if (result?.lead?.business_name && !fullName) {
+            setFullName(result.lead.business_name)
+        }
+    }, [result, fullName])
 
     if (loading) {
         return (
@@ -84,7 +95,7 @@ export default function PaymentVerifyPage() {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
                 <div className="max-w-md w-full text-center">
-                    <div className="text-6xl mb-4">❌</div>
+                    <div className="text-6xl mb-4" aria-hidden="true">X</div>
                     <h1 className="text-2xl font-bold text-gray-900 mb-4">Verification Failed</h1>
                     <p className="text-gray-600 mb-8">{error}</p>
                     <div className="space-y-4">
@@ -105,12 +116,6 @@ export default function PaymentVerifyPage() {
             </div>
         )
     }
-
-    useEffect(() => {
-        if (result?.lead?.business_name && !fullName) {
-            setFullName(result.lead.business_name)
-        }
-    }, [result, fullName])
 
     const handleCompleteAccount = async (event: React.FormEvent) => {
         event.preventDefault()
@@ -138,6 +143,12 @@ export default function PaymentVerifyPage() {
                 throw new Error(data.error || 'Failed to create account')
             }
 
+            if (data.confirmation_required) {
+                setConfirmationSent(true)
+                setCreatingAccount(false)
+                return
+            }
+
             const { error: loginError } = await supabase.auth.signInWithPassword({
                 email: result.lead.email,
                 password,
@@ -147,7 +158,7 @@ export default function PaymentVerifyPage() {
                 throw loginError
             }
 
-            router.push(`/dashboard/edit/${data.data.listing_id}`)
+            router.push(`/dashboard/my-listings/${data.data.listing_id}/edit`)
             router.refresh()
         } catch (err) {
             setAccountError(err instanceof Error ? err.message : 'Failed to create account')
@@ -156,7 +167,49 @@ export default function PaymentVerifyPage() {
     }
 
     if (result?.status === 'success') {
+        if (result.link_error) {
+            return (
+                <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+                    <div className="max-w-md w-full rounded-lg bg-white p-8 shadow-md text-center">
+                        <h1 className="text-2xl font-bold text-gray-900 mb-3">Payment received</h1>
+                        <p className="text-gray-600 mb-4">
+                            Your payment is confirmed, but the listing could not be linked automatically.
+                        </p>
+                        <p className="rounded-md bg-amber-50 border border-amber-200 p-3 text-sm text-amber-900 mb-5">
+                            {result.link_error}
+                        </p>
+                        <p className="text-sm text-gray-600 mb-6">
+                            Reference: <span className="font-mono">{result.reference}</span>
+                        </p>
+                        <Link href="/contact" className="block w-full rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700">
+                            Contact support
+                        </Link>
+                    </div>
+                </div>
+            )
+        }
+
         if (result.requires_account) {
+            if (confirmationSent) {
+                return (
+                    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+                        <div className="max-w-md w-full rounded-lg bg-white p-8 shadow-md text-center">
+                            <div className="w-16 h-16 rounded-full bg-green-100 text-green-700 flex items-center justify-center mx-auto mb-5 text-2xl" aria-hidden="true">@</div>
+                            <h1 className="text-2xl font-bold text-gray-900 mb-3">Confirm your email</h1>
+                            <p className="text-gray-600 mb-4">
+                                Your payment is linked and your listing is saved. We sent a confirmation link to <strong>{result.lead?.email}</strong>.
+                            </p>
+                            <p className="text-sm text-gray-500 mb-6">
+                                Open that email, confirm your address, then sign in to complete your business details.
+                            </p>
+                            <Link href={`/login?next=${encodeURIComponent(`/payment/verify?reference=${reference || ''}`)}`} className="block w-full rounded-lg bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700">
+                                Go to sign in
+                            </Link>
+                        </div>
+                    </div>
+                )
+            }
+
             return (
                 <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
                     <div className="max-w-md w-full">
@@ -222,7 +275,7 @@ export default function PaymentVerifyPage() {
                             </button>
                             <p className="text-center text-sm text-gray-500">
                                 Already have an account?{' '}
-                                <Link href="/login" className="text-green-600 hover:underline">
+                                <Link href={`/login?next=${encodeURIComponent(`/payment/verify?reference=${reference || ''}`)}`} className="text-green-600 hover:underline">
                                     Sign in
                                 </Link>
                             </p>
@@ -252,7 +305,7 @@ export default function PaymentVerifyPage() {
                     </div>
                     <h1 className="text-3xl font-bold text-gray-900 mb-2">Payment Successful!</h1>
                     <p className="text-gray-600 mb-4">
-                        Thank you for your payment. Your subscription is now active.
+                        Thank you for your payment. Your paid listing plan is now active.
                     </p>
 
                     {/* Listing Submission Notice */}
@@ -264,7 +317,7 @@ export default function PaymentVerifyPage() {
                             <span className="font-semibold text-green-800">Listing Submitted!</span>
                         </div>
                         <p className="text-sm text-green-700">
-                            Your business listing has been submitted for review. You'll be notified once it's approved (usually within 24-48 hours).
+                            Your business listing has been submitted for review. You'll be notified after it is checked and approved.
                         </p>
                     </div>
 
@@ -274,7 +327,7 @@ export default function PaymentVerifyPage() {
                             <div className="flex justify-between">
                                 <span className="text-gray-600">Amount</span>
                                 <span className="font-semibold">
-                                    ₦{result.amount?.toLocaleString()}
+                                    {'\u20A6'}{result.amount?.toLocaleString()}
                                 </span>
                             </div>
                             <div className="flex justify-between">
@@ -301,6 +354,14 @@ export default function PaymentVerifyPage() {
                     </div>
 
                     <div className="space-y-4">
+                        {result.listing_id && (
+                            <Link
+                                href={`/dashboard/my-listings/${result.listing_id}/edit`}
+                                className="block w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                            >
+                                Complete or edit your listing
+                            </Link>
+                        )}
                         <Link
                             href="/dashboard"
                             className="block w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
@@ -324,7 +385,7 @@ export default function PaymentVerifyPage() {
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
             <div className="max-w-md w-full text-center">
                 <div className="text-6xl mb-4">
-                    {result?.status === 'pending' ? '⏳' : '❌'}
+                    {result?.status === 'pending' ? 'Pending' : 'Failed'}
                 </div>
                 <h1 className="text-2xl font-bold text-gray-900 mb-4">
                     {result?.status === 'pending' ? 'Payment Pending' : 'Payment Failed'}

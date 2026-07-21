@@ -5,6 +5,9 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
 import { SITE_URL } from '@/lib/seo/site-url'
+import { PLAN_LIMITS, isPaidPlanId, resolveAccountPlan } from '@/lib/entitlements'
+import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
+import { getPlanById, nairaToKobo } from '@/lib/pricing'
 
 // Helper to check if user is admin
 async function checkAdmin() {
@@ -122,6 +125,15 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
         return { error: { message: 'Only successful paid leads can be converted to listings.' } }
     }
 
+    const paidPlan = isPaidPlanId(lead.plan) ? getPlanById(lead.plan) : null
+    if (
+        !paidPlan ||
+        lead.amount !== nairaToKobo(paidPlan.price) ||
+        lead.currency !== 'NGN'
+    ) {
+        return { error: { message: 'The paid lead amount or currency does not match a current listing plan.' } }
+    }
+
     const email = String(lead.email || '').trim().toLowerCase()
     if (!email) {
         return { error: { message: 'The paid lead has no email address.' } }
@@ -158,7 +170,7 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
             user_id: userId,
             business_name: businessName,
             slug: buildSlug(businessName),
-            description: 'Premium paid listing created from payment verification. Please review and complete the business details before approval.',
+            description: `${paidPlan.name} paid listing created from payment verification. Please review and complete the business details before approval.`,
             phone,
             email,
             category_id: categoryId,
@@ -173,11 +185,19 @@ export async function createListingFromPaymentLeadServer(formData: FormData) {
 
     const { data: existingPayment } = await supabase
         .from('payments')
-        .select('id')
+        .select('id, user_id, plan, amount, currency')
         .eq('reference', lead.reference)
         .maybeSingle()
 
     if (existingPayment?.id) {
+        if (
+            (existingPayment.user_id && existingPayment.user_id !== userId) ||
+            existingPayment.plan !== lead.plan ||
+            existingPayment.amount !== lead.amount ||
+            existingPayment.currency !== lead.currency
+        ) {
+            return { error: { message: 'The existing payment record does not match this paid lead.' } }
+        }
         const { error: paymentUpdateError } = await supabase
             .from('payments')
             .update({
@@ -678,6 +698,16 @@ function normalizeEmail(value?: string | null) {
     return String(value || '').trim().toLowerCase()
 }
 
+function normalizeBusinessName(value?: string | null) {
+    return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ')
+}
+
+function paymentIdentity(email?: string | null, businessName?: string | null) {
+    const normalizedEmail = normalizeEmail(email)
+    const normalizedName = normalizeBusinessName(businessName)
+    return normalizedEmail && normalizedName ? `${normalizedEmail}::${normalizedName}` : ''
+}
+
 function newerPayment(existing: any, next: any) {
     if (!existing) return next
     const existingTime = new Date(existing.created_at || existing.paid_at || 0).getTime()
@@ -717,8 +747,23 @@ async function findSuccessfulPaymentForListing(supabase: any, listing: any, prof
         console.warn('Error matching listing to payment lead:', leadError)
     }
 
-    const lead = (leadRows || []).find((row: any) => !row.listing_id || row.listing_id === listing.id)
+    const eligibleLeads = (leadRows || []).filter((row: any) =>
+        (!row.user_id || !listing.user_id || row.user_id === listing.user_id) &&
+        (!row.listing_id || row.listing_id === listing.id)
+    )
+    const exactlyLinkedLead = eligibleLeads.find((row: any) => row.listing_id === listing.id)
+    const matchingUnlinkedLeads = eligibleLeads.filter((row: any) =>
+        !row.listing_id &&
+        normalizeBusinessName(row.business_name) === normalizeBusinessName(listing.business_name)
+    )
+    const lead = exactlyLinkedLead || (matchingUnlinkedLeads.length === 1 ? matchingUnlinkedLeads[0] : null)
     if (!lead) {
+        return { payment: null, source: null }
+    }
+
+    const paidPlan = isPaidPlanId(lead.plan) ? getPlanById(lead.plan) : null
+    if (!paidPlan || lead.amount !== nairaToKobo(paidPlan.price) || lead.currency !== 'NGN') {
+        console.warn('Refusing to auto-link a payment lead with a plan or amount mismatch:', lead.reference)
         return { payment: null, source: null }
     }
 
@@ -729,11 +774,20 @@ async function findSuccessfulPaymentForListing(supabase: any, listing: any, prof
 
     const { data: existingPayment } = await supabase
         .from('payments')
-        .select('id')
+        .select('id, user_id, plan, amount, currency')
         .eq('reference', lead.reference)
         .maybeSingle()
 
     if (existingPayment?.id) {
+        if (
+            (existingPayment.user_id && existingPayment.user_id !== userId) ||
+            existingPayment.plan !== lead.plan ||
+            existingPayment.amount !== lead.amount ||
+            existingPayment.currency !== lead.currency
+        ) {
+            console.warn('Refusing to relink a payment record that does not match its lead:', lead.reference)
+            return { payment: null, source: null }
+        }
         const { data: updatedPayment, error: updateError } = await supabase
             .from('payments')
             .update({
@@ -886,7 +940,7 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         }
     }
 
-    let paymentLeadsByEmail: Record<string, any> = {}
+    let paymentLeadsByIdentity: Record<string, any> = {}
     const listingEmails = Array.from(
         new Set(
             listings
@@ -901,16 +955,19 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
     if (listingEmails.length > 0) {
         const { data: leadRows, error: leadError } = await supabase
             .from('payment_leads')
-            .select('email, status, reference, created_at, paid_at, listing_id')
+            .select('email, business_name, status, reference, created_at, paid_at, listing_id')
             .in('email', listingEmails)
             .eq('status', 'success')
+            .is('listing_id', null)
 
         if (leadError) {
             console.warn('Error fetching payment leads for admin listings:', leadError)
         } else {
             ;(leadRows || []).forEach((lead: any) => {
-                const email = normalizeEmail(lead.email)
-                paymentLeadsByEmail[email] = newerPayment(paymentLeadsByEmail[email], lead)
+                const identity = paymentIdentity(lead.email, lead.business_name)
+                if (identity) {
+                    paymentLeadsByIdentity[identity] = newerPayment(paymentLeadsByIdentity[identity], lead)
+                }
             })
         }
     }
@@ -921,8 +978,8 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         const profile = listing.user_id ? profilesMap[listing.user_id] : null
         const leadPayment =
             payment ||
-            paymentLeadsByEmail[normalizeEmail(listing.email)] ||
-            paymentLeadsByEmail[normalizeEmail(profile?.email)]
+            paymentLeadsByIdentity[paymentIdentity(listing.email, listing.business_name)] ||
+            paymentLeadsByIdentity[paymentIdentity(profile?.email, listing.business_name)]
 
         return {
             ...listing,
@@ -945,7 +1002,7 @@ export async function approveListingServer(id: string) {
     // Get listing with owner details before approving
     const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select('id, business_name, slug, user_id, email, description, phone, category_id, state_id, city')
+        .select('id, business_name, slug, user_id, email, description, phone, category_id, state_id, city, featured, featured_until')
         .eq('id', id)
         .single()
 
@@ -1001,11 +1058,69 @@ export async function approveListingServer(id: string) {
         return { error: { message: 'Payment not completed for this listing.' } }
     }
 
+    const paidPlan = latestPayment.plan as unknown
+    if (!isPaidPlanId(paidPlan)) {
+        return { error: { message: 'This payment is not linked to a valid Basic, Premium, or Lifetime plan.' } }
+    }
+
+    try {
+        await fulfillPaystackSuccess({
+            reference: latestPayment.reference,
+            amountKobo: latestPayment.amount,
+            currency: latestPayment.currency || 'NGN',
+            paidAt: latestPayment.paid_at || null,
+        })
+    } catch (fulfillmentError) {
+        return {
+            error: {
+                message: fulfillmentError instanceof Error
+                    ? 'Payment is confirmed, but plan activation failed: ' + fulfillmentError.message
+                    : 'Payment is confirmed, but plan activation failed.',
+            },
+        }
+    }
+
+    const { data: entitlementProfile, error: entitlementError } = await supabase
+        .from('profiles')
+        .select('role, subscription_plan, subscription_status, subscription_expires_at')
+        .eq('id', listing.user_id)
+        .maybeSingle()
+
+    if (entitlementError || !entitlementProfile) {
+        return { error: { message: entitlementError?.message || 'The customer plan could not be loaded.' } }
+    }
+
+    const effectivePlan = resolveAccountPlan({
+        role: entitlementProfile.role,
+        subscriptionPlan: entitlementProfile.subscription_plan,
+        subscriptionStatus: entitlementProfile.subscription_status,
+        subscriptionExpiresAt: entitlementProfile.subscription_expires_at,
+    })
+    if (effectivePlan === 'free') {
+        return { error: { message: 'Payment is confirmed, but the customer plan is not active.' } }
+    }
+
+    const limits = PLAN_LIMITS[effectivePlan]
+    const hasActiveFeaturedAddOn = Boolean(
+        effectivePlan === 'premium' &&
+        listing.featured &&
+        listing.featured_until &&
+        new Date(listing.featured_until) > new Date()
+    )
+    const lifetimeExpiry = new Date()
+    lifetimeExpiry.setFullYear(lifetimeExpiry.getFullYear() + 100)
+    const featuredUntil = limits.hasFeaturedHomepage
+        ? lifetimeExpiry.toISOString()
+        : (hasActiveFeaturedAddOn ? listing.featured_until : null)
+
     const { data, error } = await supabase
         .from('listings')
         .update({
             status: 'approved',
-            rejection_reason: null
+            rejection_reason: null,
+            verified: limits.hasVerifiedBadge,
+            featured: limits.hasFeaturedHomepage || hasActiveFeaturedAddOn,
+            featured_until: featuredUntil,
         })
         .eq('id', id)
         .select()

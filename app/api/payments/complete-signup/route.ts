@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
+import { resolveApplicationOrigin } from '@/lib/http/application-origin'
+import { linkSuccessfulLeadToUser } from '@/lib/payments/link-paid-lead'
 
 type CompleteSignupPayload = {
   reference?: string
@@ -8,15 +9,38 @@ type CompleteSignupPayload = {
   password?: string
 }
 
-function buildSlug(name: string) {
-  return (
-    name
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)+/g, '') +
-    '-' +
-    Math.random().toString(36).substring(2, 7)
-  )
+async function findAuthUserByEmail(
+  supabase: ReturnType<typeof createAdminClient>,
+  email: string
+) {
+  const perPage = 1000
+  for (let page = 1; page <= 20; page += 1) {
+    const { data, error } = await supabase.auth.admin.listUsers({ page, perPage })
+    if (error) throw error
+
+    const match = data.users.find(user => user.email?.toLowerCase() === email)
+    if (match) return match
+    if (data.users.length < perPage) return null
+  }
+
+  throw new Error('Could not safely finish checking existing customer accounts.')
+}
+
+async function sendConfirmation(
+  supabase: ReturnType<typeof createAdminClient>,
+  email: string,
+  reference: string,
+  request: NextRequest
+) {
+  const callbackUrl = new URL('/auth/callback', resolveApplicationOrigin(request))
+  callbackUrl.searchParams.set('next', `/payment/verify?reference=${encodeURIComponent(reference)}`)
+
+  const { error } = await supabase.auth.resend({
+    type: 'signup',
+    email,
+    options: { emailRedirectTo: callbackUrl.toString() },
+  })
+  if (error) throw new Error(`Account created, but the confirmation email could not be sent: ${error.message}`)
 }
 
 export async function POST(request: NextRequest) {
@@ -29,158 +53,87 @@ export async function POST(request: NextRequest) {
     if (!reference) {
       return NextResponse.json({ error: 'Payment reference is required' }, { status: 400 })
     }
-
-    if (!password || password.length < 8) {
-      return NextResponse.json({ error: 'Password must be at least 8 characters' }, { status: 400 })
+    if (!fullName || fullName.length > 160) {
+      return NextResponse.json({ error: 'Enter your full name' }, { status: 400 })
+    }
+    if (!password || password.length < 8 || password.length > 128) {
+      return NextResponse.json({ error: 'Password must be between 8 and 128 characters' }, { status: 400 })
     }
 
     const supabase = createAdminClient()
-
-    const { data: existingPayment } = await supabase
-      .from('payments')
-      .select('id, listing_id')
-      .eq('reference', reference)
-      .maybeSingle()
-
-    if (existingPayment?.id) {
-      return NextResponse.json({
-        status: true,
-        message: 'Payment already linked',
-        data: { listing_id: existingPayment.listing_id },
-      })
-    }
-
-    const { data: leadRow, error: leadError } = await supabase
+    const { data: lead, error: leadError } = await supabase
       .from('payment_leads')
-      .select('id, email, phone, business_name, plan, amount, currency, paid_at, status')
+      .select('email, status')
       .eq('reference', reference)
       .maybeSingle()
 
-    if (leadError || !leadRow) {
+    if (leadError || !lead) {
       return NextResponse.json({ error: leadError?.message || 'Payment lead not found' }, { status: 404 })
     }
-
-    if (leadRow.status !== 'success') {
+    if (lead.status !== 'success') {
       return NextResponse.json({ error: 'Payment is not confirmed yet' }, { status: 409 })
     }
 
-    if (typeof leadRow.amount !== 'number' || !leadRow.currency) {
-      return NextResponse.json({ error: 'Payment amount is missing' }, { status: 500 })
-    }
+    const email = (lead.email || '').trim().toLowerCase()
+    if (!email) return NextResponse.json({ error: 'Payment email is missing' }, { status: 500 })
 
-    const email = (leadRow.email || '').trim().toLowerCase()
-    if (!email) {
-      return NextResponse.json({ error: 'Lead email is missing' }, { status: 500 })
-    }
-
-    // Check if user already exists by listing users and filtering by email
-    const { data: existingUsers } = await supabase.auth.admin.listUsers()
-    const existingUser = existingUsers?.users?.find(u => u.email?.toLowerCase() === email)
-    if (existingUser) {
+    let authUser = await findAuthUserByEmail(supabase, email)
+    if (authUser?.email_confirmed_at) {
       return NextResponse.json(
-        { error: 'An account already exists for this email. Please sign in.' },
+        {
+          error: 'An account already exists for this email. Sign in to link the verified payment automatically.',
+          account_exists: true,
+          next: `/payment/verify?reference=${encodeURIComponent(reference)}`,
+        },
         { status: 409 }
       )
     }
 
-    const { data: createdUser, error: createError } = await supabase.auth.admin.createUser({
-      email,
-      password,
-      email_confirm: true,
-      user_metadata: {
-        full_name: fullName || leadRow.business_name || '',
-        phone: leadRow.phone || '',
-      },
-    })
-
-    if (createError || !createdUser?.user) {
-      return NextResponse.json(
-        { error: createError?.message || 'Failed to create user account' },
-        { status: 500 }
-      )
-    }
-
-    const userId = createdUser.user.id
-
-    const { error: profileError } = await supabase
-      .from('profiles')
-      .upsert(
-        {
-          id: userId,
-          email,
-          full_name: fullName || leadRow.business_name || null,
-          phone: leadRow.phone || null,
-        },
-        { onConflict: 'id' }
-      )
-
-    if (profileError) {
-      return NextResponse.json({ error: profileError.message }, { status: 500 })
-    }
-
-    const listingName = leadRow.business_name || fullName || 'Business Listing'
-    const slug = buildSlug(listingName)
-
-    const { data: listingData, error: listingError } = await supabase
-      .from('listings')
-      .insert({
-        user_id: userId,
-        business_name: listingName,
-        slug,
-        phone: leadRow.phone || null,
+    if (!authUser) {
+      const { data: createdUser, error: createError } = await supabase.auth.admin.createUser({
         email,
-        status: 'pending',
+        password,
+        email_confirm: false,
+        user_metadata: { full_name: fullName },
       })
-      .select('id')
-      .single()
 
-    if (listingError || !listingData) {
+      if (createError || !createdUser?.user) {
+        return NextResponse.json(
+          { error: createError?.message || 'Failed to create user account' },
+          { status: 500 }
+        )
+      }
+      authUser = createdUser.user
+    }
+
+    await sendConfirmation(supabase, email, reference, request)
+
+    try {
+      const linked = await linkSuccessfulLeadToUser({
+        reference,
+        userId: authUser.id,
+        userEmail: email,
+        fullName,
+      })
+
+      return NextResponse.json({
+        status: true,
+        message: 'Account created and payment linked. Confirm your email to sign in.',
+        confirmation_required: true,
+        data: { listing_id: linked.listingId, email },
+      })
+    } catch (linkError) {
+      const message = linkError instanceof Error ? linkError.message : 'Payment linking needs support.'
       return NextResponse.json(
-        { error: listingError?.message || 'Failed to create listing' },
-        { status: 500 }
+        {
+          error: `Your account was created and a confirmation email was sent, but the payment needs attention: ${message}`,
+          account_created: true,
+          confirmation_sent: true,
+          link_pending: true,
+        },
+        { status: 409 }
       )
     }
-
-    const { error: paymentInsertError } = await supabase.from('payments').insert({
-      user_id: userId,
-      listing_id: listingData.id,
-      provider: 'paystack',
-      reference,
-      plan: leadRow.plan,
-      amount: leadRow.amount,
-      currency: leadRow.currency,
-      status: 'pending',
-      paid_at: leadRow.paid_at,
-      metadata: {
-        plan_id: leadRow.plan,
-        lead_reference: reference,
-      },
-    })
-
-    if (paymentInsertError) {
-      return NextResponse.json({ error: paymentInsertError.message }, { status: 500 })
-    }
-
-    await supabase
-      .from('payment_leads')
-      .update({ user_id: userId, listing_id: listingData.id })
-      .eq('reference', reference)
-
-    await fulfillPaystackSuccess({
-      reference,
-      amountKobo: leadRow.amount,
-      currency: leadRow.currency,
-      paidAt: leadRow.paid_at ?? null,
-    })
-
-    return NextResponse.json({
-      status: true,
-      message: 'Account created successfully',
-      data: {
-        listing_id: listingData.id,
-        email,
-      },
-    })
   } catch (error) {
     console.error('Complete signup error:', error)
     return NextResponse.json(

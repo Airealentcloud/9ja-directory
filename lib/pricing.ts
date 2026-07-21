@@ -1,27 +1,9 @@
 // Pricing plans configuration for 9jaDirectory
 
-export type PlanId = 'basic' | 'premium' | 'lifetime'
+import { PLAN_LIMITS, type PaidPlanId, type PlanLimits } from '@/lib/entitlements'
 
-export interface PlanLimits {
-    maxListings: number
-    maxPhotos: number
-    maxCategories: number
-    maxKeywords: number
-    maxDescriptionLength: number
-    hasBusinessHours: boolean
-    hasSocialLinks: boolean
-    hasWebsiteUrl: boolean
-    hasYearEstablished: boolean
-    hasEmployeeCount: boolean
-    hasHighlightedBadge: boolean
-    hasTopSearchPlacement: boolean
-    hasFeaturedHomepage: boolean
-    hasReviewReply: boolean
-    hasAiDescription: boolean
-    hasAiReviewInsights: boolean
-    hasAnalytics: boolean
-    hasPrioritySupport: boolean
-}
+export type PlanId = PaidPlanId
+export type { PlanLimits } from '@/lib/entitlements'
 
 export interface PricingPlan {
     id: PlanId
@@ -44,55 +26,34 @@ export const PRICING_PLANS: PricingPlan[] = [
     {
         id: 'basic',
         name: 'BASIC',
-        description: 'Perfect for small businesses getting started',
+        description: 'A simple directory presence for one small business',
         price: 5000,
-        priceFormatted: '₦5,000',
+        priceFormatted: '\u20A65,000',
         originalPrice: 10000,
-        originalPriceFormatted: '₦10,000',
+        originalPriceFormatted: '\u20A610,000',
         discount: '-50%',
         interval: 'one_time',
         intervalLabel: 'one-time fee',
         features: [
             '1 business listing',
             '4 photos',
-            '3 categories',
-            '5 keywords/tags',
+            '400-character business description',
             'Business logo',
-            'Contact information',
-            'Google Maps location',
-            'Category listing',
+            'Phone, email and WhatsApp details',
+            '1 primary business category',
             'State/City visibility',
-            'Standard approval (24-48 hrs)',
+            'Standard directory placement',
         ],
-        limits: {
-            maxListings: 1,
-            maxPhotos: 4,
-            maxCategories: 3,
-            maxKeywords: 5,
-            maxDescriptionLength: 400,
-            hasBusinessHours: false,
-            hasSocialLinks: false,
-            hasWebsiteUrl: false,
-            hasYearEstablished: false,
-            hasEmployeeCount: false,
-            hasHighlightedBadge: false,
-            hasTopSearchPlacement: false,
-            hasFeaturedHomepage: false,
-            hasReviewReply: false,
-            hasAiDescription: false,
-            hasAiReviewInsights: false,
-            hasAnalytics: false,
-            hasPrioritySupport: false,
-        },
+        limits: PLAN_LIMITS.basic,
     },
     {
         id: 'premium',
         name: 'PREMIUM',
-        description: 'Great for growing businesses wanting visibility',
+        description: 'A verified, richer profile for growing businesses',
         price: 10000,
-        priceFormatted: '₦10,000',
+        priceFormatted: '\u20A610,000',
         originalPrice: 20000,
-        originalPriceFormatted: '₦20,000',
+        originalPriceFormatted: '\u20A620,000',
         discount: '-50%',
         interval: 'one_time',
         intervalLabel: 'one-time fee',
@@ -101,50 +62,27 @@ export const PRICING_PLANS: PricingPlan[] = [
         features: [
             '5 business listings',
             '15 photos per listing',
-            '6 categories',
-            '10 keywords/tags',
+            '800-character description per listing',
             'Everything in Basic',
+            'Verified business badge after approval',
             'Business hours display',
             'Social media links',
             'Website URL',
-            'Year established',
-            'Employee count',
             'Highlighted listing badge',
-            'Top search placement',
+            'Enhanced search visibility',
             'AI Description Writer',
-            'Reply to reviews',
-            'Basic analytics',
-            'Faster approval (12-24 hrs)',
+            'Listing analytics',
         ],
-        limits: {
-            maxListings: 5,
-            maxPhotos: 15,
-            maxCategories: 6,
-            maxKeywords: 10,
-            maxDescriptionLength: 800,
-            hasBusinessHours: true,
-            hasSocialLinks: true,
-            hasWebsiteUrl: true,
-            hasYearEstablished: true,
-            hasEmployeeCount: true,
-            hasHighlightedBadge: true,
-            hasTopSearchPlacement: true,
-            hasFeaturedHomepage: false,
-            hasReviewReply: true,
-            hasAiDescription: true,
-            hasAiReviewInsights: false,
-            hasAnalytics: true,
-            hasPrioritySupport: false,
-        },
+        limits: PLAN_LIMITS.premium,
     },
     {
         id: 'lifetime',
         name: 'LIFETIME',
-        description: 'Maximum visibility for established businesses',
+        description: 'Maximum placement and tools for established businesses',
         price: 30000,
-        priceFormatted: '₦30,000',
+        priceFormatted: '\u20A630,000',
         originalPrice: 60000,
-        originalPriceFormatted: '₦60,000',
+        originalPriceFormatted: '\u20A660,000',
         discount: '-50%',
         interval: 'one_time',
         intervalLabel: 'one-time fee',
@@ -152,37 +90,16 @@ export const PRICING_PLANS: PricingPlan[] = [
         features: [
             'Unlimited business listings',
             '100 photos per listing',
-            '8 categories',
-            '15 keywords/tags',
+            'Unlimited description length',
             'Everything in Premium',
-            'Featured on homepage',
+            'Featured homepage placement included',
+            'Priority search placement',
             'AI Review Insights',
-            'Advanced analytics dashboard',
             'Priority support',
-            'Priority approval (< 6 hrs)',
             'Verified badge',
             'Never pay again',
         ],
-        limits: {
-            maxListings: -1, // -1 means unlimited
-            maxPhotos: 100,
-            maxCategories: 8,
-            maxKeywords: 15,
-            maxDescriptionLength: -1, // unlimited
-            hasBusinessHours: true,
-            hasSocialLinks: true,
-            hasWebsiteUrl: true,
-            hasYearEstablished: true,
-            hasEmployeeCount: true,
-            hasHighlightedBadge: true,
-            hasTopSearchPlacement: true,
-            hasFeaturedHomepage: true,
-            hasReviewReply: true,
-            hasAiDescription: true,
-            hasAiReviewInsights: true,
-            hasAnalytics: true,
-            hasPrioritySupport: true,
-        },
+        limits: PLAN_LIMITS.lifetime,
     },
 ]
 

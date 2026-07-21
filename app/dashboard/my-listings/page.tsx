@@ -1,11 +1,26 @@
 import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
+import { getAccountPlanLimits, resolveAccountPlan } from '@/lib/entitlements'
 
 export default async function MyListingsPage() {
     const supabase = await createClient()
     const { data: { user } } = await supabase.auth.getUser()
 
     if (!user) return null
+
+    const { data: profile } = await supabase
+        .from('profiles')
+        .select('role, subscription_plan, subscription_status, subscription_expires_at')
+        .eq('id', user.id)
+        .maybeSingle()
+
+    const userPlan = resolveAccountPlan({
+        role: profile?.role,
+        subscriptionPlan: profile?.subscription_plan,
+        subscriptionStatus: profile?.subscription_status,
+        subscriptionExpiresAt: profile?.subscription_expires_at,
+    })
+    const planLimits = getAccountPlanLimits(userPlan)
 
     const { data: listings } = await supabase
         .from('listings')
@@ -67,19 +82,23 @@ export default async function MyListingsPage() {
                                             )}
                                         </div>
                                         <div className="ml-5 flex-shrink-0 flex space-x-2">
-                                            <Link
-                                                href={`/dashboard/my-listings/${listing.id}/analytics`}
-                                                className="text-purple-600 hover:text-purple-800 text-sm font-medium"
-                                                title="View reviews and AI insights"
-                                            >
-                                                Insights
-                                            </Link>
-                                            <Link
-                                                href={`/dashboard/my-listings/${listing.id}/promote`}
-                                                className="text-green-600 hover:text-green-800 text-sm font-medium"
-                                            >
-                                                {listing.featured ? 'Featured' : 'Promote'}
-                                            </Link>
+                                            {planLimits.hasAnalytics && (
+                                                <Link
+                                                    href={"/dashboard/my-listings/" + listing.id + "/analytics"}
+                                                    className="text-purple-600 hover:text-purple-800 text-sm font-medium"
+                                                    title="View listing analytics"
+                                                >
+                                                    Insights
+                                                </Link>
+                                            )}
+                                            {planLimits.canBuyFeaturedPlacement && (
+                                                <Link
+                                                    href={"/dashboard/my-listings/" + listing.id + "/promote"}
+                                                    className="text-green-600 hover:text-green-800 text-sm font-medium"
+                                                >
+                                                    {listing.featured ? "Featured" : "Promote"}
+                                                </Link>
+                                            )}
                                             <Link
                                                 href={`/dashboard/my-listings/${listing.id}/edit`}
                                                 className="text-indigo-600 hover:text-indigo-900 text-sm font-medium"

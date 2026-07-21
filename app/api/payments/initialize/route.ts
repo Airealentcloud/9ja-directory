@@ -1,201 +1,181 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { initializePayment, generateReference } from '@/lib/paystack'
 import { getPlanById, nairaToKobo, type PlanId } from '@/lib/pricing'
-import { SITE_URL } from '@/lib/seo/site-url'
+import { resolveApplicationOrigin } from '@/lib/http/application-origin'
+import {
+    canCreateAnotherListing,
+    getMissingListingFields,
+    sanitizeListingForPlan,
+} from '@/lib/entitlements'
+
+type InitializePayload = {
+    plan_id?: PlanId
+    listing_id?: string
+    listing_data?: Record<string, unknown>
+}
 
 export async function POST(request: NextRequest) {
+    let reference = ''
+
     try {
         const supabase = await createClient()
+        const { data: { user }, error: authError } = await supabase.auth.getUser()
 
-        // Check if user is authenticated
-        const {
-            data: { user },
-            error: authError,
-        } = await supabase.auth.getUser()
-
-        if (authError || !user) {
+        if (authError || !user?.email) {
             return NextResponse.json(
                 { error: 'You must be logged in to make a payment' },
                 { status: 401 }
             )
         }
 
-        // Get request body
-        const body = await request.json()
-        const { plan_id, listing_id, listing_data } = body as {
-            plan_id: PlanId
-            listing_id?: string
-            listing_data?: {
-                business_name: string
-                category_id: string
-                description: string
-                phone: string
-                email?: string
-                website_url?: string
-                whatsapp_number?: string
-                address?: string
-                state_id: string
-                city: string
-            }
+        const body = (await request.json()) as InitializePayload
+        const plan = body.plan_id ? getPlanById(body.plan_id) : undefined
+        if (!plan) {
+            return NextResponse.json({ error: 'Invalid plan selected' }, { status: 400 })
         }
 
-        if (!plan_id) {
-            return NextResponse.json(
-                { error: 'Plan ID is required' },
-                { status: 400 }
-            )
-        }
-
-        // A payment must be connected to an existing listing or a complete new
-        // listing form. Without either, a real payment would have no listing
-        // for the admin to review and approve.
-        if (!listing_id && !listing_data) {
+        if (!body.listing_id && !body.listing_data) {
             return NextResponse.json(
                 { error: 'Add or select a business listing before making payment.' },
                 { status: 400 }
             )
         }
 
-        // Validate listing data if provided (for new listings during checkout)
-        if (listing_data) {
-            if (!listing_data.business_name?.trim()) {
+        let sanitizedListingData: Record<string, unknown> | null = null
+        if (body.listing_data) {
+            const missingFields = getMissingListingFields(body.listing_data)
+            if (missingFields.length > 0) {
                 return NextResponse.json(
-                    { error: 'Business name is required' },
+                    { error: `Complete the required fields: ${missingFields.join(', ')}.` },
                     { status: 400 }
                 )
             }
-            if (!listing_data.category_id) {
-                return NextResponse.json(
-                    { error: 'Category is required' },
-                    { status: 400 }
-                )
+
+            const sanitized = sanitizeListingForPlan(plan.id, body.listing_data)
+            if (sanitized.errors.length > 0) {
+                return NextResponse.json({ error: sanitized.errors.join(' ') }, { status: 400 })
             }
-            if (!listing_data.description?.trim()) {
-                return NextResponse.json(
-                    { error: 'Description is required' },
-                    { status: 400 }
-                )
+            sanitizedListingData = sanitized.value
+
+            const { count, error: countError } = await supabase
+                .from('listings')
+                .select('id', { count: 'exact', head: true })
+                .eq('user_id', user.id)
+                .in('status', ['pending', 'approved'])
+
+            if (countError) {
+                return NextResponse.json({ error: countError.message }, { status: 500 })
             }
-            if (!listing_data.phone?.trim()) {
+            if (!canCreateAnotherListing(plan.id, count || 0)) {
                 return NextResponse.json(
-                    { error: 'Phone number is required' },
-                    { status: 400 }
-                )
-            }
-            if (!listing_data.state_id) {
-                return NextResponse.json(
-                    { error: 'State is required' },
-                    { status: 400 }
-                )
-            }
-            if (!listing_data.city?.trim()) {
-                return NextResponse.json(
-                    { error: 'City is required' },
-                    { status: 400 }
+                    { error: `The ${plan.name} plan's listing allowance has already been used.` },
+                    { status: 409 }
                 )
             }
         }
 
-        // Get plan details
-        const plan = getPlanById(plan_id)
-        if (!plan) {
-            return NextResponse.json(
-                { error: 'Invalid plan selected' },
-                { status: 400 }
-            )
-        }
-
-        // If listing_id is provided, ensure the listing belongs to the current user
-        if (listing_id) {
+        if (body.listing_id) {
             const { data: listing, error: listingError } = await supabase
                 .from('listings')
-                .select('id')
-                .eq('id', listing_id)
+                .select('id, status')
+                .eq('id', body.listing_id)
                 .eq('user_id', user.id)
                 .maybeSingle()
 
             if (listingError) {
+                return NextResponse.json({ error: listingError.message }, { status: 500 })
+            }
+            if (!listing) {
                 return NextResponse.json(
-                    { error: listingError.message },
-                    { status: 500 }
+                    { error: 'Listing not found or you do not own it' },
+                    { status: 404 }
+                )
+            }
+            if (!['pending', 'approved'].includes(listing.status)) {
+                return NextResponse.json(
+                    { error: 'Only pending or approved listings can be linked to a plan.' },
+                    { status: 409 }
                 )
             }
 
-            if (!listing) {
+            const { count, error: countError } = await supabase
+                .from('listings')
+                .select('id', { count: 'exact', head: true })
+                .eq('user_id', user.id)
+                .in('status', ['pending', 'approved'])
+
+            if (countError) {
+                return NextResponse.json({ error: countError.message }, { status: 500 })
+            }
+            if (plan.limits.maxListings !== -1 && (count || 0) > plan.limits.maxListings) {
+                const listingWord = plan.limits.maxListings === 1 ? 'listing' : 'listings'
                 return NextResponse.json(
-                    { error: 'Listing not found (or you do not own it)' },
-                    { status: 404 }
+                    { error: 'The ' + plan.name + ' plan supports ' + plan.limits.maxListings + ' active ' + listingWord + '. Choose a higher plan or remove extra listings.' },
+                    { status: 409 }
                 )
             }
         }
 
-        // Generate unique reference
-        const reference = generateReference()
-
-        // Create pending payment record in database (before redirecting to Paystack)
+        reference = generateReference()
+        const amount = nairaToKobo(plan.price)
         const { error: dbError } = await supabase.from('payments').insert({
             user_id: user.id,
-            listing_id: listing_id || null,
+            listing_id: body.listing_id || null,
             provider: 'paystack',
             reference,
             plan: plan.id,
-            amount: nairaToKobo(plan.price),
+            amount,
             currency: 'NGN',
             status: 'pending',
             metadata: {
                 plan_id: plan.id,
                 plan_name: plan.name,
                 plan_interval: plan.interval,
-                listing_id: listing_id || null,
+                listing_id: body.listing_id || null,
                 user_id: user.id,
-                // Store listing data for creation after payment success
-                listing_data: listing_data ? JSON.stringify(listing_data) : null,
+                listing_data: sanitizedListingData
+                    ? JSON.stringify(sanitizedListingData)
+                    : null,
             },
         })
 
         if (dbError) {
             const lower = (dbError.message || '').toLowerCase()
-            const msg =
-                lower.includes('relation') && lower.includes('payments')
-                    ? 'Database table `payments` is missing. Run `migrations/006_payments_and_featured.sql` in Supabase SQL Editor.'
-                    : dbError.message
-            return NextResponse.json({ error: msg }, { status: 500 })
+            const message = lower.includes('relation') && lower.includes('payments')
+                ? 'Database table payments is missing. Apply migration 006.'
+                : dbError.message
+            return NextResponse.json({ error: message }, { status: 500 })
         }
 
-        // Get callback URL (Paystack will redirect back here)
-        const origin = request.headers.get('origin') || SITE_URL
-        const callbackUrl = `${origin}/payment/verify?reference=${reference}`
+        const callbackUrl = new URL('/payment/verify', resolveApplicationOrigin(request))
+        callbackUrl.searchParams.set('reference', reference)
 
-        // Initialize payment with Paystack
         const paystackResponse = await initializePayment({
-            email: user.email!,
-            amount: nairaToKobo(plan.price),
+            email: user.email,
+            amount,
             reference,
-            callback_url: callbackUrl,
+            callback_url: callbackUrl.toString(),
             metadata: {
                 plan_id: plan.id,
                 user_id: user.id,
-                listing_id: listing_id || '',
+                listing_id: body.listing_id || '',
                 custom_fields: [
-                    {
-                        display_name: 'Plan',
-                        variable_name: 'plan_name',
-                        value: plan.name,
-                    },
-                    {
-                        display_name: 'Customer ID',
-                        variable_name: 'user_id',
-                        value: user.id,
-                    },
+                    { display_name: 'Plan', variable_name: 'plan_name', value: plan.name },
+                    { display_name: 'Customer ID', variable_name: 'user_id', value: user.id },
                 ],
             },
         })
 
         if (!paystackResponse.status) {
+            await createAdminClient()
+                .from('payments')
+                .update({ status: 'failed' })
+                .eq('reference', reference)
             return NextResponse.json(
                 { error: paystackResponse.message || 'Failed to initialize payment' },
-                { status: 500 }
+                { status: 502 }
             )
         }
 
@@ -209,6 +189,17 @@ export async function POST(request: NextRequest) {
             },
         })
     } catch (error) {
+        if (reference) {
+            try {
+                await createAdminClient()
+                    .from('payments')
+                    .update({ status: 'failed' })
+                    .eq('reference', reference)
+            } catch (statusError) {
+                console.error('Could not mark failed payment initialization:', statusError)
+            }
+        }
+
         console.error('Payment initialization error:', error)
         return NextResponse.json(
             { error: error instanceof Error ? error.message : 'Failed to initialize payment' },

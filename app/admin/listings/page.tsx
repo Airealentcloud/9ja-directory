@@ -232,83 +232,22 @@ export default function AdminListingsPage() {
     }, [searchQuery, listings, paymentFilter])
 
     const handleApprove = async (listing: Listing) => {
-        const paymentStatus = listing.payment_status || 'none'
-        if (paymentStatus !== 'success') {
+        if ((listing.payment_status || 'none') !== 'success') {
             alert('Payment is not completed for this listing. Only paid listings can be approved.')
             return
         }
-
         if (!confirm('Are you sure you want to approve this listing?')) return
 
         setProcessingId(listing.id)
-        console.log('Attempting to approve listing:', listing.id)
-
         try {
-            // Try server action first
             const result = await approveListingServer(listing.id)
+            if (result?.error?.message) throw new Error(result.error.message)
 
-            if (result && !result.error) {
-                console.log('Successfully approved listing via server')
-                alert('✅ Listing approved successfully!')
-                // Trigger email notification
-                try {
-                    await fetch('/api/send-emails', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: listing.id, action: 'approved' })
-                    })
-                } catch (emailError) {
-                    console.error('Error sending email:', emailError)
-                }
-                fetchListings()
-                setProcessingId(null)
-                return
-            }
-
-            // Fallback to client-side
-            console.log('Server action failed/skipped, trying client-side...', result?.error)
-            if (result?.error?.message) {
-                alert(result.error.message)
-                if (result.error.message.toLowerCase().includes('payment')) {
-                    setProcessingId(null)
-                    return
-                }
-            }
-
-            const { data, error } = await supabase
-                .from('listings')
-                .update({ status: 'approved', rejection_reason: null })
-                .eq('id', listing.id)
-                .select()
-
-            console.log('Approve result:', { data, error })
-
-            if (error) {
-                console.error('Error approving listing:', error)
-                alert('Error approving listing: ' + error.message)
-            } else if (!data || data.length === 0) {
-                console.error('No data returned. RLS policy might be blocking the update.')
-                alert('⚠️ Approval failed! The database blocked the update. This is likely a permission issue. Please run the "fix-approval-permissions.sql" script in Supabase.')
-            } else {
-                console.log('Successfully approved listing')
-                alert('✅ Listing approved successfully!')
-
-                // Trigger email notification
-                try {
-                    await fetch('/api/send-emails', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: listing.id, action: 'approved' })
-                    })
-                } catch (emailError) {
-                    console.error('Error sending email:', emailError)
-                }
-
-                fetchListings()
-            }
-        } catch (err) {
-            console.error('Unexpected error:', err)
-            alert('Unexpected error: ' + (err as Error).message)
+            alert('Listing approved successfully.')
+            await fetchListings()
+        } catch (error) {
+            console.error('Approval failed:', error)
+            alert(error instanceof Error ? error.message : 'Could not approve the listing.')
         } finally {
             setProcessingId(null)
         }
@@ -321,74 +260,17 @@ export default function AdminListingsPage() {
         }
 
         setProcessingId(rejectingId)
-        console.log('Attempting to reject listing:', rejectingId)
-
         try {
-            // Try server action first
-            const result = await rejectListingServer(rejectingId, rejectionReason)
+            const result = await rejectListingServer(rejectingId, rejectionReason.trim())
+            if (result?.error?.message) throw new Error(result.error.message)
 
-            if (result && !result.error) {
-                console.log('Successfully rejected listing via server')
-                alert('✅ Listing rejected successfully!')
-                // Trigger email notification
-                try {
-                    await fetch('/api/send-emails', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: rejectingId, action: 'rejected' })
-                    })
-                } catch (emailError) {
-                    console.error('Error sending email:', emailError)
-                }
-                setRejectingId(null)
-                setRejectionReason('')
-                fetchListings()
-                setProcessingId(null)
-                return
-            }
-
-            // Fallback to client-side
-            console.log('Server action failed/skipped, trying client-side...', result?.error)
-
-            const { data, error } = await supabase
-                .from('listings')
-                .update({
-                    status: 'rejected',
-                    rejection_reason: rejectionReason
-                })
-                .eq('id', rejectingId)
-                .select()
-
-            console.log('Reject result:', { data, error })
-
-            if (error) {
-                console.error('Error rejecting listing:', error)
-                alert('Error rejecting listing: ' + error.message)
-            } else if (!data || data.length === 0) {
-                console.error('No data returned. RLS policy might be blocking the update.')
-                alert('⚠️ Rejection failed! The database blocked the update. This is likely a permission issue.')
-            } else {
-                console.log('Successfully rejected listing')
-                alert('✅ Listing rejected successfully!')
-
-                // Trigger email notification
-                try {
-                    await fetch('/api/send-emails', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ listingId: rejectingId, action: 'rejected' })
-                    })
-                } catch (emailError) {
-                    console.error('Error sending email:', emailError)
-                }
-
-                setRejectingId(null)
-                setRejectionReason('')
-                fetchListings()
-            }
-        } catch (err) {
-            console.error('Unexpected error:', err)
-            alert('Unexpected error: ' + (err as Error).message)
+            alert('Listing rejected successfully.')
+            setRejectingId(null)
+            setRejectionReason('')
+            await fetchListings()
+        } catch (error) {
+            console.error('Rejection failed:', error)
+            alert(error instanceof Error ? error.message : 'Could not reject the listing.')
         } finally {
             setProcessingId(null)
         }

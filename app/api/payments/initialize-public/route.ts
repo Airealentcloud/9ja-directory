@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { generateReference, initializePayment } from '@/lib/paystack'
 import { getPlanById, nairaToKobo, type PlanId } from '@/lib/pricing'
-import { SITE_URL } from '@/lib/seo/site-url'
+import { resolveApplicationOrigin } from '@/lib/http/application-origin'
 
 type InitializePublicPayload = {
   plan_id?: PlanId
@@ -28,12 +28,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Plan ID is required' }, { status: 400 })
     }
 
-    if (!email) {
-      return NextResponse.json({ error: 'Email is required' }, { status: 400 })
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: 'Enter a valid email address' }, { status: 400 })
     }
 
-    if (!businessName) {
-      return NextResponse.json({ error: 'Business name is required' }, { status: 400 })
+    if (!businessName || businessName.length > 160) {
+      return NextResponse.json({ error: 'Enter a business name of 160 characters or fewer' }, { status: 400 })
+    }
+
+    if (phone && phone.length > 30) {
+      return NextResponse.json({ error: 'Enter a valid phone number' }, { status: 400 })
     }
 
     const plan = getPlanById(planId)
@@ -65,7 +69,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: leadError.message }, { status: 500 })
     }
 
-    const origin = request.headers.get('origin') || SITE_URL
+    const origin = resolveApplicationOrigin(request)
     const callbackUrl = `${origin}/payment/verify?reference=${reference}`
 
     const paystackResponse = await initializePayment({
@@ -84,6 +88,10 @@ export async function POST(request: NextRequest) {
         ],
       },
     })
+
+    if (!paystackResponse.status || !paystackResponse.data?.authorization_url) {
+      throw new Error(paystackResponse.message || 'Failed to initialize payment')
+    }
 
     return NextResponse.json({
       status: true,

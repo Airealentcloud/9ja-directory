@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import Anthropic from '@anthropic-ai/sdk'
+import { resolveAccountPlan } from '@/lib/entitlements'
 
 const anthropic = new Anthropic({
     apiKey: process.env.ANTHROPIC_API_KEY || '',
@@ -50,11 +51,17 @@ export async function POST(request: Request) {
         // Get user's profile and check for Lifetime plan
         const { data: profile } = await supabase
             .from('profiles')
-            .select('subscription_plan')
+            .select('role, subscription_plan, subscription_status, subscription_expires_at')
             .eq('id', user.id)
             .single()
 
-        if (profile?.subscription_plan !== 'lifetime') {
+        const accountPlan = resolveAccountPlan({
+            role: profile?.role,
+            subscriptionPlan: profile?.subscription_plan,
+            subscriptionStatus: profile?.subscription_status,
+            subscriptionExpiresAt: profile?.subscription_expires_at,
+        })
+        if (accountPlan !== 'lifetime') {
             return NextResponse.json(
                 {
                     error: 'AI Review Insights is exclusive to Lifetime plan members.',
@@ -272,11 +279,17 @@ export async function GET(request: Request) {
         // Get user's profile and check for Lifetime plan
         const { data: profile } = await supabase
             .from('profiles')
-            .select('subscription_plan')
+            .select('role, subscription_plan, subscription_status, subscription_expires_at')
             .eq('id', user.id)
             .single()
 
-        if (profile?.subscription_plan !== 'lifetime') {
+        const accountPlan = resolveAccountPlan({
+            role: profile?.role,
+            subscriptionPlan: profile?.subscription_plan,
+            subscriptionStatus: profile?.subscription_status,
+            subscriptionExpiresAt: profile?.subscription_expires_at,
+        })
+        if (accountPlan !== 'lifetime') {
             return NextResponse.json(
                 { error: 'AI Review Insights is exclusive to Lifetime plan members.', upgrade: true },
                 { status: 403 }
