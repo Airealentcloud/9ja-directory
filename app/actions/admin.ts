@@ -1,6 +1,7 @@
 'use server'
 
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
 import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
 import { SITE_URL } from '@/lib/seo/site-url'
@@ -35,6 +36,47 @@ async function checkAdmin() {
     }
 
     return supabase
+}
+
+type RegisteredUserDetails = {
+    email?: string
+    full_name?: string
+}
+
+async function getRegisteredUsersById(userIds: string[]) {
+    const uniqueIds = Array.from(new Set(userIds.filter(Boolean)))
+    const usersById: Record<string, RegisteredUserDetails> = {}
+
+    if (uniqueIds.length === 0) return usersById
+
+    try {
+        const adminClient = createAdminClient()
+        const results = await Promise.allSettled(
+            uniqueIds.map(async (userId) => {
+                const { data, error } = await adminClient.auth.admin.getUserById(userId)
+                if (error || !data.user) return null
+
+                const metadata = data.user.user_metadata || {}
+                return {
+                    id: userId,
+                    email: data.user.email || undefined,
+                    full_name: metadata.full_name || metadata.name || undefined,
+                }
+            })
+        )
+
+        results.forEach((result) => {
+            if (result.status !== 'fulfilled' || !result.value) return
+            usersById[result.value.id] = {
+                email: result.value.email,
+                full_name: result.value.full_name,
+            }
+        })
+    } catch (error) {
+        console.warn('Could not load registered Auth emails for admin view:', error)
+    }
+
+    return usersById
 }
 
 function buildSlug(name: string) {
@@ -325,10 +367,20 @@ export async function getUnlinkedSuccessfulPaymentsServer() {
     }
 
     const profilesById = new Map((profiles || []).map((profile: any) => [profile.id, profile]))
+    const authUsersById = await getRegisteredUsersById(
+        userIds.filter((userId) => !(profilesById.get(userId) as any)?.email)
+    )
 
     return payments.map((payment: any) => ({
         ...payment,
-        profile: profilesById.get(payment.user_id) || null,
+        profile: {
+            ...(authUsersById[payment.user_id] || {}),
+            ...((profilesById.get(payment.user_id) as Record<string, unknown>) || {}),
+            email:
+                (profilesById.get(payment.user_id) as any)?.email ||
+                authUsersById[payment.user_id]?.email ||
+                null,
+        },
         candidate_listings: (pendingListings || []).filter(
             (listing: any) => listing.user_id === payment.user_id && !alreadyPaidListingIds.has(listing.id)
         ),
@@ -798,6 +850,16 @@ export async function getAdminListings(status: 'all' | 'pending' | 'approved' | 
         }
     }
 
+    const authUsersById = await getRegisteredUsersById(
+        userIds.filter((userId) => !profilesMap[userId]?.email)
+    )
+    Object.entries(authUsersById).forEach(([userId, authUser]) => {
+        profilesMap[userId] = {
+            email: profilesMap[userId]?.email || authUser.email,
+            full_name: profilesMap[userId]?.full_name || authUser.full_name,
+        }
+    })
+
     let paymentsMap: Record<string, any> = {}
     if (listingIds.length > 0) {
         const { data: paymentsData, error: paymentsError } = await supabase
@@ -923,6 +985,16 @@ export async function approveListingServer(id: string) {
         }
     }
 
+    if (listing?.user_id && !profile?.email) {
+        const registeredUsers = await getRegisteredUsersById([listing.user_id])
+        profile = {
+            ...profile,
+            ...registeredUsers[listing.user_id],
+            email: profile?.email || registeredUsers[listing.user_id]?.email,
+            full_name: profile?.full_name || registeredUsers[listing.user_id]?.full_name,
+        }
+    }
+
     const { payment: latestPayment } = await findSuccessfulPaymentForListing(supabase, listing, profile)
 
     if (!latestPayment || latestPayment.status !== 'success') {
@@ -980,6 +1052,16 @@ export async function rejectListingServer(id: string, reason: string) {
             console.warn('Error fetching listing owner profile:', profileError)
         } else {
             profile = profileData
+        }
+    }
+
+    if (listing?.user_id && !profile?.email) {
+        const registeredUsers = await getRegisteredUsersById([listing.user_id])
+        profile = {
+            ...profile,
+            ...registeredUsers[listing.user_id],
+            email: profile?.email || registeredUsers[listing.user_id]?.email,
+            full_name: profile?.full_name || registeredUsers[listing.user_id]?.full_name,
         }
     }
 

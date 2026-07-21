@@ -629,7 +629,7 @@ export default function AdminListingsPage() {
 
                                             {/* User Info */}
                                             <div className="mt-1 flex items-center gap-4 text-sm text-gray-500">
-                                                <span>📧 {listing.profiles?.email || 'Unknown user'}</span>
+                                                <span>📧 Registered email: {listing.profiles?.email || 'Unavailable'}</span>
                                                 {listing.profiles?.full_name && (
                                                     <span>👤 {listing.profiles.full_name}</span>
                                                 )}
