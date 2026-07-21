@@ -233,7 +233,7 @@ export async function createListingFromUnlinkedPaymentServer(formData: FormData)
 
     const { data: profile, error: profileError } = await supabase
         .from('profiles')
-        .select('email, phone')
+        .select('email')
         .eq('id', payment.user_id)
         .maybeSingle()
 
@@ -248,7 +248,9 @@ export async function createListingFromUnlinkedPaymentServer(formData: FormData)
             business_name: businessName,
             slug: buildSlug(businessName),
             description: `${payment.plan === 'basic' ? 'Basic' : 'Paid'} listing created from a verified payment. Please review and complete the business details before approval.`,
-            phone: profile.phone || null,
+            // Phone belongs to the listing form, not the profiles schema.
+            // Keep this optional so a valid paid customer is never blocked.
+            phone: null,
             email: normalizeEmail(profile.email),
             status: 'pending',
         })

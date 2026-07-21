@@ -63,7 +63,7 @@ type UnlinkedPayment = {
   status: 'success'
   paid_at: string | null
   created_at: string
-  profiles?: { email?: string | null; full_name?: string | null; phone?: string | null } | null
+  profiles?: { email?: string | null; full_name?: string | null } | null
 }
 
 function formatAmount(amount: number, currency: string) {
@@ -115,7 +115,7 @@ export default async function AdminPaymentLeadsPage({
   const { data: paymentProfiles, error: paymentProfilesError } = paymentUserIds.length
     ? await supabase
         .from('profiles')
-        .select('id, email, full_name, phone')
+        .select('id, email, full_name')
         .in('id', paymentUserIds)
     : { data: [], error: null }
 
@@ -202,7 +202,6 @@ export default async function AdminPaymentLeadsPage({
                         <td className="px-4 py-4 align-top">
                           <div className="font-medium text-gray-900">{payment.profiles?.full_name || 'Registered customer'}</div>
                           <div className="mt-1 text-sm text-gray-600">{payment.profiles?.email || 'Customer email unavailable'}</div>
-                          {payment.profiles?.phone && <div className="mt-1 text-sm text-gray-500">{payment.profiles.phone}</div>}
                         </td>
                         <td className="px-4 py-4 align-top">
                           <div className="font-medium text-gray-900">{formatAmount(payment.amount, payment.currency)}</div>
