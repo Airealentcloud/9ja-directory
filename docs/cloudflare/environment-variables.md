@@ -57,4 +57,6 @@ Required production runtime configuration:
 
 Keep `CRON_JOBS_ENABLED=false` until authenticated cron checks pass. Do not attach the production custom domain until signup, login, payment initialization, webhook fulfillment, admin approval, listing editing, and approval-email delivery pass on the temporary production Worker.
 
+Keep `PREVIEW_MUTATIONS_ENABLED=false` for the public `workers.dev` production preview. Set it to `true` only during a supervised end-to-end test window, then return it to `false`. The custom production domain is not treated as a preview host.
+
 Deploy with `--keep-vars` if variables are managed in the Cloudflare dashboard, as recommended by the [OpenNext environment-variable guide](https://opennext.js.org/cloudflare/howtos/env-vars).

@@ -3,7 +3,8 @@ import { SITE_URL } from '@/lib/seo/site-url'
 const ALLOWED_PRODUCTION_HOSTS = new Set([
     '9jadirectory.org',
     'www.9jadirectory.org',
-    '9jadirectory-staging.israelakhas1.workers.dev',
+    '9jadirectory-staging.israelakhas.workers.dev',
+    '9jadirectory-production.israelakhas.workers.dev',
 ])
 
 function configuredVercelHost(): string | null {
@@ -25,7 +26,7 @@ export function isAllowedApplicationOrigin(value: string): boolean {
             ALLOWED_PRODUCTION_HOSTS.has(hostname) ||
             hostname === 'localhost' ||
             hostname === '127.0.0.1' ||
-            hostname.endsWith('.israelakhas1.workers.dev') ||
+            hostname.endsWith('.israelakhas.workers.dev') ||
             hostname === vercelHost
         )
     } catch {

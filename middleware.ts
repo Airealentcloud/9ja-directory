@@ -42,10 +42,14 @@ const STAGING_LOCKED_API_PREFIXES = [
 ]
 
 function isStagingLockedRequest(request: NextRequest) {
-  if (
-    process.env.DEPLOYMENT_ENV !== 'staging' ||
-    process.env.STAGING_MUTATIONS_ENABLED === 'true'
-  ) {
+  const requestHost = request.headers.get('host')?.split(':')[0].toLowerCase()
+  const isStaging = process.env.DEPLOYMENT_ENV === 'staging'
+  const isWorkersPreview = requestHost?.endsWith('.workers.dev') === true
+  const previewWritesEnabled = isStaging
+    ? process.env.STAGING_MUTATIONS_ENABLED === 'true'
+    : process.env.PREVIEW_MUTATIONS_ENABLED === 'true'
+
+  if ((!isStaging && !isWorkersPreview) || previewWritesEnabled) {
     return false
   }
 
@@ -66,13 +70,13 @@ function stagingLockedResponse(request: NextRequest) {
 
   if (request.nextUrl.pathname.startsWith('/api/')) {
     return withDeploymentHeaders(NextResponse.json(
-      { error: 'Interactive staging routes are disabled until test services are configured.' },
+      { error: 'Interactive preview routes are disabled until production services are verified.' },
       { status: 503, headers }
     ), request)
   }
 
   return withDeploymentHeaders(new NextResponse(
-    'This staging page is temporarily disabled while test authentication and payments are configured.',
+    'This preview page is temporarily disabled while authentication and payments are verified.',
     { status: 503, headers }
   ), request)
 }

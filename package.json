@@ -23,8 +23,8 @@
     "cf:dry-run:production": "wrangler deploy --config wrangler.production.jsonc --dry-run --keep-vars",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "cf:smoke": "node scripts/cloudflare-smoke-test.mjs",
-    "cf:smoke:staging": "node scripts/cloudflare-smoke-test.mjs https://9jadirectory-staging.israelakhas1.workers.dev staging",
-    "cf:smoke:production-preview": "node scripts/cloudflare-smoke-test.mjs https://9jadirectory-production.israelakhas1.workers.dev production-preview",
+    "cf:smoke:staging": "node scripts/cloudflare-smoke-test.mjs https://9jadirectory-staging.israelakhas.workers.dev staging",
+    "cf:smoke:production-preview": "node scripts/cloudflare-smoke-test.mjs https://9jadirectory-production.israelakhas.workers.dev production-preview",
     "cf:smoke:production": "node scripts/cloudflare-smoke-test.mjs https://www.9jadirectory.org production"
   },
   "keywords": [],

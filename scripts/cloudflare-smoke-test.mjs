@@ -14,6 +14,7 @@ if (!baseInput || !validModes.has(mode)) {
 const baseUrl = new URL(baseInput)
 const isStaging = mode === 'staging'
 const shouldNoindex = mode !== 'production'
+const shouldLockInteractiveRoutes = mode !== 'production'
 const failures = []
 
 function check(condition, message) {
@@ -75,13 +76,17 @@ const blocksAllCrawling = robotsRules.includes('Disallow: /')
 
 if (isStaging) {
   check(blocksAllCrawling, 'staging robots.txt blocks crawling')
+} else {
+  check(!blocksAllCrawling, `${mode} robots.txt does not block all crawling`)
+}
 
+if (shouldLockInteractiveRoutes) {
   for (const path of ['/login', '/checkout', '/admin/listings', '/api/cron/expire-featured']) {
     const { response } = await request(path)
-    check(response.status === 503, `${path} is locked until test services are configured`)
+    check(response.status === 503, `${path} is locked on the public preview host`)
     check(
       response.headers.get('cache-control')?.includes('no-store') === true,
-      `${path} staging lock is not cached`
+      `${path} preview lock is not cached`
     )
   }
 
@@ -90,12 +95,10 @@ if (isStaging) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({ businesses: [], dryRun: true }),
   })
-  check(adminPost.response.status === 503, 'staging blocks write APIs')
+  check(adminPost.response.status === 503, 'preview blocks write APIs')
 } else {
-  check(!blocksAllCrawling, `${mode} robots.txt does not block all crawling`)
-
   const login = await request('/login')
-  check(login.response.status !== 503, `${mode} does not use the staging route lock`)
+  check(login.response.status !== 503, `${mode} does not use the preview route lock`)
 }
 
 if (failures.length > 0) {

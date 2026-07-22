@@ -51,6 +51,39 @@ CREATE INDEX IF NOT EXISTS idx_listings_active_featured
   ON public.listings (featured_until DESC)
   WHERE featured = TRUE AND status = 'approved';
 
+-- Repair historical signups that exist in auth.users but never received a profile row.
+-- Record the exact set created by this migration so a rollback can distinguish them
+-- from profiles that already existed.
+CREATE TABLE IF NOT EXISTS private.profile_creation_backups (
+  user_id UUID PRIMARY KEY,
+  auth_email TEXT,
+  auth_metadata JSONB,
+  backed_up_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  reason TEXT NOT NULL DEFAULT '012_missing_profile_repair'
+);
+
+REVOKE ALL ON TABLE private.profile_creation_backups FROM PUBLIC, anon, authenticated;
+
+INSERT INTO private.profile_creation_backups (user_id, auth_email, auth_metadata)
+SELECT u.id, u.email, COALESCE(u.raw_user_meta_data, '{}'::JSONB)
+FROM auth.users u
+LEFT JOIN public.profiles p ON p.id = u.id
+WHERE p.id IS NULL
+ON CONFLICT (user_id) DO NOTHING;
+
+INSERT INTO public.profiles (id, email, full_name)
+SELECT
+  u.id,
+  u.email,
+  NULLIF(TRIM(COALESCE(
+    u.raw_user_meta_data ->> 'full_name',
+    u.raw_user_meta_data ->> 'name',
+    ''
+  )), '')
+FROM auth.users u
+JOIN private.profile_creation_backups backup ON backup.user_id = u.id
+ON CONFLICT (id) DO NOTHING;
+
 -- Keep a one-time, non-API-accessible snapshot before normalising existing paid listings.
 CREATE TABLE IF NOT EXISTS private.listing_entitlement_backups (
   listing_id UUID PRIMARY KEY,
@@ -72,20 +105,50 @@ WHERE p.subscription_plan IN ('basic', 'premium', 'lifetime')
      FROM public.payments paid
      WHERE paid.user_id = l.user_id
        AND paid.status = 'success'
-       AND paid.plan IN ('basic', 'premium', 'lifetime')
+       AND paid.plan IN ('basic', 'standard', 'premium', 'lifetime')
    )
 ON CONFLICT (listing_id) DO NOTHING;
 
--- Restore account plans from successful Paystack records. Keep the highest plan ever paid.
-WITH successful_plans AS (
+-- Keep a matching one-time snapshot of every profile before recalculating plan
+-- entitlements. The update below touches free and paid accounts, so limiting this
+-- backup to paid customers would leave some changed rows without a rollback copy.
+CREATE TABLE IF NOT EXISTS private.profile_entitlement_backups (
+  profile_id UUID PRIMARY KEY,
+  previous_row JSONB NOT NULL,
+  backed_up_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  reason TEXT NOT NULL DEFAULT '012_plan_entitlement_enforcement'
+);
+
+REVOKE ALL ON TABLE private.profile_entitlement_backups FROM PUBLIC, anon, authenticated;
+
+INSERT INTO private.profile_entitlement_backups (profile_id, previous_row)
+SELECT p.id, to_jsonb(p)
+FROM public.profiles p
+ON CONFLICT (profile_id) DO NOTHING;
+
+-- Restore account plans from successful Paystack records. Legacy prices used
+-- `standard` for the old NGN 10,000 tier and `basic` for an old NGN 30,000 tier;
+-- normalize both by plan and paid amount before keeping the highest entitlement.
+WITH normalized_successful_plans AS (
+  SELECT
+    user_id,
+    CASE
+      WHEN plan = 'lifetime' OR amount >= 3000000 THEN 'lifetime'
+      WHEN plan IN ('standard', 'premium') OR amount >= 1000000 THEN 'premium'
+      ELSE 'basic'
+    END AS plan,
+    COALESCE(paid_at, created_at) AS purchased_at
+  FROM public.payments
+  WHERE status = 'success'
+    AND user_id IS NOT NULL
+    AND plan IN ('basic', 'standard', 'premium', 'lifetime')
+), successful_plans AS (
   SELECT
     user_id,
     plan,
-    COALESCE(paid_at, created_at) AS purchased_at,
+    purchased_at,
     CASE plan WHEN 'basic' THEN 1 WHEN 'premium' THEN 2 WHEN 'lifetime' THEN 3 END AS plan_rank
-  FROM public.payments
-  WHERE status = 'success'
-    AND plan IN ('basic', 'premium', 'lifetime')
+  FROM normalized_successful_plans
 ), best_plan AS (
   SELECT DISTINCT ON (user_id) user_id, plan
   FROM successful_plans
@@ -502,7 +565,7 @@ $$;
 
 COMMIT;
 
--- Verification result 1: all three profile counts should be zero.
+-- Verification result 1: all four profile counts should be zero.
 SELECT
   COUNT(*) FILTER (
     WHERE subscription_status = 'active'
@@ -515,7 +578,13 @@ SELECT
   COUNT(*) FILTER (
     WHERE can_add_listings = TRUE
       AND subscription_plan NOT IN ('basic', 'premium', 'lifetime')
-  ) AS invalid_listing_permissions
+  ) AS invalid_listing_permissions,
+  (
+    SELECT COUNT(*)
+    FROM auth.users u
+    LEFT JOIN public.profiles p ON p.id = u.id
+    WHERE p.id IS NULL
+  ) AS missing_profiles_for_auth_users
 FROM public.profiles;
 
 -- Verification result 2: the first two counts should be zero. Existing accounts over

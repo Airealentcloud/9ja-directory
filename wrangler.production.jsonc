@@ -20,6 +20,7 @@
   "vars": {
     "DEPLOYMENT_ENV": "production",
     "CRON_JOBS_ENABLED": "false",
+    "PREVIEW_MUTATIONS_ENABLED": "false",
     "NEXT_PUBLIC_SITE_URL": "https://www.9jadirectory.org"
   }
 }
