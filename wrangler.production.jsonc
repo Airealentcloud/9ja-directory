@@ -7,6 +7,16 @@
   "workers_dev": true,
   "preview_urls": true,
   "keep_vars": true,
+  "routes": [
+    {
+      "pattern": "www.9jadirectory.org/*",
+      "zone_name": "9jadirectory.org"
+    },
+    {
+      "pattern": "9jadirectory.org/*",
+      "zone_name": "9jadirectory.org"
+    }
+  ],
   "triggers": {
     "crons": ["*/15 * * * *"]
   },
