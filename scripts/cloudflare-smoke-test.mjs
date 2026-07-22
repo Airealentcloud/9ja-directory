@@ -1,13 +1,19 @@
 import process from 'node:process'
 
 const baseInput = process.argv[2]
-if (!baseInput) {
-  console.error('Usage: node scripts/cloudflare-smoke-test.mjs <base-url>')
+const mode = process.argv[3]
+const validModes = new Set(['staging', 'production-preview', 'production'])
+
+if (!baseInput || !validModes.has(mode)) {
+  console.error(
+    'Usage: node scripts/cloudflare-smoke-test.mjs <base-url> <staging|production-preview|production>'
+  )
   process.exit(2)
 }
 
 const baseUrl = new URL(baseInput)
-const isStaging = baseUrl.hostname.endsWith('.workers.dev')
+const isStaging = mode === 'staging'
+const shouldNoindex = mode !== 'production'
 const failures = []
 
 function check(condition, message) {
@@ -33,10 +39,15 @@ async function request(path, options = {}) {
 for (const path of ['/', '/pricing', '/blog', '/robots.txt', '/sitemap.xml']) {
   const { response } = await request(path)
   check(response.status === 200, `${path} returns 200`)
-  if (isStaging && path !== '/robots.txt') {
+  if (path !== '/robots.txt') {
+    const robotsHeader = response.headers.get('x-robots-tag') || ''
     check(
-      response.headers.get('x-robots-tag') === 'noindex, nofollow',
-      `${path} sends the staging noindex header`
+      shouldNoindex
+        ? robotsHeader.includes('noindex')
+        : !robotsHeader.includes('noindex'),
+      shouldNoindex
+        ? `${path} sends a preview noindex header`
+        : `${path} is indexable on the production domain`
     )
   }
 }
@@ -59,8 +70,11 @@ for (const text of [
 }
 
 const robots = await request('/robots.txt')
+const robotsRules = robots.body.split(/\r?\n/).map(line => line.trim())
+const blocksAllCrawling = robotsRules.includes('Disallow: /')
+
 if (isStaging) {
-  check(robots.body.includes('Disallow: /'), 'staging robots.txt blocks crawling')
+  check(blocksAllCrawling, 'staging robots.txt blocks crawling')
 
   for (const path of ['/login', '/checkout', '/admin/listings', '/api/cron/expire-featured']) {
     const { response } = await request(path)
@@ -77,6 +91,11 @@ if (isStaging) {
     body: JSON.stringify({ businesses: [], dryRun: true }),
   })
   check(adminPost.response.status === 503, 'staging blocks write APIs')
+} else {
+  check(!blocksAllCrawling, `${mode} robots.txt does not block all crawling`)
+
+  const login = await request('/login')
+  check(login.response.status !== 503, `${mode} does not use the staging route lock`)
 }
 
 if (failures.length > 0) {

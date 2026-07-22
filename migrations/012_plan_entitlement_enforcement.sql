@@ -67,6 +67,13 @@ SELECT l.id, l.user_id, to_jsonb(l)
 FROM public.listings l
 JOIN public.profiles p ON p.id = l.user_id
 WHERE p.subscription_plan IN ('basic', 'premium', 'lifetime')
+   OR EXISTS (
+     SELECT 1
+     FROM public.payments paid
+     WHERE paid.user_id = l.user_id
+       AND paid.status = 'success'
+       AND paid.plan IN ('basic', 'premium', 'lifetime')
+   )
 ON CONFLICT (listing_id) DO NOTHING;
 
 -- Restore account plans from successful Paystack records. Keep the highest plan ever paid.
@@ -88,19 +95,12 @@ UPDATE public.profiles p
 SET
   subscription_plan = b.plan,
   subscription_status = 'active',
-  subscription_expires_at = CASE
-    WHEN p.subscription_expires_at IS NULL OR p.subscription_expires_at <= NOW()
-      THEN NOW() + INTERVAL '100 years'
-    ELSE p.subscription_expires_at
-  END
+  subscription_expires_at = GREATEST(
+    COALESCE(p.subscription_expires_at, NOW()),
+    NOW() + INTERVAL '100 years'
+  )
 FROM best_plan b
-WHERE p.id = b.user_id
-  AND (
-    p.subscription_plan IS NULL
-    OR p.subscription_plan = 'free'
-    OR p.subscription_status IS NULL
-    OR p.subscription_status IN ('none', 'pending')
-  );
+WHERE p.id = b.user_id;
 
 -- Derive legacy permission flags from the canonical active plan. Application code also
 -- checks the canonical fields, so these booleans are no longer trusted on their own.

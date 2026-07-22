@@ -13,6 +13,8 @@ The deployed staging Worker intentionally has only these non-secret values:
 
 The only encrypted staging secret currently present is `CRON_SECRET`. Interactive account, admin, payment, email, AI, and mutation routes remain locked with HTTP `503` so the staging UI cannot modify production data.
 
+The production configuration is stored separately in `wrangler.production.jsonc`. It has not been deployed or attached to `www.9jadirectory.org`. Production builds use `npm run cf:build:production`, which fails if the generated `robots.txt` contains the staging-wide `Disallow: /` rule.
+
 ## Required for an interactive test environment
 
 Build-time public values:
@@ -40,6 +42,19 @@ After the test services are configured and the database migration has been appli
 
 ## Production cutover
 
-Production must be a separate Wrangler configuration or environment with `DEPLOYMENT_ENV=production`. Transfer production secrets directly from their source dashboards or from Vercel into encrypted Cloudflare secrets; never copy them into files or command history. Do not enable the production custom domain until authentication, a Paystack test-mode transaction, webhook fulfillment, admin approval, and email delivery pass end to end.
+Production uses the separate `wrangler.production.jsonc` configuration with `DEPLOYMENT_ENV=production`. Transfer production secrets directly from their source dashboards or from Vercel into encrypted Cloudflare secrets; never copy secret values into Git or command history. Public Supabase values must be available both while Next.js builds and at Worker runtime.
+
+Required production runtime configuration:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY` (encrypted)
+- `PAYSTACK_SECRET_KEY` (encrypted)
+- `RESEND_API_KEY` (encrypted)
+- `CRON_SECRET` (encrypted)
+- `ADMIN_EMAIL`
+- `RESEND_FROM_EMAIL`
+
+Keep `CRON_JOBS_ENABLED=false` until authenticated cron checks pass. Do not attach the production custom domain until signup, login, payment initialization, webhook fulfillment, admin approval, listing editing, and approval-email delivery pass on the temporary production Worker.
 
 Deploy with `--keep-vars` if variables are managed in the Cloudflare dashboard, as recommended by the [OpenNext environment-variable guide](https://opennext.js.org/cloudflare/howtos/env-vars).

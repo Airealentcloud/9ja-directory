@@ -2,8 +2,11 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 import { SITE_URL } from '@/lib/seo/site-url'
 
-function withDeploymentHeaders(response: NextResponse) {
-  if (process.env.DEPLOYMENT_ENV === 'staging') {
+function withDeploymentHeaders(response: NextResponse, request: NextRequest) {
+  const requestHost = request.headers.get('host')?.split(':')[0].toLowerCase()
+  const isWorkersPreview = requestHost?.endsWith('.workers.dev') === true
+
+  if (process.env.DEPLOYMENT_ENV === 'staging' || isWorkersPreview) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
   }
   return response
@@ -65,13 +68,13 @@ function stagingLockedResponse(request: NextRequest) {
     return withDeploymentHeaders(NextResponse.json(
       { error: 'Interactive staging routes are disabled until test services are configured.' },
       { status: 503, headers }
-    ))
+    ), request)
   }
 
   return withDeploymentHeaders(new NextResponse(
     'This staging page is temporarily disabled while test authentication and payments are configured.',
     { status: 503, headers }
-  ))
+  ), request)
 }
 
 export async function middleware(request: NextRequest) {
@@ -96,20 +99,20 @@ export async function middleware(request: NextRequest) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.host = canonicalHost
     redirectUrl.protocol = 'https:'
-    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308))
+    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308), request)
   }
 
   // Only redirect malformed ampersand paths
   if (isAmpersandPath) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = '/'
-    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308))
+    return withDeploymentHeaders(NextResponse.redirect(redirectUrl, 308), request)
   }
 
   if (!isProtectedRoute && !isAdminRoute) {
     return withDeploymentHeaders(NextResponse.next({
       request,
-    }))
+    }), request)
   }
 
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -147,7 +150,7 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   if ((isProtectedRoute || isAdminRoute) && !user) {
-    return withDeploymentHeaders(NextResponse.redirect(new URL('/login', request.url)))
+    return withDeploymentHeaders(NextResponse.redirect(new URL('/login', request.url)), request)
   }
 
   // 3. Check for admin role if accessing admin routes
@@ -159,11 +162,11 @@ export async function middleware(request: NextRequest) {
       .single()
 
     if (profile?.role !== 'admin') {
-      return withDeploymentHeaders(NextResponse.redirect(new URL('/dashboard', request.url)))
+      return withDeploymentHeaders(NextResponse.redirect(new URL('/dashboard', request.url)), request)
     }
   }
 
-  return withDeploymentHeaders(response)
+  return withDeploymentHeaders(response, request)
 }
 
 export const config = {

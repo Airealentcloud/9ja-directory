@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "9jadirectory-staging",
+  "name": "9jadirectory-production",
   "main": "custom-worker.ts",
   "compatibility_date": "2026-07-21",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
@@ -18,9 +18,8 @@
     "binding": "IMAGES"
   },
   "vars": {
-    "DEPLOYMENT_ENV": "staging",
+    "DEPLOYMENT_ENV": "production",
     "CRON_JOBS_ENABLED": "false",
-    "STAGING_MUTATIONS_ENABLED": "false",
     "NEXT_PUBLIC_SITE_URL": "https://www.9jadirectory.org"
   }
 }
