@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { BlogPost } from '@/lib/blog-data';
+import type { BlogPostSummary } from '@/lib/blog-index-data';
 
 interface BlogCardProps {
-    post: BlogPost;
+    post: BlogPostSummary;
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
@@ -30,7 +30,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 <div className="flex flex-col p-6">
                     <div className="mb-3 flex items-center gap-2 text-sm text-gray-500">
                         <span>{post.date}</span>
-                        <span>•</span>
+                        <span aria-hidden="true">•</span>
                         <span>{post.readTime}</span>
                     </div>
 

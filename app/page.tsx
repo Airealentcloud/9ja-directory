@@ -4,7 +4,7 @@ import Link from 'next/link'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 import { HomeCategoryCard } from '@/components/home-category-card'
-import { blogPosts } from '@/lib/blog-data'
+import { blogPostSummaries } from '@/lib/blog-index-data'
 import { SITE_URL } from '@/lib/seo/site-url'
 import { createPublicClient } from '@/lib/supabase/public'
 
@@ -578,7 +578,7 @@ export default async function Home() {
             Free guides to help Nigerian businesses grow, register, and succeed
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogPosts.slice(0, 3).map((post) => (
+            {blogPostSummaries.slice(0, 3).map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all">
                 <div className="h-48 relative overflow-hidden bg-gray-100">
                   <Image

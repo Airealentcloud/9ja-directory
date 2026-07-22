@@ -1,311 +1,341 @@
-import { MetadataRoute } from 'next'
-import { createClient } from '@/lib/supabase/server'
-import { blogPosts } from '@/lib/blog-data'
+import type { MetadataRoute } from 'next'
+import { blogPostSummaries } from '@/lib/blog-index-data'
 import { standalonePackages, bundlePackages, reputationPackages } from '@/lib/press-release/packages'
 import {
-    MIN_INDEXABLE_CATEGORY_STATE_LISTINGS,
-    isIndexableListing,
+  MIN_INDEXABLE_CATEGORY_STATE_LISTINGS,
+  isIndexableListing,
 } from '@/lib/seo/listing-quality'
+import { createPublicClient } from '@/lib/supabase/public'
 
-/**
- * Sitemap following Google's Guidelines:
- * - Maximum 50,000 URLs per sitemap
- * - Maximum 50MB uncompressed file size
- * - Use canonical URLs (consistent https://)
- * - Accurate lastModified dates for crawl efficiency
- * - Only include indexable, public pages
- * - No authentication-required pages
- *
- * @see https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
- */
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
-    const supabase = await createClient()
+export const revalidate = 3600
 
-    // Current date for pages without specific modification tracking
-    const now = new Date()
+const SITEMAP_LISTING_LIMIT = 10000
+const SITEMAP_LISTING_BATCH_SIZE = 1000
 
-    // 1. Core Static Routes - High priority pages
-    // Note: Only include pages that should appear in search results
-    // Exclude: login, signup, checkout, order confirmation (blocked in robots.txt)
-    const coreRoutes = [
-        { path: '', priority: 1.0, changeFreq: 'daily' as const },
-        { path: '/about', priority: 0.8, changeFreq: 'monthly' as const },
-        { path: '/contact', priority: 0.7, changeFreq: 'monthly' as const },
-        { path: '/faq', priority: 0.7, changeFreq: 'monthly' as const },
-        { path: '/pricing', priority: 0.9, changeFreq: 'weekly' as const },
-        { path: '/featured', priority: 0.8, changeFreq: 'daily' as const },
-        { path: '/blog', priority: 0.8, changeFreq: 'daily' as const },
-        { path: '/categories', priority: 0.9, changeFreq: 'weekly' as const },
-        { path: '/states', priority: 0.9, changeFreq: 'weekly' as const },
-        { path: '/claim-your-business', priority: 0.8, changeFreq: 'monthly' as const },
-    ].map((route) => ({
-        url: `${baseUrl}${route.path}`,
-        lastModified: now,
-        changeFrequency: route.changeFreq,
-        priority: route.priority,
-    }))
+const SITEMAP_LISTING_FIELDS = `
+  slug,
+  updated_at,
+  description,
+  phone,
+  email,
+  website,
+  website_url,
+  address,
+  logo_url,
+  images,
+  opening_hours,
+  services_offered,
+  verified,
+  claimed,
+  categories(slug),
+  states(slug)
+`
 
-    // 2. Legal Pages - Lower priority, rarely change
-    const legalRoutes = [
-        '/terms',
-        '/privacy',
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
-        lastModified: now,
-        changeFrequency: 'yearly' as const,
-        priority: 0.3,
-    }))
+const BLOG_UPDATED: Record<string, string> = {
+  'best-web-hosting-in-nigeria-2026': '2026-02-24',
+  'paypal-nigeria-2026-receive-payments-withdraw-naira': '2026-02-24',
+  'local-lead-generation-mistakes-nigeria-2025': '2026-02-24',
+  'top-business-listing-sites-in-nigeria-2025': '2026-02-24',
+  'digital-marketing-strategies-small-business': '2026-02-24',
+  'top-10-investment-opportunities-lagos': '2026-02-24',
+  'starting-agriculture-business-nigeria': '2026-02-24',
+  'how-to-get-business-loan-without-collateral-nigeria-2025': '2026-02-24',
+  'best-banks-small-business-nigeria-comparison-2025': '2026-02-24',
+  'how-to-start-blogging-content-business-nigeria-2025': '2026-02-24',
+  'how-to-start-logistics-delivery-business-nigeria-2025': '2026-02-24',
+  'cac-public-search-verify-company-nigeria': '2026-02-24',
+  'company-code-nigeria-meaning-how-to-find': '2026-02-24',
+  'cac-pre-incorporation-guide-nigeria-2026': '2026-02-24',
+  'how-to-check-if-company-is-registered-nigeria': '2026-02-24',
+  'top-10-real-estate-companies-abuja': '2026-02-24',
+  'top-10-law-firms-lagos': '2026-02-24',
+  'top-10-law-firms-abuja-fct': '2026-02-24',
+  'how-to-start-food-delivery-business-in-nigeria': '2026-02-24',
+  'best-plumbing-materials-companies-nigeria': '2026-02-24',
+  'top-plastic-manufacturing-companies-nigeria': '2026-02-24',
+  'top-food-processing-companies-nigeria': '2026-02-24',
+  'best-telecommunication-companies-nigeria': '2026-02-24',
+  'best-solar-panel-installation-companies-nigeria': '2026-02-24',
+  'top-10-security-companies-nigeria': '2026-02-24',
+  'best-insurance-companies-nigeria': '2026-02-24',
+  'top-10-law-firms-nigeria': '2026-02-24',
+  'best-private-hospitals-nigeria': '2026-02-24',
+  'best-real-estate-companies-nigeria': '2026-02-24',
+  'best-it-technology-companies-lagos': '2026-02-24',
+}
 
-    // 3. Press Release Section - Service pages (high commercial intent)
-    const pressReleaseMainRoutes = [
-        { path: '/press-release', priority: 0.9, changeFreq: 'weekly' as const },
-        { path: '/press-release/copywriting', priority: 0.8, changeFreq: 'monthly' as const },
-    ].map((route) => ({
-        url: `${baseUrl}${route.path}`,
-        lastModified: now,
-        changeFrequency: route.changeFreq,
-        priority: route.priority,
-    }))
+type SitemapCategory = {
+  slug: string
+  updated_at?: string | null
+}
 
-    // 4. Press Release Package Detail Pages
-    const allPressReleasePackages = [
-        ...standalonePackages,
-        ...bundlePackages,
-        ...reputationPackages,
-    ]
+type SitemapState = SitemapCategory
 
-    const pressReleasePackageUrls = allPressReleasePackages.map((pkg) => ({
-        url: `${baseUrl}/press-release/${pkg.slug}`,
-        lastModified: now,
-        changeFrequency: 'weekly' as const,
-        priority: 0.8,
-    }))
+type RelatedSlug = { slug: string } | { slug: string }[] | null
 
-    // 5. Blog Posts - Content marketing pages
-    // Posts that were edited after their original publish date (title, excerpt,
-    // schema, or content updates). These override post.date for lastModified so
-    // Google re-crawls them sooner and picks up the improved metadata.
-    const BLOG_UPDATED: Record<string, string> = {
-        'best-web-hosting-in-nigeria-2026':                        '2026-02-24', // excerpt updated
-        'paypal-nigeria-2026-receive-payments-withdraw-naira':     '2026-02-24', // title + excerpt updated
-        'local-lead-generation-mistakes-nigeria-2025':             '2026-02-24', // related guides added
-        'top-business-listing-sites-in-nigeria-2025':              '2026-02-24', // related guides added
-        'digital-marketing-strategies-small-business':             '2026-02-24', // related guides added
-        'top-10-investment-opportunities-lagos':                   '2026-02-24', // title updated
-        'starting-agriculture-business-nigeria':                   '2026-02-24', // title updated
-        'how-to-get-business-loan-without-collateral-nigeria-2025':'2026-02-24', // title updated
-        'best-banks-small-business-nigeria-comparison-2025':       '2026-02-24', // title + excerpt updated
-        'how-to-start-blogging-content-business-nigeria-2025':     '2026-02-24', // title updated
-        'how-to-start-logistics-delivery-business-nigeria-2025':   '2026-02-24', // title updated
-        'cac-public-search-verify-company-nigeria':                '2026-02-24', // title updated
-        'company-code-nigeria-meaning-how-to-find':                '2026-02-24', // title updated
-        'cac-pre-incorporation-guide-nigeria-2026':                '2026-02-24', // title + excerpt updated
-        'how-to-check-if-company-is-registered-nigeria':           '2026-02-24', // title updated
-        'top-10-real-estate-companies-abuja':                      '2026-02-24', // excerpt updated
-        'top-10-law-firms-lagos':                                  '2026-02-24', // excerpt updated
-        'top-10-law-firms-abuja-fct':                              '2026-02-24', // excerpt updated
-        'how-to-start-food-delivery-business-in-nigeria':          '2026-02-24', // excerpt updated
-        'best-plumbing-materials-companies-nigeria':               '2026-02-24', // excerpt + related guides
-        'top-plastic-manufacturing-companies-nigeria':             '2026-02-24', // excerpt + related guides
-        'top-food-processing-companies-nigeria':                   '2026-02-24', // excerpt + related guides
-        'best-telecommunication-companies-nigeria':                '2026-02-24', // excerpt + related guides
-        'best-solar-panel-installation-companies-nigeria':         '2026-02-24', // excerpt + related guides
-        'top-10-security-companies-nigeria':                       '2026-02-24', // excerpt + related guides
-        'best-insurance-companies-nigeria':                        '2026-02-24', // related guides added
-        'top-10-law-firms-nigeria':                                '2026-02-24', // related guides added
-        'best-private-hospitals-nigeria':                          '2026-02-24', // related guides added
-        'best-real-estate-companies-nigeria':                      '2026-02-24', // related guides added
-        'best-it-technology-companies-lagos':                      '2026-02-24', // related guides added
+type SitemapListing = {
+  slug: string
+  updated_at?: string | null
+  description?: string | null
+  phone?: string | null
+  email?: string | null
+  website?: string | null
+  website_url?: string | null
+  address?: string | null
+  logo_url?: string | null
+  images?: unknown
+  opening_hours?: unknown
+  services_offered?: unknown
+  verified?: boolean | null
+  claimed?: boolean | null
+  categories?: RelatedSlug
+  states?: RelatedSlug
+}
+
+function dateOrFallback(value: string | undefined | null, fallback: Date) {
+  const date = value ? new Date(value) : fallback
+  return Number.isNaN(date.getTime()) ? fallback : date
+}
+
+function relationSlug(value: RelatedSlug | undefined) {
+  if (Array.isArray(value)) return value[0]?.slug
+  return value?.slug
+}
+
+function logSitemapError(source: string, error: unknown) {
+  const message = error instanceof Error
+    ? error.message
+    : typeof error === 'object' && error && 'message' in error
+      ? String(error.message)
+      : String(error)
+
+  console.error(JSON.stringify({
+    event: 'sitemap_data_source_error',
+    source,
+    message,
+  }))
+}
+
+async function fetchApprovedSitemapListings(
+  supabase: ReturnType<typeof createPublicClient>,
+): Promise<{ data: SitemapListing[]; error: unknown }> {
+  const rows: SitemapListing[] = []
+
+  for (let from = 0; from < SITEMAP_LISTING_LIMIT; from += SITEMAP_LISTING_BATCH_SIZE) {
+    const to = Math.min(
+      from + SITEMAP_LISTING_BATCH_SIZE - 1,
+      SITEMAP_LISTING_LIMIT - 1,
+    )
+    const response = await supabase
+      .from('listings')
+      .select(SITEMAP_LISTING_FIELDS)
+      .eq('status', 'approved')
+      .order('updated_at', { ascending: false })
+      .range(from, to)
+
+    if (response.error) {
+      return { data: rows, error: response.error }
     }
 
-    const blogUrls = blogPosts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: BLOG_UPDATED[post.slug]
-            ? new Date(BLOG_UPDATED[post.slug])
-            : new Date(post.date),
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
-    }))
+    const batch = (response.data || []) as unknown as SitemapListing[]
+    rows.push(...batch)
 
-    // 6. Categories - Important for navigation and SEO
-    const { data: categories } = await supabase
-        .from('categories')
-        .select('slug, updated_at')
+    if (batch.length < SITEMAP_LISTING_BATCH_SIZE) {
+      break
+    }
+  }
 
-    const categoryUrls = (categories || []).map((category) => ({
-        url: `${baseUrl}/categories/${category.slug}`,
-        lastModified: new Date(category.updated_at || now),
+  return { data: rows, error: null }
+}
+
+/**
+ * Public, quality-gated URLs only. The route is generated as ISR so Cloudflare
+ * normally serves cached XML instead of rebuilding it for every crawler hit.
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const startedAt = Date.now()
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.9jadirectory.org'
+  const now = new Date()
+
+  const coreRoutes = [
+    { path: '', priority: 1.0, changeFreq: 'daily' as const },
+    { path: '/about', priority: 0.8, changeFreq: 'monthly' as const },
+    { path: '/contact', priority: 0.7, changeFreq: 'monthly' as const },
+    { path: '/faq', priority: 0.7, changeFreq: 'monthly' as const },
+    { path: '/pricing', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/featured', priority: 0.8, changeFreq: 'daily' as const },
+    { path: '/blog', priority: 0.8, changeFreq: 'daily' as const },
+    { path: '/categories', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/states', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/claim-your-business', priority: 0.8, changeFreq: 'monthly' as const },
+  ].map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified: now,
+    changeFrequency: route.changeFreq,
+    priority: route.priority,
+  }))
+
+  const legalRoutes = ['/terms', '/privacy'].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: now,
+    changeFrequency: 'yearly' as const,
+    priority: 0.3,
+  }))
+
+  const pressReleaseMainRoutes = [
+    { path: '/press-release', priority: 0.9, changeFreq: 'weekly' as const },
+    { path: '/press-release/copywriting', priority: 0.8, changeFreq: 'monthly' as const },
+  ].map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified: now,
+    changeFrequency: route.changeFreq,
+    priority: route.priority,
+  }))
+
+  const pressReleasePackageUrls = [
+    ...standalonePackages,
+    ...bundlePackages,
+    ...reputationPackages,
+  ].map((pkg) => ({
+    url: `${baseUrl}/press-release/${pkg.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  const blogUrls = blogPostSummaries.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: dateOrFallback(BLOG_UPDATED[post.slug] || post.date, now),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  let categories: SitemapCategory[] = []
+  let states: SitemapState[] = []
+  let listings: SitemapListing[] = []
+  let categoriesError: unknown = null
+  let statesError: unknown = null
+  let listingsError: unknown = null
+
+  try {
+    const supabase = createPublicClient()
+    const [categoryResponse, stateResponse, listingResponse] = await Promise.all([
+      supabase.from('categories').select('slug'),
+      supabase.from('states').select('slug'),
+      fetchApprovedSitemapListings(supabase),
+    ])
+
+    categories = (categoryResponse.data || []) as SitemapCategory[]
+    states = (stateResponse.data || []) as SitemapState[]
+    listings = (listingResponse.data || []) as unknown as SitemapListing[]
+    categoriesError = categoryResponse.error
+    statesError = stateResponse.error
+    listingsError = listingResponse.error
+  } catch (error) {
+    categoriesError = error
+    statesError = error
+    listingsError = error
+  }
+
+  if (categoriesError) logSitemapError('categories', categoriesError)
+  if (statesError) logSitemapError('states', statesError)
+  if (listingsError) logSitemapError('listings', listingsError)
+
+  const categoryUrls = categories.map((category) => ({
+    url: `${baseUrl}/categories/${category.slug}`,
+    lastModified: dateOrFallback(category.updated_at, now),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  const stateUrls = states.map((state) => ({
+    url: `${baseUrl}/states/${state.slug}`,
+    lastModified: dateOrFallback(state.updated_at, now),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  const fallbackCategoryUrls: MetadataRoute.Sitemap = categories.length > 0
+    ? []
+    : [{
+        url: `${baseUrl}/categories/real-estate`,
+        lastModified: now,
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      }]
+
+  const fallbackStateUrls: MetadataRoute.Sitemap = states.length > 0
+    ? []
+    : ['lagos', 'fct'].map((slug) => ({
+        url: `${baseUrl}/states/${slug}`,
+        lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.8,
-    }))
+      }))
 
-    // 7. States - Geographic targeting (all 36 states + FCT)
-    const { data: states } = await supabase
-        .from('states')
-        .select('slug, updated_at')
+  const indexableListings = listings.filter((listing) => isIndexableListing(listing))
+  const comboCounts = new Map<string, number>()
 
-    const stateUrls = (states || []).map((state) => ({
-        url: `${baseUrl}/states/${state.slug}`,
-        lastModified: new Date(state.updated_at || now),
+  for (const listing of indexableListings) {
+    const categorySlug = relationSlug(listing.categories)
+    const stateSlug = relationSlug(listing.states)
+    if (categorySlug && stateSlug) {
+      const key = `${categorySlug}/${stateSlug}`
+      comboCounts.set(key, (comboCounts.get(key) || 0) + 1)
+    }
+  }
+
+  const categoryStateUrls = categories.flatMap((category) =>
+    states
+      .filter((state) =>
+        (comboCounts.get(`${category.slug}/${state.slug}`) || 0) >=
+        MIN_INDEXABLE_CATEGORY_STATE_LISTINGS,
+      )
+      .map((state) => ({
+        url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
+        lastModified: now,
         changeFrequency: 'weekly' as const,
-        priority: 0.8,
+        priority: 0.75,
+      })),
+  )
+
+  const listingUrls = indexableListings.map((listing) => ({
+    url: `${baseUrl}/listings/${listing.slug}`,
+    lastModified: dateOrFallback(listing.updated_at, now),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+
+  const elapsedMs = Date.now() - startedAt
+  if (listings.length >= SITEMAP_LISTING_LIMIT) {
+    console.warn(JSON.stringify({
+      event: 'sitemap_listing_limit_reached',
+      limit: SITEMAP_LISTING_LIMIT,
     }))
+  }
 
-    // 8. Category + State Combination Pages - HIGH VALUE for Local SEO
-    // These dynamic pages target high-intent searches like:
-    // "restaurants in Lagos", "hotels in Abuja", "real estate in Port Harcourt"
-    //
-    // Quality threshold: only include a combination when it has enough
-    // indexable listings. This keeps thin local doorway-style pages out of
-    // the sitemap during AdSense review.
-    const hasCategories = (categories || []).length > 0
-    const hasStates = (states || []).length > 0
+  if (elapsedMs > 2000) {
+    console.warn(JSON.stringify({
+      event: 'slow_sitemap_generation',
+      elapsedMs,
+      categories: categories.length,
+      states: states.length,
+      listings: listings.length,
+      indexableListings: indexableListings.length,
+    }))
+  }
 
-    const fallbackCategoryUrls = hasCategories
-        ? []
-        : [
-              {
-                  url: `${baseUrl}/categories/real-estate`,
-                  lastModified: now,
-                  changeFrequency: 'weekly' as const,
-                  priority: 0.8,
-              },
-          ]
-
-    const fallbackStateUrls = hasStates
-        ? []
-        : [
-              {
-                  url: `${baseUrl}/states/lagos`,
-                  lastModified: now,
-                  changeFrequency: 'weekly' as const,
-                  priority: 0.8,
-              },
-              {
-                  url: `${baseUrl}/states/fct`,
-                  lastModified: now,
-                  changeFrequency: 'weekly' as const,
-                  priority: 0.8,
-              },
-          ]
-
-    // Fetch category+state combos with enough approved, indexable listings.
-    // Using an INNER JOIN so only rows with valid FK relations are returned.
-    const { data: activeCombos } = await supabase
-        .from('listings')
-        .select(`
-            description,
-            phone,
-            email,
-            website,
-            website_url,
-            address,
-            logo_url,
-            images,
-            opening_hours,
-            services_offered,
-            verified,
-            claimed,
-            categories!inner(slug),
-            states!inner(slug)
-        `)
-        .eq('status', 'approved')
-        .not('category_id', 'is', null)
-        .not('state_id', 'is', null)
-
-    const comboCounts = new Map<string, number>()
-
-    // Supabase returns joined relations as arrays, so we use [0] to get the first (and only) match.
-    ;(activeCombos || []).forEach((listing) => {
-        if (!isIndexableListing(listing)) {
-            return
-        }
-
-        const cats = listing.categories
-        const sts = listing.states
-        const catSlug = Array.isArray(cats) ? cats[0]?.slug : (cats as { slug: string } | null)?.slug
-        const stateSlug = Array.isArray(sts) ? sts[0]?.slug : (sts as { slug: string } | null)?.slug
-        const key = catSlug && stateSlug ? `${catSlug}/${stateSlug}` : ''
-
-        if (key) {
-            comboCounts.set(key, (comboCounts.get(key) || 0) + 1)
-        }
-    })
-
-    // Only include combinations with enough strong listing inventory.
-    const categoryStateUrls = (categories || []).flatMap((category: { slug: string }) =>
-        (states || [])
-            .filter((state: { slug: string }) =>
-                (comboCounts.get(`${category.slug}/${state.slug}`) || 0) >=
-                MIN_INDEXABLE_CATEGORY_STATE_LISTINGS
-            )
-            .map((state: { slug: string }) => ({
-                url: `${baseUrl}/categories/${category.slug}/${state.slug}`,
-                lastModified: now,
-                changeFrequency: 'weekly' as const,
-                priority: 0.75,
-            }))
-    )
-
-    const fallbackCategoryStateUrls: MetadataRoute.Sitemap = []
-
-    // 9. Business Listings (quality-gated)
-    // AdSense reviewers and Googlebot can sample sitemap URLs. Keep thin,
-    // templated listings out of the sitemap until they have enough unique
-    // description and business-detail signals to stand on their own.
-    const { data: listings } = await supabase
-        .from('listings')
-        .select(`
-            slug,
-            updated_at,
-            description,
-            phone,
-            email,
-            website,
-            website_url,
-            address,
-            logo_url,
-            images,
-            opening_hours,
-            services_offered,
-            verified,
-            claimed
-        `)
-        .eq('status', 'approved')
-        .order('updated_at', { ascending: false })
-        .limit(40000)
-
-    const listingUrls = (listings || [])
-        .filter((listing) => isIndexableListing(listing))
-        .map((listing) => ({
-            url: `${baseUrl}/listings/${listing.slug}`,
-            lastModified: new Date(listing.updated_at || now),
-            changeFrequency: 'weekly' as const,
-            priority: 0.6,
-        }))
-
-    // Combine all URLs in priority order
-    // Total estimated URLs: ~40,600 (well under 50,000 limit)
-    return [
-        // Core pages (highest priority)
-        ...coreRoutes,
-        // Commercial/service pages
-        ...pressReleaseMainRoutes,
-        ...pressReleasePackageUrls,
-        // Discovery pages
-        ...categoryUrls,
-        ...fallbackCategoryUrls,
-        ...stateUrls,
-        ...fallbackStateUrls,
-        // Local SEO combination pages
-        ...categoryStateUrls,
-        ...fallbackCategoryStateUrls,
-        // Content pages
-        ...blogUrls,
-        // Individual listings
-        ...listingUrls,
-        // Legal pages (lowest priority)
-        ...legalRoutes,
-    ]
+  return [
+    ...coreRoutes,
+    ...pressReleaseMainRoutes,
+    ...pressReleasePackageUrls,
+    ...categoryUrls,
+    ...fallbackCategoryUrls,
+    ...stateUrls,
+    ...fallbackStateUrls,
+    ...categoryStateUrls,
+    ...blogUrls,
+    ...listingUrls,
+    ...legalRoutes,
+  ]
 }
