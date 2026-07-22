@@ -3,6 +3,7 @@ import process from 'node:process'
 const baseInput = process.argv[2]
 const mode = process.argv[3]
 const validModes = new Set(['staging', 'production-preview', 'production'])
+const resolveIp = process.env.CLOUDFLARE_SMOKE_RESOLVE_IP?.trim()
 
 if (!baseInput || !validModes.has(mode)) {
   console.error(
@@ -16,6 +17,19 @@ const isStaging = mode === 'staging'
 const shouldNoindex = mode !== 'production'
 const shouldLockInteractiveRoutes = mode !== 'production'
 const failures = []
+const dispatcher = resolveIp
+  ? new (await import('undici')).Agent({
+      connect: {
+        lookup(_hostname, options, callback) {
+          if (options?.all) {
+            callback(null, [{ address: resolveIp, family: 4 }])
+          } else {
+            callback(null, resolveIp, 4)
+          }
+        },
+      },
+    })
+  : undefined
 
 function check(condition, message) {
   if (condition) {
@@ -29,6 +43,7 @@ function check(condition, message) {
 async function request(path, options = {}) {
   const response = await fetch(new URL(path, baseUrl), {
     redirect: 'manual',
+    ...(dispatcher ? { dispatcher } : {}),
     ...options,
   })
   return {
@@ -72,7 +87,43 @@ for (const text of [
 
 const robots = await request('/robots.txt')
 const robotsRules = robots.body.split(/\r?\n/).map(line => line.trim())
-const blocksAllCrawling = robotsRules.includes('Disallow: /')
+
+function wildcardUserAgentBlocksAll(rules) {
+  let activeUserAgents = []
+  let groupHasDirectives = false
+
+  for (const rule of rules) {
+    if (!rule || rule.startsWith('#')) continue
+
+    const separatorIndex = rule.indexOf(':')
+    if (separatorIndex === -1) continue
+
+    const directive = rule.slice(0, separatorIndex).trim().toLowerCase()
+    const value = rule.slice(separatorIndex + 1).trim()
+
+    if (directive === 'user-agent') {
+      if (groupHasDirectives) {
+        activeUserAgents = []
+        groupHasDirectives = false
+      }
+      activeUserAgents.push(value.toLowerCase())
+      continue
+    }
+
+    groupHasDirectives = true
+    if (
+      directive === 'disallow' &&
+      value === '/' &&
+      activeUserAgents.includes('*')
+    ) {
+      return true
+    }
+  }
+
+  return false
+}
+
+const blocksAllCrawling = wildcardUserAgentBlocksAll(robotsRules)
 
 if (isStaging) {
   check(blocksAllCrawling, 'staging robots.txt blocks crawling')
@@ -99,6 +150,10 @@ if (shouldLockInteractiveRoutes) {
 } else {
   const login = await request('/login')
   check(login.response.status !== 503, `${mode} does not use the preview route lock`)
+}
+
+if (dispatcher) {
+  await dispatcher.close()
 }
 
 if (failures.length > 0) {
