@@ -1,16 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-import { sendEmail } from '@/lib/email/resend'
+import { createAdminClient } from '@/lib/supabase/admin'
+import { deliverQueuedEmail } from '@/lib/email/queue'
 
 // This API route processes pending email notifications
 // You can call this manually or set up a cron job to run it periodically
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-
-const supabaseAdmin = supabaseUrl && supabaseServiceKey
-    ? createClient(supabaseUrl, supabaseServiceKey)
-    : null
 
 function isAuthorized(request: NextRequest) {
     const secret = process.env.CRON_SECRET
@@ -24,20 +17,9 @@ export async function POST(request: NextRequest) {
     }
 
     try {
-        if (!supabaseAdmin) {
-            return NextResponse.json(
-                { error: 'Supabase admin client not configured' },
-                { status: 500 }
-            )
-        }
-
-        // Fetch unsent email notifications
+        const supabaseAdmin = createAdminClient()
         const { data: notifications, error: fetchError } = await supabaseAdmin
-            .from('email_notifications')
-            .select('*')
-            .eq('sent', false)
-            .order('created_at', { ascending: true })
-            .limit(50) // Process 50 at a time
+            .rpc('claim_email_notifications', { batch_limit: 50 })
 
         if (fetchError) {
             throw fetchError
@@ -57,21 +39,7 @@ export async function POST(request: NextRequest) {
         // Process each notification
         for (const notification of notifications) {
             try {
-                await sendEmail({
-                    to: notification.email,
-                    subject: notification.subject,
-                    text: notification.body,
-                })
-
-                // Mark as sent
-                await supabaseAdmin
-                    .from('email_notifications')
-                    .update({
-                        sent: true,
-                        sent_at: new Date().toISOString()
-                    })
-                    .eq('id', notification.id)
-
+                await deliverQueuedEmail(notification)
                 sentCount++
             } catch (err: any) {
                 console.error('Error processing notification:', err)
@@ -108,17 +76,13 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        if (!supabaseAdmin) {
-            return NextResponse.json(
-                { error: 'Supabase admin client not configured' },
-                { status: 500 }
-            )
-        }
+        const supabaseAdmin = createAdminClient()
 
         const { count: pendingCount } = await supabaseAdmin
             .from('email_notifications')
             .select('*', { count: 'exact', head: true })
             .eq('sent', false)
+            .in('delivery_status', ['queued', 'failed'])
 
         const { count: sentCount } = await supabaseAdmin
             .from('email_notifications')
@@ -129,6 +93,7 @@ export async function GET(request: NextRequest) {
             status: 'active',
             pending: pendingCount || 0,
             sent: sentCount || 0,
+            maxAttempts: 5,
             endpoint: '/api/send-emails',
             description: 'Email notification processor'
         })

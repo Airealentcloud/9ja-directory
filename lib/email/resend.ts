@@ -4,6 +4,7 @@ type SendEmailInput = {
   text: string
   html?: string
   replyTo?: string
+  idempotencyKey?: string
 }
 
 function getResendApiKey() {
@@ -33,6 +34,7 @@ export async function sendEmail(input: SendEmailInput) {
     headers: {
       Authorization: `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
+      ...(input.idempotencyKey && { 'Idempotency-Key': input.idempotencyKey }),
     },
     body: JSON.stringify({
       from,

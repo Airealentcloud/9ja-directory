@@ -6,6 +6,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { linkSuccessfulLeadToUser } from '@/lib/payments/link-paid-lead'
 import { createClient } from '@/lib/supabase/server'
+import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
 
 type StoredPaymentStatus = 'pending' | 'success' | 'failed' | 'abandoned'
 
@@ -162,6 +163,24 @@ export async function GET(request: NextRequest) {
                     linkError = error instanceof Error ? error.message : 'Account linking needs support.'
                     console.error('Verified payment could not be linked automatically:', error)
                 }
+            }
+
+            try {
+                await queuePaymentReceivedEmail({
+                    reference,
+                    email: lead.email,
+                    userId: linkedUserId,
+                    listingId: linkedListingId,
+                    fullName: undefined,
+                    businessName: lead.business_name,
+                    planId: selectedPlan.id,
+                    amountKobo,
+                    currency,
+                    paidAt: paymentData.paid_at ?? null,
+                    requiresAccountSetup: !linkedUserId,
+                })
+            } catch (notificationError) {
+                console.error('Could not queue verified payment receipt:', notificationError)
             }
         }
 

@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getPlanById } from '@/lib/pricing'
 import { SITE_URL } from '@/lib/seo/site-url'
 
 const siteUrl = SITE_URL
+const basicPlan = getPlanById('basic')!
+const premiumPlan = getPlanById('premium')!
+const lifetimePlan = getPlanById('lifetime')!
 
 export const metadata: Metadata = {
     title: 'Frequently Asked Questions | 9jaDirectory',
@@ -47,27 +51,27 @@ const faqs = [
     },
     {
         question: 'Do I need a plan to list my business?',
-        answer: 'Yes. To publish your listing, choose a plan and complete payment. This keeps listings verified and helps you get the right level of visibility.',
+        answer: `Yes. Basic costs ${basicPlan.priceFormatted}, Premium costs ${premiumPlan.priceFormatted}, and Lifetime costs ${lifetimePlan.priceFormatted}; each is a one-time payment. Every submission is reviewed, but only Premium and Lifetime include a Verified badge after approval.`,
     },
     {
         question: 'How long does it take for my listing to be approved?',
-        answer: 'Most business listings are reviewed and approved within 24-48 hours. We manually verify each submission to ensure quality and accuracy. You\'ll receive an email notification once your listing is approved.',
+        answer: 'Most business listings are reviewed within 24-48 hours. We check each submission for required information and policy compliance. You will receive an email notification after the decision.',
     },
     {
         question: 'Can I edit my business listing after it\'s published?',
-        answer: 'Absolutely! Log into your account dashboard, navigate to "My Listings," and click "Edit" on the business you want to update. You can change your contact information, business hours, description, photos, and more at any time.',
+        answer: 'Yes. Log into your dashboard, open "My Listings," and select the business you want to edit. All plans can update core contact details, descriptions, and allowed photos. Website, social links, and business hours are available on Premium and Lifetime.',
     },
     {
         question: 'How do I claim an existing business listing?',
-        answer: 'If you find your business already listed (perhaps added by someone else), you can claim it by clicking the "Claim This Business" button on the listing page. You\'ll need to provide proof of ownership, which our team will verify before granting you access.',
+        answer: 'If your business is already listed, use an active Premium or Lifetime plan and click "Claim This Business" on its page. Submit proof of ownership for manual review. An approved claim counts toward your plan\'s listing allowance.',
     },
     {
         question: 'What information should I include in my business listing?',
-        answer: 'For the best results, include: your business name, accurate address, phone number, email, website, business hours, high-quality photos, a detailed description of your services, and any specializations or unique offerings. The more complete your listing, the better your visibility.',
+        answer: 'Include an accurate business name, address, phone number, email, category, location, useful description, logo, and clear photos. Premium and Lifetime can also show a website, social links, and business hours.',
     },
     {
         question: 'How can I improve my listing\'s visibility?',
-        answer: 'To increase visibility: (1) Complete all fields in your profile, (2) Add high-quality photos, (3) Encourage customers to leave reviews, (4) Keep your business hours and contact info updated, (5) Respond to reviews promptly, and (6) Consider upgrading to a featured listing for premium placement.',
+        answer: 'Keep every available field accurate, add clear photos, select the correct category and location, and monitor customer reviews. Premium adds a richer verified profile and analytics. Lifetime includes priority search and homepage placement; Premium can purchase a time-limited featured add-on.',
     },
     {
         question: 'Can customers leave reviews on my listing?',
@@ -75,7 +79,7 @@ const faqs = [
     },
     {
         question: 'What are the benefits of a featured listing?',
-        answer: 'Featured listings appear at the top of search results and category pages, get highlighted with a special badge, and receive priority placement in our homepage carousel. This significantly increases visibility and can drive 3-5x more customer inquiries.',
+        answer: 'While featured placement is active, the listing receives a Featured badge and priority on supported search, category, and homepage sections. Lifetime includes this placement; eligible Premium listings can purchase a time-limited featured add-on.',
     },
     {
         question: 'How do I search for businesses on 9jaDirectory?',
@@ -87,7 +91,7 @@ const faqs = [
     },
     {
         question: 'Can I list multiple businesses?',
-        answer: 'Yes! You can add and manage multiple business listings from a single account. This is perfect for business owners with multiple locations or different business ventures.',
+        answer: 'Yes, subject to your plan allowance: Basic includes 1 listing, Premium includes up to 5, and Lifetime includes unlimited listings.',
     },
     {
         question: 'What should I do if I find incorrect information on a listing?',
@@ -99,7 +103,7 @@ const faqs = [
     },
     {
         question: 'How do I delete my business listing?',
-        answer: 'To remove a listing, log into your account, go to "My Listings," select the business you want to delete, and click "Delete Listing." The listing will be permanently removed from our directory. Alternatively, contact our support team for assistance.',
+        answer: 'Contact our support team from the email on your account and identify the listing you want removed. We will verify ownership before removing or deactivating it.',
     },
 ]
 

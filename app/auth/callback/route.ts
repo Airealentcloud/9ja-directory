@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 import { resolveApplicationOrigin } from '@/lib/http/application-origin'
 import { getPlanById, type PlanId } from '@/lib/pricing'
+import { queueRegistrationCompleteEmail } from '@/lib/email/transactional'
 
 function safeInternalPath(value: string | null) {
     if (!value || !value.startsWith('/') || value.startsWith('//')) return '/'
@@ -41,6 +42,22 @@ export async function GET(request: Request) {
 
         const { error, data } = await supabase.auth.exchangeCodeForSession(code)
         if (!error) {
+            if (data.user?.id && data.user.email) {
+                try {
+                    await queueRegistrationCompleteEmail({
+                        userId: data.user.id,
+                        email: data.user.email,
+                        fullName: typeof data.user.user_metadata?.full_name === 'string'
+                            ? data.user.user_metadata.full_name
+                            : null,
+                    })
+                } catch (notificationError) {
+                    // Verification must succeed even if the mail provider is temporarily down.
+                    // The queued row, when created, is retried by the scheduled email worker.
+                    console.error('Could not queue registration-complete email:', notificationError)
+                }
+            }
+
             const metadataPlan = data.user?.user_metadata?.selected_plan
             const selectedPlan = requestedPlan || (typeof metadataPlan === 'string' ? metadataPlan : null)
             if (selectedPlan && getPlanById(selectedPlan as PlanId)) {

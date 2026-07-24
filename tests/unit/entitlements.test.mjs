@@ -4,6 +4,7 @@ import test from 'node:test'
 import {
     PLAN_LIMITS,
     canCreateAnotherListing,
+    getApprovedListingPlanFlags,
     resolveAccountPlan,
     resolvePublicListingPlan,
     sanitizeListingForPlan,
@@ -115,4 +116,79 @@ test('Lifetime has unlimited listings and descriptions plus homepage placement',
     assert.equal(result.value.images.length, 100)
     assert.equal(PLAN_LIMITS.lifetime.hasTopSearchPlacement, true)
     assert.equal(PLAN_LIMITS.lifetime.hasFeaturedHomepage, true)
+    assert.equal(PLAN_LIMITS.lifetime.hasPrioritySupport, false)
+})
+
+test('moderation applies each plan benefit without leaking higher-tier placement', () => {
+    const basic = getApprovedListingPlanFlags('basic', {
+        status: 'approved',
+        planTier: 'premium',
+        featured: true,
+        featuredUntil: '2026-08-21T00:00:00.000Z',
+    }, NOW)
+    assert.deepEqual(basic, {
+        plan_tier: 'basic',
+        verified: false,
+        featured: false,
+        is_featured: false,
+        featured_until: null,
+    })
+
+    const premium = getApprovedListingPlanFlags('premium', {
+        status: 'approved',
+        featured: false,
+        featuredUntil: null,
+    }, NOW)
+    assert.equal(premium.verified, true)
+    assert.equal(premium.featured, false)
+    assert.equal(premium.featured_until, null)
+
+    const premiumWithAddOn = getApprovedListingPlanFlags('premium', {
+        status: 'approved',
+        planTier: 'premium',
+        featured: true,
+        featuredUntil: '2026-08-21T00:00:00.000Z',
+    }, NOW)
+    assert.equal(premiumWithAddOn.verified, true)
+    assert.equal(premiumWithAddOn.featured, true)
+    assert.equal(premiumWithAddOn.featured_until, '2026-08-21T00:00:00.000Z')
+
+    const premiumCannotInheritLifetimePlacement = getApprovedListingPlanFlags('premium', {
+        status: 'approved',
+        planTier: 'lifetime',
+        featured: true,
+        featuredUntil: '2126-08-21T00:00:00.000Z',
+    }, NOW)
+    assert.equal(premiumCannotInheritLifetimePlacement.verified, true)
+    assert.equal(premiumCannotInheritLifetimePlacement.featured, false)
+    assert.equal(premiumCannotInheritLifetimePlacement.featured_until, null)
+
+    const premiumCannotKeepLifetimeLengthPlacement = getApprovedListingPlanFlags('premium', {
+        status: 'approved',
+        planTier: 'premium',
+        featured: true,
+        featuredUntil: '2126-08-21T00:00:00.000Z',
+    }, NOW)
+    assert.equal(premiumCannotKeepLifetimeLengthPlacement.featured, false)
+    assert.equal(premiumCannotKeepLifetimeLengthPlacement.featured_until, null)
+
+    const lifetime = getApprovedListingPlanFlags('lifetime', {
+        status: 'approved',
+    }, NOW)
+    assert.equal(lifetime.verified, true)
+    assert.equal(lifetime.featured, true)
+    assert.equal(lifetime.is_featured, true)
+    assert.equal(lifetime.featured_until, '2126-07-21T12:00:00.000Z')
+})
+
+test('pending listings never receive public badges or placement', () => {
+    const flags = getApprovedListingPlanFlags('lifetime', {
+        status: 'pending',
+        featured: true,
+        featuredUntil: '2126-07-21T12:00:00.000Z',
+    }, NOW)
+
+    assert.equal(flags.verified, false)
+    assert.equal(flags.featured, false)
+    assert.equal(flags.featured_until, null)
 })

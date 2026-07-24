@@ -2,7 +2,12 @@
 
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
-import { getAccountPlanLimits, resolveAccountPlan } from '@/lib/entitlements'
+import {
+    canCreateAnotherListing,
+    getAccountPlanLimits,
+    listingLimitMessage,
+    resolveAccountPlan,
+} from '@/lib/entitlements'
 
 export async function submitClaim(formData: FormData) {
     const supabase = await createClient()
@@ -56,13 +61,44 @@ export async function submitClaim(formData: FormData) {
         listingId = listing.id
     }
 
+    const { data: targetListing, error: targetListingError } = await supabase
+        .from('listings')
+        .select('id, status, user_id, claimed')
+        .eq('id', listingId)
+        .maybeSingle()
+
+    if (targetListingError || !targetListing || targetListing.status !== 'approved') {
+        throw new Error('Only an approved business listing can be claimed.')
+    }
+    if (targetListing.user_id === user.id) {
+        throw new Error('This listing is already attached to your account.')
+    }
+    if (targetListing.claimed) {
+        throw new Error('This business has already been claimed. Contact support if the ownership is incorrect.')
+    }
+
+    const { count: activeListingCount, error: countError } = await supabase
+        .from('listings')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .in('status', ['pending', 'approved'])
+
+    if (countError) throw new Error('Your listing allowance could not be checked. Please try again.')
+    if (!canCreateAnotherListing(accountPlan, activeListingCount || 0)) {
+        throw new Error(listingLimitMessage(accountPlan))
+    }
+
+    if (!proofDocument?.trim()) {
+        throw new Error('Proof of ownership is required before a claim can be reviewed.')
+    }
+
     // Check if already claimed or pending
     const { data: existing } = await supabase
         .from('claim_requests')
-        .select('status')
+        .select('id, status')
         .eq('listing_id', listingId)
         .eq('user_id', user.id)
-        .single()
+        .maybeSingle()
 
     if (existing) {
         if (existing.status === 'pending') {
@@ -73,16 +109,23 @@ export async function submitClaim(formData: FormData) {
         }
     }
 
-    // Insert claim request
-    const { error } = await supabase
-        .from('claim_requests')
-        .insert({
+    const claimPayload = {
+        notes,
+        proof_document: proofDocument.trim(),
+        status: 'pending',
+        reviewed_by: null,
+        reviewed_at: null,
+        rejection_reason: null,
+        updated_at: new Date().toISOString(),
+    }
+    const claimMutation = existing?.status === 'rejected'
+        ? supabase.from('claim_requests').update(claimPayload).eq('id', existing.id)
+        : supabase.from('claim_requests').insert({
             listing_id: listingId,
             user_id: user.id,
-            notes,
-            proof_document: proofDocument,
-            status: 'pending'
+            ...claimPayload,
         })
+    const { error } = await claimMutation
 
     if (error) {
         console.error('Error submitting claim:', error)

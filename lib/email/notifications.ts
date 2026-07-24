@@ -215,7 +215,8 @@ ${data.listingUrl}
 Tips to get more visibility:
 - Keep your business information up to date
 - Add photos to attract more customers
-- Consider upgrading to a Premium plan for featured placement
+- Use the profile fields and visibility tools included in your plan
+- Lifetime includes homepage placement; Premium can purchase a featured add-on
 
 Thank you for choosing 9jaDirectory!
 
@@ -260,7 +261,8 @@ The 9jaDirectory Team
                 <ul>
                     <li>Keep your business information up to date</li>
                     <li>Add photos to attract more customers</li>
-                    <li>Consider upgrading to a Premium plan for featured placement</li>
+                    <li>Use the profile fields and visibility tools included in your plan</li>
+                    <li>Lifetime includes homepage placement; Premium can purchase a featured add-on</li>
                 </ul>
             </div>
 
@@ -385,9 +387,9 @@ View your listing here:
 ${data.listingUrl}
 
 What you can do now:
-- Update your business details, photos, and opening hours
-- Reply to customer reviews
-- Promote your listing for more visibility
+- Update the business details and photos included in your plan
+- View customer reviews and listing performance
+- Use the visibility tools included in your plan
 
 Thank you for choosing 9jaDirectory!
 
@@ -429,9 +431,9 @@ The 9jaDirectory Team
             <div class="tips">
                 <h3>What you can do now:</h3>
                 <ul>
-                    <li>Update your business details, photos, and opening hours</li>
-                    <li>Reply to customer reviews</li>
-                    <li>Promote your listing for more visibility</li>
+                    <li>Update the business details and photos included in your plan</li>
+                    <li>View customer reviews and listing performance</li>
+                    <li>Use the visibility tools included in your plan</li>
                 </ul>
             </div>
 

@@ -3,9 +3,15 @@
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { revalidatePath } from 'next/cache'
-import { notifyCustomerListingApproved, notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
+import { notifyCustomerListingRejected, notifyCustomerClaimApproved, notifyCustomerClaimRejected } from '@/lib/email/notifications'
+import { queueListingApprovedEmail } from '@/lib/email/transactional'
 import { SITE_URL } from '@/lib/seo/site-url'
-import { PLAN_LIMITS, isPaidPlanId, resolveAccountPlan } from '@/lib/entitlements'
+import {
+    canCreateAnotherListing,
+    getApprovedListingPlanFlags,
+    isPaidPlanId,
+    resolveAccountPlan,
+} from '@/lib/entitlements'
 import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { getPlanById, nairaToKobo } from '@/lib/pricing'
 
@@ -583,64 +589,124 @@ export async function rejectReview(reviewId: string) {
 export async function approveClaim(claimId: string) {
     const supabase = await checkAdmin()
 
-    // 1. Get the claim details
+    // Load the pending claim, listing and claimant plan before changing ownership.
     const { data: claim, error: fetchError } = await supabase
         .from('claim_requests')
-        .select('*')
+        .select('id, listing_id, user_id, status')
         .eq('id', claimId)
         .single()
 
     if (fetchError || !claim) throw new Error('Claim not found')
+    if (claim.status !== 'pending') throw new Error('Only pending claims can be approved.')
 
-    // 2. Update the listing to be claimed by this user
-    const { error: listingError } = await supabase
+    const { data: listing, error: listingFetchError } = await supabase
+        .from('listings')
+        .select('id, business_name, slug, status, user_id, claimed, plan_tier, featured, featured_until')
+        .eq('id', claim.listing_id)
+        .single()
+
+    if (listingFetchError || !listing) throw new Error('The business listing could not be found.')
+    if (listing.status !== 'approved') {
+        throw new Error('Approve the business listing before approving its ownership claim.')
+    }
+    if (listing.claimed && listing.user_id !== claim.user_id) {
+        throw new Error('This business is already claimed by another account.')
+    }
+
+    const { data: claimProfile, error: profileError } = await supabase
+        .from('profiles')
+        .select('email, full_name, role, subscription_plan, subscription_status, subscription_expires_at')
+        .eq('id', claim.user_id)
+        .maybeSingle()
+
+    if (profileError || !claimProfile) {
+        throw new Error('The claimant does not have a customer profile.')
+    }
+
+    const effectivePlan = resolveAccountPlan({
+        role: claimProfile.role,
+        subscriptionPlan: claimProfile.subscription_plan,
+        subscriptionStatus: claimProfile.subscription_status,
+        subscriptionExpiresAt: claimProfile.subscription_expires_at,
+    })
+
+    if (effectivePlan === 'free' || effectivePlan === 'basic') {
+        throw new Error('Claiming an existing listing requires an active Premium or Lifetime plan.')
+    }
+
+    const { count: activeListingCount, error: countError } = await supabase
+        .from('listings')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', claim.user_id)
+        .in('status', ['pending', 'approved'])
+        .neq('id', claim.listing_id)
+
+    if (countError) throw new Error(`The claimant's listing allowance could not be checked: ${countError.message}`)
+    if (!canCreateAnotherListing(effectivePlan, activeListingCount || 0)) {
+        throw new Error(
+            `The claimant's ${effectivePlan === 'premium' ? 'Premium' : 'Lifetime'} plan listing allowance has been reached.`
+        )
+    }
+
+    const planFlags = getApprovedListingPlanFlags(effectivePlan, {
+        status: listing.status,
+        planTier: listing.plan_tier,
+        featured: listing.featured,
+        featuredUntil: listing.featured_until,
+    })
+
+    const { data: claimedListing, error: listingError } = await supabase
         .from('listings')
         .update({
             claimed: true,
             claimed_by: claim.user_id,
             claimed_at: new Date().toISOString(),
             user_id: claim.user_id,
+            ...planFlags,
         })
         .eq('id', claim.listing_id)
+        .select('business_name, slug')
+        .single()
 
-    if (listingError) throw listingError
+    if (listingError || !claimedListing) {
+        throw new Error(`The listing could not be transferred: ${listingError?.message || 'unknown error'}`)
+    }
 
-    // 3. Update claim status
+    const {
+        data: { user: reviewer },
+    } = await supabase.auth.getUser()
+    const reviewedAt = new Date().toISOString()
+
     const { error: claimError } = await supabase
         .from('claim_requests')
         .update({
             status: 'approved',
-            reviewed_at: new Date().toISOString(),
-            reviewed_by: (await supabase.auth.getUser()).data.user?.id
+            reviewed_at: reviewedAt,
+            reviewed_by: reviewer?.id,
+            rejection_reason: null,
+            updated_at: reviewedAt,
         })
         .eq('id', claimId)
 
     if (claimError) throw claimError
 
-    // Send email notification to the claimer
-    const { data: listing } = await supabase
-        .from('listings')
-        .select('business_name, slug')
-        .eq('id', claim.listing_id)
-        .maybeSingle()
-
-    const { data: claimProfile } = await supabase
-        .from('profiles')
-        .select('email, full_name')
-        .eq('id', claim.user_id)
-        .maybeSingle()
-
-    if (listing && claimProfile?.email) {
+    if (claimProfile.email) {
         notifyCustomerClaimApproved({
-            businessName: listing.business_name,
+            businessName: claimedListing.business_name,
             ownerEmail: claimProfile.email,
             ownerName: claimProfile.full_name,
-            listingUrl: `${SITE_URL}/listings/${listing.slug}`,
+            listingUrl: `${SITE_URL}/listings/${claimedListing.slug}`,
         }).catch(console.error)
     }
 
     revalidatePath('/admin/claims')
+    revalidatePath('/admin/listings')
+    revalidatePath('/dashboard/my-listings')
+    revalidatePath(`/listings/${claimedListing.slug}`)
     revalidatePath('/listings')
+    revalidatePath('/search')
+    revalidatePath('/featured')
+    revalidatePath('/')
 }
 
 export async function rejectClaim(claimId: string, reason?: string) {
@@ -1002,7 +1068,7 @@ export async function approveListingServer(id: string) {
     // Get listing with owner details before approving
     const { data: listing, error: listingError } = await supabase
         .from('listings')
-        .select('id, business_name, slug, user_id, email, description, phone, category_id, state_id, city, featured, featured_until')
+        .select('id, business_name, slug, user_id, email, description, phone, category_id, state_id, city, plan_tier, featured, featured_until')
         .eq('id', id)
         .single()
 
@@ -1100,41 +1166,40 @@ export async function approveListingServer(id: string) {
         return { error: { message: 'Payment is confirmed, but the customer plan is not active.' } }
     }
 
-    const limits = PLAN_LIMITS[effectivePlan]
-    const hasActiveFeaturedAddOn = Boolean(
-        effectivePlan === 'premium' &&
-        listing.featured &&
-        listing.featured_until &&
-        new Date(listing.featured_until) > new Date()
-    )
-    const lifetimeExpiry = new Date()
-    lifetimeExpiry.setFullYear(lifetimeExpiry.getFullYear() + 100)
-    const featuredUntil = limits.hasFeaturedHomepage
-        ? lifetimeExpiry.toISOString()
-        : (hasActiveFeaturedAddOn ? listing.featured_until : null)
+    const planFlags = getApprovedListingPlanFlags(effectivePlan, {
+        status: 'approved',
+        planTier: listing.plan_tier,
+        featured: listing.featured,
+        featuredUntil: listing.featured_until,
+    })
 
     const { data, error } = await supabase
         .from('listings')
         .update({
             status: 'approved',
             rejection_reason: null,
-            verified: limits.hasVerifiedBadge,
-            featured: limits.hasFeaturedHomepage || hasActiveFeaturedAddOn,
-            featured_until: featuredUntil,
+            ...planFlags,
         })
         .eq('id', id)
         .select()
 
     if (error) return { error }
 
-    // Send notification to customer
+    // Queue a database-backed, idempotent approval notification.
     if (listing && profile?.email) {
-        notifyCustomerListingApproved({
-            businessName: listing.business_name,
-            ownerEmail: profile.email,
-            ownerName: profile.full_name,
-            listingUrl: `${SITE_URL}/listings/${listing.slug}`
-        }).catch(console.error)
+        try {
+            await queueListingApprovedEmail({
+                listingId: listing.id,
+                userId: listing.user_id,
+                email: profile.email,
+                fullName: profile.full_name,
+                businessName: listing.business_name,
+                listingSlug: listing.slug,
+                planId: effectivePlan,
+            })
+        } catch (notificationError) {
+            console.error('Could not queue listing approval email:', notificationError)
+        }
     }
 
     revalidatePath('/admin/listings')

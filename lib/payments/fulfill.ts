@@ -1,9 +1,11 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPaymentPlan } from '@/lib/payments/plans'
 import { getPlanById as getSubscriptionPlanById, type PlanId } from '@/lib/pricing'
+import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
 import {
   PLAN_LIMITS,
   canCreateAnotherListing,
+  getApprovedListingPlanFlags,
   getMissingListingFields,
   sanitizeListingForPlan,
 } from '@/lib/entitlements'
@@ -150,7 +152,7 @@ export async function fulfillPaystackSuccess(input: {
 
   const { data: existingProfile, error: profileSelectError } = await supabase
     .from('profiles')
-    .select('id, subscription_plan, subscription_status, subscription_expires_at')
+    .select('id, email, full_name, subscription_plan, subscription_status, subscription_expires_at')
     .eq('id', payment.user_id)
     .single()
 
@@ -205,37 +207,34 @@ export async function fulfillPaystackSuccess(input: {
   }
 
   // A paid tier belongs to the account, not only to the listing attached to the
-  // checkout. Keep every active listing's public tier and approval benefits aligned.
-  const { error: tierSyncError } = await supabase
+  // checkout. Keep every active listing's public tier and moderation benefits aligned.
+  const { data: activeAccountListings, error: tierLookupError } = await supabase
     .from('listings')
-    .update({ plan_tier: effectivePlanId })
+    .select('id, status, plan_tier, featured, featured_until')
     .eq('user_id', payment.user_id)
     .in('status', ['pending', 'approved'])
-  if (tierSyncError) throw new Error(`Could not synchronize listing tiers: ${tierSyncError.message}`)
+  if (tierLookupError) throw new Error(`Could not load listings for tier synchronization: ${tierLookupError.message}`)
 
-  const approvedFlags: Record<string, unknown> = {
-    plan_tier: effectivePlanId,
-    verified: limits.hasVerifiedBadge,
-  }
-  if (effectivePlanId === 'basic') {
-    approvedFlags.featured = false
-    approvedFlags.featured_until = null
-  } else if (effectivePlanId === 'lifetime') {
-    approvedFlags.featured = true
-    approvedFlags.featured_until = periodEnd.toISOString()
-  }
-
-  const { error: approvalBenefitError } = await supabase
-    .from('listings')
-    .update(approvedFlags)
-    .eq('user_id', payment.user_id)
-    .eq('status', 'approved')
-  if (approvalBenefitError) {
-    throw new Error(`Could not synchronize approved listing benefits: ${approvalBenefitError.message}`)
+  for (const accountListing of activeAccountListings || []) {
+    const accountListingFlags = getApprovedListingPlanFlags(effectivePlanId, {
+      status: accountListing.status,
+      planTier: accountListing.plan_tier,
+      featured: accountListing.featured,
+      featuredUntil: accountListing.featured_until,
+    }, now)
+    const { error: tierSyncError } = await supabase
+      .from('listings')
+      .update(accountListingFlags)
+      .eq('id', accountListing.id)
+      .eq('user_id', payment.user_id)
+    if (tierSyncError) {
+      throw new Error(`Could not synchronize listing tier benefits: ${tierSyncError.message}`)
+    }
   }
 
   let listingId = payment.listing_id
   let listingSlug: string | null = null
+  let listingBusinessName: string | null = null
 
   if (!listingId && payment.metadata?.listing_data) {
     const rawListing = parseListingData(payment.metadata.listing_data)
@@ -282,6 +281,7 @@ export async function fulfillPaystackSuccess(input: {
 
     listingId = newListing.id
     listingSlug = newListing.slug
+    listingBusinessName = String(listingData.business_name)
     const { error: linkError } = await supabase
       .from('payments')
       .update({ listing_id: newListing.id })
@@ -292,7 +292,7 @@ export async function fulfillPaystackSuccess(input: {
   if (listingId) {
     const { data: listing, error: listingSelectError } = await supabase
       .from('listings')
-      .select('id, slug, status, user_id, description, images, website_url, website, opening_hours, business_hours, facebook_url, instagram_url, twitter_url, linkedin_url, year_established, established_year, employee_count, employee_count_range, keywords, featured, featured_until')
+      .select('id, business_name, slug, status, user_id, plan_tier, description, images, website_url, website, opening_hours, business_hours, facebook_url, instagram_url, twitter_url, linkedin_url, year_established, established_year, employee_count, employee_count_range, keywords, featured, featured_until')
       .eq('id', listingId)
       .eq('user_id', payment.user_id)
       .single()
@@ -302,6 +302,7 @@ export async function fulfillPaystackSuccess(input: {
     }
 
     listingSlug = listing.slug
+    listingBusinessName = listing.business_name
     const normalized = sanitizeListingForPlan(effectivePlanId, {
       description: listing.description,
       images: listing.images,
@@ -340,24 +341,56 @@ export async function fulfillPaystackSuccess(input: {
       employee_count: normalized.employee_count,
       employee_count_range: normalized.employee_count_range,
       keywords: normalized.keywords,
-      verified: listing.status === 'approved' && limits.hasVerifiedBadge,
+      ...getApprovedListingPlanFlags(effectivePlanId, {
+        status: listing.status,
+        planTier: listing.plan_tier,
+        featured: listing.featured,
+        featuredUntil: listing.featured_until,
+      }, now),
     }
-    const hasActiveFeaturedAddOn = Boolean(
-      effectivePlanId === 'premium' &&
-      listing.featured &&
-      listing.featured_until &&
-      new Date(listing.featured_until) > now
-    )
-    planFlags.featured = limits.hasFeaturedHomepage || hasActiveFeaturedAddOn
-    planFlags.featured_until = limits.hasFeaturedHomepage
-      ? periodEnd.toISOString()
-      : (hasActiveFeaturedAddOn ? listing.featured_until : null)
 
     const { error: flagError } = await supabase
       .from('listings')
       .update(planFlags)
       .eq('id', listingId)
     if (flagError) throw new Error(`Could not apply listing entitlements: ${flagError.message}`)
+  }
+
+  let customerEmail = typeof existingProfile.email === 'string' ? existingProfile.email.trim() : ''
+  let customerName = typeof existingProfile.full_name === 'string' ? existingProfile.full_name : null
+  if (!customerEmail) {
+    const { data: authUserData, error: authUserError } = await supabase.auth.admin.getUserById(payment.user_id)
+    if (authUserError) {
+      console.error('Could not load payment customer email for receipt:', authUserError)
+    } else {
+      customerEmail = authUserData.user?.email?.trim() || ''
+      customerName = customerName ||
+        (typeof authUserData.user?.user_metadata?.full_name === 'string'
+          ? authUserData.user.user_metadata.full_name
+          : null)
+    }
+  }
+
+  if (customerEmail) {
+    try {
+      await queuePaymentReceivedEmail({
+        reference: payment.reference,
+        email: customerEmail,
+        userId: payment.user_id,
+        listingId,
+        fullName: customerName,
+        businessName: listingBusinessName,
+        planId: purchasedPlan.id,
+        amountKobo: payment.amount,
+        currency: payment.currency,
+        paidAt: input.paidAt ?? payment.paid_at,
+        requiresAccountSetup: false,
+      })
+    } catch (notificationError) {
+      // Payment and entitlement activation remain authoritative. Email queue
+      // failures are logged and can be repaired without charging the user again.
+      console.error('Could not queue payment receipt:', notificationError)
+    }
   }
 
   return { paymentId: payment.id, listingId, listingSlug }

@@ -116,10 +116,25 @@ export const PLAN_LIMITS: Record<AccountPlanId, PlanLimits> = {
         hasAiDescription: true,
         hasAiReviewInsights: true,
         hasAnalytics: true,
-        hasPrioritySupport: true,
+        hasPrioritySupport: false,
         canClaimListings: true,
         canBuyFeaturedPlacement: false,
     },
+}
+
+export type ModeratedListingPlanInput = {
+    status?: unknown
+    planTier?: unknown
+    featured?: unknown
+    featuredUntil?: unknown
+}
+
+export type ModeratedListingPlanFlags = {
+    plan_tier: AccountPlanId
+    verified: boolean
+    featured: boolean
+    is_featured: boolean
+    featured_until: string | null
 }
 
 export type ProfileEntitlementState = {
@@ -205,6 +220,61 @@ export function getAccountPlanLimits(planId: AccountPlanId): PlanLimits {
 export function canCreateAnotherListing(planId: AccountPlanId, currentListingCount: number): boolean {
     const maxListings = PLAN_LIMITS[planId].maxListings
     return maxListings === -1 || currentListingCount < maxListings
+}
+
+export function getApprovedListingPlanFlags(
+    planId: AccountPlanId,
+    input: ModeratedListingPlanInput,
+    now = new Date()
+): ModeratedListingPlanFlags {
+    const limits = PLAN_LIMITS[planId]
+    const isApproved = input.status === 'approved'
+    const currentFeaturedUntil =
+        typeof input.featuredUntil === 'string' && input.featuredUntil.trim()
+            ? new Date(input.featuredUntil)
+            : null
+    const hasValidFeaturedExpiry = Boolean(
+        currentFeaturedUntil &&
+        !Number.isNaN(currentFeaturedUntil.getTime()) &&
+        currentFeaturedUntil > now
+    )
+    const premiumAddOnCutoff = new Date(now)
+    premiumAddOnCutoff.setUTCFullYear(premiumAddOnCutoff.getUTCFullYear() + 2)
+    const hasActivePremiumAddOn = Boolean(
+        planId === 'premium' &&
+        input.planTier === 'premium' &&
+        input.featured === true &&
+        hasValidFeaturedExpiry &&
+        currentFeaturedUntil &&
+        currentFeaturedUntil < premiumAddOnCutoff
+    )
+
+    let featuredUntil: string | null = null
+    if (isApproved && limits.hasFeaturedHomepage) {
+        const lifetimeExpiry = new Date(now)
+        lifetimeExpiry.setUTCFullYear(lifetimeExpiry.getUTCFullYear() + 100)
+        featuredUntil =
+            currentFeaturedUntil &&
+            !Number.isNaN(currentFeaturedUntil.getTime()) &&
+            currentFeaturedUntil > lifetimeExpiry
+                ? currentFeaturedUntil.toISOString()
+                : lifetimeExpiry.toISOString()
+    } else if (isApproved && hasActivePremiumAddOn && currentFeaturedUntil) {
+        featuredUntil = currentFeaturedUntil.toISOString()
+    }
+
+    const isFeatured = Boolean(
+        isApproved &&
+        (limits.hasFeaturedHomepage || hasActivePremiumAddOn)
+    )
+
+    return {
+        plan_tier: planId,
+        verified: Boolean(isApproved && limits.hasVerifiedBadge),
+        featured: isFeatured,
+        is_featured: isFeatured,
+        featured_until: featuredUntil,
+    }
 }
 
 export function listingLimitMessage(planId: AccountPlanId): string {

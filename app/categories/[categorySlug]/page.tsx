@@ -153,13 +153,19 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
       slug,
       description,
       phone,
+      plan_tier,
       verified,
+      featured,
+      featured_until,
       categories(id, name, slug),
       states(id, name, slug)
     `
     )
     .eq('category_id', category.id)
     .eq('status', 'approved')
+    .order('featured', { ascending: false })
+    .order('featured_until', { ascending: false, nullsFirst: false })
+    .order('verified', { ascending: false })
     .order('created_at', { ascending: false })
     .range(offset, offset + LISTINGS_PER_PAGE - 1)
 
@@ -677,7 +683,18 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
               {listings && listings.length > 0 && (
                 <div className="space-y-6 mb-12">
                   <h2 className="text-2xl font-bold text-gray-900">Browse {category.name} Listings</h2>
-              {filteredListings.map((listing) => (
+              {filteredListings.map((listing) => {
+                const featuredUntil = listing.featured_until
+                  ? new Date(listing.featured_until)
+                  : null
+                const hasActiveFeaturedPlacement = Boolean(
+                  listing.featured &&
+                  featuredUntil &&
+                  !Number.isNaN(featuredUntil.getTime()) &&
+                  featuredUntil > new Date()
+                )
+
+                return (
                     <Link
                       key={listing.id}
                       href={`/listings/${listing.slug}`}
@@ -705,18 +722,25 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                                   {listing.business_name}
                                 </h3>
                               </div>
-                              {listing.verified && (
-                                <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1 flex-shrink-0">
-                                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                      fillRule="evenodd"
-                                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                      clipRule="evenodd"
-                                    />
-                                  </svg>
-                                  Verified
-                                </span>
-                              )}
+                              <div className="flex flex-wrap justify-end gap-2">
+                                {hasActiveFeaturedPlacement && (
+                                  <span className="bg-amber-100 text-amber-900 text-xs px-3 py-1 rounded-full font-semibold flex-shrink-0">
+                                    Featured
+                                  </span>
+                                )}
+                                {listing.verified && (
+                                  <span className="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1 flex-shrink-0">
+                                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                      <path
+                                        fillRule="evenodd"
+                                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clipRule="evenodd"
+                                      />
+                                    </svg>
+                                    Verified
+                                  </span>
+                                )}
+                              </div>
                             </div>
 
                             {listing.description && (
@@ -756,7 +780,8 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
                         </div>
                       </div>
                     </Link>
-                  ))}
+                )
+              })}
                 </div>
               )}
 

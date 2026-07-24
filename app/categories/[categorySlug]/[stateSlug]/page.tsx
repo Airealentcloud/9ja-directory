@@ -197,16 +197,16 @@ export default async function CategoryStateListingPage({
 
 
 
-  // Fetch listings for this category + state combination.
-  // Order by columns that definitely exist (verified, created_at) to avoid
-  // query failures from optional columns like featured / average_rating.
-  // We try a richer sort first; on error we fall back to the safe sort.
+  // Fetch listings for this category + state combination. Active featured
+  // placements lead, followed by Verified listings and then recent listings.
   let { data: listings, count: totalCount, error: listingsError } = await supabase
     .from('listings')
-    .select('id, business_name, slug, description, tagline, logo_url, images, address, phone, verified, average_rating, city', { count: 'exact' })
+    .select('id, business_name, slug, description, tagline, logo_url, images, address, phone, plan_tier, verified, featured, featured_until, average_rating, city', { count: 'exact' })
     .eq('category_id', category.id)
     .eq('state_id', state.id)
     .eq('status', 'approved')
+    .order('featured', { ascending: false })
+    .order('featured_until', { ascending: false, nullsFirst: false })
     .order('verified', { ascending: false })
     .order('created_at', { ascending: false })
     .limit(30)
@@ -365,11 +365,20 @@ export default async function CategoryStateListingPage({
                     {topListing.description ? ` - ${topListing.description}` : '.'}
                   </p>
                 </div>
-                {topListing.verified && (
-                  <span className="inline-flex items-center gap-2 bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">
-                    Verified
-                  </span>
-                )}
+                <div className="flex flex-wrap gap-2">
+                  {topListing.featured &&
+                    topListing.featured_until &&
+                    new Date(topListing.featured_until) > new Date() && (
+                      <span className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 text-xs px-3 py-1 rounded-full font-semibold">
+                        Featured
+                      </span>
+                    )}
+                  {topListing.verified && (
+                    <span className="inline-flex items-center gap-2 bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">
+                      Verified
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="mt-5 flex flex-wrap gap-4 text-sm text-gray-600">
                 {Number.isFinite(topRating) && (
@@ -463,6 +472,15 @@ export default async function CategoryStateListingPage({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {listings.map((listing) => {
                 const imageUrl = getListingImage(listing)
+                const featuredUntil = listing.featured_until
+                  ? new Date(listing.featured_until)
+                  : null
+                const hasActiveFeaturedPlacement = Boolean(
+                  listing.featured &&
+                  featuredUntil &&
+                  !Number.isNaN(featuredUntil.getTime()) &&
+                  featuredUntil > new Date()
+                )
                 return (
                 <Link
                   key={listing.id}
@@ -483,8 +501,13 @@ export default async function CategoryStateListingPage({
                         {category.icon || '🏢'}
                       </div>
                     )}
+                    {hasActiveFeaturedPlacement && (
+                      <div className="absolute top-3 right-3 bg-amber-400 text-amber-950 px-3 py-1 rounded-full text-xs font-bold">
+                        Featured
+                      </div>
+                    )}
                     {listing.verified && (
-                      <div className="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                      <div className={`absolute ${hasActiveFeaturedPlacement ? 'top-12' : 'top-3'} right-3 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1`}>
                         ✓ Verified
                       </div>
                     )}

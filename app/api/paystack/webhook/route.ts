@@ -3,6 +3,7 @@ import { createHmac, timingSafeEqual } from 'crypto'
 import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPlanById, nairaToKobo } from '@/lib/pricing'
+import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -66,7 +67,7 @@ export async function POST(request: NextRequest) {
 
     const { data: lead, error: leadLookupError } = await supabase
       .from('payment_leads')
-      .select('id, plan, amount, currency')
+      .select('id, email, business_name, plan, amount, currency')
       .eq('reference', reference)
       .maybeSingle()
 
@@ -102,6 +103,22 @@ export async function POST(request: NextRequest) {
       .eq('id', lead.id)
 
     if (leadUpdateError) throw leadUpdateError
+
+    try {
+      await queuePaymentReceivedEmail({
+        reference,
+        email: lead.email,
+        businessName: lead.business_name,
+        planId: plan.id,
+        amountKobo,
+        currency,
+        paidAt: payload.data.paid_at ?? null,
+        requiresAccountSetup: true,
+      })
+    } catch (notificationError) {
+      console.error('Could not queue paid-lead receipt:', notificationError)
+    }
+
     return NextResponse.json({ received: true, linked: true })
   } catch (error) {
     console.error('Paystack webhook processing error:', error)

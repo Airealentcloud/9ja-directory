@@ -1,18 +1,21 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { getPlanById } from '@/lib/pricing'
 import { SITE_URL } from '@/lib/seo/site-url'
 
 const siteUrl = SITE_URL
+const premiumPlan = getPlanById('premium')!
+const lifetimePlan = getPlanById('lifetime')!
 
 export const metadata: Metadata = {
     title: 'Claim Your Business Listing | 9jaDirectory',
-    description: 'Own a business listed on 9jaDirectory? Claim your listing to manage your profile, reply to reviews, update photos, and attract more customers across Nigeria.',
+    description: 'Own a business listed on 9jaDirectory? Use a Premium or Lifetime plan to claim it, manage eligible profile fields, add photos, and track performance.',
     alternates: {
         canonical: `${siteUrl}/claim-your-business`,
     },
     openGraph: {
         title: 'Claim Your Business Listing | 9jaDirectory',
-        description: 'Own a business listed on 9jaDirectory? Claim your listing to manage your profile, reply to reviews, and attract more customers.',
+        description: 'Own a business listed on 9jaDirectory? Use a Premium or Lifetime plan to claim it, manage your profile, add photos, and track performance.',
         url: `${siteUrl}/claim-your-business`,
         siteName: '9jaDirectory',
         type: 'website',
@@ -29,7 +32,7 @@ export default function ClaimYourBusinessPage() {
                 </h1>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                     Is your business already listed? Take control of your listing to manage your profile,
-                    respond to reviews, and reach more customers across Nigeria.
+                    monitor customer feedback, and reach more customers across Nigeria.
                 </p>
             </div>
 
@@ -55,8 +58,8 @@ export default function ClaimYourBusinessPage() {
                             </svg>
                         </div>
                         <div>
-                            <h3 className="font-semibold text-gray-900">Reply to Reviews</h3>
-                            <p className="text-sm text-gray-600">Respond to customer reviews, build trust, and show you care about feedback.</p>
+                            <h3 className="font-semibold text-gray-900">Track Performance</h3>
+                            <p className="text-sm text-gray-600">View listing activity and monitor customer reviews from your account.</p>
                         </div>
                     </div>
                     <div className="flex gap-3">
@@ -67,7 +70,7 @@ export default function ClaimYourBusinessPage() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-gray-900">Get Verified</h3>
-                            <p className="text-sm text-gray-600">Earn a verified badge that tells customers your business is legitimate and trustworthy.</p>
+                            <p className="text-sm text-gray-600">Premium and Lifetime listings receive a Verified badge after approval.</p>
                         </div>
                     </div>
                     <div className="flex gap-3">
@@ -78,7 +81,7 @@ export default function ClaimYourBusinessPage() {
                         </div>
                         <div>
                             <h3 className="font-semibold text-gray-900">Boost Visibility</h3>
-                            <p className="text-sm text-gray-600">Get featured placement, appear higher in search results, and attract more customers.</p>
+                            <p className="text-sm text-gray-600">Premium improves your profile and analytics; Lifetime adds priority search and homepage placement.</p>
                         </div>
                     </div>
                 </div>
@@ -110,7 +113,7 @@ export default function ClaimYourBusinessPage() {
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Choose a Plan</h3>
                             <p className="text-gray-600 mb-3">
                                 To claim an existing listing, you need a <strong>Premium</strong> or <strong>Lifetime</strong> plan.
-                                This gives you full access to manage your listing, reply to reviews, and more.
+                                Your claimed listing counts toward that plan&apos;s listing allowance.
                             </p>
                             <div className="bg-gray-50 rounded-lg p-4 mb-3">
                                 <div className="grid sm:grid-cols-2 gap-4">
@@ -119,12 +122,12 @@ export default function ClaimYourBusinessPage() {
                                             <span className="text-sm font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded">Popular</span>
                                         </div>
                                         <h4 className="font-bold text-gray-900">Premium Plan</h4>
-                                        <p className="text-2xl font-bold text-gray-900 mt-1">{'\u20A6'}115,500 <span className="text-sm font-normal text-gray-500">one-time</span></p>
+                                        <p className="text-2xl font-bold text-gray-900 mt-1">{premiumPlan.priceFormatted} <span className="text-sm font-normal text-gray-500">one-time</span></p>
                                         <ul className="mt-3 space-y-1 text-sm text-gray-600">
                                             <li>5 business listings</li>
                                             <li>Claim existing listings</li>
-                                            <li>Reply to reviews</li>
-                                            <li>Top search placement</li>
+                                            <li>Verified badge after approval</li>
+                                            <li>Rich profile fields and analytics</li>
                                         </ul>
                                     </div>
                                     <div className="border border-green-300 rounded-lg p-4 bg-green-50">
@@ -132,12 +135,12 @@ export default function ClaimYourBusinessPage() {
                                             <span className="text-sm font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded">Best Value</span>
                                         </div>
                                         <h4 className="font-bold text-gray-900">Lifetime Plan</h4>
-                                        <p className="text-2xl font-bold text-gray-900 mt-1">{'\u20A6'}198,000 <span className="text-sm font-normal text-gray-500">one-time</span></p>
+                                        <p className="text-2xl font-bold text-gray-900 mt-1">{lifetimePlan.priceFormatted} <span className="text-sm font-normal text-gray-500">one-time</span></p>
                                         <ul className="mt-3 space-y-1 text-sm text-gray-600">
                                             <li>Unlimited listings</li>
                                             <li>Claim existing listings</li>
                                             <li>Featured on homepage</li>
-                                            <li>Verified badge + priority support</li>
+                                            <li>Verified badge + priority search</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -192,12 +195,12 @@ export default function ClaimYourBusinessPage() {
                     {[
                         'Edit business name, description, and contact details',
                         'Upload photos and your business logo',
-                        'Set your opening hours',
-                        'Reply to customer reviews',
+                        'Set opening hours on Premium and Lifetime',
+                        'View and monitor customer reviews',
                         'View listing analytics and insights',
-                        'Promote your listing to featured placement',
-                        'Add social media links',
-                        'Get a verified badge (Lifetime plan)',
+                        'Buy featured placement on Premium',
+                        'Add website and social links',
+                        'Get a Verified badge after approval',
                     ].map((item) => (
                         <div key={item} className="flex items-start gap-2">
                             <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,8 +219,8 @@ export default function ClaimYourBusinessPage() {
                     <div>
                         <h3 className="font-semibold text-gray-900 mb-2">How much does it cost to claim my listing?</h3>
                         <p className="text-gray-600">
-                            Claiming requires a Premium ({'\u20A6'}115,500) or Lifetime ({'\u20A6'}198,000) plan. These are one-time payments &mdash; no monthly fees.
-                            The plan also lets you add new listings, reply to reviews, and get top search placement.
+                            Claiming requires a Premium ({premiumPlan.priceFormatted}) or Lifetime ({lifetimePlan.priceFormatted}) plan. These are one-time payments &mdash; no monthly fees.
+                            Premium includes five listings and analytics; Lifetime includes unlimited listings, homepage placement, and priority search.
                         </p>
                     </div>
                     <div>
@@ -256,7 +259,7 @@ export default function ClaimYourBusinessPage() {
             <div className="bg-green-600 rounded-2xl p-8 text-center text-white">
                 <h2 className="text-2xl font-bold mb-3">Ready to Take Control of Your Listing?</h2>
                 <p className="text-green-100 mb-6 max-w-lg mx-auto">
-                    Join hundreds of Nigerian businesses managing their presence on 9jaDirectory.
+                    Join Nigerian businesses managing their directory presence on 9jaDirectory.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
@@ -287,7 +290,7 @@ export default function ClaimYourBusinessPage() {
                                 name: 'How much does it cost to claim my business listing on 9jaDirectory?',
                                 acceptedAnswer: {
                                     '@type': 'Answer',
-                                    text: 'Claiming requires a Premium (\u20A6115,500) or Lifetime (\u20A6198,000) plan. These are one-time payments with no monthly fees.',
+                                    text: `Claiming requires a Premium (${premiumPlan.priceFormatted}) or Lifetime (${lifetimePlan.priceFormatted}) plan. These are one-time payments with no monthly fees.`,
                                 },
                             },
                             {

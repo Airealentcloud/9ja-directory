@@ -21,7 +21,7 @@ export default function ClaimButton({ slug, isClaimed, isLoggedIn, canClaim }: C
                         Is this your business?
                     </h3>
                     <p className="text-xs text-blue-700 mb-3">
-                        Sign up and claim this listing to manage details, reply to reviews, and more.
+                        Sign up, choose an eligible plan, and claim this listing to manage its details and track performance.
                     </p>
                     <Link
                         href={`/signup?next=/listings/${slug}/claim`}
@@ -43,7 +43,7 @@ export default function ClaimButton({ slug, isClaimed, isLoggedIn, canClaim }: C
                         Is this your business?
                     </h3>
                     <p className="text-xs text-blue-700 mb-3">
-                        Upgrade to a Premium plan to claim this listing, manage details, and reply to reviews.
+                        Upgrade to Premium or Lifetime to claim this listing and manage its eligible profile fields.
                     </p>
                     <Link
                         href="/pricing"
@@ -64,7 +64,7 @@ export default function ClaimButton({ slug, isClaimed, isLoggedIn, canClaim }: C
                     Is this your business?
                 </h3>
                 <p className="text-xs text-blue-700 mb-3">
-                    Claim this listing to manage details, reply to reviews, and more.
+                    Claim this listing to manage its details, photos, reviews, and performance.
                 </p>
                 <Link
                     href={`/listings/${slug}/claim`}

@@ -95,7 +95,6 @@ export const PRICING_PLANS: PricingPlan[] = [
             'Featured homepage placement included',
             'Priority search placement',
             'AI Review Insights',
-            'Priority support',
             'Verified badge',
             'Never pay again',
         ],

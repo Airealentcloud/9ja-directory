@@ -8,7 +8,7 @@ const siteUrl = SITE_URL
 
 export const metadata: Metadata = {
   title: 'About Us | Nigeria Premier Business Directory | 9jaDirectory',
-  description: '9jaDirectory is Nigeria\'s most comprehensive business directory with verified listings across all 36 states. Find trusted businesses nationwide.',
+  description: '9jaDirectory is a nationwide Nigerian business directory with approved listings across all 36 states and the FCT, plus Verified badges on eligible plans.',
   keywords: 'about 9jaDirectory, Nigeria business directory, Nigerian business listings, verified businesses Nigeria, business directory Lagos, Abuja business listings, trusted Nigerian directory',
   openGraph: {
     title: 'About 9jaDirectory - Nigeria Leading Business Directory',
@@ -105,7 +105,7 @@ export default async function AboutPage() {
         name: 'What is 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '9jaDirectory is Nigeria most comprehensive online business directory, connecting millions of users with verified businesses and services across all 36 states plus FCT Abuja.',
+          text: '9jaDirectory is a nationwide online business directory connecting customers with approved businesses and services across all 36 states plus the FCT.',
         },
       },
       {
@@ -113,7 +113,7 @@ export default async function AboutPage() {
         name: 'Do I need a plan to list my business on 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. To publish a business listing, choose a plan and complete payment. This keeps listings verified and helps us maintain quality and visibility for businesses.',
+          text: 'Yes. To publish a business listing, choose a plan and complete payment. Every submission is reviewed before approval; Verified badges are included with Premium and Lifetime.',
         },
       },
       {
@@ -121,7 +121,7 @@ export default async function AboutPage() {
         name: 'How many businesses are listed on 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `9jaDirectory currently features ${totalListings || 10000}+ verified business listings across ${totalCategories || 50}+ categories, covering all 37 Nigerian states.`,
+          text: `9jaDirectory currently features ${(totalListings ?? 0).toLocaleString()} approved business listings across ${(totalCategories ?? 0).toLocaleString()} categories, covering all 36 Nigerian states plus the FCT.`,
         },
       },
       {
@@ -179,11 +179,11 @@ export default async function AboutPage() {
               <div className="text-4xl font-bold text-green-600 mb-2">
                 {(totalListings || 0).toLocaleString()}+
               </div>
-              <div className="text-gray-600 font-medium">Verified Businesses</div>
+              <div className="text-gray-600 font-medium">Approved Listings</div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">37</div>
-              <div className="text-gray-600 font-medium">States Covered</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">36 + FCT</div>
+              <div className="text-gray-600 font-medium">Nationwide Coverage</div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold text-green-600 mb-2">
@@ -199,7 +199,7 @@ export default async function AboutPage() {
             </h2>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
               At <strong>9jaDirectory</strong>, we are on a mission to transform how Nigerians discover and connect with local businesses and services.
-              We believe every business deserves visibility, and every Nigerian deserves easy access to trusted, verified service providers
+              We believe every business deserves visibility, and every Nigerian deserves easy access to trusted service providers
               across all 36 states plus FCT Abuja.
             </p>
             <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -221,7 +221,7 @@ export default async function AboutPage() {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   We offer transparent plans so businesses can choose the right level of visibility and support.
-                  Every plan includes verified profiles and nationwide exposure across Nigeria.
+                  Every approved plan includes nationwide exposure; Premium and Lifetime also include a Verified badge.
                 </p>
               </div>
 
@@ -231,15 +231,15 @@ export default async function AboutPage() {
                   Verified Business Profiles
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Every business on 9jaDirectory undergoes verification to ensure authenticity and reliability.
-                  Our {(verifiedBusinesses || 0).toLocaleString()}+ verified businesses give users confidence in their choices.
+                  Every submission is reviewed before publication. Premium and Lifetime businesses that pass review display a Verified badge.
+                  We currently show {(verifiedBusinesses ?? 0).toLocaleString()} verified approved listings.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                   <MapPin className="text-green-600 mr-3 shrink-0" size={24} />
-                  All 37 Nigerian States Coverage
+                  All 36 States plus the FCT
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   From Lagos to Sokoto, Calabar to Kebbi - we cover every state in Nigeria. Find businesses in
@@ -303,7 +303,7 @@ export default async function AboutPage() {
                 <h3 className="text-lg font-bold text-gray-900">Editorial Team</h3>
                 <p className="text-sm text-green-600 font-medium mb-2">Content & Research</p>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  A dedicated team of Nigerian business writers, researchers, and SEO specialists producing in-depth guides for entrepreneurs across all 37 states.
+                  A dedicated team of Nigerian business writers, researchers, and SEO specialists producing in-depth guides for entrepreneurs across all 36 states and the FCT.
                 </p>
               </div>
               <div className="text-center">
@@ -340,12 +340,12 @@ export default async function AboutPage() {
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="px-6 py-4 text-sm text-gray-700">States Coverage</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-bold">All 37 States</td>
+                    <td className="px-6 py-4 text-center text-green-600 font-bold">36 States + FCT</td>
                     <td className="px-6 py-4 text-center text-gray-500">Limited (Major cities)</td>
                   </tr>
                   <tr>
                     <td className="px-6 py-4 text-sm text-gray-700">Business Verification</td>
-                    <td className="px-6 py-4 text-center text-green-600 font-bold">Included</td>
+                    <td className="px-6 py-4 text-center text-green-600 font-bold">Premium &amp; Lifetime</td>
                     <td className="px-6 py-4 text-center text-gray-500">Premium only</td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -405,8 +405,8 @@ export default async function AboutPage() {
                   What is 9jaDirectory?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  9jaDirectory is Nigeria most comprehensive online business directory, connecting millions of users
-                  with verified businesses and services across all 36 states plus FCT Abuja. We provide paid listing
+                  9jaDirectory is a nationwide online business directory connecting customers
+                  with approved businesses and services across all 36 states plus FCT Abuja. We provide paid listing
                   plans, detailed profiles, customer reviews, and easy search functionality.
                 </p>
               </div>
@@ -416,8 +416,8 @@ export default async function AboutPage() {
                   Do I need a plan to list my business on 9jaDirectory?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Yes. To publish your listing, choose a plan and complete payment. This ensures verified listings and
-                  gives your business the right level of visibility.
+                  Yes. To publish your listing, choose a plan and complete payment. Every submission is reviewed before
+                  approval; Premium and Lifetime include a Verified badge.
                 </p>
               </div>
 
@@ -426,8 +426,8 @@ export default async function AboutPage() {
                   How many businesses are listed on 9jaDirectory?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  9jaDirectory currently features {(totalListings || 10000).toLocaleString()}+ verified business listings
-                  across {(totalCategories || 50).toLocaleString()}+ categories, covering all 37 Nigerian states from Lagos
+                  9jaDirectory currently features {(totalListings ?? 0).toLocaleString()} approved business listings
+                  across {(totalCategories ?? 0).toLocaleString()} categories, covering all 36 Nigerian states plus the FCT from Lagos
                   to Sokoto, Port Harcourt to Maiduguri.
                 </p>
               </div>
@@ -449,9 +449,9 @@ export default async function AboutPage() {
                   How do I get my business verified?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  After listing your business, our verification team will review your information. Verified businesses
-                  receive a special badge that builds trust with customers and improves visibility in search results.
-                  Verification is completely free.
+                  Choose Premium or Lifetime and submit your business information. Our team reviews the listing before
+                  approval, and eligible approved listings receive the Verified badge. Basic listings are reviewed but
+                  do not include that badge.
                 </p>
               </div>
 
@@ -460,8 +460,8 @@ export default async function AboutPage() {
                   How is 9jaDirectory different from VConnect or YelloPages Nigeria?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Unlike other directories, 9jaDirectory provides clear pricing, complete coverage of all 37 Nigerian
-                  states (not just major cities), verification included with every plan, and a modern, mobile-friendly
+                  9jaDirectory provides clear pricing, complete coverage of all 36 Nigerian
+                  states plus the FCT, plan-specific verification benefits, and a modern, mobile-friendly
                   platform designed specifically for Nigerian users.
                 </p>
               </div>
