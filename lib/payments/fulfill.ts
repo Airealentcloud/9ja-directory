@@ -170,7 +170,8 @@ export async function fulfillPaystackSuccess(input: {
     .upsert(
       {
         user_id: payment.user_id,
-        plan: effectivePlan.id,
+        plan_id: effectivePlan.id,
+        plan_name: effectivePlan.name,
         status: 'active',
         amount: payment.amount,
         currency: payment.currency,

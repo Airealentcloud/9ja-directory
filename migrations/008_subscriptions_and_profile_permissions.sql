@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
 
-  plan TEXT NOT NULL,
+  plan_id VARCHAR NOT NULL,
+  plan_name VARCHAR NOT NULL,
   status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'cancelled', 'expired', 'paused')),
 
   amount INTEGER,
