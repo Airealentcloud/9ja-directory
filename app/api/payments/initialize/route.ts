@@ -9,6 +9,10 @@ import {
     getMissingListingFields,
     sanitizeListingForPlan,
 } from '@/lib/entitlements'
+import {
+    isValidEmailAddress,
+    normalizeEmailAddress,
+} from '@/lib/validation/email'
 
 type InitializePayload = {
     plan_id?: PlanId
@@ -45,7 +49,17 @@ export async function POST(request: NextRequest) {
 
         let sanitizedListingData: Record<string, unknown> | null = null
         if (body.listing_data) {
-            const missingFields = getMissingListingFields(body.listing_data)
+            const listingInput = { ...body.listing_data }
+            const businessEmail = normalizeEmailAddress(listingInput.email)
+            if (businessEmail && !isValidEmailAddress(businessEmail)) {
+                return NextResponse.json(
+                    { error: 'Enter a valid business email address before payment.' },
+                    { status: 400 }
+                )
+            }
+            listingInput.email = businessEmail || normalizeEmailAddress(user.email)
+
+            const missingFields = getMissingListingFields(listingInput)
             if (missingFields.length > 0) {
                 return NextResponse.json(
                     { error: `Complete the required fields: ${missingFields.join(', ')}.` },
@@ -53,7 +67,7 @@ export async function POST(request: NextRequest) {
                 )
             }
 
-            const sanitized = sanitizeListingForPlan(plan.id, body.listing_data)
+            const sanitized = sanitizeListingForPlan(plan.id, listingInput)
             if (sanitized.errors.length > 0) {
                 return NextResponse.json({ error: sanitized.errors.join(' ') }, { status: 400 })
             }

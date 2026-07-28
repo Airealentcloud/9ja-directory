@@ -4,6 +4,8 @@ import { NextResponse } from 'next/server'
 import { resolveApplicationOrigin } from '@/lib/http/application-origin'
 import { getPlanById, type PlanId } from '@/lib/pricing'
 import { queueRegistrationCompleteEmail } from '@/lib/email/transactional'
+import { createAdminClient } from '@/lib/supabase/admin'
+import { ensureCustomerProfile } from '@/lib/payments/customer-profile'
 
 function safeInternalPath(value: string | null) {
     if (!value || !value.startsWith('/') || value.startsWith('//')) return '/'
@@ -44,6 +46,7 @@ export async function GET(request: Request) {
         if (!error) {
             if (data.user?.id && data.user.email) {
                 try {
+                    await ensureCustomerProfile(createAdminClient(), data.user.id)
                     await queueRegistrationCompleteEmail({
                         userId: data.user.id,
                         email: data.user.email,

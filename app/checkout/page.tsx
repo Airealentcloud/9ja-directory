@@ -5,6 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import Link from 'next/link'
 import { PRICING_PLANS, type PlanId } from '@/lib/pricing'
+import { isValidEmailAddress, normalizeEmailAddress } from '@/lib/validation/email'
 
 type Category = { id: string; name: string }
 type State = { id: string; name: string }
@@ -88,6 +89,10 @@ export default function CheckoutPage() {
             setError('City is required')
             return false
         }
+        if (email.trim() && !isValidEmailAddress(email)) {
+            setError('Enter a valid business email address')
+            return false
+        }
         return true
     }
 
@@ -110,7 +115,7 @@ export default function CheckoutPage() {
                 category_id: categoryId,
                 description: description.trim(),
                 phone: phone.trim(),
-                email: email.trim(),
+                email: normalizeEmailAddress(email || user?.email),
                 website_url: selectedPlan.limits.hasWebsiteUrl ? website.trim() : '',
                 whatsapp_number: whatsapp.trim(),
                 address: address.trim(),

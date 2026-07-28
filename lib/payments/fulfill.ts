@@ -2,6 +2,8 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { getPaymentPlan } from '@/lib/payments/plans'
 import { getPlanById as getSubscriptionPlanById, type PlanId } from '@/lib/pricing'
 import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
+import { ensureCustomerProfile } from '@/lib/payments/customer-profile'
+import { resolveListingEmail } from '@/lib/validation/email'
 import {
   PLAN_LIMITS,
   canCreateAnotherListing,
@@ -150,15 +152,10 @@ export async function fulfillPaystackSuccess(input: {
   const purchasedPlan = getSubscriptionPlanById(payment.plan as PlanId)
   if (!purchasedPlan) throw new Error(`Invalid subscription plan: ${payment.plan}`)
 
-  const { data: existingProfile, error: profileSelectError } = await supabase
-    .from('profiles')
-    .select('id, email, full_name, subscription_plan, subscription_status, subscription_expires_at')
-    .eq('id', payment.user_id)
-    .single()
-
-  if (profileSelectError || !existingProfile) {
-    throw new Error(profileSelectError?.message || 'Customer profile is missing')
-  }
+  // The database trigger normally creates this row during signup. This server-side
+  // repair keeps a paid customer from being stranded if that trigger was missing
+  // or temporarily failed.
+  const existingProfile = await ensureCustomerProfile(supabase, payment.user_id)
 
   const now = new Date()
   const effectivePlanId = chooseHigherPlan(existingProfile, purchasedPlan.id, now)
@@ -237,8 +234,15 @@ export async function fulfillPaystackSuccess(input: {
   let listingBusinessName: string | null = null
 
   if (!listingId && payment.metadata?.listing_data) {
-    const rawListing = parseListingData(payment.metadata.listing_data)
-    if (!rawListing) throw new Error('Paid listing data is missing')
+    const parsedListing = parseListingData(payment.metadata.listing_data)
+    if (!parsedListing) throw new Error('Paid listing data is missing')
+
+    const rawListing: Record<string, unknown> = {
+      ...parsedListing,
+      // Preserve a valid business email, but recover malformed legacy form data
+      // with the confirmed Supabase Auth email.
+      email: resolveListingEmail(parsedListing.email, existingProfile.email),
+    }
 
     const missingFields = getMissingListingFields(rawListing)
     if (missingFields.length > 0) {
