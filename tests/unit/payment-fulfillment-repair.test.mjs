@@ -38,6 +38,8 @@ test('payment fulfillment repairs a missing customer profile before activation',
   assert.match(fulfillment, /ensureCustomerProfile\(supabase, payment\.user_id\)/)
   assert.match(fulfillment, /plan_id: effectivePlan\.id/)
   assert.match(fulfillment, /plan_name: effectivePlan\.name/)
+  assert.doesNotMatch(fulfillment, /onConflict: 'user_id'/)
+  assert.match(fulfillment, /\.order\('created_at', \{ ascending: false \}\)/)
   assert.match(read('app/auth/callback/route.ts'), /ensureCustomerProfile/)
 })
 

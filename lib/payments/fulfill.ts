@@ -165,22 +165,39 @@ export async function fulfillPaystackSuccess(input: {
   const periodEnd = new Date(now)
   periodEnd.setFullYear(periodEnd.getFullYear() + 100)
 
-  const { error: subscriptionError } = await supabase
+  const subscriptionRecord = {
+    user_id: payment.user_id,
+    plan_id: effectivePlan.id,
+    plan_name: effectivePlan.name,
+    status: 'active',
+    amount: payment.amount,
+    currency: payment.currency,
+    interval: effectivePlan.interval,
+    current_period_start: now.toISOString(),
+    current_period_end: periodEnd.toISOString(),
+  }
+  const { data: existingSubscription, error: subscriptionLookupError } = await supabase
     .from('subscriptions')
-    .upsert(
-      {
-        user_id: payment.user_id,
-        plan_id: effectivePlan.id,
-        plan_name: effectivePlan.name,
-        status: 'active',
-        amount: payment.amount,
-        currency: payment.currency,
-        interval: effectivePlan.interval,
-        current_period_start: now.toISOString(),
-        current_period_end: periodEnd.toISOString(),
-      },
-      { onConflict: 'user_id' }
-    )
+    .select('id')
+    .eq('user_id', payment.user_id)
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle()
+
+  if (subscriptionLookupError) {
+    throw new Error(`Could not load subscription: ${subscriptionLookupError.message}`)
+  }
+
+  const subscriptionWrite = existingSubscription
+    ? supabase
+        .from('subscriptions')
+        .update(subscriptionRecord)
+        .eq('id', existingSubscription.id)
+    : supabase
+        .from('subscriptions')
+        .insert(subscriptionRecord)
+
+  const { error: subscriptionError } = await subscriptionWrite
 
   if (subscriptionError) throw new Error(`Could not activate subscription: ${subscriptionError.message}`)
 
