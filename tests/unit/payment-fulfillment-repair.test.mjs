@@ -34,12 +34,15 @@ test('fulfillment replaces malformed legacy listing email with the Auth email', 
 
 test('payment fulfillment repairs a missing customer profile before activation', () => {
   const fulfillment = read('lib/payments/fulfill.ts')
+  const verification = read('app/api/payments/verify/route.ts')
 
   assert.match(fulfillment, /ensureCustomerProfile\(supabase, payment\.user_id\)/)
   assert.match(fulfillment, /plan_id: effectivePlan\.id/)
   assert.match(fulfillment, /plan_name: effectivePlan\.name/)
   assert.doesNotMatch(fulfillment, /onConflict: 'user_id'/)
   assert.match(fulfillment, /\.order\('created_at', \{ ascending: false \}\)/)
+  assert.match(verification, /fulfilledListingId = fulfillment\.listingId/)
+  assert.match(verification, /listing_id: fulfilledListingId/)
   assert.match(read('app/auth/callback/route.ts'), /ensureCustomerProfile/)
 })
 

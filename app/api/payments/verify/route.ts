@@ -70,13 +70,15 @@ export async function GET(request: NextRequest) {
                 return paymentMismatchResponse()
             }
 
+            let fulfilledListingId = paymentRow.listing_id
             if (status === 'success') {
-                await fulfillPaystackSuccess({
+                const fulfillment = await fulfillPaystackSuccess({
                     reference,
                     amountKobo,
                     currency,
                     paidAt: paymentData.paid_at ?? null,
                 })
+                fulfilledListingId = fulfillment.listingId
             } else {
                 const { error: updateError } = await supabaseAdmin
                     .from('payments')
@@ -94,7 +96,7 @@ export async function GET(request: NextRequest) {
                     reference,
                     paid_at: paymentData.paid_at,
                     plan_id: paymentRow.plan,
-                    listing_id: paymentRow.listing_id,
+                    listing_id: fulfilledListingId,
                     requires_account: false,
                 },
             })
