@@ -48,24 +48,6 @@ export async function POST(request: NextRequest) {
     const currency = payload.data.currency ?? 'NGN'
     const supabase = createAdminClient()
 
-    const { data: paymentRow, error: paymentError } = await supabase
-      .from('payments')
-      .select('id')
-      .eq('reference', reference)
-      .maybeSingle()
-
-    if (paymentError) throw paymentError
-
-    if (paymentRow?.id) {
-      await fulfillPaystackSuccess({
-        reference,
-        amountKobo,
-        currency,
-        paidAt: payload.data.paid_at ?? null,
-      })
-      return NextResponse.json({ received: true })
-    }
-
     const { data: lead, error: leadLookupError } = await supabase
       .from('payment_leads')
       .select('id, email, business_name, plan, amount, currency')
@@ -73,6 +55,27 @@ export async function POST(request: NextRequest) {
       .maybeSingle()
 
     if (leadLookupError) throw leadLookupError
+
+    if (!lead) {
+      const { data: paymentRow, error: paymentError } = await supabase
+        .from('payments')
+        .select('id')
+        .eq('reference', reference)
+        .maybeSingle()
+
+      if (paymentError) throw paymentError
+
+      if (paymentRow?.id) {
+        await fulfillPaystackSuccess({
+          reference,
+          amountKobo,
+          currency,
+          paidAt: payload.data.paid_at ?? null,
+        })
+        return NextResponse.json({ received: true })
+      }
+    }
+
     if (!lead) {
       console.error('Paystack webhook reference was not found locally:', reference)
       return NextResponse.json({ received: true, linked: false })

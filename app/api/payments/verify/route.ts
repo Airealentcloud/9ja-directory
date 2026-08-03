@@ -51,15 +51,39 @@ export async function GET(request: NextRequest) {
         const amountKobo = paymentData.amount ?? 0
         const supabaseAdmin = createAdminClient()
 
-        verificationStage = 'payment-record-lookup'
-        const { data: paymentRow, error: paymentLookupError } = await supabaseAdmin
-            .from('payments')
-            .select('id, plan, amount, currency, listing_id')
+        // Public checkout references live in payment_leads. Check that source
+        // first so old payments-table casts cannot block a valid public payment.
+        verificationStage = 'payment-lead-lookup'
+        const { data: lead, error: leadLookupError } = await supabaseAdmin
+            .from('payment_leads')
+            .select('id, user_id, listing_id, email, business_name, phone, plan, amount, currency')
             .eq('reference', reference)
             .maybeSingle()
 
-        if (paymentLookupError) {
-            return NextResponse.json({ error: paymentLookupError.message }, { status: 500 })
+        if (leadLookupError) {
+            return NextResponse.json({ error: leadLookupError.message }, { status: 500 })
+        }
+
+        let paymentRow: {
+            id: string
+            plan: string
+            amount: number
+            currency: string
+            listing_id: string | null
+        } | null = null
+
+        if (!lead) {
+            verificationStage = 'payment-record-lookup'
+            const { data, error: paymentLookupError } = await supabaseAdmin
+                .from('payments')
+                .select('id, plan, amount, currency, listing_id')
+                .eq('reference', reference)
+                .maybeSingle()
+
+            if (paymentLookupError) {
+                return NextResponse.json({ error: paymentLookupError.message }, { status: 500 })
+            }
+            paymentRow = data
         }
 
         if (paymentRow?.id) {
@@ -106,16 +130,9 @@ export async function GET(request: NextRequest) {
             })
         }
 
-        verificationStage = 'payment-lead-lookup'
-        const { data: lead, error: leadLookupError } = await supabaseAdmin
-            .from('payment_leads')
-            .select('id, user_id, listing_id, email, business_name, phone, plan, amount, currency')
-            .eq('reference', reference)
-            .maybeSingle()
-
-        if (leadLookupError || !lead) {
+        if (!lead) {
             return NextResponse.json(
-                { error: leadLookupError?.message || 'Payment reference not found' },
+                { error: 'Payment reference not found' },
                 { status: 404 }
             )
         }

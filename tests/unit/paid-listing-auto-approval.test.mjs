@@ -30,3 +30,11 @@ test('legacy paid-at column width cannot block verified payment status', () => {
   assert.match(fs.readFileSync('app/api/payments/verify/route.ts', 'utf8'), /updateVerifiedPaymentLead/)
   assert.match(fs.readFileSync('app/api/paystack/webhook/route.ts', 'utf8'), /updateVerifiedPaymentLead/)
 })
+
+test('public payment leads are checked before legacy payment records', () => {
+  const verifySource = fs.readFileSync('app/api/payments/verify/route.ts', 'utf8')
+  assert.ok(verifySource.indexOf(".from('payment_leads')") < verifySource.indexOf(".from('payments')"))
+
+  const webhookSource = fs.readFileSync('app/api/paystack/webhook/route.ts', 'utf8')
+  assert.ok(webhookSource.indexOf(".from('payment_leads')") < webhookSource.indexOf(".from('payments')"))
+})
