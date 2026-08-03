@@ -90,14 +90,29 @@ export async function fulfillPaystackSuccess(input: {
   amountKobo: number
   currency: string
   paidAt?: string | null
+  userId?: string | null
+  planId?: string | null
 }) {
   const supabase = createAdminClient()
 
-  const { data: paymentRaw, error: paymentError } = await supabase
-    .from('payments')
-    .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
-    .eq('reference', input.reference)
-    .single()
+  const paymentLookup = input.userId && input.planId
+    ? await supabase
+        .from('payments')
+        .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
+        .eq('user_id', input.userId)
+        .eq('plan', input.planId)
+        .eq('amount', input.amountKobo)
+        .eq('currency', input.currency)
+        .order('created_at', { ascending: false })
+        .limit(20)
+    : await supabase
+        .from('payments')
+        .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
+        .eq('reference', input.reference)
+        .limit(1)
+
+  const paymentRaw = (paymentLookup.data || []).find((row) => row.reference === input.reference)
+  const paymentError = paymentLookup.error
 
   if (paymentError || !paymentRaw) {
     throw new Error(`Payment not found for reference: ${input.reference}`)

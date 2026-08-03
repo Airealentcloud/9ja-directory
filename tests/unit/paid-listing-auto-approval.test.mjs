@@ -38,3 +38,13 @@ test('public payment leads are checked before legacy payment records', () => {
   const webhookSource = fs.readFileSync('app/api/paystack/webhook/route.ts', 'utf8')
   assert.ok(webhookSource.indexOf(".from('payment_leads')") < webhookSource.indexOf(".from('payments')"))
 })
+
+test('signed-in payments use trusted Paystack metadata before matching the reference', () => {
+  const verifySource = fs.readFileSync('app/api/payments/verify/route.ts', 'utf8')
+  assert.match(verifySource, /metadataUserId/)
+  assert.match(verifySource, /\.eq\('user_id', metadataUserId\)/)
+  assert.match(verifySource, /find\(\(row\) => row\.reference === reference\)/)
+
+  assert.match(fulfillmentSource, /input\.userId && input\.planId/)
+  assert.match(fulfillmentSource, /find\(\(row\) => row\.reference === input\.reference\)/)
+})

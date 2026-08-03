@@ -36,7 +36,14 @@ export async function POST(request: NextRequest) {
 
     const payload = JSON.parse(rawBody) as {
       event?: string
-      data?: { reference?: string; status?: string; amount?: number; currency?: string; paid_at?: string }
+      data?: {
+        reference?: string
+        status?: string
+        amount?: number
+        currency?: string
+        paid_at?: string
+        metadata?: { user_id?: string; plan_id?: string }
+      }
     }
 
     if (payload.event !== 'charge.success' || !payload.data?.reference) {
@@ -57,11 +64,26 @@ export async function POST(request: NextRequest) {
     if (leadLookupError) throw leadLookupError
 
     if (!lead) {
-      const { data: paymentRow, error: paymentError } = await supabase
-        .from('payments')
-        .select('id')
-        .eq('reference', reference)
-        .maybeSingle()
+      const metadataUserId = payload.data.metadata?.user_id?.trim()
+      const metadataPlanId = payload.data.metadata?.plan_id?.trim()
+      const paymentLookup = metadataUserId && metadataPlanId
+        ? await supabase
+            .from('payments')
+            .select('id, reference')
+            .eq('user_id', metadataUserId)
+            .eq('plan', metadataPlanId)
+            .eq('amount', amountKobo)
+            .eq('currency', currency)
+            .order('created_at', { ascending: false })
+            .limit(20)
+        : await supabase
+            .from('payments')
+            .select('id, reference')
+            .eq('reference', reference)
+            .limit(1)
+
+      const paymentRow = (paymentLookup.data || []).find((row) => row.reference === reference)
+      const paymentError = paymentLookup.error
 
       if (paymentError) throw paymentError
 
@@ -71,6 +93,8 @@ export async function POST(request: NextRequest) {
           amountKobo,
           currency,
           paidAt: payload.data.paid_at ?? null,
+          userId: payload.data.metadata?.user_id,
+          planId: payload.data.metadata?.plan_id,
         })
         return NextResponse.json({ received: true })
       }

@@ -74,16 +74,28 @@ export async function GET(request: NextRequest) {
 
         if (!lead) {
             verificationStage = 'payment-record-lookup'
-            const { data, error: paymentLookupError } = await supabaseAdmin
-                .from('payments')
-                .select('id, plan, amount, currency, listing_id')
-                .eq('reference', reference)
-                .maybeSingle()
+            const metadataUserId = paymentData.metadata?.user_id?.trim()
+            const metadataPlanId = paymentData.metadata?.plan_id?.trim()
+            const lookup = metadataUserId && metadataPlanId
+                ? await supabaseAdmin
+                    .from('payments')
+                    .select('id, reference, plan, amount, currency, listing_id')
+                    .eq('user_id', metadataUserId)
+                    .eq('plan', metadataPlanId)
+                    .eq('amount', amountKobo)
+                    .eq('currency', currency)
+                    .order('created_at', { ascending: false })
+                    .limit(20)
+                : await supabaseAdmin
+                    .from('payments')
+                    .select('id, reference, plan, amount, currency, listing_id')
+                    .eq('reference', reference)
+                    .limit(1)
 
-            if (paymentLookupError) {
-                return NextResponse.json({ error: paymentLookupError.message }, { status: 500 })
+            if (lookup.error) {
+                return NextResponse.json({ error: lookup.error.message }, { status: 500 })
             }
-            paymentRow = data
+            paymentRow = (lookup.data || []).find((row) => row.reference === reference) || null
         }
 
         if (paymentRow?.id) {
@@ -105,6 +117,8 @@ export async function GET(request: NextRequest) {
                     amountKobo,
                     currency,
                     paidAt: paymentData.paid_at ?? null,
+                    userId: paymentData.metadata?.user_id,
+                    planId: paymentData.metadata?.plan_id,
                 })
                 fulfilledListingId = fulfillment.listingId
             } else {
