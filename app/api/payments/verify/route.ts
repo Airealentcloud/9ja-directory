@@ -94,6 +94,8 @@ export async function GET(request: NextRequest) {
                     .from('payments')
                     .select('id, user_id, reference, plan, amount, currency, listing_id')
                     .eq('user_id', paymentLookupUserId)
+                    .eq('status', 'success')
+                    .is('listing_id', null)
                     .eq('amount', amountKobo)
                     .eq('currency', currency)
                     .order('created_at', { ascending: false })
@@ -101,6 +103,8 @@ export async function GET(request: NextRequest) {
                 : await supabaseAdmin
                     .from('payments')
                     .select('id, user_id, reference, plan, amount, currency, listing_id')
+                    .eq('status', 'success')
+                    .is('listing_id', null)
                     .order('created_at', { ascending: false })
                     .limit(500)
 

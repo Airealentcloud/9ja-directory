@@ -101,6 +101,7 @@ export async function fulfillPaystackSuccess(input: {
         .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
         .eq('user_id', input.userId)
         .eq('plan', input.planId)
+        .eq('status', 'success')
         .eq('amount', input.amountKobo)
         .eq('currency', input.currency)
         .order('created_at', { ascending: false })
