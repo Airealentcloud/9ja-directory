@@ -44,6 +44,7 @@ test('signed-in payments use trusted Paystack metadata before matching the refer
   assert.match(verifySource, /find\(\(row\) => row\.reference === reference\)/)
   assert.match(verifySource, /\.limit\(500\)/)
   assert.match(verifySource, /paymentId: paymentRow\.id/)
+  assert.match(verifySource, /const paymentReader = await createClient\(\)/)
 
   assert.match(fulfillmentSource, /input\.paymentId/)
   assert.match(fulfillmentSource, /\.eq\('id', input\.paymentId\)/)

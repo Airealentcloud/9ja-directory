@@ -74,7 +74,8 @@ export async function GET(request: NextRequest) {
         } | null = null
         if (!lead) {
             verificationStage = 'payment-record-lookup'
-            const lookup = await supabaseAdmin
+            const paymentReader = await createClient()
+            const lookup = await paymentReader
                 .from('payments')
                 .select('id, user_id, reference, plan, amount, currency, listing_id')
                 .eq('status', 'success')
@@ -102,6 +103,7 @@ export async function GET(request: NextRequest) {
 
             let fulfilledListingId = paymentRow.listing_id
             if (status === 'success') {
+                verificationStage = 'payment-fulfillment'
                 const fulfillment = await fulfillPaystackSuccess({
                     reference,
                     amountKobo,
