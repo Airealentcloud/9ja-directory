@@ -71,17 +71,28 @@ export async function GET(request: NextRequest) {
             currency: string
             listing_id: string | null
         } | null = null
+        let paymentLookupUserId = paymentData.metadata?.user_id?.trim() || ''
 
         if (!lead) {
             verificationStage = 'payment-record-lookup'
-            const metadataUserId = paymentData.metadata?.user_id?.trim()
-            const metadataPlanId = paymentData.metadata?.plan_id?.trim()
-            const lookup = metadataUserId && metadataPlanId
+            if (!paymentLookupUserId && paymentData.customer?.email) {
+                const { data: paymentProfile, error: profileLookupError } = await supabaseAdmin
+                    .from('profiles')
+                    .select('id')
+                    .ilike('email', paymentData.customer.email.trim())
+                    .maybeSingle()
+
+                if (profileLookupError) {
+                    return NextResponse.json({ error: profileLookupError.message }, { status: 500 })
+                }
+                paymentLookupUserId = paymentProfile?.id || ''
+            }
+
+            const lookup = paymentLookupUserId
                 ? await supabaseAdmin
                     .from('payments')
                     .select('id, reference, plan, amount, currency, listing_id')
-                    .eq('user_id', metadataUserId)
-                    .eq('plan', metadataPlanId)
+                    .eq('user_id', paymentLookupUserId)
                     .eq('amount', amountKobo)
                     .eq('currency', currency)
                     .order('created_at', { ascending: false })
@@ -117,8 +128,8 @@ export async function GET(request: NextRequest) {
                     amountKobo,
                     currency,
                     paidAt: paymentData.paid_at ?? null,
-                    userId: paymentData.metadata?.user_id,
-                    planId: paymentData.metadata?.plan_id,
+                    userId: paymentLookupUserId,
+                    planId: paymentRow.plan,
                 })
                 fulfilledListingId = fulfillment.listingId
             } else {

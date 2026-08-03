@@ -41,8 +41,9 @@ test('public payment leads are checked before legacy payment records', () => {
 
 test('signed-in payments use trusted Paystack metadata before matching the reference', () => {
   const verifySource = fs.readFileSync('app/api/payments/verify/route.ts', 'utf8')
-  assert.match(verifySource, /metadataUserId/)
-  assert.match(verifySource, /\.eq\('user_id', metadataUserId\)/)
+  assert.match(verifySource, /paymentLookupUserId/)
+  assert.match(verifySource, /paymentData\.customer\.email/)
+  assert.match(verifySource, /\.eq\('user_id', paymentLookupUserId\)/)
   assert.match(verifySource, /find\(\(row\) => row\.reference === reference\)/)
 
   assert.match(fulfillmentSource, /input\.userId && input\.planId/)
