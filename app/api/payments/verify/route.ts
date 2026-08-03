@@ -25,12 +25,14 @@ function paymentMismatchResponse() {
 }
 
 export async function GET(request: NextRequest) {
+    let verificationStage = 'request'
     try {
         const reference = request.nextUrl.searchParams.get('reference')?.trim()
         if (!reference) {
             return NextResponse.json({ error: 'Payment reference is required' }, { status: 400 })
         }
 
+        verificationStage = 'paystack-verification'
         const verification = await verifyPayment(reference)
         if (!verification.status) {
             return NextResponse.json(
@@ -49,6 +51,7 @@ export async function GET(request: NextRequest) {
         const amountKobo = paymentData.amount ?? 0
         const supabaseAdmin = createAdminClient()
 
+        verificationStage = 'payment-record-lookup'
         const { data: paymentRow, error: paymentLookupError } = await supabaseAdmin
             .from('payments')
             .select('id, plan, amount, currency, listing_id')
@@ -103,6 +106,7 @@ export async function GET(request: NextRequest) {
             })
         }
 
+        verificationStage = 'payment-lead-lookup'
         const { data: lead, error: leadLookupError } = await supabaseAdmin
             .from('payment_leads')
             .select('id, user_id, listing_id, email, business_name, phone, plan, amount, currency')
@@ -129,6 +133,7 @@ export async function GET(request: NextRequest) {
             return paymentMismatchResponse()
         }
 
+        verificationStage = 'payment-lead-update'
         await updateVerifiedPaymentLead(supabaseAdmin, {
             id: lead.id,
             status,
@@ -140,6 +145,7 @@ export async function GET(request: NextRequest) {
         let accountExists = Boolean(lead.user_id)
         let linkError: string | null = null
         if (status === 'success') {
+            verificationStage = 'signed-in-customer-lookup'
             const userSupabase = await createClient()
             const { data: { user } } = await userSupabase.auth.getUser()
             const signedInEmail = user?.email?.trim().toLowerCase()
@@ -148,6 +154,7 @@ export async function GET(request: NextRequest) {
             if (user?.id && signedInEmail && signedInEmail === paidEmail) {
                 accountExists = true
                 try {
+                    verificationStage = 'customer-payment-linking'
                     const linked = await linkSuccessfulLeadToUser({
                         reference,
                         userId: user.id,
@@ -163,6 +170,7 @@ export async function GET(request: NextRequest) {
             }
 
             try {
+                verificationStage = 'payment-receipt'
                 await queuePaymentReceivedEmail({
                     reference,
                     email: lead.email,
@@ -201,7 +209,11 @@ export async function GET(request: NextRequest) {
             },
         })
     } catch (error) {
-        console.error('Payment verification error:', error)
+        console.error('Payment verification error:', {
+            stage: verificationStage,
+            message: error instanceof Error ? error.message : String(error),
+            stack: error instanceof Error ? error.stack : undefined,
+        })
         return NextResponse.json(
             { error: error instanceof Error ? error.message : 'Failed to verify payment' },
             { status: 500 }
