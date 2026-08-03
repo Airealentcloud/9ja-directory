@@ -7,6 +7,7 @@ import {
     getApprovedListingPlanFlags,
     resolveAccountPlan,
     resolvePublicListingPlan,
+    normalizeWhatsAppNumber,
     sanitizeListingForPlan,
 } from '../../lib/entitlements.ts'
 
@@ -67,6 +68,15 @@ test('listing quotas differ for Basic, Premium and Lifetime', () => {
     assert.equal(canCreateAnotherListing('premium', 4), true)
     assert.equal(canCreateAnotherListing('premium', 5), false)
     assert.equal(canCreateAnotherListing('lifetime', 10_000), true)
+})
+
+test('legacy WhatsApp values are normalized to the database contact limit', () => {
+    assert.equal(
+        normalizeWhatsAppNumber('https://wa.me/+234 803 123 4567?text=Hello'),
+        '+2348031234567'
+    )
+    assert.equal(normalizeWhatsAppNumber('Call: 0803-123-4567 / 0812-000-0000'), '08031234567')
+    assert.equal(normalizeWhatsAppNumber('not provided'), null)
 })
 
 test('Basic strips Premium fields and reports its content limits', () => {

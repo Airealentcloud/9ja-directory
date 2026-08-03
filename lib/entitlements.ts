@@ -147,6 +147,7 @@ export type ProfileEntitlementState = {
 export type ListingEntitlementInput = Record<string, unknown> & {
     description?: unknown
     images?: unknown
+    whatsapp_number?: unknown
     website_url?: unknown
     website?: unknown
     opening_hours?: unknown
@@ -306,6 +307,26 @@ export function normalizeListingImages(value: unknown): string[] {
     )
 }
 
+export function normalizeWhatsAppNumber(value: unknown): string | null {
+    if (typeof value !== 'string') return null
+
+    const candidate = value.trim()
+    if (!candidate) return null
+
+    // Legacy checkout data sometimes stored a formatted number or a wa.me URL.
+    // The production column is VARCHAR(20), so retain one dialable number and
+    // remove presentation characters before writing it back to the listing.
+    const phoneMatch = candidate.match(/\+?\d[\d\s().-]{6,}/)
+    if (!phoneMatch) return null
+
+    const matched = phoneMatch[0]
+    const hasLeadingPlus = matched.trim().startsWith('+')
+    const digits = matched.replace(/\D/g, '')
+    if (!digits) return null
+
+    return `${hasLeadingPlus ? '+' : ''}${digits}`.slice(0, 20)
+}
+
 export function sanitizeListingForPlan<T extends ListingEntitlementInput>(
     planId: AccountPlanId,
     input: T
@@ -318,6 +339,7 @@ export function sanitizeListingForPlan<T extends ListingEntitlementInput>(
 
     value.description = description
     value.images = images.slice(0, Math.max(0, limits.maxPhotos))
+    value.whatsapp_number = normalizeWhatsAppNumber(input.whatsapp_number)
 
     if (limits.maxDescriptionLength !== -1 && description.length > limits.maxDescriptionLength) {
         errors.push(
