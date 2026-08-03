@@ -45,6 +45,7 @@ test('signed-in payments use trusted Paystack metadata before matching the refer
   assert.match(verifySource, /paymentData\.customer\.email/)
   assert.match(verifySource, /\.eq\('user_id', paymentLookupUserId\)/)
   assert.match(verifySource, /find\(\(row\) => row\.reference === reference\)/)
+  assert.match(verifySource, /\.limit\(500\)/)
 
   assert.match(fulfillmentSource, /input\.userId && input\.planId/)
   assert.match(fulfillmentSource, /find\(\(row\) => row\.reference === input\.reference\)/)

@@ -79,8 +79,8 @@ export async function POST(request: NextRequest) {
         : await supabase
             .from('payments')
             .select('id, reference')
-            .eq('reference', reference)
-            .limit(1)
+            .order('created_at', { ascending: false })
+            .limit(500)
 
       const paymentRow = (paymentLookup.data || []).find((row) => row.reference === reference)
       const paymentError = paymentLookup.error

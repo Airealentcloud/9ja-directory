@@ -66,6 +66,7 @@ export async function GET(request: NextRequest) {
 
         let paymentRow: {
             id: string
+            user_id: string
             plan: string
             amount: number
             currency: string
@@ -91,7 +92,7 @@ export async function GET(request: NextRequest) {
             const lookup = paymentLookupUserId
                 ? await supabaseAdmin
                     .from('payments')
-                    .select('id, reference, plan, amount, currency, listing_id')
+                    .select('id, user_id, reference, plan, amount, currency, listing_id')
                     .eq('user_id', paymentLookupUserId)
                     .eq('amount', amountKobo)
                     .eq('currency', currency)
@@ -99,9 +100,9 @@ export async function GET(request: NextRequest) {
                     .limit(20)
                 : await supabaseAdmin
                     .from('payments')
-                    .select('id, reference, plan, amount, currency, listing_id')
-                    .eq('reference', reference)
-                    .limit(1)
+                    .select('id, user_id, reference, plan, amount, currency, listing_id')
+                    .order('created_at', { ascending: false })
+                    .limit(500)
 
             if (lookup.error) {
                 return NextResponse.json({ error: lookup.error.message }, { status: 500 })
@@ -128,7 +129,7 @@ export async function GET(request: NextRequest) {
                     amountKobo,
                     currency,
                     paidAt: paymentData.paid_at ?? null,
-                    userId: paymentLookupUserId,
+                    userId: paymentRow.user_id,
                     planId: paymentRow.plan,
                 })
                 fulfilledListingId = fulfillment.listingId
