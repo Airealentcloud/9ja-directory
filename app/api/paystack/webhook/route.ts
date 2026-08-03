@@ -4,6 +4,7 @@ import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPlanById, nairaToKobo } from '@/lib/pricing'
 import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
+import { updateVerifiedPaymentLead } from '@/lib/payments/update-lead-status'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -97,12 +98,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ received: true, linked: false })
     }
 
-    const { error: leadUpdateError } = await supabase
-      .from('payment_leads')
-      .update({ status: 'success', paid_at: payload.data.paid_at ?? null })
-      .eq('id', lead.id)
-
-    if (leadUpdateError) throw leadUpdateError
+    await updateVerifiedPaymentLead(supabase, {
+      id: lead.id,
+      status: 'success',
+      paidAt: payload.data.paid_at ?? null,
+    })
 
     try {
       await queuePaymentReceivedEmail({

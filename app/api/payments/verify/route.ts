@@ -7,6 +7,7 @@ import { fulfillPaystackSuccess } from '@/lib/payments/fulfill'
 import { linkSuccessfulLeadToUser } from '@/lib/payments/link-paid-lead'
 import { createClient } from '@/lib/supabase/server'
 import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
+import { updateVerifiedPaymentLead } from '@/lib/payments/update-lead-status'
 
 type StoredPaymentStatus = 'pending' | 'success' | 'failed' | 'abandoned'
 
@@ -128,17 +129,11 @@ export async function GET(request: NextRequest) {
             return paymentMismatchResponse()
         }
 
-        const { error: leadUpdateError } = await supabaseAdmin
-            .from('payment_leads')
-            .update({
-                status,
-                paid_at: paymentData.paid_at ?? null,
-                amount: amountKobo,
-                currency,
-            })
-            .eq('id', lead.id)
-
-        if (leadUpdateError) throw leadUpdateError
+        await updateVerifiedPaymentLead(supabaseAdmin, {
+            id: lead.id,
+            status,
+            paidAt: paymentData.paid_at ?? null,
+        })
 
         let linkedUserId = lead.user_id
         let linkedListingId = lead.listing_id

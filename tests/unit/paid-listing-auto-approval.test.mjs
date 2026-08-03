@@ -5,6 +5,7 @@ import test from 'node:test'
 const actionSource = fs.readFileSync('app/actions/listings.ts', 'utf8')
 const approvalSource = fs.readFileSync('lib/listings/auto-approve.ts', 'utf8')
 const fulfillmentSource = fs.readFileSync('lib/payments/fulfill.ts', 'utf8')
+const leadStatusSource = fs.readFileSync('lib/payments/update-lead-status.ts', 'utf8')
 const emailSource = fs.readFileSync('lib/email/transactional.ts', 'utf8')
 
 test('complete paid listings use the server-side automatic approval path', () => {
@@ -21,4 +22,11 @@ test('complete paid listings use the server-side automatic approval path', () =>
 test('payment messaging explains that required listing details must be completed', () => {
   assert.match(emailSource, /complete the business form/i)
   assert.match(emailSource, /published automatically/i)
+})
+
+test('legacy paid-at column width cannot block verified payment status', () => {
+  assert.match(leadStatusSource, /character varying\\\(20\\\)/)
+  assert.match(leadStatusSource, /update\(\{ status: input\.status \}\)/)
+  assert.match(fs.readFileSync('app/api/payments/verify/route.ts', 'utf8'), /updateVerifiedPaymentLead/)
+  assert.match(fs.readFileSync('app/api/paystack/webhook/route.ts', 'utf8'), /updateVerifiedPaymentLead/)
 })
