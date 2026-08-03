@@ -90,12 +90,19 @@ export async function fulfillPaystackSuccess(input: {
   amountKobo: number
   currency: string
   paidAt?: string | null
+  paymentId?: string | null
   userId?: string | null
   planId?: string | null
 }) {
   const supabase = createAdminClient()
 
-  const paymentLookup = input.userId && input.planId
+  const paymentLookup = input.paymentId
+    ? await supabase
+        .from('payments')
+        .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')
+        .eq('id', input.paymentId)
+        .limit(1)
+    : input.userId && input.planId
     ? await supabase
         .from('payments')
         .select('id, reference, user_id, listing_id, plan, amount, currency, status, paid_at, metadata')

@@ -72,41 +72,15 @@ export async function GET(request: NextRequest) {
             currency: string
             listing_id: string | null
         } | null = null
-        let paymentLookupUserId = paymentData.metadata?.user_id?.trim() || ''
-
         if (!lead) {
             verificationStage = 'payment-record-lookup'
-            if (!paymentLookupUserId && paymentData.customer?.email) {
-                const { data: paymentProfile, error: profileLookupError } = await supabaseAdmin
-                    .from('profiles')
-                    .select('id')
-                    .ilike('email', paymentData.customer.email.trim())
-                    .maybeSingle()
-
-                if (profileLookupError) {
-                    return NextResponse.json({ error: profileLookupError.message }, { status: 500 })
-                }
-                paymentLookupUserId = paymentProfile?.id || ''
-            }
-
-            const lookup = paymentLookupUserId
-                ? await supabaseAdmin
-                    .from('payments')
-                    .select('id, user_id, reference, plan, amount, currency, listing_id')
-                    .eq('user_id', paymentLookupUserId)
-                    .eq('status', 'success')
-                    .is('listing_id', null)
-                    .eq('amount', amountKobo)
-                    .eq('currency', currency)
-                    .order('created_at', { ascending: false })
-                    .limit(20)
-                : await supabaseAdmin
-                    .from('payments')
-                    .select('id, user_id, reference, plan, amount, currency, listing_id')
-                    .eq('status', 'success')
-                    .is('listing_id', null)
-                    .order('created_at', { ascending: false })
-                    .limit(500)
+            const lookup = await supabaseAdmin
+                .from('payments')
+                .select('id, user_id, reference, plan, amount, currency, listing_id')
+                .eq('status', 'success')
+                .is('listing_id', null)
+                .order('created_at', { ascending: false })
+                .limit(500)
 
             if (lookup.error) {
                 return NextResponse.json({ error: lookup.error.message }, { status: 500 })
@@ -133,8 +107,7 @@ export async function GET(request: NextRequest) {
                     amountKobo,
                     currency,
                     paidAt: paymentData.paid_at ?? null,
-                    userId: paymentRow.user_id,
-                    planId: paymentRow.plan,
+                    paymentId: paymentRow.id,
                 })
                 fulfilledListingId = fulfillment.listingId
             } else {
