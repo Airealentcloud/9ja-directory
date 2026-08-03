@@ -4,6 +4,7 @@ import { getPlanById as getSubscriptionPlanById, type PlanId } from '@/lib/prici
 import { queuePaymentReceivedEmail } from '@/lib/email/transactional'
 import { ensureCustomerProfile } from '@/lib/payments/customer-profile'
 import { resolveListingEmail } from '@/lib/validation/email'
+import { autoApproveVerifiedPaidListing } from '@/lib/listings/auto-approve'
 import {
   PLAN_LIMITS,
   canCreateAnotherListing,
@@ -376,6 +377,19 @@ export async function fulfillPaystackSuccess(input: {
       .update(planFlags)
       .eq('id', listingId)
     if (flagError) throw new Error(`Could not apply listing entitlements: ${flagError.message}`)
+
+    try {
+      await autoApproveVerifiedPaidListing({
+        listingId,
+        userId: payment.user_id,
+        planId: effectivePlanId,
+        paymentReference: payment.reference,
+      })
+    } catch (approvalError) {
+      // Payment activation remains authoritative. A transient publishing issue
+      // leaves the listing pending and visible to administrators for recovery.
+      console.error('Could not automatically publish the completed paid listing:', approvalError)
+    }
   }
 
   let customerEmail = typeof existingProfile.email === 'string' ? existingProfile.email.trim() : ''

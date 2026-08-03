@@ -314,10 +314,10 @@ export default function PaymentVerifyPage() {
                             <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span className="font-semibold text-green-800">Listing Submitted!</span>
+                            <span className="font-semibold text-green-800">Payment Confirmed</span>
                         </div>
                         <p className="text-sm text-green-700">
-                            Your business listing has been submitted for review. You'll be notified after it is checked and approved.
+                            Your payment is confirmed. Complete every required business detail and your listing will be published automatically.
                         </p>
                     </div>
 

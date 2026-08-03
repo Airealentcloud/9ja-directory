@@ -13,7 +13,7 @@ test('transactional email events use deterministic database keys', () => {
   assert.match(source, /payment-success:\$\{input\.reference\}/)
   assert.match(source, /listing-approved:\$\{input\.listingId\}/)
   assert.match(source, /Payment status:[\s\S]*Confirmed/)
-  assert.match(source, /Listing status:[\s\S]*Awaiting review/)
+  assert.match(source, /Listing status:[\s\S]*Complete your business details/)
 })
 
 test('database migration enforces queue idempotency and atomic claiming', () => {

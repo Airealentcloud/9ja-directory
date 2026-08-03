@@ -134,10 +134,10 @@ export async function queuePaymentReceivedEmail(input: {
   const nextUrl = input.requiresAccountSetup
     ? `${SITE_URL}/payment/verify?reference=${encodeURIComponent(input.reference)}`
     : `${SITE_URL}/dashboard/my-listings`
-  const nextLabel = input.requiresAccountSetup ? 'Finish account setup' : 'Check my listing status'
+  const nextLabel = input.requiresAccountSetup ? 'Finish account setup' : 'Complete my listing'
   const nextMessage = input.requiresAccountSetup
-    ? 'Your payment is secure. Finish creating or confirming your account with the same email address so we can connect the plan to your listing.'
-    : 'Your plan is active and the listing is awaiting review. Payment does not make a listing public automatically.'
+    ? 'Your payment is secure. Finish creating or confirming your account with the same email address, then complete the business form. Your completed listing will be published automatically.'
+    : 'Your plan is active. Complete every required business detail and your listing will be published automatically.'
 
   const subject = `Payment received — ${plan.name} plan | ${input.reference}`
   const text = `Hello ${name},
@@ -147,7 +147,7 @@ We received your ${amount} payment for the ${plan.name} plan.
 Business: ${business}
 Reference: ${input.reference}
 Payment status: Confirmed
-Listing status: Awaiting review
+Listing status: Complete your business details
 Paid: ${paidDate}
 
 ${nextMessage}
@@ -171,7 +171,7 @@ The 9jaDirectory Team`
         <tr><td style="padding:10px;border-bottom:1px solid #e2e8f0;color:#64748b;">Business</td><td style="padding:10px;border-bottom:1px solid #e2e8f0;">${escapeHtml(business)}</td></tr>
         <tr><td style="padding:10px;border-bottom:1px solid #e2e8f0;color:#64748b;">Reference</td><td style="padding:10px;border-bottom:1px solid #e2e8f0;font-family:monospace;">${escapeHtml(input.reference)}</td></tr>
         <tr><td style="padding:10px;border-bottom:1px solid #e2e8f0;color:#64748b;">Payment</td><td style="padding:10px;border-bottom:1px solid #e2e8f0;color:#15803d;font-weight:700;">Confirmed</td></tr>
-        <tr><td style="padding:10px;color:#64748b;">Listing</td><td style="padding:10px;color:#a16207;font-weight:700;">Awaiting review</td></tr>
+        <tr><td style="padding:10px;color:#64748b;">Listing</td><td style="padding:10px;color:#a16207;font-weight:700;">Complete your business details</td></tr>
       </table>
       <p style="margin:0;padding:14px 16px;background:#fefce8;border-left:4px solid #eab308;line-height:1.7;">${escapeHtml(nextMessage)}</p>`,
   })

@@ -3,6 +3,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { revalidatePath } from 'next/cache'
 import { notifyAdminNewListing } from '@/lib/email/notifications'
+import { autoApproveVerifiedPaidListing } from '@/lib/listings/auto-approve'
 import {
     canCreateAnotherListing,
     getMissingListingFields,
@@ -200,20 +201,37 @@ export async function createListing(formData: FormData) {
             .single()
 
         if (!error && insertedData) {
+            let autoApproved = false
+            if (!isAdmin) {
+                try {
+                    const approval = await autoApproveVerifiedPaidListing({
+                        listingId: insertedData.id,
+                        userId: user.id,
+                        planId,
+                    })
+                    autoApproved = approval.approved
+                } catch (approvalError) {
+                    console.error('Automatic paid-listing approval failed:', approvalError)
+                }
+            }
+
             revalidatePath('/dashboard')
             revalidatePath('/dashboard/my-listings')
+            revalidatePath('/')
 
-            notifyAdminNewListing({
-                listingId: insertedData.id,
-                businessName: insertedData.business_name,
-                ownerEmail: user.email || 'Unknown',
-                ownerName: user.user_metadata?.full_name,
-                city: insertedData.city,
-                category: input.category_id,
-                submittedAt: new Date(),
-            }).catch(console.error)
+            if (!autoApproved) {
+                notifyAdminNewListing({
+                    listingId: insertedData.id,
+                    businessName: insertedData.business_name,
+                    ownerEmail: user.email || 'Unknown',
+                    ownerName: user.user_metadata?.full_name,
+                    city: insertedData.city,
+                    category: input.category_id,
+                    submittedAt: new Date(),
+                }).catch(console.error)
+            }
 
-            return { success: true, listingId: insertedData.id }
+            return { success: true, listingId: insertedData.id, autoApproved }
         }
 
         lastError = error
@@ -293,10 +311,24 @@ export async function updateListing(formData: FormData) {
         throw new Error(`Failed to update listing: ${updateError.message}`)
     }
 
+    let autoApproved = false
+    if (!isAdmin) {
+        try {
+            const approval = await autoApproveVerifiedPaidListing({
+                listingId,
+                userId: user.id,
+                planId,
+            })
+            autoApproved = approval.approved
+        } catch (approvalError) {
+            console.error('Automatic paid-listing approval failed after update:', approvalError)
+        }
+    }
+
     revalidatePath('/dashboard')
     revalidatePath('/dashboard/my-listings')
     revalidatePath(`/listings/${existing.slug}`)
     revalidatePath('/')
 
-    return { success: true }
+    return { success: true, autoApproved }
 }
