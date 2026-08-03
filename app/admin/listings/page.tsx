@@ -325,8 +325,8 @@ export default function AdminListingsPage() {
     }
 
     return (
-        <div>
-            <div className="flex justify-between items-center mb-6">
+        <div className="min-w-0">
+            <div className="mb-6 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">Manage Listings</h2>
                 <Link
                     href="/admin/dashboard"
@@ -411,12 +411,12 @@ export default function AdminListingsPage() {
                 </div>
 
                 {/* Status Filter Tabs */}
-                <div className="flex space-x-2 border-b border-gray-200">
+                <div className="flex max-w-full space-x-1 overflow-x-auto border-b border-gray-200 pb-px sm:space-x-2">
                     {(['all', 'pending', 'approved', 'rejected'] as const).map((status) => (
                         <button
                             key={status}
                             onClick={() => setStatusFilter(status)}
-                            className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${statusFilter === status
+                            className={`shrink-0 border-b-2 px-3 py-2 text-sm font-medium transition-colors sm:px-4 ${statusFilter === status
                                 ? 'border-green-500 text-green-600'
                                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                                 }`}
@@ -430,12 +430,12 @@ export default function AdminListingsPage() {
                 </div>
 
                 {/* Payment Filter */}
-                <div className="flex items-center gap-3">
+                <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
                     <label className="text-sm font-medium text-gray-600">Payment:</label>
                     <select
                         value={paymentFilter}
                         onChange={(e) => setPaymentFilter(e.target.value as any)}
-                        className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-green-500 focus:border-green-500"
+                        className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:ring-green-500 sm:w-auto"
                     >
                         <option value="all">All</option>
                         <option value="success">Paid</option>
@@ -487,9 +487,9 @@ export default function AdminListingsPage() {
 
                             return (
                                 <li key={listing.id} className="px-4 py-4 sm:px-6">
-                                    <div className="flex items-start justify-between">
-                                        <div className="flex-1">
-                                            <div className="flex items-center gap-2">
+                                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                                        <div className="min-w-0 flex-1">
+                                            <div className="flex flex-wrap items-center gap-2">
                                                 <h3 className="text-lg font-medium text-gray-900">
                                                     {listing.business_name}
                                                 </h3>
@@ -510,15 +510,15 @@ export default function AdminListingsPage() {
                                             </div>
 
                                             {/* User Info */}
-                                            <div className="mt-1 flex items-center gap-4 text-sm text-gray-500">
-                                                <span>📧 Registered email: {listing.profiles?.email || 'Unavailable'}</span>
+                                            <div className="mt-2 flex flex-col gap-1 text-sm text-gray-500 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
+                                                <span className="break-all">📧 Registered email: {listing.profiles?.email || 'Unavailable'}</span>
                                                 {listing.profiles?.full_name && (
                                                     <span>👤 {listing.profiles.full_name}</span>
                                                 )}
                                             </div>
 
                                             {/* Business Details */}
-                                            <div className="mt-2 flex items-center gap-4 text-sm text-gray-500">
+                                            <div className="mt-2 flex flex-col gap-1 text-sm text-gray-500 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4">
                                                 <span>📍 {listing.city}</span>
                                                 {listing.phone && <span>📞 {listing.phone}</span>}
                                                 {listing.categories?.name && (
@@ -547,11 +547,11 @@ export default function AdminListingsPage() {
 
                                         {/* Action Buttons */}
                                         {listing.status === 'pending' && (
-                                            <div className="ml-4 flex items-center space-x-2">
+                                            <div className="flex w-full items-center gap-2 sm:ml-4 sm:w-auto">
                                                 <button
                                                     onClick={() => handleApprove(listing)}
                                                     disabled={isProcessing || !canApprove}
-                                                    className={`inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white ${isProcessing
+                                                    className={`inline-flex min-h-10 flex-1 items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white sm:flex-none ${isProcessing
                                                         ? 'bg-gray-400 cursor-not-allowed'
                                                         : !canApprove
                                                             ? 'bg-gray-300 cursor-not-allowed'
@@ -563,7 +563,7 @@ export default function AdminListingsPage() {
                                                 <button
                                                     onClick={() => setRejectingId(listing.id)}
                                                     disabled={isProcessing}
-                                                    className={`inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white ${isProcessing
+                                                    className={`inline-flex min-h-10 flex-1 items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium text-white sm:flex-none ${isProcessing
                                                         ? 'bg-gray-400 cursor-not-allowed'
                                                         : 'bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                                                         }`}
@@ -589,7 +589,7 @@ export default function AdminListingsPage() {
 
             {/* Rejection Modal */}
             {rejectingId && (
-                <div className="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                <div className="fixed inset-0 z-[60] overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                     <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
                         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true" onClick={() => setRejectingId(null)}></div>
                         <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>

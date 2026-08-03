@@ -37,16 +37,18 @@ export default function Sidebar({ isAdmin, isOpen = true, onClose }: SidebarProp
             {/* Mobile overlay */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+                    className="fixed inset-x-0 bottom-0 top-16 z-40 bg-black/50 lg:hidden"
                     onClick={onClose}
+                    aria-hidden="true"
                 />
             )}
 
             {/* Sidebar */}
             <div
-                className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 min-h-screen flex flex-col transform transition-transform duration-300 ease-in-out ${
+                className={`fixed bottom-0 left-0 top-16 z-50 flex w-[min(20rem,calc(100vw-3rem))] flex-col border-r border-gray-200 bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:static lg:min-h-[calc(100dvh-4rem)] lg:w-64 lg:shadow-none ${
                     isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
                 }`}
+                aria-hidden={!isOpen}
             >
                 <div className="p-6 border-b border-gray-200 flex items-center justify-between">
                     <Link href="/" className="text-2xl font-bold text-green-700">
@@ -54,8 +56,10 @@ export default function Sidebar({ isAdmin, isOpen = true, onClose }: SidebarProp
                     </Link>
                     {/* Close button for mobile */}
                     <button
+                        type="button"
                         onClick={onClose}
                         className="lg:hidden p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+                        aria-label="Close dashboard menu"
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
