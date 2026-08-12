@@ -69,7 +69,7 @@ export default function ContactPage() {
                 {
                     '@type': 'ContactPoint',
                     contactType: 'Customer Support',
-                    email: 'israelakhas@gmail.com',
+                    email: 'support@9jadirectory.org',
                     areaServed: 'NG',
                     availableLanguage: ['en', 'en-NG'],
                 },
@@ -104,7 +104,7 @@ export default function ContactPage() {
                                 </div>
                                 <div className="ml-3">
                                     <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                                    <p className="mt-1 text-gray-600">israelakhas@gmail.com</p>
+                                    <p className="mt-1 text-gray-600">support@9jadirectory.org</p>
                                     <p className="text-gray-500 text-sm">We'll respond within 24 hours.</p>
                                 </div>
                             </div>

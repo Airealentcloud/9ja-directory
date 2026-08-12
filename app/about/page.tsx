@@ -121,7 +121,7 @@ export default async function AboutPage() {
         name: 'How many businesses are listed on 9jaDirectory?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `9jaDirectory currently features ${totalListings || 10000}+ verified business listings across ${totalCategories || 50}+ categories, covering all 37 Nigerian states.`,
+          text: `9jaDirectory currently features ${totalListings || 0}+ verified business listings across ${totalCategories || 50}+ categories, covering all 37 Nigerian states.`,
         },
       },
       {
@@ -426,7 +426,7 @@ export default async function AboutPage() {
                   How many businesses are listed on 9jaDirectory?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  9jaDirectory currently features {(totalListings || 10000).toLocaleString()}+ verified business listings
+                  9jaDirectory currently features {(totalListings || 0).toLocaleString()}+ verified business listings
                   across {(totalCategories || 50).toLocaleString()}+ categories, covering all 37 Nigerian states from Lagos
                   to Sokoto, Port Harcourt to Maiduguri.
                 </p>
@@ -473,7 +473,7 @@ export default async function AboutPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Listed?</h2>
             <p className="text-xl mb-8 text-green-100">
-              Join {(totalListings || 10000).toLocaleString()}+ businesses already on 9jaDirectory
+              Join {(totalListings || 0).toLocaleString()}+ businesses already on 9jaDirectory
             </p>
             <Link
               href="/pricing"

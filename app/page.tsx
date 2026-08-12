@@ -459,51 +459,33 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Why List With Us */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl font-bold text-center mb-4">What Our Users Say</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">Why Businesses Choose 9jaDirectory</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Hear from business owners and customers who trust 9jaDirectory
+            The fastest way to get your Nigerian business found online
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Listing my restaurant on 9jaDirectory increased our visibility significantly. We now get more customers every week!&rdquo;
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
+              <div className="text-4xl mb-4">🗂️</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">All 37 Nigerian States</h3>
+              <p className="text-gray-600 text-sm">
+                Every listing appears in state and category search pages, giving your business visibility across Nigeria — not just in major cities.
               </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">CO</div>
-                <div>
-                  <div className="font-semibold">Chioma Okafor</div>
-                  <div className="text-sm text-gray-500">Restaurant Owner, Lagos</div>
-                </div>
-              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;I found a reliable plumber in my area within minutes. The directory is easy to use and has accurate contact information.&rdquo;
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
+              <div className="text-4xl mb-4">✅</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Verified Business Profiles</h3>
+              <p className="text-gray-600 text-sm">
+                Our team reviews every listing before it goes live. Verified businesses earn a trust badge that gives customers confidence when choosing.
               </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">TA</div>
-                <div>
-                  <div className="font-semibold">Tunde Adebayo</div>
-                  <div className="text-sm text-gray-500">Customer, Abuja</div>
-                </div>
-              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="flex text-yellow-400 mb-3">{'★★★★★'.split('').map((s,i) => <span key={i}>{s}</span>)}</div>
-              <p className="text-gray-700 mb-4 italic">
-                &ldquo;Best platform for discovering local services. The categories are well-organized and the search is very fast.&rdquo;
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">SEO-Optimised Listings</h3>
+              <p className="text-gray-600 text-sm">
+                Every listing page is built for search engines — with schema markup, keyword-rich descriptions, and sitemap inclusion so Google can find you.
               </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3 text-white font-bold text-sm">AN</div>
-                <div>
-                  <div className="font-semibold">Amaka Nwosu</div>
-                  <div className="text-sm text-gray-500">Business Consultant, Port Harcourt</div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
