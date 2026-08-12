@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE_URL } from '@/lib/seo/site-url';
-import { authors } from '@/app/team/page';
+import { authors } from '@/lib/authors';
 
 const siteUrl = SITE_URL;
 
