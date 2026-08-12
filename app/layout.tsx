@@ -113,6 +113,7 @@ export default function RootLayout({
                 <h4 className="font-semibold mb-4">Company</h4>
                 <ul className="space-y-2 text-gray-400">
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                  <li><Link href="/team" className="hover:text-white transition-colors">Our Team</Link></li>
                   <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
                   <li><Link href="/press-release" className="hover:text-white transition-colors">Press Release</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>

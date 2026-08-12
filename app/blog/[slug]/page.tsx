@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE_URL } from '@/lib/seo/site-url';
+import { authors } from '@/app/team/page';
 
 const siteUrl = SITE_URL;
 
@@ -295,6 +296,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         </div>
                     </div>
                 )}
+
+                {/* Author Bio */}
+                {(() => {
+                  const author = authors[post.author] || authors['9jaDirectory Editorial Team']
+                  return (
+                    <div className="mt-10 rounded-2xl bg-white p-6 shadow-sm flex items-start gap-5">
+                      <div className={`w-14 h-14 rounded-full ${author.color} flex items-center justify-center text-white font-bold text-lg flex-shrink-0`}>
+                        {author.initials}
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Written by</p>
+                        <h3 className="text-lg font-bold text-gray-900">{author.name}</h3>
+                        <p className="text-sm text-green-600 font-medium mb-2">{author.role}</p>
+                        <p className="text-sm text-gray-600 leading-relaxed">{author.bio}</p>
+                        <Link href="/team" className="mt-2 inline-block text-sm font-semibold text-green-700 hover:text-green-800">
+                          Meet the full team →
+                        </Link>
+                      </div>
+                    </div>
+                  )
+                })()}
 
                 <div className="mt-10 grid gap-4 rounded-2xl bg-white p-6 shadow-sm sm:grid-cols-2">
                     <div className="rounded-xl border border-gray-100 p-4">
