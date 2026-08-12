@@ -462,29 +462,31 @@ export default async function ListingPage({ params }: { params: Promise<{ slug: 
               {/* Map Location */}
               {listing.address && (
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="p-6">
-                    <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <div className="p-6 pb-3">
+                    <h2 className="text-xl font-semibold text-gray-900 mb-1 flex items-center">
                       <span className="mr-2">📍</span>
                       Location
                     </h2>
-                    <p className="text-gray-700 mb-4">{listing.address}</p>
-                    <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <div className="text-center text-gray-500">
-                        <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        <p className="text-sm">Map integration coming soon</p>
-                        <a
-                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(listing.address)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-green-600 hover:text-green-700 text-sm font-medium mt-2 inline-block"
-                        >
-                          View on Google Maps →
-                        </a>
-                      </div>
-                    </div>
+                    <p className="text-gray-700 mb-3">{listing.address}</p>
+                  </div>
+                  <iframe
+                    title={`Map showing location of ${listing.business_name}`}
+                    width="100%"
+                    height="320"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src={`https://maps.google.com/maps?q=${encodeURIComponent(`${listing.address}${listing.states?.name ? ', ' + listing.states.name : ''}, Nigeria`)}&output=embed`}
+                    className="border-0 w-full"
+                  />
+                  <div className="px-6 py-3">
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${listing.address}${listing.states?.name ? ', ' + listing.states.name : ''}, Nigeria`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:text-green-700 text-sm font-medium"
+                    >
+                      Open in Google Maps →
+                    </a>
                   </div>
                 </div>
               )}
