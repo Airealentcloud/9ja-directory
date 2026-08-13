@@ -4,6 +4,7 @@ import Link from 'next/link'
 import SearchHero from '@/components/search-hero'
 import PricingCheckoutClient from '@/components/pricing/pricing-checkout-client'
 import { HomeCategoryCard } from '@/components/home-category-card'
+import { Building2, Search, Map, ShieldCheck, TrendingUp, MapPin, RefreshCw, Star } from 'lucide-react'
 import { blogPosts } from '@/lib/blog-data'
 import { SITE_URL } from '@/lib/seo/site-url'
 import { createPublicClient } from '@/lib/supabase/public'
@@ -382,7 +383,9 @@ export default async function Home() {
             ) : (
               /* Fallback when no recent listings */
               <div className="bg-white rounded-lg shadow-md p-8 text-center max-w-2xl mx-auto">
-                <div className="text-5xl mb-4" aria-hidden="true">🏢</div>
+                <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <Building2 className="w-7 h-7" strokeWidth={1.75} />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Be the First to List Your Business</h3>
                 <p className="text-gray-600 mb-6">
                   Join 9jaDirectory and get discovered by thousands of customers across Nigeria.
@@ -446,14 +449,16 @@ export default async function Home() {
         </section>
 
         {/* Search CTA */}
-        <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+        <section className="bg-gradient-to-r from-green-800 to-emerald-700 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="text-5xl mb-4">🔍</div>
+            <div className="w-14 h-14 rounded-xl bg-white/15 text-white flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+              <Search className="w-7 h-7" strokeWidth={1.75} />
+            </div>
             <h2 className="text-3xl font-bold mb-4">Need Help Finding Something?</h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-green-100">
               Search thousands of verified Nigerian businesses by name, category, or location
             </p>
-            <Link href="/search" className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
+            <Link href="/search" className="inline-block px-8 py-4 bg-white text-green-800 rounded-lg font-semibold hover:bg-gray-100 text-lg transition-colors">
               Search Businesses
             </Link>
           </div>
@@ -467,21 +472,27 @@ export default async function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-              <div className="text-4xl mb-4">🗂️</div>
+              <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <Map className="w-7 h-7" strokeWidth={1.75} />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">All 37 Nigerian States</h3>
               <p className="text-gray-600 text-sm">
                 Every listing appears in state and category search pages, giving your business visibility across Nigeria — not just in major cities.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-              <div className="text-4xl mb-4">✅</div>
+              <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <ShieldCheck className="w-7 h-7" strokeWidth={1.75} />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">Verified Business Profiles</h3>
               <p className="text-gray-600 text-sm">
                 Our team reviews every listing before it goes live. Verified businesses earn a trust badge that gives customers confidence when choosing.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center">
-              <div className="text-4xl mb-4">📈</div>
+              <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <TrendingUp className="w-7 h-7" strokeWidth={1.75} />
+              </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">SEO-Optimised Listings</h3>
               <p className="text-gray-600 text-sm">
                 Every listing page is built for search engines — with schema markup, keyword-rich descriptions, and sitemap inclusion so Google can find you.
@@ -501,21 +512,27 @@ export default async function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="text-5xl mb-4">🇳🇬</div>
+                <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <MapPin className="w-7 h-7" strokeWidth={1.75} />
+                </div>
                 <h3 className="text-xl font-bold mb-2">Local Focus</h3>
                 <p className="text-gray-600">
                   Dedicated to Nigerian businesses across all 36 states and FCT
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="text-5xl mb-4">🔄</div>
+                <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <RefreshCw className="w-7 h-7" strokeWidth={1.75} />
+                </div>
                 <h3 className="text-xl font-bold mb-2">Always Up-to-Date</h3>
                 <p className="text-gray-600">
                   Regularly updated listings with accurate contact information
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="text-5xl mb-4">⭐</div>
+                <div className="w-14 h-14 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                  <Star className="w-7 h-7" strokeWidth={1.75} />
+                </div>
                 <h3 className="text-xl font-bold mb-2">Verified Reviews</h3>
                 <p className="text-gray-600">
                   Real reviews from real customers to help you decide
