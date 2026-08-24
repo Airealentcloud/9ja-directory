@@ -17,10 +17,29 @@ function getSupabaseAdmin() {
     return createClient(url, key)
 }
 
+// This endpoint stays open because the signup page and contact form call it
+// before a session exists. Keep the surface as small as possible: only these
+// types are accepted, and anything else is rejected before reaching the mailer.
+const ALLOWED_TYPES = new Set([
+    'new_signup',
+    'new_listing',
+    'listing_approved',
+    'listing_rejected',
+    'contact_form',
+])
+
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json()
         const { type, data } = body
+
+        if (typeof type !== 'string' || !ALLOWED_TYPES.has(type)) {
+            return NextResponse.json({ error: 'Unsupported notification type' }, { status: 400 })
+        }
+
+        if (!data || typeof data !== 'object') {
+            return NextResponse.json({ error: 'Missing notification data' }, { status: 400 })
+        }
 
         switch (type) {
             case 'new_signup': {

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { requireAdmin } from '@/lib/auth/guards'
 
 // Use service role key for admin operations (bypasses RLS)
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -19,6 +20,10 @@ interface BusinessData {
 }
 
 export async function POST(request: NextRequest) {
+  // Middleware only matches page paths, so this route must gate itself.
+  const auth = await requireAdmin()
+  if (!auth.ok) return auth.response
+
   try {
     const body = await request.json()
     const { businesses, dryRun = false } = body as { businesses: BusinessData[], dryRun?: boolean }

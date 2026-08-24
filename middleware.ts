@@ -6,7 +6,8 @@ export async function middleware(request: NextRequest) {
   const requestPath = request.nextUrl.pathname
   const isAmpersandPath = requestPath === '/&' || requestPath === '/%26'
   const isProtectedRoute = requestPath.startsWith('/add-business') || requestPath.startsWith('/dashboard')
-  const isAdminRoute = requestPath.startsWith('/admin')
+  // /test-payment starts a real ₦2,000 Paystack charge, so treat it as admin-only.
+  const isAdminRoute = requestPath.startsWith('/admin') || requestPath.startsWith('/test-payment')
   const canonicalHost = new URL(SITE_URL).host
   const requestHost = request.headers.get('host')
 

@@ -207,9 +207,49 @@ export async function fulfillPaystackSuccess(input: {
     console.error('Subscription fulfillment error:', err)
   }
 
-  // Create listing from metadata if present (new checkout flow)
+  // Create listing from metadata if present (new checkout flow).
+  //
+  // The webhook and the /verify callback both call this function, and in the
+  // normal flow they land within milliseconds of each other. Claim the payment
+  // row first so only one caller proceeds: the conditional update succeeds for
+  // exactly one of them, and the loser skips creation instead of inserting a
+  // second listing. `listings.slug` cannot protect us here because
+  // generateSlug() appends a random suffix, so duplicates never collide.
   let createdListingId: string | null = null
   if (payment.metadata?.listing_data && !payment.listing_id) {
+    const { data: claimed, error: claimError } = await supabase
+      .from('payments')
+      .update({ listing_creation_started: true })
+      .eq('id', payment.id)
+      .is('listing_creation_started', null)
+      .select('id')
+
+    // If the column is missing the migration has not run yet. Fall back to the
+    // previous behaviour rather than silently skipping listing creation, which
+    // would break checkout outright.
+    const claimUnavailable =
+      !!claimError && getMissingColumnName((claimError as { message?: string }).message) === 'listing_creation_started'
+
+    if (claimUnavailable) {
+      console.warn('payments.listing_creation_started missing — run migrations/001-payment-listing-claim.sql')
+    }
+
+    if (!claimUnavailable && (claimError || !claimed || claimed.length === 0)) {
+      // Another caller is already creating this listing.
+      const { data: existing } = await supabase
+        .from('payments')
+        .select('listing_id')
+        .eq('id', payment.id)
+        .maybeSingle()
+
+      const existingListingId = (existing as { listing_id?: string | null } | null)?.listing_id ?? null
+      return {
+        paymentId: payment.id,
+        listingId: existingListingId,
+        listingSlug,
+      }
+    }
+
     try {
       const listingData: ListingData = JSON.parse(payment.metadata.listing_data as string)
 
@@ -238,6 +278,11 @@ export async function fulfillPaystackSuccess(input: {
 
         if (listingError) {
           console.error('Error creating listing from payment:', listingError)
+          // Release the claim so a webhook retry can try again.
+          await supabase
+            .from('payments')
+            .update({ listing_creation_started: null })
+            .eq('id', payment.id)
         } else if (newListing) {
           createdListingId = newListing.id
           listingSlug = newListing.slug
@@ -253,6 +298,10 @@ export async function fulfillPaystackSuccess(input: {
       }
     } catch (parseErr) {
       console.error('Error parsing listing data from payment metadata:', parseErr)
+      await supabase
+        .from('payments')
+        .update({ listing_creation_started: null })
+        .eq('id', payment.id)
     }
   }
 

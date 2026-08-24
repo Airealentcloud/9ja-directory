@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendEmail } from '@/lib/email/resend'
+import { requireAdmin, requireServiceSecret } from '@/lib/auth/guards'
 
 // This API route processes pending email notifications
 // You can call this manually or set up a cron job to run it periodically
@@ -13,6 +14,13 @@ const supabaseAdmin = supabaseUrl && supabaseServiceKey
     : null
 
 export async function POST(request: NextRequest) {
+    // Called two ways: by an admin from the listings dashboard, and by a
+    // scheduled job holding CRON_SECRET. Either is acceptable; anonymous is not.
+    if (!requireServiceSecret(request).ok) {
+        const auth = await requireAdmin()
+        if (!auth.ok) return auth.response
+    }
+
     try {
         if (!supabaseAdmin) {
             return NextResponse.json(

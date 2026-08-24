@@ -6,7 +6,8 @@ export const dynamic = 'force-dynamic'
 
 function isAuthorized(request: NextRequest) {
   const secret = process.env.CRON_SECRET
-  if (!secret) return true
+  // Fail closed: an unset secret must deny, not allow.
+  if (!secret) return false
 
   const header = request.headers.get('authorization') || ''
   const token = header.startsWith('Bearer ') ? header.slice('Bearer '.length) : ''
